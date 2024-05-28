@@ -252,7 +252,7 @@
  */
 
 /* These settings are particular to each product. */
-/* Product: iPhone */
+/* Platform: iPhoneOS */
 #define __DARWIN_ONLY_64_BIT_INO_T	1
 #define __DARWIN_ONLY_UNIX_CONFORMANCE	1
 #define __DARWIN_ONLY_VERS_1050		1

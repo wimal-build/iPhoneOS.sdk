@@ -74,7 +74,7 @@
 /*	indicates the natural rate at which the asset is to be played; often but not always 1.0 */
 @property (nonatomic, readonly) float preferredRate;
 
-/*	indicates the preferred volume at which the audible media of asset is to be played; often but not always 1.0 */
+/*	indicates the preferred volume at which the audible media of an asset is to be played; often but not always 1.0 */
 @property (nonatomic, readonly) float preferredVolume;
 
 /*	indicates the preferred transform to apply to the visual content of the asset for presentation or processing;
@@ -122,7 +122,7 @@
 	@abstract		Provides an array of AVAssetTracks of the asset that present media of the specified media type.
 	@param			mediaType
 					The media type according to which AVAsset filters its AVAssetTracks. (Media types are defined in AVMediaFormat.h.)
-	@result			An NSArray of AVAssetTracks; may be nil if no tracks of the specified media type are available.
+	@result			An NSArray of AVAssetTracks; may be empty if no tracks of the specified media type are available.
 	@discussion		Becomes callable without blocking when the key @"tracks" has been loaded
 */
 - (NSArray *)tracksWithMediaType:(NSString *)mediaType;
@@ -132,7 +132,7 @@
 	@abstract		Provides an array of AVAssetTracks of the asset that present media with the specified characteristic.
 	@param			mediaCharacteristic
 					The media characteristic according to which AVAsset filters its AVAssetTracks. (Media characteristics are defined in AVMediaFormat.h.)
-	@result			An NSArray of AVAssetTracks; may be nil if no tracks with the specified characteristic are available.
+	@result			An NSArray of AVAssetTracks; may be empty if no tracks with the specified characteristic are available.
 	@discussion		Becomes callable without blocking when the key @"tracks" has been loaded
 */
 - (NSArray *)tracksWithMediaCharacteristic:(NSString *)mediaCharacteristic;
@@ -153,7 +153,7 @@
 @property (nonatomic, readonly) NSArray *commonMetadata;
 
 /* Provides an NSArray of NSStrings, each representing a metadata format that's available to the asset (e.g. ID3, iTunes metadata, etc.).
-   Metadata formats are defined in AVMetadataItem.h. */
+   Metadata formats are defined in AVMetadataFormat.h. */
 @property (nonatomic, readonly) NSArray *availableMetadataFormats;
 
 /*!
@@ -163,10 +163,18 @@
 					or according to key via +[AVMetadataItem metadataItemsFromArray:withKey:keySpace:].
 	@param			format
 					The metadata format for which items are requested.
-	@result			An NSArray containing AVMetadataItems; may be nil if there is no metadata of the specified format.
+	@result			An NSArray containing AVMetadataItems; may be empty if there is no metadata of the specified format.
 	@discussion		Becomes callable without blocking when the key @"availableMetadataFormats" has been loaded
 */
 - (NSArray *)metadataForFormat:(NSString *)format;
+
+@end
+
+
+@interface AVAsset (AVAssetProtectedContent)
+
+/*! Indicates whether or not the asset has protected content. */
+@property (nonatomic, readonly) BOOL hasProtectedContent;
 
 @end
 
@@ -176,7 +184,7 @@
 /*!
 	@constant		AVURLAssetPreferPreciseDurationAndTimingKey
 	@abstract		Indicates whether the asset should be prepared to indicate a precise duration and provide precise random access by time.
-	                The value for this key is a boolean NSValue.
+	                The value for this key is a boolean NSNumber.
 	@discussion		Pass YES if longer loading times are acceptable in cases in which precise timing is required.
 					Note that such precision may require additional parsing of the resource in advance
 					of operations that make use of any portion of it, depending on the specifics of its container format.

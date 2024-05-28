@@ -11,17 +11,22 @@
 #import <Foundation/Foundation.h>
 #import <CoreMedia/CMTime.h>
 #import <AVFoundation/AVMetadataFormat.h>
+#import <AVFoundation/AVAsynchronousKeyValueLoading.h>
 
-// TO DO: define constants for keys and keyspaces that are supported in the metadata formats defined above, perhaps in the same file in which common keys are defined
+#if TARGET_OS_IPHONE
+#import <CoreGraphics/CoreGraphics.h>
+#else // ! TARGET_OS_IPHONE
+#import <ApplicationServices/../Frameworks/CoreGraphics.framework/Headers/CoreGraphics.h>
+#endif // ! TARGET_OS_IPHONE
 
 /*!
     @class			AVMetadataItem
 
-    @abstract		AVMetadataItem represents an item of metadata associted with an audiovisual asset or with
+    @abstract		AVMetadataItem represents an item of metadata associated with an audiovisual asset or with
     				one of its tracks.
     
 	@discussion		AVMetadataItems have keys that accord with the specification of the container format from
-					which they're drawn. Full details of the metadata formats, metadata keys, and metadata keySpaces
+					which they're drawn. Full details of the metadata formats, metadata keys, and metadata keyspaces
 					supported by AVFoundation are available among the defines in AVMetadataFormat.h.
 	
 					Note that arrays of AVMetadataItems vended by AVAsset and other classes are "lazy", similar
@@ -34,7 +39,11 @@
 
 @class AVMetadataItemInternal;
 
-@interface AVMetadataItem : NSObject <NSCopying, NSMutableCopying> 
+@interface AVMetadataItem : NSObject <
+#if !TARGET_OS_IPHONE || 40100 <= __IPHONE_OS_VERSION_MAX_ALLOWED
+										AVAsynchronousKeyValueLoading,
+#endif // 40100 <= __IPHONE_OS_VERSION_MAX_ALLOWED
+										NSCopying, NSMutableCopying>
 {
 	AVMetadataItemInternal	*_priv;
 }
@@ -54,6 +63,13 @@
 
 /* indicates the timestamp of the metadata item. */
 @property (readonly) CMTime time;
+
+#if 40100 <= __IPHONE_OS_VERSION_MAX_ALLOWED
+
+/* indicates the duration of the metadata item */
+@property (readonly) CMTime duration;
+
+#endif // 40100 <= __IPHONE_OS_VERSION_MAX_ALLOWED
 
 /* provides the value of the metadata item */
 @property (readonly, copy) id<NSObject, NSCopying> value;
@@ -101,12 +117,12 @@
 					An array of AVMetadataItems to be filtered by key and/or keyspace.
 	@param			key
 					The key that must be matched for a metadata item to be copied to the output array.
-					The keys will be compared to the keys of the AVMetadataItems in the array via [key isEqual:].
+					Note that to match item keys with any of the common keys, e.g. AVMetadataCommonKeyTitle, it's necessary
+					to pass AVMetadataKeySpaceCommon as the keyspace parameter.
 					If no filtering according to key is desired, pass nil. 
 	@param			keySpace
 					The keySpace that must be matched for a metadata item to be copied to the output array.
-					The keySpace will be compared to the keySpaces of the AVMetadataItems in the array via [keySpace isEqualToString:].
-					If no filtering according to keySpace is desired, pass nil. 
+					If no filtering according to keySpace is desired, pass nil. (See special note above about the use of common keys.)
 	@result			An instance of NSArray containing the metadata items of the target NSArray that match the specified
 					key and/or keySpace.
 */
@@ -119,7 +135,7 @@
     @class			AVMutableMetadataItem
 
     @abstract		AVMutableMetadataItem provides support for building collections of metadata to be written
-    				to asset files via AVAssetExportSession.
+    				to asset files via AVAssetExportSession, AVAssetWriter or AVAssetWriterInput.
     
 	@discussion		Can be initialized from an existing AVMetadataItem or with a one or more of the basic properties
 					of a metadata item: a key, a keySpace, a locale, and a value.
@@ -143,6 +159,13 @@
 
 /* indicates the timestamp of the metadata item. */
 @property (readwrite) CMTime time;
+
+#if 40100 <= __IPHONE_OS_VERSION_MAX_ALLOWED
+
+/* indicates the duration of the metadata item. */
+@property (readwrite) CMTime duration;
+
+#endif // 40100 <= __IPHONE_OS_VERSION_MAX_ALLOWED
 
 /* provides the value of the metadata item */
 @property (readwrite, copy) id<NSObject, NSCopying> value;

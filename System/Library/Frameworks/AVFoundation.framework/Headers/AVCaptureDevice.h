@@ -139,7 +139,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	disconnections, application restarts, and reboots of the system itself. Applications can store the value returned by
 	this property to recall or track the status of a specific device in the future.
  */
-@property(nonatomic, readonly)                                     NSString *uniqueID;
+@property(nonatomic, readonly) NSString *uniqueID;
 
 /*!
  @property modelID
@@ -151,7 +151,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	device connections and disconnections, and across different systems. For example, the model ID of the camera built
 	in to two identical iPhone models will be the same even though they are different physical devices.
  */
-@property(nonatomic, readonly)                                     NSString *modelID;
+@property(nonatomic, readonly) NSString *modelID;
 
 
 /*!
@@ -162,7 +162,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
  @discussion
 	This property can be used for displaying the name of a capture device in a user interface.
  */
-@property(nonatomic, readonly)                                     NSString *localizedName;
+@property(nonatomic, readonly) NSString *localizedName;
 
 /*!
  @method hasMediaType:
@@ -238,7 +238,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	YES again. If the same physical device again becomes available to the system, it will be represented using a new
 	instance of AVCaptureDevice.
  */
-@property(nonatomic, readonly, getter=isConnected)                 BOOL connected;
+@property(nonatomic, readonly, getter=isConnected) BOOL connected;
 
 @end
 
@@ -287,9 +287,9 @@ typedef NSInteger AVCaptureDevicePosition;
 	Indicates that the flash should be used automatically depending on ambient light conditions.
  */
 enum {
-	AVCaptureFlashModeOff						= 0,
-	AVCaptureFlashModeOn						= 1,
-	AVCaptureFlashModeAuto						= 2
+	AVCaptureFlashModeOff  = 0,
+	AVCaptureFlashModeOn   = 1,
+	AVCaptureFlashModeAuto = 2
 };
 typedef NSInteger AVCaptureFlashMode;
 
@@ -304,7 +304,7 @@ typedef NSInteger AVCaptureFlashMode;
 	The value of this property is a BOOL indicating whether the receiver has a flash. The receiver's flashMode property
 	can only be set when this property returns YES.
  */
-@property(nonatomic, readonly)	BOOL               hasFlash;
+@property(nonatomic, readonly) BOOL hasFlash;
 
 /*!
  @method isFlashModeSupported:
@@ -333,7 +333,7 @@ typedef NSInteger AVCaptureFlashMode;
 	the value of this property. Clients can observe automatic changes to the receiver's flash mode by key value
 	observing this property.
  */
-@property(nonatomic)            AVCaptureFlashMode flashMode;
+@property(nonatomic) AVCaptureFlashMode flashMode;
 
 @end
 
@@ -350,9 +350,9 @@ typedef NSInteger AVCaptureFlashMode;
 	Indicates that the torch should be used automatically depending on ambient light conditions.
  */
 enum {
-	AVCaptureTorchModeOff						= 0,
-	AVCaptureTorchModeOn						= 1,
-	AVCaptureTorchModeAuto						= 2,
+	AVCaptureTorchModeOff  = 0,
+	AVCaptureTorchModeOn   = 1,
+	AVCaptureTorchModeAuto = 2,
 };
 typedef NSInteger AVCaptureTorchMode;
 
@@ -367,7 +367,7 @@ typedef NSInteger AVCaptureTorchMode;
 	The value of this property is a BOOL indicating whether the receiver has a torch. The receiver's torchMode property
 	can only be set when this property returns YES.
  */
-@property(nonatomic, readonly)	BOOL               hasTorch;
+@property(nonatomic, readonly) BOOL hasTorch;
 
 /*!
  @method isTorchModeSupported:
@@ -396,7 +396,7 @@ typedef NSInteger AVCaptureTorchMode;
 	the value of this property. Clients can observe automatic changes to the receiver's torch mode by key value
 	observing this property.
  */
-@property(nonatomic)            AVCaptureTorchMode torchMode;
+@property(nonatomic) AVCaptureTorchMode torchMode;
 
 @end
 
@@ -413,9 +413,9 @@ typedef NSInteger AVCaptureTorchMode;
 	Indicates that the device should automatically focus when needed.
  */
 enum {
-	AVCaptureFocusModeLocked					= 0,
-	AVCaptureFocusModeAutoFocus					= 1,
-	AVCaptureFocusModeContinuousAutoFocus		= 2,
+	AVCaptureFocusModeLocked              = 0,
+	AVCaptureFocusModeAutoFocus           = 1,
+	AVCaptureFocusModeContinuousAutoFocus = 2,
 };
 typedef NSInteger AVCaptureFocusMode;
 
@@ -447,7 +447,7 @@ typedef NSInteger AVCaptureFocusMode;
 	must be locked for configuration using lockForConfiguration: before clients can set the value of this property.
 	Clients can observe automatic changes to the receiver's focus mode by key value observing this property.
  */
-@property(nonatomic)                                                    AVCaptureFocusMode focusMode;
+@property(nonatomic) AVCaptureFocusMode focusMode;
 
 /*!
  @property focusPointOfInterestSupported
@@ -457,7 +457,7 @@ typedef NSInteger AVCaptureFocusMode;
  @discussion
 	The receiver's focusPointOfInterest property can only be set if this property returns YES.
  */
-@property(nonatomic, readonly, getter=isFocusPointOfInterestSupported)	BOOL               focusPointOfInterestSupported;
+@property(nonatomic, readonly, getter=isFocusPointOfInterestSupported) BOOL focusPointOfInterestSupported;
 
 /*!
  @property focusPointOfInterest
@@ -472,7 +472,7 @@ typedef NSInteger AVCaptureFocusMode;
 	lockForConfiguration: before clients can set the value of this property. Clients can observe automatic changes to
 	the receiver's focus point of interest by key value observing this property.
  */
-@property(nonatomic)                                                    CGPoint            focusPointOfInterest; // Valid range is 0.0 to 1.0 for x and y.  Default value is 0.5, 0.5.
+@property(nonatomic) CGPoint focusPointOfInterest;
 
 /*!
  @property adjustingFocus
@@ -485,7 +485,7 @@ typedef NSInteger AVCaptureFocusMode;
 	observe the value of this property to determine whether the camera focus is stable or is being automatically
 	adjusted.
  */
-@property(nonatomic, readonly, getter=isAdjustingFocus)                 BOOL               adjustingFocus;
+@property(nonatomic, readonly, getter=isAdjustingFocus) BOOL adjustingFocus;
 
 @end
 
@@ -516,7 +516,7 @@ typedef NSInteger AVCaptureExposureMode;
  @abstract
 	Returns whether the receiver supports the given exposure mode.
  
- @param focusMode
+ @param exposureMode
 	An AVCaptureExposureMode to be checked.
  @result
 	YES if the receiver supports the given exposure mode, NO otherwise.
@@ -538,7 +538,7 @@ typedef NSInteger AVCaptureExposureMode;
 	value of this property. Clients can observe automatic changes to the receiver's exposure mode by key value observing
 	this property.
  */
-@property(nonatomic)                                                      AVCaptureExposureMode exposureMode;
+@property(nonatomic) AVCaptureExposureMode exposureMode;
 
 /*!
  @property exposurePointOfInterestSupported:
@@ -548,7 +548,7 @@ typedef NSInteger AVCaptureExposureMode;
  @discussion
 	The receiver's exposurePointOfInterest property can only be set if this property returns YES.
  */
-@property(nonatomic, readonly, getter=isExposurePointOfInterestSupported) BOOL                  exposurePointOfInterestSupported;
+@property(nonatomic, readonly, getter=isExposurePointOfInterestSupported) BOOL exposurePointOfInterestSupported;
 
 /*!
  @property exposurePointOfInterest
@@ -564,7 +564,7 @@ typedef NSInteger AVCaptureExposureMode;
 	before clients can set the value of this property. Clients can observe automatic changes to the receiver's exposure
 	point of interest by key value observing this property.
  */
-@property(nonatomic)                                                      CGPoint               exposurePointOfInterest;
+@property(nonatomic) CGPoint exposurePointOfInterest;
 
 /*!
  @property adjustingExposure
@@ -577,7 +577,7 @@ typedef NSInteger AVCaptureExposureMode;
 	Clients can observe the value of this property to determine whether the camera exposure is stable or is being
 	automatically adjusted.
  */
-@property(nonatomic, readonly, getter=isAdjustingExposure)                BOOL                  adjustingExposure;
+@property(nonatomic, readonly, getter=isAdjustingExposure) BOOL adjustingExposure;
 
 @end
 
@@ -630,7 +630,7 @@ typedef NSInteger AVCaptureWhiteBalanceMode;
 	set the value of this property. Clients can observe automatic changes to the receiver's exposure mode by key value
 	observing this property.
  */
-@property(nonatomic)                                           AVCaptureWhiteBalanceMode whiteBalanceMode;
+@property(nonatomic) AVCaptureWhiteBalanceMode whiteBalanceMode;
 
 /*!
  @property adjustingWhiteBalance
@@ -643,6 +643,6 @@ typedef NSInteger AVCaptureWhiteBalanceMode;
 	AVCaptureWhiteBalanceModeContinuousAutoWhiteBalance. Clients can observe the value of this property to determine
 	whether the camera white balance is stable or is being automatically adjusted.
  */
-@property(nonatomic, readonly, getter=isAdjustingWhiteBalance) BOOL                      adjustingWhiteBalance;
+@property(nonatomic, readonly, getter=isAdjustingWhiteBalance) BOOL adjustingWhiteBalance;
 
 @end

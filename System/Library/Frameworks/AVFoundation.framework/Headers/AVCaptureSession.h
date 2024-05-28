@@ -104,10 +104,10 @@ extern NSString *const AVCaptureSessionInterruptionEndedNotification    __OSX_AV
 	Indicates that video should be oriented horizontally, home button on the left.
  */
 enum {
-    AVCaptureVideoOrientationPortrait				= 1,
-    AVCaptureVideoOrientationPortraitUpsideDown		= 2,
-    AVCaptureVideoOrientationLandscapeRight			= 3,
-    AVCaptureVideoOrientationLandscapeLeft			= 4,
+    AVCaptureVideoOrientationPortrait           = 1,
+    AVCaptureVideoOrientationPortraitUpsideDown = 2,
+    AVCaptureVideoOrientationLandscapeRight     = 3,
+    AVCaptureVideoOrientationLandscapeLeft      = 4,
 };
 typedef NSInteger AVCaptureVideoOrientation;
 
@@ -382,7 +382,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
 	Clients can key value observe the value of this property to be notified when
 	the session automatically starts or stops running.
  */
-@property(nonatomic, readonly, getter=isRunning)     BOOL running;
+@property(nonatomic, readonly, getter=isRunning) BOOL running;
 
 /*!
  @property interrupted
@@ -568,10 +568,11 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
     to rotate the video buffers being consumed by the connection's output.  Note that
     setting videoOrientation does not necessarily result in a physical rotation of
     video buffers.  For instance, a video connection to an AVCaptureMovieFileOutput
-    handles orientation using a Quicktime track matrix.  In the AVCaputreStillImageOutput,
+    handles orientation using a Quicktime track matrix.  In the AVCaptureStillImageOutput,
     orientation is handled using Exif tags.
 */
 @property(nonatomic) AVCaptureVideoOrientation videoOrientation;
+
 @end
 
 

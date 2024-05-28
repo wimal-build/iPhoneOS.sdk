@@ -85,7 +85,7 @@ extern NSString *const AVCaptureInputPortFormatDescriptionDidChangeNotification 
  @discussion
 	The value of this property is an AVCaptureInput instance that owns the receiver.
  */
-@property(nonatomic, readonly)         AVCaptureInput         *input;
+@property(nonatomic, readonly) AVCaptureInput *input;
 
 /*!
  @property mediaType
@@ -96,7 +96,7 @@ extern NSString *const AVCaptureInputPortFormatDescriptionDidChangeNotification 
 	The value of this property is a constant describing the type of media, such as AVMediaTypeVideo or AVMediaTypeAudio,
 	provided by the receiver. Media type constants are defined in AVMediaFormat.h.
  */
-@property(nonatomic, readonly)         NSString               *mediaType;
+@property(nonatomic, readonly) NSString *mediaType;
 
 /*!
  @property formatDescription
@@ -108,7 +108,7 @@ extern NSString *const AVCaptureInputPortFormatDescriptionDidChangeNotification 
 	by the receiver. Clients can be notified of changes to the format by observing the
 	AVCaptureInputPortFormatDescriptionDidChangeNotification.
  */
-@property(nonatomic, readonly)         CMFormatDescriptionRef formatDescription;
+@property(nonatomic, readonly) CMFormatDescriptionRef formatDescription;
 
 /*!
  @property enabled
@@ -120,7 +120,7 @@ extern NSString *const AVCaptureInputPortFormatDescriptionDidChangeNotification 
 	session is running. Clients can set this property to fine tune which media streams from a given input will be used
 	during capture. The default value is YES.
  */
-@property(nonatomic, getter=isEnabled) BOOL                   enabled;
+@property(nonatomic, getter=isEnabled) BOOL enabled;
 
 @end
 

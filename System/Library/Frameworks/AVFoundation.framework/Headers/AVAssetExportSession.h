@@ -21,9 +21,33 @@
 #endif // ! TARGET_OS_IPHONE
 
 /*!
-    @class AVAssetExportSession
+	@class		AVAssetExportSession
 
-    @abstract An AVAssetExportSession object transcodes the contents of an AVAsset source to create an output in the form described by a specified export preset.
+	@abstract	An AVAssetExportSession creates a new timed media resource from the contents of an 
+				existing AVAsset in the form described by a specified export preset.
+
+	@discussion
+				Prior to initializing an instance of AVAssetExportSession, you can invoke
+				+allExportPresets to obtain the complete list of presets available. Use
+				+exportPresetsCompatibleWithAsset: to obtain a list of presets that are compatible
+				with a specific AVAsset.
+
+				After you have initialized an AVAssetExportSession with the AVAsset that contains
+				the source media, the export preset name, and the output file type (a UTI string
+				from among those defined in AVMediaFormat.h), you can start the export running by
+				invoking -exportAsynchronouslyWithCompletionHandler:. This method returns
+				immediately; the export is performed asynchronously. Invoke the -progress method to
+				check on the progress. Note that in some cases, depending on the capabilities of the
+				device, when multiple exports are attempted at the same time some may be queued
+				until others have been completed. When this happens, the status of a queued export
+				will indicate that it's "waiting".
+
+				Whether the export fails, completes, or is cancelled, the completion handler you
+				supply to -exportAsynchronouslyWithCompletionHandler: will be called. Upon
+				completion, the status property indicates whether the export has completed
+				successfully. If it has failed, the value of the error property supplies additional
+				information about the reason for the failure.
+
 */
 
 // -- Export Preset Names --
@@ -44,13 +68,29 @@ extern NSString *const AVAssetExportPresetHighestQuality    __OSX_AVAILABLE_STAR
 extern NSString *const AVAssetExportPreset640x480   __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_4_0);
 extern NSString *const AVAssetExportPreset960x540   __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_4_0);
 extern NSString *const AVAssetExportPreset1280x720  __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_4_0);
+#if ! TARGET_OS_IPHONE
+extern NSString *const AVAssetExportPreset1920x1080  __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_NA);
+#endif // ! TARGET_OS_IPHONE
 
 /*  This export option will produce an audio-only .m4a file with appropriate iTunes gapless playback data */
 extern NSString *const AVAssetExportPresetAppleM4A	__OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_4_0);
 
-/* This export option will let all tracks passed through unless it is not possible. This option
-	will not show up in the -allExportPresets and -exportPresetsCompatibleWithAsset methods. */
+/* This export option will cause the media of all tracks to be passed through to the output exactly as stored in the source asset, except for
+   tracks for which passthrough is not possible, usually because of constraints of the container format as indicated by the specified outputFileType.
+   This option is not included in the arrays returned by -allExportPresets and -exportPresetsCompatibleWithAsset. */
 extern NSString *const AVAssetExportPresetPassthrough __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_4_0);
+
+#if ! TARGET_OS_IPHONE
+/* These export options are used to produce files that can be played on the specified Apple devices. 
+	These presets are available for Desktop export only.
+	The files should have .m4v extensions (or .m4a for exports with audio only sources). */
+extern NSString *const AVAssetExportPresetAppleM4VCellular   __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_NA);
+extern NSString *const AVAssetExportPresetAppleM4V480pSD     __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_NA);
+extern NSString *const AVAssetExportPresetAppleM4VAppleTV    __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_NA);
+extern NSString *const AVAssetExportPresetAppleM4VWiFi       __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_NA);
+extern NSString *const AVAssetExportPresetAppleM4V720pHD     __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_NA);
+
+#endif // ! TARGET_OS_IPHONE
 
 
 @class AVAsset;
@@ -98,6 +138,14 @@ typedef NSInteger AVAssetExportSessionStatus;
 */
 + (NSArray *)exportPresetsCompatibleWithAsset:(AVAsset *)asset;
 
+/*!
+	@method						exportSessionWithAsset:presetName:
+	@abstract					Returns an instance of AVAssetExportSession for the specified source asset and preset.
+	@param		asset			An AVAsset object that is intended to be exported.
+	@param		presetName		An NSString specifying the name of the preset template for the export.
+	@result						An instance of AVAssetExportSession.
+*/
++ (id)exportSessionWithAsset:(AVAsset *)asset presetName:(NSString *)presetName;
 
 /*!
 	@method						initWithAsset:presetName:outputURL:

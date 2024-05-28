@@ -3,9 +3,9 @@
  
      Contains:   AltiVec DSP Interfaces
  
-     Version:    vecLib-291.2
+     Version:    vecLib-311.0
  
-     Copyright:  © 2000-2010 by Apple Computer, Inc., all rights reserved.
+     Copyright:  ï¿½ 2000-2010 by Apple Computer, Inc., all rights reserved.
  
      Bugs?:      For bug reports, consult the following page on
                  the World Wide Web:
@@ -46,8 +46,8 @@ extern "C" {
 	vDSP_Version0 is a major version number.
 	vDSP_Version1 is a minor version number.
 */
-#define	vDSP_Version0	291
-#define	vDSP_Version1	2
+#define	vDSP_Version0	311
+#define	vDSP_Version1	0
 
 
 typedef unsigned long                   vDSP_Length;
@@ -2251,7 +2251,8 @@ vDSP_zvsubD(
  *    CarbonLib:        not in Carbon, but vecLib is compatible with CarbonLib
  *    Non-Carbon CFM:   in vecLib 1.0 and later
  */
-extern void vDSP_zvmul(
+extern void 
+vDSP_zvmul(
 	const DSPSplitComplex *__vDSP_input1, vDSP_Stride __vDSP_stride1,
 	const DSPSplitComplex *__vDSP_input2, vDSP_Stride __vDSP_stride2,
 	const DSPSplitComplex *__vDSP_result, vDSP_Stride __vDSP_strideResult,
@@ -2271,14 +2272,14 @@ extern void vDSP_zvmul(
  */
 extern void 
 vDSP_zvmulD(
-  DSPDoubleSplitComplex *  __vDSP_input1,
-  vDSP_Stride              __vDSP_stride1,
-  DSPDoubleSplitComplex *  __vDSP_input2,
-  vDSP_Stride              __vDSP_stride2,
-  DSPDoubleSplitComplex *  __vDSP_result,
-  vDSP_Stride              __vDSP_strideResult,
-  vDSP_Length              __vDSP_size,
-  int                      __vDSP_conjugate) __OSX_AVAILABLE_STARTING(__MAC_10_2, __IPHONE_4_0);
+  const DSPDoubleSplitComplex *  __vDSP_input1,
+  vDSP_Stride							__vDSP_stride1,
+  const DSPDoubleSplitComplex *  __vDSP_input2,
+  vDSP_Stride							__vDSP_stride2,
+  const DSPDoubleSplitComplex *  __vDSP_result,
+  vDSP_Stride							__vDSP_strideResult,
+  vDSP_Length							__vDSP_size,
+  int										__vDSP_conjugate) __OSX_AVAILABLE_STARTING(__MAC_10_2, __IPHONE_4_0);
 
 
 /* Complex-split dot product, single-precision.*/
@@ -3037,13 +3038,13 @@ vDSP_zvabsD(
  */
 extern void 
 vDSP_zvcmul(
-  DSPSplitComplex *  __vDSP_A,
-  vDSP_Stride        __vDSP_I,
-  DSPSplitComplex *  __vDSP_B,
-  vDSP_Stride        __vDSP_J,
-  DSPSplitComplex *  __vDSP_C,
-  vDSP_Stride        __vDSP_K,
-  vDSP_Length        __vDSP_N) __OSX_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_4_0);
+  const DSPSplitComplex *  __vDSP_A,
+  vDSP_Stride					__vDSP_I,
+  const DSPSplitComplex *  __vDSP_B,
+  vDSP_Stride					__vDSP_J,
+  const DSPSplitComplex *  __vDSP_C,
+  vDSP_Stride					__vDSP_K,
+  vDSP_Length					__vDSP_N) __OSX_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_4_0);
 
 
 /* Complex-split vector conjugate and multiply, double-precision.*/
@@ -3057,13 +3058,13 @@ vDSP_zvcmul(
  */
 extern void 
 vDSP_zvcmulD(
-  DSPDoubleSplitComplex *  __vDSP_A,
-  vDSP_Stride              __vDSP_I,
-  DSPDoubleSplitComplex *  __vDSP_B,
-  vDSP_Stride              __vDSP_J,
-  DSPDoubleSplitComplex *  __vDSP_C,
-  vDSP_Stride              __vDSP_K,
-  vDSP_Length              __vDSP_N) __OSX_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_4_0);
+  const DSPDoubleSplitComplex *  __vDSP_A,
+  vDSP_Stride							__vDSP_I,
+  const DSPDoubleSplitComplex *  __vDSP_B,
+  vDSP_Stride							__vDSP_J,
+  const DSPDoubleSplitComplex *  __vDSP_C,
+  vDSP_Stride							__vDSP_K,
+  vDSP_Length							__vDSP_N) __OSX_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_4_0);
 
 
 /* Complex-split vector conjugate, single-precision.*/

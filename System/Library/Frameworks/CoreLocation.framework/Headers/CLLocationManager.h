@@ -8,6 +8,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CLLocation.h>
 
 /*
  *  CLDeviceOrientation
@@ -26,6 +27,23 @@ typedef enum {
 	CLDeviceOrientationFaceDown
 } CLDeviceOrientation;
 
+/*
+ *  CLAuthorizationStatus
+ *  
+ *  Discussion:
+ *      Represents the current authorization state of the application.
+ *      
+ */
+typedef enum {
+    kCLAuthorizationStatusNotDetermined = 0, // User has not yet made a choice with regards to this application
+    kCLAuthorizationStatusRestricted,        // This application is not authorized to use location services.  Due
+                                             // to active restrictions on location services, the user cannot change
+                                             // this status, and may not have personally denied authorization
+    kCLAuthorizationStatusDenied,            // User has explicitly denied authorization for this application, or
+                                             // location services are disabled in Settings
+    kCLAuthorizationStatusAuthorized         // User has authorized this application to use location services
+} CLAuthorizationStatus;
+
 @class CLLocation;
 @class CLHeading;
 @class CLRegion;
@@ -37,6 +55,7 @@ typedef enum {
  *  Discussion:
  *    The CLLocationManager object is your entry point to the location service.
  */
+NS_CLASS_AVAILABLE(10_6, 2_0)
 @interface CLLocationManager : NSObject
 {
 @private
@@ -86,6 +105,14 @@ typedef enum {
  */
 + (BOOL)regionMonitoringEnabled __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
 
+/*
+ *  authorizationStatus
+ *  
+ *  Discussion:
+ *      Returns the current authorization status of the calling application.
+ */
++ (CLAuthorizationStatus)authorizationStatus __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_2);
+
 @property(assign, nonatomic) id<CLLocationManagerDelegate> delegate;
 
 /*
@@ -122,9 +149,10 @@ typedef enum {
  *  Discussion:
  *      The desired location accuracy. The location service will try its best to achieve
  *      your desired accuracy. However, it is not guaranteed. To optimize
- *      power performence, be sure to specify an appropriate accuracy for your usage scenario (eg,
+ *      power performance, be sure to specify an appropriate accuracy for your usage scenario (eg,
  *      use a large accuracy value when only a coarse location is needed). Use kCLLocationAccuracyBest to
- *      achieve the best possible accuracy. By default, kCLLocationAccuracyBest is used.
+ *      achieve the best possible accuracy. Use kCLLocationAccuracyBestForNavigation for navigation.
+ *      By default, kCLLocationAccuracyBest is used.
  */
 @property(assign, nonatomic) CLLocationAccuracy desiredAccuracy;
 
@@ -149,8 +177,8 @@ typedef enum {
  *  
  *  Discussion:
  *      Specifies the minimum amount of change in degrees needed for a heading service update. Client will not
- *      be notified of movements of less than the stated value. Pass in kCLHeadingFilterNone to be
- *      notified of movements greater than one degree. By default, kCLHeadingFilterNone is used.
+ *      be notified of updates less than the stated filter value. Pass in kCLHeadingFilterNone to be
+ *      notified of all updates. By default, kCLHeadingFilterNone is used.
  */
 @property(assign, nonatomic) CLLocationDegrees headingFilter __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0);
 
@@ -169,7 +197,7 @@ typedef enum {
  *  heading
  *  
  *  Discussion:
- *      The last heading received. Will be nil until a heading has been received.
+ *      Returns the latest heading update received, or nil if none is available.
  */
 @property(readonly, nonatomic) CLHeading *heading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
 

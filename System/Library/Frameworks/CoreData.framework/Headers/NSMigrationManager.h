@@ -20,6 +20,7 @@
 @class NSMappingModel;
 @class NSMigrationContext;
 
+NS_CLASS_AVAILABLE(10_5, 3_0)
 @interface NSMigrationManager : NSObject {
     @private
     NSManagedObjectModel *_sourceModel;
@@ -33,7 +34,8 @@
     NSDictionary *_userInfo;
     struct _migrationManagerFlags {
         unsigned int _migrationWasCancelled:1;
-        unsigned int _reservedMigrationManager:31;
+        unsigned int _usesStoreSpecificMigrationManager:1;
+        unsigned int _reservedMigrationManager:30;
     } _migrationManagerFlags;
 	NSError *_migrationCancellationError;
 	id _reserved1;

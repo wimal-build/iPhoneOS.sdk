@@ -1,7 +1,7 @@
 /*
   GKVoiceChatService.h
 
-  Copyright 2009 Apple Inc. All rights reserved.
+  Copyright 2010 Apple Inc. All rights reserved.
  
  This service is useful for setting up a voice chat in two cases.
  1) You have a server that connects two clients, but you have no way of establishing a peer-to-peer channel.
@@ -97,12 +97,15 @@
 @class GKVoiceChatService;
 
 // GKVoiceChatService provides voice chat capabilities depending on your networking situation.
+NS_CLASS_AVAILABLE(NA, 4_1)
 GK_EXTERN_CLASS @interface GKVoiceChatService : NSObject {
 	@private
 	id _voiceChatService;
 }
 
 + (GKVoiceChatService *)defaultVoiceChatService;
+
++ (BOOL)isVoIPAllowed;
 
 @property(assign) id<GKVoiceChatClient> client;
 

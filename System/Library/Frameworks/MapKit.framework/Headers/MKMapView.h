@@ -29,6 +29,7 @@
 
 @protocol MKMapViewDelegate;
 
+NS_CLASS_AVAILABLE(__MAC_NA, 3_0)
 @interface MKMapView : UIView <NSCoding>
 {
 @private
@@ -91,8 +92,9 @@
 - (void)removeAnnotations:(NSArray *)annotations;
 
 @property (nonatomic, readonly) NSArray *annotations;
+- (NSSet *)annotationsInMapRect:(MKMapRect)mapRect __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_2);
 
-// Currently displayed view for an annotation; returns nil if the view for the annotation hasn't been created yet.
+// Currently displayed view for an annotation; returns nil if the view for the annotation isn't being displayed.
 - (MKAnnotationView *)viewForAnnotation:(id <MKAnnotation>)annotation;
 
 // Used by the delegate to acquire an already allocated annotation view, in lieu of allocating a new one.
@@ -169,10 +171,7 @@
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
 
-// Called after the provided overlay views have been added and positioned in the
-// map.  While you should not change the size or position of the overlay views
-// you may use this as an opportunity to animate the appearance of the overlay
-// views (e.g. fade them in).
+// Called after the provided overlay views have been added and positioned in the map.
 - (void)mapView:(MKMapView *)mapView didAddOverlayViews:(NSArray *)overlayViews __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
 
 @end

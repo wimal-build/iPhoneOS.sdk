@@ -24,7 +24,7 @@ typedef enum {
     // for UIEventTypeMotion, available in iPhone OS 3.0
     UIEventSubtypeMotionShake                       = 1,
     
-    // for UIEventTypeRemoteControl, available in iPhone OS 4.0
+    // for UIEventTypeRemoteControl, available in iOS 4.0
     UIEventSubtypeRemoteControlPlay                 = 100,
     UIEventSubtypeRemoteControlPause                = 101,
     UIEventSubtypeRemoteControlStop                 = 102,
@@ -37,7 +37,7 @@ typedef enum {
     UIEventSubtypeRemoteControlEndSeekingForward    = 109,
 } UIEventSubtype;
 
-UIKIT_EXTERN_CLASS @interface UIEvent : NSObject
+UIKIT_CLASS_AVAILABLE(2_0) @interface UIEvent : NSObject
 {
   @private
     NSTimeInterval _timestamp;

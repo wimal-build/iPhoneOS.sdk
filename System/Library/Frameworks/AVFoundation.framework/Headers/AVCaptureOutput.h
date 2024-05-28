@@ -35,7 +35,7 @@
 @interface AVCaptureOutput : NSObject
 {
 @private
-    AVCaptureOutputInternal  *_outputInternal;
+    AVCaptureOutputInternal *_outputInternal;
 }
 
 /*!
@@ -68,7 +68,7 @@
 @interface AVCaptureVideoDataOutput : AVCaptureOutput 
 {
 @private
-	AVCaptureVideoDataOutputInternal                *_internal;
+	AVCaptureVideoDataOutputInternal *_internal;
 }
 
 /*!
@@ -100,7 +100,8 @@
 	frames that have not been processed.
  
 	A serial dispatch queue must be used to guarantee that video frames will be delivered in order.
-	The sampleBufferCallbackQueue parameter may not be NULL.
+	The sampleBufferCallbackQueue parameter may not be NULL, except when setting the sampleBufferDelegate
+	to nil.
  */
 - (void)setSampleBufferDelegate:(id<AVCaptureVideoDataOutputSampleBufferDelegate>)sampleBufferDelegate queue:(dispatch_queue_t)sampleBufferCallbackQueue;
 
@@ -114,7 +115,7 @@
 	will receive sample buffers after they are captured. The delegate is set using the setSampleBufferDelegate:queue:
 	method.
  */
-@property(nonatomic, readonly) id<AVCaptureVideoDataOutputSampleBufferDelegate>   sampleBufferDelegate;
+@property(nonatomic, readonly) id<AVCaptureVideoDataOutputSampleBufferDelegate> sampleBufferDelegate;
 
 /*!
  @property sampleBufferCallbackQueue
@@ -124,7 +125,7 @@
  @discussion
 	The value of this property is a dispatch_queue_t. The queue is set using the setSampleBufferDelegate:queue: method.
  */
-@property(nonatomic, readonly) dispatch_queue_t                                   sampleBufferCallbackQueue;
+@property(nonatomic, readonly) dispatch_queue_t sampleBufferCallbackQueue;
 
 /*!
  @property videoSettings
@@ -136,11 +137,11 @@
 	AVVideoSettings.h, or pixel buffer attributes keys defined in <CoreVideo/CVPixelBuffer.h>.  When
     videoSettings is set to nil, the VideoDataOutput vends samples in their device native format.
 	
-	Currently, the only supported key is kCVPixelBufferPixelFormatTypeKey. Recommended pixel format choices are
-	kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange or kCVPixelFormatType_32BGRA.
-    On iPhone 3G, the recommended pixel format choices are kCVPixelFormatType_422YpCbCr8 or kCVPixelFormatType_32BGRA.
+	Currently, the only supported key is kCVPixelBufferPixelFormatTypeKey. Supported pixel formats are
+	kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange, kCVPixelFormatType_420YpCbCr8BiPlanarFullRange and kCVPixelFormatType_32BGRA,
+    except on iPhone 3G, where the supported pixel formats are kCVPixelFormatType_422YpCbCr8 and kCVPixelFormatType_32BGRA.
  */
-@property(nonatomic, copy)   NSDictionary                                         *videoSettings;
+@property(nonatomic, copy) NSDictionary *videoSettings;
 
 /*!
  @property minFrameDuration
@@ -153,7 +154,7 @@
 	inverse of the maximum frame rate. A value of kCMTimeZero or kCMTimeInvalid indicates an unlimited maximum frame
 	rate. The default value is kCMTimeInvalid 
  */
-@property(nonatomic)         CMTime                                               minFrameDuration;
+@property(nonatomic) CMTime minFrameDuration;
 
 /*!
  @property alwaysDiscardsLateVideoFrames
@@ -168,7 +169,7 @@
 	before new frames are discarded, but application memory usage may increase significantly as a result. The default
 	value is YES.
  */
-@property(nonatomic)         BOOL                                                 alwaysDiscardsLateVideoFrames;
+@property(nonatomic) BOOL alwaysDiscardsLateVideoFrames;
 
 @end
 
@@ -235,7 +236,7 @@
 @interface AVCaptureAudioDataOutput : AVCaptureOutput 
 {
 @private
-	AVCaptureAudioDataOutputInternal                *_internal;
+	AVCaptureAudioDataOutputInternal *_internal;
 }
 
 /*!
@@ -264,7 +265,7 @@
 	samples that have not been processed.
 
 	A serial dispatch queue must be used to guarantee that audio samples will be delivered in order.
-	The sampleBufferCallbackQueue parameter may not be NULL.
+	The sampleBufferCallbackQueue parameter may not be NULL, except when setting sampleBufferDelegate to nil.
 */
 - (void)setSampleBufferDelegate:(id<AVCaptureAudioDataOutputSampleBufferDelegate>)sampleBufferDelegate queue:(dispatch_queue_t)sampleBufferCallbackQueue;
 
@@ -278,7 +279,7 @@
 	will receive sample buffers after they are captured. The delegate is set using the setSampleBufferDelegate:queue:
 	method.
  */
-@property(nonatomic, readonly) id<AVCaptureAudioDataOutputSampleBufferDelegate>   sampleBufferDelegate;
+@property(nonatomic, readonly) id<AVCaptureAudioDataOutputSampleBufferDelegate> sampleBufferDelegate;
 
 /*!
  @property sampleBufferCallbackQueue
@@ -288,7 +289,7 @@
  @discussion
 	The value of this property is a dispatch_queue_t. The queue is set using the setSampleBufferDelegate:queue: method.
  */
-@property(nonatomic, readonly) dispatch_queue_t                                   sampleBufferCallbackQueue;
+@property(nonatomic, readonly) dispatch_queue_t sampleBufferCallbackQueue;
 
 @end
 
@@ -361,7 +362,7 @@
 	The value of this property is an NSURL object containing the file URL of the file currently being written by the
 	receiver. Returns nil if the receiver is not recording to any file.
  */
-@property(nonatomic, readonly) NSURL                                    *outputFileURL;
+@property(nonatomic, readonly) NSURL *outputFileURL;
 
 /*!
  @method startRecordingToOutputFileURL:recordingDelegate:
@@ -418,7 +419,7 @@
 	The value of this property is YES when the receiver currently has a file to which it is writing new samples, NO
 	otherwise.
  */
-@property(nonatomic, readonly, getter=isRecording) BOOL                 recording;
+@property(nonatomic, readonly, getter=isRecording) BOOL recording;
 
 /*!
  @property recordedDuration
@@ -428,7 +429,7 @@
  @discussion
 	If recording is in progress, this property returns the total time recorded so far.
  */
-@property(nonatomic, readonly) CMTime											recordedDuration;
+@property(nonatomic, readonly) CMTime recordedDuration;
 
 /*!
  @property recordedFileSize
@@ -438,7 +439,7 @@
  @discussion
 	If a recording is in progress, this property returns the size in bytes of the data recorded so far.
  */
-@property(nonatomic, readonly) int64_t                                  recordedFileSize;	
+@property(nonatomic, readonly) int64_t recordedFileSize;	
 
 /*!
  @property maxRecordedDuration
@@ -450,7 +451,7 @@
 	reached and the captureOutput:didFinishRecordingToOutputFileAtURL:fromConnections:error: delegate method is invoked
 	with an appropriate error. The default value of this property is kCMTimeInvalid, which indicates no limit.
  */
-@property(nonatomic)           CMTime                                   maxRecordedDuration;
+@property(nonatomic) CMTime maxRecordedDuration;
 
 /*!
  @property maxRecordedFileSize
@@ -462,7 +463,7 @@
 	reached and the captureOutput:didFinishRecordingToOutputFileAtURL:fromConnections:error: delegate method is invoked
 	with an appropriate error. The default value of this property is 0, which indicates no limit.
  */
-@property(nonatomic)           int64_t                                  maxRecordedFileSize;
+@property(nonatomic) int64_t maxRecordedFileSize;
 
 /*!
  @property minFreeDiskSpaceLimit
@@ -475,7 +476,7 @@
 	captureOutput:didFinishRecordingToOutputFileAtURL:fromConnections:error: delegate method is invoked with an
 	appropriate error.
  */
-@property(nonatomic)           int64_t                                  minFreeDiskSpaceLimit;
+@property(nonatomic) int64_t minFreeDiskSpaceLimit;
 
 @end
 
@@ -579,7 +580,7 @@
 	Changing the value of this property will not affect the movie fragment interval of the file currently being written,
 	if there is one.
  */
-@property(nonatomic)       CMTime                      movieFragmentInterval;
+@property(nonatomic) CMTime movieFragmentInterval;
 
 /*!
  @property metadata
@@ -590,7 +591,7 @@
 	The value of this property is an array of AVMetadataItem objects representing the collection of top-level metadata to
 	be written in each output file.
  */
-@property(nonatomic, copy) NSArray                     *metadata;
+@property(nonatomic, copy) NSArray *metadata;
 
 @end
 
@@ -627,7 +628,7 @@
     Use -availableImageDataCVPixelFormatTypes and -availableImageDataCodecTypes to determine what 
     codec keys and pixel formats are supported.
  */
-@property(nonatomic, copy)                        NSDictionary     *outputSettings;
+@property(nonatomic, copy) NSDictionary *outputSettings;
 
 /*!
 @property availableImageDataCVPixelFormatTypes
@@ -637,9 +638,9 @@
 @discussion
 	The value of this property is an NSArray of NSNumbers that can be used as values for the 
 	kCVPixelBufferPixelFormatTypeKey in the receiver's outputSettings property.  The first
-    format in the returned list is the device's native format.
+    format in the returned list is the most efficient output format.
 */
-@property(nonatomic, readonly)                    NSArray          *availableImageDataCVPixelFormatTypes;
+@property(nonatomic, readonly) NSArray *availableImageDataCVPixelFormatTypes;
 
 /*!
 @property availableImageDataCodecTypes
@@ -650,7 +651,7 @@
 	The value of this property is an NSArray of NSStrings that can be used as values for the 
 	AVVideoCodecKey in the receiver's outputSettings property.
 */
-@property(nonatomic, readonly)                    NSArray          *availableImageDataCodecTypes;
+@property(nonatomic, readonly) NSArray *availableImageDataCodecTypes;
 
 /*!
  @method captureStillImageAsynchronouslyFromConnection:completionHandler:

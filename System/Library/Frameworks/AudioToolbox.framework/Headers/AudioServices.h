@@ -599,7 +599,8 @@ AudioHardwareServiceRemovePropertyListener( AudioObjectID                       
                         audio category explicitly set, and none was set.
     @constant       kAudioSessionIncompatibleCategory
                         The requested operation failed because the AudioSession has an incompatible
-                        category (e.g. attempting to play or record when the category is AudioProcessing).
+                        category (e.g. attempting to play or record when the category is AudioProcessing) or
+                        the session is not active.
     @constant       kAudioSessionUnspecifiedError
                         An audio session unspecified error has occurred.  This would indicate an 
                         Apple-internal bug or that the audio system is currently in a bad state.
@@ -1138,7 +1139,6 @@ AudioSessionRemovePropertyListenerWithUserData(	AudioSessionPropertyID          
                                                 AudioSessionPropertyListener    inProc,
                                                 void                            *inClientData)              
                                                             __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_2_1);
-
 
 #pragma mark -
 #pragma mark Deprecated

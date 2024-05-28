@@ -12,13 +12,40 @@
 #import <CoreMotion/CMGyro.h>
 #import <CoreMotion/CMDeviceMotion.h>
 
+/* 
+ * There are two methods to receive data from CMMotionManager: push and pull.
+ *
+ * Before using either method, be sure to set the update interval property 
+ * appropriate to the type of data you're interested in. These properties are:
+ * accelerometerUpdateInterval, gyroUpdateInterval, and deviceMotionUpdateInterval.
+ *
+ * To use the pull method, simply call startAccelerometerUpdates, startGyroUpdates,
+ * and/or startDeviceMotionUpdates, depending on the type of data desired. Then, 
+ * whenever a new sample of data is desired, simply examine the appropriate 
+ * CMMotionManager property (accelerometerData, gyroData, or deviceMotion).
+ *
+ * To use the push method, simply call startAccelerometerUpdatesToQueue:withHandler:,
+ * startGyroUpdatesToQueue:withHandler:, and/or 
+ * startDeviceMotionUpdatesToQueue:withHandler:, depending on the type of data 
+ * desired. You'll need to pass an NSOperationQueue and block to each call. When a new sample of 
+ * data arrives, a new instance of the block will be added to the appropriate NSOperationQueue.
+ * When you stop the updates (see below), all operations in the given NSOperationQueue will be 
+ * cancelled, so it is recommended to pass CMMotionManager a queue that will not be used in other 
+ * contexts.
+ *
+ * Regardless of whether you used push or pull, when you're done, be sure to call the stop method 
+ * appropriate for the type of updates you started.  These methods are: stopAccelerometerUpdates,
+ * stopGyroUpdates, and stopDeviceMotionUpdates.
+ *
+ */
+
 /*
  *  CMAccelerometerHandler
  *  
  *  Discussion:
  *    Typedef of block to be invoked when accelerometer data is available.
  */
-typedef void (^CMAccelerometerHandler)(CMAccelerometerData *accelerometerData, NSError *error) __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+typedef void (^CMAccelerometerHandler)(CMAccelerometerData *accelerometerData, NSError *error);
 
 /*
  *  CMGyroHandler
@@ -26,7 +53,7 @@ typedef void (^CMAccelerometerHandler)(CMAccelerometerData *accelerometerData, N
  *  Discussion:
  *    Typedef of block to be invoked when gyro data is available.
  */
-typedef void (^CMGyroHandler)(CMGyroData *gyroData, NSError *error) __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+typedef void (^CMGyroHandler)(CMGyroData *gyroData, NSError *error);
 
 /*
  *  CMDeviceMotionHandler
@@ -34,7 +61,7 @@ typedef void (^CMGyroHandler)(CMGyroData *gyroData, NSError *error) __OSX_AVAILA
  *  Discussion:
  *    Typedef of block to be invoked when device motion data is available.
  */
-typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error);
 
 /*
  *  CMMotionManager
@@ -42,6 +69,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *  Discussion:
  *    The CMMotionManager object is your entry point to the motion service.
  */
+NS_CLASS_AVAILABLE(NA,4_0)
 @interface CMMotionManager : NSObject
 {
 @private
@@ -61,7 +89,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *			timestamps on the delivered CMAcceleration instances to determine the 
  *			true update interval. 
  */
-@property(assign, nonatomic) NSTimeInterval accelerometerUpdateInterval __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(assign, nonatomic) NSTimeInterval accelerometerUpdateInterval;
 
 /*
  *  accelerometerAvailable
@@ -69,7 +97,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *  Discussion:
  *      Determines whether accelerometer is available.
  */
-@property(readonly, nonatomic, getter=isAccelerometerAvailable) BOOL accelerometerAvailable __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(readonly, nonatomic, getter=isAccelerometerAvailable) BOOL accelerometerAvailable;
 
 /*
  *  accelerometerActive
@@ -78,7 +106,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *      Determines whether the CMMotionManager is currently providing 
  *			accelerometer updates.
  */
-@property(readonly, nonatomic, getter=isAccelerometerActive) BOOL accelerometerActive __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(readonly, nonatomic, getter=isAccelerometerActive) BOOL accelerometerActive;
 
 /*
  *  accelerometerData
@@ -87,7 +115,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *      Returns the latest sample of accelerometer data, or nil if none is available.
  */
 
-@property(readonly) CMAccelerometerData *accelerometerData __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(readonly) CMAccelerometerData *accelerometerData;
 
 /*
  *  startAccelerometerUpdates
@@ -96,15 +124,17 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *			Starts accelerometer updates with no handler. To receive the latest accelerometer data
  *			when desired, examine the accelerometerData property.
  */
-- (void)startAccelerometerUpdates __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+- (void)startAccelerometerUpdates;
 
 /*
  *  startAccelerometerUpdatesToQueue:withHandler:
  *  
  *  Discussion:
- *			Starts accelerometer updates.
+ *			Starts accelerometer updates, providing data to the given handler through the given queue.
+ *			Note that when the updates are stopped, all operations in the 
+ *			given NSOperationQueue will be cancelled.
  */
-- (void)startAccelerometerUpdatesToQueue:(NSOperationQueue *)queue withHandler:(CMAccelerometerHandler)handler __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+- (void)startAccelerometerUpdatesToQueue:(NSOperationQueue *)queue withHandler:(CMAccelerometerHandler)handler;
 
 /*
  *  stopAccelerometerUpdates
@@ -112,7 +142,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *  Discussion:
  *			Stop accelerometer updates.
  */
-- (void)stopAccelerometerUpdates __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+- (void)stopAccelerometerUpdates;
 
 /*
  *  gyroUpdateInterval
@@ -127,7 +157,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *			timestamps on the delivered CMGyroData instances to determine the 
  *			true update interval. 
  */
-@property(assign, nonatomic) NSTimeInterval gyroUpdateInterval __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(assign, nonatomic) NSTimeInterval gyroUpdateInterval;
 
 /*
  *  gyroAvailable
@@ -135,7 +165,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *  Discussion:
  *      Determines whether gyro is available.
  */
-@property(readonly, nonatomic, getter=isGyroAvailable) BOOL gyroAvailable __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(readonly, nonatomic, getter=isGyroAvailable) BOOL gyroAvailable;
 
 /*
  *  gyroActive
@@ -143,7 +173,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *  Discussion:
  *      Determines whether the CMMotionManager is currently providing gyro updates.
  */
-@property(readonly, nonatomic, getter=isGyroActive) BOOL gyroActive __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(readonly, nonatomic, getter=isGyroActive) BOOL gyroActive;
 
 /*
  *  gyroData
@@ -151,7 +181,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *  Discussion:
  *		Returns the latest sample of gyro data, or nil if none is available.
  */
-@property(readonly) CMGyroData *gyroData __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(readonly) CMGyroData *gyroData;
 
 /*
  *  startGyroUpdates
@@ -160,15 +190,18 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *			Starts gyro updates with no handler. To receive the latest gyro data
  *			when desired, examine the gyroData property.
  */
-- (void)startGyroUpdates __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+- (void)startGyroUpdates;
 
 /*
  *  startGyroUpdatesToQueue:withHandler:
  *  
  *  Discussion:
- *			Starts gyro updates, providing data to the given handler through the given queue.
+ *			Starts gyro updates, providing data to the given handler through the given queue. 
+ *			Note that when the updates are stopped, all operations in the 
+ *			given NSOperationQueue will be cancelled.
+
  */
-- (void)startGyroUpdatesToQueue:(NSOperationQueue *)queue withHandler:(CMGyroHandler)handler __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+- (void)startGyroUpdatesToQueue:(NSOperationQueue *)queue withHandler:(CMGyroHandler)handler;
 
 
 /*
@@ -177,7 +210,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *  Discussion:
  *			Stops gyro updates.
  */
-- (void)stopGyroUpdates __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+- (void)stopGyroUpdates;
 
 /*
  *  deviceMotionUpdateInterval
@@ -192,7 +225,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *			timestamps on the delivered CMDeviceMotion instances to determine the 
  *			true update interval. 
  */
-@property(assign, nonatomic) NSTimeInterval deviceMotionUpdateInterval __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(assign, nonatomic) NSTimeInterval deviceMotionUpdateInterval;
 
 /*
  *  deviceMotionAvailable
@@ -200,7 +233,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *  Discussion:
  *      Determines whether device motion is available.
  */
-@property(readonly, nonatomic, getter=isDeviceMotionAvailable) BOOL deviceMotionAvailable __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(readonly, nonatomic, getter=isDeviceMotionAvailable) BOOL deviceMotionAvailable;
 
 /*
  *  deviceMotionActive
@@ -209,7 +242,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *      Determines whether the CMMotionManager is currently providing device
  *			motion updates.
  */
-@property(readonly, nonatomic, getter=isDeviceMotionActive) BOOL deviceMotionActive __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(readonly, nonatomic, getter=isDeviceMotionActive) BOOL deviceMotionActive;
 
 /*
  *  deviceMotion
@@ -217,7 +250,7 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *  Discussion:
  *		Returns the latest sample of device motion data, or nil if none is available.
  */
-@property(readonly) CMDeviceMotion *deviceMotion __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+@property(readonly) CMDeviceMotion *deviceMotion;
 
 /*
  *  startDeviceMotionUpdates
@@ -226,16 +259,18 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *			Starts device motion updates with no handler. To receive the latest device motion data
  *			when desired, examine the deviceMotion property.
  */
-- (void)startDeviceMotionUpdates __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+- (void)startDeviceMotionUpdates;
 
 /*
  *  startDeviceMotionUpdatesToQueue:withHandler:
  *  
  *  Discussion:
  *			Starts device motion updates, providing data to the given handler through the given queue.
- */
-- (void)startDeviceMotionUpdatesToQueue:(NSOperationQueue *)queue withHandler:(CMDeviceMotionHandler)handler __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+ *			Note that when the updates are stopped, all operations in the 
+ *			given NSOperationQueue will be cancelled.
 
+ */
+- (void)startDeviceMotionUpdatesToQueue:(NSOperationQueue *)queue withHandler:(CMDeviceMotionHandler)handler;
 
 /*
  *  stopDeviceMotionUpdates
@@ -243,6 +278,6 @@ typedef void (^CMDeviceMotionHandler)(CMDeviceMotion *motion, NSError *error) __
  *  Discussion:
  *			Stops device motion updates.
  */
-- (void)stopDeviceMotionUpdates __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+- (void)stopDeviceMotionUpdates;
 
 @end

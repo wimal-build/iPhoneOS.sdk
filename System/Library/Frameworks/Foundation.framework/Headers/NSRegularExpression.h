@@ -8,8 +8,6 @@
 
 @class NSArray;
 
-#if __IPHONE_4_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED
-
 /* NSRegularExpression is a class used to represent and apply regular expressions.  An instance of this class is an immutable representation of a compiled regular expression pattern and various option flags.
 */
 
@@ -24,6 +22,7 @@ enum {
 };
 typedef NSUInteger NSRegularExpressionOptions;
 
+NS_CLASS_AVAILABLE(NA, 4_0)
 @interface NSRegularExpression : NSObject <NSCopying, NSCoding> {
     @protected   // all instance variables are private
     NSString *_pattern;
@@ -111,13 +110,13 @@ NSRegularExpression is designed to be immutable and threadsafe, so that a single
 
 @end
 
-
+NS_CLASS_AVAILABLE(NA, 4_0)
 @interface NSDataDetector : NSRegularExpression {
     @protected   // all instance variables are private
     NSTextCheckingTypes _types;
 }
 
-/* NSDataDetector is a specialized subclass of NSRegularExpression.  Instead of finding matches to regular expression patterns, it matches items identified by Data Detectors, such as dates, addresses, and URLs.  The checkingTypes argument should contain one or more of the types NSTextCheckingTypeDate, NSTextCheckingTypeAddress, and NSTextCheckingTypeLink.  The NSTextCheckingResult instances returned will be of the appropriate types from that list.
+/* NSDataDetector is a specialized subclass of NSRegularExpression.  Instead of finding matches to regular expression patterns, it matches items identified by Data Detectors, such as dates, addresses, and URLs.  The checkingTypes argument should contain one or more of the types NSTextCheckingTypeDate, NSTextCheckingTypeAddress, NSTextCheckingTypeLink, NSTextCheckingTypePhoneNumber, and NSTextCheckingTypeTransitInformation.  The NSTextCheckingResult instances returned will be of the appropriate types from that list.
 */
 + (NSDataDetector *)dataDetectorWithTypes:(NSTextCheckingTypes)checkingTypes error:(NSError **)error;
 - (id)initWithTypes:(NSTextCheckingTypes)checkingTypes error:(NSError **)error;
@@ -126,4 +125,3 @@ NSRegularExpression is designed to be immutable and threadsafe, so that a single
 
 @end
 
-#endif /* __IPHONE_OS_VERSION_MAX_ALLOWED */

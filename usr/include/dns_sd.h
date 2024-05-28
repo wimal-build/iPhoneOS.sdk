@@ -77,7 +77,7 @@
  */
 
 #ifndef _DNS_SD_H
-#define _DNS_SD_H 2360000
+#define _DNS_SD_H 2800000
 
 #ifdef  __cplusplus
     extern "C" {
@@ -386,73 +386,73 @@ enum
 
 enum
     {
-    kDNSServiceType_A         = 1,      /* Host address. */
-    kDNSServiceType_NS        = 2,      /* Authoritative server. */
-    kDNSServiceType_MD        = 3,      /* Mail destination. */
-    kDNSServiceType_MF        = 4,      /* Mail forwarder. */
-    kDNSServiceType_CNAME     = 5,      /* Canonical name. */
-    kDNSServiceType_SOA       = 6,      /* Start of authority zone. */
-    kDNSServiceType_MB        = 7,      /* Mailbox domain name. */
-    kDNSServiceType_MG        = 8,      /* Mail group member. */
-    kDNSServiceType_MR        = 9,      /* Mail rename name. */
-    kDNSServiceType_NULL      = 10,     /* Null resource record. */
-    kDNSServiceType_WKS       = 11,     /* Well known service. */
-    kDNSServiceType_PTR       = 12,     /* Domain name pointer. */
-    kDNSServiceType_HINFO     = 13,     /* Host information. */
-    kDNSServiceType_MINFO     = 14,     /* Mailbox information. */
-    kDNSServiceType_MX        = 15,     /* Mail routing information. */
-    kDNSServiceType_TXT       = 16,     /* One or more text strings (NOT "zero or more..."). */
-    kDNSServiceType_RP        = 17,     /* Responsible person. */
-    kDNSServiceType_AFSDB     = 18,     /* AFS cell database. */
-    kDNSServiceType_X25       = 19,     /* X_25 calling address. */
-    kDNSServiceType_ISDN      = 20,     /* ISDN calling address. */
-    kDNSServiceType_RT        = 21,     /* Router. */
-    kDNSServiceType_NSAP      = 22,     /* NSAP address. */
-    kDNSServiceType_NSAP_PTR  = 23,     /* Reverse NSAP lookup (deprecated). */
-    kDNSServiceType_SIG       = 24,     /* Security signature. */
-    kDNSServiceType_KEY       = 25,     /* Security key. */
-    kDNSServiceType_PX        = 26,     /* X.400 mail mapping. */
-    kDNSServiceType_GPOS      = 27,     /* Geographical position (withdrawn). */
-    kDNSServiceType_AAAA      = 28,     /* IPv6 Address. */
-    kDNSServiceType_LOC       = 29,     /* Location Information. */
-    kDNSServiceType_NXT       = 30,     /* Next domain (security). */
-    kDNSServiceType_EID       = 31,     /* Endpoint identifier. */
-    kDNSServiceType_NIMLOC    = 32,     /* Nimrod Locator. */
-    kDNSServiceType_SRV       = 33,     /* Server Selection. */
-    kDNSServiceType_ATMA      = 34,     /* ATM Address */
-    kDNSServiceType_NAPTR     = 35,     /* Naming Authority PoinTeR */
-    kDNSServiceType_KX        = 36,     /* Key Exchange */
-    kDNSServiceType_CERT      = 37,     /* Certification record */
-    kDNSServiceType_A6        = 38,     /* IPv6 Address (deprecated) */
-    kDNSServiceType_DNAME     = 39,     /* Non-terminal DNAME (for IPv6) */
-    kDNSServiceType_SINK      = 40,     /* Kitchen sink (experimental) */
-    kDNSServiceType_OPT       = 41,     /* EDNS0 option (meta-RR) */
-    kDNSServiceType_APL       = 42,     /* Address Prefix List */
-    kDNSServiceType_DS        = 43,     /* Delegation Signer */
-    kDNSServiceType_SSHFP     = 44,     /* SSH Key Fingerprint */
-    kDNSServiceType_IPSECKEY  = 45,     /* IPSECKEY */
-    kDNSServiceType_RRSIG     = 46,     /* RRSIG */
-    kDNSServiceType_NSEC      = 47,     /* Denial of Existence */
-    kDNSServiceType_DNSKEY    = 48,     /* DNSKEY */
-    kDNSServiceType_DHCID     = 49,     /* DHCP Client Identifier */
-    kDNSServiceType_NSEC3     = 50,     /* Hashed Authenticated Denial of Existence */
-    kDNSServiceType_NSEC3PARAM= 51,     /* Hashed Authenticated Denial of Existence */
+    kDNSServiceType_A          = 1,      /* Host address. */
+    kDNSServiceType_NS         = 2,      /* Authoritative server. */
+    kDNSServiceType_MD         = 3,      /* Mail destination. */
+    kDNSServiceType_MF         = 4,      /* Mail forwarder. */
+    kDNSServiceType_CNAME      = 5,      /* Canonical name. */
+    kDNSServiceType_SOA        = 6,      /* Start of authority zone. */
+    kDNSServiceType_MB         = 7,      /* Mailbox domain name. */
+    kDNSServiceType_MG         = 8,      /* Mail group member. */
+    kDNSServiceType_MR         = 9,      /* Mail rename name. */
+    kDNSServiceType_NULL       = 10,     /* Null resource record. */
+    kDNSServiceType_WKS        = 11,     /* Well known service. */
+    kDNSServiceType_PTR        = 12,     /* Domain name pointer. */
+    kDNSServiceType_HINFO      = 13,     /* Host information. */
+    kDNSServiceType_MINFO      = 14,     /* Mailbox information. */
+    kDNSServiceType_MX         = 15,     /* Mail routing information. */
+    kDNSServiceType_TXT        = 16,     /* One or more text strings (NOT "zero or more..."). */
+    kDNSServiceType_RP         = 17,     /* Responsible person. */
+    kDNSServiceType_AFSDB      = 18,     /* AFS cell database. */
+    kDNSServiceType_X25        = 19,     /* X_25 calling address. */
+    kDNSServiceType_ISDN       = 20,     /* ISDN calling address. */
+    kDNSServiceType_RT         = 21,     /* Router. */
+    kDNSServiceType_NSAP       = 22,     /* NSAP address. */
+    kDNSServiceType_NSAP_PTR   = 23,     /* Reverse NSAP lookup (deprecated). */
+    kDNSServiceType_SIG        = 24,     /* Security signature. */
+    kDNSServiceType_KEY        = 25,     /* Security key. */
+    kDNSServiceType_PX         = 26,     /* X.400 mail mapping. */
+    kDNSServiceType_GPOS       = 27,     /* Geographical position (withdrawn). */
+    kDNSServiceType_AAAA       = 28,     /* IPv6 Address. */
+    kDNSServiceType_LOC        = 29,     /* Location Information. */
+    kDNSServiceType_NXT        = 30,     /* Next domain (security). */
+    kDNSServiceType_EID        = 31,     /* Endpoint identifier. */
+    kDNSServiceType_NIMLOC     = 32,     /* Nimrod Locator. */
+    kDNSServiceType_SRV        = 33,     /* Server Selection. */
+    kDNSServiceType_ATMA       = 34,     /* ATM Address */
+    kDNSServiceType_NAPTR      = 35,     /* Naming Authority PoinTeR */
+    kDNSServiceType_KX         = 36,     /* Key Exchange */
+    kDNSServiceType_CERT       = 37,     /* Certification record */
+    kDNSServiceType_A6         = 38,     /* IPv6 Address (deprecated) */
+    kDNSServiceType_DNAME      = 39,     /* Non-terminal DNAME (for IPv6) */
+    kDNSServiceType_SINK       = 40,     /* Kitchen sink (experimental) */
+    kDNSServiceType_OPT        = 41,     /* EDNS0 option (meta-RR) */
+    kDNSServiceType_APL        = 42,     /* Address Prefix List */
+    kDNSServiceType_DS         = 43,     /* Delegation Signer */
+    kDNSServiceType_SSHFP      = 44,     /* SSH Key Fingerprint */
+    kDNSServiceType_IPSECKEY   = 45,     /* IPSECKEY */
+    kDNSServiceType_RRSIG      = 46,     /* RRSIG */
+    kDNSServiceType_NSEC       = 47,     /* Denial of Existence */
+    kDNSServiceType_DNSKEY     = 48,     /* DNSKEY */
+    kDNSServiceType_DHCID      = 49,     /* DHCP Client Identifier */
+    kDNSServiceType_NSEC3      = 50,     /* Hashed Authenticated Denial of Existence */
+    kDNSServiceType_NSEC3PARAM = 51,     /* Hashed Authenticated Denial of Existence */
 
-    kDNSServiceType_HIP       = 55,     /* Host Identity Protocol */
+    kDNSServiceType_HIP        = 55,     /* Host Identity Protocol */
 
-    kDNSServiceType_SPF       = 99,     /* Sender Policy Framework for E-Mail */
-    kDNSServiceType_UINFO     = 100,    /* IANA-Reserved */
-    kDNSServiceType_UID       = 101,    /* IANA-Reserved */
-    kDNSServiceType_GID       = 102,    /* IANA-Reserved */
-    kDNSServiceType_UNSPEC    = 103,    /* IANA-Reserved */
+    kDNSServiceType_SPF        = 99,     /* Sender Policy Framework for E-Mail */
+    kDNSServiceType_UINFO      = 100,    /* IANA-Reserved */
+    kDNSServiceType_UID        = 101,    /* IANA-Reserved */
+    kDNSServiceType_GID        = 102,    /* IANA-Reserved */
+    kDNSServiceType_UNSPEC     = 103,    /* IANA-Reserved */
 
-    kDNSServiceType_TKEY      = 249,    /* Transaction key */
-    kDNSServiceType_TSIG      = 250,    /* Transaction signature. */
-    kDNSServiceType_IXFR      = 251,    /* Incremental zone transfer. */
-    kDNSServiceType_AXFR      = 252,    /* Transfer zone of authority. */
-    kDNSServiceType_MAILB     = 253,    /* Transfer mailbox records. */
-    kDNSServiceType_MAILA     = 254,    /* Transfer mail agent records. */
-    kDNSServiceType_ANY       = 255     /* Wildcard match. */
+    kDNSServiceType_TKEY       = 249,    /* Transaction key */
+    kDNSServiceType_TSIG       = 250,    /* Transaction signature. */
+    kDNSServiceType_IXFR       = 251,    /* Incremental zone transfer. */
+    kDNSServiceType_AXFR       = 252,    /* Transfer zone of authority. */
+    kDNSServiceType_MAILB      = 253,    /* Transfer mailbox records. */
+    kDNSServiceType_MAILA      = 254,    /* Transfer mail agent records. */
+    kDNSServiceType_ANY        = 255     /* Wildcard match. */
     };
 
 /* possible error code values */

@@ -216,18 +216,17 @@ struct if_data64 {
 
 #pragma pack()
 
+
 /*
  * Structure defining a queue for a network interface.
  */
 struct	ifqueue {
-	void *ifq_head;
-	void *ifq_tail;
+	void	*ifq_head;
+	void	*ifq_tail;
 	int	ifq_len;
 	int	ifq_maxlen;
 	int	ifq_drops;
 };
-
-
 
 
 

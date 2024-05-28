@@ -25,13 +25,17 @@ limitations under the License.
 #define __VFORCE_H
 
 #ifdef __cplusplus
-#include <complex>
+namespace std
+{
+	template<class T> class complex;
+	template<> class complex<float>;
+	template<> class complex<double>;
+}
 typedef std::complex<float> __float_complex_t;
 typedef std::complex<double> __double_complex_t;
 #else
-#include "complex.h" /* included before math.h in order to get modern cabs() prototype */
-typedef complex float __float_complex_t;
-typedef complex double __double_complex_t;
+typedef _Complex float __float_complex_t;
+typedef _Complex double __double_complex_t;
 #endif
 
 #include "math.h"

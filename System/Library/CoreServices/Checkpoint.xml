@@ -1316,6 +1316,68 @@
 	<true/>
 	<key>VideoCodecs</key>
 	<dict>
+        <key>H.264H_HDVideo51</key>
+        <dict>
+            <key>AppleVideoDRM</key>
+            <dict>
+                <key>MaximumEncryptionPercentage</key>
+                <integer>100</integer>
+            </dict>
+            <key>AudioCodecs</key>
+            <dict>
+                <key>AAC</key>
+                <dict>
+                    <key>AppleDRM</key>
+                    <true/>
+                    <key>LC</key>
+                    <dict>
+                        <key>Multichannel</key>
+                        <false/>
+                        <key>VariableBitRate</key>
+                        <true/>
+                    </dict>
+                    <key>MaximumBitRate</key>
+                    <integer>256</integer>
+                    <key>MaximumSampleRate</key>
+                    <integer>48000</integer>
+                </dict>
+                <key>PCM</key>
+                <dict>
+                    <key>Codec</key>
+                    <string>pcm </string>
+                    <key>MaximumBitDepth</key>
+                    <integer>16</integer>
+                    <key>MaximumSampleRate</key>
+                    <integer>48000</integer>
+                    <key>Mono</key>
+                    <true/>
+                    <key>Multichannel</key>
+                    <false/>
+                    <key>Stereo</key>
+                    <true/>
+                </dict>
+            </dict>
+            <key>Codec</key>
+            <string>avc1</string>
+            <key>Level</key>
+            <integer>51</integer>
+            <key>MaximumHeight</key>
+            <integer>1280</integer>
+            <key>MaximumPixelsPerSecond</key>
+            <integer>221184000</integer>
+            <key>MaximumResolution</key>
+            <integer>921600</integer>
+            <key>MaximumWidth</key>
+            <integer>1280</integer>
+            <key>MinimumHeight</key>
+            <integer>32</integer>
+            <key>MinimumWidth</key>
+            <integer>32</integer>
+            <key>NumericProfile</key>
+            <integer>100</integer>
+            <key>SupportsBFrames</key>
+            <true/>
+        </dict>        
 		<key>H.263</key>
 		<dict>
 			<key>AudioCodecs</key>

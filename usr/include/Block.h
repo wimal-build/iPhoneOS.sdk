@@ -33,6 +33,22 @@ BLOCK_EXPORT void *_Block_copy(const void *aBlock)
 BLOCK_EXPORT void _Block_release(const void *aBlock)
     __OSX_AVAILABLE_STARTING(__MAC_10_6, __IPHONE_3_2);
 
+
+// Used by the compiler. Do not call this function yourself.
+BLOCK_EXPORT void _Block_object_assign(void *, const void *, const int)
+    __OSX_AVAILABLE_STARTING(__MAC_10_6, __IPHONE_3_2);
+
+// Used by the compiler. Do not call this function yourself.
+BLOCK_EXPORT void _Block_object_dispose(const void *, const int)
+    __OSX_AVAILABLE_STARTING(__MAC_10_6, __IPHONE_3_2);
+
+// Used by the compiler. Do not use these variables yourself.
+BLOCK_EXPORT void * _NSConcreteGlobalBlock[32]
+    __OSX_AVAILABLE_STARTING(__MAC_10_6, __IPHONE_3_2);
+BLOCK_EXPORT void * _NSConcreteStackBlock[32]
+    __OSX_AVAILABLE_STARTING(__MAC_10_6, __IPHONE_3_2);
+
+
 #if __cplusplus
 }
 #endif

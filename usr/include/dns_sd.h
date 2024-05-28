@@ -77,11 +77,18 @@
  */
 
 #ifndef _DNS_SD_H
-#define _DNS_SD_H 2160105
+#define _DNS_SD_H 2360000
 
 #ifdef  __cplusplus
     extern "C" {
 #endif
+
+/* Set to 1 if libdispatch is supported
+ * Note: May also be set by project and/or Makefile
+ */
+#ifndef _DNS_SD_LIBDISPATCH
+#define _DNS_SD_LIBDISPATCH  1
+#endif /* ndef _DNS_SD_LIBDISPATCH */
 
 /* standard calling convention under Win32 is __stdcall */
 /* Note: When compiling Intel EFI (Extensible Firmware Interface) under MS Visual Studio, the */
@@ -127,6 +134,10 @@ typedef INT32       int32_t;
 /* All other Posix platforms use stdint.h */
 #else
 #include <stdint.h>
+#endif
+
+#if _DNS_SD_LIBDISPATCH
+#include <dispatch/dispatch.h>
 #endif
 
 /* DNSServiceRef, DNSRecordRef
@@ -331,8 +342,15 @@ enum
      */
 
     kDNSServiceFlagsSuppressUnusable    = 0x8000
-    /* Placeholder definition, for future use
-     */
+	/*
+	 * This flag is meaningful only in DNSServiceQueryRecord which suppresses unusable queries on the
+	 * wire. If "hostname" is a wide-area unicast DNS hostname (i.e. not a ".local." name)
+	 * but this host has no routable IPv6 address, then the call will not try to look up IPv6 addresses
+	 * for "hostname", since any addresses it found would be unlikely to be of any use anyway. Similarly,
+	 * if this host has no routable IPv4 address, the call will not try to look up IPv4 addresses for
+	 * "hostname".
+	 */
+
     };
 
 /* Possible protocols for DNSServiceNATPortMappingCreate(). */
@@ -568,17 +586,23 @@ enum
  * to their DNSServiceBrowseReply() callback function, and discarding those
  * where the interface index is not kDNSServiceInterfaceIndexLocalOnly.
  *
- * If the client passes kDNSServiceInterfaceIndexP2P when registering
- * a service, then that service will be found *only* by other clients
- * on nearby machines that are browsing using kDNSServiceInterfaceIndexP2P
- * or kDNSServiceInterfaceIndexAny, and both machines support P2P.
+ * kDNSServiceInterfaceIndexP2P is meaningful only in Browse, QueryRecord,
+ * and Resolve operations. It should not be used in other DNSService APIs.
  *
- * If the client passes kDNSServiceInterfaceIndexP2P when resolving a
- * service, then if the local machine supports P2P and if that service is
- * registered using kDNSServiceInterfaceIndexP2P or kDNSServiceInterfaceIndexAny
- * on a nearby machine that also supports P2P, then an IP interface will be
- * established with that nearby machine, and the resolve result will indicate
- * the index of that interface.
+ * - If kDNSServiceInterfaceIndexP2P is passed to DNSServiceBrowse or
+ *   DNSServiceQueryRecord, it restricts the operation to P2P.
+ *
+ * - If kDNSServiceInterfaceIndexP2P is passed to DNSServiceResolve, it is
+ *   mapped internally to kDNSServiceInterfaceIndexAny, because resolving
+ *   a P2P service may create and/or enable an interface whose index is not
+ *   known a priori. The resolve callback will indicate the index of the
+ *   interface via which the service can be accessed.
+ *
+ * If applications pass kDNSServiceInterfaceIndexAny to DNSServiceBrowse
+ * or DNSServiceQueryRecord, the operation will also include P2P. In this
+ * case, if a service instance or the record being queried is found over P2P,
+ * the resulting ADD event will indicate kDNSServiceInterfaceIndexP2P as the
+ * interface index.
  */
 
 #define kDNSServiceInterfaceIndexAny 0
@@ -925,6 +949,13 @@ typedef void (DNSSD_API *DNSServiceRegisterReply)
  *                  % dns-sd -B _test._tcp,HasFeatureA # finds "Better" and "Best"
  *                  % dns-sd -B _test._tcp,HasFeatureB # finds only "Best"
  *
+ *                  Subtype labels may be up to 63 bytes long, and may contain any eight-
+ *                  bit byte values, including zero bytes. However, due to the nature of
+ *                  using a C-string-based API, conventional DNS escaping must be used for
+ *                  dots ('.'), commas (','), backslashes ('\') and zero bytes, as shown below:
+ *                  
+ *                  % dns-sd -R Test '_test._tcp,s\.one,s\,two,s\\three,s\000four' local 123
+ *
  * domain:          If non-NULL, specifies the domain on which to advertise the service.
  *                  Most applications will not specify a domain, instead automatically
  *                  registering in the default domain(s).
@@ -978,7 +1009,7 @@ DNSServiceErrorType DNSSD_API DNSServiceRegister
     const char                          *regtype,
     const char                          *domain,       /* may be NULL */
     const char                          *host,         /* may be NULL */
-    uint16_t                            port,
+    uint16_t                            port,          /* In network byte order */
     uint16_t                            txtLen,
     const void                          *txtRecord,    /* may be NULL */
     DNSServiceRegisterReply             callBack,      /* may be NULL */
@@ -1280,7 +1311,7 @@ typedef void (DNSSD_API *DNSServiceResolveReply)
     DNSServiceErrorType                 errorCode,
     const char                          *fullname,
     const char                          *hosttarget,
-    uint16_t                            port,
+    uint16_t                            port,        /* In network byte order */
     uint16_t                            txtLen,
     const unsigned char                 *txtRecord,
     void                                *context
@@ -1541,11 +1572,6 @@ typedef void (DNSSD_API *DNSServiceGetAddrInfoReply)
  *                     unlikely to be of any use anyway. Similarly, if this host has no routable
  *                     IPv4 address, the call will not try to look up IPv4 addresses for "hostname".
  *
- *                   * If "hostname" is a link-local multicast DNS hostname (i.e. a ".local." name)
- *                     but this host has no IPv6 address of any kind, then it will not try to look
- *                     up IPv6 addresses for "hostname". Similarly, if this host has no IPv4 address
- *                     of any kind, the call will not try to look up IPv4 addresses for "hostname".
- *
  * hostname:        The fully qualified domain name of the host to be queried for.
  *
  * callBack:        The function to be called when the query succeeds or fails asynchronously.
@@ -1748,7 +1774,8 @@ DNSServiceErrorType DNSSD_API DNSServiceReconfirmRecord
 /* DNSServiceNATPortMappingCreate
  *
  * Request a port mapping in the NAT gateway, which maps a port on the local machine
- * to an external port on the NAT.
+ * to an external port on the NAT. The NAT should support either the NAT-PMP or the UPnP IGD
+ * protocol for this API to create a successful mapping.
  *
  * The port mapping will be renewed indefinitely until the client process exits, or
  * explicitly terminates the port mapping request by calling DNSServiceRefDeallocate().
@@ -1849,9 +1876,9 @@ typedef void (DNSSD_API *DNSServiceNATPortMappingReply)
     DNSServiceErrorType              errorCode,
     uint32_t                         externalAddress,   /* four byte IPv4 address in network byte order */
     DNSServiceProtocol               protocol,
-    uint16_t                         internalPort,
-    uint16_t                         externalPort,      /* may be different than the requested port     */
-    uint32_t                         ttl,               /* may be different than the requested ttl      */
+    uint16_t                         internalPort,      /* In network byte order */
+    uint16_t                         externalPort,      /* In network byte order and may be different than the requested port */
+    uint32_t                         ttl,               /* may be different than the requested ttl */
     void                             *context
     );
 
@@ -2312,41 +2339,56 @@ DNSServiceErrorType DNSSD_API TXTRecordGetItemAtIndex
     const void       **value
     );
 
+#if _DNS_SD_LIBDISPATCH
+/*
+* DNSServiceSetDispatchQueue
+*
+* Allows you to schedule a DNSServiceRef on a serial dispatch queue for receiving asynchronous
+* callbacks.  It's the clients responsibility to ensure that the provided dispatch queue is running.
+*
+* A typical application that uses CFRunLoopRun or dispatch_main on its main thread will
+* usually schedule DNSServiceRefs on its main queue (which is always a serial queue)
+* using "DNSServiceSetDispatchQueue(sdref, dispatch_get_main_queue());"
+*
+* If there is any error during the processing of events, the application callback will
+* be called with an error code. For shared connections, each subordinate DNSServiceRef
+* will get its own error callback. Currently these error callbacks only happen
+* if the mDNSResponder daemon is manually terminated or crashes, and the error
+* code in this case is kDNSServiceErr_ServiceNotRunning. The application must call
+* DNSServiceRefDeallocate to free the DNSServiceRef when it gets such an error code.
+* These error callbacks are rare and should not normally happen on customer machines,
+* but application code should be written defensively to handle such error callbacks
+* gracefully if they occur.
+*
+* After using DNSServiceSetDispatchQueue on a DNSServiceRef, calling DNSServiceProcessResult
+* on the same DNSServiceRef will result in undefined behavior and should be avoided.
+*
+* Once the application successfully schedules a DNSServiceRef on a serial dispatch queue using
+* DNSServiceSetDispatchQueue, it cannot remove the DNSServiceRef from the dispatch queue, or use
+* DNSServiceSetDispatchQueue a second time to schedule the DNSServiceRef onto a different serial dispatch
+* queue. Once scheduled onto a dispatch queue a DNSServiceRef will deliver events to that queue until
+* the application no longer requires that operation and terminates it using DNSServiceRefDeallocate.
+*
+* service:         DNSServiceRef that was allocated and returned to the application, when the
+*                  application calls one of the DNSService API.
+*
+* queue:           dispatch queue where the application callback will be scheduled
+*
+* return value:    Returns kDNSServiceErr_NoError on success.
+*                  Returns kDNSServiceErr_NoMemory if it cannot create a dispatch source
+*                  Returns kDNSServiceErr_BadParam if the service param is invalid or the
+*                  queue param is invalid
+*/
+
+DNSServiceErrorType DNSSD_API DNSServiceSetDispatchQueue
+  (
+  DNSServiceRef service,
+  dispatch_queue_t queue
+  );
+#endif //_DNS_SD_LIBDISPATCH
+
 #ifdef __APPLE_API_PRIVATE
 
-/*
- * Mac OS X specific functionality
- * 3rd party clients of this API should not depend on future support or availability of this routine
- */
-
-/* DNSServiceSetDefaultDomainForUser()
- *
- * Set the default domain for the caller's UID. Future browse and registration
- * calls by this user that do not specify an explicit domain will browse and
- * register in this wide-area domain in addition to .local. In addition, this
- * domain will be returned as a Browse domain via domain enumeration calls.
- *
- * Parameters:
- *
- * flags:           Pass kDNSServiceFlagsAdd to add a domain for a user. Call without
- *                  this flag set to clear a previously added domain.
- *
- * domain:          The domain to be used for the caller's UID.
- *
- * return value:    Returns kDNSServiceErr_NoError on success, otherwise returns
- *                  an error code indicating the error that occurred.
- */
-
-DNSServiceErrorType DNSSD_API DNSServiceSetDefaultDomainForUser
-    (
-    DNSServiceFlags                    flags,
-    const char                         *domain
-    );
-
-/* Symbol defined to tell System Configuration Framework where to look in the Dynamic Store
- * for the list of PrivateDNS domains that need to be handed off to mDNSResponder
- * (the complete key is "State:/Network/PrivateDNS")
- */
 #define kDNSServiceCompPrivateDNS   "PrivateDNS"
 #define kDNSServiceCompMulticastDNS "MulticastDNS"
 

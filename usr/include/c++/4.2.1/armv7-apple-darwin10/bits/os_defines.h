@@ -247,4 +247,15 @@ typedef struct _Sinfo_Node {
 #endif /* __KEYMGR_H */
 #endif /* __APPLE__ etc. */
 /* APPLE LOCAL end keymgr */
+
+
+#if defined(__APPLE__) && defined(__arm__)
+
+#if (defined(__ARM_ARCH_7A__) || defined(__ARM_ARCH_7M__) || (defined(__ARM_ARCH_6K__) && (!defined(__thumb__) || defined(__thumb2__) || (__ENVIRONMENT_IPHONE_OS_VERSION_MIN_REQUIRED__ >= 40000))))
+#define _GLIBCXX_ATOMIC_BUILTINS 1
+#endif
+
+#endif
+
+
 #endif

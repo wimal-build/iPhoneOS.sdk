@@ -275,6 +275,7 @@ struct load_command {
 #define	LC_ENCRYPTION_INFO 0x21	/* encrypted segment information */
 #define	LC_DYLD_INFO 	0x22	/* compressed dyld information */
 #define	LC_DYLD_INFO_ONLY (0x22|LC_REQ_DYLD)	/* compressed dyld information only */
+#define	LC_LOAD_UPWARD_DYLIB (0x23 | LC_REQ_DYLD) /* load upward dylib */
 
 /*
  * A variable length string in a load command is represented by an lc_str

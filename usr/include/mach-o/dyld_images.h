@@ -97,6 +97,8 @@ struct dyld_all_image_infos {
 	/* the following field is only in version 8 (iPhoneOS 3.1) and later */
 	uintptr_t						uuidArrayCount;
 	const struct dyld_uuid_info*	uuidArray;		/* only images not in dyld shared cache */
+	/* the following field is only in version 9 (Mac OS X 10.7) and later */
+	struct dyld_all_image_infos*	dyldAllImageInfosAddress;
 };
 extern struct dyld_all_image_infos  dyld_all_image_infos;
 

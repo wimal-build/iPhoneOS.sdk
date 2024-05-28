@@ -879,7 +879,7 @@ _GLIBCXX_END_NAMESPACE
 /* #undef _GLIBCXX_VERSION */
 
 /* Define if builtin atomic operations are supported on this host. */
-#define _GLIBCXX_ATOMIC_BUILTINS 1
+/* #undef _GLIBCXX_ATOMIC_BUILTINS */
 
 /* Define to use concept checking code from the boost libraries. */
 /* #undef _GLIBCXX_CONCEPT_CHECKS */

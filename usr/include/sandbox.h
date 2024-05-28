@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2006-2007 Apple Inc. All rights reserved.
+ * Copyright (c) 2006-2010 Apple Inc. All rights reserved.
  *
  * @APPLE_LICENSE_HEADER_START@
  * 
@@ -23,9 +23,11 @@
 #ifndef _SANDBOX_H_
 #define _SANDBOX_H_
 
+#include <sys/cdefs.h>
 #include <stdint.h>
 #include <unistd.h>
 
+__BEGIN_DECLS
 /*
  * @function sandbox_init
  * Places the current process in a sandbox with a profile as
@@ -146,4 +148,5 @@ int sandbox_consume_extension(const char *path, const char *ext_token);
 
 #endif /* __APPLE_API_PRIVATE */
 
+__END_DECLS
 #endif /* _SANDBOX_H_ */

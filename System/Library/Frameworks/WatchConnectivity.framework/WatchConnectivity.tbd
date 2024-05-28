@@ -2,8 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/WatchConnectivity.framework/WatchConnectivity
-current-version: 47.1
-objc-constraint: retain_release
+current-version: 49.3
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _LZ4_compress, _LZ4_compressBound, _LZ4_compress_continue, 
@@ -29,18 +28,17 @@ exports:
                        _WCDProtoUserInfoTransferReadFrom, _WCErrorDomain, 
                        _WCFileTransferDataFileName, _WCFileTransferResultErrorKey, 
                        _WCFileTransferResultsFileName, _WCInternalErrorDomain, 
-                       _WCPayloadSizeLimitApplicationContext, _WCPayloadSizeLimitFile, 
-                       _WCPayloadSizeLimitMessage, _WCPayloadSizeLimitUserInfo, 
-                       _WCPrivateServiceComplicationsManagerEntitlement, 
-                       _WCPrivateServiceShouldConnectNotification, _WCServiceListenerResumedNotification, 
-                       _WCSessionActivationTimeout, _WCSessionFilePersistentFileName, 
-                       _WCUserInfoTransferObjectFileName, _WCUserInfoTransferResultErrorKey, 
-                       _WCUserInfoTransferResultsFileName, _WCUserInfoTransferWireDataFileName, 
-                       _WatchConnectivityVersionNumber, _WatchConnectivityVersionString, 
-                       _acceptableSizeForType, _acceptableSizeForTypeWithData, 
-                       _applicationSupportURLInContainer, _checkFileAndConsumeSandboxTokenForProcessID, 
-                       _checkFileAndCreateExtensionForProcess, _deleteItemAtURL, 
-                       _deserializePayloadData, _fileTransfersURLInContainer, 
+                       _WCPayloadSizeLimitApplicationContext, _WCPayloadSizeLimitMessage, 
+                       _WCPayloadSizeLimitUserInfo, _WCPrivateServiceComplicationsManagerEntitlement, 
+                       _WCPrivateServiceShouldConnectNotification, _WCQueueMessageMaxRetries, 
+                       _WCServiceListenerResumedNotification, _WCSessionActivationTimeout, 
+                       _WCSessionFilePersistentFileName, _WCUserInfoTransferObjectFileName, 
+                       _WCUserInfoTransferResultErrorKey, _WCUserInfoTransferResultsFileName, 
+                       _WCUserInfoTransferWireDataFileName, _WatchConnectivityVersionNumber, 
+                       _WatchConnectivityVersionString, _acceptableSizeForType, 
+                       _acceptableSizeForTypeWithData, _applicationSupportURLInContainer, 
+                       _checkFileAndConsumeSandboxTokenForProcessID, _checkFileAndCreateExtensionForProcess, 
+                       _deleteItemAtURL, _deserializePayloadData, _fileTransfersURLInContainer, 
                        _inboxAppContextFolderURLInContainer, _inboxURLInContainer, 
                        _isAllowedFileForProcess, _isFileDirectory, _serializePayloadDictionary, 
                        _sessionFilesURLInContainer, _transferIdentifierFromComplicationIdentifier, 

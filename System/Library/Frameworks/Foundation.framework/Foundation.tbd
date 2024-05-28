@@ -2,9 +2,8 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Foundation.framework/Foundation
-current-version: 1241.14
+current-version: 1242.12
 compatibility-version: 300.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ '$ld$add$os2.0$_OBJC_CLASS_$_NSURL', '$ld$add$os2.0$_OBJC_METACLASS_$_NSURL', 

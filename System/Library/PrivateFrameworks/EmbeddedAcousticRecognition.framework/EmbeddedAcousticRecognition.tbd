@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/EmbeddedAcousticRecognition.framework/EmbeddedAcousticRecognition
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     weak-def-symbols: [ __ZTIN5boost10filesystem16filesystem_errorE, __ZTIN5boost16bad_lexical_castE, 

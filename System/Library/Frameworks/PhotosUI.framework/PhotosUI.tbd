@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PhotosUI.framework/PhotosUI
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _PHDisplayVelocityZero, _PLActivityTypeAlbumStream, 
@@ -65,8 +64,8 @@ exports:
                        _PUSizeIsEqualToSizeWithTolerance, _PUSizeIsNull, 
                        _PUSizeMax, _PUSizeMin, _PUSizeNull, _PUSizeScale, 
                        _PUSizeScaleToFillSize, _PUSizeScaleToFitSize, _PUSizeSubtract, 
-                       _PUStringFromDisplayVelocity, _PUTileKindBackground, 
-                       _PUTileKindBadge, _PUTileKindBufferingIndicator, 
+                       _PUSizeTranspose, _PUStringFromDisplayVelocity, 
+                       _PUTileKindBackground, _PUTileKindBadge, _PUTileKindBufferingIndicator, 
                        _PUTileKindComments, _PUTileKindItemContent, _PUTileKindLoadingIndicator, 
                        _PUTileKindPlayButton, _PUTileKindProgressIndicator, 
                        _PUTileKindUserTransform, _PUTileKindVideoPlaceholder, 
@@ -106,7 +105,7 @@ exports:
                        _PUDeletePhotosActionController, _PUDisplayLink, 
                        _PUDynamicValueFilter, _PUFeedRecentsManager, _PUFeedSettings, 
                        _PUFeedViewController, _PUGridTilingLayout, _PUGroupValueFilter, 
-                       _PUImageExtraction, _PUInitialHysteresisValueFilter, 
+                       _PUImageExtraction, _PUImportViewController, _PUInitialHysteresisValueFilter, 
                        _PUInterfaceManager, _PUIrisSettings, _PUJoiningAssetActionManager, 
                        _PUJoiningAssetsDataSource, _PUJoiningDataSourceManager, 
                        _PUJoiningMediaProvider, _PULayoutSampledSectioning, 

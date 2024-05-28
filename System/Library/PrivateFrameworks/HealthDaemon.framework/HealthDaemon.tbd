@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/HealthDaemon.framework/HealthDaemon
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     weak-def-symbols: [ __ZTINSt3__110__back_refIcEE, __ZTINSt3__110__l_anchorIcEE, 

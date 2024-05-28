@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/LanguageModeling.framework/LanguageModeling
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _LMEnumerateAssetDataItems, _LMLanguageModelAdaptationIsEnabled, 
@@ -11,6 +10,7 @@ exports:
                        _LMLanguageModelConditionalProbability, _LMLanguageModelConditionalProbabilityVector, 
                        _LMLanguageModelConditionalProbabilityVectorWithEffectiveOrders, 
                        _LMLanguageModelConditionalProbabilityWithEffectiveOrder, 
+                       _LMLanguageModelConditionalProbabilityWithFlags, 
                        _LMLanguageModelConvertToExternalTokenIDs, _LMLanguageModelConvertToInternalTokenIDs, 
                        _LMLanguageModelCopyDynamicModelBundlePath, _LMLanguageModelCopyStringAttributeValue, 
                        _LMLanguageModelCopyTokenAttributes, _LMLanguageModelCountDynamicNgrams, 
@@ -65,13 +65,14 @@ exports:
                        _LMMecabraLexiconGetWordIDForCharacters, _LMMecabraLexiconGetWordIDForString, 
                        _LMMecabraLexiconRelease, _LMMecabraLexiconResetCursors, 
                        _LMPredictionEnumeratorAdvance, _LMPredictionEnumeratorGetPrediction, 
-                       _LMPredictionEnumeratorRelease, _LMStreamTokenizerCopyBestStringLanguage, 
-                       _LMStreamTokenizerCreate, _LMStreamTokenizerPopBytes, 
-                       _LMStreamTokenizerPushBytes, _LMStreamTokenizerRelease, 
-                       _LMStreamTokenizerReset, _kLMLanguageModelAdaptationEnabledKey, 
-                       _kLMLanguageModelAdaptationVersionNumberKey, _kLMLanguageModelAppContextKey, 
-                       _kLMLanguageModelBundleNameKey, _kLMLanguageModelCacheModelWeightKey, 
-                       _kLMLanguageModelContextIdentifierKey, _kLMLanguageModelCustomDynamicResourceDirectoryKey, 
+                       _LMPredictionEnumeratorGetPredictionWithFlags, _LMPredictionEnumeratorRelease, 
+                       _LMStreamTokenizerCopyBestStringLanguage, _LMStreamTokenizerCreate, 
+                       _LMStreamTokenizerPopBytes, _LMStreamTokenizerPushBytes, 
+                       _LMStreamTokenizerRelease, _LMStreamTokenizerReset, 
+                       _kLMLanguageModelAdaptationEnabledKey, _kLMLanguageModelAdaptationVersionNumberKey, 
+                       _kLMLanguageModelAppContextKey, _kLMLanguageModelBundleNameKey, 
+                       _kLMLanguageModelCacheModelWeightKey, _kLMLanguageModelContextIdentifierKey, 
+                       _kLMLanguageModelCustomDynamicResourceDirectoryKey, 
                        _kLMLanguageModelCustomLexiconDeltaNameKey, _kLMLanguageModelCustomLexiconNameKey, 
                        _kLMLanguageModelCustomResourceDirectoryKey, _kLMLanguageModelCustomWordsKey, 
                        _kLMLanguageModelDidPerformPruningKey, _kLMLanguageModelDynamicDataSchema, 

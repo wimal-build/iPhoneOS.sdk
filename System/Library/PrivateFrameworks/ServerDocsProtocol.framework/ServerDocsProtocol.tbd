@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/ServerDocsProtocol.framework/ServerDocsProtocol
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _DCAppGroupIdentifier, _DCBackgroundSessionManagerSessionIdentifierKey, 

@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/StoreKitUI.framework/StoreKitUI
-objc-constraint: retain_release
+current-version: 797.13
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __Z14isCloseToColor8HSVColorS_ffb, __Z16IsLightLuminancef, 
@@ -30,6 +30,7 @@ exports:
                        _SKUIApplicationPageDidDisplayNotification, _SKUIApplicationPageDidUpdateNotification, 
                        _SKUIArtworkRequestDidLoadImageNotification, _SKUIArtworkRequestImageKey, 
                        _SKUIArtworkSizeDeltaIsBetter, _SKUIAskPermissionFramework, 
+                       _SKUIAssetViewElementSecureKeyDeliveryTypeiTunes, 
                        _SKUIAttributedStringGetLineHeight, _SKUIAudioToolboxFramework, 
                        _SKUIBadgeImageFromText, _SKUIBorderColorWithBackgroundColor, 
                        _SKUIBrickGridCollectionViewCellReuseIdentifier, 
@@ -185,7 +186,8 @@ exports:
                        _SKUISocialFramework, _SKUISpacePageComponentHeightForString, 
                        _SKUISpacerReuseIdentifier, _SKUISpringBoardServicesFramework, 
                        _SKUIStackedBarNavAnimationController, _SKUIStackedBarNavDidShow, 
-                       _SKUIStarHistogramCellReuseIdentifier, _SKUIStoreDialogControllerPurchaseNotificationKeyPurchaseResponse, 
+                       _SKUIStarHistogramCellReuseIdentifier, _SKUIStoreAssetResourceLoaderConfigureWithDelegate, 
+                       _SKUIStoreDialogControllerPurchaseNotificationKeyPurchaseResponse, 
                        _SKUIStoreDialogControllerPurchaseRequestDidSucceedNotification, 
                        _SKUIStorePageItemsWithStorePlatformDictionary, 
                        _SKUIStorePageTypeArtist, _SKUIStorePageTypeBannerRoom, 
@@ -221,8 +223,8 @@ exports:
                        _SKUIVerticalInfoListReuseIdentifier, _SKUIVerticalLockupArtworkBoundingSize, 
                        _SKUIVerticalLockupArtworkUsesBoundingSize, _SKUIVerticalLockupReuseIdentifier, 
                        _SKUIVideoPreviewDismissNotification, _SKUIVideoPreviewDismissOnEnterBackground, 
-                       _SKUIVideoPreviewObservePlayer, _SKUIVideoPreviewPlayAsset, 
-                       _SKUIVideoPreviewPlayURL, _SKUIViewControllerContainerCollectionViewCellReuseIdentifier, 
+                       _SKUIVideoPreviewObservePlayer, _SKUIVideoPreviewPlayPlayableAsset, 
+                       _SKUIViewControllerContainerCollectionViewCellReuseIdentifier, 
                        _SKUIViewControllerGetAncestorTabBarController, 
                        _SKUIViewControllerGetTopMostViewController, _SKUIViewControllerIsDescendent, 
                        _SKUIViewControllerIsVisible, _SKUIViewElementAccumulatePersonalizationLibraryItemsForChild, 
@@ -260,6 +262,7 @@ exports:
                        _SKUIWishlistDidChangeNotification, _SKUIWishlistItemPropertiesWithItem, 
                        _SKUIWishlistOperationQueue, _SKUIXEventSearchDictionary, 
                        _SKUIXEventSidepackDictionary, _SKUIZoomingShelfMenuBarGetValidationInfoForViewElement, 
+                       _StoreKitUIVersionNumber, _StoreKitUIVersionString, 
                        __Z12IsLightColorR7ITColor, __Z16CompareSortColor14sortColorEntryS_, 
                        __Z18AnalyzeImagePleaseP9CGContextR19AnalyzedImageColors, 
                        __Z18contrastsWithColor7ITColorS_, __Z19CGColorSpaceGetSRGBv, 
@@ -564,7 +567,7 @@ exports:
                        _SKUIPickerView, _SKUIPillsControl, _SKUIPlaceholderImageKey, 
                        _SKUIPlaceholderIndexBarEntry, _SKUIPlaceholderViewElement, 
                        _SKUIPlayButton, _SKUIPlayButtonControl, _SKUIPlayButtonGradientView, 
-                       _SKUIPlayButtonShapeView, _SKUIPopoverObserver, 
+                       _SKUIPlayButtonShapeView, _SKUIPlayableAsset, _SKUIPopoverObserver, 
                        _SKUIPopupMenuHeaderView, _SKUIPostReviewOperation, 
                        _SKUIPredicateListViewElement, _SKUIPredicateViewElement, 
                        _SKUIPreviewControlViewElement, _SKUIPreviewDocumentController, 
@@ -680,9 +683,9 @@ exports:
                        _SKUIStarRatingControlView, _SKUIStarRatingQueue, 
                        _SKUIStarRatingView, _SKUIStarRatingViewElement, 
                        _SKUIStarRatingViewElementView, _SKUIStateRestorationContext, 
-                       _SKUIStoreDialogController, _SKUIStoreIdentifier, 
-                       _SKUIStoreNotes, _SKUIStorePage, _SKUIStorePageCollectionViewLayout, 
-                       _SKUIStorePageCollectionViewLayoutInvalidationContext, 
+                       _SKUIStoreAssetResourceLoaderDelegate, _SKUIStoreDialogController, 
+                       _SKUIStoreIdentifier, _SKUIStoreNotes, _SKUIStorePage, 
+                       _SKUIStorePageCollectionViewLayout, _SKUIStorePageCollectionViewLayoutInvalidationContext, 
                        _SKUIStorePageDataConsumer, _SKUIStorePageItemPinningConfiguration, 
                        _SKUIStorePageItemPinningLayoutInformation, _SKUIStorePagePinnedBackdropDecorationView, 
                        _SKUIStorePagePinnedBackdropLayoutAttributes, _SKUIStorePageSection, 

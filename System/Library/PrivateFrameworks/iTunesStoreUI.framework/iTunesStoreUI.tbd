@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/iTunesStoreUI.framework/iTunesStoreUI
-objc-constraint: retain_release
+current-version: 1186.3
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _ISLockupType, _SSPurchaseRequestsChangedNotification, 
@@ -85,6 +85,7 @@ exports:
                        _SUViewFirstUIScrollView, _SUWebScriptAddPropertyKeysToArray, 
                        _SUWebScriptNameForKey, _SUWebScriptNameForSelector, 
                        _SUWebScriptNameForSelector2, _SUWebThreadDispatchSync, 
+                       _iTunesStoreUIVersionNumber, _iTunesStoreUIVersionString, 
                        _kSUActionURLParameter, _kSUItemListHintTextDelete, 
                        _kSUItemListHintWildcard, _kSUMenuViewControllerNoSelectionIndex, 
                        _kSUNavigationMenuNoSelectionIndex, _kSUNavigationSectionsKey, 

@@ -3,7 +3,6 @@ archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/IMDPersistence.framework/IMDPersistence
 current-version: 800.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _IMDAttachmentRecordBulkCopy, _IMDAttachmentRecordBulkUpdate, 
@@ -34,13 +33,13 @@ exports:
                        _IMDChatRecordDisassociateMessageWithGUIDFromChatWithGUIDIfNeeded, 
                        _IMDChatRecordGetIdentifier, _IMDChatRecordIsFiltered, 
                        _IMDChatRecordRemoveHandle, _IMDChatRecordRemoveMessage, 
-                       _IMDChatRecordSetIsArchived, _IMDChatRecordSetIsFiltered, 
-                       _IMDCleanseOrphanedAttachments, _IMDCopyAttachmentPersistentPath, 
-                       _IMDCopyGUIDForImportedChat, _IMDCopyGUIDForImportedOneToOneChat, 
-                       _IMDCoreSpotlightDeleteChatGUID, _IMDCoreSpotlightDeleteMessageGUIDS, 
-                       _IMDCoreSpotlightIndexAllChats, _IMDCreateDeleteDeletedMessagesGuidsQuery, 
-                       _IMDCreateIndexes, _IMDCreateIndexesWithOperation, 
-                       _IMDCreateQueryRemoveMessagesFromMessageTableWithMessageGuidCount, 
+                       _IMDChatRecordRepairDuplicateChats, _IMDChatRecordSetIsArchived, 
+                       _IMDChatRecordSetIsFiltered, _IMDCleanseOrphanedAttachments, 
+                       _IMDCopyAttachmentPersistentPath, _IMDCopyGUIDForImportedChat, 
+                       _IMDCopyGUIDForImportedOneToOneChat, _IMDCoreSpotlightDeleteChatGUID, 
+                       _IMDCoreSpotlightDeleteMessageGUIDS, _IMDCoreSpotlightIndexAllChats, 
+                       _IMDCreateDeleteDeletedMessagesGuidsQuery, _IMDCreateIndexes, 
+                       _IMDCreateIndexesWithOperation, _IMDCreateQueryRemoveMessagesFromMessageTableWithMessageGuidCount, 
                        _IMDCreateTablesWithOperation, _IMDCreateTriggers, 
                        _IMDCreateTriggersWithOperation, _IMDCreateTriggersWithTriggerNames, 
                        _IMDDeregisterReconnectBlockWithIdentifier, _IMDDoubleFromSqlColumn, 
@@ -56,8 +55,8 @@ exports:
                        _IMDImportAttachmentWithData, _IMDImportAttachmentWithPath, 
                        _IMDImportMessage, _IMDInt64FromSqlColumn, _IMDIntFromSqlColumn, 
                        _IMDIsRunningInDatabaseServerProcess, _IMDLegacyMigrator, 
-                       _IMDMessageImportEnd, _IMDMessageRecordAddMessageRecord, 
-                       _IMDMessageRecordAssociateMessageWithGUIDToAttachmentWithGUID, 
+                       _IMDMergeDuplicateChatsWithOperation, _IMDMessageImportEnd, 
+                       _IMDMessageRecordAddMessageRecord, _IMDMessageRecordAssociateMessageWithGUIDToAttachmentWithGUID, 
                        _IMDMessageRecordBulkCopy, _IMDMessageRecordBulkUpdate, 
                        _IMDMessageRecordCopyAllUnplayedMessageGUIDsForChatGUID, 
                        _IMDMessageRecordCopyAndMarkAsReadMessagesPriorToGuidMatchingHandleOnService, 

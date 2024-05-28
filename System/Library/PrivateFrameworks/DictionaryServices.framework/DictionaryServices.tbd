@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/DictionaryServices.framework/DictionaryServices
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN17TrieAccessContext20processHomographDataEPKhlmllPS1_PlbP7CFRangePhPS6_S3_, 

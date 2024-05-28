@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/HealthKit.framework/HealthKit
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _HDMachServiceName, _HDServerInterface, _HKAggdAddScalarValue, 
@@ -114,16 +113,16 @@ exports:
                        __HKGenerateDefaultUnitForQuantityType, __HKInitializeLogging, 
                        __HKInjectCategoryDataTypeDefinition, __HKInjectDataTypeDefinition, 
                        __HKInjectQuantityDataTypeDefinition, __HKLocaleDependantQuantityTypes, 
-                       __HKLog, __HKMetadataKeyDismissReason, __HKMetadataKeyGoalTypes, 
-                       __HKMetadataKeyNewGoal, __HKMetadataKeyRecommendedGoal, 
-                       __HKObjectFilterClasses, __HKPredicateKeyPathSyncProvenance, 
-                       __HKPredicateKeyPathWorkoutGoal, __HKPredicateKeyPathWorkoutGoalType, 
-                       __HKQueryValidationFailureException, __HKSampleFilterClasses, 
-                       __HKShouldLogAtLevel, __HKValidDataTypeCode, __HKValidSourceOptions, 
-                       __HKWorkoutActivityTypeIsValid, __HKWorkoutActivityTypeNone, 
-                       __HKWorkoutCanonicalDistanceUnit, __HKWorkoutCanonicalEnergyBurnedUnit, 
-                       __HKWorkoutCanonicalUnitForGoalType, __HKWorkoutDataCollectionActivityOptionKey, 
-                       __HKWorkoutDataCollectionActivityOptionsIndoorKey, 
+                       __HKLog, __HKMetadataKeyDismissReason, __HKMetadataKeyDwelltime, 
+                       __HKMetadataKeyGoalTypes, __HKMetadataKeyNewGoal, 
+                       __HKMetadataKeyRecommendedGoal, __HKObjectFilterClasses, 
+                       __HKPredicateKeyPathSyncProvenance, __HKPredicateKeyPathWorkoutGoal, 
+                       __HKPredicateKeyPathWorkoutGoalType, __HKQueryValidationFailureException, 
+                       __HKSampleFilterClasses, __HKShouldLogAtLevel, __HKValidDataTypeCode, 
+                       __HKValidSourceOptions, __HKWorkoutActivityTypeIsValid, 
+                       __HKWorkoutActivityTypeNone, __HKWorkoutCanonicalDistanceUnit, 
+                       __HKWorkoutCanonicalEnergyBurnedUnit, __HKWorkoutCanonicalUnitForGoalType, 
+                       __HKWorkoutDataCollectionActivityOptionKey, __HKWorkoutDataCollectionActivityOptionsIndoorKey, 
                        __HKWorkoutDataCollectionActivityOptionsTypeKey, 
                        __HKWorkoutDistanceTypeForActivityType, __HKWorkoutEventTypeIsValid, 
                        __HKWorkoutGoalTypeAcceptsQuantity, __HKWorkoutGoalTypeIsValid, 

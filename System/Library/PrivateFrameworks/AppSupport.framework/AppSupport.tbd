@@ -3,7 +3,6 @@ archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/AppSupport.framework/AppSupport
 current-version: 29.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _ALCityCountryNameKey, _ALCityCountryOverrideKey, 
@@ -97,8 +96,9 @@ exports:
                        _CPPhoneNumberCopyCountryCodeForInternationalCallingCode, 
                        _CPPhoneNumberCopyFormattedStringForTextMessage, 
                        _CPPhoneNumberCopyFormattedStringForVoiceCall, _CPPhoneNumberCopyHomeCountryCode, 
-                       _CPPhoneNumberCopyNetworkCountryCode, _CPPhoneNumberCopyNormalized, 
-                       _CPPhoneNumberGetLastFour, _CPPhoneNumberHomeCountryCodeChangedNotification, 
+                       _CPPhoneNumberCopyLastKnownNetworkCountryCode, _CPPhoneNumberCopyNetworkCountryCode, 
+                       _CPPhoneNumberCopyNormalized, _CPPhoneNumberGetLastFour, 
+                       _CPPhoneNumberHomeCountryCodeChangedNotification, 
                        _CPPhoneNumberNetworkCountryCodeChangedNotification, 
                        _CPPhoneNumberSetActiveCountryCode, _CPPhoneNumberSetHomeCountryCode, 
                        _CPPhoneNumberSetNetworkCountryCode, _CPPhoneNumbersEqual, 
@@ -295,7 +295,8 @@ exports:
                        _kCPLoggingCustomWillLogToLogFileBlock, _kCPLoggingEnableNewlinesKey, 
                        _kCPLoggingFirstLineOfFileKey, _kCPPhoneNumberActiveCountryCodeChangedInternalNotification, 
                        _kCPPhoneNumberActiveCountryCodeKey, _kCPPhoneNumberHomeCountryCodeChangedInternalNotification, 
-                       _kCPPhoneNumberHomeCountryCodeKey, _kCPPhoneNumberNetworkCountryCodeChangedInternalNotification, 
+                       _kCPPhoneNumberHomeCountryCodeKey, _kCPPhoneNumberLastKnownNetworkCountryCodeKey, 
+                       _kCPPhoneNumberNetworkCountryCodeChangedInternalNotification, 
                        _kCPPhoneNumberNetworkCountryCodeKey, _kCPPropertyCount, 
                        _kCPRecordErrorDomain, _kCPRecordSQLiteErrorDomain, 
                        _kCPSearchMatcherCaseInsensitive, _kCPSearchMatcherDiacriticInsensitive, 

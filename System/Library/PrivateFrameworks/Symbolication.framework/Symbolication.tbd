@@ -3,7 +3,6 @@ archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/Symbolication.framework/Symbolication
 current-version: 58044.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ arm64 ]
     symbols:         [ _lz4_decode_fast, _lz4_decode_safe ]

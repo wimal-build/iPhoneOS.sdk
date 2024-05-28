@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _AXApplicationGetMainBundleIdentifier, _AXApplicationIsForeground, 
@@ -58,7 +57,8 @@ exports:
                        _AXForceTouchThresholdPeekPopMidpoint, _AXForceTouchThresholdPop, 
                        _AXFormatByteSize, _AXFormatFloat, _AXFormatFloatWithPercentage, 
                        _AXFormatInteger, _AXFormatNumber, _AXFormatNumberWithOptions, 
-                       _AXGetComponentsInSiriVoiceIdentifier, _AXGuidedAccessActiveStatusDidChangeBroadcastNotification, 
+                       _AXGetComponentsInSiriVoiceIdentifier, _AXGuaranteedMutableArray, 
+                       _AXGuidedAccessActiveStatusDidChangeBroadcastNotification, 
                        _AXGuidedAccessGetAvailability, _AXGuidedAccessPayloadKeyRequestingAppIsSelfLockedToGAX, 
                        _AXGuidedAccessPayloadKeyRequestingAppSetGAXEnabled, 
                        _AXIPCErrorKeyMachError, _AXIPCRegisterClientWithServer, 
@@ -67,10 +67,10 @@ exports:
                        _AXIsInternalInstall, _AXIsLanguageRTL, _AXLanguageCanonicalFormToGeneralLanguage, 
                        _AXLanguageConvertToCanonicalForm, _AXLanguageIsSpeakableEmojiString, 
                        _AXLanguageSupportedBySynthesizer, _AXLanguageToLocales, 
-                       _AXLoadAXWorkonExtrasIfNeeded, _AXLoadAccessibilityDebuggerIfNeeded, 
-                       _AXLocStringKeyForModel, _AXLocalizedString, _AXLogGetLevel, 
-                       _AXLogGetLevelForFacility, _AXLogResetLevel, _AXLogResetLevelForFacility, 
-                       _AXLogSetLevel, _AXLogSetLevelForFacility, _AXLogShouldLogWithLevelAndFacility, 
+                       _AXLoadAccessibilityDebuggerIfNeeded, _AXLocStringKeyForModel, 
+                       _AXLocalizedString, _AXLogGetLevel, _AXLogGetLevelForFacility, 
+                       _AXLogResetLevel, _AXLogResetLevelForFacility, _AXLogSetLevel, 
+                       _AXLogSetLevelForFacility, _AXLogShouldLogWithLevelAndFacility, 
                        _AXNormalizePoint, _AXOratorErrorDomain, _AXPerformBlockAsynchronouslyOnMainThread, 
                        _AXPerformBlockOnMainThread, _AXPerformBlockOnMainThreadAfterDelay, 
                        _AXPerformBlockSynchronouslyOnMainThread, _AXPerformSafeBlock, 

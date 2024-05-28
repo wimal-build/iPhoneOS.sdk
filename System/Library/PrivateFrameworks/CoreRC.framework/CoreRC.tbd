@@ -2,8 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/CoreRC.framework/CoreRC
-current-version: 108.10.1
-objc-constraint: retain_release
+current-version: 108.20.2
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _CECAbortReasonString, _CECAddressString, _CECDeckControlModeForCoreCECDeckControlMode, 

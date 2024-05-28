@@ -3,7 +3,6 @@ archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore
 current-version: 601.1.46
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN3WTF17StringPrintStream7vprintfEPKcPv, __ZN3WTF9WorkQueue13dispatchAfterENSt3__16chrono8durationIxNS1_5ratioILx1ELx1000000000EEEEENS1_8functionIFvvEEE, 
@@ -1238,6 +1237,7 @@ exports:
                        __ZN9Inspector22InspectorDebuggerAgent20didClearGlobalObjectEv, 
                        __ZN9Inspector22InspectorDebuggerAgent20setBreakpointsActiveERN3WTF6StringEb, 
                        __ZN9Inspector22InspectorDebuggerAgent20setPauseOnExceptionsERN3WTF6StringERKS2_, 
+                       __ZN9Inspector22InspectorDebuggerAgent20setSuppressAllPausesEb, 
                        __ZN9Inspector22InspectorDebuggerAgent21breakpointActionProbeEPN3JSC9ExecStateERKNS_22ScriptBreakpointActionEjjRKN10Deprecated11ScriptValueE, 
                        __ZN9Inspector22InspectorDebuggerAgent21breakpointActionSoundEi, 
                        __ZN9Inspector22InspectorDebuggerAgent21sourceMapURLForScriptERKNS_19ScriptDebugListener6ScriptE, 

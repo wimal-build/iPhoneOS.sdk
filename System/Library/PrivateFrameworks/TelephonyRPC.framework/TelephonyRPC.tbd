@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/TelephonyRPC.framework/TelephonyRPC
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _DELTA_SYNC_MAX_VOICEMAIL_COUNT, _FULL_SYNC_CHUNK_SIZE, 

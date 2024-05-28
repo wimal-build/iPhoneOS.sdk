@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    '@rpath/TSUtility.framework/TSUtility'
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN15TSUCustomFormat24conditionalFormatAtIndexEjP40TSUCustomFormatNumberFormatConditionTypePdPPK25TSUCustomFormatDataStruct, 

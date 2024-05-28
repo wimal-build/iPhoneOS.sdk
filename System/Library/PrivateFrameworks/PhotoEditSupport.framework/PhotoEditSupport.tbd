@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/PhotoEditSupport.framework/PhotoEditSupport
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN9CGaussian12GaussianBlurERKNS_6CParmsERK13CGrNavigatorTIjLm1EES6_, 

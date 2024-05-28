@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    '@rpath/TSReading.framework/TSReading'
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __Z13addPointToXYsiiRNSt3__13setIiNS_4lessIiEENS_9allocatorIiEEEES6_, 
@@ -2235,8 +2234,8 @@ exports:
                        __ZNK20TSWPChangeEnumerator4iterEv, __ZNK20TSWPChangeEnumerator6changeEv, 
                        __ZNK20TSWPTopicNumberHints15equivalentStateERKS_, 
                        __ZNK20TSWPTopicNumberHintseqERKS_, __ZNK20TSWPTopicNumberHintsneERKS_, 
-                       __ZNK21TSWPLineFragmentArray10lastObjectEv, __ZNK21TSWPLineFragmentArray5countEv, 
-                       __ZNK22TSWPCoreTextTypesetter13pCTTypesetterEv, 
+                       __ZNK21TSWPLineFragmentArray10lastObjectEv, __ZNK21TSWPLineFragmentArray11firstObjectEv, 
+                       __ZNK21TSWPLineFragmentArray5countEv, __ZNK22TSWPCoreTextTypesetter13pCTTypesetterEv, 
                        __ZNK22TSWPCoreTextTypesetter28pSetUpEmphasisMarkAdornmentsEPK15TSWPLayoutStateR14TSWPAdornmentsRKPK7__CTRunP16TSWPLineFragmentP8NSStringRtR6CGSize, 
                        __ZNK22TSWPCoreTextTypesetter32pAdditionalOffsetForLineFragmentEPK15TSWPLayoutStatePK16TSWPLineFragment15TSWPLayoutFlags, 
                        __ZNK22TSWPCoreTextTypesetter34pApplyChangeTrackingToLineFragmentEP16TSWPLineFragment, 
@@ -2244,6 +2243,7 @@ exports:
                        __ZNK22TSWPDropCapLayoutState11canFinalizeEv, __ZNK22TSWPDropCapLayoutState13dropCapBottomEv, 
                        __ZNK22TSWPDropCapLayoutState20needsLayoutIterationEv, 
                        __ZNK22TSWPDropCapLayoutState23isSatifyingRequirementsEv, 
+                       __ZNK22TSWPDropCapLayoutState28isConflictingWithEndOfColumnEv, 
                        __ZNK22TSWPDropCapLayoutState45shouldReduceRequirementsToKeepInCurrentColumnEv, 
                        __ZNK22TSWPStorageTransactioneqERKS_, __ZNK23TSWPParagraphEnumerator14paragraphLevelEv, 
                        __ZNK23TSWPParagraphEnumerator14paragraphStyleEP8_NSRange, 

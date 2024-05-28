@@ -311,8 +311,7 @@ exports:
                        _length_PCSSignature, _length_PCSSignedShareProtection, 
                        _length_PCSTrust, _length_PCSTrustTBS, _length_PCSTypeValue, 
                        _length_PCSUint32, _length_PCSUserPublicKeys, _length_SPUint32, 
-                       _length_SignedAttributes, _messageTracerDomain, 
-                       _messageTracerKey, _messageTracerValue, _remove_PCSAttributes, 
+                       _length_SignedAttributes, _remove_PCSAttributes, 
                        _remove_PCSPrivateKeys, _remove_PCSPublicKeyInfos, 
                        _saveKeychain ]
 ...

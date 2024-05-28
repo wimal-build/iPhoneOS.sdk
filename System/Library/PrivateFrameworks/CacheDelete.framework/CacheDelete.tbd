@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/CacheDelete.framework/CacheDelete
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _CacheDeleteAllowAutoPurge, _CacheDeleteAutoPurgeAllowed, 
@@ -19,10 +18,10 @@ exports:
                        _CacheDeleteRegisterInfoCallbacksForProcess, _CacheDeleteServiceRequest, 
                        _CacheDeleteSetCacheable, _CallCacheD, _CallService, 
                        _CallServiceAsync, _addDistributionStat, _addReportStat, 
-                       _amountPurged, _connectionIsEntitled, _gMOLogWrite, 
-                       _getCacheDeleteXattr, _getLocalVolumes, _getLogHandle, 
-                       _getRootVolume, _log_user_defaults, _lowSpaceVolumes, 
-                       _normalizeUserMountpoint, _pretty_user_defaults, 
+                       _amountPurged, _connectionIsEntitled, _createCacheDeleteToken, 
+                       _gMOLogWrite, _getCacheDeleteXattr, _getLocalVolumes, 
+                       _getLogHandle, _getRootVolume, _log_user_defaults, 
+                       _lowSpaceVolumes, _normalizeUserMountpoint, _pretty_user_defaults, 
                        _setReportStat, _validateVolume, _volumeFreespace ]
     objc-classes:    [ _CDService, _CacheDeleteListener, _CacheDeleteRecentInfo, 
                        _CacheDeleteRecentServiceInfo, _CacheDeleteRecentVolumeInfo, 

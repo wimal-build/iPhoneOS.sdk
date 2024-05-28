@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PassKit.framework/PassKit
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     re-exports:      [ /System/Library/PrivateFrameworks/PassKitCore.framework/PassKitCore ]
@@ -23,15 +22,15 @@ exports:
                        _PKBridgeSeparatorColor, _PKBridgeSetupBackgroundColor, 
                        _PKBridgeTableViewCellAccessoryColor, _PKBridgeTableViewCellAccessoryHighlightColor, 
                        _PKBridgeTextColor, _PKBridgeTintColor, _PKBridgeUsesDarkAppearance, 
-                       _PKContactAddressKey, _PKContactEmailKey, _PKContactFamilyNameKey, 
-                       _PKContactGivenNameKey, _PKContactLabelKey, _PKContactPhoneKey, 
-                       _PKDOverlayWhiteColor, _PKEdgeInsetsFromRectToRect, 
-                       _PKFillButtonBackgroundImageWithColor, _PKFloatCeilToPixel, 
-                       _PKFloatFloorToPixel, _PKFloatRoundToPixel, _PKFontTextStyleShortBody, 
-                       _PKFontTextStyleShortFootnote, _PKImageNamed, _PKLinkedAppViewHeight, 
-                       _PKLinkedAppViewReuseIdentifier, _PKNumberFormatterForCurrencyCode, 
-                       _PKPassStackScrollingAdjustedPosition, _PKPassStackScrollingOverlapLength, 
-                       _PKPassStackScrollingStretchRegionLowerBoundary, 
+                       _PKContactAddressKey, _PKContactDistrictKey, _PKContactEmailKey, 
+                       _PKContactFamilyNameKey, _PKContactGivenNameKey, 
+                       _PKContactLabelKey, _PKContactPhoneKey, _PKDOverlayWhiteColor, 
+                       _PKEdgeInsetsFromRectToRect, _PKFillButtonBackgroundImageWithColor, 
+                       _PKFloatCeilToPixel, _PKFloatFloorToPixel, _PKFloatRoundToPixel, 
+                       _PKFontTextStyleShortBody, _PKFontTextStyleShortFootnote, 
+                       _PKImageNamed, _PKLinkedAppViewHeight, _PKLinkedAppViewReuseIdentifier, 
+                       _PKNumberFormatterForCurrencyCode, _PKPassStackScrollingAdjustedPosition, 
+                       _PKPassStackScrollingOverlapLength, _PKPassStackScrollingStretchRegionLowerBoundary, 
                        _PKPassbookCardTableCellContextKey, _PKPassbookCardTableCellPassKey, 
                        _PKPassbookCardTableCellShowAddButtonKey, _PKPassbookCardTableCellShowFPANKey, 
                        _PKPassbookCardTableCellShowStateKey, _PKPaymentAuthorizationHostInterface, 
@@ -63,12 +62,12 @@ exports:
                        _RUIHTMLLabelTableViewRowWebView, _UIEdgeInsetsForPKEdgeInsets, 
                        _WLRectByApplyingContentModeToSizeInRect, _WLRectInset, 
                        _WLRectOutset, __PKPaymentAuthorizationViewServiceConnectionDefaultTimeout, 
-                       _kCoreRecentFamilyNameMetadataKey, _kCoreRecentGivenNameMetadataKey, 
-                       _kDefaultPassphraseLength, _kLandscapeHeightInset, 
-                       _kLandscapeHorizontalMargin, _kPKAppleStoreIdentifier, 
-                       _kPKBillingLabel, _kPKShippingLabel, _kPassphraseContentHeight, 
-                       _kPaymentAuthorizationCellHorizontalPadding1, _kPaymentAuthorizationCellHorizontalPadding2, 
-                       _kPaymentAuthorizationContentViewHorizontallyCompactHeightPadding, 
+                       _kCoreRecentDistrictMetadataKey, _kCoreRecentFamilyNameMetadataKey, 
+                       _kCoreRecentGivenNameMetadataKey, _kDefaultPassphraseLength, 
+                       _kLandscapeHeightInset, _kLandscapeHorizontalMargin, 
+                       _kPKAppleStoreIdentifier, _kPKBillingLabel, _kPKShippingLabel, 
+                       _kPassphraseContentHeight, _kPaymentAuthorizationCellHorizontalPadding1, 
+                       _kPaymentAuthorizationCellHorizontalPadding2, _kPaymentAuthorizationContentViewHorizontallyCompactHeightPadding, 
                        _kPaymentAuthorizationContentViewVerticallyCompactHeightPadding, 
                        _kPaymentAuthorizationFingerprintDimension, _kPaymentAuthorizationViewTransitionDuration, 
                        _kPaymentOptionsBillingAddress, _kPaymentOptionsPaymentMethod, 

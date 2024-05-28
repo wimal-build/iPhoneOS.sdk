@@ -3,7 +3,6 @@ archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/AppleBasebandServices.framework/AppleBasebandServices
 current-version: 703.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     weak-def-symbols: [ __ZTIN3ctu14SharedLoggableI18DataStallDetectionNS_10LoggerBaseINSt3__110shared_ptrINS_9LogServerEEEEEEE, 

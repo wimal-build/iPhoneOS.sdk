@@ -4,7 +4,6 @@ platform:        ios
 install-name:    /System/Library/PrivateFrameworks/PreferencesUI.framework/PreferencesUI
 current-version: 0.0
 compatibility-version: 0.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _AboutControllerTable, _BodyHTMLFormat, _BoolFromRestrictedBoolType, 
@@ -27,14 +26,13 @@ exports:
                        _WRWebsiteOnlyStringForString, _WebAppKey, ___avController, 
                        ___avQueue, ___interruptedAudio, _gFindMyiPhoneController, 
                        _kAlertViewDownloadWarningContext, _kAlertViewResumeWarningContext, 
-                       _kAlertViewScanErrorContext, _kAppBundleID, _kDeviceHasiTunesUKey, 
-                       _kFacebookAppBundleID, _kFacebookFrameworkBundlePath, 
-                       _kFacebookKey, _kFrameworkBundlePath, _kSiriViewServiceAppBundleID, 
-                       _kTencentWeiboAppBundleID, _kTencentWeiboFrameworkBundlePath, 
-                       _kTencentWeiboKey, _kTotalSizeProperty, _kTwitterAppBundleID, 
-                       _kTwitterFrameworkBundlePath, _kTwitterKey, _kWeiboAppBundleID, 
-                       _kWeiboFrameworkBundlePath, _kWeiboKey, _openDataActivationURL, 
-                       _psRatingCompare ]
+                       _kAppBundleID, _kDeviceHasiTunesUKey, _kFacebookAppBundleID, 
+                       _kFacebookFrameworkBundlePath, _kFacebookKey, _kFrameworkBundlePath, 
+                       _kSiriViewServiceAppBundleID, _kTencentWeiboAppBundleID, 
+                       _kTencentWeiboFrameworkBundlePath, _kTencentWeiboKey, 
+                       _kTotalSizeProperty, _kTwitterAppBundleID, _kTwitterFrameworkBundlePath, 
+                       _kTwitterKey, _kWeiboAppBundleID, _kWeiboFrameworkBundlePath, 
+                       _kWeiboKey, _openDataActivationURL, _psRatingCompare ]
     objc-classes:    [ _AboutDataSource, _AdSupportAboutController, _AllowChangesCell, 
                        _CurrentTimeCell, _DNDAllowedListController, _DNDRangeCell, 
                        _DateRangePane, _DeviceNameEditingController, _DeviceNameTextEditCell, 

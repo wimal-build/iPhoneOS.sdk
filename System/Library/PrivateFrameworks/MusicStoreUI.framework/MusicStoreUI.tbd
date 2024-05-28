@@ -2,11 +2,12 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/MusicStoreUI.framework/MusicStoreUI
-objc-constraint: retain_release
+current-version: 1186.3
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _MSGetTrackListBorderColor, _MSGetTrackListEvenRowColor, 
-                       _MSGetTrackListOddRowColor ]
+                       _MSGetTrackListOddRowColor, _MusicStoreUIVersionNumber, 
+                       _MusicStoreUIVersionString ]
     objc-classes:    [ _MSAudioProgressView, _MSPieImageView, _MSPurchaseBatch, 
                        _MSPurchasesViewController, _MSStructuredPageTableDataSource, 
                        _MSStructuredPageViewController, _MSTableCell, _MSTonePurchaseContinuation, 

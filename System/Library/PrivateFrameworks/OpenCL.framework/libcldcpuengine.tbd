@@ -3,7 +3,6 @@ archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/OpenCL.framework/libcldcpuengine.dylib
 current-version: 157.2
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _barrier, _glrCompBuildProgram, _glrCompCloseDevice, 

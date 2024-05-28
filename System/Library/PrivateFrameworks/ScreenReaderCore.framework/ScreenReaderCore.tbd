@@ -3,7 +3,6 @@ archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/ScreenReaderCore.framework/ScreenReaderCore
 current-version: 390.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ arm64 ]
     symbols:         [ _SCRCIsInt32BitSafe, _SCRCIsUInt32BitSafe ]

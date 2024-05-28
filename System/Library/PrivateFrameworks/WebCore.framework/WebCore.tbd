@@ -3,7 +3,6 @@ archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/WebCore.framework/WebCore
 current-version: 601.1.46
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7 ]
     symbols:         [ __ZThn568_N7WebCore15GraphicsLayerCA28platformCALayerPaintContentsEPNS_15PlatformCALayerERNS_15GraphicsContextERKNS_9FloatRectE, 
@@ -406,7 +405,7 @@ exports:
                        __ZN7WebCore11FrameLoader26reloadWithOverrideEncodingERKN3WTF6StringE, 
                        __ZN7WebCore11FrameLoader32setOriginalURLForDownloadRequestERNS_15ResourceRequestE, 
                        __ZN7WebCore11FrameLoader4initEv, __ZN7WebCore11FrameLoader4loadERKNS_16FrameLoadRequestE, 
-                       __ZN7WebCore11FrameLoader6reloadEb, __ZN7WebCore11FrameLoader9setOpenerEPNS_5FrameE, 
+                       __ZN7WebCore11FrameLoader6reloadEbb, __ZN7WebCore11FrameLoader9setOpenerEPNS_5FrameE, 
                        __ZN7WebCore11Geolocation12setIsAllowedEb, __ZN7WebCore11Geolocation29resetAllGeolocationPermissionEv, 
                        __ZN7WebCore11GeolocationD0Ev, __ZN7WebCore11GeolocationD1Ev, 
                        __ZN7WebCore11GeolocationD2Ev, __ZN7WebCore11HistoryItem10targetItemEv, 
@@ -728,7 +727,7 @@ exports:
                        __ZN7WebCore13endOfSentenceERKNS_15VisiblePositionE, 
                        __ZN7WebCore13getRawCookiesEPKNS_8DocumentERKNS_3URLERN3WTF6VectorINS_6CookieELm0ENS6_15CrashOnOverflowELm16EEE, 
                        __ZN7WebCore13getRawCookiesERKNS_21NetworkStorageSessionERKNS_3URLES5_RN3WTF6VectorINS_6CookieELm0ENS6_15CrashOnOverflowELm16EEE, 
-                       __ZN7WebCore13isStartOfLineERKNS_15VisiblePositionE, 
+                       __ZN7WebCore13hostsAreEqualERKNS_3URLES2_, __ZN7WebCore13isStartOfLineERKNS_15VisiblePositionE, 
                        __ZN7WebCore13listDirectoryERKN3WTF6StringES3_, 
                        __ZN7WebCore13pointerCursorEv, __ZN7WebCore13toJSDOMWindowEN3JSC7JSValueE, 
                        __ZN7WebCore14CachedResource12removeClientEPNS_20CachedResourceClientE, 
@@ -753,7 +752,6 @@ exports:
                        __ZN7WebCore14DocumentLoader22addAllArchiveResourcesEPNS_7ArchiveE, 
                        __ZN7WebCore14DocumentLoader22cancelMainResourceLoadERKNS_13ResourceErrorE, 
                        __ZN7WebCore14DocumentLoader24removePlugInStreamLoaderEPNS_14ResourceLoaderE, 
-                       __ZN7WebCore14DocumentLoader25syntheticRedirectReceivedEPNS_14CachedResourceERNS_15ResourceRequestERKNS_16ResourceResponseERb, 
                        __ZN7WebCore14DocumentLoader7requestEv, __ZN7WebCore14DocumentLoader8setTitleERKNS_19StringWithDirectionE, 
                        __ZN7WebCore14DocumentLoaderC1ERKNS_15ResourceRequestERKNS_14SubstituteDataE, 
                        __ZN7WebCore14DocumentLoaderC2ERKNS_15ResourceRequestERKNS_14SubstituteDataE, 
@@ -1123,7 +1121,7 @@ exports:
                        __ZN7WebCore15StringTruncator20rightClipToCharacterERKN3WTF6StringEfRKNS_11FontCascadeENS0_24EnableRoundingHacksOrNotERfbf, 
                        __ZN7WebCore15StringTruncator5widthERKN3WTF6StringERKNS_11FontCascadeENS0_24EnableRoundingHacksOrNotE, 
                        __ZN7WebCore15UserInputBridge11loadRequestERKNS_16FrameLoadRequestENS_11InputSourceE, 
-                       __ZN7WebCore15UserInputBridge11reloadFrameEPNS_5FrameEbNS_11InputSourceE, 
+                       __ZN7WebCore15UserInputBridge11reloadFrameEPNS_5FrameEbbNS_11InputSourceE, 
                        __ZN7WebCore15UserInputBridge12tryClosePageENS_11InputSourceE, 
                        __ZN7WebCore15UserInputBridge14handleKeyEventERKNS_21PlatformKeyboardEventENS_11InputSourceE, 
                        __ZN7WebCore15UserInputBridge16handleWheelEventERKNS_18PlatformWheelEventENS_11InputSourceE, 
@@ -2030,7 +2028,6 @@ exports:
                        __ZN7WebCore32qlPreviewConverterFileNameForURLEP5NSURL, 
                        __ZN7WebCore32useBlockedPlugInContextMenuTitleEv, 
                        __ZN7WebCore33QLPreviewGetSupportedMIMETypesSetEv, 
-                       __ZN7WebCore33applicationIsGmailAddAccountOnIOSEv, 
                        __ZN7WebCore33applicationIsTheEconomistOnIPhoneEv, 
                        __ZN7WebCore33postScriptDocumentTypeDescriptionEv, 
                        __ZN7WebCore33stripLeadingAndTrailingHTMLSpacesERKN3WTF6StringE, 
@@ -3351,9 +3348,8 @@ exports:
                        __ZNK7WebCore27ContentFilterUnblockHandler16canHandleRequestERKNS_15ResourceRequestE, 
                        __ZNK7WebCore27ContentFilterUnblockHandler19requestUnblockAsyncENSt3__18functionIFvbEEE, 
                        __ZNK7WebCore27ContentFilterUnblockHandler6encodeEP7NSCoder, 
-                       __ZNK7WebCore27PlatformMediaSessionManager29applicationDidEnterBackgroundEb, 
+                       __ZNK7WebCore27PlatformMediaSessionManager29applicationDidEnterForegroundEv, 
                        __ZNK7WebCore27PlatformMediaSessionManager30applicationWillEnterBackgroundEv, 
-                       __ZNK7WebCore27PlatformMediaSessionManager30applicationWillEnterForegroundEv, 
                        __ZNK7WebCore27ScriptedAnimationController11isThrottledEv, 
                        __ZNK7WebCore31BasicColorMatrixFilterOperation17passthroughAmountEv, 
                        __ZNK7WebCore31SimplifiedBackwardsTextIterator5rangeEv, 

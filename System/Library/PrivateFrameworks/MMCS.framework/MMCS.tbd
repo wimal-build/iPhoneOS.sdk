@@ -2,8 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/MMCS.framework/MMCS
-current-version: 349.0
-objc-constraint: retain_release
+current-version: 351.0
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _C3BaseRelease, _C3BaseRetain, _MMCSComputeSignatureAndRegisterItemWithDescriptor, 

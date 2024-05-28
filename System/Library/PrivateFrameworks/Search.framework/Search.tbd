@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/Search.framework/Search
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _SPAllDomainKeys, _SPAllDomainsVector, _SPCanEnableInternetDomains, 
@@ -44,9 +43,10 @@ exports:
                        _SPDaemonQueryToken._delegate, _SPDaemonQueryToken._query, 
                        _SPDaemonQueryToken._queryID, _SPSearchAgent._cachedSections, 
                        _SPSearchAgent._currentToken, _SPSearchAgent._currentZKWLevel, 
-                       _SPSearchAgent._delegate, _SPSearchAgent._observersAdded, 
-                       _SPSearchAgent._options, _SPSearchAgent._prefixWithNoResults, 
-                       _SPSearchAgent._queryComplete, _SPSearchAgent._resultCount, 
+                       _SPSearchAgent._delegate, _SPSearchAgent._mutableSections, 
+                       _SPSearchAgent._observersAdded, _SPSearchAgent._options, 
+                       _SPSearchAgent._prefixWithNoResults, _SPSearchAgent._queryComplete, 
+                       _SPSearchAgent._queryProcessor, _SPSearchAgent._resultCount, 
                        _SPSearchAgent._searchDomains, _SPSearchAgent._searchThroughAllowed, 
                        _SPSearchAgent._searchThroughSection, _SPSearchAgent._sections, 
                        _SPSearchAgent._topHitResultSection, _SPSearchQuery._cancellationTime, 

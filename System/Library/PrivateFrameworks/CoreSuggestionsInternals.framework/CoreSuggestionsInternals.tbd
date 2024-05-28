@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/CoreSuggestionsInternals.framework/CoreSuggestionsInternals
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     weak-def-symbols: [ __ZTIN3re217NumCapturesWalkerE, __ZTIN3re218CaptureNamesWalkerE, 
@@ -59,10 +58,8 @@ exports:
                        _SGSqliteDatabaseErrorDomain, _SGSqliteDatabaseErrorKeyCode, 
                        _SGSqliteDatabaseErrorKeyQuery, _SGSqliteDatabaseErrorKeyReason, 
                        _SGStripQuotationMarks, _SGTinyLinusAcquireSharedAddressBook, 
-                       _SGTinyLinusContactIsMe, _SGTinyLinusCopyAddressBookPeopleMatchingNormalizedName, 
-                       _SGTinyLinusCopyAddressBookPeopleMatchingPseudoContact, 
+                       _SGTinyLinusContactIsMe, _SGTinyLinusCopyAddressBookPeopleMatchingPseudoContact, 
                        _SGTinyLinusCopyCandidatesForNormalizedName, _SGTinyLinusCopyCandidatesWithGoodMatchToNormalizedName, 
-                       _SGTinyLinusCopyCandidatesWithPoorButUniqueMatchToNormalizedName, 
                        _SGTinyLinusCopyCandidatesWithUnnormalizedEmailAddresses, 
                        _SGTinyLinusCopyCandidatesWithUnnormalizedPhoneNumbers, 
                        _SGTinyLinusRealtimeContactForPseudoContactWithNormalizedName, 
@@ -327,16 +324,17 @@ exports:
                        __ZTVN3re214SimplifyWalkerE, __ZTVN3re214ToStringWalkerE, 
                        __ZTVN3re217EmptyStringWalkerE, __ZTVN3re28CompilerE, 
                        __ZTVN3re29Prefilter4Info6WalkerE, __ZlsRNSt3__113basic_ostreamIcNS_11char_traitsIcEEEERKN3re211StringPieceE, 
-                       __addressBookCallback, _addEdge, _descriptionForIdentityKeyType, 
-                       _emailAddressDomain, _enumerateTokensInEmailAddress, 
-                       _findConnectedComponents, _freeDisjointSet, _freeGraph, 
-                       _freeRegexp, _globEscape, _handlers, _initGraph, 
-                       _kFtsPrefixMatchingAnything, _kSGContactDetailTypeAddress, 
-                       _kSGContactDetailTypeEmailAddress, _kSGContactDetailTypePhone, 
-                       _kSGMailPatternsHeaderCc, _kSGMailPatternsHeaderDate, 
-                       _kSGMailPatternsHeaderFrom, _kSGMailPatternsHeaderSubject, 
-                       _kSGMailPatternsHeaderTo, _kSGOriginTypeCalendarEvent, 
-                       _kSGOriginTypeContact, _kSGOriginTypeMail, _kSGOriginTypeUnrecognizedPhone, 
+                       __addressBookCallback, _addEdge, _assetUpdateQueueIdentifier, 
+                       _descriptionForIdentityKeyType, _emailAddressDomain, 
+                       _enumerateTokensInEmailAddress, _findConnectedComponents, 
+                       _freeDisjointSet, _freeGraph, _freeRegexp, _globEscape, 
+                       _handlers, _initGraph, _kFtsPrefixMatchingAnything, 
+                       _kSGContactDetailTypeAddress, _kSGContactDetailTypeEmailAddress, 
+                       _kSGContactDetailTypePhone, _kSGMailPatternsHeaderCc, 
+                       _kSGMailPatternsHeaderDate, _kSGMailPatternsHeaderFrom, 
+                       _kSGMailPatternsHeaderSubject, _kSGMailPatternsHeaderTo, 
+                       _kSGOriginTypeCalendarEvent, _kSGOriginTypeContact, 
+                       _kSGOriginTypeMail, _kSGOriginTypeUnrecognizedPhone, 
                        _keyForIdentityKeyType, _lastMemoryStatus, _mallocRegexp, 
                        _masterEntityCacheOnce, _memoryStatusSource, _mincut, 
                        _newVertex, _plainTextToHtml, _printDot, _qmarksSeparatedByCommas, 
@@ -408,5 +406,5 @@ exports:
                        _SGSqliteDatabase._db, _SGSqliteDatabase._filename, 
                        _SGSqliteDatabase._queryCache, _SGSqliteDatabase._queue, 
                        _SGSqliteDatabase._threadInQueue, _SGSqliteDatabase._transactionDepth, 
-                       _SGSqliteDatabase._transactionRolledback ]
+                       _SGSqliteDatabase._transactionRolledback, _SGSqliteDatabase._weakQueries ]
 ...

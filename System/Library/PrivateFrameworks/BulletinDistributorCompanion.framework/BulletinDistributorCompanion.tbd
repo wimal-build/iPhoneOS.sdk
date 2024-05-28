@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/BulletinDistributorCompanion.framework/BulletinDistributorCompanion
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _BBBehaviorOverrideFromBLTPBBehaviorOverride, _BBSectionIconFromBLTPBSectionIcon, 
@@ -29,9 +28,10 @@ exports:
                        _BLTBulletinDistributorBundleIdentifier, _BLTBulletinDistributorIDSServiceName, 
                        _BLTBulletinDistributorMachServiceName, _BLTBulletinStorePath, 
                        _BLTDaemonRestarted, _BLTDaemonRestartedNotification, 
-                       _BLTDeviceOSIsInternalInstall, _BLTGetPlayLightsAndSirensTimeout, 
-                       _BLTGizmoBulletinObsoleteTimeInterval, _BLTIDSConnectionStatusString, 
-                       _BLTIsAggdLogEnabled, _BLTIsDebugBuild, _BLTIsWalkaboutEnabled, 
+                       _BLTDebugExceptionName, _BLTDeviceOSIsInternalInstall, 
+                       _BLTGetPlayLightsAndSirensTimeout, _BLTGizmoBulletinObsoleteTimeInterval, 
+                       _BLTIDSConnectionStatusString, _BLTIsAggdLogEnabled, 
+                       _BLTIsDebugBuild, _BLTIsDebugOrInternalBuild, _BLTIsWalkaboutEnabled, 
                        _BLTLightsAndSirensReplyExpirationCheckInterval, 
                        _BLTLightsAndSirensReplyExpirationInterval, _BLTLocalAppIdentifierKey, 
                        _BLTLocalPingSubscriberBundlePath, _BLTLoggingReloadDefaults, 
@@ -48,12 +48,12 @@ exports:
                        _BLTPBHandleDidPlayLightsAndSirensReplyRequestReadFrom, 
                        _BLTPBHandleDismissActionRequestReadFrom, _BLTPBHandlePairedDeviceIdentifierRequestReadFrom, 
                        _BLTPBHandleSnoozeActionRequestReadFrom, _BLTPBHandleSupplementaryActionRequestReadFrom, 
-                       _BLTPBImageReadFrom, _BLTPBRemoveBulletinRequestReadFrom, 
-                       _BLTPBSectionBulletinListReadFrom, _BLTPBSectionIconFromBBSectionIcon, 
-                       _BLTPBSectionIconReadFrom, _BLTPBSectionIconVariantReadFrom, 
-                       _BLTPBSectionInfoFromBBSectionInfo, _BLTPBSectionInfoReadFrom, 
-                       _BLTPBSetSectionInfoRequestReadFrom, _BLTPBSetSectionInfoResponseReadFrom, 
-                       _BLTPBSetSectionSubtypeParametersIconRequestReadFrom, 
+                       _BLTPBImageReadFrom, _BLTPBProtobufSequenceNumberSessionStateString, 
+                       _BLTPBRemoveBulletinRequestReadFrom, _BLTPBSectionBulletinListReadFrom, 
+                       _BLTPBSectionIconFromBBSectionIcon, _BLTPBSectionIconReadFrom, 
+                       _BLTPBSectionIconVariantReadFrom, _BLTPBSectionInfoFromBBSectionInfo, 
+                       _BLTPBSectionInfoReadFrom, _BLTPBSetSectionInfoRequestReadFrom, 
+                       _BLTPBSetSectionInfoResponseReadFrom, _BLTPBSetSectionSubtypeParametersIconRequestReadFrom, 
                        _BLTPBSetSectionSubtypeParametersIconResponseReadFrom, 
                        _BLTPBShouldSuppressLightsAndSirensNowRequestReadFrom, 
                        _BLTPBShouldSuppressLightsAndSirensNowResponseReadFrom, 
@@ -111,10 +111,11 @@ exports:
                        _BLTTestService, _BLTTestServiceServer, _BLTWatchKitAppDefinition, 
                        _BLTWatchKitAppList ]
     objc-ivars:      [ _BLTAggdObserverHolder._observer, _BLTPBAckInitialSequenceNumberRequest._assert, 
-                       _BLTPBAckInitialSequenceNumberRequest._has, _BLTPBAction._activationMode, 
-                       _BLTPBAction._appearance, _BLTPBAction._behavior, 
-                       _BLTPBAction._behaviorParameters, _BLTPBAction._has, 
-                       _BLTPBAction._identifier, _BLTPBAction._launchURL, 
+                       _BLTPBAckInitialSequenceNumberRequest._has, _BLTPBAckInitialSequenceNumberRequest._sessionIdentifier, 
+                       _BLTPBAckInitialSequenceNumberRequest._sessionState, 
+                       _BLTPBAction._activationMode, _BLTPBAction._appearance, 
+                       _BLTPBAction._behavior, _BLTPBAction._behaviorParameters, 
+                       _BLTPBAction._has, _BLTPBAction._identifier, _BLTPBAction._launchURL, 
                        _BLTPBActionInformation._context, _BLTPBAddBulletinRequest._bulletin, 
                        _BLTPBAddBulletinRequest._date, _BLTPBAddBulletinRequest._has, 
                        _BLTPBAddBulletinRequest._shouldPlayLightsAndSirens, 
@@ -198,5 +199,7 @@ exports:
                        _BLTPBShouldSuppressLightsAndSirensNowResponse._has, 
                        _BLTPBShouldSuppressLightsAndSirensNowResponse._shouldSuppress, 
                        _BLTPBTransportData._has, _BLTPBTransportData._isInitialSequenceNumber, 
-                       _BLTPBTransportData._sequenceNumber, _BLTPBUpdateBulletinListRequest._bulletinList ]
+                       _BLTPBTransportData._md5, _BLTPBTransportData._sequenceNumber, 
+                       _BLTPBTransportData._sessionIdentifier, _BLTPBTransportData._sessionState, 
+                       _BLTPBUpdateBulletinListRequest._bulletinList ]
 ...

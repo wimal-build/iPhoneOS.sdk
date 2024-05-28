@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/AirPlaySender.framework/AirPlaySender
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _APAudioSourceConduitCreate, _APAudioSourceFileCreate, 
@@ -54,8 +53,9 @@ exports:
                        _kAPEndpointDescriptionProperty_InitialVolumeDB, 
                        _kAPEndpointDescriptionProperty_IsAppleTV, _kAPEndpointDescriptionProperty_IsCarPlay, 
                        _kAPEndpointDescriptionProperty_IsConnectedOverUSB, 
-                       _kAPEndpointDescriptionProperty_MACAddress, _kAPEndpointDescriptionProperty_Model, 
-                       _kAPEndpointDescriptionProperty_Name, _kAPEndpointDescriptionProperty_OneTimePairingRequired, 
+                       _kAPEndpointDescriptionProperty_MACAddress, _kAPEndpointDescriptionProperty_MetadataFeatures, 
+                       _kAPEndpointDescriptionProperty_Model, _kAPEndpointDescriptionProperty_Name, 
+                       _kAPEndpointDescriptionProperty_OneTimePairingRequired, 
                        _kAPEndpointDescriptionProperty_PINRequired, _kAPEndpointDescriptionProperty_PairingPeerHomeKitIdentifier, 
                        _kAPEndpointDescriptionProperty_PairingPeerPublicKey, 
                        _kAPEndpointDescriptionProperty_PasswordRequired, 

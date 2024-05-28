@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/CameraUI.framework/CameraUI
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _CAMAggregateDictionaryAddValueForScalarKey, _CAMAggregateDictionaryAvalancheLengthBackKey, 
@@ -38,8 +37,8 @@ exports:
                        _CAMAggregateDictionaryUpdateForZoom, _CAMAggregateDictionaryVideoBackKey, 
                        _CAMAggregateDictionaryVideoFrontKey, _CAMAggregateDictionaryVolumeDownCaptureKey, 
                        _CAMAggregateDictionaryVolumeUpCaptureKey, _CAMAggregateDictionaryZoomBucketFromZoom, 
-                       _CAMBlinkAndSmileDetectionCommandBlinkEnabled, _CAMBlinkAndSmileDetectionCommandSmileEnabled, 
-                       _CAMCallStatusMonitorDidChangeCallActiveNotification, 
+                       _CAMApplicationMain, _CAMBlinkAndSmileDetectionCommandBlinkEnabled, 
+                       _CAMBlinkAndSmileDetectionCommandSmileEnabled, _CAMCallStatusMonitorDidChangeCallActiveNotification, 
                        _CAMCameraUIFrameworkBundle, _CAMCaptureCommandReason, 
                        _CAMCaptureCommandSubcommands, _CAMCaptureControllerErrorDomain, 
                        _CAMCaptureDeviceAutomatic, _CAMCaptureEngineCurrentRequestKey, 
@@ -100,7 +99,8 @@ exports:
                        _CAMUserPreferenceDesiredPhotoModeEffectFilterType, 
                        _CAMUserPreferenceDidMigrate, _CAMUserPreferenceEnableLockAsShutter, 
                        _CAMUserPreferenceFlashAndHDRConflictingControl, 
-                       _CAMUserPreferenceHDREV0, _CAMUserPreferenceIrisAndFilterConflictingControl, 
+                       _CAMUserPreferenceForcedIrisOn, _CAMUserPreferenceHDREV0, 
+                       _CAMUserPreferenceIrisAndFilterConflictingControl, 
                        _CAMUserPreferencePreviewViewAspectMode, _CAMUserPreferenceResetTimeoutDate, 
                        _CAMUserPreferenceShowGridOverlay, _CAMUserPreferenceSlomoConfiguration, 
                        _CAMUserPreferenceSquareModeEffectFilterType, _CAMUserPreferenceTimerDuration, 

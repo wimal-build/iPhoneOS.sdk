@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /usr/lib/libTelephonyUtilDynamic.dylib
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN3ctu12TimerService17scheduleAfterImplENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEENS1_5tupleIJNS_8TimeTypeENS1_6chrono8durationIxNS1_5ratioILx1ELx1000000EEEEEEEENS1_8functionIFvvEEE, 

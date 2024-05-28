@@ -2,11 +2,9 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/SpringBoardServices.framework/SpringBoardServices
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
-    symbols:         [ _BKAccelerometer_server, _BKAccelerometer_server_routine, 
-                       _DEFAULT_WAIT_TIME_FOR_APP_EXIT, _SBActivateAssistantWithContext, 
+    symbols:         [ _DEFAULT_WAIT_TIME_FOR_APP_EXIT, _SBActivateAssistantWithContext, 
                        _SBAddAlertItemsSuppressionAssertion, _SBAddBiometricAssertion, 
                        _SBAddDownloadingIconForDisplayIdentifier, _SBAddDownloadingIconForDisplayIdentifierWithSoftwareType, 
                        _SBAddThermalWarningSuppressionAssertion, _SBAddWallpaperAnimationSuspensionAssertion, 
@@ -231,9 +229,9 @@ exports:
                        _SBUserNotificationTextFieldButtonDisplayTitle, 
                        _SBUserNotificationTextFieldButtonImagePath, _SBUserNotificationUsesUndoStyle, 
                        _SBWillDismissMiniAlert, _SBWillDisplayMiniAlert, 
-                       _SBWorkspaceCarStatusBarChange, __BKXXBKAccelerometer_subsystem, 
-                       __SBApplicationStateGetMonitor, __SBFScreenTimeNameForCategory, 
-                       __SBFScreenTimePostExternalChangeNotification, __SBFScreenTimeRegisterForExternalChangeNotification, 
+                       _SBWorkspaceCarStatusBarChange, __SBApplicationStateGetMonitor, 
+                       __SBFScreenTimeNameForCategory, __SBFScreenTimePostExternalChangeNotification, 
+                       __SBFScreenTimeRegisterForExternalChangeNotification, 
                        __SBSApplicationLocalNotificationFiredPostExternalChangeNotification, 
                        __SBSApplicationNotificationRegisterForExternalChangeNotification, 
                        __SBSApplicationNotificationUnRegisterForExternalChangeNotification, 

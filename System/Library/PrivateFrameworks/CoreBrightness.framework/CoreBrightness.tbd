@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/CoreBrightness.framework/CoreBrightness
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN4AABC13SetBrightnessEffmPFvPvES0_, __ZN4AABC5closeEm ]

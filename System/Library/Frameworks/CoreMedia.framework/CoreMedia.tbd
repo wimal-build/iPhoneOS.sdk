@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreMedia.framework/CoreMedia
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _AudioToolbox_AudioConverterDispose, _AudioToolbox_AudioConverterGetProperty, 
@@ -733,8 +732,7 @@ exports:
                        _fpServer_CreateRPCTimeoutThread, _fvVibeWillStartNotification, 
                        _fvVibeWillStopNotification, _gClockServerState, 
                        _gDefaultMusicApp, _gDefaultVolumeCategory, _gFigRemoteCommonTimeout, 
-                       _gFigTracingPauseCount, _gVAEM, _kCFBundleCopyLocalizationsForPreferences_MaxAvailableLanaguages, 
-                       _kCMByteStreamNotification_AvailableLengthChanged, 
+                       _gFigTracingPauseCount, _gVAEM, _kCMByteStreamNotification_AvailableLengthChanged, 
                        _kCMByteStreamProperty_AvailableLength, _kCMByteStreamProperty_EntireLength, 
                        _kCMByteStreamProperty_EntireLengthAvailableOnDemand, 
                        _kCMByteStreamProperty_IOPolicy, _kCMByteStreamProperty_ThroughputStatistics, 
@@ -1977,11 +1975,11 @@ exports:
                        _kFigEndpointProperty_TransportType, _kFigEndpointProperty_Type, 
                        _kFigEndpointProperty_VolumeDB, _kFigEndpointProperty_iOSEntityIsDoingTurnByTurn, 
                        _kFigEndpointScreenInfoKey_ID, _kFigEndpointScreenInfoKey_InputCapabilities, 
-                       _kFigEndpointScreenInputCapability_HighFidelityTouch, 
+                       _kFigEndpointScreenInfoKey_PrimaryInputDevice, _kFigEndpointScreenInputCapability_HighFidelityTouch, 
                        _kFigEndpointScreenInputCapability_Knobs, _kFigEndpointScreenInputCapability_LowFidelityTouch, 
-                       _kFigEndpointSiriRequestedAction_ButtonDown, _kFigEndpointSiriRequestedAction_ButtonUp, 
-                       _kFigEndpointSiriRequestedAction_Prewarm, _kFigEndpointSiriRequestedKey_Action, 
-                       _kFigEndpointStreamActivateOptionKey_ScreenActivationMode, 
+                       _kFigEndpointScreenInputCapability_Touchpad, _kFigEndpointSiriRequestedAction_ButtonDown, 
+                       _kFigEndpointSiriRequestedAction_ButtonUp, _kFigEndpointSiriRequestedAction_Prewarm, 
+                       _kFigEndpointSiriRequestedKey_Action, _kFigEndpointStreamActivateOptionKey_ScreenActivationMode, 
                        _kFigEndpointStreamActivateOptionKey_SuspendOnActivate, 
                        _kFigEndpointStreamNotificationKey_Reason, _kFigEndpointStreamNotificationKey_Status, 
                        _kFigEndpointStreamNotification_Activated, _kFigEndpointStreamNotification_Deactivated, 

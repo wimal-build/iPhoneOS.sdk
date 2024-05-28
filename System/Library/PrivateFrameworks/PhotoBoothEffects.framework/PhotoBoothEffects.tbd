@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/PhotoBoothEffects.framework/PhotoBoothEffects
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _bump_fragment_shader_source, _clamp, _default_vertex_shader_source, 

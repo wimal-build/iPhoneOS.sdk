@@ -2,8 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/DataDetectorsUI.framework/DataDetectorsUI
-current-version: 183.1
-objc-constraint: retain_release
+current-version: 184.0
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _DDABPropertyIDForResult, _DDAddPropertiesToABRecord, 

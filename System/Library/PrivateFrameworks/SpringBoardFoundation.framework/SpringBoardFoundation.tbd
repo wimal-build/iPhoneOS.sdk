@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/SpringBoardFoundation.framework/SpringBoardFoundation
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _AKUnregisterAllAppleIDs, _CropRectForDevice, _DrawBestRectForDevice, 
@@ -15,7 +14,7 @@ exports:
                        _SBFBoolEquals, _SBFBoundPoint, _SBFBundle, _SBFCachedNSHomeDirectory, 
                        _SBFCachesPathForApplicationInfo, _SBFCachesPathForSandboxPath, 
                        _SBFCalculateContrastFromColorBoxes, _SBFCanCreateIOSurfaceFromImage, 
-                       _SBFCompareBuildVersions, _SBFCompareIntegers, _SBFCreateCroppedIOSurface, 
+                       _SBFCompareIntegers, _SBFCreateCroppedIOSurface, 
                        _SBFCreateIOSurfaceForCGImage, _SBFCreateIOSurfaceForDrawnImage, 
                        _SBFCreateIOSurfaceForImage, _SBFCreateIOSurfaceWithSizeAndDraw, 
                        _SBFDeviceBlockStateDidChangeNotification, _SBFDevicePasscodeLockStateDidChangeNotification, 
@@ -54,7 +53,7 @@ exports:
                        _SBFWallpaperRestoreDefaults, _SBFWallpaperSetImageForLocations, 
                        _SBFWallpaperSetVideo, _SBFWallpaperSizeWithOptions, 
                        _SBFWallpaperThumbnailImageForVariant, _SBFWallpaperTypeForVariant, 
-                       _SBFWallpaperVideo, _SBFWallpaperViewSetParallaxSettingsOnce, 
+                       _SBFWallpaperVideoURL, _SBFWallpaperViewSetParallaxSettingsOnce, 
                        _SBFWallpaperViewSetWallpaperSettingsOnce, _SBFWallpaperViewUnknownContrast, 
                        _SBFWallpaperWriteImages, _SBImageDrawingCreateCGContext, 
                        _SBScreenTimeCategoryKey, _SBScreenTimeTrackingChangedNotification, 
@@ -83,9 +82,9 @@ exports:
                        _kSBProceduralWallpaperHomeOptionsKey, _kSBProceduralWallpaperHomeUserSetKey, 
                        _kSBProceduralWallpaperLockNameKey, _kSBProceduralWallpaperLockOptionsKey, 
                        _kSBProceduralWallpaperLockUserSetKey ]
-    objc-classes:    [ _SBFBackdropLegibilitySettingsProvider, _SBFButton, 
-                       _SBFCancelationToken, _SBFColorBoxes, _SBFDescriptionBuilder, 
-                       _SBFDeviceBlockTimer, _SBFDeviceLockController, 
+    objc-classes:    [ _SBFBackdropLegibilitySettingsProvider, _SBFBuildVersion, 
+                       _SBFButton, _SBFCancelationToken, _SBFColorBoxes, 
+                       _SBFDescriptionBuilder, _SBFDeviceBlockTimer, _SBFDeviceLockController, 
                        _SBFDeviceLockModelJournaledDefaults, _SBFDeviceLockModelSEP, 
                        _SBFEqualsBuilder, _SBFHashBuilder, _SBFHomeScreenWallpaperParallaxSettings, 
                        _SBFIrisWallpaperView, _SBFLazyObjectProvider, _SBFLockScreenDateView, 

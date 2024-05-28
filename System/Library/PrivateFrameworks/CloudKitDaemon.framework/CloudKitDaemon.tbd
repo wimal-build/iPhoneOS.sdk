@@ -2,8 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/CloudKitDaemon.framework/CloudKitDaemon
-current-version: 479.2
-objc-constraint: retain_release
+current-version: 481.8
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _APSEnvironmentStringFromCKDPAPNSEnv, _CKAllowedSystemFieldNames, 
@@ -61,7 +60,7 @@ exports:
                        _CKDURLRequestHTTPHeader_WWWAuthenticate, _CKDURLRequestHTTPHeader_Warning, 
                        _CKDURLRequestHTTPHeader_XAcceptClientEncoding, 
                        _CKDURLRequestHTTPHeader_XCloudKitProtocolVersion, 
-                       _CKDWeakLinkClass, _CKDWeakLinkSymbol, _CKDatabaseScopeForCKDPRequestOperationHeader_Database, 
+                       _CKDatabaseScopeForCKDPRequestOperationHeader_Database, 
                        _CKFairPlayErrorDomain, _CKInternalErrorCodeForResponseOperationResult, 
                        _CKLogConfigServerDNS, _CKMescalSignatureCurrentVersion, 
                        _CKNSPredicateOperatorTypeForCKDPQueryFilterType, 

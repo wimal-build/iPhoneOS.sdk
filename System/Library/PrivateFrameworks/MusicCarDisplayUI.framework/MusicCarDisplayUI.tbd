@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/MusicCarDisplayUI.framework/MusicCarDisplayUI
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _MCDAlbumDetailFormat, _MCDAlbumPlaceholderImageWithStyle, 
@@ -51,7 +50,8 @@ exports:
                        _MCDButton, _MCDCellConfiguration, _MCDComposerCellConfiguration, 
                        _MCDComposersViewController, _MCDErrorViewController, 
                        _MCDGeniusMixesViewController, _MCDGenreCellConfiguration, 
-                       _MCDGenresViewController, _MCDLikeButton, _MCDMediaRemoteNowPlayingViewController, 
+                       _MCDGenresViewController, _MCDGlobalQueueManager, 
+                       _MCDLikeButton, _MCDMediaRemoteNowPlayingViewController, 
                        _MCDMoreActionCellConfiguration, _MCDMusicNowPlayingViewController, 
                        _MCDNoContentView, _MCDNowPlayingButton, _MCDNowPlayingNavigationController, 
                        _MCDNowPlayingViewController, _MCDPCContainer, _MCDPCItem, 

@@ -4,7 +4,6 @@ platform:        ios
 install-name:    /System/Library/PrivateFrameworks/SafariShared.framework/SafariShared
 current-version: 0.0
 compatibility-version: 0.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN12SafariShared33BookmarkAndHistoryCompletionMatch20computeMatchLocationEPU36objcproto25WBSURLCompletionMatchData11objc_objectP31WBSURLCompletionUserTypedStringRj, 
@@ -363,15 +362,16 @@ exports:
                        _WBSParsecHiddenResultInfo, _WBSParsecImageRepresentation, 
                        _WBSParsecKeyValueDataCardSection, _WBSParsecModel, 
                        _WBSParsecMovieCardDetailSection, _WBSParsecMovieCardSection, 
-                       _WBSParsecResultSetPattern, _WBSParsecRichText, 
-                       _WBSParsecRichTitleCardSection, _WBSParsecRowCardSection, 
-                       _WBSParsecSchema, _WBSParsecSearchClient, _WBSParsecSearchCompletionResultSet, 
-                       _WBSParsecSearchGenericResult, _WBSParsecSearchMapsResult, 
-                       _WBSParsecSearchMapsResultExtraCompletionItem, _WBSParsecSearchMescalSession, 
-                       _WBSParsecSearchMoviesResult, _WBSParsecSearchNewsResult, 
-                       _WBSParsecSearchResponse, _WBSParsecSearchResult, 
-                       _WBSParsecSearchResultCache, _WBSParsecSearchSession, 
-                       _WBSParsecSearchSimpleResult, _WBSParsecSearchSportsAttributionExtraCompletionItem, 
+                       _WBSParsecPunchout, _WBSParsecResultSetPattern, 
+                       _WBSParsecRichText, _WBSParsecRichTitleCardSection, 
+                       _WBSParsecRowCardSection, _WBSParsecSchema, _WBSParsecSearchClient, 
+                       _WBSParsecSearchCompletionResultSet, _WBSParsecSearchGenericResult, 
+                       _WBSParsecSearchMapsResult, _WBSParsecSearchMapsResultExtraCompletionItem, 
+                       _WBSParsecSearchMescalSession, _WBSParsecSearchMoviesResult, 
+                       _WBSParsecSearchNewsResult, _WBSParsecSearchResponse, 
+                       _WBSParsecSearchResult, _WBSParsecSearchResultCache, 
+                       _WBSParsecSearchSession, _WBSParsecSearchSimpleResult, 
+                       _WBSParsecSearchSportsAttributionExtraCompletionItem, 
                        _WBSParsecSearchSportsResult, _WBSParsecSearchTwitterResult, 
                        _WBSParsecSearchUtilities, _WBSParsecSportsImage, 
                        _WBSParsecSportsScoreSummary, _WBSParsecSportsScoreSummaryCardSection, 

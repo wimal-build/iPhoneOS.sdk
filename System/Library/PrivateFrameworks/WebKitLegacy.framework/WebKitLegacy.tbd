@@ -3,7 +3,6 @@ archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/WebKitLegacy.framework/WebKitLegacy
 current-version: 601.1.46
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _WebActionButtonKey, _WebActionElementKey, _WebActionFormKey, 

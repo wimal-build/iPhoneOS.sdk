@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/Preferences.framework/Preferences
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _ContactsOption, _CreateDetailControllerInstanceWithClass, 
@@ -60,13 +59,12 @@ exports:
                        _PSIsiPad, _PSIsiPhone, _PSKeyNameKey, _PSKeyboardTypeKey, 
                        _PSKeychainSyncErrorDomain, _PSKeychainSyncGetCircleMembershipStatus, 
                        _PSKeychainSyncGetStatus, _PSKeychainSyncIsUsingICDP, 
-                       _PSKeychainSyncIsUsingICDPNetwork, _PSKillProcessNamed, 
-                       _PSLazilyLoadedBundleKey, _PSLazyIconAppID, _PSLazyIconDontUnload, 
-                       _PSLazyIconLoading, _PSLazyIconLoadingCustomQueue, 
+                       _PSKillProcessNamed, _PSLazilyLoadedBundleKey, _PSLazyIconAppID, 
+                       _PSLazyIconDontUnload, _PSLazyIconLoading, _PSLazyIconLoadingCustomQueue, 
                        _PSLegacyCityFromCity, _PSLegalCopyLocalizedAboutDiagnosticsAppActivityAndPrivacyInfoText, 
-                       _PSLicensePath, _PSLocaleLanguageDirection, _PSLocaleUses24HourClock, 
-                       _PSLocalizableMesaStringForKey, _PSLocalizableStockholmStringForKey, 
-                       _PSLocalizedStringFromTableInBundleForLanguage, 
+                       _PSLicenseFilePath, _PSLicensePath, _PSLocaleLanguageDirection, 
+                       _PSLocaleUses24HourClock, _PSLocalizableMesaStringForKey, 
+                       _PSLocalizableStockholmStringForKey, _PSLocalizedStringFromTableInBundleForLanguage, 
                        _PSLog, _PSMagnifyModeDidChangeNotification, _PSManifestEntriesKey, 
                        _PSManifestSectionKey, _PSManifestStringTableKey, 
                        _PSMarginWidthKey, _PSMultipickerStringsName, _PSNETRBChangedNotification, 
@@ -118,8 +116,8 @@ exports:
                        _PSURLKeyboardKey, _PSUsageBundleAppKey, _PSUsageBundleCategoryKey, 
                        _PSUsageBundleDeletingKey, _PSValidTitlesKey, _PSValidValuesKey, 
                        _PSValueChangedNotificationKey, _PSValueKey, _PSValuesDataSourceKey, 
-                       _PSWarrantyPath, _PSWifiChangedNotification, _PSWifiNameKey, 
-                       _PSWifiPowerStateKey, _PSWifiTetheringStateKey, 
+                       _PSWarrantyFilePath, _PSWarrantyPath, _PSWifiChangedNotification, 
+                       _PSWifiNameKey, _PSWifiPowerStateKey, _PSWifiTetheringStateKey, 
                        _PathKey, _PreferencesTableViewCellLeftPad, _PreferencesTableViewCellRightPad, 
                        _PreferencesTableViewFooterColor, _PreferencesTableViewFooterFont, 
                        _PreferencesTableViewHeaderColor, _PreferencesTableViewHeaderFont, 

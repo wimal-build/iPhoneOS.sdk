@@ -4,7 +4,9 @@ platform:        ios
 install-name:    /usr/lib/libmis.dylib
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
-    symbols:         [ _MISAppApprovalState, _MISCopyErrorStringForErrorCode, 
+    symbols:         [ _MISAppApprovalState, _MISBlacklistAppOverridable, 
+                       _MISBlacklistAppShouldBeRemoved, _MISBlacklistOverridden, 
+                       _MISBlacklistSetOverride, _MISCopyErrorStringForErrorCode, 
                        _MISCopyInstalledProvisioningProfiles, _MISEnumerateInstalledProvisioningProfiles, 
                        _MISEnumerateTrustedUPPs, _MISExistsIndeterminateAppsByUPP, 
                        _MISInstallProvisioningProfile, _MISProfileCopyPayload, 
@@ -31,16 +33,18 @@ exports:
                        _MISProvisioningProfileSetDeveloperCertificates, 
                        _MISProvisioningProfileSetName, _MISProvisioningProfileSetProvisionsAllDevices, 
                        _MISProvisioningProfileSetTimeToLive, _MISProvisioningProfileValidateSignature, 
+                       _MISQueryBlacklistForBundle, _MISQueryBlacklistForCdHash, 
                        _MISRemoveProvisioningProfile, _MISSetUPPTrust, 
                        _MISUPPTrusted, _MISValidateSignature, _MISValidateSignatureAndCopyInfo, 
                        _MISValidateUPP, _kMISValidationInfoEntitlements, 
                        _kMISValidationInfoSignerCertificate, _kMISValidationInfoSigningID, 
-                       _kMISValidationInfoSigningTime, _kMISValidationInfoValidatedByLocalProfile, 
-                       _kMISValidationInfoValidatedByProfile, _kMISValidationInfoValidatedByUniversalProfile, 
+                       _kMISValidationInfoSigningTime, _kMISValidationInfoTeamID, 
+                       _kMISValidationInfoValidatedByLocalProfile, _kMISValidationInfoValidatedByProfile, 
+                       _kMISValidationInfoValidatedByUniversalProfile, 
                        _kMISValidationOptionAllowAdHocSigning, _kMISValidationOptionExpectedHash, 
-                       _kMISValidationOptionIgnoreMissingResources, _kMISValidationOptionLogResourceErrors, 
-                       _kMISValidationOptionOnlineAuthorization, _kMISValidationOptionPeriodicCheck, 
-                       _kMISValidationOptionRespectUppTrustAndAuthorization, 
+                       _kMISValidationOptionIgnoreBlacklist, _kMISValidationOptionIgnoreMissingResources, 
+                       _kMISValidationOptionLogResourceErrors, _kMISValidationOptionOnlineAuthorization, 
+                       _kMISValidationOptionPeriodicCheck, _kMISValidationOptionRespectUppTrustAndAuthorization, 
                        _kMISValidationOptionUniversalFileOffset, _kMISValidationOptionUseSoftwareSigningCert, 
                        _kMISValidationOptionValidateSignatureOnly ]
 ...

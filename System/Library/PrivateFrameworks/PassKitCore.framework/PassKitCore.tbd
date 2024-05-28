@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/PassKitCore.framework/PassKitCore
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __Z21PKCreateBitmapContext6CGSizeaf, __Z21PKCreateBitmapContext6CGSizeafa ]
@@ -149,8 +148,8 @@ exports:
                        _PKCardIneligibleLearnMoreURLFormat, _PKCheckRevocationStatus, 
                        _PKCleanupOldPassCaches, _PKCombinedHash, _PKCompanionAgentServiceListenerResumedNotification, 
                        _PKCompanionWatchPassLibraryMachServiceName, _PKConnectionsLogFacility, 
-                       _PKContactCNContactKey, _PKContactEmailAddressKey, 
-                       _PKContactNameKey, _PKContactPhoneNumberKey, _PKContactPostalAddressKey, 
+                       _PKContactEmailAddressKey, _PKContactNameKey, _PKContactPhoneNumberKey, 
+                       _PKContactPostalAddressDistrictKey, _PKContactPostalAddressKey, 
                        _PKContactlessInterfaceHomeButtonSourceHasOccured, 
                        _PKContactlessInterfaceHomeButtonSourceHasOccuredKey, 
                        _PKContactlessInterfaceSessionDidAuthorizeNotification, 
@@ -268,6 +267,7 @@ exports:
                        _PKPassKeySerialNumber, _PKPassKeySharing, _PKPassKeyStoreIDs, 
                        _PKPassKeyStripColor, _PKPassKeySupportsDPANNotifications, 
                        _PKPassKeySupportsDefaultCardSelection, _PKPassKeySupportsFPANNotifications, 
+                       _PKPassKeySupportsSerialNumberBasedProvisioning, 
                        _PKPassKeyTeamIdentifier, _PKPassKeyTransactionPushTopic, 
                        _PKPassKeyTransactionServiceURL, _PKPassKeyUserInfo, 
                        _PKPassKeyVoided, _PKPassKeyWebServiceURL, _PKPassKeyiAdReportingIdentifier, 
@@ -336,7 +336,8 @@ exports:
                        _PKPaymentMethodDisplayNameKey, _PKPaymentMethodNetworkKey, 
                        _PKPaymentMethodPaymentPassKey, _PKPaymentMethodTypeForString, 
                        _PKPaymentMethodTypeKey, _PKPaymentNetworkAmex, 
-                       _PKPaymentNetworkDiscover, _PKPaymentNetworkMasterCard, 
+                       _PKPaymentNetworkChinaUnionPay, _PKPaymentNetworkDiscover, 
+                       _PKPaymentNetworkInterac, _PKPaymentNetworkMasterCard, 
                        _PKPaymentNetworkNameForPaymentCredentialType, _PKPaymentNetworkNamesForPaymentCredentialTypes, 
                        _PKPaymentNetworkPrivateLabel, _PKPaymentNetworkVisa, 
                        _PKPaymentPassContactPhoneKey, _PKPaymentRemoteAlertDidEnterBackground, 

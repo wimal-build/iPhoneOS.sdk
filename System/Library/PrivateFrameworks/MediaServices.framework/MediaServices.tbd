@@ -2,21 +2,20 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/MediaServices.framework/MediaServices
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     weak-def-symbols: [ __ZTI14MSVMutableData, __ZTS14MSVMutableData ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _MSVArtworkServiceErrorDomain, _MSVCLIPrint, _MSVCLIPrintErr, 
                        _MSVCLIPrompt, _MSVCLIStartMainRunLoop, _MSVCLIStopMainRunLoop, 
-                       _MSVCreateTemporaryFileHandle, _MSVCryptoDigestForContentsOfFile, 
-                       _MSVCryptoDigestForContentsOfInputStream, _MSVCryptoDigestForData, 
-                       _MSVCryptoDigestForString, _MSVCryptoUtilitiesHexStringFromDigest, 
-                       _MSVDeviceOSIsInternalInstall, _MSVDevicePPTTestsAreInProgress, 
-                       _MSVFrameworkExists, _MSVGzipCompressData, _MSVGzipCompressFile, 
-                       _MSVGzipDecompressData, _MSVGzipDecompressFile, 
-                       _MSVImageUtilitiesCopyJPEGDataFromIOSurface, _MSVImageUtilitiesCreateImage, 
-                       _MSVImageUtilitiesCreateJPEGFileImageDestination, 
+                       _MSVCopyDeviceName, _MSVCreateTemporaryFileHandle, 
+                       _MSVCryptoDigestForContentsOfFile, _MSVCryptoDigestForContentsOfInputStream, 
+                       _MSVCryptoDigestForData, _MSVCryptoDigestForString, 
+                       _MSVCryptoUtilitiesHexStringFromDigest, _MSVDeviceOSIsInternalInstall, 
+                       _MSVDevicePPTTestsAreInProgress, _MSVFrameworkExists, 
+                       _MSVGzipCompressData, _MSVGzipCompressFile, _MSVGzipDecompressData, 
+                       _MSVGzipDecompressFile, _MSVImageUtilitiesCopyJPEGDataFromIOSurface, 
+                       _MSVImageUtilitiesCreateImage, _MSVImageUtilitiesCreateJPEGFileImageDestination, 
                        _MSVImageUtilitiesCreateJPEGImageDestination, _MSVImageUtilitiesResizeImageToDestination, 
                        _MSVKeychainCopyKeychainValue, _MSVKeychainSetKeychainValue, 
                        _MSVLocalizedString, _MSVLoggingCategoryNameKey, 

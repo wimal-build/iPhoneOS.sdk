@@ -2,8 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/VectorKit.framework/VectorKit
-current-version: 1156.1.9
-objc-constraint: retain_release
+current-version: 1156.1.14
 exports:         
   - archs:           [ armv7, armv7s ]
     weak-def-symbols: [ __ZTINSt3__117bad_function_callE, __ZTSNSt3__117bad_function_callE ]

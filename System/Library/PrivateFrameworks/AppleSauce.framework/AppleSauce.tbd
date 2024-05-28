@@ -4,7 +4,6 @@ platform:        ios
 install-name:    /System/Library/PrivateFrameworks/AppleSauce.framework/AppleSauce
 current-version: 0.0
 compatibility-version: 0.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN10applesauce8dispatch2v18walltimeENSt3__16chrono10time_pointINS3_12system_clockENS3_8durationIxNS2_5ratioILx1ELx1000000EEEEEEE ]

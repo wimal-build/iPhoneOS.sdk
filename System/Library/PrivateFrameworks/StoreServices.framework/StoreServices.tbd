@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/StoreServices.framework/StoreServices
-objc-constraint: retain_release
+current-version: 1440.12
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _SSAVAssetDownloadTokenDownloadComplete, _SSAccountGetUniqueIdentifierFromValue, 
@@ -468,6 +468,7 @@ exports:
                        _SSVURLBagKeyMescalSignedActions, _SSVURLBagKeyMescalSignedRequests, 
                        _SSVURLBagKeyMescalSignedResponses, _SSVURLBagKeyMusicCommon, 
                        _SSVURLBagKeyMusicConnect, _SSVURLBagKeyMusicSubscription, 
+                       _SSVURLBagKeyPastisCertificateURL, _SSVURLBagKeyPastisKeyServerURL, 
                        _SSVURLBagKeyStoreFrontSuffix, _SSVURLBagShouldSendAMDForURL, 
                        _SSVURLPathMatchesActionDictionary, _SSVUpdateDeferredInAppPurchase, 
                        _SSVUserDefaultsIsReadable, _SSVUserDefaultsIsWritable, 

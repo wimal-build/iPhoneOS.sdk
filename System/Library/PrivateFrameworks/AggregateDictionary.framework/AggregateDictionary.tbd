@@ -2,8 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/AggregateDictionary.framework/AggregateDictionary
-current-version: 321.1
-objc-constraint: retain_release
+current-version: 321.3
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _ADClientAddValueForScalarKey, _ADClientBatchKeys, 

@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Photos.framework/Photos
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _PHAdjustmentDataKey, _PHAdjustmentDataOpaqueFormatIdentifier, 
@@ -37,8 +36,9 @@ exports:
                        _PHSizeScaleToFitSize, _PLObjectIDOrUUIDFromPHObject, 
                        _PLVideoComplementVisibilityStateIsEvaluated, _PLVideoComplementVisibilityStateIsExplicit, 
                        _PLVideoComplementVisibilityStateIsHidden, __FastHashForPredicate, 
-                       __PHSetPhotoKitTestsEnabled, __assetKindForMediaType, 
-                       __assetSubtypeForMediaSubtypes, _sharedJPEGDecodeSession ]
+                       __PHAllAssetMediaSubtypes, __PHSetPhotoKitTestsEnabled, 
+                       __assetKindForMediaType, __assetSubtypeForMediaSubtypes, 
+                       _sharedJPEGDecodeSession ]
     objc-classes:    [ _PHAdjustmentData, _PHAlbum, _PHAsset, _PHAssetChangeRequest, 
                        _PHAssetCollection, _PHAssetCollectionChangeRequest, 
                        _PHAssetCollectionDeleteRequest, _PHAssetComment, 

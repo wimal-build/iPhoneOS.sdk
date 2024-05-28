@@ -2,9 +2,8 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
-current-version: 1241.11
+current-version: 1242.13
 compatibility-version: 150.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ arm64 ]
     symbols:         [ __CFBigNumGetInt128, __CFBigNumGetUInt128, __CFBigNumInitWithInt128, 

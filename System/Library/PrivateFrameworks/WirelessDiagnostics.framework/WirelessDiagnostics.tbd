@@ -3,7 +3,6 @@ archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/WirelessDiagnostics
 current-version: 757.0
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN3awd12MetricBuffer16addTimeInSecondsENSt3__16chrono8durationIxNS1_5ratioILx1ELx1EEEEE, 

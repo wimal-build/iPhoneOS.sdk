@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/VoiceTrigger.framework/VoiceTrigger
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN7NString7vprintfEPKcPv ]
@@ -158,10 +157,12 @@ exports:
                        __ZN11BlobBuilder18buildPhoneHmmArrayERK14NConfigSection, 
                        __ZN11BlobBuilder19getAcAnalConfigSizeEv, __ZN11BlobBuilder19getConfigHeaderSizeEv, 
                        __ZN11BlobBuilder19getDistributionSizeEv, __ZN11BlobBuilder19serializeNormConfigER7NString, 
-                       __ZN11BlobBuilder21getDetectorConfigSizeEv, __ZN11BlobBuilder21serializeAcAnalConfigER7NString, 
+                       __ZN11BlobBuilder21getActualHmmArraySizeEv, __ZN11BlobBuilder21getDetectorConfigSizeEv, 
+                       __ZN11BlobBuilder21serializeAcAnalConfigER7NString, 
                        __ZN11BlobBuilder21serializeConfigHeaderER7NString, 
                        __ZN11BlobBuilder21serializeDetectConfigER7NString, 
                        __ZN11BlobBuilder23sanityCheckAcAnalOptionERK14NConfigSection, 
+                       __ZN11BlobBuilder25getActualDistributionSizeEv, 
                        __ZN11BlobBuilder5buildERK7NConfigR7NString, __ZN11BlobBuilder9buildBlobERK7NConfigR7NString, 
                        __ZN11NAutoString8appendToEPKvRKj, __ZN11NAutoString8assignToEPKvRKj, 
                        __ZN11NAutoStringC1ERK7NString, __ZN11NAutoStringC1ERKS_, 

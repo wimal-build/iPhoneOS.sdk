@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/HealthKitUI.framework/HealthKitUI
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _HKAffineTransformFromLinearTransforms, _HKAuthorizationExplanationText, 
@@ -30,11 +29,12 @@ exports:
                        _HKMaximumGapForConsecutiveSections, _HKQueryForFetchingCountStatistics, 
                        _HKRangeMax, _HKRangeMid, _HKRangeMin, _HKUICeilRectToScreenScale, 
                        _HKUICeilToScreenScale, _HKUIConvertSecondsToHours, 
-                       _HKUIDefaultBirthdate, _HKUIEqualCGFloats, _HKUIEqualDoubles, 
-                       _HKUIFloorCGPointToScreenScale, _HKUIFloorToScreenScale, 
-                       _HKUIJoinAttributedStringsForLocale, _HKUIJoinAttributedStringsWithFormat, 
-                       _HKUIJoinStringsForLocale, _HKUILocalizedStringForDateAndTemplate, 
-                       _HKUIMidDate, _HKUIOnePixel, _HKUIPredicateMatchingPredicates, 
+                       _HKUIConvertSecondsToMinutes, _HKUIDefaultBirthdate, 
+                       _HKUIEqualCGFloats, _HKUIEqualDoubles, _HKUIFloorCGPointToScreenScale, 
+                       _HKUIFloorToScreenScale, _HKUIJoinAttributedStringsForLocale, 
+                       _HKUIJoinAttributedStringsWithFormat, _HKUIJoinStringsForLocale, 
+                       _HKUILocalizedStringForDateAndTemplate, _HKUIMidDate, 
+                       _HKUIOnePixel, _HKUIPredicateMatchingPredicates, 
                        _HKUIUnitDisplayName, _HKUnitControllerAvailableUnitsForDataUnitGroup, 
                        _HKUnitControllerUnitPreferenceChangedKey, _HKUnitControllerUnitPreferencesDidChangeNotification, 
                        _NSStringFromHKGraphSeriesDataBlockPath, _NSStringFromHKGraphSeriesDataPointPath, 

@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/GKSPerformance.framework/GKSPerformance
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _AWDGCKSubmitLinkStatusMetric, _GKSSubmitAWDMetricsFromGameD ]
@@ -16,7 +15,7 @@ exports:
                        _AWDStats.avgInterarrivalTimeCount, _AWDStats.avgJitterBufferSize, 
                        _AWDStats.avgJitterBufferSizeCount, _AWDStats.avgLossRate, 
                        _AWDStats.avgLossRateCount, _AWDStats.avgRate, _AWDStats.avgRateCount, 
-                       _AWDStats.basebandCount, _AWDStats.callAvgRxRate, 
+                       _AWDStats.basebandCount, _AWDStats.bytesSaved, _AWDStats.callAvgRxRate, 
                        _AWDStats.callAvgRxRateCount, _AWDStats.callAvgTxRate, 
                        _AWDStats.callAvgTxRateCount, _AWDStats.callDuration, 
                        _AWDStats.callNonce, _AWDStats.connectionType, _AWDStats.currentCellTechDuration, 
@@ -37,7 +36,8 @@ exports:
                        _AWDStats.rxExcessRTPBytes, _AWDStats.rxFrameRateAvg, 
                        _AWDStats.rxFrameRateAvgCount, _AWDStats.rxFrameRateMax, 
                        _AWDStats.rxFrameRateMin, _AWDStats.rxHeight, _AWDStats.rxWidth, 
-                       _AWDStats.startTime, _AWDStats.submitQueue, _AWDStats.targetFramerate, 
+                       _AWDStats.silenceCompressionRatio, _AWDStats.startTime, 
+                       _AWDStats.submitQueue, _AWDStats.targetFramerate, 
                        _AWDStats.targetJitterBufferSize, _AWDStats.targetJitterBufferSizeCount, 
                        _AWDStats.terminationReason, _AWDStats.timeSinceLastCellTech, 
                        _AWDStats.timeSinceLastVRA, _AWDStats.timingDict, 

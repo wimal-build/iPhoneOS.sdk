@@ -2,8 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/CoreHAP.framework/CoreHAP
-current-version: 240.1.101
-objc-constraint: retain_release
+current-version: 242.5
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _AESUtils_Test, _AES_CBCFrame_Final, _AES_CBCFrame_Init, 
@@ -621,8 +620,9 @@ exports:
                        _kHAPMetadataKey, _kHAPMfgDataV1_ExpectedLength, 
                        _kHAPMfgDataV1_StateNumberStartIndex, _kHAPMfgDataV2_ExpectedLength, 
                        _kHAPMfgDataV2_MinimumLength, _kHAPMfgData_CategoryIdStartIndex, 
-                       _kHAPMfgData_ConfigNumberStartIndex, _kHAPMfgData_PairingStatusFlagStartIndex, 
-                       _kHAPMfgData_ReserverdByteStartIndex, _kHAPMfgData_StateNumberStartIndex, 
+                       _kHAPMfgData_ConfigNumberStartIndex, _kHAPMfgData_HAPTypeByteStartIndex, 
+                       _kHAPMfgData_HomeKitAdvIntervalAndLengthByteStartIndex, 
+                       _kHAPMfgData_PairingStatusFlagStartIndex, _kHAPMfgData_StateNumberStartIndex, 
                        _kHAPMfgData_UniqueIdStartIndex, _kHAPNewAccessoryAvailabilityTimeoutInSeconds, 
                        _kHAPPairingsCharacteristicDummyInstanceID, _kHAPPrimaryAccessoryInstanceID, 
                        _kHAPServiceDataV1_ExpectedLength, _kHAPServiceData_CategoryStartIndex, 

@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/IAP.framework/IAP
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _Generate32BitConnectionID, _GetConnectionToIAP2Daemon, 
@@ -233,9 +232,9 @@ exports:
                        _kXPCMACAddressStr, _kXPCMacAddressStr, _kXPCNCMInterfaceNumber, 
                        _kXPCNativeBTHIDComponentInfoStr, _kXPCOpenWasSuccessfulStr, 
                        _kXPCOutDataStr, _kXPCOwnsConnectionIDStr, _kXPCOwnsPhysicalConnectorStr, 
-                       _kXPCPListDataStr, _kXPCPingStr, _kXPCPortAppleIDAuthState, 
-                       _kXPCPortIDStr, _kXPCPortManagerNumberStr, _kXPCPortNumberStr, 
-                       _kXPCPortTypeStr, _kXPCProcessAllowedByIAP2DStr, 
+                       _kXPCPListDataStr, _kXPCPingStr, _kXPCPortAppleIDAuthCertClass, 
+                       _kXPCPortAppleIDAuthState, _kXPCPortIDStr, _kXPCPortManagerNumberStr, 
+                       _kXPCPortNumberStr, _kXPCPortTypeStr, _kXPCProcessAllowedByIAP2DStr, 
                        _kXPCProcessAllowedByIAPDStr, _kXPCRequestTypeStr, 
                        _kXPCResistorArrivedStr, _kXPCResistorIDStr, _kXPCResultStr, 
                        _kXPCSendWasSuccessfulStr, _kXPCSetPortLockoutStr, 

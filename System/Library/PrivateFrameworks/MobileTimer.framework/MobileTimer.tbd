@@ -2,7 +2,6 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/MobileTimer.framework/MobileTimer
-objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _AlarmAllowsSnoozeKey, _AlarmDayFromDayOfWeek, _AlarmDaySettingKey, 
@@ -32,14 +31,14 @@ exports:
                        _LocStrWithUILanguage, _MTButtonCircleImageForSize, 
                        _MTButtonCircleWidthForSize, _MTButtonDisableColorForColor, 
                        _MTButtonTextColor, _MTColorImageFromMask, _MTDarkGrayColor, 
-                       _MTFontByAddingAttributesToFont, _MTFontWithTimeFontAttributes, 
-                       _MTGrayColor, _MTIsCelsius, _MTIsN56LandscapeSizeClass, 
-                       _MTIsTalliPhoneSize, _MTIsTextRTL, _MTIsVeryWideiPhoneSize, 
-                       _MTIsWideiPhoneSize, _MTIsiPadIdiom, _MTIsiPhoneIdiom, 
-                       _MTKeylineColorDark, _MTKeylineColorLight, _MTLightGrayColor, 
-                       _MTLocationCoordinate2DMake, _MTMainScreenScale, 
-                       _MTMapBackgroundGrayColor, _MTMidGrayColor, _MTSetIsCelsius, 
-                       _MTShouldUseLargeiPadLayout, _MTShouldUseLargeiPadLayoutForSize, 
+                       _MTDateFormattingLocaleDidChangeNotification, _MTFontByAddingAttributesToFont, 
+                       _MTFontWithTimeFontAttributes, _MTGrayColor, _MTIsCelsius, 
+                       _MTIsN56LandscapeSizeClass, _MTIsTalliPhoneSize, 
+                       _MTIsTextRTL, _MTIsVeryWideiPhoneSize, _MTIsWideiPhoneSize, 
+                       _MTIsiPadIdiom, _MTIsiPhoneIdiom, _MTKeylineColorDark, 
+                       _MTKeylineColorLight, _MTLightGrayColor, _MTLocationCoordinate2DMake, 
+                       _MTMainScreenScale, _MTMapBackgroundGrayColor, _MTMidGrayColor, 
+                       _MTSetIsCelsius, _MTShouldUseLargeiPadLayout, _MTShouldUseLargeiPadLayoutForSize, 
                        _MTSinglePixelLineWidth, _MTTimeFontForSize, _MTTimeThinFontForSize, 
                        _MTTimeUltraLightFontForSize, _MTTintColor, _MediaItemForAlarmSound, 
                        _MobileTimerAppID, _MobileTimerFrameworkLocalNotificationsChanged, 

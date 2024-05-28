@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AlternateSDK</key>
-	<string>iphonesimulator4.2</string>
+	<string>iphonesimulator4.3</string>
 	<key>CanonicalName</key>
-	<string>iphoneos4.2</string>
+	<string>iphoneos4.3</string>
 	<key>CustomProperties</key>
 	<dict/>
 	<key>DefaultProperties</key>
@@ -25,27 +25,27 @@
 		<key>GCC_VERSION</key>
 		<string>4.2</string>
 		<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-		<string>4.2</string>
+		<string>4.3</string>
 		<key>PLATFORM_NAME</key>
 		<string>iphoneos</string>
 		<key>SUPPORTED_DEVICE_FAMILIES</key>
 		<string>1,2</string>
 	</dict>
 	<key>DisplayName</key>
-	<string>iOS 4.2</string>
+	<string>iOS 4.3</string>
 	<key>DocSetFeedName</key>
-	<string>Apple iPhone OS 4.2</string>
+	<string>Apple iPhone OS 4.3</string>
 	<key>DocSetFeedURL</key>
-	<string>http://developer.apple.com/rss/com.apple.adc.documentation.AppleiPhone4_2.atom</string>
+	<string>http://developer.apple.com/rss/com.apple.adc.documentation.AppleiPhone4_3.atom</string>
 	<key>IsBaseSDK</key>
 	<string>YES</string>
 	<key>MaximumDeploymentTarget</key>
-	<string>4.2.99</string>
+	<string>4.3.99</string>
 	<key>MinimalDisplayName</key>
-	<string>4.2</string>
+	<string>4.3</string>
 	<key>MinimumSupportedToolsVersion</key>
 	<string>3.2.3</string>
 	<key>Version</key>
-	<string>4.2</string>
+	<string>4.3</string>
 </dict>
 </plist>

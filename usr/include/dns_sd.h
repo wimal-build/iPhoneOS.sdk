@@ -77,7 +77,7 @@
  */
 
 #ifndef _DNS_SD_H
-#define _DNS_SD_H 2800000
+#define _DNS_SD_H 2900300
 
 #ifdef  __cplusplus
     extern "C" {
@@ -341,7 +341,7 @@ enum
      * lock or take similar appropriate precautions to serialize those calls.
      */
 
-    kDNSServiceFlagsSuppressUnusable    = 0x8000
+    kDNSServiceFlagsSuppressUnusable    = 0x8000,
 	/*
 	 * This flag is meaningful only in DNSServiceQueryRecord which suppresses unusable queries on the
 	 * wire. If "hostname" is a wide-area unicast DNS hostname (i.e. not a ".local." name)
@@ -351,6 +351,15 @@ enum
 	 * "hostname".
 	 */
 
+    kDNSServiceFlagsTimeout            = 0x10000
+	/*
+	 * When kDNServiceFlagsTimeout is passed to DNSServiceQueryRecord or DNSServiceGetAddrInfo, the query is
+	 * stopped after a certain number of seconds have elapsed. The time at which the query will be stopped
+	 * is determined by the system and cannot be configured by the user. The query will be stopped irrespective
+	 * of whether a response was given earlier or not. When the query is stopped, the callback will be called
+	 * with an error code of kDNSServiceErr_Timeout and a NULL sockaddr will be returned for DNSServiceGetAddrInfo
+	 * and zero length rdata will be returned for DNSServiceQueryRecord.
+	 */
     };
 
 /* Possible protocols for DNSServiceNATPortMappingCreate(). */
@@ -488,7 +497,8 @@ enum
     kDNSServiceErr_NATPortMappingUnsupported = -65564,  /* NAT doesn't support NAT-PMP or UPnP */
     kDNSServiceErr_NATPortMappingDisabled    = -65565,  /* NAT supports NAT-PMP or UPnP but it's disabled by the administrator */
     kDNSServiceErr_NoRouter                  = -65566,  /* No router currently configured (probably no network connectivity) */
-    kDNSServiceErr_PollingMode               = -65567
+    kDNSServiceErr_PollingMode               = -65567,
+    kDNSServiceErr_Timeout                   = -65568
 
     /* mDNS Error codes are in the range
      * FFFE FF00 (-65792) to FFFE FFFF (-65537) */

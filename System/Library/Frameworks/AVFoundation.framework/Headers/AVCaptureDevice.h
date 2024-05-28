@@ -24,8 +24,7 @@
  @discussion
 	The notification object is an AVCaptureDevice instance representing the device that became available.
 */
-extern NSString *const AVCaptureDeviceWasConnectedNotification
-							__OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureDeviceWasConnectedNotification NS_AVAILABLE(10_7, 4_0);
 
 /*!
  @constant  AVCaptureDeviceWasDisconnectedNotification
@@ -34,9 +33,8 @@ extern NSString *const AVCaptureDeviceWasConnectedNotification
  
  @discussion
 	The notification object is an AVCaptureDevice instance representing the device that became unavailable.
- */
-extern NSString *const AVCaptureDeviceWasDisconnectedNotification
-							__OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+*/
+extern NSString *const AVCaptureDeviceWasDisconnectedNotification NS_AVAILABLE(10_7, 4_0);
 
 @class AVCaptureDeviceInternal;
 
@@ -48,13 +46,14 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
  @discussion
 	Each instance of AVCaptureDevice corresponds to a device, such as a camera or microphone. Instances of
 	AVCaptureDevice cannot be created directly. An array of all currently available devices can also be obtained using
-	the devices class method. Devices can provide one or more stream of a given media type. Applications can search
+	the devices class method. Devices can provide one or more streams of a given media type. Applications can search
 	for devices that provide media of a specific type using the devicesWithMediaType: and defaultDeviceWithMediaType:
 	class methods.
 	
 	Instances of AVCaptureDevice can be used to provide media data to an AVCaptureSession by creating an
 	AVCaptureDeviceInput with the device and adding that to the capture session.
- */
+*/
+NS_CLASS_AVAILABLE(10_7, 4_0)
 @interface AVCaptureDevice : NSObject
 {
     AVCaptureDeviceInternal *_internal;
@@ -73,7 +72,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	capture. The returned array contains all devices that are available at the time the method is called. Applications
 	should observe AVCaptureDeviceWasConnectedNotification and AVCaptureDeviceWasDisconnectedNotification to be notified
 	when the list of available devices has changed.
- */
+*/
 + (NSArray *)devices;
 
 /*!
@@ -92,7 +91,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	array contains all devices that are available at the time the method is called. Applications should observe
 	AVCaptureDeviceWasConnectedNotification and AVCaptureDeviceWasDisconnectedNotification to be notified when the list
 	of available devices has changed.
- */
+*/
 + (NSArray *)devicesWithMediaType:(NSString *)mediaType;
 
 /*!
@@ -107,9 +106,9 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
  
  @discussion
 	This method returns the default device of the given media type currently available on the system. For example, for
-	AVMediaTypeVIdeo, this method will return the built in camera that is primarily used for capture and recording.
+	AVMediaTypeVideo, this method will return the built in camera that is primarily used for capture and recording.
 	Media type constants are defined in AVMediaFormat.h.
- */
+*/
 + (AVCaptureDevice *)defaultDeviceWithMediaType:(NSString *)mediaType;
 
 /*!
@@ -126,7 +125,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	Every available capture device has a unique ID that persists on one system across device connections and
 	disconnections, application restarts, and reboots of the system itself. This method can be used to recall or track
 	the status of a specific device whose unique ID has previously been saved.
- */
+*/
 + (AVCaptureDevice *)deviceWithUniqueID:(NSString *)deviceUniqueID;
 
 /*!
@@ -138,7 +137,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	Every available capture device has a unique ID that persists on one system across device connections and
 	disconnections, application restarts, and reboots of the system itself. Applications can store the value returned by
 	this property to recall or track the status of a specific device in the future.
- */
+*/
 @property(nonatomic, readonly) NSString *uniqueID;
 
 /*!
@@ -150,7 +149,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	The value of this property is an identifier unique to all devices of the same model. The value is persistent across
 	device connections and disconnections, and across different systems. For example, the model ID of the camera built
 	in to two identical iPhone models will be the same even though they are different physical devices.
- */
+*/
 @property(nonatomic, readonly) NSString *modelID;
 
 
@@ -161,7 +160,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
  
  @discussion
 	This property can be used for displaying the name of a capture device in a user interface.
- */
+*/
 @property(nonatomic, readonly) NSString *localizedName;
 
 /*!
@@ -176,7 +175,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
  
  @discussion
 	Media type constants are defined in AVMediaFormat.h.
- */
+*/
 - (BOOL)hasMediaType:(NSString *)mediaType;
 
 
@@ -195,7 +194,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	acquire a lock on the device.  Clients should only hold the device lock if they require settable device properties
 	to remain unchanged.  Holding the device lock unnecessarily may degrade capture quality in other applications
 	sharing the device.
- */
+*/
 - (BOOL)lockForConfiguration:(NSError **)outError;
 
 /*!
@@ -206,7 +205,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
  @discussion
 	This method should be called to match an invocation of lockForConfiguration: when an application no longer needs to
 	keep device hardware properties from changing automatically.
- */
+*/
 - (void)unlockForConfiguration;
 
 /*!
@@ -223,7 +222,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	An AVCaptureSession instance can be associated with a preset that configures its inputs and outputs to fulfill common
 	use cases. This method can be used to determine if the receiver can be used in a capture session with the given
 	preset. Presets are defined in AVCaptureSession.h.
- */
+*/
 - (BOOL)supportsAVCaptureSessionPreset:(NSString *)preset;
 
 /*!
@@ -237,7 +236,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	a device is no longer available. When the value of this property becomes NO for a given instance, it will not become
 	YES again. If the same physical device again becomes available to the system, it will be represented using a new
 	instance of AVCaptureDevice.
- */
+*/
 @property(nonatomic, readonly, getter=isConnected) BOOL connected;
 
 @end
@@ -252,7 +251,7 @@ extern NSString *const AVCaptureDeviceWasDisconnectedNotification
 	Indicates that the device is physically located on the back of the system hardware.
  @constant AVCaptureDevicePositionFront
 	Indicates that the device is physically located on the front of the system hardware.
- */
+*/
 enum {
 	AVCaptureDevicePositionBack                = 1,
 	AVCaptureDevicePositionFront               = 2
@@ -269,7 +268,7 @@ typedef NSInteger AVCaptureDevicePosition;
  @discussion
 	The value of this property is an AVCaptureDevicePosition indicating where the receiver's device is physically
 	located on the system hardware.
- */
+*/
 @property(nonatomic, readonly) AVCaptureDevicePosition position;
 
 @end
@@ -285,7 +284,7 @@ typedef NSInteger AVCaptureDevicePosition;
 	Indicates that the flash should always be on.
  @constant AVCaptureFlashModeOn
 	Indicates that the flash should be used automatically depending on ambient light conditions.
- */
+*/
 enum {
 	AVCaptureFlashModeOff  = 0,
 	AVCaptureFlashModeOn   = 1,
@@ -303,7 +302,7 @@ typedef NSInteger AVCaptureFlashMode;
  @discussion
 	The value of this property is a BOOL indicating whether the receiver has a flash. The receiver's flashMode property
 	can only be set when this property returns YES.
- */
+*/
 @property(nonatomic, readonly) BOOL hasFlash;
 
 /*!
@@ -318,7 +317,7 @@ typedef NSInteger AVCaptureFlashMode;
  
  @discussion
 	The receiver's flashMode property can only be set to a certain mode if this method returns YES for that mode.
- */
+*/
 - (BOOL)isFlashModeSupported:(AVCaptureFlashMode)flashMode;
 
 /*!
@@ -327,12 +326,12 @@ typedef NSInteger AVCaptureFlashMode;
 	Indicates current mode of the receiver's flash, if it has one.
  
  @discussion
-	The value of this property is an AVCaptureFlashMode that determines the mode of the receiver's flash, if it has one.
-	The value of this property can only be set if its hasFlash property is YES and isFlashModeSupported: returns YES for
-	the desired mode. The receiver must be locked for configuration using lockForConfiguration: before clients can set
-	the value of this property. Clients can observe automatic changes to the receiver's flash mode by key value
-	observing this property.
- */
+	The value of this property is an AVCaptureFlashMode that determines the mode of the 
+	receiver's flash, if it has one.  -setFlashMode: throws an NSInvalidArgumentException
+    if set to an unsupported value (see -isFlashModeSupported:).  -setFlashMode: throws an NSGenericException 
+    if called without first obtaining exclusive access to the receiver using lockForConfiguration:.
+    Clients can observe automatic changes to the receiver's flashMode by key value observing this property.
+*/
 @property(nonatomic) AVCaptureFlashMode flashMode;
 
 @end
@@ -348,7 +347,7 @@ typedef NSInteger AVCaptureFlashMode;
 	Indicates that the torch should always be on.
  @constant AVCaptureTorchModeAuto
 	Indicates that the torch should be used automatically depending on ambient light conditions.
- */
+*/
 enum {
 	AVCaptureTorchModeOff  = 0,
 	AVCaptureTorchModeOn   = 1,
@@ -366,7 +365,7 @@ typedef NSInteger AVCaptureTorchMode;
  @discussion
 	The value of this property is a BOOL indicating whether the receiver has a torch. The receiver's torchMode property
 	can only be set when this property returns YES.
- */
+*/
 @property(nonatomic, readonly) BOOL hasTorch;
 
 /*!
@@ -381,7 +380,7 @@ typedef NSInteger AVCaptureTorchMode;
  
  @discussion
 	The receiver's torchMode property can only be set to a certain mode if this method returns YES for that mode.
- */
+*/
 - (BOOL)isTorchModeSupported:(AVCaptureTorchMode)torchMode;
 
 /*!
@@ -390,12 +389,12 @@ typedef NSInteger AVCaptureTorchMode;
 	Indicates current mode of the receiver's torch, if it has one.
  
  @discussion
-	The value of this property is an AVCaptureTorchMode that determines the mode of the receiver's torch, if it has one.
-	The value of this property can only be set if its hasTorch property is YES and isTorchModeSupported: returns YES for
-	the desired mode. The receiver must be locked for configuration using lockForConfiguration: before clients can set
-	the value of this property. Clients can observe automatic changes to the receiver's torch mode by key value
-	observing this property.
- */
+	The value of this property is an AVCaptureTorchMode that determines the mode of the 
+	receiver's torch, if it has one.  -setTorchMode: throws an NSInvalidArgumentException
+    if set to an unsupported value (see -isTorchModeSupported:).  -setTorchMode: throws an NSGenericException 
+    if called without first obtaining exclusive access to the receiver using lockForConfiguration:.
+    Clients can observe automatic changes to the receiver's torchMode by key value observing this property.
+*/
 @property(nonatomic) AVCaptureTorchMode torchMode;
 
 @end
@@ -411,7 +410,7 @@ typedef NSInteger AVCaptureTorchMode;
 	Indicates that the device should autofocus once and then change the focus mode to AVCaptureFocusModeLocked.
  @constant AVCaptureFocusModeContinuousAutoFocus
 	Indicates that the device should automatically focus when needed.
- */
+*/
 enum {
 	AVCaptureFocusModeLocked              = 0,
 	AVCaptureFocusModeAutoFocus           = 1,
@@ -433,7 +432,7 @@ typedef NSInteger AVCaptureFocusMode;
  
  @discussion
 	The receiver's focusMode property can only be set to a certain mode if this method returns YES for that mode.
- */
+*/
 - (BOOL)isFocusModeSupported:(AVCaptureFocusMode)focusMode;
 
 /*!
@@ -443,10 +442,11 @@ typedef NSInteger AVCaptureFocusMode;
  
  @discussion
 	The value of this property is an AVCaptureFocusMode that determines the receiver's focus mode, if it has one.
-	The value of this property can only be set if isFocusModeSupported: returns YES for the desired mode. The receiver
-	must be locked for configuration using lockForConfiguration: before clients can set the value of this property.
-	Clients can observe automatic changes to the receiver's focus mode by key value observing this property.
- */
+	-setFocusMode: throws an NSInvalidArgumentException if set to an unsupported value (see -isFocusModeSupported:).  
+	-setFocusMode: throws an NSGenericException if called without first obtaining exclusive access to the receiver 
+	using lockForConfiguration:.  Clients can observe automatic changes to the receiver's focusMode by key value 
+	observing this property.
+*/
 @property(nonatomic) AVCaptureFocusMode focusMode;
 
 /*!
@@ -456,7 +456,7 @@ typedef NSInteger AVCaptureFocusMode;
  
  @discussion
 	The receiver's focusPointOfInterest property can only be set if this property returns YES.
- */
+*/
 @property(nonatomic, readonly, getter=isFocusPointOfInterestSupported) BOOL focusPointOfInterestSupported;
 
 /*!
@@ -467,11 +467,13 @@ typedef NSInteger AVCaptureFocusMode;
  @discussion
 	The value of this property is a CGPoint that determines the receiver's focus point of interest, if it has one. A
 	value of (0,0) indicates that the camera should focus on the bottom left corner of the image, while a value of (1,1)
-	indicates that it should focus on the top right. The default value is (0.5,0.5). The value of this property can only
-	be set if the value of focusPointOfInterestSupported is YES. The receiver must be locked for configuration using
-	lockForConfiguration: before clients can set the value of this property. Clients can observe automatic changes to
-	the receiver's focus point of interest by key value observing this property.
- */
+	indicates that it should focus on the top right. The default value is (0.5,0.5).  -setFocusPointOfInterest:
+	throws an NSInvalidArgumentException if isFocusPointOfInterestSupported returns NO.  -setFocusPointOfInterest: throws 
+	an NSGenericException if called without first obtaining exclusive access to the receiver using lockForConfiguration:.  
+	Clients can observe automatic changes to the receiver's focusMode by key value observing this property.  Note that
+	setting focusPointOfInterest alone does not initiate a focus operation.  After setting focusPointOfInterest, call
+	-setFocusMode: to apply the new point of interest.
+*/
 @property(nonatomic) CGPoint focusPointOfInterest;
 
 /*!
@@ -480,11 +482,11 @@ typedef NSInteger AVCaptureFocusMode;
 	Indicates whether the receiver is currently adjusting camera focus.
  
  @discussion
-	The the value of this property is a BOOL indicating whether the receiver's camera focus is being automatically
+	The value of this property is a BOOL indicating whether the receiver's camera focus is being automatically
 	adjusted because its focus mode is AVCaptureFocusModeAutoFocus or AVCaptureFocusModeContinuousAutoFocus. Clients can
 	observe the value of this property to determine whether the camera focus is stable or is being automatically
 	adjusted.
- */
+*/
 @property(nonatomic, readonly, getter=isAdjustingFocus) BOOL adjustingFocus;
 
 @end
@@ -501,7 +503,7 @@ typedef NSInteger AVCaptureFocusMode;
 	AVCaptureExposureModeLocked.
  @constant AVCaptureExposureModeContinuousAutoExposure
 	Indicates that the device should automatically adjust exposure when needed.
- */
+*/
 enum {
 	AVCaptureExposureModeLocked					= 0,
 	AVCaptureExposureModeAutoExpose				= 1,
@@ -523,7 +525,7 @@ typedef NSInteger AVCaptureExposureMode;
  
  @discussion
 	The receiver's exposureMode property can only be set to a certain mode if this method returns YES for that mode.
- */
+*/
 - (BOOL)isExposureModeSupported:(AVCaptureExposureMode)exposureMode;
 
 /*!
@@ -533,11 +535,11 @@ typedef NSInteger AVCaptureExposureMode;
  
  @discussion
 	The value of this property is an AVCaptureExposureMode that determines the receiver's exposure mode, if it has
-	adjustable exposure. The value of this property can only be set if isExposureModeSupported: returns YES for the
-	desired mode. The receiver must be locked for configuration using lockForConfiguration: before clients can set the
-	value of this property. Clients can observe automatic changes to the receiver's exposure mode by key value observing
-	this property.
- */
+	adjustable exposure.  -setExposureMode: throws an NSInvalidArgumentException if set to an unsupported value 
+	(see -isExposureModeSupported:).  -setExposureMode: throws an NSGenericException if called without first obtaining 
+	exclusive access to the receiver using lockForConfiguration:.  Clients can observe automatic changes to the receiver's 
+	exposureMode by key value observing this property.
+*/
 @property(nonatomic) AVCaptureExposureMode exposureMode;
 
 /*!
@@ -547,7 +549,7 @@ typedef NSInteger AVCaptureExposureMode;
  
  @discussion
 	The receiver's exposurePointOfInterest property can only be set if this property returns YES.
- */
+*/
 @property(nonatomic, readonly, getter=isExposurePointOfInterestSupported) BOOL exposurePointOfInterestSupported;
 
 /*!
@@ -559,11 +561,12 @@ typedef NSInteger AVCaptureExposureMode;
 	The value of this property is a CGPoint that determines the receiver's exposure point of interest, if it has
 	adjustable exposure. A value of (0,0) indicates that the camera should adjust exposure based on the bottom left
 	corner of the image, while a value of (1,1) indicates that it should adjust exposure based on the top right. The
-	default value is (0.5,0.5). The value of this property can only be set if the value of
-	exposurePointOfInterestSupported is YES. The receiver must be locked for configuration using lockForConfiguration:
-	before clients can set the value of this property. Clients can observe automatic changes to the receiver's exposure
-	point of interest by key value observing this property.
- */
+	default value is (0.5,0.5). -setExposurePointOfInterest: throws an NSInvalidArgumentException if isExposurePointOfInterestSupported 
+	returns NO.  -setExposurePointOfInterest: throws an NSGenericException if called without first obtaining exclusive access 
+	to the receiver using lockForConfiguration:.  Clients can observe automatic changes to the receiver's exposureMode 
+	by key value observing this property.  Note that setting exposurePointOfInterest alone does not initiate an exposure 
+	operation.  After setting exposurePointOfInterest, call -setExposureMode: to apply the new point of interest.
+*/
 @property(nonatomic) CGPoint exposurePointOfInterest;
 
 /*!
@@ -572,11 +575,11 @@ typedef NSInteger AVCaptureExposureMode;
 	Indicates whether the receiver is currently adjusting camera exposure.
  
  @discussion
-	The the value of this property is a BOOL indicating whether the receiver's camera exposure is being automatically
+	The value of this property is a BOOL indicating whether the receiver's camera exposure is being automatically
 	adjusted because its exposure mode is AVCaptureExposureModeAutoExpose or AVCaptureExposureModeContinuousAutoExposure.
 	Clients can observe the value of this property to determine whether the camera exposure is stable or is being
 	automatically adjusted.
- */
+*/
 @property(nonatomic, readonly, getter=isAdjustingExposure) BOOL adjustingExposure;
 
 @end
@@ -593,7 +596,7 @@ typedef NSInteger AVCaptureExposureMode;
 	AVCaptureWhiteBalanceModeLocked.
  @constant AVCaptureWhiteBalanceModeContinuousAutoWhiteBalance
 	Indicates that the device should automatically adjust white balance when needed.
- */
+*/
 enum {
 	AVCaptureWhiteBalanceModeLocked				        = 0,
 	AVCaptureWhiteBalanceModeAutoWhiteBalance	        = 1,
@@ -615,7 +618,7 @@ typedef NSInteger AVCaptureWhiteBalanceMode;
  
  @discussion
 	The receiver's whiteBalanceMode property can only be set to a certain mode if this method returns YES for that mode.
- */
+*/
 - (BOOL)isWhiteBalanceModeSupported:(AVCaptureWhiteBalanceMode)whiteBalanceMode;
 
 /*!
@@ -625,11 +628,11 @@ typedef NSInteger AVCaptureWhiteBalanceMode;
  
  @discussion
 	The value of this property is an AVCaptureWhiteBalanceMode that determines the receiver's white balance mode, if it
-	has adjustable white balance. The value of this property can only be set if isWhiteBalanceModeSupported: returns YES
-	for the desired mode. The receiver must be locked for configuration using lockForConfiguration: before clients can
-	set the value of this property. Clients can observe automatic changes to the receiver's exposure mode by key value
-	observing this property.
- */
+	has adjustable white balance. -setWhiteBalanceMode: throws an NSInvalidArgumentException if set to an unsupported value 
+	(see -isWhiteBalanceModeSupported:).  -setWhiteBalanceMode: throws an NSGenericException if called without first obtaining 
+	exclusive access to the receiver using lockForConfiguration:.  Clients can observe automatic changes to the receiver's 
+	whiteBalanceMode by key value observing this property.
+*/
 @property(nonatomic) AVCaptureWhiteBalanceMode whiteBalanceMode;
 
 /*!
@@ -638,11 +641,11 @@ typedef NSInteger AVCaptureWhiteBalanceMode;
 	Indicates whether the receiver is currently adjusting camera white balance.
  
  @discussion
-	The the value of this property is a BOOL indicating whether the receiver's camera white balance is being
+	The value of this property is a BOOL indicating whether the receiver's camera white balance is being
 	automatically adjusted because its white balance mode is AVCaptureWhiteBalanceModeAutoWhiteBalance or
 	AVCaptureWhiteBalanceModeContinuousAutoWhiteBalance. Clients can observe the value of this property to determine
 	whether the camera white balance is stable or is being automatically adjusted.
- */
+*/
 @property(nonatomic, readonly, getter=isAdjustingWhiteBalance) BOOL adjustingWhiteBalance;
 
 @end

@@ -19,7 +19,7 @@
 	The notification object is the AVCaptureSession instance that encountered a runtime error.
     The userInfo dictionary contains an NSError for the key AVCaptureSessionErrorKey.
 */
-extern NSString *const AVCaptureSessionRuntimeErrorNotification         __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionRuntimeErrorNotification NS_AVAILABLE(10_7, 4_0);
 
 /*!
  @constant  AVCaptureSessionErrorKey
@@ -33,7 +33,7 @@ extern NSString *const AVCaptureSessionRuntimeErrorNotification         __OSX_AV
     notification gives greater detail on the nature of the error, and in some cases
     recovery suggestions. 
 */
-extern NSString *const AVCaptureSessionErrorKey                         __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionErrorKey NS_AVAILABLE(10_7, 4_0);
 
 /*!
  @constant  AVCaptureSessionDidStartRunningNotification
@@ -44,7 +44,7 @@ extern NSString *const AVCaptureSessionErrorKey                         __OSX_AV
 	Clients may observe the AVCaptureSessionDidStartRunningNotification to know
     when an instance of AVCaptureSession starts running.
 */
-extern NSString *const AVCaptureSessionDidStartRunningNotification      __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionDidStartRunningNotification NS_AVAILABLE(10_7, 4_0);
 
 /*!
  @constant  AVCaptureSessionDidStopRunningNotification
@@ -57,7 +57,9 @@ extern NSString *const AVCaptureSessionDidStartRunningNotification      __OSX_AV
     may stop running automatically due to external system conditions, such as the
     device going to sleep, or being locked by a user.
 */
-extern NSString *const AVCaptureSessionDidStopRunningNotification       __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionDidStopRunningNotification NS_AVAILABLE(10_7, 4_0);
+
+#if TARGET_OS_IPHONE
 
 /*!
  @constant  AVCaptureSessionWasInterruptedNotification
@@ -67,11 +69,11 @@ extern NSString *const AVCaptureSessionDidStopRunningNotification       __OSX_AV
  @discussion
 	Clients may observe the AVCaptureSessionWasInterruptedNotification to know
     when an instance of AVCaptureSession has been interrupted, for example, by
-    an incoming phone call, or alarm, or other application taking control of 
+    an incoming phone call, or alarm, or another application taking control of 
     needed hardware resources.  When appropriate, the AVCaptureSession instance
     will stop running automatically in response to an interruption.
 */
-extern NSString *const AVCaptureSessionWasInterruptedNotification       __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionWasInterruptedNotification NS_AVAILABLE_IPHONE(4_0);
 
 /*!
  @constant  AVCaptureSessionInterruptionEndedNotification
@@ -86,7 +88,9 @@ extern NSString *const AVCaptureSessionWasInterruptedNotification       __OSX_AV
     stopped in response to an interruption will automatically restart once the
     interruption ends.
 */
-extern NSString *const AVCaptureSessionInterruptionEndedNotification    __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionInterruptionEndedNotification NS_AVAILABLE_IPHONE(4_0);
+
+#endif // TARGET_OS_IPHONE
 
 /*!
  @enum  AVCaptureVideoOrientation
@@ -102,7 +106,7 @@ extern NSString *const AVCaptureSessionInterruptionEndedNotification    __OSX_AV
 	Indicates that video should be oriented horizontally, home button on the right.
  @constant AVCaptureVideoOrientationLandscapeLeft
 	Indicates that video should be oriented horizontally, home button on the left.
- */
+*/
 enum {
     AVCaptureVideoOrientationPortrait           = 1,
     AVCaptureVideoOrientationPortraitUpsideDown = 2,
@@ -120,7 +124,7 @@ typedef NSInteger AVCaptureVideoOrientation;
 	Clients may set an AVCaptureSession instance's sessionPreset to AVCaptureSessionPresetPhoto
     for full resolution photo quality output.
 */
-extern NSString *const AVCaptureSessionPresetPhoto      __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionPresetPhoto NS_AVAILABLE(10_7, 4_0);
 
 /*!
  @constant  AVCaptureSessionPresetHigh
@@ -132,7 +136,7 @@ extern NSString *const AVCaptureSessionPresetPhoto      __OSX_AVAILABLE_STARTING
     to achieve high quality video and audio output.  AVCaptureSessionPresetHigh is the
     default sessionPreset value.
 */
-extern NSString *const AVCaptureSessionPresetHigh       __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionPresetHigh NS_AVAILABLE(10_7, 4_0);
 
 /*!
  @constant  AVCaptureSessionPresetMedium
@@ -143,7 +147,7 @@ extern NSString *const AVCaptureSessionPresetHigh       __OSX_AVAILABLE_STARTING
 	Clients may set an AVCaptureSession instance's sessionPreset to AVCaptureSessionPresetMedium
     to achieve output video and audio bitrates suitable for sharing over WiFi.
 */
-extern NSString *const AVCaptureSessionPresetMedium     __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionPresetMedium NS_AVAILABLE(10_7, 4_0);
 
 /*!
  @constant  AVCaptureSessionPresetLow
@@ -154,7 +158,7 @@ extern NSString *const AVCaptureSessionPresetMedium     __OSX_AVAILABLE_STARTING
 	Clients may set an AVCaptureSession instance's sessionPreset to AVCaptureSessionPresetLow
     to achieve output video and audio bitrates suitable for sharing over 3G.
 */
-extern NSString *const AVCaptureSessionPresetLow        __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionPresetLow NS_AVAILABLE(10_7, 4_0);
 
 /*!
  @constant  AVCaptureSessionPreset640x480
@@ -165,7 +169,7 @@ extern NSString *const AVCaptureSessionPresetLow        __OSX_AVAILABLE_STARTING
 	Clients may set an AVCaptureSession instance's sessionPreset to AVCaptureSessionPreset640x480
     to achieve VGA quality (640x480) output.
 */
-extern NSString *const AVCaptureSessionPreset640x480    __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionPreset640x480 NS_AVAILABLE(10_7, 4_0);
 
 /*!
  @constant  AVCaptureSessionPreset1280x720
@@ -176,7 +180,7 @@ extern NSString *const AVCaptureSessionPreset640x480    __OSX_AVAILABLE_STARTING
 	Clients may set an AVCaptureSession instance's sessionPreset to AVCaptureSessionPreset1280x720
     to achieve 720p quality (1280x720) output.
 */
-extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0);
+extern NSString *const AVCaptureSessionPreset1280x720 NS_AVAILABLE(10_7, 4_0);
 
 @class AVCaptureInput;
 @class AVCaptureOutput;
@@ -193,7 +197,8 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
     [AVCaptureSession startRunning] starts the flow of data from the inputs to the outputs, and 
     [AVCaptureSession stopRunning] stops the flow.  A client may set the sessionPreset property to 
     customize the quality level or bitrate of the output.
- */
+*/
+NS_CLASS_AVAILABLE(10_7, 4_0)
 @interface AVCaptureSession : NSObject 
 {
 @private
@@ -215,7 +220,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
 	use cases. This method can be used to determine if the receiver supports the desired preset given its
     current input and output configuration.  The receiver's sessionPreset property may only be 
     set to a certain preset if this method returns YES for that preset.
- */
+*/
 - (BOOL)canSetSessionPreset:(NSString*)preset;
 
 /*!
@@ -227,7 +232,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
 	The value of this property is an NSString (one of AVCaptureSessionPreset*) indicating 
     the current session preset in use by the receiver.  The sessionPreset property may be set 
     while the receiver is running.
- */
+*/
 @property(nonatomic, copy) NSString *sessionPreset;
 
 /*!
@@ -238,7 +243,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
  @discussion
     The value of this property is an NSArray of AVCaptureInputs currently added to
     the receiver.  Clients can add AVCaptureInputs to a session by calling -addInput:.
- */
+*/
 @property(nonatomic, readonly) NSArray *inputs;
 
 /*!
@@ -254,7 +259,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
  @discussion
 	An AVCaptureInput instance can only be added to a session using -addInput: if
     canAddInput: returns YES.
- */
+*/
 - (BOOL)canAddInput:(AVCaptureInput *)input;
 
 /*!
@@ -268,7 +273,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
  @discussion
 	An AVCaptureInput instance can only be added to a session using -addInput: if
     canAddInput: returns YES.  -addInput: may be called while the session is running.
- */
+*/
 - (void)addInput:(AVCaptureInput *)input;
 
 /*!
@@ -281,7 +286,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
  
  @discussion
 	-removeInput: may be called while the session is running.
- */
+*/
 - (void)removeInput:(AVCaptureInput *)input;
 
 /*!
@@ -292,7 +297,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
  @discussion
     The value of this property is an NSArray of AVCaptureOutputs currently added to
     the receiver.  Clients can add AVCaptureOutputs to a session by calling -addOutput:.
- */
+*/
 @property(nonatomic, readonly) NSArray *outputs;
 
 /*!
@@ -308,7 +313,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
  @discussion
 	An AVCaptureOutput instance can only be added to a session using -addOutput: if
     canAddOutput: returns YES.
- */
+*/
 - (BOOL)canAddOutput:(AVCaptureOutput *)output;
 
 /*!
@@ -321,8 +326,8 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
  
  @discussion
 	An AVCaptureOutput instance can only be added to a session using -addOutput: if
-    addOutput: returns YES.  -addOutput: may be called while the session is running.
- */
+    canAddOutput: returns YES.  -addOutput: may be called while the session is running.
+*/
 - (void)addOutput:(AVCaptureOutput *)output;
 
 /*!
@@ -335,7 +340,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
  
  @discussion
 	-removeOutput: may be called while the session is running.
- */
+*/
 - (void)removeOutput:(AVCaptureOutput *)output;
 
 /*!
@@ -352,7 +357,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
     properties.  All changes will be pended until the client calls [session commitConfiguration],
     at which time they will be applied together.  -beginConfiguration / -commitConfiguration
     pairs may be nested, and will only be applied when the outermost commit is invoked.
- */
+*/
 - (void)beginConfiguration;
 
 /*!
@@ -369,7 +374,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
     properties.  All changes will be pended until the client calls [session commitConfiguration],
     at which time they will be applied together.  -beginConfiguration / -commitConfiguration
     pairs may be nested, and will only be applied when the outermost commit is invoked.
- */
+*/
 - (void)commitConfiguration;
 
 /*!
@@ -381,7 +386,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
 	The value of this property is a BOOL indicating whether the receiver is running.
 	Clients can key value observe the value of this property to be notified when
 	the session automatically starts or stops running.
- */
+*/
 @property(nonatomic, readonly, getter=isRunning) BOOL running;
 
 /*!
@@ -394,7 +399,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
     being interrupted, such as by a phone call or alarm. Clients can key value observe 
     the value of this property to be notified when the session ceases to be interrupted
     and again has access to needed hardware resources.
- */
+*/
 @property(nonatomic, readonly, getter=isInterrupted) BOOL interrupted;
 
 /*!
@@ -407,7 +412,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
     the AVCaptureSession instance.  This call blocks until the session object has completely
     started up or failed.  A failure to start running is reported through the AVCaptureSessionRuntimeErrorNotification
     mechanism.
- */
+*/
 - (void)startRunning;
 
 /*!
@@ -419,7 +424,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
 	Clients invoke -stopRunning to stop the flow of data from inputs to outputs connected to 
     the AVCaptureSession instance.  This call blocks until the session object has completely
     stopped.
- */
+*/
 - (void)stopRunning;
 
 @end
@@ -447,7 +452,8 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
      monitoring levels.
      
      Connections involving video expose video specific properties, such as videoMirrored and videoOrientation.
- */
+*/
+NS_CLASS_AVAILABLE(10_7, 4_0)
 @interface AVCaptureConnection : NSObject 
 {
 @private
@@ -500,9 +506,7 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
     The value of this property is a BOOL that determines whether the receiver's output
     can consume data provided through this connection.  This property is read-only.  Clients
     may key-value observe this property to know when a session's configuration forces a
-    connection to become inactive.  For instance, at high-resolution photo quality,
-    bandwidth is too high to sustain video output to a AVCaptureVideoDataOutput instance, so
-    a such connections would become inactive.  The default value is YES.  
+    connection to become inactive.  The default value is YES.  
 */
 @property(nonatomic, readonly, getter=isActive) BOOL active;
 
@@ -590,7 +594,8 @@ extern NSString *const AVCaptureSessionPreset1280x720   __OSX_AVAILABLE_STARTING
      exposes an array of AVCaptureAudioChannel objects, one for each channel of audio
      available.  Iterating through these audio channel objects, a client may poll
      for audio levels. Instances of AVCaptureAudioChannel cannot be created directly.
- */
+*/
+NS_CLASS_AVAILABLE(10_7, 4_0)
 @interface AVCaptureAudioChannel : NSObject
 {
 @private

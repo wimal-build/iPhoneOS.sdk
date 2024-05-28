@@ -53,10 +53,10 @@ typedef union {
 typedef void (*dispatch_function_t)(void *);
 
 #ifdef __cplusplus
-#define DISPATCH_DECL(name) typedef struct name##_s : public dispatch_object_s {} *name##_t;
+#define DISPATCH_DECL(name) typedef struct name##_s : public dispatch_object_s {} *name##_t
 #else
 /*! @parseOnly */
-#define DISPATCH_DECL(name) typedef struct name##_s *name##_t;
+#define DISPATCH_DECL(name) typedef struct name##_s *name##_t
 #endif
 
 #ifdef __GNUC__
@@ -79,6 +79,7 @@ typedef void (*dispatch_function_t)(void *);
 #define DISPATCH_PURE __attribute__((__pure__))
 #define DISPATCH_WARN_RESULT __attribute__((__warn_unused_result__))
 #define DISPATCH_MALLOC __attribute__((__malloc__))
+#define DISPATCH_ALWAYS_INLINE __attribute__((__always_inline__))
 #else
 /*! @parseOnly */
 #define DISPATCH_NORETURN
@@ -108,6 +109,26 @@ typedef void (*dispatch_function_t)(void *);
 #define DISPATCH_WARN_RESULT
 /*! @parseOnly */
 #define DISPATCH_MALLOC
+/*! @parseOnly */
+#define DISPATCH_ALWAYS_INLINE
+#endif
+
+#if __GNUC__
+#define DISPATCH_EXPORT extern __attribute__((visibility("default")))
+#else
+#define DISPATCH_EXPORT extern
+#endif
+
+#if __GNUC__
+#define DISPATCH_INLINE static __inline__
+#else
+#define DISPATCH_INLINE static inline
+#endif
+
+#if __GNUC__
+#define DISPATCH_EXPECT(x, v) __builtin_expect((x), (v))
+#else
+#define DISPATCH_EXPECT(x, v) (x)
 #endif
 
 #endif

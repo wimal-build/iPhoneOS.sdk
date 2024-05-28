@@ -30,12 +30,13 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 #ifndef __OSX_AVAILABLE_STARTING
 #define	__OSX_AVAILABLE_STARTING(x, y)
 #endif
 
-#define DISPATCH_API_VERSION 20090501
+#define DISPATCH_API_VERSION 20101110
 
 #ifndef __DISPATCH_BUILDING_DISPATCH__
 

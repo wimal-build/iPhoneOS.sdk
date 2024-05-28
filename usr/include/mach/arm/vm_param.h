@@ -23,6 +23,8 @@
 
 #define VM_PAGE_SIZE	ARM_PGBYTES
 
+#define	machine_ptob(x)	((x) << ARM_PGSHIFT)
+
 #define KERNEL_STACK_SIZE	(4*ARM_PGBYTES)
 #define INTSTACK_SIZE		(4*ARM_PGBYTES)
 						/* interrupt stack size */

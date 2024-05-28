@@ -3,7 +3,7 @@
  
      Contains:   Master include for vecLib framework
  
-     Version:    vecLib-317.2
+     Version:    vecLib-348.5
  
      Copyright:  © 2000-2011 by Apple Computer, Inc., all rights reserved.
  
@@ -16,6 +16,12 @@
 #ifndef __VECLIB__
 #define __VECLIB__
 
+
+#if !defined __ACCELERATE__
+	#if !defined __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED || __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED >= 1040
+		#error "<vecLib/vecLib.h> is deprecated.  Please #include <Accelerate/Accelerate.h> and link to Accelerate.framework."
+	#endif
+#endif
 
 #ifndef __VECLIBTYPES__
 #include <vecLib/vecLibTypes.h>

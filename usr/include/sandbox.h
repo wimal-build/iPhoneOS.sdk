@@ -137,7 +137,10 @@ enum sandbox_filter_type {
 	SANDBOX_FILTER_GLOBAL_NAME,
 	SANDBOX_FILTER_LOCAL_NAME,
 	SANDBOX_FILTER_APPLEEVENT_DESTINATION,
+	SANDBOX_FILTER_RIGHT_NAME,
 };
+
+extern const enum sandbox_filter_type SANDBOX_CHECK_NO_REPORT;
 
 enum sandbox_extension_flags {
 	FS_EXT_DEFAULTS =              0,
@@ -152,13 +155,25 @@ int sandbox_check(pid_t pid, const char *operation, enum sandbox_filter_type typ
 
 int sandbox_note(const char *note);
 
+int sandbox_suspend(pid_t pid);
+int sandbox_unsuspend(void);
+
 int sandbox_issue_extension(const char *path, char **ext_token);
 int sandbox_issue_fs_extension(const char *path, uint64_t flags, char **ext_token);
 int sandbox_issue_fs_rw_extension(const char *path, char **ext_token);
+int sandbox_issue_mach_extension(const char *name, char **ext_token);
 
 int sandbox_consume_extension(const char *path, const char *ext_token);
 int sandbox_consume_fs_extension(const char *ext_token, char **path);
+int sandbox_consume_mach_extension(const char *ext_token, char **name);
+
 int sandbox_release_fs_extension(const char *ext_token);
+
+int sandbox_container_path_for_pid(pid_t pid, char *buffer, size_t bufsize);
+
+int sandbox_wakeup_daemon(char **errorbuf);
+
+const char *_amkrtemp(const char *);
 
 #endif /* __APPLE_API_PRIVATE */
 

@@ -55,7 +55,7 @@
 
 /* system-wide values */
 #define MACH_VM_MIN_ADDRESS	((mach_vm_offset_t) 0x0ULL)
-#define MACH_VM_MAX_ADDRESS	((mach_vm_offset_t) 0x00000001A0000000ULL)
+#define MACH_VM_MAX_ADDRESS	((mach_vm_offset_t) 0x0000001000000000ULL)
 
 #else
 #error architecture not supported

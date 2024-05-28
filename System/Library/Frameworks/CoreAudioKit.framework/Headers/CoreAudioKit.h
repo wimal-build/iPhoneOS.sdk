@@ -3,3 +3,5 @@
 
 #import <CoreAudioKit/CABTMIDILocalPeripheralViewController.h>
 #import <CoreAudioKit/CABTMIDICentralViewController.h>
+
+#import <CoreAudioKit/AUViewController.h>

@@ -8,6 +8,7 @@
 #import <Metal/MTLDefines.h>
 #import <Metal/MTLDevice.h>
 
+NS_ASSUME_NONNULL_BEGIN
 /*
  MTLVertexFormat
 */
@@ -68,45 +69,45 @@ typedef NS_ENUM(NSUInteger, MTLVertexFormat)
     
     MTLVertexFormatInt1010102Normalized = 40,
     MTLVertexFormatUInt1010102Normalized = 41,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 typedef NS_ENUM(NSUInteger, MTLVertexStepFunction)
 {
     MTLVertexStepFunctionConstant = 0,
     MTLVertexStepFunctionPerVertex = 1,
-    MTLVertexStepFunctionPerInstance = 2
-} NS_ENUM_AVAILABLE_IOS(8_0);
+    MTLVertexStepFunctionPerInstance = 2,
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLVertexBufferLayoutDescriptor : NSObject <NSCopying>
 @property (assign, nonatomic) NSUInteger stride;
 @property (assign, nonatomic) MTLVertexStepFunction stepFunction;
 @property (assign, nonatomic) NSUInteger stepRate;
 @end
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLVertexBufferLayoutDescriptorArray : NSObject
 - (MTLVertexBufferLayoutDescriptor *)objectAtIndexedSubscript:(NSUInteger)index;
-- (void)setObject:(MTLVertexBufferLayoutDescriptor *)bufferDesc atIndexedSubscript:(NSUInteger)index;
+- (void)setObject:(nullable MTLVertexBufferLayoutDescriptor *)bufferDesc atIndexedSubscript:(NSUInteger)index;
 @end
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLVertexAttributeDescriptor : NSObject <NSCopying>
 @property (assign, nonatomic) MTLVertexFormat format;
 @property (assign, nonatomic) NSUInteger offset;
 @property (assign, nonatomic) NSUInteger bufferIndex;
 @end
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLVertexAttributeDescriptorArray : NSObject
 - (MTLVertexAttributeDescriptor *)objectAtIndexedSubscript:(NSUInteger)index;
-- (void)setObject:(MTLVertexAttributeDescriptor *)attributeDesc atIndexedSubscript:(NSUInteger)index;
+- (void)setObject:(nullable MTLVertexAttributeDescriptor *)attributeDesc atIndexedSubscript:(NSUInteger)index;
 @end
 
 /*
  MTLVertexDescriptor
  */
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLVertexDescriptor : NSObject <NSCopying>
 
 + (MTLVertexDescriptor *)vertexDescriptor;
@@ -117,3 +118,4 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 - (void)reset;
 
 @end
+NS_ASSUME_NONNULL_END

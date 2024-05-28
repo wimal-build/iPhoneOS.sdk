@@ -8,6 +8,7 @@
 #import <Metal/MTLDefines.h>
 #import <Metal/Metal.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @protocol MTLDevice;
 @protocol MTLCommandBuffer;
 
@@ -15,24 +16,26 @@
  @protocol MTLCommandQueue
  @brief A serial queue of command buffers to be executed by the device.
  */
-NS_AVAILABLE_IOS(8_0)
+NS_AVAILABLE(10_11, 8_0)
 @protocol MTLCommandQueue <NSObject>
 
 /*! @brief A string to help identify this object */
-@property (copy, atomic) NSString *label;
+@property (nullable, copy, atomic) NSString *label;
 
 /*! @brief The device this queue will submit to */
 @property (readonly) id <MTLDevice> device;
 
 /*! 
  @method commandBuffer
- @abstract Returns a new autoreleased command buffer used to encode work into this queue
+ @abstract Returns a new autoreleased command buffer used to encode work into this queue that 
+ maintains strong references to resources used within the command buffer.
 */
 - (id <MTLCommandBuffer>)commandBuffer;
 
 /*!
  @method commandBufferWithUnretainedReferences
- @abstract Returns a new autoreleased command buffer used to encode work into this queue
+ @abstract Returns a new autoreleased command buffer used to encode work into this queue that 
+ does not maintain strong references to resources used within the command buffer.
 */
 - (id <MTLCommandBuffer>)commandBufferWithUnretainedReferences;
 
@@ -43,3 +46,4 @@ NS_AVAILABLE_IOS(8_0)
 - (void)insertDebugCaptureBoundary;
 
 @end
+NS_ASSUME_NONNULL_END

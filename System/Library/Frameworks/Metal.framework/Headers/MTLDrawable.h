@@ -8,11 +8,12 @@
 #import <Foundation/Foundation.h>
 #import <Metal/MTLDefines.h>
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  @protocol MTLDrawable
  @abstract All "drawable" objects (such as those coming from CAMetalLayer) are expected to conform to this protocol
  */
-NS_AVAILABLE_IOS(8_0)
+NS_AVAILABLE(10_11, 8_0)
 @protocol MTLDrawable <NSObject>
 
 /* Present this drawable as soon as possible */
@@ -22,3 +23,4 @@ NS_AVAILABLE_IOS(8_0)
 - (void)presentAtTime:(CFTimeInterval)presentationTime;
 
 @end
+NS_ASSUME_NONNULL_END

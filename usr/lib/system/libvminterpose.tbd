@@ -1,0 +1,10 @@
+---
+archs:           [ armv7, armv7s, armv7k, arm64 ]
+platform:        ios
+install-name:    /usr/lib/system/libvminterpose.dylib
+current-version: 0.0
+compatibility-version: 0.0
+exports:         
+  - archs:           [ armv7, armv7s, armv7k, arm64 ]
+    symbols:         [ __vminterpose_init ]
+...

@@ -9,6 +9,7 @@
 #import <Metal/MTLDefines.h>
 #import <Metal/MTLTexture.h>
 
+NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, MTLDataType){
     
     MTLDataTypeNone = 0,
@@ -83,9 +84,8 @@ typedef NS_ENUM(NSUInteger, MTLDataType){
     MTLDataTypeBool  = 53,
     MTLDataTypeBool2 = 54,
     MTLDataTypeBool3 = 55,
-    MTLDataTypeBool4 = 56
-    ,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+    MTLDataTypeBool4 = 56,
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 /*!
  @enum MTLArgumentType
@@ -110,7 +110,7 @@ typedef NS_ENUM(NSUInteger, MTLArgumentType) {
     MTLArgumentTypeTexture = 2,
     MTLArgumentTypeSampler = 3,
     
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 /*!
  @enum MTLArgumentAccess
@@ -119,34 +119,34 @@ typedef NS_ENUM(NSUInteger, MTLArgumentAccess) {
     
     MTLArgumentAccessReadOnly   = 0,
     MTLArgumentAccessReadWrite  = 1,
-    MTLArgumentAccessWriteOnly  = 2
+    MTLArgumentAccessWriteOnly  = 2,
     
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 @class MTLStructType;
 @class MTLArrayType;
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLStructMember : NSObject
  
 @property (readonly) NSString *name;
 @property (readonly) NSUInteger offset;
 @property (readonly) MTLDataType dataType;
  
-- (MTLStructType *)structType;
-- (MTLArrayType *)arrayType;
+- (nullable MTLStructType *)structType;
+- (nullable MTLArrayType *)arrayType;
  
 @end
  
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLStructType  : NSObject
 
-@property (readonly) NSArray *members;
+@property (readonly) NSArray <MTLStructMember *> *members;
 
-- (MTLStructMember *)memberByName:(NSString *)name;
+- (nullable MTLStructMember *)memberByName:(NSString *)name;
 @end
  
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLArrayType  : NSObject
  
 @property (readonly) NSUInteger arrayLength;
@@ -154,14 +154,14 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 @property (readonly) MTLDataType elementType;
 @property (readonly) NSUInteger stride;
  
-- (MTLStructType *)elementStructType;
-- (MTLArrayType *)elementArrayType;
+- (nullable MTLStructType *)elementStructType;
+- (nullable MTLArrayType *)elementArrayType;
 @end
 
 /*!
  MTLArgument
 */
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLArgument : NSObject
 
 @property (readonly) NSString *name;
@@ -172,7 +172,7 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 @property (readonly, getter=isActive) BOOL active;
 
 // for buffer arguments
-@property (readonly) NSUInteger     bufferAlignment;		// min alignment of T in T *argName
+@property (readonly) NSUInteger     bufferAlignment;		// min alignment of starting offset in the buffer
 @property (readonly) NSUInteger     bufferDataSize; 		// sizeof(T) for T *argName
 @property (readonly) MTLDataType    bufferDataType; 		// MTLDataTypeFloat, MTLDataTypeFloat4, MTLDataTypeStruct, ...
 @property (readonly) MTLStructType *bufferStructType;
@@ -186,6 +186,7 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 @property (readonly) MTLDataType    textureDataType; // half, float, int, or uint.
 
 @end
+NS_ASSUME_NONNULL_END
 
 
 

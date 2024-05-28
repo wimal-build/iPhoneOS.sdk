@@ -9,6 +9,7 @@
 #import <Metal/MTLRenderPass.h>
 #import <Metal/MTLCommandEncoder.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @protocol MTLDevice;
 @protocol MTLRenderCommandEncoder;
 
@@ -16,7 +17,7 @@
  @protocol MTLParallelRenderCommandEncoder
  @discussion The MTLParallelRenderCommandEncoder protocol is designed to allow a single render to texture operation to be efficiently (and safely) broken up across multiple threads.
  */
-NS_AVAILABLE_IOS(8_0)
+NS_AVAILABLE(10_11, 8_0)
 @protocol MTLParallelRenderCommandEncoder <MTLCommandEncoder>
 
 /*!
@@ -26,3 +27,4 @@ NS_AVAILABLE_IOS(8_0)
 - (id <MTLRenderCommandEncoder>)renderCommandEncoder;
 
 @end
+NS_ASSUME_NONNULL_END

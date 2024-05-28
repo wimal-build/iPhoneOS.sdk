@@ -8,7 +8,9 @@
 #import <Foundation/Foundation.h>
 #import <Metal/MTLDefines.h>
 #import <Metal/MTLDevice.h>
+#import <Metal/MTLDepthStencil.h>
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  @enum MTLSamplerMinMagFilter
  @abstract Options for filtering texels within a mip level.
@@ -22,7 +24,7 @@
 typedef NS_ENUM(NSUInteger, MTLSamplerMinMagFilter) {
     MTLSamplerMinMagFilterNearest = 0,
     MTLSamplerMinMagFilterLinear = 1,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 /*!
  @enum MTLSamplerMipFilter
@@ -35,7 +37,7 @@ typedef NS_ENUM(NSUInteger, MTLSamplerMipFilter) {
     MTLSamplerMipFilterNotMipmapped = 0,
     MTLSamplerMipFilterNearest = 1,
     MTLSamplerMipFilterLinear = 2,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 /*!
  @enum MTLSamplerAddressMode
@@ -43,7 +45,10 @@ typedef NS_ENUM(NSUInteger, MTLSamplerMipFilter) {
  
  @constant MTLSamplerAddressModeClampToEdge
  Texture coordinates will be clamped between 0 and 1.
- 
+
+ @constant MTLSamplerAddressModeMirrorClampToEdge
+ Mirror the texture while coordinates are within -1..1, and clamp to edge when outside.
+
  @constant MTLSamplerAddressModeRepeat
  Wrap to the other side of the texture, effectively ignoring fractional parts of the texture coordinate.
  
@@ -55,16 +60,17 @@ typedef NS_ENUM(NSUInteger, MTLSamplerMipFilter) {
  */
 typedef NS_ENUM(NSUInteger, MTLSamplerAddressMode) {
     MTLSamplerAddressModeClampToEdge = 0,
+    MTLSamplerAddressModeMirrorClampToEdge NS_AVAILABLE_MAC(10_11) = 1,
     MTLSamplerAddressModeRepeat = 2,
     MTLSamplerAddressModeMirrorRepeat = 3,
     MTLSamplerAddressModeClampToZero = 4,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 /*!
  @class MTLSamplerDescriptor
  @abstract A mutable descriptor used to configure a sampler.  When complete, this can be used to create an immutable MTLSamplerState.
  */
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLSamplerDescriptor : NSObject <NSCopying>
 
 /*!
@@ -135,10 +141,23 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 @property (nonatomic) float lodMaxClamp;
 
 /*!
+ @property lodAverage
+ @abstract If YES, an average level of detail will be used when sampling from a texture. If NO, no averaging is performed.
+ @discussion lodAverage defaults to NO. This option is a performance hint. An implementation is free to ignore this property.
+ */
+@property (nonatomic) BOOL lodAverage NS_AVAILABLE_IOS(9_0);
+
+/*!
+ @property compareFunction
+ @abstract Set the comparison function used when sampling shadow maps. The default value is MTLCompareFunctionNever.
+ */
+@property (nonatomic) MTLCompareFunction compareFunction NS_AVAILABLE(10_11, 9_0);
+
+/*!
  @property label
  @abstract A string to help identify the created object.
  */
-@property (copy, nonatomic) NSString *label;
+@property (nullable, copy, nonatomic) NSString *label;
 
 @end
 
@@ -146,14 +165,14 @@ NS_CLASS_AVAILABLE_IOS(8_0)
  @protocol MTLSamplerState
  @abstract An immutable collection of sampler state compiled for a single device.
  */
-NS_AVAILABLE_IOS(8_0)
+NS_AVAILABLE(10_11, 8_0)
 @protocol MTLSamplerState <NSObject>
 
 /*!
  @property label
  @abstract A string to help identify this object.
  */
-@property (readonly) NSString *label;
+@property (nullable, readonly) NSString *label;
 
 /*!
  @property device
@@ -162,3 +181,4 @@ NS_AVAILABLE_IOS(8_0)
 @property (readonly) id <MTLDevice> device;
 
 @end
+NS_ASSUME_NONNULL_END

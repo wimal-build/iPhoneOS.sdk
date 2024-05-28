@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <Metal/MTLDefines.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @protocol MTLDevice;
 @protocol MTLCommandQueue;
 @protocol MTLBlitCommandEncoder;
@@ -50,13 +51,13 @@ typedef NS_ENUM(NSUInteger, MTLCommandBufferStatus) {
     MTLCommandBufferStatusScheduled = 3,
     MTLCommandBufferStatusCompleted = 4,
     MTLCommandBufferStatusError = 5,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
  /*!
  @constant MTLCommandBufferErrorDomain
  @abstract An error domain for NSError objects produced by MTLCommandBuffer
  */
-NS_AVAILABLE_IOS(8_0)
+NS_AVAILABLE(10_11, 8_0)
 MTL_EXTERN NSString *const MTLCommandBufferErrorDomain;
 
 /*!
@@ -80,7 +81,7 @@ typedef NS_ENUM(NSUInteger, MTLCommandBufferError)
     MTLCommandBufferErrorNotPermitted = 7,
     MTLCommandBufferErrorOutOfMemory = 8,
     MTLCommandBufferErrorInvalidResource = 9,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 typedef void (^MTLCommandBufferHandler)(id <MTLCommandBuffer>);
 
@@ -88,7 +89,7 @@ typedef void (^MTLCommandBufferHandler)(id <MTLCommandBuffer>);
  @protocol MTLCommandBuffer
  @abstract A serial list of commands for the device to execute.
  */
-NS_AVAILABLE_IOS(8_0)
+NS_AVAILABLE(10_11, 8_0)
 @protocol MTLCommandBuffer <NSObject>
 
 /*!
@@ -113,7 +114,7 @@ NS_AVAILABLE_IOS(8_0)
  @property label
  @abstract A string to help identify this object.
  */
-@property (copy, atomic) NSString *label;
+@property (nullable, copy, atomic) NSString *label;
 
 /*!
  @method enqueue
@@ -173,7 +174,7 @@ NS_AVAILABLE_IOS(8_0)
  @property error
  @abstract If an error occurred during execution, the NSError may contain more details about the problem.
  */
-@property (readonly) NSError* error;
+@property (nullable, readonly) NSError *error;
 
 /*!
  @method blitCommandEncoder
@@ -200,4 +201,4 @@ NS_AVAILABLE_IOS(8_0)
 - (id <MTLParallelRenderCommandEncoder>)parallelRenderCommandEncoderWithDescriptor:(MTLRenderPassDescriptor *)renderPassDescriptor;
 
 @end
-
+NS_ASSUME_NONNULL_END

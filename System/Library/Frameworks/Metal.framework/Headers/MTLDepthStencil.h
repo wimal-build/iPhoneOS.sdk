@@ -1,5 +1,5 @@
 //
-//  MTLDepthStencilState.h
+//  MTLDepthStencil.h
 //  Metal
 //
 //  Copyright (c) 2014 Apple Inc. All rights reserved.
@@ -8,6 +8,7 @@
 #import <Metal/MTLDefines.h>
 #import <Metal/MTLDevice.h>
 
+NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, MTLCompareFunction) {
     MTLCompareFunctionNever = 0,
     MTLCompareFunctionLess = 1,
@@ -16,8 +17,8 @@ typedef NS_ENUM(NSUInteger, MTLCompareFunction) {
     MTLCompareFunctionGreater = 4,
     MTLCompareFunctionNotEqual = 5,
     MTLCompareFunctionGreaterEqual = 6,
-    MTLCompareFunctionAlways = 7
-} NS_ENUM_AVAILABLE_IOS(8_0);
+    MTLCompareFunctionAlways = 7,
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 typedef NS_ENUM(NSUInteger, MTLStencilOperation) {
     MTLStencilOperationKeep = 0,
@@ -28,9 +29,9 @@ typedef NS_ENUM(NSUInteger, MTLStencilOperation) {
     MTLStencilOperationInvert = 5,
     MTLStencilOperationIncrementWrap = 6,
     MTLStencilOperationDecrementWrap = 7,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLStencilDescriptor : NSObject <NSCopying>
 
 @property (nonatomic) MTLCompareFunction stencilCompareFunction;
@@ -49,7 +50,7 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 
 @end
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLDepthStencilDescriptor : NSObject <NSCopying>
 
 /* Defaults to MTLCompareFuncAlways, which effectively skips the depth test */
@@ -59,27 +60,27 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 @property (nonatomic, getter=isDepthWriteEnabled) BOOL depthWriteEnabled;
 
 /* Separate stencil state for front and back state.  Both front and back can be made to track the same state by assigning the same MTLStencilDescriptor to both. */
-@property (copy, nonatomic) MTLStencilDescriptor *frontFaceStencil;
-@property (copy, nonatomic) MTLStencilDescriptor *backFaceStencil;
+@property (copy, nonatomic, null_resettable) MTLStencilDescriptor *frontFaceStencil;
+@property (copy, nonatomic, null_resettable) MTLStencilDescriptor *backFaceStencil;
 
 /*!
  @property label
  @abstract A string to help identify the created object.
  */
-@property (copy, nonatomic) NSString *label;
+@property (nullable, copy, nonatomic) NSString *label;
 
 @end
 
 
 /* Device-specific compiled depth/stencil state object */
-NS_AVAILABLE_IOS(8_0)
+NS_AVAILABLE(10_11, 8_0)
 @protocol MTLDepthStencilState <NSObject>
 
 /*!
  @property label
  @abstract A string to help identify this object.
  */
-@property (readonly) NSString *label;
+@property (nullable, readonly) NSString *label;
 
 /*!
  @property device
@@ -88,3 +89,4 @@ NS_AVAILABLE_IOS(8_0)
 @property (readonly) id <MTLDevice> device;
 
 @end
+NS_ASSUME_NONNULL_END

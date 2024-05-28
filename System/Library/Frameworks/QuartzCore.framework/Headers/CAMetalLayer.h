@@ -13,6 +13,8 @@
 
 @class CAMetalLayer;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /* CAMetalDrawable represents a displayable buffer that vends an object
  * that conforms to the MTLTexture protocol that may be used to create
  * a render target for Metal.
@@ -27,18 +29,18 @@
 /* This is an object that conforms to the MTLTexture protocol and will
  * typically be used to create an MTLRenderTargetDescriptor. */
 
-@property (readonly) id <MTLTexture> texture;
+@property(readonly) id <MTLTexture> texture;
 
 /* This is the CAMetalLayer responsible for displaying the drawable */
 
-@property (readonly) CAMetalLayer *layer;
+@property(readonly) CAMetalLayer *layer;
 
 @end
 
 /* Note: The default value of the `opaque' property for CAMetalLayer
  * instances is true. */
 
-NS_CLASS_AVAILABLE_IOS (8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface CAMetalLayer : CALayer
 {
 @private
@@ -46,15 +48,18 @@ NS_CLASS_AVAILABLE_IOS (8_0)
 }
 
 /* This property determines which MTLDevice the MTLTexture objects for
- * the drawables will be created from. */
+ * the drawables will be created from.
+ * On iOS this defaults to the device returned by MTLCreateSystemDefaultDevice().
+ * On MacOS this defaults to nil and must be set explicitly before asking for
+ * the first drawable. */
 
-@property (readwrite, retain) id <MTLDevice> device;
+@property(nullable, retain) id <MTLDevice> device;
 
 /* This property controls the pixel format of the MTLTexture objects.
  * The two supported values are MTLPixelFormatBGRA8Unorm and
  * MTLPixelFormatBGRA8Unorm_sRGB. */
 
-@property (readwrite) MTLPixelFormat pixelFormat;
+@property MTLPixelFormat pixelFormat;
 
 /* This property controls whether or not the returned drawables'
  * MTLTextures may only be used for framebuffer attachments (YES) or
@@ -64,30 +69,28 @@ NS_CLASS_AVAILABLE_IOS (8_0)
  * purposes that makes them unsuitable for sampling. The recommended
  * value for most applications is YES. */
 
-@property (readwrite) BOOL framebufferOnly;
+@property BOOL framebufferOnly;
 
 /* This property controls the pixel dimensions of the returned drawable
  * objects. The most typical value will be the layer size multiplied by
  * the layer contentsScale property. */
 
-@property (readwrite) CGSize drawableSize;
+@property CGSize drawableSize;
 
 /* Returns a drawable. This will return nil if the layer has an invalid
  * combination of drawable properties. */
 
-- (id <CAMetalDrawable>)nextDrawable;
-
-/* Returns a new drawable. This will fail if the layer if the drawable
- * properties are nil.
- * Deprecated in favor of -nextDrawable. */
-
-- (id <CAMetalDrawable>)newDrawable;
+- (nullable id <CAMetalDrawable>)nextDrawable;
 
 /* When false (the default value) changes to the layer's render buffer
  * appear on-screen asynchronously to normal layer updates. When true,
  * changes to the MTL content are sent to the screen via the standard
  * CATransaction mechanisms. */
 
-@property(getter=presentsWithTransaction) BOOL presentsWithTransaction;
+@property BOOL presentsWithTransaction;
+
+
 
 @end
+
+NS_ASSUME_NONNULL_END

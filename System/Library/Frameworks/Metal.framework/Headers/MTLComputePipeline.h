@@ -9,12 +9,42 @@
 #import <Metal/MTLDevice.h>
 #import <Metal/MTLArgument.h>
 
-
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_ASSUME_NONNULL_BEGIN
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLComputePipelineReflection : NSObject
 
-@property (readonly) NSArray *arguments;
- 
+@property (readonly) NSArray <MTLArgument *> *arguments;
+
+
+@end
+
+NS_CLASS_AVAILABLE(10_11, 9_0)
+@interface MTLComputePipelineDescriptor : NSObject <NSCopying>
+
+/*!
+ @property label
+ @abstract A string to help identify this object.
+ */
+@property (nullable, copy, nonatomic) NSString *label;
+
+/*!
+ @property computeFunction
+ @abstract The function to use with the MTLComputePipelineState
+ */
+@property (nullable, readwrite, nonatomic, strong) id <MTLFunction> computeFunction;
+
+/*!
+ @property threadGroupSizeIsMultipleOfThreadExecutionWidth
+ @abstract An optimization flag, set if the thread group size will always be a multiple of thread execution width
+ */
+@property (readwrite, nonatomic) BOOL threadGroupSizeIsMultipleOfThreadExecutionWidth;
+
+/*!
+ @method reset
+ @abstract Restore all compute pipeline descriptor properties to their default values.
+ */
+- (void)reset;
+
 @end
 
 /*!
@@ -22,7 +52,7 @@ NS_CLASS_AVAILABLE_IOS(8_0)
  @abstract A handle to compiled code for a compute function.
  @discussion MTLComputePipelineState is a single compute function.  It can only be used with the device that it was created against.
 */
-NS_AVAILABLE_IOS(8_0)
+NS_AVAILABLE(10_11, 8_0)
 @protocol MTLComputePipelineState <NSObject>
 
 /*!
@@ -44,4 +74,5 @@ NS_AVAILABLE_IOS(8_0)
 @property (readonly) NSUInteger threadExecutionWidth;
 
 @end
+NS_ASSUME_NONNULL_END
 

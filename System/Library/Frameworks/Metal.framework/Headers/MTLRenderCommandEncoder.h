@@ -10,6 +10,7 @@
 #import <Metal/MTLCommandEncoder.h>
 #import <Metal/MTLCommandBuffer.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @protocol MTLDevice;
 @protocol MTLFunction;
 @protocol MTLBuffer;
@@ -25,17 +26,18 @@ typedef NS_ENUM(NSUInteger, MTLPrimitiveType) {
     MTLPrimitiveTypeLineStrip = 2,
     MTLPrimitiveTypeTriangle = 3,
     MTLPrimitiveTypeTriangleStrip = 4,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 typedef NS_ENUM(NSUInteger, MTLIndexType) {
     MTLIndexTypeUInt16 = 0,
     MTLIndexTypeUInt32 = 1,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 typedef NS_ENUM(NSUInteger, MTLVisibilityResultMode) {
     MTLVisibilityResultModeDisabled = 0,
     MTLVisibilityResultModeBoolean = 1,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+    MTLVisibilityResultModeCounting NS_ENUM_AVAILABLE(10_11, 9_0) = 2,
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 typedef struct {
     NSUInteger x, y, width, height;
@@ -49,23 +51,43 @@ typedef NS_ENUM(NSUInteger, MTLCullMode) {
     MTLCullModeNone = 0,
     MTLCullModeFront = 1,
     MTLCullModeBack = 2,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 typedef NS_ENUM(NSUInteger, MTLWinding) {
     MTLWindingClockwise = 0,
     MTLWindingCounterClockwise = 1,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
+
+typedef NS_ENUM(NSUInteger, MTLDepthClipMode) {
+    MTLDepthClipModeClip = 0,
+    MTLDepthClipModeClamp = 1,
+} NS_ENUM_AVAILABLE(10_11, 9_0);
 
 typedef NS_ENUM(NSUInteger, MTLTriangleFillMode) {
     MTLTriangleFillModeFill = 0,
     MTLTriangleFillModeLines = 1,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
+
+typedef struct {
+    uint32_t vertexCount;
+    uint32_t instanceCount;
+    uint32_t vertexStart;
+    uint32_t baseInstance;
+} MTLDrawPrimitivesIndirectArguments;
+
+typedef struct {
+    uint32_t indexCount;
+    uint32_t instanceCount;
+    uint32_t indexStart;
+    int32_t  baseVertex;
+    uint32_t baseInstance;
+} MTLDrawIndexedPrimitivesIndirectArguments;
 
 /*!
  @protocol MTLRenderCommandEncoder
  @discussion MTLRenderCommandEncoder is a container for graphics rendering state and the code to translate the state into a command format that the device can execute. 
  */
-NS_AVAILABLE_IOS(8_0)
+NS_AVAILABLE(10_11, 8_0)
 @protocol MTLRenderCommandEncoder <MTLCommandEncoder>
 
 /*!
@@ -80,61 +102,61 @@ NS_AVAILABLE_IOS(8_0)
  @method setVertexBytes:length:atIndex:
  @brief Set the data (by copy) for a given vertex buffer binding point.  This will remove any existing MTLBuffer from the binding point.
  */
-- (void)setVertexBytes:(const void *)bytes length:(NSUInteger)length atIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_3);
+- (void)setVertexBytes:(const void *)bytes length:(NSUInteger)length atIndex:(NSUInteger)index NS_AVAILABLE(10_11, 8_3);
 
 /*!
  @method setVertexBuffer:offset:atIndex:
  @brief Set a global buffer for all vertex shaders at the given bind point index.
  */
-- (void)setVertexBuffer:(id <MTLBuffer>)buffer offset:(NSUInteger)offset atIndex:(NSUInteger)index;
+- (void)setVertexBuffer:(nullable id <MTLBuffer>)buffer offset:(NSUInteger)offset atIndex:(NSUInteger)index;
 
 /*!
  @method setVertexBufferOffset:atIndex:
  @brief Set the offset within the current global buffer for all vertex shaders at the given bind point index.
  */
-- (void)setVertexBufferOffset:(NSUInteger)offset atIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_3);
+- (void)setVertexBufferOffset:(NSUInteger)offset atIndex:(NSUInteger)index NS_AVAILABLE(10_11, 8_3);
 
 /*!
  @method setVertexBuffers:offsets:withRange:
  @brief Set an array of global buffers for all vertex shaders with the given bind point range.
  */
-- (void)setVertexBuffers:(id <MTLBuffer> const [])buffers offsets:(const NSUInteger [])offsets withRange:(NSRange)range;
+- (void)setVertexBuffers:(const id <MTLBuffer> __nullable [__nullable])buffers offsets:(const NSUInteger [__nullable])offsets withRange:(NSRange)range;
 
 /*!
  @method setVertexTexture:atIndex:
  @brief Set a global texture for all vertex shaders at the given bind point index.
  */
-- (void)setVertexTexture:(id <MTLTexture>)texture atIndex:(NSUInteger)index;
+- (void)setVertexTexture:(nullable id <MTLTexture>)texture atIndex:(NSUInteger)index;
 
 /*!
  @method setVertexTextures:withRange:
  @brief Set an array of global textures for all vertex shaders with the given bind point range.
  */
-- (void)setVertexTextures:(const id <MTLTexture> [])textures withRange:(NSRange)range;
+- (void)setVertexTextures:(const id <MTLTexture> __nullable [__nullable])textures withRange:(NSRange)range;
 
 /*!
  @method setVertexSamplerState:atIndex:
  @brief Set a global sampler for all vertex shaders at the given bind point index.
  */
-- (void)setVertexSamplerState:(id <MTLSamplerState>)sampler atIndex:(NSUInteger)index;
+- (void)setVertexSamplerState:(nullable id <MTLSamplerState>)sampler atIndex:(NSUInteger)index;
 
 /*!
  @method setVertexSamplerStates:withRange:
  @brief Set an array of global samplers for all vertex shaders with the given bind point range.
  */
-- (void)setVertexSamplerStates:(const id <MTLSamplerState> [])samplers withRange:(NSRange)range;
+- (void)setVertexSamplerStates:(const id <MTLSamplerState> __nullable [__nullable])samplers withRange:(NSRange)range;
 
 /*!
  @method setVertexSamplerState:lodMinClamp:lodMaxClamp:atIndex:
  @brief Set a global sampler for all vertex shaders at the given bind point index.
  */
-- (void)setVertexSamplerState:(id <MTLSamplerState>)sampler lodMinClamp:(float)lodMinClamp lodMaxClamp:(float)lodMaxClamp atIndex:(NSUInteger)index;
+- (void)setVertexSamplerState:(nullable id <MTLSamplerState>)sampler lodMinClamp:(float)lodMinClamp lodMaxClamp:(float)lodMaxClamp atIndex:(NSUInteger)index;
 
 /*!
  @method setVertexSamplerStates:lodMinClamps:lodMaxClamps:withRange:
  @brief Set an array of global samplers for all vertex shaders with the given bind point range.
  */
-- (void)setVertexSamplerStates:(const id <MTLSamplerState> [])samplers lodMinClamps:(const float [])lodMinClamps lodMaxClamps:(const float [])lodMaxClamps withRange:(NSRange)range;
+- (void)setVertexSamplerStates:(const id <MTLSamplerState> __nullable [__nullable])samplers lodMinClamps:(const float [__nullable])lodMinClamps lodMaxClamps:(const float [__nullable])lodMaxClamps withRange:(NSRange)range;
 
 /* Vertex Shaders */
 
@@ -155,6 +177,12 @@ NS_AVAILABLE_IOS(8_0)
  @brief Controls if primitives are culled when front facing, back facing, or not culled at all.
  */
 - (void)setCullMode:(MTLCullMode)cullMode;
+
+/*!
+@method setDepthClipMode:
+@brief Controls what is done with fragments outside of the near or far planes.
+*/
+- (void)setDepthClipMode:(MTLDepthClipMode)depthClipMode NS_AVAILABLE(10_11, 9_0);
 
 /*!
  @method setDepthBias:slopeScale:clamp:
@@ -180,61 +208,61 @@ NS_AVAILABLE_IOS(8_0)
  @method setFragmentBytes:length:atIndex:
  @brief Set the data (by copy) for a given fragment buffer binding point.  This will remove any existing MTLBuffer from the binding point.
  */
-- (void)setFragmentBytes:(const void *)bytes length:(NSUInteger)length atIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_3);
+- (void)setFragmentBytes:(const void *)bytes length:(NSUInteger)length atIndex:(NSUInteger)index NS_AVAILABLE(10_11, 8_3);
 
 /*!
  @method setFragmentBuffer:offset:atIndex:
  @brief Set a global buffer for all fragment shaders at the given bind point index.
  */
-- (void)setFragmentBuffer:(id <MTLBuffer>)buffer offset:(NSUInteger)offset atIndex:(NSUInteger)index;
+- (void)setFragmentBuffer:(nullable id <MTLBuffer>)buffer offset:(NSUInteger)offset atIndex:(NSUInteger)index;
 
 /*!
  @method setFragmentBufferOffset:atIndex:
  @brief Set the offset within the current global buffer for all fragment shaders at the given bind point index.
  */
-- (void)setFragmentBufferOffset:(NSUInteger)offset atIndex:(NSUInteger)index  NS_AVAILABLE_IOS(8_3);
+- (void)setFragmentBufferOffset:(NSUInteger)offset atIndex:(NSUInteger)index NS_AVAILABLE(10_11, 8_3);
 
 /*!
  @method setFragmentBuffers:offsets:withRange:
  @brief Set an array of global buffers for all fragment shaders with the given bind point range.
  */
-- (void)setFragmentBuffers:(const id <MTLBuffer> [])buffers offsets:(const NSUInteger [])offset withRange:(NSRange)range;
+- (void)setFragmentBuffers:(const id <MTLBuffer> __nullable [__nullable])buffers offsets:(const NSUInteger [__nullable])offset withRange:(NSRange)range;
 
 /*!
  @method setFragmentTexture:atIndex:
  @brief Set a global texture for all fragment shaders at the given bind point index.
  */
-- (void)setFragmentTexture:(id <MTLTexture>)texture atIndex:(NSUInteger)index;
+- (void)setFragmentTexture:(nullable id <MTLTexture>)texture atIndex:(NSUInteger)index;
 
 /*!
  @method setFragmentTextures:withRange:
  @brief Set an array of global textures for all fragment shaders with the given bind point range.
  */
-- (void)setFragmentTextures:(const id <MTLTexture> [])textures withRange:(NSRange)range;
+- (void)setFragmentTextures:(const id <MTLTexture> __nullable [__nullable])textures withRange:(NSRange)range;
 
 /*!
  @method setFragmentSamplerState:atIndex:
  @brief Set a global sampler for all fragment shaders at the given bind point index.
  */
-- (void)setFragmentSamplerState:(id <MTLSamplerState>)sampler atIndex:(NSUInteger)index;
+- (void)setFragmentSamplerState:(nullable id <MTLSamplerState>)sampler atIndex:(NSUInteger)index;
 
 /*!
  @method setFragmentSamplerStates:withRange:
  @brief Set an array of global samplers for all fragment shaders with the given bind point range.
  */
-- (void)setFragmentSamplerStates:(const id <MTLSamplerState> [])samplers withRange:(NSRange)range;
+- (void)setFragmentSamplerStates:(const id <MTLSamplerState> __nullable [__nullable])samplers withRange:(NSRange)range;
 
 /*!
  @method setFragmentSamplerState:lodMinClamp:lodMaxClamp:atIndex:
  @brief Set a global sampler for all fragment shaders at the given bind point index.
  */
-- (void)setFragmentSamplerState:(id <MTLSamplerState>)sampler lodMinClamp:(float)lodMinClamp lodMaxClamp:(float)lodMaxClamp atIndex:(NSUInteger)index;
+- (void)setFragmentSamplerState:(nullable id <MTLSamplerState>)sampler lodMinClamp:(float)lodMinClamp lodMaxClamp:(float)lodMaxClamp atIndex:(NSUInteger)index;
 
 /*!
  @method setFragmentSamplerStates:lodMinClamps:lodMaxClamps:withRange:
  @brief Set an array of global samplers for all fragment shaders with the given bind point range.
  */
-- (void)setFragmentSamplerStates:(const id <MTLSamplerState> [])samplers lodMinClamps:(const float [])lodMinClamps lodMaxClamps:(const float [])lodMaxClamps withRange:(NSRange)range;
+- (void)setFragmentSamplerStates:(const id <MTLSamplerState> __nullable [__nullable])samplers lodMinClamps:(const float [__nullable])lodMinClamps lodMaxClamps:(const float [__nullable])lodMaxClamps withRange:(NSRange)range;
 
 /* Constant Blend Color */
 /*!
@@ -247,13 +275,20 @@ NS_AVAILABLE_IOS(8_0)
  @method setDepthStencilState:
  @brief Set the DepthStencil state object.
  */
-- (void)setDepthStencilState:(id <MTLDepthStencilState>)depthStencilState;
+- (void)setDepthStencilState:(nullable id <MTLDepthStencilState>)depthStencilState;
 
 /*! 
  @method setStencilReferenceValue:
- @brief Set the stencil reference value.
+ @brief Set the stencil reference value for both the back and front stencil buffers.
  */
 - (void)setStencilReferenceValue:(uint32_t)referenceValue;
+
+
+/*! 
+ @method setStencilFrontReferenceValue:backReferenceValue:
+ @brief Set the stencil reference value for the back and front stencil buffers independently.
+ */
+- (void)setStencilFrontReferenceValue:(uint32_t)frontReferenceValue backReferenceValue:(uint32_t)backReferenceValue NS_AVAILABLE(10_11, 9_0);
 
 /*!
  @method setVisibilityResultMode:offset:
@@ -286,7 +321,7 @@ NS_AVAILABLE_IOS(8_0)
 
 /*!
  @method drawIndexedPrimitives:indexCount:indexType:indexBuffer:indexBufferOffset:instanceCount:
- @brief Draw primitives with an index list, corresponding to glDrawElements.
+ @brief Draw primitives with an index list.
  @param primitiveType The type of primitives that elements are assembled into.
  @param indexCount The number of indexes to read from the index buffer for each instance.
  @param indexType The type if indexes, either 16 bit integer or 32 bit integer.
@@ -298,7 +333,7 @@ NS_AVAILABLE_IOS(8_0)
 
 /*!
  @method drawIndexedPrimitives:indexCount:indexType:indexBuffer:indexBufferOffset:instanceCount:
- @brief Draw primitives with an index list, corresponding to glDrawElements.
+ @brief Draw primitives with an index list.
  @param primitiveType The type of primitives that elements are assembled into.
  @param indexCount The number of indexes to read from the index buffer for each instance.
  @param indexType The type if indexes, either 16 bit integer or 32 bit integer.
@@ -307,4 +342,52 @@ NS_AVAILABLE_IOS(8_0)
  */
 - (void)drawIndexedPrimitives:(MTLPrimitiveType)primitiveType indexCount:(NSUInteger)indexCount indexType:(MTLIndexType)indexType indexBuffer:(id <MTLBuffer>)indexBuffer indexBufferOffset:(NSUInteger)indexBufferOffset;
 
+/*!
+ @method drawPrimitives:vertexStart:vertexCount:instanceCount:
+ @brief Draw primitives without an index list.
+ @param primitiveType The type of primitives that elements are assembled into.
+ @param vertexStart For each instance, the first index to draw
+ @param vertexCount For each instance, the number of indexes to draw
+ @param instanceCount The number of instances drawn.
+ @param baseInstance Offset for instance_id.
+ */
+- (void)drawPrimitives:(MTLPrimitiveType)primitiveType vertexStart:(NSUInteger)vertexStart vertexCount:(NSUInteger)vertexCount instanceCount:(NSUInteger)instanceCount baseInstance:(NSUInteger)baseInstance NS_AVAILABLE(10_11, 9_0);
+
+/*!
+ @method drawIndexedPrimitives:indexCount:indexType:indexBuffer:indexBufferOffset:instanceCount:
+ @brief Draw primitives with an index list.
+ @param primitiveType The type of primitives that elements are assembled into.
+ @param indexCount The number of indexes to read from the index buffer for each instance.
+ @param indexType The type if indexes, either 16 bit integer or 32 bit integer.
+ @param indexBuffer A buffer object that the device will read indexes from.
+ @param indexBufferOffset Byte offset within @a indexBuffer to start reading indexes from.  @a indexBufferOffset must be a multiple of the index size.
+ @param instanceCount The number of instances drawn.
+ @param baseVertex Offset for vertex_id. NOTE: this can be negative
+ @param baseInstance Offset for instance_id.
+ */
+- (void)drawIndexedPrimitives:(MTLPrimitiveType)primitiveType indexCount:(NSUInteger)indexCount indexType:(MTLIndexType)indexType indexBuffer:(id <MTLBuffer>)indexBuffer indexBufferOffset:(NSUInteger)indexBufferOffset instanceCount:(NSUInteger)instanceCount baseVertex:(NSInteger)baseVertex baseInstance:(NSUInteger)baseInstance NS_AVAILABLE(10_11, 9_0);
+
+/*!
+ @method drawPrimitives:indirectBuffer:indirectBufferOffset:
+ @brief Draw primitives without an index list using an indirect buffer see MTLDrawPrimitivesIndirectArguments.
+ @param primitiveType The type of primitives that elements are assembled into.
+ @param indirectBuffer A buffer object that the device will read drawPrimitives arguments from, see MTLDrawPrimitivesIndirectArguments.
+ @param indirectBufferOffset Byte offset within @a indirectBuffer to start reading indexes from.  @a indirectBufferOffset must be a multiple of 4.
+ */
+- (void)drawPrimitives:(MTLPrimitiveType)primitiveType indirectBuffer:(id <MTLBuffer>)indirectBuffer indirectBufferOffset:(NSUInteger)indirectBufferOffset NS_AVAILABLE(10_11, 9_0);
+
+/*!
+ @method drawIndexedPrimitives:indexType:indexBuffer:indexBufferOffset:indirectBuffer:indirectBufferOffset:
+ @brief Draw primitives with an index list using an indirect buffer see MTLDrawIndexedPrimitivesIndirectArguments.
+ @param primitiveType The type of primitives that elements are assembled into.
+ @param indexType The type if indexes, either 16 bit integer or 32 bit integer.
+ @param indexBuffer A buffer object that the device will read indexes from.
+ @param indexBufferOffset Byte offset within @a indexBuffer to start reading indexes from.  @a indexBufferOffset must be a multiple of the index size.
+ @param indirectBuffer A buffer object that the device will read drawIndexedPrimitives arguments from, see MTLDrawIndexedPrimitivesIndirectArguments.
+ @param indirectBufferOffset Byte offset within @a indirectBuffer to start reading indexes from.  @a indirectBufferOffset must be a multiple of 4.
+ */
+- (void)drawIndexedPrimitives:(MTLPrimitiveType)primitiveType indexType:(MTLIndexType)indexType indexBuffer:(id <MTLBuffer>)indexBuffer indexBufferOffset:(NSUInteger)indexBufferOffset indirectBuffer:(id <MTLBuffer>)indirectBuffer indirectBufferOffset:(NSUInteger)indirectBufferOffset NS_AVAILABLE(10_11, 9_0);
+
+
 @end
+NS_ASSUME_NONNULL_END

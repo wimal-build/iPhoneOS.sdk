@@ -8,19 +8,20 @@
 #import <Foundation/Foundation.h>
 #import <Metal/MTLDefines.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @protocol MTLDevice;
 
 typedef NS_ENUM(NSUInteger, MTLLoadAction) {
     MTLLoadActionDontCare = 0,
     MTLLoadActionLoad = 1,
     MTLLoadActionClear = 2,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 typedef NS_ENUM(NSUInteger, MTLStoreAction) {
     MTLStoreActionDontCare = 0,
     MTLStoreActionStore = 1,
     MTLStoreActionMultisampleResolve = 2,
-} NS_ENUM_AVAILABLE_IOS(8_0);
+} NS_ENUM_AVAILABLE(10_11, 8_0);
 
 typedef struct
 {
@@ -36,14 +37,14 @@ MTL_INLINE MTLClearColor MTLClearColorMake(double red, double green, double blue
 @protocol MTLTexture;
 @protocol MTLBuffer;
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLRenderPassAttachmentDescriptor : NSObject <NSCopying>
 
 /*!
  @property texture
  @abstract The MTLTexture object for this attachment.
  */
-@property (nonatomic, strong) id <MTLTexture> texture;
+@property (nullable, nonatomic, strong) id <MTLTexture> texture;
 
 /*!
  @property level
@@ -68,7 +69,7 @@ NS_CLASS_AVAILABLE_IOS(8_0)
  @abstract The texture used for multisample resolve operations.  Only used (and required)
  if the store action is set to MTLStoreActionMultisampleResolve.
  */
-@property (nonatomic, strong) id <MTLTexture> resolveTexture;
+@property (nullable, nonatomic, strong) id <MTLTexture> resolveTexture;
 
 /*!
  @property resolveLevel
@@ -104,7 +105,7 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 
 @end
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLRenderPassColorAttachmentDescriptor : MTLRenderPassAttachmentDescriptor
 
 /*!
@@ -115,7 +116,18 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 
 @end
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+/*!
+ @enum MTLMultisampleDepthResolveFilter
+ @abstract Controls the MSAA depth resolve operation. Supported on iOS GPU Family 3 and later.
+ */
+typedef NS_ENUM(NSUInteger, MTLMultisampleDepthResolveFilter)
+{
+    MTLMultisampleDepthResolveFilterSample0 = 0,
+    MTLMultisampleDepthResolveFilterMin = 1,
+    MTLMultisampleDepthResolveFilterMax = 2,
+} NS_ENUM_AVAILABLE_IOS(9_0);
+
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLRenderPassDepthAttachmentDescriptor : MTLRenderPassAttachmentDescriptor
 
 /*!
@@ -124,9 +136,15 @@ NS_CLASS_AVAILABLE_IOS(8_0)
  */
 @property (nonatomic) double clearDepth;
 
+/*!
+ @property resolveFilter
+ @abstract The filter to be used for depth multisample resolve.  Defaults to MTLMultisampleDepthResolveFilterSample0.
+ */
+@property (nonatomic) MTLMultisampleDepthResolveFilter depthResolveFilter NS_AVAILABLE_IOS(9_0);
+
 @end
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLRenderPassStencilAttachmentDescriptor : MTLRenderPassAttachmentDescriptor
 
 /*!
@@ -137,13 +155,13 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 
 @end
 
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLRenderPassColorAttachmentDescriptorArray : NSObject
 /* Individual attachment state access */
 - (MTLRenderPassColorAttachmentDescriptor *)objectAtIndexedSubscript:(NSUInteger)attachmentIndex;
 
 /* This always uses 'copy' semantics.  It is safe to set the attachment state at any legal index to nil, which resets that attachment descriptor state to default vaules. */
-- (void)setObject:(MTLRenderPassColorAttachmentDescriptor *)attachment atIndexedSubscript:(NSUInteger)attachmentIndex;
+- (void)setObject:(nullable MTLRenderPassColorAttachmentDescriptor *)attachment atIndexedSubscript:(NSUInteger)attachmentIndex;
 
 @end
 
@@ -151,7 +169,7 @@ NS_CLASS_AVAILABLE_IOS(8_0)
  @class MTLRenderPassDescriptor
  @abstract MTLRenderPassDescriptor represents a collection of attachments to be used to create a concrete render command encoder
  */
-NS_CLASS_AVAILABLE_IOS(8_0)
+NS_CLASS_AVAILABLE(10_11, 8_0)
 @interface MTLRenderPassDescriptor : NSObject <NSCopying>
 
 /*!
@@ -162,15 +180,16 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 
 @property (readonly) MTLRenderPassColorAttachmentDescriptorArray *colorAttachments;
 
-@property (copy, nonatomic) MTLRenderPassDepthAttachmentDescriptor *depthAttachment;
+@property (copy, nonatomic, null_resettable) MTLRenderPassDepthAttachmentDescriptor *depthAttachment;
 
-@property (copy, nonatomic) MTLRenderPassStencilAttachmentDescriptor *stencilAttachment;
+@property (copy, nonatomic, null_resettable) MTLRenderPassStencilAttachmentDescriptor *stencilAttachment;
 
 /*!
  @property visibilityResultBuffer:
  @abstract Buffer into which samples passing the depth and stencil tests are counted.
  */
-@property (nonatomic, strong) id <MTLBuffer> visibilityResultBuffer;
+@property (nullable, nonatomic, strong) id <MTLBuffer> visibilityResultBuffer;
+
 
 @end
 
@@ -184,3 +203,4 @@ MTL_INLINE MTLClearColor MTLClearColorMake(double red, double green, double blue
     result.alpha = alpha;
     return result;
 }
+NS_ASSUME_NONNULL_END

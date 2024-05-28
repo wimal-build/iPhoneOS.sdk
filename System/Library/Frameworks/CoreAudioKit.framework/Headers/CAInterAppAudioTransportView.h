@@ -12,6 +12,8 @@
 #import <AudioUnit/AudioUnit.h>
 
 NS_CLASS_AVAILABLE_IOS(8_0)
+
+NS_ASSUME_NONNULL_BEGIN
 @interface CAInterAppAudioTransportView : UIView
 @property(getter=isEnabled)							BOOL enabled;
 
@@ -31,3 +33,4 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 -(void) setOutputAudioUnit: (AudioUnit) au;
 
 @end
+NS_ASSUME_NONNULL_END

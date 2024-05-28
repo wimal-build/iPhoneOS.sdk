@@ -8,13 +8,14 @@
 #import <Foundation/Foundation.h>
 #import <Metal/MTLDefines.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @protocol MTLDevice;
 
 /*!
  @protocol MTLCommandEncoder
  @abstract MTLCommandEncoder is the common interface for objects that write commands into MTLCommandBuffers.
  */
-NS_AVAILABLE_IOS(8_0)
+NS_AVAILABLE(10_11, 8_0)
 @protocol MTLCommandEncoder <NSObject>
 
 /*!
@@ -27,7 +28,7 @@ NS_AVAILABLE_IOS(8_0)
  @property label
  @abstract A string to help identify this object.
  */
-@property (copy, atomic) NSString *label;
+@property (nullable, copy, atomic) NSString *label;
 
 /*!
  @method endEncoding
@@ -56,3 +57,4 @@ NS_AVAILABLE_IOS(8_0)
 - (void)popDebugGroup;
 
 @end
+NS_ASSUME_NONNULL_END

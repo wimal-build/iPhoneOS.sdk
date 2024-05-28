@@ -851,8 +851,8 @@
 	<integer>20</integer>
 	<key>GeniusSimilaritiesMinVersion</key>
 	<integer>1</integer>
-	<key>HomeScreenMaxPages</key>
-	<integer>19</integer>
+    <key>HomeScreenMaxPages</key>
+	<integer>15</integer>
 	<key>HomeScreenNewsstand</key>
 	<true/>
 	<key>HomeVideosSupported</key>
@@ -860,7 +860,7 @@
 	<key>IconFolderColumns</key>
 	<integer>3</integer>
 	<key>IconFolderMaxPages</key>
-	<integer>19</integer>
+	<integer>15</integer>
 	<key>IconFolderRows</key>
 	<integer>3</integer>
 	<key>IconStateSaves</key>

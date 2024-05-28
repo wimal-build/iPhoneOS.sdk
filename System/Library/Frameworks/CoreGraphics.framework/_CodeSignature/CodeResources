@@ -6,46 +6,46 @@
 	<dict>
 		<key>Resources/libCGCorePDF.A.dylib</key>
 		<data>
-		Oth3bA0zDOYupaQ9n111TmjGV4g=
+		ZkX08UrNGtf0pGjnQrnfFCNxBsE=
 		</data>
 		<key>Resources/libCGFreetype.A.dylib</key>
 		<data>
-		7KXfKbZ7tji8+gwGOz0qOSXW5bg=
+		99CTeUqXEVvcVJJ2A4r5s44UYY4=
 		</data>
 		<key>Resources/libCGVolute.A.dylib</key>
 		<data>
-		UYMgtn8yoqNPBpObO54GNaVFbAA=
+		OfN34mfPU2+BnCA9UmdPlBHZwMw=
 		</data>
 		<key>Resources/libCMSBuiltin.A.dylib</key>
 		<data>
-		tGRABD/85Ymzk+EITI+R/r8A92w=
+		DBP3F4AiJHbK8nd2XfnOtRS5bAQ=
 		</data>
 		<key>Resources/libCMaps.A.dylib</key>
 		<data>
-		50dHMugkh5nZTf9O1mqde2wXwio=
+		rqNwHkH2FfhXi5p2HclX6lnPm5Q=
 		</data>
 		<key>Resources/libFontStreams.A.dylib</key>
 		<data>
-		OCt4g9+3P9Fjk7j8/E5tJi7QkjU=
+		JqNBaY+N3SlTdN1VzqyKT9cR3zQ=
 		</data>
 		<key>Resources/libJBIG2.A.dylib</key>
 		<data>
-		UghtSGNVUrcyZJx+g/NMQ9mysms=
+		e6NMxNbjC1iKe2YMMW7k64fk3QM=
 		</data>
 		<key>Resources/libPDFRIP.A.dylib</key>
 		<data>
-		ZpzSLx965HiX6hNKvRjLuPMKo44=
+		Kta72GvHap6mc89SScdufNnY16w=
 		</data>
 		<key>Resources/libRIP.A.dylib</key>
 		<data>
-		RWTGfifqIkizigPyReCjqALyCUM=
+		sh5llKb2vH4J1Vo0Y/bFNaJjM5I=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Resources/libCGCorePDF.A.dylib</key>
 		<data>
-		Oth3bA0zDOYupaQ9n111TmjGV4g=
+		ZkX08UrNGtf0pGjnQrnfFCNxBsE=
 		</data>
 		<key>Resources/libCGCorePDF.dylib</key>
 		<dict>
@@ -54,7 +54,7 @@
 		</dict>
 		<key>Resources/libCGFreetype.A.dylib</key>
 		<data>
-		7KXfKbZ7tji8+gwGOz0qOSXW5bg=
+		99CTeUqXEVvcVJJ2A4r5s44UYY4=
 		</data>
 		<key>Resources/libCGFreetype.dylib</key>
 		<dict>
@@ -63,7 +63,7 @@
 		</dict>
 		<key>Resources/libCGVolute.A.dylib</key>
 		<data>
-		UYMgtn8yoqNPBpObO54GNaVFbAA=
+		OfN34mfPU2+BnCA9UmdPlBHZwMw=
 		</data>
 		<key>Resources/libCGVolute.dylib</key>
 		<dict>
@@ -72,7 +72,7 @@
 		</dict>
 		<key>Resources/libCMSBuiltin.A.dylib</key>
 		<data>
-		tGRABD/85Ymzk+EITI+R/r8A92w=
+		DBP3F4AiJHbK8nd2XfnOtRS5bAQ=
 		</data>
 		<key>Resources/libCMSBuiltin.dylib</key>
 		<dict>
@@ -81,7 +81,7 @@
 		</dict>
 		<key>Resources/libCMaps.A.dylib</key>
 		<data>
-		50dHMugkh5nZTf9O1mqde2wXwio=
+		rqNwHkH2FfhXi5p2HclX6lnPm5Q=
 		</data>
 		<key>Resources/libCMaps.dylib</key>
 		<dict>
@@ -90,7 +90,7 @@
 		</dict>
 		<key>Resources/libFontStreams.A.dylib</key>
 		<data>
-		OCt4g9+3P9Fjk7j8/E5tJi7QkjU=
+		JqNBaY+N3SlTdN1VzqyKT9cR3zQ=
 		</data>
 		<key>Resources/libFontStreams.dylib</key>
 		<dict>
@@ -99,7 +99,7 @@
 		</dict>
 		<key>Resources/libJBIG2.A.dylib</key>
 		<data>
-		UghtSGNVUrcyZJx+g/NMQ9mysms=
+		e6NMxNbjC1iKe2YMMW7k64fk3QM=
 		</data>
 		<key>Resources/libJBIG2.dylib</key>
 		<dict>
@@ -108,7 +108,7 @@
 		</dict>
 		<key>Resources/libPDFRIP.A.dylib</key>
 		<data>
-		ZpzSLx965HiX6hNKvRjLuPMKo44=
+		Kta72GvHap6mc89SScdufNnY16w=
 		</data>
 		<key>Resources/libPDFRIP.dylib</key>
 		<dict>
@@ -117,7 +117,7 @@
 		</dict>
 		<key>Resources/libRIP.A.dylib</key>
 		<data>
-		RWTGfifqIkizigPyReCjqALyCUM=
+		sh5llKb2vH4J1Vo0Y/bFNaJjM5I=
 		</data>
 		<key>Resources/libRIP.dylib</key>
 		<dict>
@@ -198,6 +198,27 @@
 			<true/>
 			<key>weight</key>
 			<real>40</real>
+		</dict>
+		<key>^Resources/[A-Za-z]*.nib$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
+		</dict>
+		<key>^Resources/[a-z]*-[a-z]*-[a-z]*\.(png|jpg)$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
+		</dict>
+		<key>^Resources/[a-z]*-[a-z]*\.(png|jpg)$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
 		</dict>
 		<key>^Resources/libCGInterfaces.dylib$</key>
 		<dict>
@@ -289,6 +310,27 @@
 			<true/>
 			<key>weight</key>
 			<real>40</real>
+		</dict>
+		<key>^Resources/[A-Za-z]*.nib$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
+		</dict>
+		<key>^Resources/[a-z]*-[a-z]*-[a-z]*\.(png|jpg)$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
+		</dict>
+		<key>^Resources/[a-z]*-[a-z]*\.(png|jpg)$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
 		</dict>
 		<key>^Resources/libCGInterfaces.dylib$</key>
 		<dict>

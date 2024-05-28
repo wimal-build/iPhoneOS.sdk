@@ -124,7 +124,6 @@ typedef uint32_t		vm32_size_t;
 typedef vm_offset_t		mach_port_context_t;
 
 
-/* ARM64_TODO: sigh, need to adjust these... */
 #define VM_MAP_MIN_ADDRESS	VM_MIN_ADDRESS
 #define VM_MAP_MAX_ADDRESS	VM_MAX_ADDRESS
 

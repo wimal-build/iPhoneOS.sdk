@@ -39,7 +39,11 @@
 
 #endif
 
+#if defined(__arm64__)
+#define KERNEL_STACK_SIZE	(5*ARM_PGBYTES)
+#else
 #define KERNEL_STACK_SIZE	(4*ARM_PGBYTES)
+#endif
 #define INTSTACK_SIZE		(4*ARM_PGBYTES)
 						/* interrupt stack size */
 
@@ -73,7 +77,7 @@
 #elif defined (__arm64__)
 
 #define VM_MIN_ADDRESS		((vm_address_t) 0x0000000000000000ULL)
-#define VM_MAX_ADDRESS		((vm_address_t) 0x0000000040000000ULL)
+#define VM_MAX_ADDRESS		((vm_address_t) 0x0000000080000000ULL)
 
 #define VM_MIN_KERNEL_ADDRESS	((vm_address_t) 0xffffff8000000000ULL)
 #define VM_MIN_KERNEL_AND_KEXT_ADDRESS VM_MIN_KERNEL_ADDRESS

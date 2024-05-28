@@ -80,6 +80,27 @@
 			<key>weight</key>
 			<real>40</real>
 		</dict>
+		<key>^Resources/[A-Za-z]*.nib$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
+		</dict>
+		<key>^Resources/[a-z]*-[a-z]*-[a-z]*\.(png|jpg)$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
+		</dict>
+		<key>^Resources/[a-z]*-[a-z]*\.(png|jpg)$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
+		</dict>
 		<key>^Resources/libCGInterfaces.dylib$</key>
 		<dict>
 			<key>omit</key>
@@ -170,6 +191,27 @@
 			<true/>
 			<key>weight</key>
 			<real>40</real>
+		</dict>
+		<key>^Resources/[A-Za-z]*.nib$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
+		</dict>
+		<key>^Resources/[a-z]*-[a-z]*-[a-z]*\.(png|jpg)$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
+		</dict>
+		<key>^Resources/[a-z]*-[a-z]*\.(png|jpg)$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>50</real>
 		</dict>
 		<key>^Resources/libCGInterfaces.dylib$</key>
 		<dict>

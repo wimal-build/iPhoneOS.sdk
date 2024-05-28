@@ -322,7 +322,6 @@ typedef integer_t	cpu_threadtype_t;
 #define CPU_SUBTYPE_ARM64_ALL           ((cpu_subtype_t) 0)
 #define CPU_SUBTYPE_ARM64_V8            ((cpu_subtype_t) 1)
 
-
 #endif /* !__ASSEMBLER__ */
 
 /*

@@ -136,8 +136,6 @@ typedef _STRUCT_ARM_LEGACY_DEBUG_STATE		arm_debug_state_t;
 #define MACHINE_THREAD_STATE 		ARM_THREAD_STATE
 #define MACHINE_THREAD_STATE_COUNT	ARM_UNIFIED_THREAD_STATE_COUNT
 
-
-
 /*
  * Largest state on this machine:
  */

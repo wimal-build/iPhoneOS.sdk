@@ -1,4 +1,4 @@
-module Darwin [system] {
+module Darwin [system] [extern_c] {
   // Headers that are repeatedly included, and therefore should not be 
   // assigned to any given module.
   exclude header "_structs.h"
@@ -126,6 +126,11 @@ module Darwin [system] {
 
     module wctype {
       header "wctype.h"
+      export *
+    }
+
+    module xlocale {
+      header "xlocale.h"
       export *
     }
 
@@ -1432,7 +1437,7 @@ module Darwin [system] {
   }
 }
 
-module os [system] {
+module os [system] [extern_c] {
   module base {
     header "os/base.h"
     export *
@@ -1448,7 +1453,7 @@ module os [system] {
   exclude header "os/trace.h"
 }
 
-module libkern [system] {
+module libkern [system] [extern_c] {
   module OSCacheControl {
     header "libkern/OSCacheControl.h"
     export *

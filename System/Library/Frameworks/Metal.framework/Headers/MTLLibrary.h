@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <Metal/MTLDefines.h>
 #import <Metal/MTLResource.h>
+#import <Metal/MTLArgument.h>
 
 @protocol MTLDevice;
 @protocol MTLFunction;
@@ -19,6 +20,7 @@ NS_CLASS_AVAILABLE_IOS(8_0)
  
 @property (readonly) NSString   *name;
 @property (readonly) NSUInteger  attributeIndex;
+@property (readonly) MTLDataType attributeType NS_AVAILABLE_IOS(8_3);
 @property (readonly, getter=isActive) BOOL active;
 @end
 

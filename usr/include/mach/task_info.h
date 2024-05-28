@@ -416,6 +416,10 @@ typedef struct task_power_info_v2	*task_power_info_v2_t;
 #define TASK_POWER_INFO_V2_COUNT	((mach_msg_type_number_t) \
 		(sizeof (task_power_info_v2_data_t) / sizeof (natural_t)))
 
+
+#define TASK_VM_INFO_PURGEABLE_ACCOUNT 27 /* Used for xnu purgeable vm unit tests */
+
+
 /*
  * Obsolete interfaces.
  */

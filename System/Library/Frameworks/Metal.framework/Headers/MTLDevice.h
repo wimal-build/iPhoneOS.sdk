@@ -12,6 +12,7 @@
 #import <Metal/MTLResource.h>
 #import <Metal/MTLLibrary.h>
 
+
 @protocol MTLCommandQueue;
 @protocol MTLDevice;
 @protocol MTLBuffer;
@@ -28,7 +29,6 @@
 @class MTLTextureDescriptor;
 @class MTLCompileOptions;
 @class MTLRenderPipelineDescriptor;
-@class MTLComputePipelineDescriptor;
 @class MTLRenderPassDescriptor;
 @class MTLRenderPipelineReflection;
 @class MTLComputePipelineReflection;

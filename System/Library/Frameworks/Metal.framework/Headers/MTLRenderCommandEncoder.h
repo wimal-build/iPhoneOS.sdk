@@ -77,10 +77,22 @@ NS_AVAILABLE_IOS(8_0)
 /* Vertex Resources */
 
 /*!
+ @method setVertexBytes:length:atIndex:
+ @brief Set the data (by copy) for a given vertex buffer binding point.  This will remove any existing MTLBuffer from the binding point.
+ */
+- (void)setVertexBytes:(const void *)bytes length:(NSUInteger)length atIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_3);
+
+/*!
  @method setVertexBuffer:offset:atIndex:
  @brief Set a global buffer for all vertex shaders at the given bind point index.
  */
 - (void)setVertexBuffer:(id <MTLBuffer>)buffer offset:(NSUInteger)offset atIndex:(NSUInteger)index;
+
+/*!
+ @method setVertexBufferOffset:atIndex:
+ @brief Set the offset within the current global buffer for all vertex shaders at the given bind point index.
+ */
+- (void)setVertexBufferOffset:(NSUInteger)offset atIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_3);
 
 /*!
  @method setVertexBuffers:offsets:withRange:
@@ -165,10 +177,22 @@ NS_AVAILABLE_IOS(8_0)
 /* Fragment Resources */
 
 /*!
+ @method setFragmentBytes:length:atIndex:
+ @brief Set the data (by copy) for a given fragment buffer binding point.  This will remove any existing MTLBuffer from the binding point.
+ */
+- (void)setFragmentBytes:(const void *)bytes length:(NSUInteger)length atIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_3);
+
+/*!
  @method setFragmentBuffer:offset:atIndex:
  @brief Set a global buffer for all fragment shaders at the given bind point index.
  */
 - (void)setFragmentBuffer:(id <MTLBuffer>)buffer offset:(NSUInteger)offset atIndex:(NSUInteger)index;
+
+/*!
+ @method setFragmentBufferOffset:atIndex:
+ @brief Set the offset within the current global buffer for all fragment shaders at the given bind point index.
+ */
+- (void)setFragmentBufferOffset:(NSUInteger)offset atIndex:(NSUInteger)index  NS_AVAILABLE_IOS(8_3);
 
 /*!
  @method setFragmentBuffers:offsets:withRange:

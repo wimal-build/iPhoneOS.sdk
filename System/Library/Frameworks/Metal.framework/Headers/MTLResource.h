@@ -59,7 +59,6 @@ typedef NS_OPTIONS(NSUInteger, MTLResourceOptions)
 {
 	MTLResourceOptionCPUCacheModeDefault       = MTLCPUCacheModeDefaultCache  << 0,
 	MTLResourceOptionCPUCacheModeWriteCombined = MTLCPUCacheModeWriteCombined << 0,
-
 } NS_ENUM_AVAILABLE_IOS(8_0);
 
 
@@ -98,5 +97,5 @@ NS_AVAILABLE_IOS(8_0)
  */
 - (MTLPurgeableState)setPurgeableState:(MTLPurgeableState)state;
 
-
+ 
 @end

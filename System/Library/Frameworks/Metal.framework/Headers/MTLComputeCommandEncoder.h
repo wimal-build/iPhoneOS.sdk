@@ -16,6 +16,7 @@
 @protocol MTLBuffer;
 @protocol MTLSamplerState;
 @protocol MTLTexture;
+@protocol MTLComputePipelineState;
 
 /*!
  @protocol MTLComputeCommandEncoder
@@ -31,10 +32,22 @@ NS_AVAILABLE_IOS(8_0)
 - (void)setComputePipelineState:(id <MTLComputePipelineState>)state;
 
 /*!
+ @method setBytes:length:atIndex:
+ @brief Set the data (by copy) for a given buffer binding point.  This will remove any existing MTLBuffer from the binding point.
+ */
+- (void)setBytes:(const void *)bytes length:(NSUInteger)length atIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_3);
+
+/*!
  @method setBuffer:offset:atIndex:
  @brief Set a global buffer for all compute kernels at the given bind point index.
  */
 - (void)setBuffer:(id <MTLBuffer>)buffer offset:(NSUInteger)offset atIndex:(NSUInteger)index;
+
+/*!
+ @method setBufferOffset:atIndex:
+ @brief Set the offset within the current global buffer for all compute kernels at the given bind point index.
+ */
+- (void)setBufferOffset:(NSUInteger)offset atIndex:(NSUInteger)index NS_AVAILABLE_IOS(8_3);
 
 /*!
  @method setBuffers:offsets:withRange:

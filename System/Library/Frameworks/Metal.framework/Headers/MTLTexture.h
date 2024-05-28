@@ -8,7 +8,6 @@
 #import <Foundation/Foundation.h>
 #import <Metal/MTLDefines.h>
 #import <Metal/MTLResource.h>
-#import <Metal/MTLDevice.h>
 #import <Metal/MTLBuffer.h>
 #import <Metal/MTLTypes.h>
 

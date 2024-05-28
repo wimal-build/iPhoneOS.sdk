@@ -8,7 +8,8 @@
 (allow network-outbound (extension "com.apple.xcode.playground.socket"))
 
 (allow file-read-metadata)
-(allow ipc-posix-shm)
+(allow ipc-posix-shm (ipc-posix-name-regex #"^sim\.not\."))
+(allow ipc-posix-shm (ipc-posix-name-regex #"^AudioIO"))
 (allow mach-lookup)
 (allow network-inbound (local ip))
 (allow network-outbound (remote ip))

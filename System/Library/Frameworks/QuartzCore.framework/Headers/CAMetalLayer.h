@@ -1,6 +1,6 @@
 /* CoreAnimation - CAMetalLayer.h
 
-   Copyright (c) 2013-2014 Apple Inc.
+   Copyright (c) 2013-2015, Apple Inc.
    All rights reserved. */
 
 #import <QuartzCore/CALayer.h>
@@ -68,7 +68,7 @@ NS_CLASS_AVAILABLE_IOS (8_0)
 
 /* This property controls the pixel dimensions of the returned drawable
  * objects. The most typical value will be the layer size multiplied by
- * the layer contentsSize property. */
+ * the layer contentsScale property. */
 
 @property (readwrite) CGSize drawableSize;
 

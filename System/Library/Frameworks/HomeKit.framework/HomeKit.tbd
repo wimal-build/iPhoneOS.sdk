@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/HomeKit.framework/HomeKit
-current-version: 240.1.1
+current-version: 240.1.101
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

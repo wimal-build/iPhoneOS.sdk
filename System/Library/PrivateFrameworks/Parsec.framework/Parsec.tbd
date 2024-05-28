@@ -9,7 +9,7 @@ exports:
     symbols:         [ _PRSFairPlayErrorDomain, _PRSLog, _PRSParsecVersionNumber, 
                        _PRSParsecVersionString, _PRSSetLoggingBlock, _gConnectionChangedBlocks, 
                        _gExtraParam, _gPRSLogLevel, _kHTTPHeaderXAppleActionSignature, 
-                       _locationLock, _printByteArrayAsInt, _prs_compress, 
+                       _locationLock, _main, _printByteArrayAsInt, _prs_compress, 
                        _prs_encodeRun, _prs_expand, _prs_getRunLength, 
                        _prs_saveRun, _reachabilityCallback ]
     objc-classes:    [ _PRSAbandonmentFeedback, _PRSBagHandler, _PRSCache, 

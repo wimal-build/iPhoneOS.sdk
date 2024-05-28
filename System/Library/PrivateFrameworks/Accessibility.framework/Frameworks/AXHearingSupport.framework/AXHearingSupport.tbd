@@ -35,7 +35,7 @@ exports:
                        _hearingLocString, _hearingPropertyDescription, 
                        _propertyContainsProperty, _supportsBinauralStreamingForHearingAid ]
     objc-classes:    [ _AXHAAccessQueue, _AXHAController, _AXHAControllerBrowser, 
-                       _AXHAListenerHelper, _AXHALiveListenController, 
+                       _AXHAFakeXPCClient, _AXHAListenerHelper, _AXHALiveListenController, 
                        _AXHAMessage, _AXHAMessageHandlerContext, _AXHAPacket, 
                        _AXHARemoteController, _AXHARemoteMessage, _AXHASecurityHelper, 
                        _AXHAServer, _AXHASettings, _AXHASettingsListenerHelper, 

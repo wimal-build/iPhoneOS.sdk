@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/Sharing.framework/Sharing
-current-version: 438.1
+current-version: 442.1.1
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

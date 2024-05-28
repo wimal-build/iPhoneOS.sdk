@@ -5,8 +5,8 @@ install-name:    /System/Library/PrivateFrameworks/NanoPassKit.framework/NanoPas
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
-    symbols:         [ _NPDBulletinProviderMachServiceName, _NPKAggDKeyFieldDetectWarningInQuickPay, 
-                       _NPKAggDKeyFieldDetectWarningOutsideOfQuickPay, 
+    symbols:         [ _NPDBulletinProviderMachServiceName, _NPDLoyaltyEngineConfigurationChanged, 
+                       _NPKAggDKeyFieldDetectWarningInQuickPay, _NPKAggDKeyFieldDetectWarningOutsideOfQuickPay, 
                        _NPKAggDKeyPaymentRequested, _NPKAggDKeyPaymentRequestedWhileBusy, 
                        _NPKAggDKeyPaymentRequestedWhileLocked, _NPKAggDKeyPaymentRequestedWhileRestricted, 
                        _NPKAggDKeyPaymentRequestedWithNoPasscode, _NPKAggDKeyPaymentRequestedWithNoPasses, 

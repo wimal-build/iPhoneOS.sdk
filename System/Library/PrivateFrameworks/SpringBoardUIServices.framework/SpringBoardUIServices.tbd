@@ -32,7 +32,7 @@ exports:
                        _SBUIWidgetIdiomNotificationCenterKey, _SBUIWidgetIdiomNotificationCenterTodayKey, 
                        _SBUIWidgetViewControllersKey, __SBMainScreenScale, 
                        __SBSUIWallpaperSetImageWithoutCheckingMC, __SBUIWidgetBundlePaths, 
-                       __enhanceContrastChanged ]
+                       __enhanceContrastChanged, _kLargeriPhoneSize ]
     objc-classes:    [ _SBBlackBackdropSettings, _SBEmptyButtonView, _SBInteractionPassThroughView, 
                        _SBLightPasscodeNumberPadButton, _SBLockOverlayStyleProperties, 
                        _SBLockOverlayStylePropertiesFactory, _SBNumberPadWithDelegate, 

@@ -9,12 +9,15 @@ exports:
                        _BYAssistantScreenShouldRunForPHSUpgrade, _BYBuddyAssistantPHSOfferedKey, 
                        _BYBuddyAssistantPresentedKey, _BYBuddyCurrentVersion, 
                        _BYBuddyDoneKey, _BYBuddyFinishedInitialRunKey, 
-                       _BYBuddyLastExitKey, _BYBuddyNotBackedUpIdentifier, 
+                       _BYBuddyLastExitKey, _BYBuddyMachService, _BYBuddyNotBackedUpIdentifier, 
                        _BYBuddyRunDiagnosticsMiniBuddy, _BYBuddyRunKeychainSyncMiniBuddy, 
                        _BYBuddyRunMesaMiniBuddy, _BYBuddyRunPaymentMiniBuddy, 
-                       _BYBuddyVersionKey, _BYLog, _BYLogDebug, _BYLogInfo, 
-                       _BYLogPublic, _BYLoggingEnabled, _BYRestrictionsEnabled, 
+                       _BYBuddyVersionKey, _BYClearLaunchSentinel, _BYLog, 
+                       _BYLogDebug, _BYLogInfo, _BYLogPublic, _BYLoggingEnabled, 
+                       _BYProcessNameForPID, _BYRestrictionsEnabled, _BYSetLaunchSentinel, 
                        _BYSetupAssistantBundleIdentifier, _BYSetupAssistantFinishedDarwinNotification, 
                        _BYSetupAssistantHasCompletedInitialRun, _BYSetupAssistantLaunchedDarwinNotification, 
-                       _BYSetupAssistantNeedsToRun ]
+                       _BYSetupAssistantNeedsToRun, _BYSetupAssistantPrepareLaunchSentinel, 
+                       _Daemon_BYSetupAssistantNeedsToRun ]
+    objc-classes:    [ _BYBuddyClientInterface, _BYBuddyDaemonInterface ]
 ...

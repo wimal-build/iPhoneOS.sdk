@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-current-version: 727.5.3
+current-version: 727.5.16
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -164,8 +164,8 @@ exports:
                        _kUTTypeInternetLocation, _kUTTypeItem, _kUTTypeJPEG, 
                        _kUTTypeJPEG2000, _kUTTypeJSON, _kUTTypeJavaArchive, 
                        _kUTTypeJavaClass, _kUTTypeJavaScript, _kUTTypeJavaSource, 
-                       _kUTTypeLog, _kUTTypeM3UPlaylist, _kUTTypeMIDIAudio, 
-                       _kUTTypeMP3, _kUTTypeMPEG, _kUTTypeMPEG2TransportStream, 
+                       _kUTTypeLivePhoto, _kUTTypeLog, _kUTTypeM3UPlaylist, 
+                       _kUTTypeMIDIAudio, _kUTTypeMP3, _kUTTypeMPEG, _kUTTypeMPEG2TransportStream, 
                        _kUTTypeMPEG2Video, _kUTTypeMPEG4, _kUTTypeMPEG4Audio, 
                        _kUTTypeMessage, _kUTTypeMountPoint, _kUTTypeMovie, 
                        _kUTTypeOSAScript, _kUTTypeOSAScriptBundle, _kUTTypeObjectiveCPlusPlusSource, 

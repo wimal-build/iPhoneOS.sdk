@@ -549,6 +549,7 @@ exports:
                        ___floatuntisf, ___gcc_personality_v0, ___modti3, 
                        ___udivmodti4, ___udivti3, ___umodti3 ]
   - archs:           [ armv7, armv7s, arm64 ]
+    allowed-clients: [ System ]
     symbols:         [ '$ld$hide$os7.0$___extendhfsf2', '$ld$hide$os7.0$___truncdfhf2', 
                        '$ld$hide$os7.0$___truncsfhf2', '$ld$hide$os7.0$_atomic_flag_clear', 
                        '$ld$hide$os7.0$_atomic_flag_clear_explicit', '$ld$hide$os7.0$_atomic_flag_test_and_set', 

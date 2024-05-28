@@ -2,10 +2,11 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /usr/lib/system/libsystem_network.dylib
-current-version: 583.1.1
+current-version: 583.10.5
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
+    allowed-clients: [ System ]
     symbols:         [ ___nw_create_backtrace_string, ___nwlog_debug_c, 
                        ___nwlog_debug_magic_c, ___nwlog_err_c, ___nwlog_err_magic_c, 
                        ___nwlog_info_c, ___nwlog_info_magic_c, ___system_networkVersionNumber, 

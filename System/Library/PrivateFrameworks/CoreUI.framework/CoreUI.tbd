@@ -2,14 +2,15 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/CoreUI.framework/CoreUI
-current-version: 358.2
+current-version: 370.5
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
-    symbols:         [ _CSIEqualMetrics, _CSIIllegalMetrics, _CUICGImageGetAlphaInfo, 
-                       _CUICalcNonAlphaAreaOfImage, _CUICalculateExtrusionMaskOfImage, 
-                       _CUICompareRenditionKey, _CUIConvertCGImageFormat, 
-                       _CUICurrentPlatform, _CUIDefaultThemeRenditionKeyFormat, 
+    symbols:         [ _CSIEqualMetrics, _CSIIllegalMetrics, _CUIBlendModeDescriptionFromCGBlendMode, 
+                       _CUIBlendModeLSRDescriptionFromCGBlendMode, _CUICGBlendModeFromLSRDescription, 
+                       _CUICGImageGetAlphaInfo, _CUICalcNonAlphaAreaOfImage, 
+                       _CUICalculateExtrusionMaskOfImage, _CUICompareRenditionKey, 
+                       _CUIConvertCGImageFormat, _CUICurrentPlatform, _CUIDefaultThemeRenditionKeyFormat, 
                        _CUIDrawExtrudedImageInContext, _CUIEdgeInsetsEqualToEdgeInsets, 
                        _CUIEdgeInsetsFromCGRect, _CUIEdgeInsetsInsetRect, 
                        _CUIEdgeInsetsInvalid, _CUIEdgeInsetsMake, _CUIEdgeInsetsOutsetRect, 

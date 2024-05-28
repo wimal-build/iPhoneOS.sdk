@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /usr/lib/libSystem.B.dylib
-current-version: 1225.0
+current-version: 1226.10.1
 exports:         
   - archs:           [ armv7, armv7s ]
     re-exports:      [ /usr/lib/system/libkeymgr.dylib ]

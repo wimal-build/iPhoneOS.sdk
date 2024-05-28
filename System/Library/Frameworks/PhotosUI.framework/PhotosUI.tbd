@@ -80,7 +80,7 @@ exports:
                        _PUYearsLevelSectionHeaderKind, _kPUPhotoStreamsAlbumSelectedGuid, 
                        _pu_dispatch_on_main_queue, _pu_dispatch_on_main_queue_when_idle_after_delay ]
     objc-classes:    [ _CMKPadCameraRollSpec, _CMKPhoneCameraRollSpec, 
-                       _PHEditingExtensionContext, _PHSwipeDownTracker, 
+                       _PHEditingExtensionContext, _PHLivePhotoView, _PHSwipeDownTracker, 
                        _PHVideoScrubberView, _PUActivity, _PUActivityAssetItem, 
                        _PUActivityItemSource, _PUActivityItemSourceController, 
                        _PUActivityViewController, _PUAirPlayRootViewController, 

@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/AccountsDaemon.framework/AccountsDaemon
-current-version: 577.0
+current-version: 577.2
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

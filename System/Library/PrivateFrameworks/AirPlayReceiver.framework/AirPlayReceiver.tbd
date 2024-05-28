@@ -10,7 +10,7 @@ exports:
                        _APAdvertiserInfoCopyAirPlayData, _APAdvertiserInfoCopyProperty, 
                        _APAdvertiserInfoCopyRAOPData, _APAdvertiserInfoCreate, 
                        _APAdvertiserInfoCreateAirPlayServiceName, _APAdvertiserInfoCreateRAOPServiceName, 
-                       _APAdvertiserInfoCreateWithRAOPAndAirPlayDataAndName, 
+                       _APAdvertiserInfoCreateWithRAOPAndAirPlayDataAndDeviceName, 
                        _APAdvertiserInfoGetTypeID, _APAdvertiserInfoSetProperty, 
                        _APAdvertiserInvalidate, _APAdvertiserSetMode, _APAdvertiserSetProperty, 
                        _APAdvertiserUpdatePreferences, _AirPlayCreateModesDictionary, 

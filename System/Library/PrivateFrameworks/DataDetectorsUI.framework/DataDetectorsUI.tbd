@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/DataDetectorsUI.framework/DataDetectorsUI
-current-version: 182.0
+current-version: 183.1
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -10,8 +10,9 @@ exports:
                        _DDContactsKeyForResult, _DDContextAttributeName, 
                        _DDCreateAddressBookDictionaryWithResults, _DDDetectionControllerDidDismissActionNotification, 
                        _DDDetectionControllerWillPresentActionNotification, 
-                       _DDLocalizedString, _DDResultAttributeName, _DDUIEventForResults, 
-                       _kDataDetectorsAllResultsKey, _kDataDetectorsCoreRecentsMetadataDictionaryKey, 
+                       _DDLocalizedString, _DDMapAddressFromURL, _DDResultAttributeName, 
+                       _DDUIEventForResults, _kDataDetectorsAllResultsKey, 
+                       _kDataDetectorsCoreRecentsMetadataDictionaryKey, 
                        _kDataDetectorsEventTitleKey, _kDataDetectorsGestureKey, 
                        _kDataDetectorsPresenterKey, _kDataDetectorsReferenceDateKey, 
                        _kDataDetectorsSelectedTextKey, _kDataDetectorsSpecialURLKey, 

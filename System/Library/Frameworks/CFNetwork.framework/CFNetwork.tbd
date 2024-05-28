@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CFNetwork.framework/CFNetwork
-current-version: 758.0.2
+current-version: 758.1.6
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

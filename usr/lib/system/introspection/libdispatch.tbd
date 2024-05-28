@@ -2,10 +2,11 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /usr/lib/system/introspection/libdispatch.dylib
-current-version: 501.1.1
+current-version: 501.10.2
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
+    allowed-clients: [ System ]
     symbols:         [ __dispatch_begin_NSAutoReleasePool, __dispatch_data_destructor_free, 
                        __dispatch_data_destructor_munmap, __dispatch_data_destructor_none, 
                        __dispatch_data_destructor_vm_deallocate, __dispatch_data_empty, 

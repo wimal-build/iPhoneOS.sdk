@@ -18,7 +18,7 @@ exports:
                        _VimeoPost, _VimeoUploadSession ]
     objc-ivars:      [ _FlickrResponse._partialPhotoIDString, _VimeoPost._baseURL, 
                        _VimeoPost._canUploadOverCellular, _VimeoPost._continuingUpload, 
-                       _VimeoPost._lastByteStored, _VimeoPost._retryCount, 
+                       _VimeoPost._countOfBytesStored, _VimeoPost._retryCount, 
                        _VimeoPost._ticketID, _VimeoPost._uploadEndpoint, 
                        _VimeoPost._uploadState, _VimeoPost._videoID ]
 ...

@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/CoreThemeDefinition.framework/CoreThemeDefinition
-current-version: 233.0
+current-version: 245.0
 objc-constraint: retain_release
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

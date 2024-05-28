@@ -4,6 +4,25 @@ platform:        ios
 install-name:    /System/Library/PrivateFrameworks/MPUFoundation.framework/MPUFoundation
 objc-constraint: retain_release
 exports:         
+  - archs:           [ armv7, armv7s ]
+    symbols:         [ __ZN3MPU18LayoutInterpolator16EntriesContainerC1Ef, 
+                       __ZN3MPU18LayoutInterpolator16EntriesContainerC2Ef, 
+                       __ZN3MPU7Point3D55resolveEquationOfPlaneDefinedByFirstThreePointsInVectorERNSt3__16vectorIS0_NS1_9allocatorIS0_EEEEPfS7_S7_, 
+                       __ZN3MPU7Point3DC1Efff, __ZN3MPU7Point3DC2Efff, 
+                       __ZNK3MPU18LayoutInterpolator16EntriesContainer32valueForSecondaryReferenceMetricEf ]
+    weak-def-symbols: [ __ZTINSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                        __ZTINSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                        __ZTINSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                        __ZTINSt3__121__basic_string_commonILb1EEE, __ZTSNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                        __ZTSNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                        __ZTSNSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                        __ZTSNSt3__121__basic_string_commonILb1EEE ]
+  - archs:           [ arm64 ]
+    symbols:         [ __ZN3MPU18LayoutInterpolator16EntriesContainerC1Ed, 
+                       __ZN3MPU18LayoutInterpolator16EntriesContainerC2Ed, 
+                       __ZN3MPU7Point3D55resolveEquationOfPlaneDefinedByFirstThreePointsInVectorERNSt3__16vectorIS0_NS1_9allocatorIS0_EEEEPdS7_S7_, 
+                       __ZN3MPU7Point3DC1Eddd, __ZN3MPU7Point3DC2Eddd, 
+                       __ZNK3MPU18LayoutInterpolator16EntriesContainer32valueForSecondaryReferenceMetricEd ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _MPUAVItemContentItemIdentifierCollectionDidChangeNotification, 
                        _MPUAVItemReportingJingleTimedMetadataDidChangeNotification, 
@@ -41,7 +60,13 @@ exports:
                        _MPUTransportButtonReuseIdentifier, _MPUTruncatedComponentsJoinedByString, 
                        _SSVMediaContentTasteItemContentTypeFromMPUContentItemType, 
                        __MPUProtoBufUserActivityContainerItemReadFrom, 
-                       __MPUProtoBufUserActivityContextReadFrom, ___activeEffectCoordinator ]
+                       __MPUProtoBufUserActivityContextReadFrom, __ZN3MPU18LayoutInterpolator16EntriesContainer11insertEntryENS0_5EntryE, 
+                       __ZN3MPU18LayoutInterpolator35_EntriesContainerMakeInsertionErrorEPNS0_16EntriesContainerENS0_5Entry14InsertionError4CodeES3_S3_, 
+                       __ZNK3MPU18LayoutInterpolator16EntriesContainer12entriesCountEv, 
+                       __ZNK3MPU18LayoutInterpolator16EntriesContainer17copyEntriesVectorEv, 
+                       __ZNK3MPU18LayoutInterpolator16EntriesContainer22primaryReferenceMetricEv, 
+                       __ZNK3MPU7Point3DeqERKS0_, __ZNK3MPU7Point3DneERKS0_, 
+                       ___activeEffectCoordinator ]
     objc-classes:    [ _MPUAVPlayer, _MPUAVPlaylistManager, _MPUAbbreviatingLabel, 
                        _MPUActionCellConfiguration, _MPUAnimationFactory, 
                        _MPUBlockAnimationDelegate, _MPUBlurEffectView, 
@@ -55,18 +80,18 @@ exports:
                        _MPUEmphasizedText, _MPUFallAnimator, _MPUFontDescriptor, 
                        _MPUFormattingUtilities, _MPUHalfTintedTransportButton, 
                        _MPUImageStackItemView, _MPUJinglePlayActivityReportingController, 
-                       _MPUKeyValueObserver, _MPUMarqueeView, _MPUMutableContentItemIdentifierCollection, 
-                       _MPUMutableFontDescriptor, _MPUMutableUserActivityContainerItem, 
-                       _MPUMutableUserActivityContext, _MPUNotificationObserver, 
-                       _MPUNowPlayingIndicatorView, _MPUOperationLIFOQueue, 
-                       _MPUPercentDrivenInteractionTransition, _MPUPinningView, 
-                       _MPUQueryDataSource, _MPUReportingController, _MPUReportingMescalSetupCompletionEvent, 
-                       _MPUReportingPlaybackActivityEvent, _MPUReportingPlaybackObserver, 
-                       _MPUReportingPlaybackSessionIDChangeEvent, _MPUSearchDataSource, 
-                       _MPUSpringAnimationFactory, _MPUStackItemView, _MPUStackView, 
-                       _MPUStringTruncationStrategy, _MPUTableViewController, 
-                       _MPUTextContainerContentSizeUpdater, _MPUTextDrawingCache, 
-                       _MPUTextDrawingCacheKey, _MPUTextDrawingContext, 
+                       _MPUKeyValueObserver, _MPULayoutInterpolator, _MPUMarqueeView, 
+                       _MPUMutableContentItemIdentifierCollection, _MPUMutableFontDescriptor, 
+                       _MPUMutableUserActivityContainerItem, _MPUMutableUserActivityContext, 
+                       _MPUNotificationObserver, _MPUNowPlayingIndicatorView, 
+                       _MPUOperationLIFOQueue, _MPUPercentDrivenInteractionTransition, 
+                       _MPUPinningView, _MPUQueryDataSource, _MPUReportingController, 
+                       _MPUReportingMescalSetupCompletionEvent, _MPUReportingPlaybackActivityEvent, 
+                       _MPUReportingPlaybackObserver, _MPUReportingPlaybackSessionIDChangeEvent, 
+                       _MPUSearchDataSource, _MPUSpringAnimationFactory, 
+                       _MPUStackItemView, _MPUStackView, _MPUStringTruncationStrategy, 
+                       _MPUTableViewController, _MPUTextContainerContentSizeUpdater, 
+                       _MPUTextDrawingCache, _MPUTextDrawingCacheKey, _MPUTextDrawingContext, 
                        _MPUTextDrawingView, _MPUTransportButton, _MPUTransportButtonEventHandler, 
                        _MPUTransportControl, _MPUUserActivityContainerItem, 
                        _MPUUserActivityContext, _MPUVibrantContentEffectView, 

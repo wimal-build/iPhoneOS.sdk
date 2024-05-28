@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Foundation.framework/Foundation
-current-version: 1240.1
+current-version: 1241.14
 compatibility-version: 300.0
 objc-constraint: retain_release
 exports:         
@@ -729,6 +729,7 @@ exports:
                        _NSPersonNameLocalizedDefaultNameOrderKey, _NSPersonNameLocalizedDefaultScriptArabicKey, 
                        _NSPersonNameLocalizedDefaultScriptCJKKey, _NSPersonNameLocalizedDefaultScriptDevanagariKey, 
                        _NSPersonNameLocalizedDefaultScriptInfoKey, _NSPersonNameLocalizedDefaultScriptThaiKey, 
+                       _NSPersonNameLocalizedDefaultScriptUndeterminedKey, 
                        _NSPersonNameLocalizedDefaultShortNameStyleKey, 
                        _NSPersonNameLocalizedDefaultShortStyleRestrictionsKey, 
                        _NSPersonNameLocalizedDefaultStyleRestrictionsKey, 
@@ -843,8 +844,8 @@ exports:
                        __NSAutoreleasePoolSetRubyToken, __NSBundleResourceRequestAssetPackNotificationAssetPackIDKey, 
                        __NSBundleResourceRequestAssetPackPinnedNotification, 
                        __NSBundleResourceRequestAssetPackUnpinnedNotification, 
-                       __NSBundleResourceRequestErrorDomain, __NSCStringCharToUnichar, 
-                       __NSCStringEncoding, __NSConvertToASCIIorUnicode, 
+                       __NSBundleResourceRequestErrorDomain, __NSBundleResourceRequestServerBusyTimeIntervalKey, 
+                       __NSCStringCharToUnichar, __NSCStringEncoding, __NSConvertToASCIIorUnicode, 
                        __NSConvertToASCIIorUnicode2, __NSDateFormatterNoInit, 
                        __NSDefaultCStringEncoding, __NSDefaultFileSystemEncoding, 
                        __NSDefaultStringEncoding, __NSDescriptionWithLocaleFunc, 

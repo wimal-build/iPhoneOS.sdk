@@ -8,8 +8,11 @@ exports:
     symbols:         [ _CDPKeychainSyncSecurityCodePeerApprovalResult, 
                        _CDPKeychainSyncSecurityCodeResetKeychainResult, 
                        _CoreCDPUIVersionNumber, _CoreCDPUIVersionString ]
-    objc-classes:    [ _CDPDevicePickerViewController, _CDPLocalSecretEntryViewController, 
-                       _CDPPassphraseEntryViewController, _CDPRemoteSecretEntryViewController, 
+    objc-classes:    [ _CDPDevicePickerViewController, _CDPLocalSecretEntryPane, 
+                       _CDPLocalSecretEntryViewController, _CDPPassphraseEntryPane, 
+                       _CDPPassphraseEntryViewController, _CDPRemoteSecretEntryPane, 
+                       _CDPRemoteSecretEntryViewController, _CDPSingleICSCEntryPane, 
                        _CDPSingleICSCEntryViewController, _CDPTableViewController, 
                        _CDPUIController, _CDPWaitingApprovalViewController ]
+    objc-ivars:      [ _CDPPassphraseEntryPane._headerView ]
 ...

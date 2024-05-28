@@ -32,8 +32,9 @@ exports:
                        _SYSyncBatchResponseReadFrom, _SYSyncEndResponseReadFrom, 
                        _SYSyncSessionRestartRequestReadFrom, _SYSyncSessionRestartResponseReadFrom, 
                        _SYThrowWrongSessionType, _SYVectorClockReadFrom, 
-                       _SYZlibErrorDomain, __SYTransportLogMessage, __xpcTransactionDepth, 
-                       _kSYDictionaryObjectSyncIDKey ]
+                       _SYXpcLogOpenTransactions, _SYZlibErrorDomain, __SYTransportLogMessage, 
+                       __SYXpcTransactionBegin, __SYXpcTransactionEnd, 
+                       __xpcTransactionDepth, _kSYDictionaryObjectSyncIDKey ]
     objc-classes:    [ _NMSIncomingFileTransfer, _NMSIncomingRequest, _NMSIncomingResponse, 
                        _NMSMessageCenter, _NMSMessagePersistentContext, 
                        _NMSObfuscatableDescription, _NMSObfuscatableDescriptionItem, 
@@ -67,7 +68,8 @@ exports:
                        __SYLazyChangeArray, __SYMessageTimerContext, __SYMessageTimerTable, 
                        __SYMultiSuspendableQueue, __SYOutputDataItem, __SYOutputStreamer, 
                        __SYSharedServiceDB, __SYStreamGuts, __SYStreamerThread, 
-                       __SYWeakServiceDBRef, __SYZlibStreamInternal ]
+                       __SYWeakServiceDBRef, __SYXpcTransactionManager, 
+                       __SYZlibStreamInternal ]
     objc-ivars:      [ _SYBatchChunkAck._chunkIndex, _SYBatchChunkAck._error, 
                        _SYBatchChunkAck._header, _SYBatchChunkAck._syncID, 
                        _SYBatchSyncChunk._chunkIndex, _SYBatchSyncChunk._header, 

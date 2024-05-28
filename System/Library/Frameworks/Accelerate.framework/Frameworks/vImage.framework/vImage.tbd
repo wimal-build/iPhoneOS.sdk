@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/vImage
-current-version: 316.1
+current-version: 316.3
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _Init_vImage, _SetvImageThreadCount, _SetvImageThreadState, 

@@ -4,6 +4,7 @@ platform:        ios
 install-name:    /usr/lib/system/libsystem_containermanager.dylib
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
+    allowed-clients: [ System ]
     symbols:         [ _container_copy_info, _container_copy_info_value_for_key, 
                        _container_copy_path, _container_create_or_lookup, 
                        _container_create_or_lookup_path, _container_delete, 

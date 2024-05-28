@@ -15,8 +15,8 @@ exports:
                        _AirPlayReceiverSessionSendiAPMessage, _AirPlayReceiverSessionSetDelegate, 
                        _AirPlayReceiverSessionSetLimitedUI, _AirPlayReceiverSessionSetNightMode, 
                        _CarPlayControlClientConnect, _CarPlayControlClientCreate, 
-                       _CarPlayControlClientGetTypeID, _CarPlayControlClientStart, 
-                       _CarPlayControlClientStop, _CarPlayControllerCopyName, 
-                       _CarPlayControllerCopySourceVersion, _CarPlayControllerGetBluetoothMacAddress, 
-                       _CarPlayControllerGetTypeID ]
+                       _CarPlayControlClientDisconnect, _CarPlayControlClientGetTypeID, 
+                       _CarPlayControlClientStart, _CarPlayControlClientStop, 
+                       _CarPlayControllerCopyName, _CarPlayControllerCopySourceVersion, 
+                       _CarPlayControllerGetBluetoothMacAddress, _CarPlayControllerGetTypeID ]
 ...

@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/CloudDocs.framework/CloudDocs
-current-version: 376.3
+current-version: 376.4
 compatibility-version: 0.0
 objc-constraint: retain_release
 exports:         

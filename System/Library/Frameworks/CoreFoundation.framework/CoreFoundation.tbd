@@ -2,7 +2,7 @@
 archs:           [ armv7, armv7s, arm64 ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
-current-version: 1240.1
+current-version: 1241.11
 compatibility-version: 150.0
 objc-constraint: retain_release
 exports:         

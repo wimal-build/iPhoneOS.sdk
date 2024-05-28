@@ -44,8 +44,8 @@ exports:
                        _MSVArtworkServiceRequest, _MSVArtworkServiceResizeOperation, 
                        _MSVArtworkServiceResizeRequest, _MSVArtworkServiceResizeRequestDestination, 
                        _MSVCLICommand, _MSVCLICommandInterpreter, _MSVDistributedNotificationObserver, 
-                       _MSVFileBufferedPipe, _MSVOperationQueue, _MSVStreamReader, 
-                       _MSVStreamWriter, _MSVSystemDialog, _MSVSystemDialogOptions, 
-                       _MSVSystemDialogResponse, _MSVSystemDialogTextField, 
-                       _MSVWatchdog, _MSVXPCTransaction ]
+                       _MSVFileBufferedPipe, _MSVOperationQueue, _MSVPropertyListEncoder, 
+                       _MSVStreamReader, _MSVStreamWriter, _MSVSystemDialog, 
+                       _MSVSystemDialogOptions, _MSVSystemDialogResponse, 
+                       _MSVSystemDialogTextField, _MSVWatchdog, _MSVXPCTransaction ]
 ...

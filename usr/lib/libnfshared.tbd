@@ -31,7 +31,8 @@ exports:
                        _NFAWDTSMEnd, _NFAWDTSMStart, _NFAWDTransactionEndOfOperation, 
                        _NFAWDTransactionLastRADPU, _NFAWDVASGetData, _NFAWDVASSelect, 
                        _NFAWDVASTransactionException, _NFAWDVersionInfo, 
-                       _NFCurrency, _NFJSONEncoder, _NFMemoryObserver, 
-                       _NFPowerAssertion, _NFPowerObserver, _NFPreferenceObserver, 
-                       _NFPropertyCoder, _NFTLV, _NFTimer, _NFWeakReference ]
+                       _NFClientAppStateObserver, _NFCurrency, _NFJSONEncoder, 
+                       _NFMemoryObserver, _NFPowerAssertion, _NFPowerObserver, 
+                       _NFPreferenceObserver, _NFPropertyCoder, _NFTLV, 
+                       _NFTimer, _NFWeakReference ]
 ...

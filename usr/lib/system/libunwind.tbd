@@ -73,6 +73,7 @@ exports:
                        _unw_regname, _unw_resume, _unw_set_fpreg, _unw_set_reg, 
                        _unw_step ]
   - archs:           [ armv7, armv7s, arm64 ]
+    allowed-clients: [ System ]
     symbols:         [ __Unwind_DeleteException, __Unwind_GetCFA, __Unwind_GetDataRelBase, 
                        __Unwind_GetGR, __Unwind_GetIP, __Unwind_GetIPInfo, 
                        __Unwind_GetLanguageSpecificData, __Unwind_GetRegionStart, 

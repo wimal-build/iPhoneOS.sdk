@@ -3,7 +3,7 @@
  *  @framework MetalPerformanceShaders
  *
  *  @copyright Copyright (c) 2015 Apple Inc. All rights reserved.
- *  @abstract Metal Image thresholding filters
+ *  @abstract MetalPerformanceShaders thresholding filters
  */
 
 #ifndef MPS_MPSImageThreshold_h
@@ -13,14 +13,14 @@
 
 /*!
  *  @class      MPSImageThresholdBinary
- *  @discussion The MIThreshold filter applies a fixed-level threshold to each pixel in the image.
+ *  @discussion The MPSThreshold filter applies a fixed-level threshold to each pixel in the image.
  *              The threshold functions convert a single channel image to a binary image.
  *              If the input image is not a single channel image, convert the inputimage to a single channel
  *              luminance image using the linearGrayColorTransform and then apply the threshold.
  *              The ThresholdBinary function is:
  *                  destinationPixelValue = sourcePixelValue > thresholdValue ? maximumValue : 0
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageThresholdBinary : MPSUnaryImageKernel
 
 /*!
@@ -34,7 +34,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
                         thresholdValue: (float)thresholdValue
                           maximumValue: (float)maximumValue
-              linearGrayColorTransform: (nullable const float *)transform       NS_DESIGNATED_INITIALIZER;
+              linearGrayColorTransform: (const float * __nullable)transform       NS_DESIGNATED_INITIALIZER;
 
 /* You must use initWithDevice:thresholdValue:maximumValue:linearGrayColorTransform: instead */
 -(nonnull instancetype) initWithDevice:(nonnull id<MTLDevice>)device            NS_UNAVAILABLE;
@@ -66,7 +66,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *              The ThresholdBinaryInverse function is:
  *                  destinationPixelValue = sourcePixelValue > thresholdValue ? 0 : maximumValue
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageThresholdBinaryInverse : MPSUnaryImageKernel
 
 /*!
@@ -80,7 +80,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
                         thresholdValue: (float)thresholdValue
                           maximumValue: (float)maximumValue
-              linearGrayColorTransform: (nullable const float *)transform       NS_DESIGNATED_INITIALIZER;
+              linearGrayColorTransform: (const float * __nullable)transform       NS_DESIGNATED_INITIALIZER;
 
 /* You must use initWithDevice:thresholdValue:maximumValue:linearGrayColorTransform: instead */
 -(nonnull instancetype) initWithDevice:(nonnull id<MTLDevice>)device            NS_UNAVAILABLE;
@@ -111,7 +111,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *              The ThresholdTruncate function is:
  *                  destinationPixelValue = sourcePixelValue > thresholdValue ? thresholdValue : sourcePixelValue
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageThresholdTruncate : MPSUnaryImageKernel
 
 /*! 
@@ -123,7 +123,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  */
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
                         thresholdValue: (float)thresholdValue
-              linearGrayColorTransform: (nullable const float *)transform       NS_DESIGNATED_INITIALIZER;
+              linearGrayColorTransform: (const float * __nullable)transform       NS_DESIGNATED_INITIALIZER;
 
 /* You must use initWithDevice:thresholdValue:linearGrayColorTransform: instead */
 -(nonnull instancetype) initWithDevice:(nonnull id<MTLDevice>)device            NS_UNAVAILABLE;
@@ -150,7 +150,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *              The ThresholdToZero function is:
  *                  destinationPixelValue = sourcePixelValue > thresholdValue ? sourcePixelValue : 0
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageThresholdToZero : MPSUnaryImageKernel
 
 /*!
@@ -162,7 +162,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  */
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
                         thresholdValue: (float)thresholdValue
-              linearGrayColorTransform: (nullable const float *)transform       NS_DESIGNATED_INITIALIZER;
+              linearGrayColorTransform: (const float * __nullable)transform       NS_DESIGNATED_INITIALIZER;
 
 /* You must use initWithDevice:thresholdValue:linearGrayColorTransform: instead */
 -(nonnull instancetype) initWithDevice:(nonnull id<MTLDevice>)device            NS_UNAVAILABLE;
@@ -188,7 +188,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *              The ThresholdToZeroINverse function is:
  *                  destinationPixelValue = sourcePixelValue > thresholdValue ? 0 : sourcePixelValue
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageThresholdToZeroInverse : MPSUnaryImageKernel
 
 /*!
@@ -200,7 +200,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  */
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
                         thresholdValue: (float)thresholdValue
-              linearGrayColorTransform: (nullable const float *)transform       NS_DESIGNATED_INITIALIZER;
+              linearGrayColorTransform: (const float * __nullable)transform       NS_DESIGNATED_INITIALIZER;
 
 /* You must use initWithDevice:thresholdValue:linearGrayColorTransform: instead */
 -(nonnull instancetype) initWithDevice:(nonnull id<MTLDevice>)device            NS_UNAVAILABLE;

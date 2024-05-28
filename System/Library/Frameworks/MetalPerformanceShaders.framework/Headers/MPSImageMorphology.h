@@ -3,7 +3,7 @@
  *  @framework MetalPerformanceShaders
  *
  *  @copyright Copyright (c) 2015 Apple Inc. All rights reserved.
- *  @abstract Metal Image morphological operators
+ *  @abstract MetalPerformanceShaders morphological operators
  */
 
 #ifndef MPS_MPSImageMorphology_h
@@ -18,7 +18,7 @@
  *              in the source image. If there are multiple channels in the source image, each channel is processed independently.
  *              The edgeMode property is assumed to always be MPSImageEdgeModeClamp for this filter.
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageAreaMax : MPSUnaryImageKernel
 
 /*! @property kernelHeight
@@ -54,14 +54,14 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *               It has the same methods as MPSImageAreaMax
  *               The edgeMode property is assumed to always be MPSImageEdgeModeClamp for this filter.
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageAreaMin : MPSImageAreaMax
 
 @end  /* MPSImageAreaMin */
 
 /*!
  *  @class      MPSImageDilate
- *  @discussion The MIDilateFilter finds the maximum pixel value in a rectangular region centered around each pixel in the
+ *  @discussion The MPSImageDilate finds the maximum pixel value in a rectangular region centered around each pixel in the
  *              source image. It is like the MPSImageAreaMax, except that the intensity at each position is calculated relative
  *              to a different value before determining which is the maximum pixel value, allowing for shaped, non-rectangular
  *              morphological probes.
@@ -78,7 +78,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *
  *              The edgeMode property is assumed to always be MPSImageEdgeModeClamp for this filter.
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageDilate : MPSUnaryImageKernel
 /*! @property kernelHeight
  *  @abstract  The height of the filter window. Must be an odd number.
@@ -112,7 +112,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
                            kernelWidth: (NSUInteger)kernelWidth
                           kernelHeight: (NSUInteger)kernelHeight
-                                values: (nonnull const float*) values       NS_DESIGNATED_INITIALIZER;
+                                values: (const float* __nonnull) values       NS_DESIGNATED_INITIALIZER;
 
 /* You must use initWithDevice:kernelWidth:kernelHeight:values: instead. */
 -(nonnull instancetype) initWithDevice:(nonnull id<MTLDevice>)device        NS_UNAVAILABLE;
@@ -137,11 +137,11 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *              A filter that contains all zeros is identical to a MPSImageAreaMin filter. The center filter element
  *              is assumed to be 0, to avoid causing a general lightening of the image.
  *
- *              The definition of the filter for MPSImageErode is different from vImage. (MIErode_filter_value = 1.0f-vImageErode_filter_value.)
+ *              The definition of the filter for MPSImageErode is different from vImage. (MPSErode_filter_value = 1.0f-vImageErode_filter_value.)
  *              This allows MPSImageDilate and MPSImageErode to use the same filter, making open and close operators easier to write.
  *              The edgeMode property is assumed to always be MPSImageEdgeModeClamp for this filter.
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageErode : MPSImageDilate
 @end
 

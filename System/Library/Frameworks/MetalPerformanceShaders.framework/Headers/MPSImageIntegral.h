@@ -3,7 +3,7 @@
  *  @framework MetalPerformanceShaders.framework
  *
  *  @copyright Copyright (c) 2015 Apple Inc. All rights reserved.
- *  @abstract Metal Image integral filters
+ *  @abstract MetalPerformanceShaders integral filters
  */
 
 #ifndef MPS_MPSImageIntegral_h
@@ -24,7 +24,7 @@
  *              If the channels in the source image are integer values, it is recommended that
  *              an appropriate 32-bit integer image destination format is used.
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageIntegral : MPSUnaryImageKernel
 
 @end    /* MPSImageIntegral */
@@ -43,7 +43,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *              If the channels in the source image are integer values, it is recommended that
  *              an appropriate 32-bit integer image destination format is used.
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageIntegralOfSquares : MPSUnaryImageKernel
 
 @end    /* MPSImageIntegralOfSquares */

@@ -3,7 +3,7 @@
  *  @framework MetalPerformanceShaders.framework
  *
  *  @copyright Copyright (c) 2015 Apple Inc. All rights reserved.
- *  @abstract Metal Image filter base classes
+ *  @abstract MetalPerformanceShaders filter base classes
  */
 
 #ifndef _MPS_MPSImageKernel_
@@ -16,7 +16,7 @@
  *  @dependency This depends on Metal.framework
  *  @discussion A MPSUnaryImageKernel consumes one MTLTexture and produces one MTLTexture.
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface MPSUnaryImageKernel : MPSKernel
 
 
@@ -25,7 +25,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *  @discussion The offset is defined to be the position of clipRect.origin in source coordinates.
  *              Default: {0,0,0}, indicating that the top left corners of the clipRect and source image align.
  *
- *              See Also: @ref subsubsection_mioffset
+ *              See Also: @ref subsubsection_mpsoffset
  */
 @property (readwrite, nonatomic) MPSOffset                offset;
 
@@ -122,6 +122,11 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *  [sobelFilter release];  // if not ARC, clean up the MPSImageSobel object
  *  @endcode
  *
+ *  Note: Image filters that look at neighboring pixel values may actually consume more
+ *        memory when operating in place than out of place. Many such operations are
+ *        tiled internally to save intermediate texture storage, but can not tile when
+ *        operating in place. The memory savings for tiling is however very short term,
+ *        typically the lifetime of the MTLCommandBuffer.
  *
  *  @abstract   Attempt to apply a MPSKernel to a texture in place.
  *  @param      commandBuffer       A valid MTLCommandBuffer to receive the encoded filter
@@ -140,7 +145,8 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  */
 -(BOOL)    encodeToCommandBuffer: (nonnull id <MTLCommandBuffer>)commandBuffer
                   inPlaceTexture: (__nonnull id <MTLTexture> __strong * __nonnull) texture
-           fallbackCopyAllocator: (nullable MPSCopyAllocator) copyAllocator;
+           fallbackCopyAllocator: (nullable MPSCopyAllocator) copyAllocator
+                MPS_SWIFT_NAME(encode(commandBuffer:inPlaceTexture:fallbackCopyAllocator:));
 
 
 /*!
@@ -151,7 +157,8 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  */
 -(void) encodeToCommandBuffer: (nonnull id <MTLCommandBuffer>) commandBuffer
                 sourceTexture: (nonnull id <MTLTexture>) sourceTexture
-           destinationTexture: (nonnull id <MTLTexture>) destinationTexture;
+           destinationTexture: (nonnull id <MTLTexture>) destinationTexture
+            MPS_SWIFT_NAME(encode(commandBuffer:sourceTexture:destinationTexture:));
 
 
 /*!
@@ -180,7 +187,8 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *  @param      destinationSize The size of the full virtual destination image.
  *  @return     The area in the virtual source image that will be read.
  */
--(MPSRegion) sourceRegionForDestinationSize: (MTLSize) destinationSize;
+-(MPSRegion) sourceRegionForDestinationSize: (MTLSize) destinationSize
+            MPS_SWIFT_NAME(sourceRegion(destinationSize:));
 
 @end
 
@@ -191,7 +199,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *  @dependency This depends on Metal.framework
  *  @discussion A MPSBinaryImageKernel consumes two MTLTextures and produces one MTLTexture.
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface MPSBinaryImageKernel : MPSKernel
 
 /*! @property   primaryOffset
@@ -199,7 +207,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *  @discussion The offset is defined to be the position of clipRect.origin in source coordinates.
  *              Default: {0,0,0}, indicating that the top left corners of the clipRect and primary source image align.
  *
- *              See Also: @ref subsubsection_mioffset
+ *              See Also: @ref subsubsection_mpsoffset
  */
 @property (readwrite, nonatomic) MPSOffset                primaryOffset;
 
@@ -208,7 +216,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *  @discussion The offset is defined to be the position of clipRect.origin in source coordinates.
  *              Default: {0,0,0}, indicating that the top left corners of the clipRect and primary source image align.
  *
- *              See Also: @ref subsubsection_mioffset
+ *              See Also: @ref subsubsection_mpsoffset
  */
 @property (readwrite, nonatomic) MPSOffset                secondaryOffset;
 
@@ -278,6 +286,12 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *  released, *texture remains unmodified and NO is returned.  Please see the
  *  MPSCopyAllocator definition for a sample allocator implementation.
  *
+ *  Note: Image filters that look at neighboring pixel values may actually consume more
+ *        memory when operating in place than out of place. Many such operations are
+ *        tiled internally to save intermediate texture storage, but can not tile when
+ *        operating in place. The memory savings for tiling is however very short term,
+ *        typically the lifetime of the MTLCommandBuffer.
+ *
  *  @abstract   Attempt to apply a MPSKernel to a texture in place.
  *  @param      commandBuffer           A valid MTLCommandBuffer to receive the encoded filter
  *  @param      primaryTexture          A pointer to a valid MTLTexture containing the
@@ -325,6 +339,12 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *  and YES will be returned. If the allocator returns an invalid texture, it is
  *  released, *texture remains unmodified and NO is returned.  Please see the
  *  MPSCopyAllocator definition for a sample allocator implementation.
+ *
+ *  Note: Image filters that look at neighboring pixel values may actually consume more
+ *        memory when operating in place than out of place. Many such operations are
+ *        tiled internally to save intermediate texture storage, but can not tile when
+ *        operating in place. The memory savings for tiling is however very short term,
+ *        typically the lifetime of the MTLCommandBuffer.
  *
  *  @abstract   Attempt to apply a MPSKernel to a texture in place.
  *  @param      commandBuffer           A valid MTLCommandBuffer to receive the encoded filter
@@ -419,4 +439,4 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
 
 @end
 
-#endif /* defined(_MetalSmartShaders_MSImageKernel_) */
+#endif /* defined(_MetalPerformanceShaders_MSImageKernel_) */

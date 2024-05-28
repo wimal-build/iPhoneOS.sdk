@@ -24,7 +24,7 @@ extern "C" {
  *  @return     YES             The device is supported.
  *              NO              The device is not supported
  */
-BOOL    MPSSupportsMTLDevice( __nullable id <MTLDevice> device );
+BOOL    MPSSupportsMTLDevice( __nullable id <MTLDevice> device )  MPS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0);
 
 
 /*!
@@ -84,7 +84,7 @@ BOOL    MPSSupportsMTLDevice( __nullable id <MTLDevice> device );
  *                  @endcode
  */
 
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface MPSKernel  : NSObject <NSCopying>
 
 /****************
@@ -120,7 +120,8 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *              nil if the device is not supported. Devices must be 
  *              MTLFeatureSet_iOS_GPUFamily2_v1 or later.
  */
--(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device     NS_DESIGNATED_INITIALIZER;
+-(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
+                        NS_DESIGNATED_INITIALIZER;
 
 
 /*!

@@ -14,9 +14,15 @@
 /*!
  *  @class      MPSImageConvolution
  *  @discussion The MPSImageConvolution convolves an image with given filter of odd width and height.
- *              Filter width/height can be either 3,5,7 or 9.
- *              For a separable filter, it will be more performant to run this filter as a 1-dimensional
- *              filter in each dimension separately.
+ *              The center of the kernel aligns with the MPSImageConvolution.offset. That is, the position 
+ *              of the top left corner of the area covered by the kernel is given by 
+ *              MPSImageConvolution.offset - {kernel_width>>1, kernel_height>>1, 0}
+ *
+ *              Optimized cases include 3x3,5x5,7x7,9x9,11x11, 1xN and Nx1. If a convolution kernel 
+ *              does not fall into one of these cases but is a rank-1 matrix (a.k.a. separable)
+ *              then it will fall on an optimzied separable path. Other convolutions will execute with
+ *              full MxN complexity.
+ *
  *              If there are multiple channels in the source image, each channel is processed independently.
  *  
  *  @performance Separable convolution filters may perform better when done in two passes. A convolution filter
@@ -39,7 +45,7 @@
  *
  */
 
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageConvolution : MPSUnaryImageKernel
 
 /*! @property kernelHeight
@@ -78,8 +84,37 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
                            kernelWidth: (NSUInteger)kernelWidth
                           kernelHeight: (NSUInteger)kernelHeight
-                               weights: (nonnull const float*)kernelWeights     NS_DESIGNATED_INITIALIZER;
+                               weights: (const float*__nonnull)kernelWeights     NS_DESIGNATED_INITIALIZER;
 
+
+@end
+
+
+/*!
+ *  @class      MPSImageLaplacian
+ *  @discussion The MPSImageLaplacian is an optimized variant of the MPSImageConvolution filter provided primarily for ease of use.
+ *              This filter uses an optimized convolution filter with a 3 x 3 kernel with the following weights:
+ *                  [ 0  1  0
+ *                    1 -4  1
+ *                    0  1  0 ]
+ *
+ *              The optimized convolution filter used by MPSImageLaplacian can also be used by creating a MPSImageConvolution
+ *              object with kernelWidth = 3, kernelHeight = 3 and weights as specified above.
+ */
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_12, __IPHONE_10_0, __TVOS_10_0)
+@interface  MPSImageLaplacian : MPSUnaryImageKernel
+
+/*! @property    bias
+ *  @discussion  The bias is a value to be added to convolved pixel before it is converted back to the storage format.
+ *               It can be used to convert negative values into a representable range for a unsigned MTLPixelFormat.
+ *               For example, many edge detection filters produce results in the range [-k,k]. By scaling the filter
+ *               weights by 0.5/k and adding 0.5, the results will be in range [0,1] suitable for use with unorm formats.
+ *               It can be used in combination with renormalization of the filter weights to do video ranging as part
+ *               of the convolution effect. It can also just be used to increase the brightness of the image.
+ *
+ *               Default value is 0.0f.
+ */
+@property (readwrite, nonatomic) float bias;
 
 @end
 
@@ -88,12 +123,12 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *  @class      MPSImageBox
  *  @discussion The MPSImageBox convolves an image with given filter of odd width and height. The kernel elements
  *              all have equal weight, achieving a blur effect. (Each result is the unweighted average of the
- *              surrounding pixels.) This allows for much faster algorithms, espcially for for larger blur radii.
+ *              surrounding pixels.) This allows for much faster algorithms, espcially for larger blur radii.
  *              The box height and width must be odd numbers. The box blur is a separable filter. The implementation 
  *              is aware of this and will act accordingly to give best performance for multi-dimensional blurs.
  */
 
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageBox : MPSUnaryImageKernel
 
 
@@ -152,6 +187,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *              The tent blur is a separable filter. The implementation is aware of this and will act accordingly
  *              to give best performance for multi-dimensional blurs.
  */
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface MPSImageTent : MPSImageBox
 
 @end
@@ -169,7 +205,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *                  to be suitable for all common image processing needs demanding ~10 bits of precision or
  *                  less.
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageGaussianBlur : MPSUnaryImageKernel
 
 /*! @abstract   Initialize a gaussian blur filter for a particular sigma and device
@@ -208,7 +244,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *
  *                  Luminance = v[0] * pixel.x + v[1] * pixel.y + v[2] * pixel.z;
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageSobel : MPSUnaryImageKernel
 
 /*! @abstract   Initialize a Sobel filter on a given device using the default color 
@@ -230,7 +266,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *  @return     A valid object or nil, if failure.
  */
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
-              linearGrayColorTransform: (nonnull const float *) transform      NS_DESIGNATED_INITIALIZER;
+              linearGrayColorTransform: (const float * __nonnull) transform      NS_DESIGNATED_INITIALIZER;
 
 /*! @property    colorTransform
  *  @discussion  Returns a pointer to the array of three floats used to convert RGBA, RGB or RG images
@@ -239,5 +275,117 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
 @property (readonly, nonatomic, nonnull) const float* colorTransform;
 
 @end  /* MPSImageSobel */
+
+
+
+/*!
+ *  @class      MPSImagePyramid
+ *  @discussion The MPSImagePyramid is a base class for creating different kinds of pyramid images
+ *
+ *              Currently supported pyramid-types are:
+ *              @ref MPSImageGaussianPyramid
+ *
+ *              The Gaussian image pyramid kernel is enqueued as a in-place operation using
+ *              @ref MPSUnaryImageKernel::encodeToCommandBuffer:inPlaceTexture:fallbackCopyAllocator:
+ *              and all mipmap levels after level=1, present in the provided image are filled using
+ *              the provided filtering kernel. The fallbackCopyAllocator parameter is not used.
+ *
+ *              The Gaussian image pyramid filter ignores @ref clipRect and @ref offset and fills
+ *              the entire mipmap levels.
+ *
+ *  @note       Make sure your texture type is compatible with mipmapping and supports texture views
+ *                  (see @ref MTLTextureUsagePixelFormatView).
+ *  @note       Recall the size of the nth mipmap level:
+ *              @code
+ *                  w_n = max(1, floor(w_0 / 2^n))
+ *                  h_n = max(1, floor(h_0 / 2^n)),
+ *              @endcode
+ *              where w_0, h_0 are the zeroth level width and height. ie the image dimensions themselves.
+ */
+
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_12, __IPHONE_10_0, __TVOS_10_0)
+@interface  MPSImagePyramid : MPSUnaryImageKernel
+
+/*! @abstract   Initialize a downwards 5-tap image pyramid with the default filter kernel and device
+ *  @param      device  The device the filter will run on
+ *
+ *  @discussion The filter kernel is the outer product of w = [ 1/16,  1/4,  3/8,  1/4,  1/16 ]^T, with itself
+ *
+ *  @return     A valid object or nil, if failure.
+ */
+
+-(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device;
+
+
+/*! @abstract   Initialize a downwards 5-tap image pyramid with a central weight parameter and device
+ *  @param      device  The device the filter will run on
+ *  @param      centerWeight Defines form of the filter-kernel  through the outer product ww^T, where
+ *              w = [ (1/4 - a/2),  1/4,  a,  1/4,  (1/4 - a/2) ]^T and 'a' is centerWeight.
+ *
+ *  @return     A valid object or nil, if failure.
+ */
+
+-(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
+                          centerWeight: (float) centerWeight;
+
+
+/*! @abstract   Initialize a downwards n-tap pyramid with a custom filter kernel and device
+ *  @param      device  The device the filter will run on
+ *  @param      kernelWidth The width of the filtering kernel. See @ref MPSImageConvolution.
+ *  @param      kernelHeight    The height of the filtering kernel. See @ref MPSImageConvolution.
+ *  @param      kernelWeights   A pointer to an array of kernelWidth * kernelHeight values to be
+ *                              used as the kernel.
+ *                              These are in row major order. See @ref MPSImageConvolution.
+ *
+ *  @return     A valid object or nil, if failure.
+ */
+
+-(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
+                           kernelWidth: (NSUInteger)kernelWidth
+                          kernelHeight: (NSUInteger)kernelHeight
+                               weights: (const float*__nonnull)kernelWeights NS_DESIGNATED_INITIALIZER;
+
+
+/*! @property kernelHeight
+ *  @abstract  The height of the filter window. Must be an odd number.
+ */
+@property (readonly, nonatomic)   NSUInteger  kernelHeight;
+
+/*! @property kernelWidth
+ *  @abstract  The width of the filter window. Must be an odd number.
+ */
+@property (readonly, nonatomic)   NSUInteger  kernelWidth;
+
+
+
+@end
+
+/*!
+ *  @class      MPSImageGaussianPyramid
+ *  @discussion The Gaussian image pyramid is constructed as follows:
+ *              First the zeroth level mipmap of the input image is filtered with the specified
+ *              convolution kernel.
+ *              The default the convolution filter kernel is
+ *              @code
+ *                  k = w w^T, where w = [ 1/16,  1/4,  3/8,  1/4,  1/16 ]^T,
+ *              @endcode
+ *              but the user may also tweak this kernel with a @ref centerWeight parameter: 'a':
+ *              @code
+ *                  k = w w^T, where w = [ (1/4 - a/2),  1/4,  a,  1/4,  (1/4 - a/2) ]^T
+ *              @endcode
+ *              or the user can provide a completely custom kernel. After this the image is downsampled by
+ *              removing all odd rows and columns, which defines the next level in the Gaussian image pyramid.
+ *              This procedure is continued until every mipmap level present in the image texture are
+ *              filled with the pyramid levels.
+ *
+ *              In case of the Gaussian pyramid the user must run the operation in-place using:
+ *              @ref MPSUnaryImageKernel::encodeToCommandBuffer:inPlaceTexture:fallbackCopyAllocator:,
+ *              where the fallback allocator is ignored.
+ */
+
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_12, __IPHONE_10_0, __TVOS_10_0)
+@interface  MPSImageGaussianPyramid : MPSImagePyramid
+@end
+
 
 #endif    /* MPS_MSImageConvolution_h */

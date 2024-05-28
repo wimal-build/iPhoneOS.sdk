@@ -3,7 +3,7 @@
  *  @framework MetalPerformanceShaders.framework
  *
  *  @copyright Copyright (c) 2015 Apple Inc. All rights reserved.
- *  @abstract Metal Image histogram filters
+ *  @abstract MetalPerformanceShaders histogram filters
  */
 
 #ifndef MPS_MPSImageHistogram_h
@@ -28,14 +28,14 @@ typedef struct
  *  @discussion The MPSImageHistogram computes the histogram of an image.
  *              
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageHistogram : MPSKernel
 
 /*! @property   clipRectSource
  *  @abstract   The source rectangle to use when reading data.
  *  @discussion A MTLRegion that indicates which part of the source to read. If the clipRectSource does not lie
  *              completely within the source image, the intersection of the image bounds and clipRectSource will
- *              be used. The clipRectSource replaces the MPSUnaryImageKernel origin parameter for this filter.
+ *              be used. The clipRectSource replaces the MPSUnaryImageKernel offset parameter for this filter.
  *              The latter is ignored.   Default: MPSRectNoClip, use the entire source texture.
  */
 @property (readwrite, nonatomic) MTLRegion clipRectSource;
@@ -62,7 +62,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  */
 
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
-                         histogramInfo: (nonnull const MPSImageHistogramInfo *) histogramInfo     NS_DESIGNATED_INITIALIZER;
+                         histogramInfo: (const MPSImageHistogramInfo * __nonnull) histogramInfo     NS_DESIGNATED_INITIALIZER;
 
 
 /*!
@@ -128,7 +128,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *              they will probably not be equalized by it.) This filter usually will not be able 
  *              to work in place.
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageHistogramEqualization : MPSUnaryImageKernel
 
 /*! @property   histogramInfo
@@ -146,7 +146,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  */
 
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
-                         histogramInfo: (nonnull const MPSImageHistogramInfo *) histogramInfo     NS_DESIGNATED_INITIALIZER;
+                         histogramInfo: (const MPSImageHistogramInfo * __nonnull) histogramInfo     NS_DESIGNATED_INITIALIZER;
 
 /*!
  *  @abstract Encode the transform function to a command buffer using a MTLComputeCommandEncoder.
@@ -186,7 +186,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  *              converts the image so that its histogram matches the desired histogram.
  *
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageHistogramSpecification : MPSUnaryImageKernel
 
 /*! @property   histogramInfo
@@ -228,7 +228,7 @@ NS_CLASS_AVAILABLE( NA, 9_0  )
  */
 
 -(nonnull instancetype) initWithDevice: (nonnull id <MTLDevice>) device
-                         histogramInfo: (nonnull const MPSImageHistogramInfo *) histogramInfo     NS_DESIGNATED_INITIALIZER;
+                         histogramInfo: (const MPSImageHistogramInfo * __nonnull) histogramInfo     NS_DESIGNATED_INITIALIZER;
 
 
 /*!

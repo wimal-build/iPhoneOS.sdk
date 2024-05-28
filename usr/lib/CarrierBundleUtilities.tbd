@@ -1,7 +1,10 @@
----
+--- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
+uuids:           [ 'armv7: 7EFEAB07-8266-3018-B71C-7962804D0C41', 'armv7s: E7314EBD-D03D-33AC-B04C-30678297B6C1', 
+                   'arm64: 98D36CBD-EB77-3754-820A-8AF849105238' ]
 platform:        ios
 install-name:    /usr/lib/CarrierBundleUtilities.dylib
+objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
     weak-def-symbols: [ __ZTI15DigestGenerator, __ZTINSt3__120__shared_ptr_emplaceI18DigestGenerator160NS_9allocatorIS1_EEEE, 
@@ -30,17 +33,17 @@ exports:
                        __ZN11ComputeHash13digest_lengthEl, __ZN11ComputeHash13digest_stringEN3ctu2cf11CFSharedRefIK10__CFStringEE, 
                        __ZN11ComputeHash15get_digest_sizeEv, __ZN11ComputeHash17digest_plist_fileEPKc, 
                        __ZN11ComputeHash18setDigestGeneratorENSt3__110shared_ptrI15DigestGeneratorEE, 
-                       __ZN11ComputeHash4initEv, __ZN11ComputeHash8finalizeEv, 
-                       __ZN11ComputeHashC1Ev, __ZN11ComputeHashC2Ev, __ZN11ComputeHashD1Ev, 
-                       __ZN11ComputeHashD2Ev, __ZN17FileSystemManager10removeItemERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_, 
+                       __ZN11ComputeHash4initEv, __ZN11ComputeHash8finalizeEv, __ZN11ComputeHashC1Ev, 
+                       __ZN11ComputeHashC2Ev, __ZN11ComputeHashD1Ev, __ZN11ComputeHashD2Ev, 
+                       __ZN17FileSystemManager10removeItemERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_, 
                        __ZN17FileSystemManager11isDirectoryERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
                        __ZN17FileSystemManager12isHiddenFileERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
                        __ZN17FileSystemManager13isRegularFileERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
                        __ZN17FileSystemManager16getFileExtensionERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERS6_, 
                        __ZN17FileSystemManager18dictionaryFromPathERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
-                       __ZN17FileSystemManager18fileContentsAtPathEPKc, 
-                       __ZN17FileSystemManager20copyBinaryPlistAsXMLERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
+                       __ZN17FileSystemManager18fileContentsAtPathEPKc, __ZN17FileSystemManager20copyBinaryPlistAsXMLERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
                        __ZN17FileSystemManager23directoryContentsAtPathERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERNS0_4listIS6_NS4_IS6_EEEEb, 
+                       __ZN17FileSystemManager31getFileNameWithExtensionRemovedERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERS6_, 
                        __ZN17FileSystemManager7dirnameERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
                        __ZN17FileSystemManager8basenameERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
                        __ZN17FileSystemManager8copyItemERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_, 
@@ -56,9 +59,8 @@ exports:
                        __ZN18DigestGenerator256C1Ev, __ZN18DigestGenerator256C2Ev, 
                        __ZN19CBSignUtilityLogger10myInstanceE, __ZN19CBSignUtilityLogger13getMyInstanceEv, 
                        __ZN19CBSignUtilityLogger14getLogFunctionEv, __ZN19CBSignUtilityLogger14setLogFunctionEPFvPKcE, 
-                       __ZN19CBSignUtilityLogger17destroyMyInstanceEv, 
-                       __ZN19CBSignUtilityLoggerC1Ev, __ZN19CBSignUtilityLoggerC2Ev, 
-                       __ZN27ComputeHashForCarrierBundle18getDeviceModelNameERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
+                       __ZN19CBSignUtilityLogger17destroyMyInstanceEv, __ZN19CBSignUtilityLoggerC1Ev, 
+                       __ZN19CBSignUtilityLoggerC2Ev, __ZN27ComputeHashForCarrierBundle18getDeviceModelNameERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
                        __ZN27ComputeHashForCarrierBundle21computeDigestForFilesERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERNS0_13unordered_mapIS6_NS0_6vectorINS0_4pairIS6_N3ctu2cf11CFSharedRefIK8__CFDataEEEENS4_ISI_EEEENS0_4hashIS6_EENS0_8equal_toIS6_EENS4_INSB_IS7_SK_EEEEEES8_R11ComputeHash, 
                        __ZN27ComputeHashForCarrierBundle28printDeviceModelFilesMappingERKNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS0_4listIS7_NS5_IS7_EEEENS0_4lessIS7_EENS5_INS0_4pairIKS7_SA_EEEEEE, 
                        __ZN27ComputeHashForCarrierBundle32computeCBDigestForAllDeviceModelERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERNS0_3mapIS6_N3ctu2cf11CFSharedRefIK8__CFDataEENS0_4lessIS6_EENS4_INS0_4pairIS7_SF_EEEEEER11ComputeHash, 
@@ -66,7 +68,6 @@ exports:
                        __ZTI11ComputeHash, __ZTI18DigestGenerator160, __ZTI18DigestGenerator256, 
                        __ZTS11ComputeHash, __ZTS18DigestGenerator160, __ZTS18DigestGenerator256, 
                        __ZTV11ComputeHash, __ZTV18DigestGenerator160, __ZTV18DigestGenerator256, 
-                       _development_pubkeysize, _pkcs1_development_pubkey, 
-                       _pkcs1_production_pubkey, _pkcs1_production_pubkey2, 
-                       _production_pubkeysize, _production_pubkeysize2 ]
+                       _development_pubkeysize, _pkcs1_development_pubkey, _pkcs1_production_pubkey, 
+                       _pkcs1_production_pubkey2, _production_pubkeysize, _production_pubkeysize2 ]
 ...

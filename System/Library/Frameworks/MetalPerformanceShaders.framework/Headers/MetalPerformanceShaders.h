@@ -5,6 +5,8 @@
  *  @copyright Copyright (c) 2015 Apple Inc. All rights reserved.
  */
 
+#import <MetalPerformanceShaders/MPSCNN.h>
+#import <MetalPerformanceShaders/MPSImageConversion.h>
 #import <MetalPerformanceShaders/MPSImageConvolution.h>
 #import <MetalPerformanceShaders/MPSImageHistogram.h>
 #import <MetalPerformanceShaders/MPSImageIntegral.h>
@@ -13,6 +15,7 @@
 #import <MetalPerformanceShaders/MPSImageResampling.h>
 #import <MetalPerformanceShaders/MPSImageThreshold.h>
 #import <MetalPerformanceShaders/MPSImageTranspose.h>
+#import <MetalPerformanceShaders/MPSMatrixMultiplication.h>
 
 
 //
@@ -33,13 +36,44 @@
  *  MetalPerformanceShaders.framework is a framework of highly optimized compute and graphics shaders that are
  *  designed to integrate easily and efficiently into your Metal application.  These data-parallel 
  *  primitives are specially tuned to take advantage of the unique hardware characteristics of each
- *  iOS GPUs to ensure optimal performance. Applications adopting MetalPerformanceShaders can be sure of achieving 
+ *  iOS GPU to ensure optimal performance. Applications adopting MetalPerformanceShaders can be sure of achieving
  *  optimal performance without needing to update their own hand-written shaders for each new iOS GPU 
  *  generation. MetalPerformanceShaders can be used along with the application's existing Metal resources (such as 
  *  the MTLCommandBuffer, MTLBuffer and MTLTexture objects) and shaders.
  *
  *  In iOS 9, MetalPerformanceShaders.framework provides a series of commonly-used image processing primitives for 
  *  image effects on Metal textures.
+ *
+ *  In iOS 10, MetalPerformanceShaders.framework adds support for the following kernels:
+ *  -  collection of kernels to implement and run neural networks using previously obtained training data, on the GPU
+ *  -  new image processing filters to perform color-conversion and for building a gaussian pyramid
+ *
+ *  @section section_data    Data containers
+ *  @subsection subsection_metal_containers  MTLTextures and MTLBuffers
+ *
+ *  Most data operated on by Metal Performance Shaders must be in a portable data container appropriate
+ *  for use on the GPU, such as a MTLTexture, MTLBuffer or MPSImage.  The first two should be 
+ *  self-explanatory based on your previous experience with Metal.framework. MPS will use these
+ *  directly when it can.
+ *
+ *  @subsection subsection_mpsimage  MPSImages
+ *  Convolutional neural networking (CNN) filters may need more than the four data channels that a
+ *  MTLTexture can provide. In these cases, the MPSImage is used instead as an abstraction
+ *  layer on top of a MTLTexture. When more than 4 channels are needed, additional textures in the texture2d 
+ *  array are added to hold additional channels in sets of four. The MPSImage tracks this information as the 
+ *  number of "feature channels" in an image.
+ *
+ *  @subsection subsection_mpstemporaryimage  MPSTemporaryImages
+ *  The MPSTemporaryImage (subclass of MPSImage) extends the MPSImage to provide advanced caching of
+ *  unused memory to increase performance and reduce memory footprint. They are intended as fast
+ *  GPU-only storage for intermediate image data needed only transiently within a single MTLCommandBuffer.
+ *  They accelerate the common case of image data which is created only to be consumed and destroyed
+ *  immediately by the next operation(s) in a MTLCommandBuffer.  MPSTemporaryImages provide convenient and 
+ *  simple way to save memory by automatically aliasing other MPSTemporaryImages in the MTLCommandBuffer.
+ *  Because they alias (share texel storage with) other textures in the same MTLCommandBuffer, the valid 
+ *  lifetime of the data in a MPSTeporaryImage is extremely short, limited to a portion of a MTLCommandBuffer. 
+ *  You can not read or write data to a MPSTemporaryImage using the CPU, or use the data in other MTLCommandBuffers.
+ *  Use regular MPSImages for more persistent storage.
  *
  *  @section section_discussion     The MPSKernel
  *
@@ -68,15 +102,15 @@
  *  -#  Allocate the usual Metal objects: MTLDevice, MTLCommandQueue, and MTLCommandBuffer 
  *      to drive a Metal compute pipeline. If your application already uses Metal, chances are you 
  *      have most of these things already. MPS will fit right in to this workflow. It can 
- *      encode onto MTLCommandBuffers that you have already written to, using a MTLComputeCommandEncoder 
- *      that you have previously used.
+ *      encode onto MTLCommandBuffers inline with your own workload.
  *
  *  -#  Create an appropriate MPSKernel object. For example, if you want to do a Gaussian blur, make
  *      a MPSImageGaussianBlur object.  MPSKernel objects are generally light weight but can be reused
  *      to save some setup time. They can not be used by multiple threads concurrently, so if you
- *      are using Metal from many threads concurrently, make extra MPSKernel objects.
+ *      are using Metal from many threads concurrently, make extra MPSKernel objects. MPSKernel objects
+ *      conform to <NSCopying>.
  *
- *  -#  Call [MPSKernelSubclass  encodeToCommandBuffer:...]. Parameters for other -encodeKernel calls
+ *  -#  Call [MPSKernelSubclass  encodeToCommandBuffer:...]. Parameters for other -encode... calls
  *      vary by filter type, but operate similarly. They create a MTLCommandEncoder, write commands to 
  *      run the filter into the MTLCommandBuffer and then end the MTLCommandEncoder.  This means
  *      you must call -endEncoding on your current MTLCommandEncoder before calling a MPSKernel encode
@@ -169,8 +203,7 @@
  *                                              MPSKernel that the destination storage format already has too much precision for
  *                                              what is ultimately required downstream, and the MPSKernel may use reduced precision
  *                                              internally when it feels that a less precise result would yield better performance.
- *                                              The expected performance win is often small, perhaps 0-20%. When enabled, the
- *                                              precision of the result may vary by hardware and operating system.
+ *                                              When enabled, the precision of the result may vary by hardware and operating system.
  *
  *  @section subsection_availableFilters     Available MPSKernels
  *
@@ -398,6 +431,71 @@
  *      MPSImageThresholdToZero           <MetalPerformanceShaders/MPSImageThreshold.h>  srcPixel > thresholdVal ? srcPixel : 0
  *      MPSImageThresholdToZeroInverse    <MetalPerformanceShaders/MPSImageThreshold.h>  srcPixel > thresholdVal ? 0 : srcPixel
  *
+ *
+ *  @subsection subsection_CNN     Convolutional Neural Networks
+ *  Convolutional Neural Networks (CNN) is a machine learning technique that attempts to model the visual cortex as a sequence 
+ *  of convolution, rectification, pooling and normalization steps. Several CNN filters commonly derived from the MPSCNNKernel
+ *  base class are provided to help you implement these steps as efficiently as possible.
+ *
+ *      MPSCNNNeuronLinear              <MetalPerformanceShaders/MPSCNN.h>      A linear neuron activation function
+ *      MPSCNNNeuronReLU                <MetalPerformanceShaders/MPSCNN.h>      A neuron activation function with rectified linear units
+ *      MPSCNNNeuronSigmoid             <MetalPerformanceShaders/MPSCNN.h>      A sigmoid neuron activation function 1/(1+e**-x)
+ *      MPSCNNNeuronTanH                <MetalPerformanceShaders/MPSCNN.h>      A neuron activation function using hyperbolic tangent
+ *      MPSCNNConvolution               <MetalPerformanceShaders/MPSCNN.h>      A 4D convolution tensor
+ *      MPSCNNFullyConnected            <MetalPerformanceShaders/MPSCNN.h>      A fully connected CNN layer
+ *      MPSCNNPoolingMax                <MetalPerformanceShaders/MPSCNN.h>      The maximum value in the pooling area
+ *      MPSCNNPoolingAverage            <MetalPerformanceShaders/MPSCNN.h>      The average value in the pooling area
+ *      MPSCNNSpatialNormalization      <MetalPerformanceShaders/MPSCNN.h>
+ *      MPSCNNCrossChannelNormalization <MetalPerformanceShaders/MPSCNN.h>
+ *      MPSCNNSoftmax                   <MetalPerformanceShaders/MPSCNN.h>      exp(pixel(x,y,k))/sum(exp(pixel(x,y,0)) ... exp(pixel(x,y,N-1))
+ *      MPSCNNLogSoftmax                <MetalPerformanceShaders/MPSCNN.h>      pixel(x,y,k) - ln(sum(exp(pixel(x,y,0)) ... exp(pixel(x,y,N-1)))
+ *
+ *  MPSCNNKernels operate on MPSImages.  MPSImages are at their core MTLTextures. However, whereas
+ *  MTLTextures commonly represent image or texel data, a MPSImage is a more abstract representation
+ *  of image features. The channels within a MPSImage do not necessarily correspond to colors in a
+ *  color space. (Though, they can.) As a result, there can be many more than four of them. 32 or 64 channels
+ *  per pixel is not uncommon.  This is achieved on the MTLTexture hardware abstraction by inserting
+ *  extra RGBA pixels to handle the additional feature channels (if any) beyond 4. These extra pixels are
+ *  stored as multiple slices of a 2D image array.  Thus, each CNN pixel in a 32-channel image is represented
+ *  as 8 array slices, with 4-channels stored per-pixel in each slice.  The width and height of the MTLTexture
+ *  is the same as the width and height of the MPSImage.  The number of slices in the MTLTexture is given by
+ *  the number of feature channels rounded up to a multiple of 4.
+ *
+ *  MPSImages can be created from existing MTLTextures. They may also be created anew from a MPSImageDescriptor
+ *  and backed with either standard texture memory, or as MPSTemporaryImages using memory drawn from MPS's
+ *  internal cached texture backing store.  MPSTemporaryImages can provide great memory usage and CPU time savings,
+ *  but come with significant restrictions that should be understood before using them. For example, their contents
+ *  are only valid during the GPU-side execution of a single MTLCommandBuffer and can not be read from or written to
+ *  by the CPU. They are provided as an efficient way to hold CNN computations that are used immediately within the
+ *  scope of the same MTLCommandBuffer and then discarded. We also support concatenation by allowing the user to 
+ *  define from which destination feature channel to start writing the output of the current layer. In this way
+ *  the application can make a large MPSImage or MPSTemporaryImage and fill in parts of it with multiple layers
+ *  (as long as the destination feature channel offset is a multiple of 4).
+ *
+ *  Some CNN Tips:
+ *  - Think carefully about the edge mode requested for pooling layers. The default is clamp to zero, but there
+ *    are times when clamp to edge value may be better.
+ *  - To avoid falling off the edge of an image for filters that have a filter area (convolution, pooling) set the
+ *    MPSCNNKernel.offset = (MPSOffset){ .x = kernelWidth/2, .y = kernelHeight/2, .z = 0}; and reduce the size 
+ *    of the output image by {kernelWidth-1, kernelHeight-1,0}. The filter area stretcheds up and to the left
+ *    of the MPSCNNKernel.offset by {kernelWidth/2, kernelHeight/2}. While consistent with other MPS imaging operations,
+ *    this behavior is different from some other CNN implementations.
+ *  - Please remember:
+ *      MPSCNNConvolution takes weights in the order weight[outputChannels][kernelHeight][kernelWidth][inputChannels / groups]
+ *      MPSCNNFullyConnected takes weights in the order weight[outputChannels][sourceWidth][sourceHeight][inputChannels]
+ *  - Initialize MPSCNNKernels once and reuse them
+ *  - You can use MPSCNNNeurons and other Filters in MPS to perform pre-processing of images, such as scaling and resizing.
+ *  - Specify a neuron filter with MPSCNNConvolution descriptor to combine the convolution and neuron operations.
+ *  - Use MPSTemporaryImages for intermediate images that live for a short period of time (less than one MTLCommandBuffer).
+ *      MPSTemporaryImages can reduce the amount of memory used by the convolutional neural network by several fold, and
+ *      similarly reduce the amount of CPU time spent allocating storage and latency between MTLCommandBuffer.commit
+ *      and when the work actually starts on the GPU.  MPSTemporaryImage are for short lived storage within the time 
+ *      period of the execution of a single MTLCommandBuffer. You can not read or write to a MPSTemporaryImage using the CPU.
+ *      Generally, they should be created as needed and thrown away promptly.  Persistent objects should not retain them.
+ *      Please be sure to understand the use of the MPSTemporaryImage.readCount.
+ *  - Because MPS encodes its work in place in your MTLCommandBuffer, you always have the option to insert your own
+ *      code in between MPSCNNKernels as a Metal shader for tasks not covered by MPS. You need not use MPS for everything.
+ *
  *  @section  section_validation    MPS API validation
  *  MPS uses the same API validation layer that Metal uses to alert you to API mistakes while
  *  you are developing your code. While this option is turned on (Xcode: Edit Scheme: options: Metal API Validation),
@@ -466,6 +564,7 @@
  *                                   width: sourceTexture.width
  *                                  height: sourceTexture.height
  *                               mipmapped: NO];
+ *      d.usage = MTLTextureUsageShaderRead | MTLTextureUsageShaderWrite;
  *
  *      //FIXME: Allocating a new texture each time is slow. They take up to 1 ms each.
  *      //       There are not too many milliseconds in a video frame! You can recycle
@@ -537,7 +636,7 @@
  *          if( nil == blur )
  *              MyHandleError(kOutOfMemory);
  *
- *          // Set all MPSKernel properties before calling -canOperateInPlaceWithSourceTexture.
+ *          // Set all MPSKernel properties to taste.
  *          blur.sigma = blurRadius;
  *          // defaults are okay here for other MPSKernel properties. (clipRect, origin, edgeMode)
  *
@@ -549,7 +648,8 @@
  *          [ blur release];
  *
  *          // the usual metal enqueue process
- *          [buffer waitUntilCompleted];    // slow!  Try enqueing more work on this or the next command buffer instead of waiting.
+ *          [buffer waitUntilCompleted];    // slow!  Try enqueing more work on this or the next 
+ *                                          // command buffer instead of waiting every time.
  *
  *          return result;
  *      }
@@ -582,7 +682,8 @@
  *  -#  There is a large cost to allocating buffers and textures.
  *  The cost can swamp the CPU, preventing you from keeping
  *  the GPU busy. Try to preallocate and reuse MTLResource
- *  objects as much as possible.
+ *  objects as much as possible. The MPSTemporaryImage may be
+ *  used instead for short-lived dynamic allocations.
  *
  *  -#  There is a cost to switching between render and compute
  *  encoders. Each time a new render encoder is used, there
@@ -591,6 +692,14 @@
  *  batch compute work together. Since making a new MTLCommandBuffer
  *  forces you to make a new MTLCommandEncoder too, try to
  *  do more work with fewer MTLCommandBuffers.
+ *
+ *  -#  On currently available iOS devices we find that for some 
+ *  image operations, particularly those involving multiple passes -
+ *  for example, if you are chaining multiple MPS image filters
+ *  together — performance can be improved by up a factor of two 
+ *  by breaking the work into tiles about 512 kB in size. Use
+ *  -sourceRegionForDestinationSize: to find the MPSRegion needed
+ *  for each tile. 
  */
 
 

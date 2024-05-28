@@ -3,7 +3,7 @@
  *  @framework MetalPerformanceShaders.framework
  *
  *  @copyright Copyright (c) 2015 Apple Inc. All rights reserved.
- *  @abstract Metal Image median filters
+ *  @abstract MetalPerformanceShaders median filters
  */
 
 #ifndef MPS_MPSImageMedian_h
@@ -22,7 +22,7 @@
  *              NOTE: The MPSImageMedian filter currently only supports images with <= 8 bits/channel.
  *
  */
-NS_CLASS_AVAILABLE( NA, 9_0  )
+MPS_CLASS_AVAILABLE_STARTING( __MAC_10_11, __IPHONE_9_0, __TVOS_9_0)
 @interface  MPSImageMedian : MPSUnaryImageKernel
 
 /*! @property   kernelDiameter

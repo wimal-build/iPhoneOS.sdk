@@ -5,17 +5,25 @@
  *  @copyright Copyright (c) 2015 Apple Inc. All rights reserved.
  */
 
-#import <MetalPerformanceShaders/MPSCNN.h>
-#import <MetalPerformanceShaders/MPSImageConversion.h>
-#import <MetalPerformanceShaders/MPSImageConvolution.h>
-#import <MetalPerformanceShaders/MPSImageHistogram.h>
-#import <MetalPerformanceShaders/MPSImageIntegral.h>
-#import <MetalPerformanceShaders/MPSImageMedian.h>
-#import <MetalPerformanceShaders/MPSImageMorphology.h>
-#import <MetalPerformanceShaders/MPSImageResampling.h>
-#import <MetalPerformanceShaders/MPSImageThreshold.h>
-#import <MetalPerformanceShaders/MPSImageTranspose.h>
-#import <MetalPerformanceShaders/MPSMatrixMultiplication.h>
+#import <MPSCore/MPSCore.h>
+#import <MPSImage/MPSImage.h>
+#import <MPSMatrix/MPSMatrix.h>
+#import <MPSNeuralNetwork/MPSNeuralNetwork.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/*!
+ *  MPSSupportsMTLDevice
+ *  @abstract   Determine whether a MetalPerformanceShaders.framework  supports a MTLDevice.
+ *  @discussion Use this function to determine whether a MTLDevice can be used with interfaces in MetalPerformanceShaders.framework.
+ *  @param      device          A valid MTLDevice
+ *  @return     YES             The device is supported.
+ *              NO              The device is not supported
+ */
+BOOL    MPSSupportsMTLDevice( __nullable id <MTLDevice> device )  MPS_AVAILABLE_STARTING( macos(10.13), ios(9.0), tvos(9.0));
+
 
 
 //
@@ -30,7 +38,7 @@
 //      man -M `xcrun --show-sdk-path -sdk iphoneos9.0`/usr/share/man  MPSKernel
 //
 
-/*! @mainpage Metal Shaders - High Performance Kernels on Metal
+/*! @mainpage Metal Performance Shaders - High Performance Kernels on Metal
  *  @section  section_introduction  Introduction
  *
  *  MetalPerformanceShaders.framework is a framework of highly optimized compute and graphics shaders that are
@@ -48,13 +56,87 @@
  *  -  collection of kernels to implement and run neural networks using previously obtained training data, on the GPU
  *  -  new image processing filters to perform color-conversion and for building a gaussian pyramid
  *
+ *  In iOS11, MetalPerformanceShaders.framework adds support for the following kernels:
+ *  -  Image Processing Filters:  FindKeypoints, Statistics (Min-Max, Mean-Variance, Mean), Arithmetic Operations, Bilinear scale
+ *                                Histogram filter takes a minPixelThresholdValue when computing histogram
+ *  -  Linear Algebra Primitives: Triangular, LU and Cholesky Solvers, LU and Cholesky Decomposition
+ *                                Support for multiple input types for Matrix-Matrix Multiplication
+ *                                Matrix-Vector Multiply (gemv)
+ *  -  Convolution Neural Networks:  New Neuron Functions: HardSigmoid, SoftELU, ELU, PReLU, ReLUN
+ *                                   Convolution Transpose, Depth-wise Convolution, Dilated Convolution, Sub-pixel Convolution
+ *                                   Dilated Pooling, Upsampling
+ *  -  Recurrent Neural Networks
+ *  -  A neural network graph API that makes it easy to create and execute neural networks on the GPU
+ *
+ *  The MetalPerformanceShaders.framework is now also available as API in macOS 10.13.  All primitives/filters supported
+ *  by the framework in iOS 11 are also avalable on macOS 10.13.
+ *
+ *  @subsection subsection_usingMPS  Using MPS
+ *  To use MPS:
+ *   @code
+ *      link:     -framework MetalPerformanceShaders
+ *      include:  #include <MetalPerformanceShaders/MetalPerformanceShaders.h>
+ *
+ *      Advisory: MetalPerformanceShaders features are broken up into many subheaders which are
+ *                included by MetalPerformanceShaders.h.   The exact placement of interfaces in
+ *                headers is subject to change, as functionality in component sub-frameworks can
+ *                move into MPSCore.framework when the functionality needs to be shared by
+ *                multiple components when features are added. To avoid source level breakage,
+ *                #include the top level MetalPerformanceShaders.h header instead of lower
+ *                level headers.  iOS 11 already broke source compatibility for lower level headers
+ *                and future releases will probably do so again. The only supported method of
+ *                including MPS symbols is the top level framework header.
+ *    @endcode
+ *    On macOS, MetalPerformanceShaders.framework is 64-bit only.  If you are still supporting
+ *    the 32-bit i386 architecture, you can link just your 64-bit slice to MPS using a Xcode
+ *    user defined build setting.  For example, you can add a setting called LINK_MPS:
+ *    @code
+ *        LINK_MPS
+ *            Debug    -framework MetalPerformanceShaders
+ *                Intel architecture            <leave this part empty>
+ *            Release  -framework MetalPerformanceShaders
+ *                Intel architecture            <leave this part empty>
+ *    @endcode
+ *
+ *    The 64-bit intel architectures will inherit from the generic definition on the Debug and
+ *    Release lines. Next, add $(MPS_LINK) to the Other Linker Flags line in your Xcode build
+ *    settings.
+ *
+ *    In code segments built for both i386 and x86-64 you will need to keep the i386 segment
+ *    from attempting to use MPS. In C, C++ and Objective C, a simple #ifdef will work fine.
+ *    @code
+ *        BOOL IsMPSSupported( id <MTLDevice> device )
+ *        {
+ *        #ifdef __i386__
+ *            return NO;
+ *        #else
+ *            return MPSSupportsMTLDevice(device);
+ *        #endif
+ *        }
+ *    @endcode
+ *
+ *
  *  @section section_data    Data containers
  *  @subsection subsection_metal_containers  MTLTextures and MTLBuffers
  *
  *  Most data operated on by Metal Performance Shaders must be in a portable data container appropriate
- *  for use on the GPU, such as a MTLTexture, MTLBuffer or MPSImage.  The first two should be 
- *  self-explanatory based on your previous experience with Metal.framework. MPS will use these
- *  directly when it can.
+ *  for use on the GPU, such as a MTLTexture, MTLBuffer or MPSImage/MPSMatrix/MPSVector.  The first two
+ *  should be self-explanatory based on your previous experience with Metal.framework. MPS will use these
+ *  directly when it can.  The other three are wrapper classes designed to make MTLTextures and MTLBuffers
+ *  easier to use, especially when the data may be packed in the texture or buffer in an unusual order, or
+ *  typical notions like texel do not map to the abstraction (e.g. feature channel) well. MPSImages and
+ *  MPSMatrices also come in "temporary" variants. Temporary images and matrices aggressively share
+ *  memory with one another, saving a great deal of processor time allocating and tearing down textures.
+ *  (This uses MTLHeaps underneath, if you are familiar with that feature.) MPS manages the aliasing to
+ *  keep you safe. In exchange you must manage the resource readCount.
+ *
+ *  Most MPSImage and MPSCNN filters operate only on floating-point or normalized texture formats.
+ *  If your data is in a UInteger or Integer MTLPixelFormat (e.g. MTLPixelFormatR8Uint as opposed
+ *  to MTLPixelFormatR8Unorm) then you may need to make a texture view of the texture to change
+ *  the type using [(id <MTLTexture>) newTextureViewWithPixelFormat:(MTLPixelFormat)pixelFormat],
+ *  to reinterpret the data to a normalized format of corresponding signedness and precision. In certain
+ *  cases such as thresholding corresponding adjustments (e.g. /255) may have to also be made to
+ *  parameters passed to the MPSKernel.
  *
  *  @subsection subsection_mpsimage  MPSImages
  *  Convolutional neural networking (CNN) filters may need more than the four data channels that a
@@ -65,7 +147,7 @@
  *
  *  @subsection subsection_mpstemporaryimage  MPSTemporaryImages
  *  The MPSTemporaryImage (subclass of MPSImage) extends the MPSImage to provide advanced caching of
- *  unused memory to increase performance and reduce memory footprint. They are intended as fast
+ *  reusable memory to increase performance and reduce memory footprint. They are intended as fast
  *  GPU-only storage for intermediate image data needed only transiently within a single MTLCommandBuffer.
  *  They accelerate the common case of image data which is created only to be consumed and destroyed
  *  immediately by the next operation(s) in a MTLCommandBuffer.  MPSTemporaryImages provide convenient and 
@@ -75,6 +157,32 @@
  *  You can not read or write data to a MPSTemporaryImage using the CPU, or use the data in other MTLCommandBuffers.
  *  Use regular MPSImages for more persistent storage.
  *
+ *  Why do we need MPSTemporaryImages?  Consider what it would be like to write an app without a heap.
+ *  All allocations would have to be either on the stack or staticly allocated at app launch. You
+ *  would find that allocations that persist for the lifetime of the app are very wasteful when an object
+ *  is only needed for a few microseconds. Likewise, once the memory is statically partitioned in this way,
+ *  it is hard to dynamically reuse memory for other purposes as different tasks are attempted and the needs
+ *  of the app change. Finally, having to plan everything out in advance is just plain inconvenient! Isn't it
+ *  nicer to just call malloc() or new as needed? Yes, it is. Even if it means we have to also call free(),
+ *  find leaks and otherwise manage the lifetime of the allocation through some mechanism like reference counting,
+ *  or add __strong and __weak so that ARC can help us, we do it.
+ *
+ *  It should be therefore of little surprise that after the heap data structure by JWJ Williams in 1964, the
+ *  heap has been a mainstay of computer science since. The heap allocator was part of the C language a decade
+ *  later. Yet, 50 years on, why is it not used in GPU programming? Developers routinely still allocate resources
+ *  up front that stay live for the lifetime of the program (command buffer). Why would you do that?
+ *  MPSTemporaryImages are MPSImages that use a memory allocated by a command buffer associated heap to store
+ *  texels. They only use the memory they need for the part of the command buffer that they need it in, and the
+ *  memory is made available for other MPSTemporaryImages that live in another part of the same command buffer.
+ *  This allows for a very high level of memory reuse. In the context of a MPSNNGraph, for example, the
+ *  InceptionV3 neural network requires 121 MPSImages to hold intermediate results. However, since it uses
+ *  MPSTemporaryImages instead, these are reduced to just four physical allocations of the same size as one of
+ *  the original images. Do you believe most of your work should be done using MPSTemporaryImages? You should.
+ *  You only need the persistent MPSImage for storage needed outside the context of the command buffer, for
+ *  example those images that might be read from or written to by the CPU. Use MPSTemporaryImages for
+ *  transient storage needs. In aggregate, they are far less expensive than regular MPSImages. Create them,
+ *  use them, throw them away, all within a few lines of code. Make more just in time as needed.
+ *
  *  @section section_discussion     The MPSKernel
  *
  *  The MPSKernel is the base class for all MPS kernels. It defines baseline behavior for all MPS 
@@ -82,7 +190,7 @@
  *  label, should one be required. From this are derived the MPSUnaryImageKernel and MPSBinaryImageKernel
  *  sub-classes which define shared behavior for most image processing kernels (filters) such as
  *  edging modes, clipping and tiling support for image operations that consume one or two source textures.
- *  Neither these or the MPSKernel are typically be used directly. They just provide API abstraction
+ *  Neither these or the MPSKernel are typically used directly. They just provide API abstraction
  *  and in some cases may allow some level of polymorphic manipulation of MPS image kernel objects.
  *
  *  Subclasses of the MPSUnaryImageKernel and MPSBinaryImageKernel provide specialized -init and -encode 
@@ -189,22 +297,24 @@
  *
  *  @subsubsection  subsubsection_options  MPSKernelOptions
  *  Each MPSKernel takes a MPSKernelOptions bit mask to indicate various options to use when running the filter:
- *
+ *  @code
  *      typedef NS_OPTIONS(NSUInteger, MPSKernelOptions)
  *
- *      MPSKernelOptionsNone                     Use default options
+ *      MPSKernelOptionsNone
+ *             Use default options
  *
- *      MPSKernelOptionsSkipAPIValidation        Do not spend time looking at parameters passed to MPS
- *                                              for errors.
+ *      MPSKernelOptionsSkipAPIValidation
+ *          Do not spend time looking at parameters passed to MPS for errors.
  *
- *      MPSKernelOptionsAllowReducedPrecision    When possible, MPSKernels use a higher precision data representation internally than
- *                                              the destination storage format to avoid excessive accumulation of computational
- *                                              rounding error in the result. MPSKernelOptionsAllowReducedPrecision advises the
- *                                              MPSKernel that the destination storage format already has too much precision for
- *                                              what is ultimately required downstream, and the MPSKernel may use reduced precision
- *                                              internally when it feels that a less precise result would yield better performance.
- *                                              When enabled, the precision of the result may vary by hardware and operating system.
- *
+ *      MPSKernelOptionsAllowReducedPrecision
+ *          When possible, MPSKernels use a higher precision data representation internally than
+ *          the destination storage format to avoid excessive accumulation of computational
+ *          rounding error in the result. MPSKernelOptionsAllowReducedPrecision advises the
+ *          MPSKernel that the destination storage format already has too much precision for
+ *          what is ultimately required downstream, and the MPSKernel may use reduced precision
+ *          internally when it feels that a less precise result would yield better performance.
+ *          When enabled, the precision of the result may vary by hardware and operating system.
+ *  @endcode
  *  @section subsection_availableFilters     Available MPSKernels
  *
  *  @subsection subsection_convolution  Image Convolution
@@ -325,10 +435,10 @@
  *  @subsubsection subsubsection_convolveAvailability   Convolutions in MPS
  *  Convolution filters provided by MPS include:
  *
- *      MPSImageConvolution       <MetalPerformanceShaders/MPSImageConvolution.h>        General convolution
- *      MPSImageGassianBlur       <MetalPerformanceShaders/MPSImageConvolution.h>        Gaussian blur
- *      MPSImageBox               <MetalPerformanceShaders/MPSImageConvolution.h>        Box blur
- *      MPSImageTent              <MetalPerformanceShaders/MPSImageConvolution.h>        Tent blur
+ *      MPSImageConvolution       <MPSImage/MPSImageConvolution.h>        General convolution
+ *      MPSImageGassianBlur       <MPSImage/MPSImageConvolution.h>        Gaussian blur
+ *      MPSImageBox               <MPSImage/MPSImageConvolution.h>        Box blur
+ *      MPSImageTent              <MPSImage/MPSImageConvolution.h>        Tent blur
  *
  * @subsection subsection_morphology  Morphology
  *  Morphological operators are similar to convolutions in that they find a result by looking at the nearest
@@ -359,10 +469,10 @@
  *
  *  Morphology filters provided by MPS include:
  *
- *      MPSImageAreaMax  <MetalPerformanceShaders/MPSImageMorphology.h>       Area Max
- *      MPSImageAreaMin  <MetalPerformanceShaders/MPSImageMorphology.h>       Area Min
- *      MPSImageDilate   <MetalPerformanceShaders/MPSImageMorphology.h>       Dilate
- *      MPSImageErode    <MetalPerformanceShaders/MPSImageMorphology.h>       Erode
+ *      MPSImageAreaMax  <MPSImage/MPSImageMorphology.h>       Area Max
+ *      MPSImageAreaMin  <MPSImage/MPSImageMorphology.h>       Area Min
+ *      MPSImageDilate   <MPSImage/MPSImageMorphology.h>       Dilate
+ *      MPSImageErode    <MPSImage/MPSImageMorphology.h>       Erode
  *
  *  @subsection subsection_histogram     Histogram
  *  A image may be examined by taking the histogram of its pixels. This gives the distribution of the various
@@ -376,10 +486,10 @@
  *
  *  Histogram filters provided by MPS include:
  *
- *      MPSImageHistogram              <MetalPerformanceShaders/MPSImageHistogram.h>     Calculate the histogram of an image
- *      MPSImageHistogramEqualization  <MetalPerformanceShaders/MPSImageHistogram.h>     Redistribute intensity in an image to equalize
+ *      MPSImageHistogram              <MPSImage/MPSImageHistogram.h>     Calculate the histogram of an image
+ *      MPSImageHistogramEqualization  <MPSImage/MPSImageHistogram.h>     Redistribute intensity in an image to equalize
  *                                                                          the histogram
- *      MPSImageHistogramSpecification <MetalPerformanceShaders/MPSImageHistogram.h>     A generalized version of histogram equalization
+ *      MPSImageHistogramSpecification <MPSImage/MPSImageHistogram.h>     A generalized version of histogram equalization
  *                                                                          operation. Convert the image so that its histogram
  *                                                                          matches the desired histogram provided to the
  *                                                                          histogram specification filter.
@@ -391,7 +501,7 @@
  *
  *  Median filters provided by MPS include:
  *
- *      MPSImageMedian                <MetalPerformanceShaders/MPSImageMedian.h>         Calculate the median of an image using a
+ *      MPSImageMedian                <MPSImage/MPSImageMedian.h>         Calculate the median of an image using a
  *                                                                     square filter window.
  *
  *  @subsection subsection_resampling  Image Resampling
@@ -412,10 +522,16 @@
  *  filter be applied to the image before down sampling. However, some ringing can occur near high frequency regions 
  *  of the image, making the algorithm less suitable for vector art.
  *
- *  MetalPerformanceShaders.framework provides a MPSImageLanczosScale function to allow for simple resizing of images into the clipRect
- *  of the result image. It can operate with preservation of aspect ratio or not. 
+ *  MetalPerformanceShaders.framework provides a MPSImageScale functions to allow for simple resizing of images into the clipRect
+ *  of the result image. They can operate with preservation of aspect ratio or not.
  *
- *      MPSImageLanczosScale              <MetalPerformanceShaders/MPSResample.h>   Resize or adjust aspect ratio of an image.
+ *      MPSImageLanczosScale        <MPSImage/MPSResample.h>   Resize or adjust aspect ratio of an image using a Lanczos filter.
+ *      MPSImageBilinearScale       <MPSImage/MPSResample.h>   Resize or adjust aspect ratio of an image using bilinear interpolation.
+ *
+ *  Each method has its own advantages. The bilinear method is faster. However, downsampling by more than a factor
+ *  of two will lead to data loss, unless a low pass filter is applied before the downsampling operation.  The
+ *  lanczos filter method does not have this problem and usually looks better. However, it can lead to ringing
+ *  at sharp edges, making it better for photographs than vector art.
  *
  *  @subsection subsection_threshold     Image Threshold
  *  Thresholding operations are commonly used to separate elements of image structure from the rest of an image. 
@@ -425,30 +541,72 @@
  *
  *  A variety of thresholding operators are supported:
  *
- *      MPSImageThresholdBinary           <MetalPerformanceShaders/MPSImageThreshold.h>  srcPixel > thresholdVal ? maxVal : 0
- *      MPSImageThresholdBinaryInverse    <MetalPerformanceShaders/MPSImageThreshold.h>  srcPixel > thresholdVal ? 0 : maxVal
- *      MPSImageThresholdTruncate         <MetalPerformanceShaders/MPSImageThreshold.h>  srcPixel > thresholdVal ? thresholdVal : srcPixel
- *      MPSImageThresholdToZero           <MetalPerformanceShaders/MPSImageThreshold.h>  srcPixel > thresholdVal ? srcPixel : 0
- *      MPSImageThresholdToZeroInverse    <MetalPerformanceShaders/MPSImageThreshold.h>  srcPixel > thresholdVal ? 0 : srcPixel
+ *      MPSImageThresholdBinary           <MPSImage/MPSImageThreshold.h>  srcPixel > thresholdVal ? maxVal : 0
+ *      MPSImageThresholdBinaryInverse    <MPSImage/MPSImageThreshold.h>  srcPixel > thresholdVal ? 0 : maxVal
+ *      MPSImageThresholdTruncate         <MPSImage/MPSImageThreshold.h>  srcPixel > thresholdVal ? thresholdVal : srcPixel
+ *      MPSImageThresholdToZero           <MPSImage/MPSImageThreshold.h>  srcPixel > thresholdVal ? srcPixel : 0
+ *      MPSImageThresholdToZeroInverse    <MPSImage/MPSImageThreshold.h>  srcPixel > thresholdVal ? 0 : srcPixel
+ *      MPSImageKeypoint                  <MPSImage/MPSImageKeypoint.h>  return a list of pixels that are greathr than a threshold value
  *
+ *  @subsection subsection_images_statistics  Image Statistics
+ *  Several statistical operators are available which return statistics for the entire image, or
+ *  a subregion. These operators are:
+ *
+ *      MPSImageStatisticsMinAndMax       <MPSImage/MPSImageStatistics.h> return maximum and minimum values in the image for each channel
+ *      MPSImageStatisticsMean            <MPSImage/MPSImageStatistics.h> return the mean channel value over the region of interest
+ *      MPSImageStatisticsMeanAndVariance <MPSImage/MPSImageStatistics.h> return the mean channel value and variance of each channel over the region of interest
+ *
+ *  These filters return the results in a small (1x1 or 2x1) texture. The region over which the
+ *  statistical operator is applied is regulated by the clipRectSource property.
+ *
+ *  @subsection subsection_math     Math Filters
+ *  Arithmetic filters take two source images, a primary source image and a secondary source image, as input and
+ *  output a single destination image. The filters apply an element-wise arithmetic operator to each pixel in a primary source
+ *  image and a corresponding pixel in a secondary source image over a specified region. The supported arithmetic operators
+ *  are addition, subtraction, multiplication, and division.
+ *
+ *  These filters take additional parameters: primaryScale, secondaryScale, and bias and apply them to the primary source
+ *  pixel (x) and secondary source pixel (y) in the following way:
+ *
+ *      MPSImageAdd         <MPSImage/MPSImageMath.h>  Element-wise addition operator:      result = ((primaryScale * x) + (secondaryScale * y)) + bias
+ *      MPSImageSubtract    <MPSImage/MPSImageMath.h>  Element-wise subtraction operator    result = ((primaryScale * x) - (secondaryScale * y)) + bias
+ *      MPSImageMultiply    <MPSImage/MPSImageMath.h>  Element-wise multiplication operator result = ((primaryScale * x) * (secondaryScale * y)) + bias
+ *      MPSImageDivide      <MPSImage/MPSImageMath.h>  Element-wise division operator       result = ((primaryScale * x) / (secondaryScale * y)) + bias
+ *
+ *  These filters also take the following additional parameters: secondarySourceStrideInPixelsX and secondarySourceStrideInPixelsY.
+ *  The default value of these parameters is 1. Setting both of these parameters to 0 results in the secondarySource image being
+ *  handled as a single pixel.
  *
  *  @subsection subsection_CNN     Convolutional Neural Networks
  *  Convolutional Neural Networks (CNN) is a machine learning technique that attempts to model the visual cortex as a sequence 
  *  of convolution, rectification, pooling and normalization steps. Several CNN filters commonly derived from the MPSCNNKernel
  *  base class are provided to help you implement these steps as efficiently as possible.
  *
- *      MPSCNNNeuronLinear              <MetalPerformanceShaders/MPSCNN.h>      A linear neuron activation function
- *      MPSCNNNeuronReLU                <MetalPerformanceShaders/MPSCNN.h>      A neuron activation function with rectified linear units
- *      MPSCNNNeuronSigmoid             <MetalPerformanceShaders/MPSCNN.h>      A sigmoid neuron activation function 1/(1+e**-x)
- *      MPSCNNNeuronTanH                <MetalPerformanceShaders/MPSCNN.h>      A neuron activation function using hyperbolic tangent
- *      MPSCNNConvolution               <MetalPerformanceShaders/MPSCNN.h>      A 4D convolution tensor
- *      MPSCNNFullyConnected            <MetalPerformanceShaders/MPSCNN.h>      A fully connected CNN layer
- *      MPSCNNPoolingMax                <MetalPerformanceShaders/MPSCNN.h>      The maximum value in the pooling area
- *      MPSCNNPoolingAverage            <MetalPerformanceShaders/MPSCNN.h>      The average value in the pooling area
- *      MPSCNNSpatialNormalization      <MetalPerformanceShaders/MPSCNN.h>
- *      MPSCNNCrossChannelNormalization <MetalPerformanceShaders/MPSCNN.h>
- *      MPSCNNSoftmax                   <MetalPerformanceShaders/MPSCNN.h>      exp(pixel(x,y,k))/sum(exp(pixel(x,y,0)) ... exp(pixel(x,y,N-1))
- *      MPSCNNLogSoftmax                <MetalPerformanceShaders/MPSCNN.h>      pixel(x,y,k) - ln(sum(exp(pixel(x,y,0)) ... exp(pixel(x,y,N-1)))
+
+ *      MPSCNNNeuronLinear              <MPSNeuralNetwork/MPSCNNConvolution.h>       A linear neuron activation function
+ *      MPSCNNNeuronReLU                <MPSNeuralNetwork/MPSCNNConvolution.h>       A neuron activation function with rectified linear units
+ *      MPSCNNNeuronSigmoid             <MPSNeuralNetwork/MPSCNNConvolution.h>       A sigmoid neuron activation function 1/(1+e**-x)
+ *      MPSCNNNeuronHardSigmoid         <MPSNeuralNetwork/MPSCNNConvolution.h>       A hard sigmoid neuron activation function clamp((a*x)+b, 0, 1)
+ *      MPSCNNNeuronTanH                <MPSNeuralNetwork/MPSCNNConvolution.h>       A neuron activation function using hyperbolic tangent
+ *      MPSCNNNeuronAbsolute            <MPSNeuralNetwork/MPSCNNConvolution.h>       An absolute neuron activation function |x|
+ *      MPSCNNNeuronSoftPlus            <MPSNeuralNetwork/MPSCNNConvolution.h>       A parametric SoftPlus neuron activation function a*log(1+e**(b*x))
+ *      MPSCNNNeuronSoftSign            <MPSNeuralNetwork/MPSCNNConvolution.h>       A SoftSign neuron activation function x/(1+|x|)
+ *      MPSCNNNeuronELU                 <MPSNeuralNetwork/MPSCNNConvolution.h>       A parametric ELU neuron activation function x<0 ? (a*(e**x-1)) : x
+ *      MPSCNNNeuronReLUN               <MPSNeuralNetwork/MPSCNNConvolution.h>       A rectified linear N neuron activation function min((x >= 0 ? x : a * x), b)
+ *      MPSCNNNeuronPReLU               <MPSNeuralNetwork/MPSCNNConvolution.h>       ReLU, except a different a value is provided for each feature channel
+ *      MPSCNNConvolution               <MPSNeuralNetwork/MPSCNNConvolution.h>       A 4D convolution tensor
+ *      MPSCNNConvolutionTranspose      <MPSNeuralNetwork/MPSCNNConvolution.h>       A 4D convolution transpose tensor
+ *      MPSCNNFullyConnected            <MPSNeuralNetwork/MPSCNNConvolution.h>       A fully connected CNN layer
+ *      MPSCNNPoolingMax                <MPSNeuralNetwork/MPSCNNPooling.h>           The maximum value in the pooling area
+ *      MPSCNNPoolingAverage            <MPSNeuralNetwork/MPSCNNPooling.h>           The average value in the pooling area
+ *      MPSCNNPoolingL2Norm             <MPSNeuralNetwork/MPSCNNPooling.h>           The L2-Norm value in the pooling area
+ *      MPSCNNDilatedPoolingMax         <MPSNeuralNetwork/MPSCNNPooling.h>           The maximum value in the dilated pooling area
+ *      MPSCNNSpatialNormalization      <MPSNeuralNetwork/MPSCNNNormalization.h>
+ *      MPSCNNCrossChannelNormalization <MPSNeuralNetwork/MPSCNNNormalization.h>
+ *      MPSCNNSoftmax                   <MPSNeuralNetwork/MPSCNNSoftMax.h>           exp(pixel(x,y,k))/sum(exp(pixel(x,y,0)) ... exp(pixel(x,y,N-1))
+ *      MPSCNNLogSoftmax                <MPSNeuralNetwork/MPSCNNSoftMax.h>           pixel(x,y,k) - ln(sum(exp(pixel(x,y,0)) ... exp(pixel(x,y,N-1)))
+ *      MPSCNNUpsamplingNearest         <MPSNeuralNetwork/MPSCNNUpsampling.h>        A nearest upsampling layer.
+ *      MPSCNNUpsamplingBilinear        <MPSNeuralNetwork/MPSCNNUpsampling.h>        A bilinear upsampling layer.
  *
  *  MPSCNNKernels operate on MPSImages.  MPSImages are at their core MTLTextures. However, whereas
  *  MTLTextures commonly represent image or texel data, a MPSImage is a more abstract representation
@@ -472,6 +630,11 @@
  *  the application can make a large MPSImage or MPSTemporaryImage and fill in parts of it with multiple layers
  *  (as long as the destination feature channel offset is a multiple of 4).
  *
+ *  The standard MPSCNNConvolution operator also does dilated convolution, sub-pixel convolution and
+ *  depth-wise convolution. There are also bit-wise convolution operators that can use only a single bit
+ *  for precision of the weights. The precision of the image can be reduced to 1 bit in this case as well.
+ *  The bit {0,1} represents {-1,1}.
+ *
  *  Some CNN Tips:
  *  - Think carefully about the edge mode requested for pooling layers. The default is clamp to zero, but there
  *    are times when clamp to edge value may be better.
@@ -480,6 +643,8 @@
  *    of the output image by {kernelWidth-1, kernelHeight-1,0}. The filter area stretcheds up and to the left
  *    of the MPSCNNKernel.offset by {kernelWidth/2, kernelHeight/2}. While consistent with other MPS imaging operations,
  *    this behavior is different from some other CNN implementations.
+ *  - If setting the offset and making MPSImages to hold intermediates are taking up a lot of your time,
+ *    consider using the MPSNNGraph instead. It will automate these tasks.
  *  - Please remember:
  *      MPSCNNConvolution takes weights in the order weight[outputChannels][kernelHeight][kernelWidth][inputChannels / groups]
  *      MPSCNNFullyConnected takes weights in the order weight[outputChannels][sourceWidth][sourceHeight][inputChannels]
@@ -495,6 +660,11 @@
  *      Please be sure to understand the use of the MPSTemporaryImage.readCount.
  *  - Because MPS encodes its work in place in your MTLCommandBuffer, you always have the option to insert your own
  *      code in between MPSCNNKernels as a Metal shader for tasks not covered by MPS. You need not use MPS for everything.
+ *
+ *
+ *  @subsection subsection_RNN     Recurrent Neural Networks
+ *
+ *  @subsection subsection_matrix_primitives     Matrix Primitives
  *
  *  @section  section_validation    MPS API validation
  *  MPS uses the same API validation layer that Metal uses to alert you to API mistakes while
@@ -611,8 +781,204 @@
  *       return          A new valid MTLTexture to use as the destination for the MPSKernel.
  *                       The format of the returned texture does not need to match sourceTexture.
  *
+ *  @section  section_mpsnngraph   The MPSNNGraph
+ *  New for macOS 10.13, iOS/tvOS 11 is a higher level graph API, intended to simplify the creation of
+ *  neural networks. The graph is a network of MPSNNFilterNodes, MPSNNImageNodes and  MPSNNStateNodes. 
+ *  MPSNNImageNodes represent MPSImages or MPSTemporaryImages. MPSNNFilterNodes represent MPSCNNKernel
+ *  objects -- each of the lower level MPSCNNKernel subclasses has a sister object that is a
+ *  subclass of the MPSNNFilterNode. Finally, MPSStateNodes stand in for MPSState objects. 
  *
- *  @section  section_samplecode   Sample Code
+ *  MPSState objects are also new for macOS 10.13, iOS/tvOS 11. They stand in for bits of opaque state that
+ *  need to be handed  between filter nodes.  For example, a MPSCNNConvolutionTranspose filter may need to
+ *  know the original size of the filter passed into the corresponding MPSCNNConvolution node farther up the
+ *  tree. There is a corresponding MPSCNNConvolutionState object that tracks this information. You will
+ *  encounter state objects only infrequently. Most graphs are made up of images and filters.
+ *
+ *  To represent a graph, one usually first creates a MPSNNImageNode. This represents the input image or
+ *  tensor into the graph. Next one creates a the first filter node to process that input image. For example,
+ *  we may make a MPSCNNNeuronLinearNode to normalize the data before the rest of the graph sees it. (y = 2x-1)
+ *  Then, we can add our first convolution in the graph.
+ *  @code
+ *      //  Graph:   [Image] -> [Linear neuron filter] -> (result image) -> [convolution filter] -> (result image)...
+ *      MPSNNImageNode *startNode = [MPSImageNode nodeWithHandle: nil];
+ *      MPSCNNNeuronLinearNode *norm = [MPSCNNNeuronLinearNode nodeWithSource: startNode a: 2.0f b: -1.0f ];
+ *      MPSCNNConvolutionNode *c = [MPSCNNConvolutionNode nodeWithSource: norm.resultImage
+ *                                                               weights: [[MyWeights alloc] initWithPath: "weights1.dat"]];
+ *      ...
+ *  @endcode
+ *  There are some features to notice about each object. First of all, each image node can have a handle 
+ *  associated with it. The handle is your object that you write. It should conform to the <MPSHandle>
+ *  protocol, which specifies that the object should have a label and conform to NSSecureCoding. (The MTLTexture
+ *  does have a label property but doesn't conform to NSSecureCoding.) NSSecureCoding is used when you
+ *  save the graph to disk using a NSCoder. It isn't used otherwise. You can use a MTLResource here if 
+ *  you don't plan to save the graph to disk.  What is the handle for?  When the MPSNNGraph object is 
+ *  constructed -- the MPSNNGraph takes the network of filter, state and image nodes and rolls it into
+ *  an object that can actually encode work to a MTLCommandBuffer -- the graph object will traverse the
+ *  graph from back to front and determine which image nodes are not produced by filters in the graph.
+ *  These, it will inteprety to be graph input images.  There may be input states too. When it does so, 
+ *  it will represent these image and state nodes as the handles you attach to them. Therefore, the handles
+ *  probably should be objects of your own making that refer back to your own data structures that identify
+ *  various images that you know about. 
+ *
+ *  Continuing on to the neuron filter, which we are using to just take the usual image [0,1] range and stretch
+ *  to [-1,1] before the rest of the graph sees it, we see we can pass in the linear filter parameters when constructing
+ *  it here. All filter nodes also produce a result image. This is used as the argument when constructing the
+ *  convolution filter node next, to show that the product of the neuron filter is the input to the convolution
+ *  filter.
+ *
+ *  The convolution object constructor also takes a weights object. The weights object is an object that you write
+ *  that conforms to the MPSCNNConvolutionDataSource protocol. MPS does not provide an object that conforms
+ *  to this protocol, though you can see some examples in sample code that use this interface.  The convolution
+ *  data source object is designed to provide for deferred loading of convolution weights. Convolution weights
+ *  can be large. In aggregate, the storage for all the weights in the MPSNNGraph, plus the storage for your
+ *  copy of them might start to approach the storage limits of the machine for larger graphs. In order to lessen
+ *  this impact, the convolution weights are unpacked for each convolution in turn and then purged from memory
+ *  so that only the single MPSNNGraph copy remains.  This happens when the MPSCNNConvolutionDataSource load
+ *  and purge methods are called. You should not load the weights until -load is called. (You probably should
+ *  however verify that the file, if any, is there and is well formed in the object -init method.) When -purge 
+ *  is called, you should release any bulky storage that the object owns and and make the object as light weight
+ *  as is reasonable. The MPSCNNConvolutionDataSource.descriptor may include a neuron filter operation.
+ *
+ *  Other object types should be straightforward. 
+ *
+ *  @section  subsection_mpsnngraph_usage   MPSNNGraph usage
+ *  Once the network of MPSNNFilterNodes, MPSNNImageNodes and MPSNNStateNodes is created, the next
+ *  step is to identify the MPSNNImageNode that contains the result of your graph -- typically, this
+ *  is the last one you made -- and make a MPSNNGraph with it:
+ *  @code
+ *      MPSNNGraph *graph = [[MPSNNGraph alloc] initWithDevice: mtlDevice
+ *                                                 resultImage: resultImage];
+ *  @endcode
+ *  If graph creation fails, nil will be returned here. When it is constructed, the graph iterates over
+ *  the network of nodes, starting at the result image and working backwards. Any MPSNNImageNodes and states 
+ *  that are used that are not created by a MPSNNFilterNode are interpreted to be graph inputs. The
+ *  identity of these are given by the MPSNNGraph.sourceImageHandles and MPSNNGraph.sourceStateHandles. 
+ *  Each handle is your object that refers back to a particular image or state node. The order of the handles
+ *  matches the order of the images or states that should be passed to the [MPSNNGraph encodeToCommandBuffer:...]
+ *  call. Similarly, you can get the identity of any intermediate images that you requested to see (See
+ *  MPSNNImageNode.exportFromGraph property) and the identity of any result MPSStates that are produced
+ *  by the graph that are not used.   The graph has a destinationImageAllocator that overrides the 
+ *  MPSNNImageNode.destinationImageAllocator. (see subsection MPSNNGraph intermediate image allocation)
+ *  Typically, this serves to make a default temporary image into a normal image, as a convenience.
+ *
+ *  When you are ready to encode a graph to a command buffer, the operation follows as per much of the 
+ *  rest of MPS. 
+ *  @code
+ *      id <MTLDevice> mtlDevice = MTLCreateSystemDefaultDevice();
+ *      id <MTLCommandQueue> mtlCommandQueue.commandBuffer = mtlDevice.newCommandQueue;
+ *      id <MTLCommandBuffer> cmdBuf = mtlCommandQueue.commandBuffer;
+ *      MPSImage *inputImage = [[MPSImage alloc] initWithDevice: mtlDevice imageDescriptor: myDescriptor];
+ *      // put some data into the input image here. See MTLTexture.replaceBytes...
+ *      MPSImage * result = [myGraph encodeToCommandBuffer: cmdBuf sourceImages: @[inputImage] ];
+ *      [cmdBuf addCompletedHandler: ^(id <MTLCommandBuffer> buf){
+ *            // Notify your app that the work is done and the values in result
+ *            // are ready for inspection.
+ *       }];
+ *      [cmdBuf commit];
+ *
+ *      // While we are working on that, encode something else
+ *      id <MTLCommandBuffer> cmdBuf2 = mtlCommandQueue.commandBuffer;
+ *      MPSImage * result2 = [myGraph encodeToCommandBuffer: cmdBuf2 sourceImages: @[inputImage2] ];
+ *      [cmdBuf2 addCompletedHandler: ^(id <MTLCommandBuffer> buf){
+ *            // Notify your app that the work is done and the values in result2
+ *            // are ready for inspection.
+ *       }];
+ *      [cmdBuf2 commit];
+ *      ...
+ *  @endcode
+ *  The extra synchronization from [id <MTLCommandBuffer> waitForCompletion] should be avoided. It can
+ *  be exceptionally costly because the wait for new work to appear allows the GPU clock to spin down.
+ *  Factor of two or more performance increases are common with -addCompletedHandler:.
+ *
+ *  A graph can also be encoded using the higher level -[MPSNNGraph executeAsyncWithSourceImages:completionHandler:]
+ *  which requires minimal experience with Metal. Assuming you have already gotten a list of MPSImages as input
+ *  to your graph (typically one), you may use that instead:
+ *
+ *  @code
+ *      MPSImage * result = [k[0] executeAsyncWithSourceImages: @[image]
+ *                                           completionHandler: ^(MPSImage * __nullable i, NSError * __nullable error ){
+ *          if( error)
+ *              MyLogError("Error: -computeAsyncWithSourceImages:completionHandler: failed: %s\n\t",
+ *                   [error.localizedDescription cStringUsingEncoding: NSASCIIStringEncoding],
+ *                   [error.localizedFailureReason cStringUsingEncoding: NSASCIIStringEncoding]);
+ *
+ *          MyProcessResult(i);
+ *      }];
+ *  @endcode
+ *  The image returned directly from the left hand side of -executeAsyncWithSourceImages:completionHandler:
+ *  and passed into the completion hander are the same. The contents of the image will be valid once the
+ *  completion handler is called.
+ *
+ *  @section  subsection_mpsnngraph_sizing   MPSNNGraph intermediate image sizing and centering
+ *  The MPSNNGraph will automatically size and center the intermediate images that appear in the graph.
+ *  However, different neural network frameworks do so differently. In addition, some filters may 
+ *  at times operate on only valid pixels in the source image, whereas others may "look beyond the
+ *  edges" so as to keep the result image size the same as the input. Occasionally some filters will
+ *  want to produce results for which any input is valid. Perhaps some want to behave in between. Torch
+ *  has some particularly inventive edging policies for pooling that have valid invalid regions and 
+ *  invalid invalid regions beyond the edges of the image.
+ *
+ *  Whatever the behavior, you will use the MPSNNFilter.paddingPolicy property to configure behavior.
+ *  In its simplest form, a paddingPolicy is a object (possibly written by you, though MPS provides some)
+ *  that conforms to the MPSNNPadding protocol. It should at minimum provide a padding method, which codes
+ *  for common methods to size the result image, how to center it on the input image and where to place
+ *  the remainder in cases where the image size isn't exactly divisible by the stride. This is a bitfield.
+ *  You can use:
+ *  @code
+ *      [MPSNNDefaultPadding paddingWithMethod: MPSNNPaddingMethodAlign... | MPSNNPaddingMethodAddRemainderTo...
+ *                                              MPSNNPaddingMethodSize... ];
+ *  @endcode
+ *  To quickly configure one of these. The filters also have a default padding policy, which may be
+ *  appropriate most of the time.  
+ *
+ *  Occasionally, something fancy needs to be done. In that case, the padding policy should set the 
+ *  MPSNNPaddingMethodCustom bit and implement the optional destinationImageDescriptorForSourceImages:
+ *  sourceStates:forKernel:suggestedDescriptor: method. The MPSNNGraph will use the MPSNNPadding.paddingMethod
+ *  to generate an initial guess for the configuration of the MPSCNNKernel.offset and the size and formatting
+ *  of the result image and hand that to you in the form of a MPSImageDescriptor. You can modify the descriptor
+ *  or the kernel (also passed to you) in your custom destinationImageDescriptorForSourceImages:sourceStates:
+ *  forKernel:suggestedDescriptor: method, or just ignore it and make a new descriptor.
+ *
+ *  @section  subsection_mpsnngraph_image_allocation   MPSNNGraph intermediate image allocation
+ *  Typically the graph will make MPSTemporaryImages for these, based on the MPSImageDescriptor obtained
+ *  from the padding policy. Temporary images alias one another and can be used to save a lot of memory,
+ *  in the same way that malloc saves memory in your application by allowing you to reserve memory for 
+ *  a time, use it, then free it for reuse for something else. Ideally, most of the storage in your graph
+ *  should be temporary images.
+ *
+ *  Because temporary images don't (shouldn't) last long, and can't be read by the CPU, some images
+ *  probably can't be temporary. By default, the final image returned from the graph is not temporary.
+ *  (See MPSNNGraph.destinationImageAllocator to adjust).  Also, you may request that certain intermediate
+ *  images be non-temporary so that you can access their contents from outside the graph using the
+ *  MPSNNImageNode.exportFromGraph property. 
+ *
+ *  Temporary images often take up almost no additional memory. Regular images always do.  Some large graphs will only
+ *  be able to run using temporary memory, as regular images would overwhelm the machine. Even if you allocate
+ *  all your images up front and reuse them over and over, you will still very likely use much more memory with
+ *  regular images, than if you just allocate temporary images as needed. Because temporary images do not
+ *  generally allocate large amounts of storage, they are much cheaper and faster to use.
+ *
+ *  What kind of image is created after each filter node can be adjusted using the MPSNNImageNode.imageAllocator 
+ *  property.  Two standard allocators are provided as MPSImage.defaultAllocator and MPSTemporaryImage.defaultAllocator.
+ *  You may of course write your own. This might be necessary for example if you wish to maintain your own 
+ *  MTLHeap and allocate from it.
+ *
+ *  @section  subsection_mpsnngraph_debugging   MPSNNGraph debugging tips
+ *  In typical usage, some refinement, especially of padding policies, may be required to get the expected answer
+ *  from MPS. If the result image is the wrong size, padding is typically the problem. When the answers are incorrect,
+ *  the MPSCNNKernel.offset or other property may be incorrectly configured at some stage.  As the graph is generated 
+ *  starting from an output image node, you may create other graphs starting at any image node within the graph. 
+ *  This will give you a view into the result produced from each intermediate layer with a minimum of fuss.  In 
+ *  addition, the usual NSObject -debugDescription method is available to inspect objects to make sure they conform 
+ *  to expectation.
+ *
+ *  Note that certain operations such as neuron filters that follow convolution filters and image concatenation
+ *  may be optimized away by the MPSNNGraph when it is constructed. The convolution can do neuron operations as
+ *  part of its operation.  Concatenation is best done by writing the result of earlier filter passes in the right
+ *  place using MPSCNNKernel.destinationFeatureChannelOffset rather than by adding an extra copy. Other optimizations 
+ *  may be added as framework capabilities improve.
+ *
+ *  @section  section_samplecode   Sample Image Processing Example
  *      @code
  *       #import <MetalPerformanceShaders/MetalPerformanceShaders.h>
  *
@@ -702,4 +1068,7 @@
  *  for each tile. 
  */
 
+#ifdef __cplusplus
+}
+#endif
 

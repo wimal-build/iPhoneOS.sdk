@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: B41C63AE-D89D-3E89-9582-FA88DFB4A813', 'armv7s: 8D4659D4-1F05-3002-AD00-9152E1483631', 
-                   'arm64: 4D91C4D8-8583-39C7-AE2B-3716D1F5E0FC' ]
+                   'arm64: B5750788-B63B-3612-B8BB-FB2DA1E3DBCA' ]
 platform:        ios
 install-name:    '/usr/lib/libc++.1.dylib'
-current-version: 307.5
+current-version: 400.9.1
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -80,9 +80,12 @@ exports:
                        __ZTv0_n12_NSt3__19strstreamD0Ev, __ZTv0_n12_NSt3__19strstreamD1Ev, 
                        ___gxx_personality_sj0 ]
   - archs:           [ arm64 ]
-    symbols:         [ __ZNKSt3__18messagesIcE6do_getEliiRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+    symbols:         [ __ZNKSt16bad_array_length4whatEv, __ZNKSt3__18messagesIcE6do_getEliiRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
                        __ZNKSt3__18messagesIcE8do_closeEl, __ZNKSt3__18messagesIwE6do_getEliiRKNS_12basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEEE, 
-                       __ZNKSt3__18messagesIwE8do_closeEl, __ZNSt3__111this_thread9sleep_forERKNS_6chrono8durationIxNS_5ratioILl1ELl1000000000EEEEE, 
+                       __ZNKSt3__18messagesIwE8do_closeEl, __ZNSt16bad_array_lengthC1Ev, 
+                       __ZNSt16bad_array_lengthC2Ev, __ZNSt16bad_array_lengthD0Ev, 
+                       __ZNSt16bad_array_lengthD1Ev, __ZNSt16bad_array_lengthD2Ev, 
+                       __ZNSt3__111this_thread9sleep_forERKNS_6chrono8durationIxNS_5ratioILl1ELl1000000000EEEEE, 
                        __ZNSt3__112strstreambuf6__initEPclS1_, __ZNSt3__112strstreambufC1EPKal, 
                        __ZNSt3__112strstreambufC1EPKcl, __ZNSt3__112strstreambufC1EPKhl, 
                        __ZNSt3__112strstreambufC1EPalS1_, __ZNSt3__112strstreambufC1EPclS1_, 
@@ -122,6 +125,7 @@ exports:
                        __ZNSt3__16chrono12system_clock9to_time_tERKNS0_10time_pointIS1_NS0_8durationIxNS_5ratioILl1ELl1000000EEEEEEE, 
                        __ZTCNSt3__114basic_iostreamIcNS_11char_traitsIcEEEE16_NS_13basic_ostreamIcS2_EE, 
                        __ZTCNSt3__19strstreamE16_NS_13basic_ostreamIcNS_11char_traitsIcEEEE, 
+                       __ZTISt16bad_array_length, __ZTSSt16bad_array_length, __ZTVSt16bad_array_length, 
                        __ZThn16_NSt3__114basic_iostreamIcNS_11char_traitsIcEEED0Ev, 
                        __ZThn16_NSt3__114basic_iostreamIcNS_11char_traitsIcEEED1Ev, 
                        __ZThn16_NSt3__19strstreamD0Ev, __ZThn16_NSt3__19strstreamD1Ev, 
@@ -139,6 +143,10 @@ exports:
                        __ZTv0_n24_NSt3__114basic_iostreamIcNS_11char_traitsIcEEED1Ev, 
                        __ZTv0_n24_NSt3__19strstreamD0Ev, __ZTv0_n24_NSt3__19strstreamD1Ev, 
                        ___gxx_personality_v0 ]
+    weak-def-symbols: [ __ZdaPvSt11align_val_t, __ZdaPvSt11align_val_tRKSt9nothrow_t, 
+                        __ZdaPvmSt11align_val_t, __ZdlPvSt11align_val_t, __ZdlPvSt11align_val_tRKSt9nothrow_t, 
+                        __ZdlPvmSt11align_val_t, __ZnamSt11align_val_t, __ZnamSt11align_val_tRKSt9nothrow_t, 
+                        __ZnwmSt11align_val_t, __ZnwmSt11align_val_tRKSt9nothrow_t ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ __ZNKSt10bad_typeid4whatEv, __ZNKSt11logic_error4whatEv, __ZNKSt13bad_exception4whatEv, 
                        __ZNKSt13runtime_error4whatEv, __ZNKSt16nested_exception14rethrow_nestedEv, 

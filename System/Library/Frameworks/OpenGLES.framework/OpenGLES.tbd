@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 85E826D0-82D1-33AD-B0A8-2F0EC9752F7D', 'armv7s: 8D4F85EC-84B9-3A14-9071-37E5BC3D2614', 
-                   'arm64: FA5F3A60-FD02-3F32-B568-9051AB513139' ]
+                   'arm64: F4376050-B6B0-3DAC-AFD5-D058682F317F' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/OpenGLES.framework/OpenGLES
 objc-constraint: none
@@ -151,9 +151,10 @@ exports:
                        _kEAGLColorFormatRGBA_XR10_64BPP, _kEAGLColorFormatSRGBA8, 
                        _kEAGLColorFormatSRGBA_XR10_64BPP, _kEAGLColorFormatSRGB_XR10, 
                        _kEAGLColorFormatSRGB_XR10_A8_2P, _kEAGLContextPropertyAccelerated, 
-                       _kEAGLContextPropertyClientRetainRelease, _kEAGLContextPropertySharedWithCompute, 
-                       _kEAGLContextPropertySharegroup, _kEAGLContextPropertyVisibleInDebugTools, 
-                       _kEAGLDrawablePropertyColorFormat, _kEAGLDrawablePropertyRetainedBacking ]
+                       _kEAGLContextPropertyClientLabel, _kEAGLContextPropertyClientRetainRelease, 
+                       _kEAGLContextPropertySharedWithCompute, _kEAGLContextPropertySharegroup, 
+                       _kEAGLContextPropertyVisibleInDebugTools, _kEAGLDrawablePropertyColorFormat, 
+                       _kEAGLDrawablePropertyRetainedBacking ]
     objc-classes:    [ _EAGLContext, _EAGLSharegroup ]
     objc-ivars:      [ _EAGLContext._private ]
 ...

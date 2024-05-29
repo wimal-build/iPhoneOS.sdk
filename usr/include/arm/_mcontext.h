@@ -29,8 +29,9 @@
 #ifndef __ARM_MCONTEXT_H_
 #define __ARM_MCONTEXT_H_
 
+#include <sys/cdefs.h> /* __DARWIN_UNIX03 */
 #include <sys/appleapiopts.h>
-#include <mach/arm/_structs.h>
+#include <mach/machine/_structs.h>
 
 #ifndef _STRUCT_MCONTEXT32
 #if __DARWIN_UNIX03

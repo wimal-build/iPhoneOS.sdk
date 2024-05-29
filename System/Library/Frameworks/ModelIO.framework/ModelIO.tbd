@@ -1,12 +1,13 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 456DD1FF-D870-38BF-91DF-10E7AE8657A5', 'armv7s: 23FECC39-99A9-3CF6-BC79-D703BB2F2568', 
-                   'arm64: 751DEAC3-E455-3DCB-81DC-17E9B2C2A71D' ]
+uuids:           [ 'armv7: 69348675-B65B-3D32-903C-1FA8611B0EA2', 'armv7s: 3BAAB38B-10E2-3E0B-BF54-6F305A957B0A', 
+                   'arm64: 865F4A6C-E4C8-33CC-B853-0FD1D1504EB4' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ModelIO.framework/ModelIO
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
+    objc-classes:    [ _MDLBlendShapeChannel, _MDLBlendShapeDeformer, _MDLPrimitive ]
     weak-def-symbols: [ __ZTIFvRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE, 
                         __ZTIFvRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_E, 
                         __ZTIN5boost16exception_detail10clone_baseE, __ZTIN5boost16exception_detail19error_info_injectorINS_7bad_getEEE, 
@@ -191,20 +192,28 @@ exports:
                        _kUTType3dObject, _kUTTypeAlembic, _kUTTypePolygon, _kUTTypeStereolithography, 
                        _kUTTypeUniversalSceneDescription, _sampleTextureAtRay, _sampleTextureDataAtRay, 
                        _sampleTextureDataAtRayMipMapped ]
-    objc-classes:    [ _MDLAreaLight, _MDLAsset, _MDLBlendShapeChannel, _MDLBlendShapeDeformer, 
+    objc-classes:    [ _MDLAnimatedMatrix4x4, _MDLAnimatedQuaternionArray, _MDLAnimatedScalar, 
+                       _MDLAnimatedScalarArray, _MDLAnimatedValue, _MDLAnimatedVector2, 
+                       _MDLAnimatedVector3, _MDLAnimatedVector3Array, _MDLAnimatedVector4, 
+                       _MDLAnimationBindComponent, _MDLAreaLight, _MDLAsset, _MDLBundleAssetResolver, 
                        _MDLCamera, _MDLCheckerboardTexture, _MDLColorSwatchTexture, 
                        _MDLInteractiveCameraController, _MDLLight, _MDLLightProbe, 
                        _MDLMaterial, _MDLMaterialProperty, _MDLMaterialPropertyConnection, 
-                       _MDLMaterialPropertyGraph, _MDLMaterialPropertyNode, _MDLMesh, 
-                       _MDLMeshBufferAllocatorDefault, _MDLMeshBufferData, _MDLMeshBufferDataAllocator, 
-                       _MDLMeshBufferMap, _MDLNoiseTexture, _MDLNormalMapTexture, 
-                       _MDLObject, _MDLObjectContainer, _MDLPhotometricLight, _MDLPhysicallyPlausibleLight, 
-                       _MDLPhysicallyPlausibleScatteringFunction, _MDLPrimitive, 
-                       _MDLScatteringFunction, _MDLScene, _MDLSkinDeformer, _MDLSkyCubeTexture, 
-                       _MDLStereoscopicCamera, _MDLSubmesh, _MDLSubmeshTopology, 
+                       _MDLMaterialPropertyGraph, _MDLMaterialPropertyNode, _MDLMatrix4x4Array, 
+                       _MDLMesh, _MDLMeshBufferAllocatorDefault, _MDLMeshBufferData, 
+                       _MDLMeshBufferDataAllocator, _MDLMeshBufferMap, _MDLMeshBufferZoneDefault, 
+                       _MDLMorphDeformer, _MDLNoiseTexture, _MDLNormalMapTexture, 
+                       _MDLObject, _MDLObjectContainer, _MDLPackedJointAnimation, 
+                       _MDLPathAssetResolver, _MDLPhotometricLight, _MDLPhysicallyPlausibleLight, 
+                       _MDLPhysicallyPlausibleScatteringFunction, _MDLRelativeAssetResolver, 
+                       _MDLScatteringFunction, _MDLScene, _MDLSkeleton, _MDLSkinDeformer, 
+                       _MDLSkyCubeTexture, _MDLStereoscopicCamera, _MDLSubmesh, _MDLSubmeshTopology, 
                        _MDLTexture, _MDLTextureFilter, _MDLTextureSampler, _MDLTransform, 
-                       _MDLURLTexture, _MDLVertexAttribute, _MDLVertexAttributeData, 
-                       _MDLVertexBufferLayout, _MDLVertexDescriptor, _MDLVolumeGrid, 
-                       _MDLVoxelArray ]
-    objc-ivars:      [ _MDLTransform._transform ]
+                       _MDLTransformMatrixOp, _MDLTransformRotateOp, _MDLTransformRotateXOp, 
+                       _MDLTransformRotateYOp, _MDLTransformRotateZOp, _MDLTransformScaleOp, 
+                       _MDLTransformStack, _MDLTransformTranslateOp, _MDLURLTexture, 
+                       _MDLVertexAttribute, _MDLVertexAttributeData, _MDLVertexBufferLayout, 
+                       _MDLVertexDescriptor, _MDLVolumeGrid, _MDLVoxelArray ]
+    objc-ivars:      [ _MDLAnimatedValue._interpolation, _MDLAnimatedValue._timeSampledData, 
+                       _MDLMatrix4x4Array._data, _MDLTransform._transform ]
 ...

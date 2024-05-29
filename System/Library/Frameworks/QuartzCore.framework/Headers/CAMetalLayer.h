@@ -91,6 +91,11 @@ CA_CLASS_AVAILABLE (10.11, 8.0, 9.0, 2.0)
 
 
 
+/* This property controls if nextDrawable is allowed to timeout and return nil if
+ * the system does not have a free drawable available for longer than one second.
+ * The default value is YES. */
+@property BOOL allowsNextDrawableTimeout CA_AVAILABLE_STARTING (10.13, 11.0, 11.0, 4.0);
+
 @end
 
 NS_ASSUME_NONNULL_END

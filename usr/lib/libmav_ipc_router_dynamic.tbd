@@ -1,18 +1,12 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 208334D6-2F8B-3002-AEAC-D21C16C8D9D1', 'armv7s: A7658DAC-74C0-3E09-AE1D-3138DC2C6140', 
-                   'arm64: 7C31DB4A-6A50-30E0-925E-4E9E27AFDF42' ]
+                   'arm64: 0D1E9DB0-ACC5-349A-A124-EBB0BB0F59F6' ]
 platform:        ios
 install-name:    /usr/lib/libmav_ipc_router_dynamic.dylib
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
-    weak-def-symbols: [ __ZTINSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
-                        __ZTINSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
-                        __ZTSNSt3__114default_deleteI12mav_router_tEE, __ZTSNSt3__114default_deleteIN3usb3log4file6writerEEE, 
-                        __ZTSNSt3__114default_deleteIN3usb3log6serverEEE, __ZTSNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
-                        __ZTSNSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE ]
-  - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _APPLIB_API_MAV_DeAssertResetDetect, _APPLIB_API_MAV_ParseAPWakeResponse, 
                        _APPLIB_API_MAV_ParseFuseResponse, _APPLIB_API_MAV_PowerDown, 
                        _APPLIB_API_MAV_SendAPWakeCommand, _APPLIB_API_MAV_SendFuseCommand, 
@@ -104,9 +98,23 @@ exports:
                        _HDLCFrameEncodeAndCache, _HDLCFrameFree, _HDLCFrameGetFreeSpace, 
                        _HDLCFrameGetMaxEncodedLength, _HDLCFrameInject, _HDLCFrameInjectUnsignedChar, 
                        _HDLCFrameInjectUnsignedInt, _HDLCFrameInjectUnsignedShort, 
-                       __ETLDebugPrint, __ETLDebugPrintBinary, __ZN10mav_router6device10controller12exitLowPowerEv, 
-                       __ZN10mav_router6device10controller13enterLowPowerEv, __ZN10mav_router6device10controller13getMaxPayloadERm, 
-                       __ZN10mav_router6device10controller16configureLogSizeEj, __ZN10mav_router6device10controller19getFatalErrorReasonERNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE, 
+                       __ETLDebugPrint, __ETLDebugPrintBinary, _crc16_table, _crc30_table, 
+                       _crc32_table, _crc_16_calc, _crc_16_l_calc, _crc_16_l_step, 
+                       _crc_16_l_table, _crc_16_step, _crc_30_calc, _crc_30_step, 
+                       _crc_32_calc ]
+    weak-def-symbols: [ __ZGVN3ctu9SingletonIN3usb3log4file6writerES4_NS_23PthreadMutexGuardPolicyIS4_EEE9sInstanceE, 
+                        __ZGVN3ctu9SingletonIN3usb3log6serverES3_NS_23PthreadMutexGuardPolicyIS3_EEE9sInstanceE, 
+                        __ZN3ctu9SingletonIN3usb3log4file6writerES4_NS_23PthreadMutexGuardPolicyIS4_EEE9sInstanceE, 
+                        __ZN3ctu9SingletonIN3usb3log6serverES3_NS_23PthreadMutexGuardPolicyIS3_EEE9sInstanceE, 
+                        __ZTINSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                        __ZTINSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                        __ZTSNSt3__114default_deleteI12mav_router_tEE, __ZTSNSt3__114default_deleteIN3usb3log4file6writerEEE, 
+                        __ZTSNSt3__114default_deleteIN3usb3log6serverEEE, __ZTSNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                        __ZTSNSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE ]
+  - archs:           [ armv7, armv7s, arm64 ]
+    symbols:         [ __ZN10mav_router6device10controller12exitLowPowerEv, __ZN10mav_router6device10controller13enterLowPowerEv, 
+                       __ZN10mav_router6device10controller13getMaxPayloadERm, __ZN10mav_router6device10controller16configureLogSizeEj, 
+                       __ZN10mav_router6device10controller19getFatalErrorReasonERNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE, 
                        __ZN10mav_router6device10controller21hasFatalErrorOccurredEPb, 
                        __ZN10mav_router6device10controller6createENSt3__18weak_ptrI12mav_router_tEE, 
                        __ZN10mav_router6device10controller6engageEU13block_pointerFv19mav_router_result_tE, 
@@ -129,18 +137,11 @@ exports:
                        __ZTIN10mav_router7service14transport_shimE, __ZTSN10mav_router6device10controllerE, 
                        __ZTSN10mav_router6device4shimE, __ZTSN10mav_router7service14transport_shimE, 
                        __ZTVN10mav_router6device10controllerE, __ZTVN10mav_router6device4shimE, 
-                       __ZTVN10mav_router7service14transport_shimE, _crc16_table, 
-                       _crc30_table, _crc32_table, _crc_16_calc, _crc_16_l_calc, 
-                       _crc_16_l_step, _crc_16_l_table, _crc_16_step, _crc_30_calc, 
-                       _crc_30_step, _crc_32_calc, _mav_router_channel_get_name_as_cstr, 
+                       __ZTVN10mav_router7service14transport_shimE, _mav_router_channel_get_name_as_cstr, 
                        _mav_router_device_get_name_as_cstr, _mav_router_get_hsic_control_device, 
                        _mav_router_get_pci_control_device, _mav_router_get_qmi_channel, 
                        _mav_router_init_context, _mav_router_route, _mav_router_service_register_error_handler, 
                        _mav_router_service_register_receive, _mav_router_service_transmit, 
                        _mav_router_service_unregister_error_handler, _mav_router_service_unregister_receive, 
                        _mav_router_swap, _mav_router_unroute, _mav_router_unroute_all ]
-    weak-def-symbols: [ __ZGVN3ctu9SingletonIN3usb3log4file6writerES4_NS_23PthreadMutexGuardPolicyIS4_EEE9sInstanceE, 
-                        __ZGVN3ctu9SingletonIN3usb3log6serverES3_NS_23PthreadMutexGuardPolicyIS3_EEE9sInstanceE, 
-                        __ZN3ctu9SingletonIN3usb3log4file6writerES4_NS_23PthreadMutexGuardPolicyIS4_EEE9sInstanceE, 
-                        __ZN3ctu9SingletonIN3usb3log6serverES3_NS_23PthreadMutexGuardPolicyIS3_EEE9sInstanceE ]
 ...

@@ -1,14 +1,14 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 9B910AE4-A622-3577-A94A-2B5E81AAE1CD', 'armv7s: CEFA37F0-8AD8-3134-82F6-C505B96D8E9E', 
-                   'arm64: C655CD60-25EE-30FC-A729-AD3078F75D1A' ]
+uuids:           [ 'armv7: 07B96996-3B26-366B-BDB2-A4A191FE8943', 'armv7s: 036CDB60-D4FB-398A-81C6-C47C7C2A49D0', 
+                   'arm64: D6D2CB71-D5F9-32E7-B558-719C06364B5E' ]
 platform:        ios
 install-name:    /usr/lib/libQLCharts.dylib
-current-version: 245
+current-version: 257
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
-    symbols:         [ ___gesf2, ___lesf2, ___ltsf2, ___nesf2 ]
+    symbols:         [ _OIGetDefaultFontWithSize, ___gesf2, ___lesf2, ___ltsf2, ___nesf2 ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _DummyValueCallbacks, _OIAXisGetDrawMajorGridlines, _OIAxisAreLabelsCentered, 
                        _OIAxisConvertValueToLocal, _OIAxisCreateWithLabelCount, _OIAxisCreateWithRange, 
@@ -47,16 +47,17 @@ exports:
                        _OIChartSetStatus, _OIChartSetUseShadows, _OIChartSetupRendererMapping, 
                        _OIChartingCreateImageRef, _OIChartingCreateImageRefWithFormatterCallback, 
                        _OIChartingCreatePDFData, _OIChartingCreatePDFDataWithFormatterCallback, 
-                       _OIColorCreateGenericRGB, _OICreateDimmedColorFromColor, _OIDrawStringWithAttributes, 
-                       _OIErrorBarArrayCallbacks, _OIErrorBarCreate, _OIErrorBarCreateFromDictionary, 
-                       _OIErrorBarGetType, _OIErrorBarGetValue, _OIErrorBarGetValueType, 
-                       _OIErrorBarRelease, _OIErrorBarRendererAddPoint, _OIErrorBarRendererArrayCallbacks, 
-                       _OIErrorBarRendererCreate, _OIErrorBarRendererRelease, _OIErrorBarRendererRenderInContext, 
+                       _OIColorCreateGenericRGB, _OICreateDefaultFontWithSize, _OICreateDimmedColorFromColor, 
+                       _OIDrawStringWithAttributes, _OIErrorBarArrayCallbacks, _OIErrorBarCreate, 
+                       _OIErrorBarCreateFromDictionary, _OIErrorBarGetType, _OIErrorBarGetValue, 
+                       _OIErrorBarGetValueType, _OIErrorBarRelease, _OIErrorBarRendererAddPoint, 
+                       _OIErrorBarRendererArrayCallbacks, _OIErrorBarRendererCreate, 
+                       _OIErrorBarRendererRelease, _OIErrorBarRendererRenderInContext, 
                        _OIErrorBarRendererRetain, _OIErrorBarRetain, _OIErrorBarSetType, 
                        _OIErrorBarSetValue, _OIErrorBarSetValueType, _OIFormatterCreateDateStringFromDouble, 
                        _OIFormatterCreatePercentStringFromDouble, _OIFormatterCreateStringFromDouble, 
-                       _OIFormatterCreateStringUsingCustomFormatter, _OIGetDefaultFontWithSize, 
-                       _OILabelArrayCallbacks, _OILabelCollectionAddNumber, _OILabelCollectionAddNumberWithFormatter, 
+                       _OIFormatterCreateStringUsingCustomFormatter, _OILabelArrayCallbacks, 
+                       _OILabelCollectionAddNumber, _OILabelCollectionAddNumberWithFormatter, 
                        _OILabelCollectionAddString, _OILabelCollectionArrayCallbacks, 
                        _OILabelCollectionCreate, _OILabelCollectionGetLabels, _OILabelCollectionRelease, 
                        _OILabelCollectionRenderInContext, _OILabelCollectionRetain, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 1EA46235-3163-34BE-942F-3D42E5E77806', 'armv7s: A884D1DF-2673-345D-ADE1-B2D6E1120A22', 
-                   'arm64: 3B464FBA-D023-3602-8B88-35CC126A826D' ]
+uuids:           [ 'armv7: D9C0E2AA-A355-3469-84B3-F46A157AD4C8', 'armv7s: 364700DD-E95E-3DFE-9F78-7FDB52CDA315', 
+                   'arm64: 3BEF0846-7BA5-31FA-B652-5F26BC50C4EE' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GameplayKit.framework/GameplayKit
 objc-constraint: none
@@ -337,8 +337,8 @@ exports:
                        _GKObstacleGraph, _GKOctree, _GKOctreeNode, _GKPath, _GKPerlinNoiseSource, 
                        _GKPolygonObstacle, _GKPowerNoiseModifier, _GKQuadtree, _GKQuadtreeNode, 
                        _GKRTree, _GKRandomDistribution, _GKRandomSource, _GKRidgedNoiseSource, 
-                       _GKRotateNoiseModifier, _GKRule, _GKRuleSystem, _GKSKNodeComponent, 
-                       _GKScaleNoiseModifier, _GKScene, _GKShuffledDistribution, 
+                       _GKRotateNoiseModifier, _GKRule, _GKRuleSystem, _GKSCNNodeComponent, 
+                       _GKSKNodeComponent, _GKScaleNoiseModifier, _GKScene, _GKShuffledDistribution, 
                        _GKSphereObstacle, _GKSpheresNoiseSource, _GKState, _GKStateMachine, 
                        _GKSystemArc4RandomSource, _GKTerraceNoiseModifier, _GKTurbulenceNoiseModifier, 
                        _GKVoronoiNoiseSource, __GKBlockRule, __GKNSPredicateRule ]

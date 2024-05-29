@@ -1,16 +1,40 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: EDD15516-7DC1-3192-B9BD-E57791776C7F', 'armv7s: D0C19B9C-4B9C-3C6D-8F89-E69C452BFF24', 
-                   'arm64: 1CB671D6-2AEE-34FC-BD11-51408D63D39B' ]
+uuids:           [ 'armv7: 095D412E-B290-3B93-9423-6246D71EAEA1', 'armv7s: D595B74D-9D6A-3F47-892C-2C8BA16BD154', 
+                   'arm64: E24B05E2-C256-364D-BBD2-1C59A740EC9E' ]
 platform:        ios
 install-name:    /usr/lib/CarrierBundleUtilities.dylib
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
+    symbols:         [ _development_pubkeysize, _pkcs1_development_pubkey, _pkcs1_production_pubkey, 
+                       _pkcs1_production_pubkey2, _production_pubkeysize, _production_pubkeysize2 ]
     weak-def-symbols: [ __ZTI15DigestGenerator, __ZTINSt3__120__shared_ptr_emplaceI18DigestGenerator160NS_9allocatorIS1_EEEE, 
                         __ZTINSt3__120__shared_ptr_emplaceI18DigestGenerator256NS_9allocatorIS1_EEEE, 
                         __ZTS15DigestGenerator, __ZTSNSt3__120__shared_ptr_emplaceI18DigestGenerator160NS_9allocatorIS1_EEEE, 
                         __ZTSNSt3__120__shared_ptr_emplaceI18DigestGenerator256NS_9allocatorIS1_EEEE ]
+  - archs:           [ arm64 ]
+    symbols:         [ __ZN16LegacyPublicKeys27get_sha1_production_keysizeEv, __ZN16LegacyPublicKeys27get_sha2_production_keysizeEv, 
+                       __ZN16LegacyPublicKeys28get_sha1_development_keysizeEv, __ZN16LegacyPublicKeys28get_sha2_development_keysizeEv, 
+                       __ZN16LegacyPublicKeys29get_sha1_production_publickeyEv, __ZN16LegacyPublicKeys29get_sha2_production_publickeyEv, 
+                       __ZN16LegacyPublicKeys30get_sha1_development_publickeyEv, 
+                       __ZN16LegacyPublicKeys30get_sha2_development_publickeyEv, 
+                       __ZN16LegacyPublicKeys31pkcs1_sha1_production_publickeyE, 
+                       __ZN16LegacyPublicKeys31pkcs1_sha2_production_publickeyE, 
+                       __ZN16LegacyPublicKeys32pkcs1_sha1_development_publickeyE, 
+                       __ZN16LegacyPublicKeysC1Ev, __ZN16LegacyPublicKeysC2Ev, __ZN17CurrentPublicKeys27get_sha1_production_keysizeEv, 
+                       __ZN17CurrentPublicKeys27get_sha2_production_keysizeEv, __ZN17CurrentPublicKeys28get_sha1_development_keysizeEv, 
+                       __ZN17CurrentPublicKeys28get_sha2_development_keysizeEv, __ZN17CurrentPublicKeys29get_sha1_production_publickeyEv, 
+                       __ZN17CurrentPublicKeys29get_sha2_production_publickeyEv, 
+                       __ZN17CurrentPublicKeys30get_sha1_development_publickeyEv, 
+                       __ZN17CurrentPublicKeys30get_sha2_development_publickeyEv, 
+                       __ZN17CurrentPublicKeys31pkcs1_sha1_production_publickeyE, 
+                       __ZN17CurrentPublicKeys31pkcs1_sha2_production_publickeyE, 
+                       __ZN17CurrentPublicKeys32pkcs1_sha1_development_publickeyE, 
+                       __ZN17CurrentPublicKeys32pkcs1_sha2_development_publickeyE, 
+                       __ZN17CurrentPublicKeysC1Ev, __ZN17CurrentPublicKeysC2Ev, 
+                       __ZTI16LegacyPublicKeys, __ZTI17CurrentPublicKeys, __ZTS16LegacyPublicKeys, 
+                       __ZTS17CurrentPublicKeys, __ZTV16LegacyPublicKeys, __ZTV17CurrentPublicKeys ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ __Z12VerifyDigestN3ctu2cf11CFSharedRefIK8__CFDataEES4_P8__SecKey12DigestPrefix, 
                        __Z15createSecKeyRefPKhi, __Z15doSecVerify_iOSN3ctu2cf11CFSharedRefIK8__CFDataEES4_P8__SecKey12DigestPrefix, 
@@ -67,7 +91,5 @@ exports:
                        __ZN27ComputeHashForCarrierBundle37prepareAndClassifyFileInCarrierBundleERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERNS0_3mapIS6_NS0_4listIS6_NS4_IS6_EEEENS0_4lessIS6_EENS4_INS0_4pairIS7_SC_EEEEEE, 
                        __ZTI11ComputeHash, __ZTI18DigestGenerator160, __ZTI18DigestGenerator256, 
                        __ZTS11ComputeHash, __ZTS18DigestGenerator160, __ZTS18DigestGenerator256, 
-                       __ZTV11ComputeHash, __ZTV18DigestGenerator160, __ZTV18DigestGenerator256, 
-                       _development_pubkeysize, _pkcs1_development_pubkey, _pkcs1_production_pubkey, 
-                       _pkcs1_production_pubkey2, _production_pubkeysize, _production_pubkeysize2 ]
+                       __ZTV11ComputeHash, __ZTV18DigestGenerator160, __ZTV18DigestGenerator256 ]
 ...

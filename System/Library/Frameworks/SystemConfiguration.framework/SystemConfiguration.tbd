@@ -1,12 +1,15 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 7949ABAF-CEED-3680-9C95-6FCCAAEB1252', 'armv7s: FB81271E-A21D-3EC3-85DC-DA227A9A3DF2', 
-                   'arm64: E8AAAB69-0585-3F7E-97FB-492185CF20BE' ]
+uuids:           [ 'armv7: 1260046C-9A56-331C-A01D-765D19015DE1', 'armv7s: C67BB7EA-FF5E-343F-BEC9-FD055D488744', 
+                   'arm64: D31A0885-E9EB-33E8-87C1-8F38E9727486' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
-current-version: 888.50.20
+current-version: 963
 objc-constraint: none
 exports:         
+  - archs:           [ armv7, armv7s ]
+    symbols:         [ _SCLOG, _SCLoggerCreate, _SCLoggerGetFlags, _SCLoggerLog, 
+                       _SCLoggerSetFlags, _SCLoggerVLog, __SCNetworkInterfaceIsModemV92 ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _CNCopyCurrentNetworkInfo, _CNCopySupportedInterfaces, _CNMarkPortalOffline, 
                        _CNMarkPortalOnline, _CNSetSupportedSSIDs, _DHCPClientPreferencesCopyApplicationOptions, 
@@ -35,8 +38,7 @@ exports:
                        _SCDynamicStoreSetDisconnectCallBack, _SCDynamicStoreSetDispatchQueue, 
                        _SCDynamicStoreSetMultiple, _SCDynamicStoreSetNotificationKeys, 
                        _SCDynamicStoreSetValue, _SCDynamicStoreSnapshot, _SCError, 
-                       _SCErrorString, _SCLOG, _SCLog, _SCLoggerCreate, _SCLoggerGetFlags, 
-                       _SCLoggerLog, _SCLoggerSetFlags, _SCLoggerVLog, _SCNetworkCheckReachabilityByAddress, 
+                       _SCErrorString, _SCLog, _SCNetworkCheckReachabilityByAddress, 
                        _SCNetworkCheckReachabilityByName, _SCNetworkConnectionCanTunnelAddress, 
                        _SCNetworkConnectionCopyAllUserPreferences, _SCNetworkConnectionCopyAvailableServices, 
                        _SCNetworkConnectionCopyCurrentUserPreferences, _SCNetworkConnectionCopyExtendedStatus, 
@@ -166,7 +168,8 @@ exports:
                        __SCDPluginExecCommand2, __SCDPluginExecInit, __SCErrorSet, 
                        __SCHelperExec, __SCNetworkConfigurationCheckValidity, __SCNetworkConfigurationCheckValidityWithPreferences, 
                        __SCNetworkConfigurationCopyMigrationPaths, __SCNetworkConfigurationCopyMigrationRemovePaths, 
-                       __SCNetworkConfigurationPerformMigration, __SCNetworkInterfaceCompare, 
+                       __SCNetworkConfigurationPerformMigration, __SCNetworkInterfaceCacheClose, 
+                       __SCNetworkInterfaceCacheOpen, __SCNetworkInterfaceCompare, 
                        __SCNetworkInterfaceCopyActive, __SCNetworkInterfaceCopyAllWithPreferences, 
                        __SCNetworkInterfaceCopyInterfaceInfo, __SCNetworkInterfaceCopySlashDevPath, 
                        __SCNetworkInterfaceCreateWithBSDName, __SCNetworkInterfaceCreateWithEntity, 
@@ -178,12 +181,12 @@ exports:
                        __SCNetworkInterfaceGetIORegistryEntryID, __SCNetworkInterfaceIsApplePreconfigured, 
                        __SCNetworkInterfaceIsBluetoothP2P, __SCNetworkInterfaceIsBluetoothPAN, 
                        __SCNetworkInterfaceIsBluetoothPAN_NAP, __SCNetworkInterfaceIsBuiltin, 
-                       __SCNetworkInterfaceIsHiddenConfiguration, __SCNetworkInterfaceIsModemV92, 
-                       __SCNetworkInterfaceIsPhysicalEthernet, __SCNetworkInterfaceIsTethered, 
-                       __SCNetworkInterfaceIsThunderbolt, __SCNetworkMigrationAreConfigurationsIdentical, 
+                       __SCNetworkInterfaceIsHiddenConfiguration, __SCNetworkInterfaceIsPhysicalEthernet, 
+                       __SCNetworkInterfaceIsTethered, __SCNetworkInterfaceIsThunderbolt, 
+                       __SCNetworkMigrationAreConfigurationsIdentical, __SCNetworkProtocolCompare, 
                        __SCNetworkReachabilityCopyTargetDescription, __SCNetworkReachabilityCopyTargetFlags, 
                        __SCNetworkServiceCompare, __SCNetworkServiceCopyActive, __SCNetworkServiceIsVPN, 
-                       __SCNetworkServiceSetServiceID, __SCNetworkSetCreateDefault, 
+                       __SCNetworkServiceSetServiceID, __SCNetworkSetCompare, __SCNetworkSetCreateDefault, 
                        __SCNetworkSetSetSetID, __SCPreferencesCopyComputerName, __SCPreferencesSystemKeychainPasswordItemCopy, 
                        __SCPreferencesSystemKeychainPasswordItemExists, __SCPreferencesSystemKeychainPasswordItemRemove, 
                        __SCPreferencesSystemKeychainPasswordItemSet, __SCSecKeychainCopySystemKeychain, 
@@ -222,9 +225,10 @@ exports:
                        _kSCEntNetAirPort, _kSCEntNetAppLayer, _kSCEntNetCommCenter, 
                        _kSCEntNetDHCP, _kSCEntNetDNS, _kSCEntNetEAPOL, _kSCEntNetEthernet, 
                        _kSCEntNetFireWire, _kSCEntNetIPSec, _kSCEntNetIPv4, _kSCEntNetIPv4RouterARPAlive, 
-                       _kSCEntNetIPv4RouterARPFailure, _kSCEntNetIPv6, _kSCEntNetInterface, 
-                       _kSCEntNetL2TP, _kSCEntNetLink, _kSCEntNetLinkIssues, _kSCEntNetLinkQuality, 
-                       _kSCEntNetLoopback, _kSCEntNetModem, _kSCEntNetOnDemand, _kSCEntNetPPP, 
+                       _kSCEntNetIPv4RouterARPFailure, _kSCEntNetIPv6, _kSCEntNetIPv6RouterExpired, 
+                       _kSCEntNetInterface, _kSCEntNetL2TP, _kSCEntNetLink, _kSCEntNetLinkIssues, 
+                       _kSCEntNetLinkQuality, _kSCEntNetLoopback, _kSCEntNetModem, 
+                       _kSCEntNetNAT64PrefixRequest, _kSCEntNetOnDemand, _kSCEntNetPPP, 
                        _kSCEntNetPPPSerial, _kSCEntNetPPPoE, _kSCEntNetPPTP, _kSCEntNetProxies, 
                        _kSCEntNetQoSMarkingPolicy, _kSCEntNetService, _kSCEntNetVPN, 
                        _kSCNetworkConfigurationMigrationActionKey, _kSCNetworkConfigurationRepair, 

@@ -1,28 +1,29 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 53324F18-D948-3A29-AC3A-BACA3F1D3CC4', 'armv7s: FD68F401-0AB4-3D21-A7AA-B40C8362E0D2', 
-                   'arm64: B6F97624-285D-3476-9449-0F5E51D309DB' ]
+uuids:           [ 'armv7: D5FED001-75DC-39D7-881E-D31C0E1AFCB4', 'armv7s: 40B5865E-BD06-31A9-A1C7-4D2121ACB847', 
+                   'arm64: 2F95D449-6D4B-3D7A-80D6-9128EC629DA9' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreLocation.framework/CoreLocation
-current-version: 2101.0.62
+current-version: 2235.0.2
 objc-constraint: none
 exports:         
+  - archs:           [ armv7, armv7s ]
+    symbols:         [ _CLClientGetCapabilities, _CLSetAutopauseState ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _CLAppResetChangedNotification, _CLAppStatusChangedNotification, 
                        _CLAuthorizationStatusChangedNotification, _CLBeaconRegionAnyIdentifier, 
                        _CLClientClearNvramData, _CLClientCreate, _CLClientCreateIso6709Notation, 
                        _CLClientCreateWithBundleIdentifierAndPath, _CLClientDisplayStats, 
                        _CLClientEnableNmeaOutput, _CLClientGetAuthorizationStatus, 
-                       _CLClientGetCallback, _CLClientGetCapabilities, _CLClientGetDistanceCoordinates, 
-                       _CLClientGetDistanceHighPrecision, _CLClientGetError, _CLClientGetHeading, 
-                       _CLClientGetLocation, _CLClientGetLocationUnavailable, _CLClientGetNmea, 
-                       _CLClientGetOneShotLocation, _CLClientGetSatelliteInfo, _CLClientGetTypeID, 
-                       _CLClientInvalidate, _CLClientIsBatchedLocationUpdatesAvailable, 
-                       _CLClientIsHeadingAvailable, _CLClientIsLocationServicesAvailable, 
-                       _CLClientIsLocationServicesEnabled, _CLClientIsValid, _CLClientLog, 
-                       _CLClientLogDump, _CLClientMarkAsHavingReceivedLocation, _CLClientRequestAuthorization, 
-                       _CLClientRetrieveAuthorizationStatus, _CLClientRetrieveData, 
-                       _CLClientRetrieveLocation, _CLClientRetrieveLocationWithDynamicAccuracyReductionAndAlteredAccessoryLocations, 
+                       _CLClientGetCallback, _CLClientGetDistanceCoordinates, _CLClientGetDistanceHighPrecision, 
+                       _CLClientGetError, _CLClientGetHeading, _CLClientGetLocation, 
+                       _CLClientGetLocationUnavailable, _CLClientGetNmea, _CLClientGetOneShotLocation, 
+                       _CLClientGetSatelliteInfo, _CLClientGetTypeID, _CLClientInvalidate, 
+                       _CLClientIsBatchedLocationUpdatesAvailable, _CLClientIsHeadingAvailable, 
+                       _CLClientIsLocationServicesAvailable, _CLClientIsLocationServicesEnabled, 
+                       _CLClientIsValid, _CLClientLog, _CLClientLogDump, _CLClientMarkAsHavingReceivedLocation, 
+                       _CLClientRequestAuthorization, _CLClientRetrieveAuthorizationStatus, 
+                       _CLClientRetrieveData, _CLClientRetrieveLocation, _CLClientRetrieveLocationWithDynamicAccuracyReductionAndAlteredAccessoryLocations, 
                        _CLClientSetAllowsMapCorrection, _CLClientSetCallback, _CLClientSetCallbackInternal, 
                        _CLClientSetProductionTest, _CLClientSetProxyForRemoteClient, 
                        _CLClientSetShowLocationPrompt, _CLClientShowHeadingCalibration, 
@@ -35,9 +36,9 @@ exports:
                        _CLGenerateRoadSegmentId, _CLGetControlPlaneStatusReport, 
                        _CLGetLocationDefault, _CLGetStatusBarIconState, _CLInternalPerformMigration, 
                        _CLLocationCoordinate2DGetDistanceFrom, _CLLocationCoordinate2DIsValid, 
-                       _CLLocationCoordinate2DMake, _CLLocationDistanceMax, _CLMicroLocationResultIdentifierMetadataKey, 
-                       _CLMicroLocationResultProbabilityMetadataKey, _CLMicroLocationResultsDuetMetadataKey, 
-                       _CLPingDaemon, _CLProvideNetworkDstUpdate, _CLSetAutopauseState, 
+                       _CLLocationCoordinate2DMake, _CLLocationDistanceMax, _CLMicroLocationResultDomainMetadataKey, 
+                       _CLMicroLocationResultIdentifierMetadataKey, _CLMicroLocationResultProbabilityMetadataKey, 
+                       _CLMicroLocationResultsDuetMetadataKey, _CLPingDaemon, _CLProvideNetworkDstUpdate, 
                        _CLSetLocationAuthorizationForApplication, _CLSetLocationDefault, 
                        _CLSetMapMatchingRouteHint, _CLShouldDisplayStatusBarIconChangedNotification, 
                        _CLSimulationWifiAccessPointAge, _CLSimulationWifiAccessPointChannel, 
@@ -56,10 +57,11 @@ exports:
                        _CLTilesManagerClientReturnCode_ERROR, _CLTilesManagerClientReturnCode_OK, 
                        _CLTimeIntervalMax, __CLClientCreateWithBundleIdentifierAndPath, 
                        __CLClientSetCallbackObjc, _kCLClientDistanceFilterNone, _kCLClientHeadingFilterNone, 
-                       _kCLCommonLocationAlwaysUsageDescriptionKey, _kCLCommonLocationUsageDescriptionKey, 
-                       _kCLCommonLocationWhenInUseUsageDescriptionKey, _kCLDistanceFilterNone, 
-                       _kCLErrorDomain, _kCLErrorDomainPrivate, _kCLErrorUserInfoAlternateRegionKey, 
-                       _kCLHeadingFilterNone, _kCLLocationAccuracyBest, _kCLLocationAccuracyBestForNavigation, 
+                       _kCLCommonLocationAlwaysAndWhenInUseUsageDescriptionKey, _kCLCommonLocationAlwaysUsageDescriptionKey, 
+                       _kCLCommonLocationUsageDescriptionKey, _kCLCommonLocationWhenInUseUsageDescriptionKey, 
+                       _kCLDistanceFilterNone, _kCLErrorDomain, _kCLErrorDomainPrivate, 
+                       _kCLErrorUserInfoAlternateRegionKey, _kCLHeadingFilterNone, 
+                       _kCLLocationAccuracyBest, _kCLLocationAccuracyBestForNavigation, 
                        _kCLLocationAccuracyBystander, _kCLLocationAccuracyE911CallInviteHigh, 
                        _kCLLocationAccuracyE911CallInviteLow, _kCLLocationAccuracyHundredMeters, 
                        _kCLLocationAccuracyKilometer, _kCLLocationAccuracyLeech, 
@@ -71,7 +73,7 @@ exports:
                        _CLInUseAssertion, _CLLocation, _CLLocationIndependenceAssertion, 
                        _CLLocationManager, _CLLocationManagerRoutine, _CLLocationMatchInfo, 
                        _CLLocationSmoother, _CLPlacemark, _CLPredictedApplication, 
-                       _CLRegion, _CLSimulationManager, _CLTilesManagerClient, _CLVehicleHeading, 
-                       _CLVehicleSpeed, _CLVisit, __CLMicroLocation, __CLMicroLocationResult, 
-                       __CLRangingPeer, __CLRangingPeerDistance ]
+                       _CLRegion, _CLSimulationManager, _CLStateTracker, _CLTilesManagerClient, 
+                       _CLVehicleHeading, _CLVehicleSpeed, _CLVisit, __CLMicroLocation, 
+                       __CLMicroLocationResult, __CLRangingPeer, __CLRangingPeerDistance ]
 ...

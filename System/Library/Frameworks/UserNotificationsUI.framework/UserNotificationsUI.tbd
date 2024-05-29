@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 5F3F7F9C-BC81-3EB6-9980-2C3CE612D0BE', 'armv7s: EC700227-1B1F-35F5-9FC2-A95E517588C7', 
-                   'arm64: 6105BD89-6D9D-3B3B-86AE-260F080D5D21' ]
+uuids:           [ 'armv7: 32ECB958-94C0-3F82-8CD2-E7A3DD8E98EE', 'armv7s: A41CA637-616F-3309-BF8D-668986E555B8', 
+                   'arm64: 8826DAFA-60E7-3B55-9CEC-71AB6B06EC99' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/UserNotificationsUI.framework/UserNotificationsUI
 objc-constraint: none

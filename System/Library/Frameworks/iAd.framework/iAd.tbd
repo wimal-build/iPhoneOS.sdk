@@ -1,11 +1,13 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 3DC31F48-413E-34B1-A12F-D0EB1BCEB4C9', 'armv7s: 8DB7A18D-7D7E-341D-8A41-C3D7532BE433', 
-                   'arm64: 443501BD-A472-3C74-A7AC-6547139F87B3' ]
+                   'arm64: 4BCFE5B9-A724-3F3E-8A00-EF8C4F99DEEE' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/iAd.framework/iAd
 objc-constraint: none
 exports:         
+  - archs:           [ armv7, armv7s ]
+    symbols:         [ _kADPolicyEngineHeartbeatTokenChangedNotification ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _ADBannerContentSizeIdentifier320x50, _ADBannerContentSizeIdentifier480x32, 
                        _ADBannerContentSizeIdentifierLandscape, _ADBannerContentSizeIdentifierPortrait, 
@@ -23,20 +25,21 @@ exports:
                        _ADSubscriptionEventInfoCurrencyKey, _ADSubscriptionEventInfoPriceKey, 
                        _ADViewControllerForView, __ADInternalAdTypeForPublicAdType, 
                        __ADPaddedImageFromImage, __UIApplicationHasNewsClientEntitlement, 
-                       _kADPolicyEngineHeartbeatTokenChangedNotification, _kADPolicyEngineTestStationDescriptionsComputedNotification, 
+                       _kADPolicyEngineTestStationDescriptionsComputedNotification, 
                        _kADViewDefaultHeight ]
     objc-classes:    [ _ADAdActionPublicAttributes, _ADAdImpressionPublicAttributes, 
                        _ADAdSpace, _ADAdSpaceConfiguration, _ADAdSpaceEventInfo, 
                        _ADBannerView, _ADCanonicalRequest, _ADCircularCountdownView, 
-                       _ADClient, _ADContentProxyAttributes, _ADCountdownButton, 
+                       _ADClient, _ADContentProxyAttributes, _ADContext, _ADCountdownButton, 
                        _ADCreativeController, _ADDimmerView, _ADInterstitialAd, _ADInterstitialAdPresentationViewController, 
-                       _ADInterstitialView, _ADMRAIDAction, _ADNSURLSessionDemultiplexer, 
-                       _ADNSURLSessionDemultiplexerManager, _ADNSURLSessionTaskInfo, 
-                       _ADOptInManager, _ADPlayer, _ADPolicyEngine, _ADPrerollBottomBar, 
-                       _ADPrerollButton, _ADPrerollController, _ADPrerollSlider, 
-                       _ADPrerollTopBar, _ADPrerollView, _ADPrivacyButton, _ADPrivacyRemoteViewController, 
-                       _ADPrivacyViewController, _ADProgressView, _ADRemoteActionViewController, 
-                       _ADSession, _ADSoftLinking, _ADSubscriptionEvent, _ADTVInterstitialMediaViewController, 
+                       _ADInterstitialView, _ADLockScreenManager, _ADMRAIDAction, 
+                       _ADNSURLSessionDemultiplexer, _ADNSURLSessionDemultiplexerManager, 
+                       _ADNSURLSessionTaskInfo, _ADOptInManager, _ADPlayer, _ADPolicyEngine, 
+                       _ADPrerollBottomBar, _ADPrerollButton, _ADPrerollController, 
+                       _ADPrerollSlider, _ADPrerollTopBar, _ADPrerollView, _ADPrivacyButton, 
+                       _ADPrivacyRemoteViewController, _ADPrivacyViewController, 
+                       _ADProgressView, _ADRemoteActionViewController, _ADSession, 
+                       _ADSoftLinking, _ADSubscriptionEvent, _ADTVInterstitialMediaViewController, 
                        _ADTVMediaButton, _ADTVMediaControlsView, _ADTVMediaControlsViewController, 
                        _ADTVMediaCountdownView, _ADTVMediaSkipView, _ADTVPrerollController, 
                        _ADTVPrerollVideoView, _ADTapGestureRecognizer, _ADTapGestureTimer, 

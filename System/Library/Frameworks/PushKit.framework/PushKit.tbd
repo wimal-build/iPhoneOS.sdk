@@ -1,13 +1,13 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 8F3C5002-BE65-3B6E-97F8-3691AD50B49F', 'armv7s: E7AE26F8-E9D3-3126-B4BD-58ACAFC0A3EF', 
-                   'arm64: 5A8725DF-8942-3125-B70B-0B7ACA30C178' ]
+uuids:           [ 'armv7: C944CEDF-3285-3A01-A8F7-CD66A51420E0', 'armv7s: 9921DF7F-B930-39BD-BE62-59DE2CE3B63D', 
+                   'arm64: E0627175-3CB8-3F08-A9BE-037926A62BDE' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PushKit.framework/PushKit
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
-    symbols:         [ _PKPushTypeComplication, _PKPushTypeVoIP, _PushKitVersionNumber, 
-                       _PushKitVersionString ]
+    symbols:         [ _PKPushTypeComplication, _PKPushTypeFileProvider, _PKPushTypeVoIP, 
+                       _PushKitVersionNumber, _PushKitVersionString ]
     objc-classes:    [ _PKPushCredentials, _PKPushPayload, _PKPushRegistry ]
 ...

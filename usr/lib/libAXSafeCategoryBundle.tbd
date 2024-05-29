@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 9D4BA128-EFA1-397F-8102-99BDB89A5ABC', 'armv7s: 866D0A5A-5DDB-31C3-B99C-E5FDB425E003', 
-                   'arm64: A7A451C4-932F-3441-8080-4A8E536C0000' ]
+uuids:           [ 'armv7: E1A49828-90CD-364D-880B-1B47142265E9', 'armv7s: 3395DEC1-5857-3021-B10B-2D9DF7CD800C', 
+                   'arm64: 4680CE25-7E00-335A-B1C1-31C623F80878' ]
 platform:        ios
 install-name:    /usr/lib/libAXSafeCategoryBundle.dylib
 objc-constraint: none

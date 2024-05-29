@@ -1,11 +1,24 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 746683AF-A767-3A27-8748-1D817B127D6F', 'armv7s: A42AF694-2F58-3765-A4FB-A0C6B1132AB9', 
-                   'arm64: BDF5AFE2-3521-3DF7-8AEA-AB0FB120753D' ]
+uuids:           [ 'armv7: 3933EA26-39AF-3256-9E07-12CF2A043B06', 'armv7s: 61EA7F20-D298-37AF-A504-4BCA9C5A414C', 
+                   'arm64: 2C9F4D4A-732B-3AAD-941A-33CD9F93A090' ]
 platform:        ios
 install-name:    /usr/lib/libAWDProtobufFacetime.dylib
 objc-constraint: none
 exports:         
+  - archs:           [ arm64 ]
+    symbols:         [ __ZN3awd7metrics28FaceTimeCallAggregatedReport16kIRUTFieldNumberE, 
+                       __ZN3awd7metrics28FaceTimeCallAggregatedReport16kISBDFieldNumberE, 
+                       __ZN3awd7metrics28FaceTimeCallAggregatedReport16kRSWPFieldNumberE, 
+                       __ZN3awd7metrics28FaceTimeCallAggregatedReport20kREDStateFieldNumberE, 
+                       __ZN3awd7metrics28FaceTimeCallAggregatedReport33kAdaptiveLearningStateFieldNumberE, 
+                       __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats23kREDMaxDelayFieldNumberE, 
+                       __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats27kSegmentREDStateFieldNumberE, 
+                       __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats28kREDReceivedCountFieldNumberE, 
+                       __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats29kREDDiscardedCountFieldNumberE, 
+                       __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats30kREDNumPayloadsUsedFieldNumberE, 
+                       __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats38kREDErasureCompensationRateFieldNumberE, 
+                       __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats40kSegmentAdaptiveLearningStateFieldNumberE ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ __ZN3awd7metrics12PLRHistogram10SharedCtorEv, __ZN3awd7metrics12PLRHistogram10SharedDtorEv, 
                        __ZN3awd7metrics12PLRHistogram16default_instanceEv, __ZN3awd7metrics12PLRHistogram17default_instance_E, 

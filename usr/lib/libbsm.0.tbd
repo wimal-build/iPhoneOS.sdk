@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: AF387F6C-2E50-3AD0-9D72-C9C20A8C62D9', 'armv7s: A938100E-B177-35A1-A0C7-8E410E6FA742', 
-                   'arm64: E663BF7A-74F4-3AAD-9F86-229B0B29F376' ]
+                   'arm64: 71AF2A23-CC5B-376F-9545-B56F43AB78C1' ]
 platform:        ios
 install-name:    /usr/lib/libbsm.0.dylib
 objc-constraint: none
@@ -37,16 +37,21 @@ exports:
                        _audit_set_class, _audit_set_cond, _audit_set_fsize, _audit_set_kaudit, 
                        _audit_set_kmask, _audit_set_pmask, _audit_set_policy, _audit_set_qctrl, 
                        _audit_set_sflags, _audit_set_sflags_mask, _audit_set_stat, 
-                       _audit_set_terminal_host, _audit_set_terminal_id, _audit_set_terminal_port, 
-                       _audit_submit, _audit_token_to_au32, _audit_write, _audit_write_failure, 
-                       _audit_write_failure_na, _audit_write_failure_self, _audit_write_success, 
-                       _audit_write_success_self, _cannot_audit, _endac, _endauclass, 
-                       _endauevent, _endauuser, _getacdir, _getacexpire, _getacfilesz, 
-                       _getacflg, _getachost, _getacmin, _getacna, _getacpol, _getacsflagsmask, 
-                       _getauclassent, _getauclassent_r, _getauclassnam, _getauclassnam_r, 
-                       _getauclassnum, _getauclassnum_r, _getauditflagsbin, _getauditflagschar, 
-                       _getauevent, _getauevent_r, _getauevnam, _getauevnam_r, _getauevnonam, 
-                       _getauevnonam_r, _getauevnum, _getauevnum_r, _getauuserent, 
-                       _getauuserent_r, _getauusernam, _getauusernam_r, _getfauditflags, 
-                       _setac, _setauclass, _setauevent, _setauuser ]
+                       _audit_set_terminal_host, _audit_set_terminal_id, _audit_set_terminal_id_ex, 
+                       _audit_set_terminal_port, _audit_submit, _audit_token_to_asid, 
+                       _audit_token_to_au32, _audit_token_to_auid, _audit_token_to_egid, 
+                       _audit_token_to_euid, _audit_token_to_pid, _audit_token_to_pidversion, 
+                       _audit_token_to_rgid, _audit_token_to_ruid, _audit_write, 
+                       _audit_write_failure, _audit_write_failure_ex, _audit_write_failure_na, 
+                       _audit_write_failure_na_ex, _audit_write_failure_self, _audit_write_success, 
+                       _audit_write_success_ex, _audit_write_success_self, _cannot_audit, 
+                       _endac, _endauclass, _endauevent, _endauuser, _getacdir, _getacexpire, 
+                       _getacfilesz, _getacflg, _getachost, _getacmin, _getacna, 
+                       _getacpol, _getacsflagsmask, _getauclassent, _getauclassent_r, 
+                       _getauclassnam, _getauclassnam_r, _getauclassnum, _getauclassnum_r, 
+                       _getauditflagsbin, _getauditflagschar, _getauevent, _getauevent_r, 
+                       _getauevnam, _getauevnam_r, _getauevnonam, _getauevnonam_r, 
+                       _getauevnum, _getauevnum_r, _getauuserent, _getauuserent_r, 
+                       _getauusernam, _getauusernam_r, _getfauditflags, _setac, _setauclass, 
+                       _setauevent, _setauuser ]
 ...

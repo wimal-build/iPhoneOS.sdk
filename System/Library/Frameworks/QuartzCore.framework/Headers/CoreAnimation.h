@@ -15,7 +15,6 @@
 #import <QuartzCore/CADisplayLink.h>
 #import <QuartzCore/CAEAGLLayer.h>
 #import <QuartzCore/CAMetalLayer.h>
-#import <QuartzCore/CAEmitterBehavior.h>
 #import <QuartzCore/CAEmitterCell.h>
 #import <QuartzCore/CAEmitterLayer.h>
 #import <QuartzCore/CAGradientLayer.h>

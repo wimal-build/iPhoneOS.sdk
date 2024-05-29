@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 2E13832E-413F-3030-848D-10ECACF1A168', 'armv7s: BF427F1A-C65D-3661-8731-604E85A519FF', 
-                   'arm64: 442C7893-0030-3985-AD33-C1F8D822F006' ]
+uuids:           [ 'armv7: D667D54F-3911-373D-A73E-3E128FE64292', 'armv7s: E8CF9CB4-3214-336B-8006-D3FB73AFC0F8', 
+                   'arm64: FA6CBEFB-E8B7-3987-8093-5FF2524A4347' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ExternalAccessory.framework/ExternalAccessory
 objc-constraint: none
@@ -50,6 +50,7 @@ exports:
                        _EAElectricVehicleChargingComponentsKey, _EAElectricVehicleChargingInfoConnectorTypeKey, 
                        _EAElectricVehicleChargingInfoMaximumCurrentKey, _EAElectricVehicleChargingInfoMaximumVoltageKey, 
                        _EAElectricVehicleChargingInfoMinimumVoltageKey, _EAElectricVehicleChargingInfoPowerTypeKey, 
+                       _EAIAPAppAccessoryCertDataKey, _EAIAPAppAccessoryCertSerialNumberKey, 
                        _EAIPAccessoryAvailableNotification, _EAIPAccessoryConnectionCompleteNotification, 
                        _EAIPAccessoryDisconnectedNotification, _EAIPAccessoryNotAvailableNotification, 
                        _EASessionOpenCompletedNotification, _EATimeSyncInfoMeasurementInterval, 
@@ -64,10 +65,10 @@ exports:
                        _EAVehicleInfoModelKey, _EAVehicleInfoOutsideTemperatureKey, 
                        _EAVehicleInfoRangeCNGKey, _EAVehicleInfoRangeDieselKey, _EAVehicleInfoRangeElectricKey, 
                        _EAVehicleInfoRangeGasolineKey, _EAVehicleInfoRangeKey, _EAVehicleInfoSiriNameKey, 
-                       _EAVehicleInfoYearKey, _EAWiFiUnconfiguredAccessoriesAdded, 
-                       _EAWiFiUnconfiguredAccessoriesRemoved, _EAWiFiUnconfiguredAccessoriesSet, 
-                       _EAWiFiUnconfiguredAccessoryBrowserConfigurationStatus, _EAWiFiUnconfiguredAccessoryBrowserDidUpdateState, 
-                       _EAWiFiUnconfiguredAccessoryBrowserFinishedConfiguringAccessory, 
+                       _EAVehicleInfoYearKey, _EAWeakLinkClass, _EAWeakLinkStringConstant, 
+                       _EAWeakLinkSymbol, _EAWiFiUnconfiguredAccessoriesAdded, _EAWiFiUnconfiguredAccessoriesRemoved, 
+                       _EAWiFiUnconfiguredAccessoriesSet, _EAWiFiUnconfiguredAccessoryBrowserConfigurationStatus, 
+                       _EAWiFiUnconfiguredAccessoryBrowserDidUpdateState, _EAWiFiUnconfiguredAccessoryBrowserFinishedConfiguringAccessory, 
                        _EAWiFiUnconfiguredAccessoryBrowserPurgeAccessoriesSet, _EAWiFiUnconfiguredAccessoryConfigured, 
                        _EAWiFiUnconfiguredAccessoryErrorUnexpectedCode, _EAWiFiUnconfiguredAccessoryErrorUserCanceledCode, 
                        _EAWiFiUnconfiguredAccessoryNotificationBrowserState, _GetEAAccesoryManager, 
@@ -97,11 +98,12 @@ exports:
                        _EAInputStream._runLoop, _EAInputStream._runLoopSource, _EAInputStream._runloopLock, 
                        _EAInputStream._session, _EAInputStream._sock, _EAInputStream._sockListenSource, 
                        _EAInputStream._statusLock, _EAInputStream._streamStatus, 
-                       _EAOutputStream._accessory, _EAOutputStream._cfSocket, _EAOutputStream._delegate, 
-                       _EAOutputStream._hasSpaceAvailable, _EAOutputStream._hasSpaceAvailableEventSent, 
-                       _EAOutputStream._isAtEndEventSent, _EAOutputStream._isOpenCompletedEventSent, 
-                       _EAOutputStream._runLoop, _EAOutputStream._runLoopSource, 
-                       _EAOutputStream._runloopLock, _EAOutputStream._session, _EAOutputStream._sock, 
-                       _EAOutputStream._socketRunLoopSource, _EAOutputStream._statusLock, 
-                       _EAOutputStream._streamStatus ]
+                       _EAInputStream._useSocket, _EAOutputStream._accessory, _EAOutputStream._cfSocket, 
+                       _EAOutputStream._delegate, _EAOutputStream._hasSpaceAvailable, 
+                       _EAOutputStream._hasSpaceAvailableEventSent, _EAOutputStream._isAtEndEventSent, 
+                       _EAOutputStream._isOpenCompletedEventSent, _EAOutputStream._runLoop, 
+                       _EAOutputStream._runLoopSource, _EAOutputStream._runloopLock, 
+                       _EAOutputStream._session, _EAOutputStream._sock, _EAOutputStream._socketRunLoopSource, 
+                       _EAOutputStream._statusLock, _EAOutputStream._streamStatus, 
+                       _EAOutputStream._useSocket ]
 ...

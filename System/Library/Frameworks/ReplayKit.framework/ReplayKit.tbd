@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: AFBB3D20-C2F3-3FC7-A883-FD9E5E98E4EF', 'armv7s: C6400560-AC57-3830-B4D4-5073052AC235', 
-                   'arm64: A0EC429C-B4A5-3186-9BFC-B0E103F57498' ]
+uuids:           [ 'armv7: CE6A5A81-FB51-3C86-A4B5-DFA07E739B0F', 'armv7s: 34656AC8-6A24-3A08-BB70-85C1B017DD68', 
+                   'arm64: C3C9283A-357E-3913-BF71-3D10A862640C' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ReplayKit.framework/ReplayKit
 objc-constraint: none
@@ -16,16 +16,20 @@ exports:
                        _RPVideoOverlayBackgroundMaskImageName, _RPVideoOverlayDefaultGlyphAlpha, 
                        _RPVideoOverlayFlatBackgroundAlpha, _RPVideoOverlayFlatBackgroundWhite, 
                        _RPVideoOverlayGlyphMaskImageName, _RPVideoOverlayHighlightedGlyphAlpha, 
-                       _ReplayKitVersionNumber, _ReplayKitVersionString ]
+                       _ReplayKitVersionNumber, _ReplayKitVersionString, __broadcastURL ]
     objc-classes:    [ _RPBroadcastActivityExtensionHostContext, _RPBroadcastActivityHostViewController, 
                        _RPBroadcastActivityViewController, _RPBroadcastConfiguration, 
-                       _RPBroadcastController, _RPBroadcastExtensionProxy, _RPBroadcastHandler, 
-                       _RPBroadcastMP4ClipHandler, _RPBroadcastSampleHandler, _RPDaemonProxy, 
+                       _RPBroadcastController, _RPBroadcastExtensionContext, _RPBroadcastExtensionHostContext, 
+                       _RPBroadcastExtensionProxy, _RPBroadcastExtensionViewController, 
+                       _RPBroadcastHandler, _RPBroadcastHostViewController, _RPBroadcastIndicatorWindow, 
+                       _RPBroadcastMP4ClipHandler, _RPBroadcastSampleHandler, _RPBroadcastViewController, 
+                       _RPDaemonProxy, _RPExtensionContext, _RPExtensionHostContext, 
                        _RPFlatVideoOverlayButton, _RPHighFidelityVideoOverlayButton, 
                        _RPIOSurfaceObject, _RPPassThroughView, _RPPictureInPictureController, 
                        _RPPictureInPictureViewController, _RPPictureInPictureWindow, 
                        _RPPipView, _RPPipViewController, _RPPreviewViewController, 
                        _RPScreenRecorder, _RPSharedConstants, _RPStoreInfo, _RPStoreManager, 
-                       _RPSystemRecordingIndicatorWindow, _RPVideoEditorExtensionHostContext, 
-                       _RPVideoEditorHostViewController, _RPYouTubeActivityProgressOverlay ]
+                       _RPSystemRecordingIndicatorWindow, _RPTouchPassthroughView, 
+                       _RPVideoEditorExtensionHostContext, _RPVideoEditorHostViewController, 
+                       _RPYouTubeActivityProgressOverlay ]
 ...

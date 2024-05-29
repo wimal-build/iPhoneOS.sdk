@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: ADEC4B47-9171-37D6-B9B8-CCE93DA6CA7B', 'armv7s: 0D4FEF92-88AF-3E40-A3B0-B264C8EA6689', 
-                   'arm64: 37BAEC08-DA07-3E72-9066-BDED8C9B53DA' ]
+uuids:           [ 'armv7: 51DC2D6C-DC2C-3D71-9063-D45C782720FF', 'armv7s: BEDCEBAE-32E7-3B55-A021-AF412F330261', 
+                   'arm64: FF00308C-942C-30BD-93EF-A043A31437A0' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-current-version: 775.2.4
+current-version: 775.2.6
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -84,7 +84,7 @@ exports:
                        __LSDisplayRawStoreUnit, __LSGetStatus, __LSGetVersionFromString, 
                        __LSHandlerRankAlternate, __LSHandlerRankDefault, __LSHandlerRankNone, 
                        __LSHandlerRankOwner, __LSRegisterFilePropertyProvider, __LSServerMain, 
-                       __LSSetDatabaseIsSeeded, __LSUpdateDatabaseWithInfo, __LSUserActivityContainsFileProviderURLKey, 
+                       __LSSetDatabaseIsSeeded, __LSUserActivityContainsFileProviderURLKey, 
                        __LSUserActivityContainsUnsynchronizedCloudDocsKey, __LSUserActivityOptionInvalidateAfterFetchKey, 
                        __LSVersionNumberCopyStringRepresentation, __LSVersionNumberGetBugFixComponent, 
                        __LSVersionNumberGetCurrentSystemVersion, __LSVersionNumberGetMajorComponent, 

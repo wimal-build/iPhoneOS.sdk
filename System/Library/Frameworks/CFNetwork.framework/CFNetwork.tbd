@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 999CEE08-6797-39D2-BD22-50B539A026FF', 'armv7s: FC3F1ABD-A4AA-325D-A02C-34EE237B24E4', 
-                   'arm64: CA09941B-FD35-3BB8-B6B6-79A0F14CAD1E' ]
+uuids:           [ 'armv7: BB9DF379-E04E-34D5-8283-8DBF89DBDC7F', 'armv7s: 9D154C2D-5CCB-3214-B148-EB41FF8480F0', 
+                   'arm64: 516A98D9-2600-361D-8974-8C8C865AEB9D' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CFNetwork.framework/CFNetwork
-current-version: 808.0.2
+current-version: 808.1.4
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -675,15 +675,15 @@ exports:
                        __CFNetworkUnitTestVaryHeaderSupport, __CFNetworkUnitTest_CheckStorageCorrectness_24988003, 
                        __CFNetworkUnitTest_CopyAllHosts, __CFNetworkUnitTest_HTTPEngine_HTTPTrailerProperty, 
                        __CFNetworkUnitTest_HTTPEngine_HTTPTrailerProperty_Background, 
-                       __CFNetworkUnitTest_HTTPSafariCookies, __CFNetworkUnitTest_ReadFromDiskOnDBFirstCreate, 
-                       __CFNetworkUnitWebCacheLoadPerf, __CFServerCopyName, __CFServerCopyServiceType, 
-                       __CFServerCreate, __CFServerGetPort, __CFServerGetTypeID, 
-                       __CFServerInvalidate, __CFServerScheduleWithDispatchQueue, 
-                       __CFServerScheduleWithRunLoopAndMode, __CFServerSetInterface, 
-                       __CFServerStart, __CFSocketStreamCreatePair, __CFStreamErrorFromCFError, 
-                       __CFStringCreateRFC1123DateStringWithGregorianDate, __CFStringCreateRFC2616DateStringWithGregorianDate, 
-                       __CFURLAuthChallengeCreateArchive, __CFURLAuthChallengeCreateFromArchive, 
-                       __CFURLCacheCopyAllHostNamesInPersistentStore, __CFURLCacheCopyAllHostNamesInPersistentStoreForPartition, 
+                       __CFNetworkUnitTest_ReadFromDiskOnDBFirstCreate, __CFNetworkUnitWebCacheLoadPerf, 
+                       __CFServerCopyName, __CFServerCopyServiceType, __CFServerCreate, 
+                       __CFServerGetPort, __CFServerGetTypeID, __CFServerInvalidate, 
+                       __CFServerScheduleWithDispatchQueue, __CFServerScheduleWithRunLoopAndMode, 
+                       __CFServerSetInterface, __CFServerStart, __CFSocketStreamCreatePair, 
+                       __CFStreamErrorFromCFError, __CFStringCreateRFC1123DateStringWithGregorianDate, 
+                       __CFStringCreateRFC2616DateStringWithGregorianDate, __CFURLAuthChallengeCreateArchive, 
+                       __CFURLAuthChallengeCreateFromArchive, __CFURLCacheCopyAllHostNamesInPersistentStore, 
+                       __CFURLCacheCopyAllHostNamesInPersistentStoreForPartition, 
                        __CFURLCacheCopyAllPartitionNames, __CFURLCacheCopyCacheDirectory, 
                        __CFURLCacheCreateFS1, __CFURLCacheCreateFS2, __CFURLCacheCreateFS3, 
                        __CFURLCacheDeleteHostNamesInPersistentStore, __CFURLCacheDeleteHostNamesInPersistentStoreForPartition, 

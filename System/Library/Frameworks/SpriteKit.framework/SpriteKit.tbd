@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 0DD33444-30CC-3C02-B8C0-A9FB720CEF2B', 'armv7s: 28CFEBD6-4ED6-3B3A-A0D5-8C654767428C', 
-                   'arm64: EDD71BB3-4A66-34B8-A700-7BDF8B933FA6' ]
+uuids:           [ 'armv7: 49B2FF8A-4566-3F19-AA8D-C01DD6389070', 'armv7s: 7F0FA292-F394-3CA6-89BA-E570BF5AD887', 
+                   'arm64: 4AB086E2-1CBA-3379-BAE0-53DB6671A1B1' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SpriteKit.framework/SpriteKit
 current-version: 2.0

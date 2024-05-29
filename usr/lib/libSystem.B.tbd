@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 28D502AB-5A8C-3C6C-817A-E82B292509DB', 'armv7s: ED8CB749-CDA0-3719-BAF3-92ED3CCC2CBA', 
-                   'arm64: 8788325E-11BC-31A3-9B07-5A3497D26EBD' ]
+uuids:           [ 'armv7: 05E00066-EF79-3C34-B9CA-A49092694D1E', 'armv7s: 10DBB401-50B5-3AF1-8828-B12D38FFD9E4', 
+                   'arm64: 7F6DF0FF-83CA-38C5-BD24-51D798C6619B' ]
 platform:        ios
 install-name:    /usr/lib/libSystem.B.dylib
 current-version: 1238.0
@@ -2145,9 +2145,9 @@ exports:
                        _nw_path_set_reason_description, _nw_path_should_fallback, 
                        _nw_path_should_use_proxy, _nw_path_status_get_description, 
                        _nw_path_trigger_agent, _nw_path_trigger_inactive_cellular_agent_if_necessary, 
-                       _nw_path_unassert_agent, _nw_path_uses_interface_type, _nw_path_uses_nexus, 
-                       _nw_path_voluntary_agent_matches_address, _nw_protocol_create, 
-                       _nw_protocol_is_registered, _nw_protocol_modify_parameters, 
+                       _nw_path_unassert_agent, _nw_path_uses_interface_subtype, 
+                       _nw_path_uses_interface_type, _nw_path_uses_nexus, _nw_path_voluntary_agent_matches_address, 
+                       _nw_protocol_create, _nw_protocol_is_registered, _nw_protocol_modify_parameters, 
                        _nw_protocol_register, _nw_protocol_register_extended, _nw_protocol_register_parameter_modifier, 
                        _nw_protocol_set_default_one_to_one_callbacks, _nw_protocol_unregister, 
                        _nw_protocols_are_equal, _nw_queue_async, _nw_queue_cancel_source, 
@@ -2581,11 +2581,12 @@ exports:
                        _thread_set_state, _thread_stack_pcs, _thread_start, _thread_suspend, 
                        _thread_swap_exception_ports, _thread_swap_mach_voucher, _thread_switch, 
                        _thread_terminate, _thread_wire, _time, _time2posix, _timegm, 
-                       _timelocal, _timeoff, _times, _timezone, _tls_add_debug_logger, 
-                       _tls_cache_cleanup, _tls_cache_create, _tls_cache_delete_session_data, 
-                       _tls_cache_destroy, _tls_cache_empty, _tls_cache_load_session_data, 
-                       _tls_cache_save_session_data, _tls_handshake_close, _tls_handshake_continue, 
-                       _tls_handshake_create, _tls_handshake_destroy, _tls_handshake_get_acceptable_dn_list, 
+                       _timelocal, _timeoff, _times, _timezone, _timingsafe_bcmp, 
+                       _tls_add_debug_logger, _tls_cache_cleanup, _tls_cache_create, 
+                       _tls_cache_delete_session_data, _tls_cache_destroy, _tls_cache_empty, 
+                       _tls_cache_load_session_data, _tls_cache_save_session_data, 
+                       _tls_handshake_close, _tls_handshake_continue, _tls_handshake_create, 
+                       _tls_handshake_destroy, _tls_handshake_get_acceptable_dn_list, 
                        _tls_handshake_get_ciphersuites, _tls_handshake_get_client_random, 
                        _tls_handshake_get_config, _tls_handshake_get_fallback, _tls_handshake_get_false_start, 
                        _tls_handshake_get_master_secret, _tls_handshake_get_max_protocol_version, 

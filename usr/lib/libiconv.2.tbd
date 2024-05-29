@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 6090D026-7FBD-333D-948C-B2F615417201', 'armv7s: AF7F2B84-9909-37EC-9757-F6ACB0966EFA', 
-                   'arm64: BF0BD341-BDD4-3EC7-BD40-D067233E57A8' ]
+uuids:           [ 'armv7: 1816BC37-BD7B-3DC5-8CA8-34985E0E3620', 'armv7s: FE1A6834-1F8A-3647-9896-B6FA5783838C', 
+                   'arm64: 73B7DFE2-C5FF-3976-A8AB-4296F054E0E5' ]
 platform:        ios
 install-name:    /usr/lib/libiconv.2.dylib
 current-version: 7.0

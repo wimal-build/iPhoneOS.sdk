@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: CD281C4B-D4FF-3D87-A6E8-AB6BABE0ED90', 'armv7s: C7C1C9A5-EBBC-3F1A-B502-57A0F85B816B', 
-                   'arm64: 4A137515-F15E-30A4-95ED-F7EC114755E0' ]
+uuids:           [ 'armv7: B81A5643-08F8-36CA-AB1C-D0161DA8540B', 'armv7s: 2F02A277-5E70-3657-92FF-9EA3515C99CF', 
+                   'arm64: 1B546C1B-D4EB-334E-B850-E116B430E550' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-current-version: 1070.0
+current-version: 1070.3
 compatibility-version: 64.0
 objc-constraint: none
 exports:         

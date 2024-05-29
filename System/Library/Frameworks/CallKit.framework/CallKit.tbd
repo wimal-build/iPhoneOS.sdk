@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: DED11EBB-17FC-3F02-9A61-08ED465BE165', 'armv7s: 1267C44A-8DC8-310C-8681-626F19125422', 
-                   'arm64: 02CC61A0-724D-3769-BCA8-B748D7DA8435' ]
+uuids:           [ 'armv7: ACD5AF75-FD70-38B8-B6AE-1F6915FF2A1A', 'armv7s: D9813EC4-DC63-3893-ADE8-5BFA90806E28', 
+                   'arm64: 2BDB7B4D-6486-30D8-865B-344FB7FDC2A2' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CallKit.framework/CallKit
 objc-constraint: none

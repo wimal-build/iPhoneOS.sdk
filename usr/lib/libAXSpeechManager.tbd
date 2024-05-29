@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 642F571E-ADEA-3D55-B181-7A0EEEC8D4D3', 'armv7s: 9875C2A1-03CE-3B42-8692-BC6392DE25D8', 
-                   'arm64: 3D126E8C-35FC-3C79-8044-C7899847CFBA' ]
+uuids:           [ 'armv7: DA6189AB-5215-3D89-A25A-97F3D0F3F36E', 'armv7s: 2A82AEC2-035A-3D01-843D-206CD4FBBDAB', 
+                   'arm64: 63AE981A-D15A-3E6F-BA25-38A99399B852' ]
 platform:        ios
 install-name:    /usr/lib/libAXSpeechManager.dylib
 objc-constraint: none

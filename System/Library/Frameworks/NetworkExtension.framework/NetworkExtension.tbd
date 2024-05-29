@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 7F69269C-092E-3AE5-8378-7E43F0549316', 'armv7s: A3B9D6D8-0940-3593-A846-25E86DDDC6FA', 
-                   'arm64: EAD68355-6F35-36C4-8952-CAE5AB2808C3' ]
+uuids:           [ 'armv7: D2E45300-D1AE-33A0-A657-BCBAFB0DD220', 'armv7s: 5CA6A31B-1B4D-382B-9B93-0222F53790BA', 
+                   'arm64: 8776AC3A-3A7E-3C1E-A56B-FE309B6DD982' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/NetworkExtension.framework/NetworkExtension
 objc-constraint: none

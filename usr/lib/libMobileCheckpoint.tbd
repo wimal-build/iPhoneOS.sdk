@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 11A19266-6CFB-3FE5-A48A-F9592AE3D589', 'armv7s: A2425639-7B4F-387F-A8AB-2030D94C73EE', 
-                   'arm64: FFF354C8-BAC9-3CFA-9A08-3AA0C1AE6795' ]
+uuids:           [ 'armv7: 87DC4A35-19AF-3BF5-BA48-177710F14F9D', 'armv7s: 0B041E22-5DB7-3085-A33F-70764378C7E6', 
+                   'arm64: 8F5E1AC2-97ED-3B83-B71E-61033D545168' ]
 platform:        ios
 install-name:    /usr/lib/libMobileCheckpoint.dylib
 objc-constraint: none

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 3C9354FE-B067-3237-A37A-7C43EAB2B113', 'armv7s: 7A83365B-65E0-36D6-B49E-7277FDA0AE14', 
-                   'arm64: 3E91847C-73D5-3312-8752-A7E1A3A9A0ED' ]
+uuids:           [ 'armv7: AE954773-29EE-3A08-B373-BA9BFB737339', 'armv7s: DFDF0D92-2860-37D6-BA2B-D6E47F5FACEA', 
+                   'arm64: AFFAF7EA-FFA1-37BF-BCED-1D3113A7DEAC' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalKit.framework/MetalKit
 current-version: 68.0

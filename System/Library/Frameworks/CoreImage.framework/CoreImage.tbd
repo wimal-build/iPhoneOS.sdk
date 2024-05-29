@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 684FF26C-D76D-36E9-8BEE-4B304989D243', 'armv7s: 19C9597C-5AE6-376A-95DA-7A41B1DE44EB', 
-                   'arm64: 0A9F9730-278E-31E1-9E59-BDCABFCB6FF1' ]
+uuids:           [ 'armv7: F89771A0-65D1-3C58-844E-786BE2B98AF8', 'armv7s: BA37E1BA-3003-3862-A7DF-C6B811AD9F33', 
+                   'arm64: C57D3BCE-FECA-33C2-8835-754B1F411883' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreImage.framework/CoreImage
 current-version: 5.0

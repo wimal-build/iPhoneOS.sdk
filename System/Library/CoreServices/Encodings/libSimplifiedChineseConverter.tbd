@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 2D3A78BE-1825-34AB-9D32-7C14CEDE5C12', 'armv7s: 98A63491-2173-3788-90D6-36F8713FD013', 
-                   'arm64: 9B66E452-AB96-3F6B-AE9B-40AA33890AFE' ]
+uuids:           [ 'armv7: 3CF87543-4E69-32E5-AAC9-7D852AA9F179', 'armv7s: 4723FC60-B934-3F88-8A01-F36258F134EE', 
+                   'arm64: 32A62D43-9620-393D-AF4A-137DB04B79F3' ]
 platform:        ios
 install-name:    /System/Library/CoreServices/Encodings/libSimplifiedChineseConverter.dylib
 current-version: 69.0

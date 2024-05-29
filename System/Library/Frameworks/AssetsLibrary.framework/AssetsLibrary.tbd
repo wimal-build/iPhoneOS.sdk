@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 12A60E1C-3C58-30ED-9EC9-7EB50FCFC3FE', 'armv7s: 38DB92FC-45EB-375D-AE24-D4F41C528CC9', 
-                   'arm64: 2E776CB6-7F90-3BBD-8CB8-20A0693CDF08' ]
+uuids:           [ 'armv7: 8EE96915-5E49-345A-AF7D-D947E23B5C3A', 'armv7s: D1EE982A-15A0-3A75-9029-B02D99D90F54', 
+                   'arm64: C0DA35AD-53D6-3ACC-A59B-E3F6BB633A2D' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
 objc-constraint: none

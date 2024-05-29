@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 176D5086-E66B-3F97-B20B-F60613887676', 'armv7s: DC13C4AE-7EA4-3CD8-A6CB-52D823BCB62E', 
-                   'arm64: 5A3199A4-56F3-3D32-A891-20DD59B095B9' ]
+uuids:           [ 'armv7: 4A19987A-3829-3D2E-B588-F04D5B63B650', 'armv7s: 6E655BE6-7C81-38AE-A779-1052A9CB6DA4', 
+                   'arm64: 5F990087-73A0-3DCF-B2FD-0824265D786B' ]
 platform:        ios
 install-name:    /usr/lib/libamsupport.dylib
 objc-constraint: none
@@ -133,8 +133,7 @@ exports:
     objc-classes:    [ _AMSupportURLConnectionDelegate, _AMSupportURLSession ]
     objc-ivars:      [ _AMSupportURLConnectionDelegate._data, _AMSupportURLConnectionDelegate._error, 
                        _AMSupportURLConnectionDelegate.options, _AMSupportURLConnectionDelegate.requestComplete, 
-                       _AMSupportURLConnectionDelegate.response, _AMSupportURLSession._completions, 
-                       _AMSupportURLSession._data, _AMSupportURLSession._options, 
-                       _AMSupportURLSession._queue, _AMSupportURLSession._responses, 
-                       _AMSupportURLSession._session, _AMSupportURLSession._timeout ]
+                       _AMSupportURLConnectionDelegate.response, _AMSupportURLSession._options, 
+                       _AMSupportURLSession._queue, _AMSupportURLSession._session, 
+                       _AMSupportURLSession._timeout ]
 ...

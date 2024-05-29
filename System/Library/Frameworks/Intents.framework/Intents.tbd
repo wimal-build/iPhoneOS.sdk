@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 9477EF28-9327-37DA-9CD1-31D207C3E04E', 'armv7s: 858B78EB-C623-3069-9C3B-E7F07278BD21', 
-                   'arm64: 8233BD87-DE6B-35B9-95D0-AEEE596D7A48' ]
+uuids:           [ 'armv7: F661EBF5-E529-3140-84D4-69B0094EEC70', 'armv7s: 43DFF1D0-A83F-3DE5-A2E7-474004FE2033', 
+                   'arm64: FEE296C4-CD39-358A-9316-874C9440608C' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Intents.framework/Intents
 objc-constraint: none
@@ -218,14 +218,16 @@ exports:
                        _INSetProfileInCarIntentResponseCodeGetName, _INSetRadioStationIntentIdentifier, 
                        _INSetRadioStationIntentResponseCodeGetName, _INSetSeatSettingsInCarIntentIdentifier, 
                        _INSetSeatSettingsInCarIntentResponseCodeGetName, _INShareFileIntentIdentifier, 
-                       _INSharedResourcesDirectory, _INSiriLogContextIntents, _INStartAudioCallIntentIdentifier, 
-                       _INStartAudioCallIntentResponseCodeGetName, _INStartPhotoPlaybackIntentIdentifier, 
-                       _INStartPhotoPlaybackIntentResponseCodeGetName, _INStartVideoCallIntentIdentifier, 
-                       _INStartVideoCallIntentResponseCodeGetName, _INStartWorkoutIntentIdentifier, 
-                       _INStartWorkoutIntentResponseCodeGetName, _INSupportedIntentsByExtensions, 
-                       _INSupportsPairedDevice, _INSyncSlotActivityName, _INSyncSlotCarProfileName, 
-                       _INSyncSlotContactGroupName, _INSyncSlotContactName, _INSyncSlotPersonName, 
-                       _INSyncSlotPhotoAlbumName, _INSyncSlotPhotoTagName, _INUncompressFileIntentIdentifier, 
+                       _INSharedResourcesDirectory, _INSiriIntentsRestrictedWhileLocked, 
+                       _INSiriLogContextIntents, _INSiriSupportedIntentsByExtensions, 
+                       _INStartAudioCallIntentIdentifier, _INStartAudioCallIntentResponseCodeGetName, 
+                       _INStartPhotoPlaybackIntentIdentifier, _INStartPhotoPlaybackIntentResponseCodeGetName, 
+                       _INStartVideoCallIntentIdentifier, _INStartVideoCallIntentResponseCodeGetName, 
+                       _INStartWorkoutIntentIdentifier, _INStartWorkoutIntentResponseCodeGetName, 
+                       _INSupportedIntentsByExtensions, _INSupportsPairedDevice, 
+                       _INSyncSlotActivityName, _INSyncSlotCarProfileName, _INSyncSlotContactGroupName, 
+                       _INSyncSlotContactName, _INSyncSlotPersonName, _INSyncSlotPhotoAlbumName, 
+                       _INSyncSlotPhotoTagName, _INUncompressFileIntentIdentifier, 
                        _INUserActivityDeserializeFromBackingStore, _INUserActivityDeserializeFromData, 
                        _INUserActivityGetSerializationQueue, _INUserActivitySerializeToBackingStore, 
                        _INUserActivitySerializeToData, _INUserSupportDirectoryPath, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: C8A43C2E-9A8A-3C97-848F-EED0A04F5A7F', 'armv7s: CBBD4E35-62D8-3A9E-9981-175CBF51A28B', 
-                   'arm64: 7A8622F7-B650-3312-B3EC-88509DB3969F' ]
+uuids:           [ 'armv7: AF7D79EE-7E14-387B-8E96-F1FB9A28F1FD', 'armv7s: 5D3BD5BD-A411-33CF-83C5-1B2D59C94276', 
+                   'arm64: 3ACA3DDE-0DBB-3872-BC95-038B03502025' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/VideoToolbox.framework/VideoToolbox
 objc-constraint: none

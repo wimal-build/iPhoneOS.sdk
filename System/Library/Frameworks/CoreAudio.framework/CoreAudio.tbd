@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 259B1AE0-FD16-3439-903E-319A30051430', 'armv7s: 5515D42F-DB38-3814-8324-211E21955D04', 
-                   'arm64: C8A3DE7D-BF5D-36F6-9F69-3ED6C859F0B2' ]
+uuids:           [ 'armv7: DC82E445-0018-3B1F-8B2D-D86369979295', 'armv7s: 7AB8D454-A24B-3939-B312-7EFC538AC6D0', 
+                   'arm64: A43B5272-AD82-3963-9284-19F52A18B111' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreAudio.framework/CoreAudio
 objc-constraint: none

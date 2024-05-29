@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 94AD6062-248E-3CF3-B0CC-0017DAAC454A', 'armv7s: 2CD90414-EBCD-3728-A228-529F93091199', 
-                   'arm64: F1AC89ED-6113-395B-B6F8-D9EEF1B345DC' ]
+uuids:           [ 'armv7: A245433F-60C3-31DD-AFA9-07B0CE7EED83', 'armv7s: 3F86C111-DFB9-357A-9A29-5644D198A273', 
+                   'arm64: E19EA620-E15C-3F0C-B405-24B722DD5087' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
 current-version: 492.0

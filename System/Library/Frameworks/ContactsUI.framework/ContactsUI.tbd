@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 0A573313-B929-3154-A362-0E0264936D20', 'armv7s: 67003E2C-8BC0-3250-8380-04BB7A47FFA2', 
-                   'arm64: D2208CFA-296E-346C-8F20-815DD07C32B3' ]
+uuids:           [ 'armv7: A5B21B0A-998C-3943-A63A-AA65A84EFE28', 'armv7s: CFBF59D9-93A3-3279-B3E8-8418CC4B301E', 
+                   'arm64: F37A9D01-2D07-3B5E-9E6E-C72AEB92E8AC' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ContactsUI.framework/ContactsUI
 current-version: 33.0

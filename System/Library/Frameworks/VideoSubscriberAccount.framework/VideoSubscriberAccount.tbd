@@ -1,18 +1,19 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 666B0D60-AC17-36C8-8CBE-8290F8B2792B', 'armv7s: EF3C1FF7-DBE2-3200-9828-DD53059B4DBE', 
-                   'arm64: 78F66FA6-CA43-3F9E-B9C1-7D818FAE10A1' ]
+uuids:           [ 'armv7: E4CE15DF-0F4D-3CFE-88EE-2F02D1C5F4A2', 'armv7s: 0A7AAA49-7EBF-34D6-B910-7F5CF57E7781', 
+                   'arm64: B0613108-A267-3BFC-B870-261E871858CD' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/VideoSubscriberAccount.framework/VideoSubscriberAccount
-current-version: 105.1
+current-version: 106.2
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _VSAccountStoreDidChangeNotification, _VSAlertForError, _VSBulletinServiceInterface, 
                        _VSBundleURLForProcessIdentifier, _VSCheckAccessOptionPrompt, 
-                       _VSCheckEntitlementForTask, _VSDeletedKeychainItemsKey, _VSDeveloperServiceInterface, 
-                       _VSDisplayNameForBundleWithIdentifier, _VSErrorDestructiveRecoveryOptionIndexSet, 
-                       _VSErrorDomain, _VSErrorInfoKeySAMLResponse, _VSErrorInfoKeySAMLResponseStatus, 
+                       _VSCheckEntitlementForTask, _VSDeletedKeychainItemsKey, _VSDeveloperServiceDidChangeNotification, 
+                       _VSDeveloperServiceInterface, _VSDisplayNameForBundleWithIdentifier, 
+                       _VSErrorDestructiveRecoveryOptionIndexSet, _VSErrorDomain, 
+                       _VSErrorInfoKeySAMLResponse, _VSErrorInfoKeySAMLResponseStatus, 
                        _VSErrorInfoKeyUnsupportedProviderIdentifier, _VSErrorIsPrivateError, 
                        _VSErrorIsPublicError, _VSIconForBundleWithIdentifier, _VSIdentityProviderAvailabilityDidChangeNotification, 
                        _VSInsertedKeychainItemsKey, _VSInvalidVerificationTokenError, 
@@ -51,10 +52,10 @@ exports:
                        _VSJSError, _VSJSSAMLResponse, _VSKeychainEditingContext, 
                        _VSKeychainFetchRequest, _VSKeychainGenericPassword, _VSKeychainItem, 
                        _VSKeychainItemAttribute, _VSKeychainItemKind, _VSLoadingViewController_iOS, 
-                       _VSPersistentContainer, _VSPrivacyFacade, _VSPrivacyInfoCenter, 
-                       _VSPrivacyService, _VSRemoteNotifier, _VSReverseValueTransformer, 
-                       _VSSAMLRequestFactory, _VSSecurityTask, _VSServiceListener, 
-                       _VSStoreURLBag, _VSTimeoutOperation, _VSUserNotificationOperation, 
+                       _VSPersistentContainer, _VSPreferences, _VSPrivacyFacade, 
+                       _VSPrivacyInfoCenter, _VSPrivacyService, _VSRemoteNotifier, 
+                       _VSReverseValueTransformer, _VSSAMLRequestFactory, _VSSecurityTask, 
+                       _VSServiceListener, _VSStoreURLBag, _VSTimeoutOperation, _VSUserNotificationOperation, 
                        _VSVerificationStateResetOperation, _VSViewControllerFactory, 
                        _VSViewControllerPresentationStack, _VSViewModel, _VSViewServiceApplication, 
                        _VSViewServiceHostViewController, _VSViewServiceRemoteViewController, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 2CC19750-960C-3911-8262-93ABA84E97D0', 'armv7s: 97A31019-AAF0-3026-B1A2-4EBC928E1FB1', 
-                   'arm64: 68682564-7998-3DE3-A099-D1EC999AE03F' ]
+uuids:           [ 'armv7: DBE99C0B-F3B0-37BB-9622-9CD75A418B68', 'armv7s: 059D2405-BA70-32E7-973B-AC47102E6554', 
+                   'arm64: A4A2EC5C-E28B-35CA-8FA1-CE83983E5A97' ]
 platform:        ios
 install-name:    /usr/lib/libtailspin.dylib
 current-version: 28.0

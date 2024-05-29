@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 61D404A4-95CF-3B7E-B009-88D8CC62653E', 'armv7s: 71E7AA73-DC6E-3DD8-91C7-321FC6D47EB4', 
-                   'arm64: 0252CA32-6098-398F-BF5C-CB3132359CF4' ]
+uuids:           [ 'armv7: 3412BFF5-0FD6-3C7C-8799-0749CA34EA7C', 'armv7s: 0FC423C0-5E32-3940-BDE7-AE19B4C26AEC', 
+                   'arm64: 8E934829-A91C-34A6-BB35-701F39AAE87C' ]
 platform:        ios
 install-name:    /System/Library/CoreServices/Encodings/libHebrewConverter.dylib
 current-version: 69.0

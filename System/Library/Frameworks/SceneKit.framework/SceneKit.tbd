@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 130BD0D7-3149-362F-801A-D4CBD362DCBC', 'armv7s: F7C5A851-6B10-3F6B-9C88-BB8B8A965B1A', 
-                   'arm64: 1F7B6330-8A3C-3980-9D87-3144B526F2A2' ]
+uuids:           [ 'armv7: 8E0A1B19-9968-36BF-9264-0EB58B58E060', 'armv7s: 3DDC2123-BAA9-341E-B71B-8FDD76AD63E5', 
+                   'arm64: A56D7492-4B86-3926-9A3B-F472053A1F4E' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SceneKit.framework/SceneKit
 current-version: 186.0

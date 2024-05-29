@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: EDA0148D-C806-3E07-84CD-26A84BB523B1', 'armv7s: 873C5E0A-EE75-3A76-A14E-9D27DE34CA8D', 
-                   'arm64: 28F961F4-ACBE-3DF3-A8B5-42034DAFEB82' ]
+uuids:           [ 'armv7: D61109CA-0EFC-3801-8766-56DEF8B6056D', 'armv7s: 7CCECA4E-CC75-3F36-96A1-43725B82C8C3', 
+                   'arm64: BE851BD8-4525-3E43-A159-BE56D3F1C0BA' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/WatchKit.framework/WatchKit
 objc-constraint: none
@@ -216,7 +216,8 @@ exports:
                        _SPTimingSizeApplication, _SPTimingSizeCompanionDaemon, _SPTimingSizeExtension, 
                        _SPTimingSizeGizmoDaemon, _SPTimingStartApplication, _SPTimingStartCompanionDaemon, 
                        _SPTimingStartExtension, _SPTimingStartGizmoDaemon, _SPTimingTimingReply, 
-                       _SPTransactionID, _SPWeatherBundleID, _SPXcodeSupportAppLaunchArgumentsKey, 
+                       _SPTransactionID, _SPTransportXcodeCommandServerIdentifier, 
+                       _SPWeatherBundleID, _SPXcodeSupportAppLaunchArgumentsKey, 
                        _SPXcodeSupportAppLaunchEnvironmentKey, _SPXcodeSupportAppLaunchModeKey, 
                        _SPXcodeSupportAppLaunchModeNotificationForceStaticPresentationKey, 
                        _SPXcodeSupportAppLaunchModeNotificationRemotePayloadKey, 

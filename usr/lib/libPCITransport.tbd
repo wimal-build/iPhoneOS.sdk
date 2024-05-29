@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 915EC56F-2BC8-307B-BCB3-977FD3C4C925', 'armv7s: 2738E0F1-28DB-3568-BDBC-72B21889EA05', 
-                   'arm64: DFEFB76C-4FCE-39BA-BB24-989010C1DD09' ]
+uuids:           [ 'armv7: 1DCDF81C-C234-3596-8CFA-7C90FF9776C2', 'armv7s: FDC5A804-7954-37A5-B634-139440FC1718', 
+                   'arm64: 0E49222F-7FF8-32BA-BF21-12ED12667DAC' ]
 platform:        ios
 install-name:    /usr/lib/libPCITransport.dylib
 objc-constraint: none

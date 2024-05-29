@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 9CB7A0FF-C2BE-3CE9-AF76-33CF37624798', 'armv7s: FEB06857-87AD-30C2-AEF1-7FA9560B0F24', 
-                   'arm64: 8339EB48-62E8-350A-92F9-C906FECD6250' ]
+uuids:           [ 'armv7: F0B668BF-B2A0-3D9A-88F3-E3DF42D207AE', 'armv7s: 976D2D0C-44D7-3D28-8879-2C170E4FEE8D', 
+                   'arm64: BC767615-5B69-379A-A377-B1E10F50B204' ]
 platform:        ios
 install-name:    /usr/lib/libutil.dylib
 objc-constraint: none

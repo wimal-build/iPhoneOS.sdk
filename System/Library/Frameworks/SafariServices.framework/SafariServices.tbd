@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 37BCC7EF-A20A-36BF-875A-D060CC9FCE35', 'armv7s: 9384EFCA-E24C-3588-ABDC-8DC1DB052D3A', 
-                   'arm64: D69C298F-0B67-3ABF-A7B2-680C73E0FCBF' ]
+uuids:           [ 'armv7: 9FB4D9A8-3986-34F4-8B91-58287A1052AA', 'armv7s: D5DB47FB-4492-3901-A0DA-859348F1C562', 
+                   'arm64: 476143F3-4E4B-319C-B974-17071C8CC555' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SafariServices.framework/SafariServices
 objc-constraint: none
@@ -66,7 +66,7 @@ exports:
                        __SFRequestDesktopSiteUIActivity, __SFSafariSharingExtensionController, 
                        __SFSafeBrowsingController, __SFSecurityInfo, __SFSingleBookmarkNavigationController, 
                        __SFSiteIcon, __SFSiteIconView, __SFSiteMetadataManager, __SFTabStateData, 
-                       __SFToolbar, __SFTouchIconFetchOperation, __SFURLSpoofingMitigator, 
-                       __SFUserActivityController, __SFWebProcessPlugInReaderEnabledPageController, 
+                       __SFTelephonyNavigationMitigationPolicy, __SFToolbar, __SFTouchIconFetchOperation, 
+                       __SFURLSpoofingMitigator, __SFUserActivityController, __SFWebProcessPlugInReaderEnabledPageController, 
                        __SFWebView, __SSHistoryAccessSession, __SSURLCompletionSession ]
 ...

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: C6B44D6E-5828-3B0D-ABCD-0F4D8A286457', 'armv7s: 42F6CFC1-D0FE-3B9B-8496-BA717DC062E8', 
-                   'arm64: D4F3C9CE-11A4-3CBA-846D-76496FF085CA' ]
+uuids:           [ 'armv7: BE51C646-2BE0-3DCB-9FF6-F5840633531D', 'armv7s: 76C9B078-8FD4-33A8-AF19-A95C4EB1B6E5', 
+                   'arm64: E593507A-D967-3EA6-8768-C088D4E81F66' ]
 platform:        ios
 install-name:    /usr/lib/libETLEFSDumpDynamic.dylib
 current-version: 0.0

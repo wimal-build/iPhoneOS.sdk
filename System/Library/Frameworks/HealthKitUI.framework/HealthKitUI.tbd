@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 37626876-B161-3DC0-A7BD-CC5D2543735F', 'armv7s: 2E2DD85C-1CA7-3F65-B728-8A448009322D', 
-                   'arm64: 5DAAD24C-DA50-3140-BBA6-4D9470734FE3' ]
+uuids:           [ 'armv7: 9A634626-F9C9-3873-8EBF-22B7A87BDE17', 'armv7s: BA2F76EA-1912-3458-8DE2-553801395D3A', 
+                   'arm64: E4D8E4E0-C6E0-3E2F-A97D-D9C27DF3EFE0' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/HealthKitUI.framework/HealthKitUI
 objc-constraint: none

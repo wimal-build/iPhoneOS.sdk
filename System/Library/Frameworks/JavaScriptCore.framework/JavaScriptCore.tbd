@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 30AFEFFE-71D8-325C-B096-C58F5122C5D7', 'armv7s: 64553CE9-ED38-3563-A3A4-0B5F8C525B3B', 
-                   'arm64: 3A74EFCC-E728-3410-AC8A-55027B67D2EF' ]
+uuids:           [ 'armv7: AD2AB77F-9A69-3067-8138-963437C54632', 'armv7s: 158608E4-384E-3303-A907-865C2C1E5FE2', 
+                   'arm64: 218FE9FE-272C-312B-AE4B-F25250451A5F' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore
-current-version: 602.1.50
+current-version: 602.2.14
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -1912,8 +1912,9 @@ exports:
                        __ZNK3JSC8JSObject11hasPropertyEPNS_9ExecStateEj, __ZNK3JSC8JSObject11toPrimitiveEPNS_9ExecStateENS_22PreferredPrimitiveTypeE, 
                        __ZNK3JSC8JSObject21findPropertyHashEntryENS_12PropertyNameE, 
                        __ZNK3JSC8JSObject8toNumberEPNS_9ExecStateE, __ZNK3JSC8JSObject8toStringEPNS_9ExecStateE, 
-                       __ZNK3JSC8Profiler8Database4saveEPKc, __ZNK3JSC8Profiler8Database4toJSEPNS_9ExecStateE, 
-                       __ZNK3JSC8Profiler8Database6toJSONEv, __ZNK3JSC9ClassInfo35hasStaticSetterOrReadonlyPropertiesEv, 
+                       __ZNK3JSC8JSString13equalSlowCaseEPNS_9ExecStateEPS0_, __ZNK3JSC8Profiler8Database4saveEPKc, 
+                       __ZNK3JSC8Profiler8Database4toJSEPNS_9ExecStateE, __ZNK3JSC8Profiler8Database6toJSONEv, 
+                       __ZNK3JSC9ClassInfo35hasStaticSetterOrReadonlyPropertiesEv, 
                        __ZNK3JSC9CodeBlock26reoptimizationRetryCounterEv, __ZNK3JSC9CodeBlock4dumpERN3WTF11PrintStreamE, 
                        __ZNK3JSC9Structure43anyObjectInChainMayInterceptIndexedAccessesEv, 
                        __ZNK3WTF10StringImpl10startsWithEPKS0_, __ZNK3WTF10StringImpl10startsWithEPKcjb, 

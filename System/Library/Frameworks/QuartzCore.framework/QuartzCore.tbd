@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 39E9EACD-9134-3466-BF24-078D75F9F2E2', 'armv7s: 92AEC227-E213-3781-9183-44A3862E2551', 
-                   'arm64: DFDC0C40-CF15-3854-B84A-6BC06B12B4EA' ]
+uuids:           [ 'armv7: 722C012A-6CA8-3F14-BD85-25190D3EDC6A', 'armv7s: C028D44B-16A9-3B35-B7EF-AD604A31C485', 
+                   'arm64: BF63FBA9-5947-3E54-8ED5-F6E4DB40E3AE' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/QuartzCore.framework/QuartzCore
 current-version: 1.11

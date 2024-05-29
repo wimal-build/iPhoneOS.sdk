@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 1A2FDA89-F260-319C-92CC-724398A01344', 'armv7s: 97393359-F933-393B-B524-3B13527DE372', 
-                   'arm64: E23DB4DF-B7F0-377C-9D2B-AA6A1A259DB4' ]
+uuids:           [ 'armv7: 26EAC8A1-36A2-3263-82BD-DE620D15B2E8', 'armv7s: 97DDC22A-0162-340D-AA05-2D57B6799FA3', 
+                   'arm64: 380F2544-0BC6-399E-BF07-7523C12B6086' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/AVFoundation.framework/AVFoundation
 current-version: 2.0
@@ -965,7 +965,6 @@ exports:
                        _AVCaptureDeviceFormatInternal.defaultActiveMinFrameDuration, 
                        _AVCaptureDeviceFormatInternal.sourceFormat, _AVCaptureDeviceFormatInternal.videoSupportedFrameRateRanges, 
                        _AVCaptureDeviceInputInternal.authorizedForCamera, _AVCaptureDeviceInputInternal.device, 
-                       _AVCaptureDeviceInputInternal.deviceClockCallbackInvoker, 
                        _AVCaptureDeviceInputInternal.deviceOpenCallbackInvoker, _AVCaptureDeviceInputInternal.ports, 
                        _AVCaptureDeviceInputInternal.ready, _AVCaptureDeviceInputInternal.weakReference, 
                        _AVCaptureDeviceInternal.activeInput, _AVCaptureDeviceInternal.configLockPid, 
@@ -1023,6 +1022,7 @@ exports:
                        _AVCapturePhotoOutputInternal.supportedFlashModes, _AVCapturePhotoOutputInternal.supportedHDRModes, 
                        _AVCapturePhotoOutputInternal.weakReference, _AVCapturePhotoSettingsInternal.HDRMode, 
                        _AVCapturePhotoSettingsInternal.autoBravoImageFusionEnabled, 
+                       _AVCapturePhotoSettingsInternal.autoShallowDepthOfFieldEffectEnabled, 
                        _AVCapturePhotoSettingsInternal.autoStillImageStabilizationEnabled, 
                        _AVCapturePhotoSettingsInternal.flashMode, _AVCapturePhotoSettingsInternal.format, 
                        _AVCapturePhotoSettingsInternal.highResolutionPhotoEnabled, 
@@ -1041,6 +1041,7 @@ exports:
                        _AVCaptureResolvedPhotoSettingsInternal.originalPhotoDeliveryEnabled, 
                        _AVCaptureResolvedPhotoSettingsInternal.photoDimensions, _AVCaptureResolvedPhotoSettingsInternal.previewDimensions, 
                        _AVCaptureResolvedPhotoSettingsInternal.rawPhotoDimensions, 
+                       _AVCaptureResolvedPhotoSettingsInternal.shallowDepthOfFieldEffectEnabled, 
                        _AVCaptureResolvedPhotoSettingsInternal.squareCropEnabled, 
                        _AVCaptureResolvedPhotoSettingsInternal.stillImageStabilizationEnabled, 
                        _AVCaptureResolvedPhotoSettingsInternal.turboModeEnabled, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 5465A43E-9821-3283-B974-FBAA2C9E2E77', 'armv7s: 6E4244BD-E159-36D0-A454-D592543F35E2', 
-                   'arm64: ABA654E7-E6DC-3B07-A727-49ACB925263C' ]
+uuids:           [ 'armv7: D5CEF38F-BED8-3D0F-89B8-FF0DE0C3E7FF', 'armv7s: 41CF632F-E35A-3CC8-B43D-9857528B2F98', 
+                   'arm64: A42F8C60-70D3-328E-B852-8B421B738593' ]
 platform:        ios
 install-name:    /usr/lib/libAWDProtobufBluetooth.dylib
 objc-constraint: none
@@ -313,6 +313,7 @@ exports:
                        __ZN3awd7metrics26BluetoothA2DPAudioLinkInfo21kTimestampFieldNumberE, 
                        __ZN3awd7metrics26BluetoothA2DPAudioLinkInfo27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE, 
                        __ZN3awd7metrics26BluetoothA2DPAudioLinkInfo30kTotalFramesDroppedFieldNumberE, 
+                       __ZN3awd7metrics26BluetoothA2DPAudioLinkInfo32kTotalEPAEnabledCountFieldNumberE, 
                        __ZN3awd7metrics26BluetoothA2DPAudioLinkInfo33kTotalConnectedDevicesFieldNumberE, 
                        __ZN3awd7metrics26BluetoothA2DPAudioLinkInfo4SwapEPS1_, __ZN3awd7metrics26BluetoothA2DPAudioLinkInfo5ClearEv, 
                        __ZN3awd7metrics26BluetoothA2DPAudioLinkInfo8CopyFromERKS1_, 

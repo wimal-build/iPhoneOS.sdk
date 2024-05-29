@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 61E2443E-6B79-3DB9-A0D2-62D1F1DC7FFA', 'armv7s: ABF6CD29-49D4-386C-8985-01F8A3E76B94', 
-                   'arm64: 27C8E5EB-7684-3818-ABD4-A0B0D5DFCCC3' ]
+uuids:           [ 'armv7: E629D95E-0115-345D-B8CA-0CAAD011C7FE', 'armv7s: 187E713F-961A-3C0A-A2C9-68B8BA753E8D', 
+                   'arm64: 97DF8046-F49D-3A3C-9A28-AD1C89EC90A9' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
 current-version: 275.0
@@ -670,11 +670,12 @@ exports:
                        __iohideventsystem_client_dispatch_properties_changed, __iohideventsystem_client_dispatch_service_records_changed, 
                        __iohideventsystem_client_dispatch_service_removal, __iohideventsystem_client_subsystem, 
                        __iohideventsystem_subsystem, __isArray, __isDictionary, __isString, 
-                       __pm_connect, __pm_disconnect, __systemPowerCallback, _copyPreferencesForSrc, 
-                       _createAsyncAssertion, _createCFStringForData, _createCFStringForPlist_new, 
-                       _createUTF8CStringForCFString, _defaultSettings, _ev_try_lock, 
-                       _ev_unlock, _fat_iterator_close, _fat_iterator_file_end, _fat_iterator_file_start, 
-                       _fat_iterator_find_arch, _fat_iterator_find_fat_arch, _fat_iterator_find_host_arch, 
+                       __pm_connect, __pm_disconnect, __systemPowerCallback, _comparePrefsToDefaults, 
+                       _copyPreferencesForSrc, _createAsyncAssertion, _createCFStringForData, 
+                       _createCFStringForPlist_new, _createUTF8CStringForCFString, 
+                       _defaultSettings, _ev_try_lock, _ev_unlock, _fat_iterator_close, 
+                       _fat_iterator_file_end, _fat_iterator_file_start, _fat_iterator_find_arch, 
+                       _fat_iterator_find_fat_arch, _fat_iterator_find_host_arch, 
                        _fat_iterator_for_data, _fat_iterator_is_iterable, _fat_iterator_next_arch, 
                        _fat_iterator_num_arches, _fat_iterator_open, _fat_iterator_reset, 
                        _gAsyncMode, _gIOCFPlugInInterfaceID, _gIOHIDLogLevel, _gIOKitLibSerializeOptions, 

@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: EB7F9A68-F740-359D-8CC9-6EED7B1063F3', 'armv7s: B5EDD30A-CB2D-3BEE-92DB-D5C97C7A0498', 
-                   'arm64: E0A6F4F0-810B-3F75-813E-DA2AFEBD591C' ]
+uuids:           [ 'armv7: 89011B56-67D1-34F3-8CE8-6D721E784B42', 'armv7s: 0D8CBA41-8ECA-39D8-AA6D-A1C2B2AF294D', 
+                   'arm64: 04198D72-3E7F-3834-914A-E5869C25E65C' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
-current-version: 275.0
+current-version: 275
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -87,7 +87,9 @@ exports:
                        _IOAVDeviceSetEventLogCommandMask, _IOAVDeviceSetEventLogEventMask, 
                        _IOAVDeviceSetEventLogSize, _IOAVDeviceSetLogLevel, _IOAVDeviceSetLogLevelMask, 
                        _IOAVDeviceSetPower, _IOAVDeviceSetProperty, _IOAVDeviceStartLink, 
-                       _IOAVDeviceStopLink, _IOAVDeviceWriteI2C, _IOAVEDIDIsStandard, 
+                       _IOAVDeviceStopLink, _IOAVDeviceWriteI2C, _IOAVDisplayMemoryCreateWithName, 
+                       _IOAVDisplayMemoryCreateWithService, _IOAVDisplayMemoryGetTypeID, 
+                       _IOAVDisplayMemoryRead, _IOAVDisplayMemoryWrite, _IOAVEDIDIsStandard, 
                        _IOAVElementTypeString, _IOAVEventLogEventTypeString, _IOAVGetCEAVideoShortID, 
                        _IOAVGetCEAVideoShortIDWithData, _IOAVGetCEAVideoShortIDWithDataActive, 
                        _IOAVGetCEAVideoTimingData, _IOAVGetCEAVideoTimingDataWithShortID, 
@@ -103,7 +105,7 @@ exports:
                        _IOAVServiceCreate, _IOAVServiceCreateWithLocation, _IOAVServiceCreateWithService, 
                        _IOAVServiceGetDevice, _IOAVServiceGetLinkData, _IOAVServiceGetLinkDataWithSource, 
                        _IOAVServiceGetPower, _IOAVServiceGetProtectionStatus, _IOAVServiceGetProtectionType, 
-                       _IOAVServiceGetTypeID, _IOAVServiceSetEventLogCommandMask, 
+                       _IOAVServiceGetTypeID, _IOAVServiceReadI2C, _IOAVServiceSetEventLogCommandMask, 
                        _IOAVServiceSetEventLogEventMask, _IOAVServiceSetEventLogSize, 
                        _IOAVServiceSetLogLevel, _IOAVServiceSetLogLevelMask, _IOAVServiceSetPower, 
                        _IOAVServiceSetProperty, _IOAVServiceSetVirtualEDIDMode, _IOAVServiceStartInfoFrame, 
@@ -111,7 +113,7 @@ exports:
                        _IOAVServiceStartLinkWithSource, _IOAVServiceStopInfoFrame, 
                        _IOAVServiceStopInfoFrameWithSource, _IOAVServiceStopLink, 
                        _IOAVServiceStopLinkWithSource, _IOAVServiceSupportsLink, 
-                       _IOAVStandardTypeString, _IOAVSupportedVideoTimingDataListTypeString, 
+                       _IOAVServiceWriteI2C, _IOAVStandardTypeString, _IOAVSupportedVideoTimingDataListTypeString, 
                        _IOAVTransportString, _IOAVVideoActiveFormatAspectRatio, _IOAVVideoAxisString, 
                        _IOAVVideoColorBitDepth, _IOAVVideoColorBitDepthScalar, _IOAVVideoColorCoefficientString, 
                        _IOAVVideoColorDynamicRangeString, _IOAVVideoColorSpaceString, 
@@ -164,13 +166,15 @@ exports:
                        _IODPDeviceGetSupportsEnhancedMode, _IODPDeviceGetSymbolErrorCount, 
                        _IODPDeviceGetTypeID, _IODPDeviceReadDPCD, _IODPDeviceSetALPMEnabled, 
                        _IODPDeviceTypeString, _IODPDeviceWriteDPCD, _IODPDriveSettingsAreValid, 
-                       _IODPEventLogEventTypeString, _IODPLinkMaxPixelRate, _IODPLinkRateEnum, 
-                       _IODPLinkRateIsStandard, _IODPLinkRateScalar, _IODPLinkSymbolRate, 
-                       _IODPServiceCreate, _IODPServiceCreateWithLocation, _IODPServiceCreateWithService, 
+                       _IODPEventLogEventTypeString, _IODPLinkBandwidth, _IODPLinkBitRateForLinkSymbolClock, 
+                       _IODPLinkMaxPixelRate, _IODPLinkRateEnum, _IODPLinkRateIsStandard, 
+                       _IODPLinkRateRequiredForVideoBandwidth, _IODPLinkRateScalar, 
+                       _IODPLinkSymbolClockForLinkBitRate, _IODPLinkSymbolRate, _IODPServiceCreate, 
+                       _IODPServiceCreateWithLocation, _IODPServiceCreateWithService, 
                        _IODPServiceGetAVService, _IODPServiceGetDevice, _IODPServiceGetSinkCount, 
                        _IODPServiceGetSymbolErrorCount, _IODPServiceGetTypeID, _IODPServiceRetrainLink, 
                        _IODPServiceSetLinkCheckEnable, _IODPStreamClockHz, _IODPTrainingPatternLength, 
-                       _IODPVideoMinLinkRate, _IODataQueueAllocateNotificationPort, 
+                       _IODPVideoBandwidth, _IODPVideoMinLinkRate, _IODataQueueAllocateNotificationPort, 
                        _IODataQueueDataAvailable, _IODataQueueDequeue, _IODataQueueEnqueue, 
                        _IODataQueuePeek, _IODataQueueSetNotificationPort, _IODataQueueWaitForAvailableData, 
                        _IODeregisterApp, _IODeregisterForRemoteSystemPower, _IODeregisterForSystemPower, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: BE36F790-820D-3878-924D-6D0DA67C1FD7', 'armv7s: 7F288A04-18CB-3C08-9F97-5E7D86C3E9EF', 
-                   'arm64: AC66807A-4302-35FE-A5C6-4F8FFDA6EBE0' ]
+uuids:           [ 'armv7: E08BA1CC-5FDC-396C-A7B6-18D6BECB978C', 'armv7s: BCF366B4-A3F4-37B0-B0CF-718BC630167E', 
+                   'arm64: E0963137-6B38-3686-860E-17911C1EDE77' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/HealthKit.framework/HealthKit
 objc-constraint: none
@@ -180,9 +180,12 @@ exports:
                        _kHKAggdCDAImportPasswordProtected, _kHKAggdCDAImportSuccessKey, 
                        _kHKAggdCDAImportValidatedCount, _kHKAggdCorruptDatabaseKey, 
                        _kHKAggdDashboardItemCountKey, _kHKAggdDatabaseIdentifierMismatchKey, 
-                       _kHKAggdDidDestroyDatabaseForFatalMigrationFailureKey, _kHKAggdHasSetMedicalIDFieldKey, 
-                       _kHKAggdHasSetMedicalIDKey, _kHKAggdIntegrityCheckFailedKey, 
-                       _kHKAggdNanoSyncCountKey, _kHKAggdNanoSyncErrorCountKey, _kHKAggdNanoSyncResponseStatusKey, 
+                       _kHKAggdDidDestroyDatabaseForFatalMigrationFailureKey, _kHKAggdHFDBTreeErrorKey, 
+                       _kHKAggdHFDCorruptDatabaseKey, _kHKAggdHFDFileAccessErrorKey, 
+                       _kHKAggdHFDOtherErrorKey, _kHKAggdHFDOutOfRangeErrorKey, _kHKAggdHFDTransactionErrorKey, 
+                       _kHKAggdHasSetMedicalIDFieldKey, _kHKAggdHasSetMedicalIDKey, 
+                       _kHKAggdIntegrityCheckFailedKey, _kHKAggdNanoSyncCountKey, 
+                       _kHKAggdNanoSyncErrorCountKey, _kHKAggdNanoSyncResponseStatusKey, 
                        _kHKAggdNanoSyncSuccessCountKey, _kHKAggdNanoSyncSuccessDurationDistributionKey, 
                        _kHKAggdServiceConnectionFrequencyDistributionKey, _kHKAggdServicesCountKey, 
                        _kHKBaselineMETs, _kHKBluetoothDeviceProductType, _kHKDatabasePreferencesDomain, 

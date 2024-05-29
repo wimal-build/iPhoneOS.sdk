@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 1D8E07A5-F560-398C-ABFD-1BAE096376F4', 'armv7s: 812FF5E8-CE66-37E1-8D0B-EC0C33C3396D', 
-                   'arm64: 0DD7C46E-70D2-3483-A26B-02BFED7BE22F' ]
+uuids:           [ 'armv7: 2FEE9859-F6F3-3ECA-9D71-ECCE7D84E493', 'armv7s: 0C853894-9C37-3560-9C1C-0A8FA6F55088', 
+                   'arm64: 2637BB1D-0CEE-3C31-A844-3CF02596EEE7' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/UserNotifications.framework/UserNotifications
 objc-constraint: none
@@ -45,9 +45,10 @@ exports:
                        _UNNotificationContent._attachments, _UNNotificationContent._badge, 
                        _UNNotificationContent._body, _UNNotificationContent._categoryIdentifier, 
                        _UNNotificationContent._darwinNotificationName, _UNNotificationContent._darwinSnoozedNotificationName, 
-                       _UNNotificationContent._fromSnooze, _UNNotificationContent._hasDefautAction, 
-                       _UNNotificationContent._launchImageName, _UNNotificationContent._peopleIdentifiers, 
-                       _UNNotificationContent._shouldAddToNotificationsList, _UNNotificationContent._shouldAlwaysAlertWhileAppIsForeground, 
+                       _UNNotificationContent._defaultActionTitle, _UNNotificationContent._fromSnooze, 
+                       _UNNotificationContent._hasDefautAction, _UNNotificationContent._launchImageName, 
+                       _UNNotificationContent._peopleIdentifiers, _UNNotificationContent._shouldAddToNotificationsList, 
+                       _UNNotificationContent._shouldAlwaysAlertWhileAppIsForeground, 
                        _UNNotificationContent._shouldLockDevice, _UNNotificationContent._shouldPauseMedia, 
                        _UNNotificationContent._snoozeable, _UNNotificationContent._sound, 
                        _UNNotificationContent._subtitle, _UNNotificationContent._threadIdentifier, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 7C48155F-2D7A-3740-B1DC-18662E8D2E5C', 'armv7s: B45C4AC2-5A62-3422-84C4-CCA2E0DEF46F', 
-                   'arm64: A99785DA-D555-3A5F-9C8E-44F9EC16B0F1' ]
+uuids:           [ 'armv7: 02CE6602-DC08-3517-88B2-57F9BB944EDF', 'armv7s: C26FC038-390B-3A89-9D79-3FA2ABAAD33E', 
+                   'arm64: DAB98612-BD3A-3C5C-886A-BC2E2F19216E' ]
 platform:        ios
 install-name:    /usr/lib/libDHCPServer.A.dylib
 objc-constraint: none

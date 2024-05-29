@@ -1,11 +1,11 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 7C8C1CAA-1728-3C1B-B404-0BB1A115AEFB', 'armv7s: 382950E8-9381-3F3C-AB23-9F1DFA7D4369', 
-                   'arm64: B3FC5554-2FE3-3491-877C-661CF410B164' ]
+uuids:           [ 'armv7: 40C54586-8FFF-3C9D-9690-2370C30C4D4D', 'armv7s: B0B6D344-4F63-387F-BA9E-EB62A4F14CE2', 
+                   'arm64: 29F6E338-C1F1-3348-9708-11CA0F0FE293' ]
 platform:        ios
 install-name:    /usr/lib/libxml2.2.dylib
 current-version: 10.9
-compatibility-version: 10.0
+compatibility-version: 10
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

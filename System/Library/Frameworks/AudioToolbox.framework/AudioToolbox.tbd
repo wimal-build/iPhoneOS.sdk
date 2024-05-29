@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: C9363EF3-1354-3FB0-8598-9C9101B24B1C', 'armv7s: 00A2EE8C-2C54-3492-BE42-336C283FD0CF', 
-                   'arm64: 3EA60E00-D238-3AE4-9899-6690AB1FDBDD' ]
+uuids:           [ 'armv7: DD086648-2E64-3440-BF4B-97FEDDB13CC3', 'armv7s: 41194B37-6290-324A-B9B0-0C3BA711A437', 
+                   'arm64: 4CBB99E0-9A88-3E8F-A720-035FA082B1E1' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-current-version: 492.0
+current-version: 492
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -214,12 +214,12 @@ exports:
                        _kAudioSession_DataSourceDescriptionKey_Name, _kAudioSession_DataSourceDescriptionKey_SelectedMicrophonePolarPattern, 
                        _kAudioSession_InputSourceKey_Description, _kAudioSession_InputSourceKey_ID, 
                        _kAudioSession_InterruptionInfoKey_InterruptorName, _kAudioSession_InterruptionInfoKey_State, 
-                       _kAudioSession_InterruptionInfoKey_Type, _kAudioSession_OutputDestinationKey_Description, 
-                       _kAudioSession_OutputDestinationKey_ID, _kAudioSession_RouteAttributesKey_ID, 
-                       _kAudioSession_RouteAttributesKey_Sources, _kAudioSession_RouteAttributesKey_Type, 
-                       _kAudioSession_RouteChangeKey_Reason, _kAudioSession_RouteGroupDescriptionKey_ID, 
-                       _kAudioSession_RouteGroupDescriptionKey_Routes, _kLoudnessInfoDictionary_AdditionalLoudnessInfoKey, 
-                       _kLoudnessInfoDictionary_AdditionalLoudnessParametersKey, 
+                       _kAudioSession_InterruptionInfoKey_Type, _kAudioSession_InterruptionInfoKey_WasSuspended, 
+                       _kAudioSession_OutputDestinationKey_Description, _kAudioSession_OutputDestinationKey_ID, 
+                       _kAudioSession_RouteAttributesKey_ID, _kAudioSession_RouteAttributesKey_Sources, 
+                       _kAudioSession_RouteAttributesKey_Type, _kAudioSession_RouteChangeKey_Reason, 
+                       _kAudioSession_RouteGroupDescriptionKey_ID, _kAudioSession_RouteGroupDescriptionKey_Routes, 
+                       _kLoudnessInfoDictionary_AdditionalLoudnessInfoKey, _kLoudnessInfoDictionary_AdditionalLoudnessParametersKey, 
                        _kLoudnessInfoDictionary_AlbumLoudnessParametersKey, _kLoudnessInfoDictionary_AnchorLoudnessKey, 
                        _kLoudnessInfoDictionary_BitDepthPCMMasterKey, _kLoudnessInfoDictionary_DialnormKey, 
                        _kLoudnessInfoDictionary_DialogueAnchorParameters, _kLoudnessInfoDictionary_LoudnessInfoKey, 

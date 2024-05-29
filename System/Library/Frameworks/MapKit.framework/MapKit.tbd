@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 9102E5BB-C417-37FB-9FB4-9B5C33F60217', 'armv7s: 932DE9D4-8043-325F-B381-9312BBF973FD', 
-                   'arm64: B01E1B5E-FEA9-30FD-846D-824A43FB6FAA' ]
+uuids:           [ 'armv7: 637322DC-D323-3E95-9693-ABBCC4FEAD53', 'armv7s: CE3AB02F-6E50-3E6C-A90E-604F9488F170', 
+                   'arm64: 22E02403-315D-3653-A079-2F2AA5924FE7' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MapKit.framework/MapKit
-current-version: 14.0
+current-version: 14
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -43,11 +43,12 @@ exports:
                        _MKLaunchOptionsCurrentLocationPlacecardKey, _MKLaunchOptionsDestinationDescriptionHome, 
                        _MKLaunchOptionsDestinationDescriptionKey, _MKLaunchOptionsDestinationDescriptionWork, 
                        _MKLaunchOptionsDirectionsModeDefault, _MKLaunchOptionsDirectionsModeDriving, 
-                       _MKLaunchOptionsDirectionsModeKey, _MKLaunchOptionsDirectionsModeRoutingApps, 
-                       _MKLaunchOptionsDirectionsModeTransit, _MKLaunchOptionsDirectionsModeWalking, 
-                       _MKLaunchOptionsLaunchIntoKeyboardKey, _MKLaunchOptionsLaunchIntoNavDetailKey, 
-                       _MKLaunchOptionsLaunchIntoNavKey, _MKLaunchOptionsLaunchIntoNavOverviewKey, 
-                       _MKLaunchOptionsLaunchIntoNearbyKey, _MKLaunchOptionsLaunchIntoRAPKey, 
+                       _MKLaunchOptionsDirectionsModeKey, _MKLaunchOptionsDirectionsModeRidesharing, 
+                       _MKLaunchOptionsDirectionsModeRoutingApps, _MKLaunchOptionsDirectionsModeTransit, 
+                       _MKLaunchOptionsDirectionsModeWalking, _MKLaunchOptionsLaunchIntoKeyboardKey, 
+                       _MKLaunchOptionsLaunchIntoNavDetailKey, _MKLaunchOptionsLaunchIntoNavKey, 
+                       _MKLaunchOptionsLaunchIntoNavOverviewKey, _MKLaunchOptionsLaunchIntoNearbyKey, 
+                       _MKLaunchOptionsLaunchIntoRAPKey, _MKLaunchOptionsLaunchIntoRidesharingOnlyKey, 
                        _MKLaunchOptionsLaunchIntoRouteKey, _MKLaunchOptionsLaunchIntoSearchKey, 
                        _MKLaunchOptionsLaunchIntoTableBookingKey, _MKLaunchOptionsMapCenterKey, 
                        _MKLaunchOptionsMapRadiusInMetersKey, _MKLaunchOptionsMapSpanKey, 
@@ -120,9 +121,10 @@ exports:
                        _MKLocalSearchResponse, _MKLocationManager, _MKMapAttribution, 
                        _MKMapCamera, _MKMapItem, _MKMapItemMetadata, _MKMapItemMetadataImageRequest, 
                        _MKMapItemMetadataRequester, _MKMapService, _MKMapSnapshot, 
-                       _MKMapSnapshotCreator, _MKMapSnapshotOptions, _MKMapSnapshotter, 
-                       _MKMapView, _MKModernUserLocationView, _MKMultiPoint, _MKOverlayPathRenderer, 
-                       _MKOverlayPathView, _MKOverlayRenderer, _MKOverlayView, _MKPinAnnotationView, 
+                       _MKMapSnapshotCreator, _MKMapSnapshotFeatureAnnotation, _MKMapSnapshotOptions, 
+                       _MKMapSnapshotter, _MKMapView, _MKModernUserLocationView, 
+                       _MKMultiPoint, _MKOverlayPathRenderer, _MKOverlayPathView, 
+                       _MKOverlayRenderer, _MKOverlayView, _MKPinAnnotationView, 
                        _MKPlaceActivityProvider, _MKPlaceHeaderBackgroundView, _MKPlaceHeaderView, 
                        _MKPlaceLocVCardActivityProvider, _MKPlaceReservationRowView, 
                        _MKPlaceTextActivityProvider, _MKPlaceURLActivityProvider, 
@@ -140,9 +142,9 @@ exports:
                        _MKTransitIcon, _MKTransitIncidentStringProvider, _MKTransitIncidentsViewController, 
                        _MKTransitInfoLabelView, _MKTransitLineItemViewController, 
                        _MKTransitShield, _MKURLSerializer, _MKUserLocation, _MKUserLocationView, 
-                       _MKUserTrackingBarButtonItem, _MKViewWithHairline, __MKBalloonAnnotationView, 
-                       __MKBalloonCalloutView, __MKContactPlaceItem, __MKCustomFeatureStore, 
-                       __MKDistanceDetailProvider, __MKLocalSearchExternalTransitLookupParameters, 
+                       _MKUserTrackingBarButtonItem, _MKViewWithHairline, _MXExtensionRidesharingManager, 
+                       __MKBalloonAnnotationView, __MKBalloonCalloutView, __MKContactPlaceItem, 
+                       __MKCustomFeatureStore, __MKDistanceDetailProvider, __MKLocalSearchExternalTransitLookupParameters, 
                        __MKLocalSearchMerchantParameters, __MKLocationShifter, __MKMapItemAttribution, 
                        __MKMapItemPhotosAttribution, __MKMapItemPlaceAttribution, 
                        __MKMapItemPlaceItem, __MKPlaceActionButtonController, __MKPlaceAttributionLabel, 

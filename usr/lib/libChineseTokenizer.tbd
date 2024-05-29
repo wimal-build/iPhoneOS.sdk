@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 16541E6C-DD46-31A1-BBD8-E6374E33E8D4', 'armv7s: F4B2DAC6-DE86-303D-BAD9-FF601AA18CD5', 
-                   'arm64: 10321183-AAD8-32E6-988D-2CB25DC1169E' ]
+uuids:           [ 'armv7: 83E78B92-0F28-321B-9B40-789CB6747FC9', 'armv7s: 907668B2-F2F5-3601-A7E1-E58D788A36D3', 
+                   'arm64: 6BD9A629-B2BE-3CCD-A309-5C0A91DD565A' ]
 platform:        ios
 install-name:    /usr/lib/libChineseTokenizer.dylib
-current-version: 21.0
+current-version: 21
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 2F2839DB-9F7C-3410-A9FE-024749ABC4C0', 'armv7s: 5B73F159-65E5-3BEC-9E31-3A4E3AF753CD', 
-                   'arm64: E4975D5E-CE3C-322C-AEAA-F7CA2E470EB0' ]
+uuids:           [ 'armv7: 5395068D-0439-3181-940B-B251BEA6C336', 'armv7s: 79987F5A-F4E6-35F5-B805-9896A2D26DA5', 
+                   'arm64: 11FBB736-6D7C-3BBA-AD8F-598DE35BDFBF' ]
 platform:        ios
 install-name:    /usr/lib/libTelephonyBasebandBulkUSBDynamic.dylib
 objc-constraint: none

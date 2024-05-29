@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: D62587EA-D854-3700-A0DE-4922864182B7', 'armv7s: E9535EA2-A686-344A-B81A-9E3AAA046846', 
-                   'arm64: D861020B-5ED0-3DC3-9E7C-42F7F4F473BA' ]
+uuids:           [ 'armv7: 3C47A04F-9F01-31E4-A9E2-49805A903288', 'armv7s: 98818DE2-69E9-328E-8309-8303DA61301D', 
+                   'arm64: E208D0B7-B0C5-3B0E-ACDD-5E7AFB399A74' ]
 platform:        ios
 install-name:    /usr/lib/libsysdiagnose.dylib
 objc-constraint: none

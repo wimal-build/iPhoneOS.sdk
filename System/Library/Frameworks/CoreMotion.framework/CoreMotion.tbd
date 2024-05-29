@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 777976E7-B09C-324F-8F3A-7D2961AB7EA4', 'armv7s: DB80B2A8-08E4-39F2-9D63-25AAEFF71880', 
-                   'arm64: 32E6ECFF-3944-3A16-87AD-3F188B97B09F' ]
+uuids:           [ 'armv7: 4AB0947D-6399-3ADF-B280-A7C2BF58680A', 'armv7s: 3AAE0DE9-D11C-3F24-8BC8-7E7C5326CAE3', 
+                   'arm64: AEEE6658-3D49-3674-A62E-5010E7EE8576' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreMotion.framework/CoreMotion
-current-version: 2100.0.34
+current-version: 2101.0.62
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -22,6 +22,8 @@ exports:
                        _CMCompassCalibrationData, _CMDeviceHasOriginalBackCamera, 
                        _CMErrorDomain, _CMErrorMessage, _CMExerciseMinuteDataArray, 
                        _CMExerciseMinuteRecordId, _CMExerciseMinuteSourceId, _CMExerciseMinuteStartDate, 
+                       _CMFallSetStatsEnabled, _CMFallSetStatsNameOfCurrentFile, 
+                       _CMFallSetStatsNumberOfAvailableFiles, _CMFallSetStatsSizeOfCurrentFile, 
                        _CMMotionActivityData, _CMMotionActivityDataArray, _CMMotionActivityStartTime, 
                        _CMMotionActivityStopTime, _CMMotionStateSim, _CMMotionStateSimResult, 
                        _CMMotionStateSimState, _CMNatalimeterSetUserAgeYr, _CMNatalimeterSetUserBiologicalSex, 
@@ -93,7 +95,7 @@ exports:
                        _CMCalorieUserInfo, _CMCatherineFeeder, _CMDeviceMotion, _CMDeviceMotionLite, 
                        _CMDeviceOrientation, _CMDeviceOrientationManager, _CMElevation, 
                        _CMElevationData, _CMExerciseMinute, _CMExerciseMinuteData, 
-                       _CMGestureManager, _CMGyroData, _CMLiftManager, _CMLiftMotion, 
+                       _CMFall, _CMGestureManager, _CMGyroData, _CMLiftManager, _CMLiftMotion, 
                        _CMLogItem, _CMMagnetometerData, _CMMotionActivity, _CMMotionActivityManager, 
                        _CMMotionManager, _CMMotionTimeRange, _CMNatalieData, _CMNatalimeter, 
                        _CMOdometer, _CMOdometerData, _CMOnBodyStatus, _CMOnBodyStatusManager, 

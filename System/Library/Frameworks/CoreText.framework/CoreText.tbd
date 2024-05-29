@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 06470F91-F799-3921-98D9-D0B4D6A02903', 'armv7s: 0DC270C6-CEFE-3631-AE2E-FE4F8B2FF728', 
-                   'arm64: 9D73AF39-AFA6-3EA6-8673-374A3862426B' ]
+uuids:           [ 'armv7: EBBF2ED7-5C61-380D-9301-0864C6ABFE54', 'armv7s: FE5F83CA-0F2E-3F4B-94B9-BDECC86C876E', 
+                   'arm64: A666649B-919F-306E-A1A7-6E11E6ABB103' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreText.framework/CoreText
 objc-constraint: none

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 204088A6-15DA-3EAD-816E-1FA849417203', 'armv7s: E0550C25-4410-3245-B26B-5273EEF92086', 
-                   'arm64: D9E86A6D-47DF-3295-ADD6-F84822827E50' ]
+uuids:           [ 'armv7: 6A840A20-894A-370D-84B2-2E703A38A789', 'armv7s: 408BF9A2-E821-3075-9D36-86869F4EABBD', 
+                   'arm64: 54D111F8-44A8-39C2-97F7-D52BC884D1D6' ]
 platform:        ios
 install-name:    /usr/lib/libH5Dynamic.dylib
 objc-constraint: none

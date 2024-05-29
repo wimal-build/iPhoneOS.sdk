@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 134EE76D-86A4-3237-9C34-B064F87F3EBE', 'armv7s: C944BD4B-69F7-375F-B85F-592258D6A8AB', 
-                   'arm64: 166BB8B0-EAA6-368D-836A-7702B4ADE694' ]
+uuids:           [ 'armv7: DE01EFC5-D3D4-3414-8604-414028AFF3E1', 'armv7s: F6E41AE2-4DCE-331B-93B0-12CD4BA27F20', 
+                   'arm64: 4ECCE70D-988E-310B-9B52-CA42C7C0EC58' ]
 platform:        ios
 install-name:    /usr/lib/libheimdal-asn1.dylib
 objc-constraint: none

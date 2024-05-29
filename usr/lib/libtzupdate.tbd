@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: B5C561C6-80A8-3FD5-AF2B-04CCC9A8D28D', 'armv7s: 7F423FFF-18BE-303D-9ADA-63E1DCD8A06E', 
-                   'arm64: 2F577B9D-B3D5-3316-9E2A-5CD0D87F7A99' ]
+uuids:           [ 'armv7: 2BD6F8D4-7299-3039-AF66-10F0769C6EEB', 'armv7s: 411A3515-D55C-30D1-BE74-A7A89264A218', 
+                   'arm64: 03E2D618-5A98-3621-BD6F-F0650A37B08B' ]
 platform:        ios
 install-name:    /usr/lib/libtzupdate.dylib
 objc-constraint: none

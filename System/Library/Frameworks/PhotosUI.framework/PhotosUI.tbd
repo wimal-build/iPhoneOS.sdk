@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 065ACEF1-04D6-39A2-9DF6-4D2A45D87D02', 'armv7s: CFDC2983-051A-344E-A7A8-59CAB3A18A4E', 
-                   'arm64: 727E1E51-350E-3803-990F-0555D9BC6E6C' ]
+uuids:           [ 'armv7: 245FE8C7-D480-3EC1-A18C-D81373AF137A', 'armv7s: 23FF2A33-F4F6-383D-9CC9-1C92C9A7E590', 
+                   'arm64: AEC8D1AC-CB27-3DBB-86A6-414DB5A07AA0' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PhotosUI.framework/PhotosUI
 objc-constraint: none
@@ -25,8 +25,9 @@ exports:
                        _PUConvertRectFromCoordinateSystemToCoordinateSystem, _PUCoordinateSystemEqualToCoordinateSystem, 
                        _PUDecomposeTransform, _PUDegreesToRadians, _PUDenormalizePoint, 
                        _PUDerivative, _PUDescriptionForPLCPLStatus, _PUDescriptionForPLCPLStatusShouldHighlight, 
-                       _PUDiffHorizontalRects, _PUDiffVerticalRects, _PUDisplayVelocityEqualToDisplayVelocity, 
-                       _PUDisplayVelocityZero, _PUDistanceBetweenPoints, _PUEdgeInsetsByLinearlyInterpolatingEdgeInsets, 
+                       _PUDiffHorizontalRects, _PUDiffVerticalRects, _PUDisplayLinkStartedNotification, 
+                       _PUDisplayVelocityEqualToDisplayVelocity, _PUDisplayVelocityZero, 
+                       _PUDistanceBetweenPoints, _PUEdgeInsetsByLinearlyInterpolatingEdgeInsets, 
                        _PUEdgeInsetsInverse, _PUEdgeInsetsScale, _PUEdgeOppositeToEdge, 
                        _PUFloatAtan, _PUFloatAtan2, _PUFloatByLinearlyInterpolatingFloats, 
                        _PUFloatCompare, _PUFloatCos, _PUFloatExp, _PUFloatHypot, 
@@ -53,6 +54,8 @@ exports:
                        _PURectNormalize, _PURectUnionPoint, _PURectUnionPoints, _PURectWithAspectRatioFillingRect, 
                        _PURectWithAspectRatioFittingRect, _PURectWithCenterAndSize, 
                        _PURectWithEdges, _PURectWithMinimumSize, _PURectWithSizeThatFitsInRect, 
+                       _PUResourceDownloadRequestAdjustmentDataURLKey, _PUResourceDownloadRequestErrorDomain, 
+                       _PUResourceDownloadRequestPhotoURLKey, _PUResourceDownloadRequestVideoURLKey, 
                        _PURoundRectToPixel, _PURoundToPixel, _PUSearchResultsImageViewSize, 
                        _PUShouldAutoHideChrome, _PUShouldReloadAssetMediaNotification, 
                        _PUSizeAdd, _PUSizeByLinearlyInterpolatingSizes, _PUSizeGetAspectRatio, 
@@ -111,8 +114,8 @@ exports:
                        _PUOneUpBarsController, _PUOneUpPhotosSharingTransition, _PUOneUpPresentationHelper, 
                        _PUOneUpSettings, _PUOneUpTilingLayout, _PUOneUpTilingLayoutInvalidationContext, 
                        _PUOneUpViewController, _PUOverOneUpPresentationSession, _PUParallaxComputer, 
-                       _PUPhotoDecoration, _PUPhotoEditIrisModel, _PUPhotoEditIrisModelChange, 
-                       _PUPhotoEditViewController, _PUPhotoKitAssetActionManager, 
+                       _PUPerformanceDiagnosticsSettings, _PUPhotoDecoration, _PUPhotoEditIrisModel, 
+                       _PUPhotoEditIrisModelChange, _PUPhotoEditViewController, _PUPhotoKitAssetActionManager, 
                        _PUPhotoKitAssetsDataSource, _PUPhotoKitDataSourceManager, 
                        _PUPhotoKitMediaProvider, _PUPhotoSelectionManager, _PUPhotoStreamAlbumsTableViewController, 
                        _PUPhotoStreamCreateTitleViewController, _PUPhotoStreamRecipientViewController, 

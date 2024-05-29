@@ -1,11 +1,11 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: F3834197-5247-3CB4-8C63-2DAA28289E26', 'armv7s: 78E84D66-22E9-3F6F-85BF-DF36369E5F52', 
-                   'arm64: 74D5212F-603F-3E9C-A952-2262AD9AEACF' ]
+uuids:           [ 'armv7: 62E44171-CECC-375F-9247-D5452D4CEC36', 'armv7s: BAF6CAAF-246B-391B-8C5D-10B0FB2F023E', 
+                   'arm64: C9C1D322-781F-3DEB-B9FE-52C5D39BC993' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Contacts.framework/Contacts
-current-version: 0.0
-compatibility-version: 0.0
+current-version: 0
+compatibility-version: 0
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -85,15 +85,17 @@ exports:
                        _CNPostalAddressFormattedAddressKey, _CNPostalAddressISOCountryCodeKey, 
                        _CNPostalAddressLocalizedPropertyNameAttribute, _CNPostalAddressPostalCodeKey, 
                        _CNPostalAddressPropertyAttribute, _CNPostalAddressStateKey, 
-                       _CNPostalAddressStreetKey, _CNSocialProfileBundleIdentifiersKey, 
-                       _CNSocialProfileDisplayNameKey, _CNSocialProfileServiceFacebook, 
-                       _CNSocialProfileServiceFlickr, _CNSocialProfileServiceGameCenter, 
-                       _CNSocialProfileServiceKey, _CNSocialProfileServiceLinkedIn, 
-                       _CNSocialProfileServiceMySpace, _CNSocialProfileServiceSinaWeibo, 
-                       _CNSocialProfileServiceTencentWeibo, _CNSocialProfileServiceTwitter, 
-                       _CNSocialProfileServiceYelp, _CNSocialProfileTeamIdentifierKey, 
-                       _CNSocialProfileURLStringKey, _CNSocialProfileUserIdentifierKey, 
-                       _CNSocialProfileUsernameKey, _CNTelephonyServiceName, _CNWorkLabel ]
+                       _CNPostalAddressStreetKey, _CNPostalAddressSubAdministrativeAreaKey, 
+                       _CNPostalAddressSubLocalityKey, _CNReputationStoreDefaultTimeout, 
+                       _CNSocialProfileBundleIdentifiersKey, _CNSocialProfileDisplayNameKey, 
+                       _CNSocialProfileServiceFacebook, _CNSocialProfileServiceFlickr, 
+                       _CNSocialProfileServiceGameCenter, _CNSocialProfileServiceKey, 
+                       _CNSocialProfileServiceLinkedIn, _CNSocialProfileServiceMySpace, 
+                       _CNSocialProfileServiceSinaWeibo, _CNSocialProfileServiceTencentWeibo, 
+                       _CNSocialProfileServiceTwitter, _CNSocialProfileServiceYelp, 
+                       _CNSocialProfileTeamIdentifierKey, _CNSocialProfileURLStringKey, 
+                       _CNSocialProfileUserIdentifierKey, _CNSocialProfileUsernameKey, 
+                       _CNTelephonyServiceName, _CNWorkLabel ]
     objc-classes:    [ _CN, _CNAbstractActivityAlertDescription, _CNAccount, _CNActivityAlert, 
                        _CNBirthdayDescription, _CNCalendarURIsDescription, _CNCallAlertDescription, 
                        _CNChangeHistory, _CNChangeHistoryFetchRequest, _CNChangeHistoryItem, 
@@ -126,7 +128,8 @@ exports:
                        _CNPreferredForImageDescription, _CNPreferredForNameDescription, 
                        _CNPreferredLikenessSourceDescription, _CNPreviousFamilyNameDescription, 
                        _CNPronunciationFamilyNameDescription, _CNPronunciationGivenNameDescription, 
-                       _CNPropertyDescription, _CNSaveRequest, _CNSectionForSortingByFamilyNameDescription, 
+                       _CNPropertyDescription, _CNReputationHandle, _CNReputationStore, 
+                       _CNSaveRequest, _CNSectionForSortingByFamilyNameDescription, 
                        _CNSectionForSortingByGivenNameDescription, _CNSocialProfile, 
                        _CNSocialProfilesDescription, _CNSuggestedSaveRequest, _CNTCC, 
                        _CNTextAlertDescription, _CNThumbnailImageDataDescription, 

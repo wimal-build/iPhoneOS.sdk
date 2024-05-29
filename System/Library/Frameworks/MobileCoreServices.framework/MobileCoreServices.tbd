@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 9E563A74-D796-3A64-B1A7-FFA0D002AC21', 'armv7s: 5B41C1B3-49AA-3490-8940-1708034BD7C0', 
-                   'arm64: E035420B-FABE-3F28-BC6E-EF0A144AC1D1' ]
+uuids:           [ 'armv7: 58F26851-6EF6-3F4F-8BEE-2C569BAB771D', 'armv7s: AC1968E7-FD1F-3DD6-B97D-861367A8776D', 
+                   'arm64: 76C08BFE-F7C6-34C4-B486-5FDCC0B47569' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-current-version: 775.2.10
+current-version: 775.2.37
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -27,8 +27,9 @@ exports:
                        _FSEventsPurgeEventsForDeviceUpToEventId, _LSApplicationSINFKey, 
                        _LSApplicationWorkspaceErrorDomain, _LSApplicationsChangedNotificationName, 
                        _LSApplyURLOverridesForContacts, _LSBlockUntilCompleteKey, 
-                       _LSContinuityErrorDomain, _LSDisableURLOverrides, _LSDocumentTypesChangedNotificationName, 
-                       _LSFileProviderStringKey, _LSGeoJSONKey, _LSInit, _LSInstallTypeKey, 
+                       _LSContinuityErrorDomain, _LSDefaultIconName, _LSDisableURLOverrides, 
+                       _LSDocumentTypesChangedNotificationName, _LSFileProviderStringKey, 
+                       _LSGeoJSONKey, _LSHiddenAppType, _LSInit, _LSInstallTypeKey, 
                        _LSInternalApplicationType, _LSMoveDocumentOnOpenKey, _LSNewsstandArtworkKey, 
                        _LSOpenApplicationPayloadOptionsKey, _LSOpenInBackgroundKey, 
                        _LSPackageTypeCarrierBundle, _LSPackageTypeCustomer, _LSPackageTypeDeveloper, 
@@ -177,12 +178,13 @@ exports:
                        _kUTTypeXMLPropertyList, _kUTTypeXPCService, _kUTTypeZipArchive ]
     objc-classes:    [ _LSAppLink, _LSApplicationProxy, _LSApplicationWorkspace, 
                        _LSApplicationWorkspaceObserver, _LSBestAppSuggestion, _LSBestAppSuggestionManager, 
-                       _LSBundleProxy, _LSDocumentProxy, _LSPingResults, _LSPlugInKitProxy, 
-                       _LSPlugInQuery, _LSPlugInQueryWithIdentifier, _LSPlugInQueryWithQueryDictionary, 
-                       _LSPlugInQueryWithURL, _LSResourceProxy, _LSResumableActivitiesControlManager, 
-                       _LSUserActivity, _LSUserActivityDebuggingManager, _LSUserActivityInfo, 
-                       _LSUserActivityManager, _LSVPNPluginProxy, _NSUserActivity, 
-                       __LSAppLinkPattern, __LSAppLinkPlugIn, __LSApplicationState, 
-                       __LSDefaults, __LSDiskUsage, __LSQuery, __LSQueryContext, 
-                       __LSQueryResult, __LSStringLocalizer, __UTType, __UTTypeQuery ]
+                       _LSBundleInfoCachedValues, _LSBundleProxy, _LSDocumentProxy, 
+                       _LSPingResults, _LSPlugInKitProxy, _LSPlugInQuery, _LSPlugInQueryWithIdentifier, 
+                       _LSPlugInQueryWithQueryDictionary, _LSPlugInQueryWithURL, 
+                       _LSResourceProxy, _LSResumableActivitiesControlManager, _LSUserActivity, 
+                       _LSUserActivityDebuggingManager, _LSUserActivityInfo, _LSUserActivityManager, 
+                       _LSVPNPluginProxy, _NSUserActivity, __LSAppLinkPattern, __LSAppLinkPlugIn, 
+                       __LSApplicationState, __LSDefaults, __LSDiskUsage, __LSQuery, 
+                       __LSQueryContext, __LSQueryResult, __LSStringLocalizer, __UTType, 
+                       __UTTypeQuery ]
 ...

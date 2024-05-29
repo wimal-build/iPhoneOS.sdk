@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: A178B804-31D7-348C-ABB1-C202DF65482D', 'armv7s: BAFDCA89-E129-3BB8-886C-DEEE2350A495', 
-                   'arm64: 108C80DC-3803-3DB1-B701-64DBF377834A' ]
+uuids:           [ 'armv7: 8A4D84A2-E03A-387E-9F85-E26E335DBD36', 'armv7s: 276DF7C1-E41A-3767-A54A-270C123FB6A8', 
+                   'arm64: DDA16D8D-9D8E-3851-B6BA-9B01989D9795' ]
 platform:        ios
 install-name:    /usr/lib/libBasebandManager.dylib
 objc-constraint: none

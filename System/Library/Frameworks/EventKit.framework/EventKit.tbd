@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 8CD8DF68-ABC3-3DCC-8526-0020DE5CCAB2', 'armv7s: 618C5A30-83E2-3523-A2C6-DAE9564B7B98', 
-                   'arm64: 39E4A110-CFB5-3E2F-83A3-F54255233A03' ]
+uuids:           [ 'armv7: 98D3A8FF-28FC-3195-8A83-E9267DAD7FB4', 'armv7s: 307DE0D7-6236-3C8B-8FF0-2CE9AA2CEDA7', 
+                   'arm64: 318D0243-EDE3-3FBC-B37A-30815F881D68' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/EventKit.framework/EventKit
-current-version: 100.0
+current-version: 100
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -73,7 +73,7 @@ exports:
                        _EKPersistentLocation, _EKPersistentObject, _EKPersistentOrganizer, 
                        _EKPersistentParticipant, _EKPersistentRecurrenceRule, _EKPersistentReminder, 
                        _EKPersistentSharee, _EKPersistentSource, _EKPersistentSuggestedEventInfo, 
-                       _EKPreferences, _EKRecurrenceDayOfWeek, _EKRecurrenceEnd, 
+                       _EKPreferences, _EKRecents, _EKRecurrenceDayOfWeek, _EKRecurrenceEnd, 
                        _EKRecurrenceGenerator, _EKRecurrenceRule, _EKRelation, _EKReminder, 
                        _EKRequestAvailabilityOperation, _EKSharee, _EKSource, _EKStructuredLocation, 
                        _EKStructuredLocationPrediction, _EKSuggestedEventInfo, _EKSyntheticGEORouteHypothesis, 

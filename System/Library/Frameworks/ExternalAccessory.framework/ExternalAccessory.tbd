@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 31264542-2137-3E2F-9735-6CB2E60D028E', 'armv7s: DF222A7E-FB3D-39C6-B79C-EC5C19F0BE86', 
-                   'arm64: A4CCD01F-2356-3815-8CBD-D6E9E6083134' ]
+uuids:           [ 'armv7: 2E13832E-413F-3030-848D-10ECACF1A168', 'armv7s: BF427F1A-C65D-3661-8731-604E85A519FF', 
+                   'arm64: 442C7893-0030-3985-AD33-C1F8D822F006' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ExternalAccessory.framework/ExternalAccessory
 objc-constraint: none
@@ -47,13 +47,18 @@ exports:
                        _EACameraMinimumISO, _EACameraName, _EACameraSupportedImageCaptureFormat, 
                        _EACameraSupportedLivePreviewFormat, _EACameraVerticalOrigin, 
                        _EACameraVerticalResolution, _EACameraWidth, _EAConnectionIDKey, 
+                       _EAElectricVehicleChargingComponentsKey, _EAElectricVehicleChargingInfoConnectorTypeKey, 
+                       _EAElectricVehicleChargingInfoMaximumCurrentKey, _EAElectricVehicleChargingInfoMaximumVoltageKey, 
+                       _EAElectricVehicleChargingInfoMinimumVoltageKey, _EAElectricVehicleChargingInfoPowerTypeKey, 
                        _EAIPAccessoryAvailableNotification, _EAIPAccessoryConnectionCompleteNotification, 
                        _EAIPAccessoryDisconnectedNotification, _EAIPAccessoryNotAvailableNotification, 
                        _EASessionOpenCompletedNotification, _EATimeSyncInfoMeasurementInterval, 
                        _EATimeSyncInfoOffsetEstimate, _EATimeSyncInfoOffsetUncertainty, 
                        _EATimeSyncInfoUncertaintyThreshold, _EATimeSyncOffsetMeasurementInterval, 
                        _EATimeSyncOffsetUncertaintyThreshold, _EAVehicleInfoDisplayNameKey, 
-                       _EAVehicleInfoEngineTypeBitmaskKey, _EAVehicleInfoHasLowDistanceRangeKey, 
+                       _EAVehicleInfoEngineTypeBitmaskKey, _EAVehicleInfoHasLowDistanceRangeCNGKey, 
+                       _EAVehicleInfoHasLowDistanceRangeDieselKey, _EAVehicleInfoHasLowDistanceRangeElectricKey, 
+                       _EAVehicleInfoHasLowDistanceRangeGasolineKey, _EAVehicleInfoHasLowDistanceRangeKey, 
                        _EAVehicleInfoInsideTemperatureKey, _EAVehicleInfoIsColdTemperatureIndicatorOnKey, 
                        _EAVehicleInfoIsVehicleParkedKey, _EAVehicleInfoMakeKey, _EAVehicleInfoMapsDisplayNameKey, 
                        _EAVehicleInfoModelKey, _EAVehicleInfoOutsideTemperatureKey, 

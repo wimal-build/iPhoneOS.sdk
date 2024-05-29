@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 30616BF3-17B4-345D-B323-261D68BC9DC1', 'armv7s: C4A1131C-1749-3A1B-A5EB-02145110C019', 
-                   'arm64: 1F4FCDB4-FE70-3745-836D-E6FF0DBD5711' ]
+uuids:           [ 'armv7: 1A9C24DE-046E-3BA0-98F8-AB7233E4FBE8', 'armv7s: C6AA27B4-DECD-31E0-A63F-95FF416C175C', 
+                   'arm64: 6E08F4FB-CF9F-3DC2-B718-0D13536189E9' ]
 platform:        ios
 install-name:    /usr/lib/libAWDProtobufBluetooth.dylib
 objc-constraint: none
@@ -34,6 +34,7 @@ exports:
                        __ZN3awd7metrics16BluetoothPairing25kDeviceAddressFieldNumberE, 
                        __ZN3awd7metrics16BluetoothPairing25kIsAppleDeviceFieldNumberE, 
                        __ZN3awd7metrics16BluetoothPairing27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE, 
+                       __ZN3awd7metrics16BluetoothPairing31kSanitizedDeviceNameFieldNumberE, 
                        __ZN3awd7metrics16BluetoothPairing4SwapEPS1_, __ZN3awd7metrics16BluetoothPairing5ClearEv, 
                        __ZN3awd7metrics16BluetoothPairing8CopyFromERKS1_, __ZN3awd7metrics16BluetoothPairing9MergeFromERKS1_, 
                        __ZN3awd7metrics16BluetoothPairingC1ERKS1_, __ZN3awd7metrics16BluetoothPairingC1Ev, 
@@ -579,6 +580,7 @@ exports:
                        __ZN3awd7metrics32BluetoothServiceConnectionResult25kDeviceAddressFieldNumberE, 
                        __ZN3awd7metrics32BluetoothServiceConnectionResult25kIsAppleDeviceFieldNumberE, 
                        __ZN3awd7metrics32BluetoothServiceConnectionResult27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE, 
+                       __ZN3awd7metrics32BluetoothServiceConnectionResult31kSanitizedDeviceNameFieldNumberE, 
                        __ZN3awd7metrics32BluetoothServiceConnectionResult4SwapEPS1_, 
                        __ZN3awd7metrics32BluetoothServiceConnectionResult5ClearEv, 
                        __ZN3awd7metrics32BluetoothServiceConnectionResult8CopyFromERKS1_, 
@@ -622,6 +624,7 @@ exports:
                        __ZN3awd7metrics33BluetoothServiceConnectionAttempt25kDeviceAddressFieldNumberE, 
                        __ZN3awd7metrics33BluetoothServiceConnectionAttempt25kIsAppleDeviceFieldNumberE, 
                        __ZN3awd7metrics33BluetoothServiceConnectionAttempt27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE, 
+                       __ZN3awd7metrics33BluetoothServiceConnectionAttempt31kSanitizedDeviceNameFieldNumberE, 
                        __ZN3awd7metrics33BluetoothServiceConnectionAttempt4SwapEPS1_, 
                        __ZN3awd7metrics33BluetoothServiceConnectionAttempt5ClearEv, 
                        __ZN3awd7metrics33BluetoothServiceConnectionAttempt8CopyFromERKS1_, 
@@ -734,6 +737,7 @@ exports:
                        __ZN3awd7metrics35BluetoothServiceDisconnectionResult25kDeviceAddressFieldNumberE, 
                        __ZN3awd7metrics35BluetoothServiceDisconnectionResult25kIsAppleDeviceFieldNumberE, 
                        __ZN3awd7metrics35BluetoothServiceDisconnectionResult27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE, 
+                       __ZN3awd7metrics35BluetoothServiceDisconnectionResult31kSanitizedDeviceNameFieldNumberE, 
                        __ZN3awd7metrics35BluetoothServiceDisconnectionResult4SwapEPS1_, 
                        __ZN3awd7metrics35BluetoothServiceDisconnectionResult5ClearEv, 
                        __ZN3awd7metrics35BluetoothServiceDisconnectionResult8CopyFromERKS1_, 
@@ -760,6 +764,7 @@ exports:
                        __ZN3awd7metrics36BluetoothServiceDisconnectionAttempt25kDeviceAddressFieldNumberE, 
                        __ZN3awd7metrics36BluetoothServiceDisconnectionAttempt25kIsAppleDeviceFieldNumberE, 
                        __ZN3awd7metrics36BluetoothServiceDisconnectionAttempt27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE, 
+                       __ZN3awd7metrics36BluetoothServiceDisconnectionAttempt31kSanitizedDeviceNameFieldNumberE, 
                        __ZN3awd7metrics36BluetoothServiceDisconnectionAttempt4SwapEPS1_, 
                        __ZN3awd7metrics36BluetoothServiceDisconnectionAttempt5ClearEv, 
                        __ZN3awd7metrics36BluetoothServiceDisconnectionAttempt8CopyFromERKS1_, 

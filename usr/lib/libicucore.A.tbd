@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 02CE2E4D-A0A1-3EC9-BFE0-6B59046F7A24', 'armv7s: F30F8AE5-8990-3496-A8D5-913520AA04E0', 
-                   'arm64: 35FC5FA2-AAB8-3268-9708-1AB8416C497C' ]
+uuids:           [ 'armv7: 9E23A264-FDF7-321E-A6BF-A6BF25854824', 'armv7s: F3F4A711-10EB-3B27-98A5-635B7DDEBFF2', 
+                   'arm64: 33EA1913-759F-35F8-8DF1-390614619188' ]
 platform:        ios
 install-name:    /usr/lib/libicucore.A.dylib
 current-version: 57.1

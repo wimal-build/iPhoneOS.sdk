@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: EA95E5A7-F761-3899-BA2E-D2F054B507E1', 'armv7s: 47E6F5D5-2F1F-3F76-A781-0D1FF39B1A81', 
-                   'arm64: 574A0B38-0016-3A0D-A0F5-BD4CBE44359E' ]
+uuids:           [ 'armv7: AB80F09A-89D6-3F7E-BC4F-E826405454B1', 'armv7s: 5088F091-394D-3590-814E-259190FDBB51', 
+                   'arm64: 8F1FC03D-E8A4-3D20-A7CF-E07A9B353E78' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/EventKitUI.framework/EventKitUI
 objc-constraint: none
@@ -126,9 +126,9 @@ exports:
                        _EKEventDisplaysAsNeedsReply, _EKEventDisplaysAsTentative, 
                        _EKEventEditViewControllerDidCancelNotification, _EKEventEditViewControllerDidDeleteNotification, 
                        _EKEventEditViewControllerDidSaveNotification, _EKEventEditViewControllerDidSetEventNotification, 
-                       _EKEventViewControllerDidAppearNotification, _EKEventViewControllerDidDeleteNotification, 
-                       _EKUIApplicationFrame, _EKUIAttendeeUtils_AttendeeHasResponded, 
-                       _EKUIAttendeeUtils_ShouldConsiderAttendeeForConflictChecking, 
+                       _EKEventParticipantStatusForDisplay, _EKEventViewControllerDidAppearNotification, 
+                       _EKEventViewControllerDidDeleteNotification, _EKUIApplicationFrame, 
+                       _EKUIAttendeeUtils_AttendeeHasResponded, _EKUIAttendeeUtils_ShouldConsiderAttendeeForConflictChecking, 
                        _EKUIAttendeeUtils_ShouldCountAttendeeAsConflicted, _EKUIContainedControllerIdealWidth, 
                        _EKUICurrentHeightSizeClassIsCompact, _EKUICurrentHeightSizeClassIsRegular, 
                        _EKUICurrentWidthSizeClassIsCompact, _EKUICurrentWidthSizeClassIsRegular, 
@@ -156,6 +156,8 @@ exports:
                        _ImageForAvailabilityType, _ImageForParticipantStatus, _LightColorForColorWithOpaque, 
                        _LongTailSpringAnimaionGoodEnoughEndingTime, _PendingImage, 
                        _PreferencesTableDoubleRowHeight, _PreferencesTableTripleRowHeight, 
+                       _PresentJunkAlertControllerForCalendar, _PresentJunkAlertControllerForEvent, 
+                       _PresentJunkAlertControllerWithHandler, _PresentJunkAlertDialogForCalendar, 
                        _PresentValidationAlert, _PresentValidationAlertWithDefaultTitle, 
                        _ScrollRate, _ScrollZoneTop, _SelectedCheckmarkImage, _SmallAcceptedImage, 
                        _SmallBusyImageWithColor, _SmallDeclinedImage, _SmallImageForParticipantStatus, 
@@ -217,7 +219,7 @@ exports:
                        _EKEventEditor, _EKEventEstimatedTravelTimeResultCell, _EKEventGestureController, 
                        _EKEventMapCell, _EKEventMapDetailItem, _EKEventPrivacyLevelInlineEditItem, 
                        _EKEventProposeNewTimeViewController, _EKEventRecurrenceEditItem, 
-                       _EKEventStandardTravelTimeCell, _EKEventTravelTimeEditItem, 
+                       _EKEventReportJunkView, _EKEventStandardTravelTimeCell, _EKEventTravelTimeEditItem, 
                        _EKEventTravelTimeEditViewController, _EKEventURLAndNotesInlineEditItem, 
                        _EKEventViewController, _EKEventVisibilityEditItem, _EKExpandingTextView, 
                        _EKGroupInfo, _EKICSPreviewController, _EKIdentityViewController, 

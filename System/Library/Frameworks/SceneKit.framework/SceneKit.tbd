@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 24444632-5727-3E76-9DE4-21183FFDF3ED', 'armv7s: A38AAAA7-6099-3E79-AF8F-1B106D71A4E7', 
-                   'arm64: 1ACD15EF-4F44-34EA-BD80-68FB7D5D26E7' ]
+uuids:           [ 'armv7: A029816F-BAC8-3722-9BE1-42F3ABED3C95', 'armv7s: 36CF1ED4-B867-37CD-932F-05D2ECEDAE30', 
+                   'arm64: 160EC4FE-1218-3D43-B9F5-010E17F82D8E' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SceneKit.framework/SceneKit
-current-version: 186.0
+current-version: 186
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -147,17 +147,18 @@ exports:
                        _SCNGeometrySource, _SCNHeadMountedDisplayRenderingTechnique, 
                        _SCNHitTestResult, _SCNIKConstraint, _SCNImageSource, _SCNKeyedUnarchiver, 
                        _SCNLevelOfDetail, _SCNLight, _SCNLookAtConstraint, _SCNMaterial, 
-                       _SCNMaterialProperty, _SCNMorpher, _SCNNode, _SCNNodeReference, 
-                       _SCNOffscreenRenderer, _SCNParticlePropertyController, _SCNParticleSystem, 
-                       _SCNPhysicsBallSocketJoint, _SCNPhysicsBehavior, _SCNPhysicsBody, 
-                       _SCNPhysicsCharacter, _SCNPhysicsContact, _SCNPhysicsCustomField, 
-                       _SCNPhysicsDragField, _SCNPhysicsField, _SCNPhysicsHingeJoint, 
-                       _SCNPhysicsLinearGravityField, _SCNPhysicsMagneticField, _SCNPhysicsNoiseField, 
-                       _SCNPhysicsRadialGravityField, _SCNPhysicsShape, _SCNPhysicsSliderJoint, 
-                       _SCNPhysicsSpringField, _SCNPhysicsTurbulenceField, _SCNPhysicsVehicle, 
-                       _SCNPhysicsVehicleWheel, _SCNPhysicsVortexField, _SCNPhysicsWorld, 
-                       _SCNPlane, _SCNProgram, _SCNPyramid, _SCNReferenceNode, _SCNRenderer, 
-                       _SCNScene, _SCNSceneSource, _SCNShape, _SCNSkinner, _SCNSphere, 
-                       _SCNTechnique, _SCNText, _SCNTextureSource, _SCNTorus, _SCNTransaction, 
-                       _SCNTransformConstraint, _SCNTube, _SCNView, __SCNShadableCompilationIssue ]
+                       _SCNMaterialProperty, _SCNMetalLayer, _SCNMorpher, _SCNNode, 
+                       _SCNNodeReference, _SCNOffscreenRenderer, _SCNParticlePropertyController, 
+                       _SCNParticleSystem, _SCNPhysicsBallSocketJoint, _SCNPhysicsBehavior, 
+                       _SCNPhysicsBody, _SCNPhysicsCharacter, _SCNPhysicsContact, 
+                       _SCNPhysicsCustomField, _SCNPhysicsDragField, _SCNPhysicsField, 
+                       _SCNPhysicsHingeJoint, _SCNPhysicsLinearGravityField, _SCNPhysicsMagneticField, 
+                       _SCNPhysicsNoiseField, _SCNPhysicsRadialGravityField, _SCNPhysicsShape, 
+                       _SCNPhysicsSliderJoint, _SCNPhysicsSpringField, _SCNPhysicsTurbulenceField, 
+                       _SCNPhysicsVehicle, _SCNPhysicsVehicleWheel, _SCNPhysicsVortexField, 
+                       _SCNPhysicsWorld, _SCNPlane, _SCNProgram, _SCNPyramid, _SCNReferenceNode, 
+                       _SCNRenderer, _SCNScene, _SCNSceneSource, _SCNShape, _SCNSkinner, 
+                       _SCNSphere, _SCNTechnique, _SCNText, _SCNTextureSource, _SCNTorus, 
+                       _SCNTransaction, _SCNTransformConstraint, _SCNTube, _SCNView, 
+                       __SCNShadableCompilationIssue ]
 ...

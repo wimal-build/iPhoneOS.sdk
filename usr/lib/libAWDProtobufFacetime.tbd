@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: DED7275B-7F4C-39C7-9704-10CBA173AF57', 'armv7s: C1D7C440-ECAB-373C-ACED-2EC5E8E54355', 
-                   'arm64: C41F214C-7859-39F4-ACA1-F3CC623E5D69' ]
+uuids:           [ 'armv7: 746683AF-A767-3A27-8748-1D817B127D6F', 'armv7s: A42AF694-2F58-3765-A4FB-A0C6B1132AB9', 
+                   'arm64: BDF5AFE2-3521-3DF7-8AEA-AB0FB120753D' ]
 platform:        ios
 install-name:    /usr/lib/libAWDProtobufFacetime.dylib
 objc-constraint: none
@@ -324,7 +324,9 @@ exports:
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport21CheckTypeAndMergeFromERKN6google8protobuf11MessageLiteE, 
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport21InitAsDefaultInstanceEv, 
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport21kTimestampFieldNumberE, 
+                       __ZN3awd7metrics28FaceTimeCallAggregatedReport25kTransportTypeFieldNumberE, 
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE, 
+                       __ZN3awd7metrics28FaceTimeCallAggregatedReport30kSwitchIntoDupCountFieldNumberE, 
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport4SwapEPS1_, 
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport5ClearEv, __ZN3awd7metrics28FaceTimeCallAggregatedReport8CopyFromERKS1_, 
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport9MergeFromERKS1_, 
@@ -435,7 +437,9 @@ exports:
                        __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats23kSegmentNameFieldNumberE, 
                        __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats24kBBRateTooLowFieldNumberE, 
                        __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats24kPLRHistogramFieldNumberE, 
+                       __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats24kRBRHistogramFieldNumberE, 
                        __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats24kRTTHistogramFieldNumberE, 
+                       __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats24kSBRHistogramFieldNumberE, 
                        __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats24kTBRHistogramFieldNumberE, 
                        __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE, 
                        __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats27kBBQueueTooLargeFieldNumberE, 

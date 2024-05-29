@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 2110CEDA-983D-37DE-8D72-D02CE3505001', 'armv7s: 6B2EF0A1-63F8-3FCD-BF87-509C5A5DC3C2', 
-                   'arm64: BA89D108-CFEF-37AE-91B7-0116C6D7C66D' ]
+uuids:           [ 'armv7: BCA4243D-37A0-3C9E-8B12-296EB48C4975', 'armv7s: 0CF2ACB1-72C4-3EFA-9742-E5D859BF37C0', 
+                   'arm64: E3B0193F-65C1-3029-B406-6582E4DE0B9B' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Accounts.framework/Accounts
-current-version: 0.0
+current-version: 0
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -14,9 +14,11 @@ exports:
                        _ACAccountPropertyDisableDynamicConfiguration, _ACAccountPropertyEWSExternalURL, 
                        _ACAccountPropertyEWSInternalURL, _ACAccountPropertyEWSRootFolderID, 
                        _ACAccountPropertyEmailAliases, _ACAccountPropertyEmailAliasesEditingURLString, 
-                       _ACAccountPropertyFullName, _ACAccountPropertyHostname, _ACAccountPropertyIMAPHostname, 
-                       _ACAccountPropertyIMAPPortNumber, _ACAccountPropertyIMAPRequiresSSL, 
-                       _ACAccountPropertyIdentityEmailAddress, _ACAccountPropertyPortNumber, 
+                       _ACAccountPropertyFirstName, _ACAccountPropertyFullName, _ACAccountPropertyHostname, 
+                       _ACAccountPropertyIMAPHostname, _ACAccountPropertyIMAPPortNumber, 
+                       _ACAccountPropertyIMAPRequiresSSL, _ACAccountPropertyIdentityEmailAddress, 
+                       _ACAccountPropertyLastName, _ACAccountPropertyMiddleName, 
+                       _ACAccountPropertyNickname, _ACAccountPropertyPortNumber, 
                        _ACAccountPropertyPreventRecentsSyncing, _ACAccountPropertySMTPHostname, 
                        _ACAccountPropertySMTPPortNumber, _ACAccountPropertySMTPRequiresSSL, 
                        _ACAccountPropertySSLEnabled, _ACAccountPropertySSLIsDirect, 

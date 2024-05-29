@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: CEB75D95-523B-3684-88FF-A67962F764F1', 'armv7s: 73F65632-16D4-3C04-86FD-29CB416AEC80', 
-                   'arm64: 64F5A31A-2932-3C0F-8513-866E568B9D45' ]
+uuids:           [ 'armv7: 483A0B86-BB0F-33F7-90E4-EF7D874DB408', 'armv7s: 24E13B04-C3DA-32AE-B2FC-66EE76FCA5B9', 
+                   'arm64: 99CBF1B2-BAF1-308A-A4A4-4139C456096E' ]
 platform:        ios
 install-name:    /System/Library/CoreServices/Encodings/libThaiConverter.dylib
-current-version: 69.0
+current-version: 69
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

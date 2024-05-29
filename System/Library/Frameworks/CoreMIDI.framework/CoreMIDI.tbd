@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 9465ACD1-4C04-3D4C-BF7A-8FD8E4EDB70B', 'armv7s: 5F5CFB1E-6F58-3D68-B8FE-D9DFEC3F8BFD', 
-                   'arm64: B0CB1A42-DDC0-3B4D-AED2-00940DD149C2' ]
+uuids:           [ 'armv7: A899F221-8F44-3994-A953-DBBD95DAC37B', 'armv7s: D9EC0247-8292-33BF-9AD3-A29A614EDB54', 
+                   'arm64: C4D22700-142A-3296-9A9E-BDF375993CBA' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreMIDI.framework/CoreMIDI
-current-version: 69.0
+current-version: 69
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

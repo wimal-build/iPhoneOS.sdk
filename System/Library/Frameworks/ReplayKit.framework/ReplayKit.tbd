@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: CEAFC56C-B744-3981-A2E5-DDD8C785D6E0', 'armv7s: D46731C5-7F98-32AE-BD4E-37AE8866936A', 
-                   'arm64: 7654D1EA-4A2B-3B54-895D-DE318C5F2813' ]
+uuids:           [ 'armv7: AFBB3D20-C2F3-3FC7-A883-FD9E5E98E4EF', 'armv7s: C6400560-AC57-3830-B4D4-5073052AC235', 
+                   'arm64: A0EC429C-B4A5-3186-9BFC-B0E103F57498' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ReplayKit.framework/ReplayKit
 objc-constraint: none

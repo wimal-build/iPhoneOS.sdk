@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: BC6D4B43-6C12-3FAA-B6B7-796D36DCA425', 'armv7s: 3D00486C-C6F2-334A-8AD7-7075E3AABC74', 
-                   'arm64: 7D15E6AC-19EA-3B3D-8B1F-B3DC6F5A79ED' ]
+uuids:           [ 'armv7: 966BF064-C9AC-32DA-A25C-47399C76CA4C', 'armv7s: 3F0D045C-6651-36AC-B194-30C2BB5D225D', 
+                   'arm64: E119BB15-D556-30B9-8568-790B1A3F5F08' ]
 platform:        ios
 install-name:    /usr/lib/libmecabra.dylib
 objc-constraint: none
@@ -34,9 +34,9 @@ exports:
                        _MecabraCandidateGetWordReadingLengthAtIndex, _MecabraCandidateIsAutocorrectionCandidate, 
                        _MecabraCandidateIsEmojiCandidate, _MecabraCandidateIsExtensionCandidate, 
                        _MecabraCandidateIsFuzzyMatchCandidate, _MecabraCandidateIsLearningDictionaryCandidate, 
-                       _MecabraCandidateIsPersonName, _MecabraCandidateIsPredictionCandidate, 
-                       _MecabraCandidateIsUserWordCandidate, _MecabraCandidateRelease, 
-                       _MecabraCandidateRetain, _MecabraCandidateSetDisplayString, 
+                       _MecabraCandidateIsOTAWordlistCandidate, _MecabraCandidateIsPersonName, 
+                       _MecabraCandidateIsPredictionCandidate, _MecabraCandidateIsUserWordCandidate, 
+                       _MecabraCandidateRelease, _MecabraCandidateRetain, _MecabraCandidateSetDisplayString, 
                        _MecabraCandidateWordAtIndexIsFromSystemDictionary, _MecabraCangjieCodeIsValid, 
                        _MecabraClearLearningDictionaries, _MecabraContextAddCandidate, 
                        _MecabraContextAddInlineCandidate, _MecabraContextCreateMutable, 

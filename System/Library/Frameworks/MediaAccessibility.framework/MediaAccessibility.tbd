@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 56E4293B-90B6-31C1-ACF8-DDB56B695CA0', 'armv7s: 4A8384BC-D5DB-3093-8A79-F059F7EC6426', 
-                   'arm64: 7B482EF2-72BF-34FC-B742-C2AFD236B626' ]
+uuids:           [ 'armv7: 67FDBA02-5B55-3A20-B6A6-4E83FB1231D4', 'armv7s: 11B53986-48BF-3485-ACE8-8C879F304FC8', 
+                   'arm64: 3D38F833-924E-3FE9-8BA4-D3535D224F52' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MediaAccessibility.framework/MediaAccessibility
-current-version: 62.0
+current-version: 62
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

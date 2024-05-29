@@ -1,11 +1,11 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 2B6DB83C-23CD-3586-892E-B648C045B4E2', 'armv7s: 409861D7-558D-316A-920E-C77ED9017A57', 
-                   'arm64: 28D75F17-D5B0-3DFD-8717-FEA9677E1720' ]
+uuids:           [ 'armv7: 634D97F7-630A-3AF3-A872-EDA71B036A5B', 'armv7s: 01268D83-1E2E-3AB7-A9E0-2EF3CB52AA4B', 
+                   'arm64: 8CCD71D1-B1CD-31CD-8052-6A654964FFBA' ]
 platform:        ios
 install-name:    /usr/lib/libxslt.1.dylib
 current-version: 3.26
-compatibility-version: 3.0
+compatibility-version: 3
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

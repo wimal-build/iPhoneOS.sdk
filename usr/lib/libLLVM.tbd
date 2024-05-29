@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: C63A11FB-FB45-333F-897A-A5AB76AFD3AB', 'armv7s: AE661D72-694E-3B49-A976-2605230D82C0', 
-                   'arm64: 409B7BE2-CE48-340B-8F03-1657595E69EC' ]
+uuids:           [ 'armv7: 0116F6CC-6D1E-3C55-B12E-163C60746E63', 'armv7s: 5C653E0F-51D9-39C9-8EFB-00F220688CBA', 
+                   'arm64: F7CDBCD6-7817-3984-9E89-65575AB29E2A' ]
 platform:        ios
 install-name:    /usr/lib/libLLVM.dylib
-current-version: 3702.3.31
+current-version: 3702.3.92
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -3847,7 +3847,7 @@ exports:
                        __ZNK4llvm11GPUFastISel20GetTexSmpStateSourceERKNS_13FunctionGroupEPKNS_11InstructionEPKNS_5ValueES9_RbSA_SA_, 
                        __ZNK4llvm11GPUFastISel22GetTargetConstantValueEj, __ZNK4llvm11GPUFastISel22ReplaceInstructionUsesERKNS_10SampleInfoEPKNS_11InstructionENS_19MachineInstrBuilderEjj, 
                        __ZNK4llvm11GPUFastISel22getScalarCoordElementsEPKNS_5ValueERNS_15MutableArrayRefIS3_EE, 
-                       __ZNK4llvm11GPUFastISel23GetRegSequenceForValuesEPKNS_11InstructionERNS_8ArrayRefIjEE, 
+                       __ZNK4llvm11GPUFastISel23GetRegSequenceForValuesEPKNS_11InstructionENS_8ArrayRefIjEE, 
                        __ZNK4llvm11GPUFastISel31GetSharedRegisterReadByteOffsetEPKNS_5ValueE, 
                        __ZNK4llvm11GPUFastISel36GetRegSequenceOrTargetIndexForValuesEPKNS_11InstructionERNS_8ArrayRefIjEERb, 
                        __ZNK4llvm11GPUFastISel6isHalfEPKNS_5ValueE, __ZNK4llvm11GPUFastISel7getFDivEPKNS_5ValueERS3_S4_, 
@@ -4605,7 +4605,7 @@ exports:
                        __ZNK4llvm9GPUSDISel19FixupTexStateSourceENS_7SDValueE, __ZNK4llvm9GPUSDISel20GetTexSmpStateSourceERKNS_13FunctionGroupEPNS_6SDNodeENS_7SDValueES6_RbS7_S7_, 
                        __ZNK4llvm9GPUSDISel22GetTargetConstantValueEj, __ZNK4llvm9GPUSDISel22ReplaceInstructionUsesERKNS_10SampleInfoEPNS_6SDNodeES5_jj, 
                        __ZNK4llvm9GPUSDISel22getScalarCoordElementsENS_7SDValueERNS_15MutableArrayRefIS1_EE, 
-                       __ZNK4llvm9GPUSDISel23GetRegSequenceForValuesEPNS_6SDNodeERNS_8ArrayRefINS_7SDValueEEE, 
+                       __ZNK4llvm9GPUSDISel23GetRegSequenceForValuesEPNS_6SDNodeENS_8ArrayRefINS_7SDValueEEE, 
                        __ZNK4llvm9GPUSDISel24GetStateSourceByteOffsetERKNS_13FunctionGroupENS_7SDValueERb, 
                        __ZNK4llvm9GPUSDISel31GetSharedRegisterReadByteOffsetENS_7SDValueE, 
                        __ZNK4llvm9GPUSDISel6isHalfENS_7SDValueE, __ZNK4llvm9GPUSDISel7getFDivENS_7SDValueERS1_S2_, 
@@ -5353,7 +5353,7 @@ exports:
                         __ZNK4llvm8LoopBaseINS_10BasicBlockENS_4LoopEE9block_endEv, 
                         __ZNK4llvm8LoopBaseINS_10BasicBlockENS_4LoopEE9getBlocksEv, 
                         __ZNK4llvm8LoopBaseINS_10BasicBlockENS_4LoopEE9getHeaderEv, 
-                        __ZNSt3__117__call_once_proxyINS_5tupleIJRFvvEEEEEEvPv, __ZTIN4llvm14RegionInfoBaseINS_12RegionTraitsINS_8FunctionEEEEE, 
+                        __ZTIN4llvm14RegionInfoBaseINS_12RegionTraitsINS_8FunctionEEEEE, 
                         __ZTIN4llvm18RawInstrProfReaderIjEE, __ZTIN4llvm18RawInstrProfReaderIyEE, 
                         __ZTIN4llvm2cl12basic_parserINS0_13boolOrDefaultEEE, __ZTIN4llvm2cl12basic_parserINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEEE, 
                         __ZTIN4llvm2cl12basic_parserIbEE, __ZTIN4llvm2cl12basic_parserIcEE, 

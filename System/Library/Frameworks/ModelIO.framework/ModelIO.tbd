@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 7F83A5C1-D365-32C4-924D-DBB35B4CD298', 'armv7s: FA6F4C8E-4766-3A94-890E-B544689D2952', 
-                   'arm64: 54C4CFA7-D1CE-3764-8FEA-C1566C688EAE' ]
+uuids:           [ 'armv7: 456DD1FF-D870-38BF-91DF-10E7AE8657A5', 'armv7s: 23FECC39-99A9-3CF6-BC79-D703BB2F2568', 
+                   'arm64: 751DEAC3-E455-3DCB-81DC-17E9B2C2A71D' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ModelIO.framework/ModelIO
 objc-constraint: none
@@ -191,17 +191,19 @@ exports:
                        _kUTType3dObject, _kUTTypeAlembic, _kUTTypePolygon, _kUTTypeStereolithography, 
                        _kUTTypeUniversalSceneDescription, _sampleTextureAtRay, _sampleTextureDataAtRay, 
                        _sampleTextureDataAtRayMipMapped ]
-    objc-classes:    [ _MDLAreaLight, _MDLAsset, _MDLCamera, _MDLCheckerboardTexture, 
-                       _MDLColorSwatchTexture, _MDLInteractiveCameraController, _MDLLight, 
-                       _MDLLightProbe, _MDLMaterial, _MDLMaterialProperty, _MDLMaterialPropertyConnection, 
+    objc-classes:    [ _MDLAreaLight, _MDLAsset, _MDLBlendShapeChannel, _MDLBlendShapeDeformer, 
+                       _MDLCamera, _MDLCheckerboardTexture, _MDLColorSwatchTexture, 
+                       _MDLInteractiveCameraController, _MDLLight, _MDLLightProbe, 
+                       _MDLMaterial, _MDLMaterialProperty, _MDLMaterialPropertyConnection, 
                        _MDLMaterialPropertyGraph, _MDLMaterialPropertyNode, _MDLMesh, 
                        _MDLMeshBufferAllocatorDefault, _MDLMeshBufferData, _MDLMeshBufferDataAllocator, 
                        _MDLMeshBufferMap, _MDLNoiseTexture, _MDLNormalMapTexture, 
                        _MDLObject, _MDLObjectContainer, _MDLPhotometricLight, _MDLPhysicallyPlausibleLight, 
-                       _MDLPhysicallyPlausibleScatteringFunction, _MDLScatteringFunction, 
-                       _MDLScene, _MDLSkyCubeTexture, _MDLStereoscopicCamera, _MDLSubmesh, 
-                       _MDLSubmeshTopology, _MDLTexture, _MDLTextureFilter, _MDLTextureSampler, 
-                       _MDLTransform, _MDLURLTexture, _MDLVertexAttribute, _MDLVertexAttributeData, 
+                       _MDLPhysicallyPlausibleScatteringFunction, _MDLPrimitive, 
+                       _MDLScatteringFunction, _MDLScene, _MDLSkinDeformer, _MDLSkyCubeTexture, 
+                       _MDLStereoscopicCamera, _MDLSubmesh, _MDLSubmeshTopology, 
+                       _MDLTexture, _MDLTextureFilter, _MDLTextureSampler, _MDLTransform, 
+                       _MDLURLTexture, _MDLVertexAttribute, _MDLVertexAttributeData, 
                        _MDLVertexBufferLayout, _MDLVertexDescriptor, _MDLVolumeGrid, 
                        _MDLVoxelArray ]
     objc-ivars:      [ _MDLTransform._transform ]

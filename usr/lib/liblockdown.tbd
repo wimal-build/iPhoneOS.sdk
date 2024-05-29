@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 079B5E3F-9E79-32F7-B681-ABA8A289818F', 'armv7s: 3A1BACCC-E0DC-3CED-939D-665BE26A863A', 
-                   'arm64: AB36B2AC-E988-302C-8920-7CB290FF4A76' ]
+uuids:           [ 'armv7: A32DF249-66F5-35E2-95E1-0EB380B7BC5A', 'armv7s: 773B7CDD-EE1B-32B2-A2FE-FFAFCC892139', 
+                   'arm64: E262BBE5-419E-3E5B-A65B-1BBE05144DCF' ]
 platform:        ios
 install-name:    /usr/lib/liblockdown.dylib
 objc-constraint: none
@@ -38,18 +38,19 @@ exports:
                        _kLockdownActivationURLKey, _kLockdownActiveWirelessTechnologyKey, 
                        _kLockdownActivityURLKey, _kLockdownAirplaneMode, _kLockdownAlbumArtKey, 
                        _kLockdownAllowChaperoneToStillPair, _kLockdownAmountDataAvailableKey, 
-                       _kLockdownAmountDataReservedKey, _kLockdownApNonceKey, _kLockdownArkCreationBuild, 
-                       _kLockdownArtWorkTraits, _kLockdownAudioCodecsKey, _kLockdownBackupDomainKey, 
-                       _kLockdownBackupDomainLDKey, _kLockdownBackupVersionKey, _kLockdownBackupWillEncrypt, 
-                       _kLockdownBasebandBoardSNUMKey, _kLockdownBasebandBootloaderVersionKey, 
-                       _kLockdownBasebandCertIdKey, _kLockdownBasebandChipIdKey, 
-                       _kLockdownBasebandFirmwareManifestData, _kLockdownBasebandGoldCertIdKey, 
-                       _kLockdownBasebandKeyHashInformationKey, _kLockdownBasebandMasterKeyHashKey, 
-                       _kLockdownBasebandNonceKey, _kLockdownBasebandPostponementStatus, 
-                       _kLockdownBasebandRegionSKU, _kLockdownBasebandSNUMKey, _kLockdownBasebandStatusKey, 
-                       _kLockdownBasebandThumbprintKey, _kLockdownBasebandVersionKey, 
-                       _kLockdownBatteryCurrentCapacity, _kLockdownBatteryDomainKey, 
-                       _kLockdownBatteryIsCharging, _kLockdownBehaviorsValidKey, 
+                       _kLockdownAmountDataReservedKey, _kLockdownAmountRestoreAvailableKey, 
+                       _kLockdownApNonceKey, _kLockdownArkCreationBuild, _kLockdownArtWorkTraits, 
+                       _kLockdownAssetCacheTetheratorDomainKey, _kLockdownAudioCodecsKey, 
+                       _kLockdownBackupDomainKey, _kLockdownBackupDomainLDKey, _kLockdownBackupVersionKey, 
+                       _kLockdownBackupWillEncrypt, _kLockdownBasebandBoardSNUMKey, 
+                       _kLockdownBasebandBootloaderVersionKey, _kLockdownBasebandCertIdKey, 
+                       _kLockdownBasebandChipIdKey, _kLockdownBasebandFirmwareManifestData, 
+                       _kLockdownBasebandGoldCertIdKey, _kLockdownBasebandKeyHashInformationKey, 
+                       _kLockdownBasebandMasterKeyHashKey, _kLockdownBasebandNonceKey, 
+                       _kLockdownBasebandPostponementStatus, _kLockdownBasebandRegionSKU, 
+                       _kLockdownBasebandSNUMKey, _kLockdownBasebandStatusKey, _kLockdownBasebandThumbprintKey, 
+                       _kLockdownBasebandVersionKey, _kLockdownBatteryCurrentCapacity, 
+                       _kLockdownBatteryDomainKey, _kLockdownBatteryIsCharging, _kLockdownBehaviorsValidKey, 
                        _kLockdownBluetoothAddressKey, _kLockdownBoardIdKey, _kLockdownBootManifestHashKey, 
                        _kLockdownBootNonceKey, _kLockdownBrickStateKey, _kLockdownBuddyServiceNameKey, 
                        _kLockdownBuildVersionKey, _kLockdownCPUArchitectureKey, _kLockdownCalculateDiskUsageKey, 

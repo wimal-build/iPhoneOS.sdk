@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 434649B0-F347-3276-B431-1E74DDE36818', 'armv7s: 0BF166D0-CF43-3263-A8BB-C5BC2E43140E', 
-                   'arm64: FFE63A1D-A776-32A2-99FB-49C0D1A5D1AE' ]
+uuids:           [ 'armv7: BC8D310D-35DC-3FA1-A2D9-AEC7DEF7EDEF', 'armv7s: 29235247-C316-3F36-ABCE-EADF482CF6AB', 
+                   'arm64: 581F5F99-6792-3C49-83C1-373DFA23195B' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreVideo.framework/CoreVideo
 current-version: 1.5
@@ -12,10 +12,10 @@ exports:
     symbols:         [ _CVBufferDumpToQTES, _CVBufferGetAttachment, _CVBufferGetAttachments, 
                        _CVBufferPropagateAttachments, _CVBufferRelease, _CVBufferRemoveAllAttachments, 
                        _CVBufferRemoveAttachment, _CVBufferRetain, _CVBufferSetAttachment, 
-                       _CVBufferSetAttachments, _CVGetCurrentHostTime, _CVGetHostClockFrequency, 
-                       _CVGetHostClockMinimumTimeDelta, _CVImageBufferCreateColorSpaceFromAttachments, 
-                       _CVImageBufferGetBufferBackingSize, _CVImageBufferGetCleanRect, 
-                       _CVImageBufferGetColorSpace, _CVImageBufferGetDisplaySize, 
+                       _CVBufferSetAttachments, _CVCreateColorSpaceFromIOSurfaceBulkAttachments, 
+                       _CVGetCurrentHostTime, _CVGetHostClockFrequency, _CVGetHostClockMinimumTimeDelta, 
+                       _CVImageBufferCreateColorSpaceFromAttachments, _CVImageBufferGetBufferBackingSize, 
+                       _CVImageBufferGetCleanRect, _CVImageBufferGetColorSpace, _CVImageBufferGetDisplaySize, 
                        _CVImageBufferGetEncodedSize, _CVImageBufferGetPixelFormatType, 
                        _CVImageBufferHasCleanRect, _CVImageBufferIsFlipped, _CVImageBufferProvideImageData, 
                        _CVImageBufferSetCleanAperture, _CVImageBufferSetColorSpace, 

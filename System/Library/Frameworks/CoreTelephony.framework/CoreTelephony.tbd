@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: DDC35604-20C9-331F-8A31-5EE791F3CF86', 'armv7s: 5FE8F8CF-701C-3B08-ADEB-A14E4E90A241', 
-                   'arm64: 88CEB856-F0AD-32AF-94B1-1D5B48E19D7E' ]
+uuids:           [ 'armv7: 18A60ECC-CB19-3858-8C82-AD908D4AF20A', 'armv7s: 4DAD0C93-C4C1-3758-BA99-C533A0646AC6', 
+                   'arm64: C5EF9B84-BCE0-312E-96B3-FAED5E424110' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreTelephony.framework/CoreTelephony
 current-version: 0.0
@@ -360,6 +360,7 @@ exports:
                        __Z15read_rest_valueR18SetRelayingRequestRKN3xpc6objectE, 
                        __Z15read_rest_valueR20CallToneCompleteInfoRKN3xpc6objectE, 
                        __Z15read_rest_valueR28CurrentEmergencyCallBackModeRKN3xpc6objectE, 
+                       __Z15read_rest_valueR29DisambiguationEmergencyNumberRKN3xpc6objectE, 
                        __Z16write_rest_valueRK11CallRequest, __Z16write_rest_valueRK14CallEndRequest, 
                        __Z16write_rest_valueRK15CallDialRequest, __Z16write_rest_valueRK15CallHoldRequest, 
                        __Z16write_rest_valueRK15CallTransaction, __Z16write_rest_valueRK15CurrentCallInfo, 
@@ -368,7 +369,7 @@ exports:
                        __Z16write_rest_valueRK17CallAnswerRequest, __Z16write_rest_valueRK17CallFrequencyData, 
                        __Z16write_rest_valueRK18CallControlFailure, __Z16write_rest_valueRK18SetRelayingRequest, 
                        __Z16write_rest_valueRK20CallToneCompleteInfo, __Z16write_rest_valueRK28CurrentEmergencyCallBackMode, 
-                       __Z17isEmergencyNumberRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                       __Z16write_rest_valueRK29DisambiguationEmergencyNumber, __Z17isEmergencyNumberRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
                        __Z22CTGetRootVersionStringv, __Z8asString20EntitlementTopicType, 
                        __Z8basenameRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
                        __Z8formPLMNRK3MCCRK3MNC, __ZN14CSIPhoneNumber13setBaseNumberEPKc, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: B89F814E-7A58-397D-AF03-22979D6C37B7', 'armv7s: 1ED07972-3809-3C75-B33A-B7ACB40C4F2C', 
-                   'arm64: 11D5609A-9614-3D66-84FF-76EA5950DA39' ]
+uuids:           [ 'armv7: 6128177F-1C7E-34A7-8DFC-E3487A4ED789', 'armv7s: AE0232E1-DF3D-3CEC-B011-6B872BFB26DD', 
+                   'arm64: 9EA75887-3DFD-38DA-803B-568F64B30BB2' ]
 platform:        ios
 install-name:    /usr/lib/libafc.dylib
 objc-constraint: none

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 6DDCE6BF-2F0B-3AC7-9CC2-D4E188784AAB', 'armv7s: 0C2C2ADD-630F-3B10-9DCD-5076915AFC5E', 
-                   'arm64: F85B6959-8754-3EC2-809E-9A313E3CEC6E' ]
+uuids:           [ 'armv7: A629A837-656F-3EE4-8DFD-1F4A3A888436', 'armv7s: 7E5E3C70-0236-33BE-83FB-27B33139940F', 
+                   'arm64: 17474C44-418E-3A8C-BF67-E1E2B1681174' ]
 platform:        ios
 install-name:    /usr/lib/libacmobileshim.dylib
 objc-constraint: none

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: DD730F69-F6D1-34E4-BFB7-F7C0F3000AA8', 'armv7s: F3FD30AB-2AC0-31B8-AD33-EA68AE50C6F8', 
-                   'arm64: FAFE9876-5E48-3A0C-9C4F-F67C01A06DC2' ]
+uuids:           [ 'armv7: B648E1F0-2C9B-31EF-BB0B-C2B3D5B061A9', 'armv7s: 5A47828D-E9D8-3F33-A475-51D36D2E9A4B', 
+                   'arm64: 58BB7336-2580-3C8B-8864-4CDC13126950' ]
 platform:        ios
 install-name:    /usr/lib/libktrace.dylib
 current-version: 98.20.2

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 2756F2B8-CB5C-3CC8-837B-2900E9FB3EDC', 'armv7s: DE2310A0-DDCD-34F0-8C03-48F8D8CE0B14', 
-                   'arm64: 0CF71019-51D4-35B4-A651-4AE13BFC3F1E' ]
+uuids:           [ 'armv7: E997E574-D987-3B81-8A4D-46F0C167F628', 'armv7s: 7A422C32-3821-3B11-857A-18F441B9CC84', 
+                   'arm64: 722D0AF8-E38D-3171-BDE3-8B11441F19E4' ]
 platform:        ios
 install-name:    /usr/lib/libgermantok.dylib
 objc-constraint: none

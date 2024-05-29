@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 6A6596DA-3E4F-366C-A576-293BD10580BA', 'armv7s: 5FC720A4-ED1E-3664-98F9-04A0C538C0ED', 
-                   'arm64: EFEE260D-EAF5-3938-9451-425B0C2E82B5' ]
+uuids:           [ 'armv7: CEAFC56C-B744-3981-A2E5-DDD8C785D6E0', 'armv7s: D46731C5-7F98-32AE-BD4E-37AE8866936A', 
+                   'arm64: 7654D1EA-4A2B-3B54-895D-DE318C5F2813' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ReplayKit.framework/ReplayKit
 objc-constraint: none
@@ -24,8 +24,8 @@ exports:
                        _RPFlatVideoOverlayButton, _RPHighFidelityVideoOverlayButton, 
                        _RPIOSurfaceObject, _RPPassThroughView, _RPPictureInPictureController, 
                        _RPPictureInPictureViewController, _RPPictureInPictureWindow, 
-                       _RPPipViewController, _RPPreviewViewController, _RPScreenRecorder, 
-                       _RPSharedConstants, _RPStoreInfo, _RPStoreManager, _RPSystemRecordingIndicatorWindow, 
-                       _RPVideoEditorExtensionHostContext, _RPVideoEditorHostViewController, 
-                       _RPYouTubeActivityProgressOverlay ]
+                       _RPPipView, _RPPipViewController, _RPPreviewViewController, 
+                       _RPScreenRecorder, _RPSharedConstants, _RPStoreInfo, _RPStoreManager, 
+                       _RPSystemRecordingIndicatorWindow, _RPVideoEditorExtensionHostContext, 
+                       _RPVideoEditorHostViewController, _RPYouTubeActivityProgressOverlay ]
 ...

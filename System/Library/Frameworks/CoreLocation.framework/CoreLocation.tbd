@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: DAD1EC41-36E0-3304-AC15-7AF5E0B4273B', 'armv7s: 1B0AA779-E7A8-3E7B-BA5A-9C8189C26C20', 
-                   'arm64: 0157F717-2A3A-35B8-80EA-1CD20D625CAD' ]
+uuids:           [ 'armv7: 6FDA19F3-23A4-3E13-AAE4-218EF6097F4C', 'armv7s: F5CF8DD0-C2B0-3E9E-842C-0B77FA0195BB', 
+                   'arm64: 28F11871-02A5-3152-8323-FAEAD1645B58' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreLocation.framework/CoreLocation
-current-version: 2100.0.14
+current-version: 2100.0.34
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

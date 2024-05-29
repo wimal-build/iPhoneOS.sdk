@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 4243E332-BE15-399D-8A74-F0018B47E50E', 'armv7s: 317817D4-D756-3F8F-A429-A7AD042612F8', 
-                   'arm64: 23DB604A-C92F-3F6F-ABCD-14B3DB242533' ]
+uuids:           [ 'armv7: 2F0FB23B-ACFB-307A-9046-5892FA36FF54', 'armv7s: 53FF289A-AF0F-3CE2-A65B-279247634CEA', 
+                   'arm64: EC2B2ED8-8D79-331D-9C0C-507D24F17AE3' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/OpenAL.framework/OpenAL
 objc-constraint: none

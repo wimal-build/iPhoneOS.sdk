@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 1A2B66FF-5813-340B-82E5-240C0CE0AF07', 'armv7s: D3A09759-4036-32C9-8BFD-DED08EDCD036', 
-                   'arm64: FBA12A94-8C19-3AFD-9AA5-5DD39234E6B1' ]
+uuids:           [ 'armv7: 2846CB38-F42C-396A-AE5A-E1B7EDBD35A4', 'armv7s: 02F3A72A-52D5-35A8-BBCD-6E813030FF42', 
+                   'arm64: 71EE1B1A-DF27-3FF1-8690-DCA9CBD99F4A' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GSS.framework/GSS
 objc-constraint: none

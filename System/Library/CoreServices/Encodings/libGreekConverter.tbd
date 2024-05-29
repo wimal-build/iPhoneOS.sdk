@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: BB7D0D8B-34AA-334D-A23C-1734E8A1881B', 'armv7s: 8564B660-2440-3389-A3DE-B4529EB21052', 
-                   'arm64: B04DE3FD-483B-3D1A-8F03-5A460058A7F5' ]
+uuids:           [ 'armv7: 005F1291-33CE-3AD7-9FF5-4DA802AE427C', 'armv7s: 4F3F70EC-83B3-3C66-B65A-B7DC21FF7F11', 
+                   'arm64: CA093E24-9A74-3E11-AD7D-135F2359DF05' ]
 platform:        ios
 install-name:    /System/Library/CoreServices/Encodings/libGreekConverter.dylib
 current-version: 69.0

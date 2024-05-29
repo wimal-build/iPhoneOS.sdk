@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 8C5E9297-5AA6-3900-A0C2-A54E4E0BCD3A', 'armv7s: 09A402FF-9DB9-32B3-AF9E-1C11B0051502', 
-                   'arm64: AC7F6D04-FD80-39C2-888D-408C921D6F0E' ]
+uuids:           [ 'armv7: B9D22D87-070D-3A86-9BF4-F75937F6C652', 'armv7s: EC0909E2-0AA1-3350-839D-16854840F8E7', 
+                   'arm64: 27ABCF67-3615-3F6B-BC10-3796DC56C9B2' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PushKit.framework/PushKit
 objc-constraint: none

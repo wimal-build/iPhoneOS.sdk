@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 7F64B95B-9793-3531-9F1E-AAD36333450E', 'armv7s: EA531D84-94D7-31A5-8702-524796A84E08', 
-                   'arm64: CE03061B-9D7F-390D-9B10-B34DB1082663' ]
+uuids:           [ 'armv7: B8A22935-09F1-3A40-B2AD-B2A04426972A', 'armv7s: ECC81D71-6086-37B3-BE33-32BAFA99E670', 
+                   'arm64: 4CD3706D-0D03-3637-9C7B-354F9E6E4869' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/iAd.framework/iAd
 objc-constraint: none
@@ -37,11 +37,10 @@ exports:
                        _ADPrerollBottomBar, _ADPrerollButton, _ADPrerollController, 
                        _ADPrerollSlider, _ADPrerollTopBar, _ADPrerollView, _ADPrivacyButton, 
                        _ADPrivacyRemoteViewController, _ADPrivacyViewController, 
-                       _ADProgressView, _ADSWebViewGestureRecognizer, _ADSession, 
-                       _ADSoftLinking, _ADSubscriptionEvent, _ADTVInterstitialMediaViewController, 
-                       _ADTVMediaButton, _ADTVMediaControlsView, _ADTVMediaControlsViewController, 
-                       _ADTVMediaCountdownView, _ADTVMediaSkipView, _ADTVPrerollController, 
-                       _ADTVPrerollVideoView, _ADTapGestureRecognizer, _ADVolumeSlider, 
-                       _ADWebViewActionViewController, __ADPolicyEngineEvent, __ADRemoteViewController, 
-                       __ADUIViewControllerAdController ]
+                       _ADProgressView, _ADSession, _ADSoftLinking, _ADSubscriptionEvent, 
+                       _ADTVInterstitialMediaViewController, _ADTVMediaButton, _ADTVMediaControlsView, 
+                       _ADTVMediaControlsViewController, _ADTVMediaCountdownView, 
+                       _ADTVMediaSkipView, _ADTVPrerollController, _ADTVPrerollVideoView, 
+                       _ADTapGestureRecognizer, _ADVolumeSlider, _ADWebViewActionViewController, 
+                       __ADPolicyEngineEvent, __ADRemoteViewController, __ADUIViewControllerAdController ]
 ...

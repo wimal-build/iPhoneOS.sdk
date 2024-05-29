@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 722C012A-6CA8-3F14-BD85-25190D3EDC6A', 'armv7s: C028D44B-16A9-3B35-B7EF-AD604A31C485', 
-                   'arm64: BF63FBA9-5947-3E54-8ED5-F6E4DB40E3AE' ]
+uuids:           [ 'armv7: 89FC0F6C-1B63-36D1-A154-0EFAED2D047F', 'armv7s: 4DA60129-5696-3F23-B2BD-F9E2AD5E7A76', 
+                   'arm64: 6DC61AD8-3FC0-3F79-9792-D1CB950622F7' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/QuartzCore.framework/QuartzCore
 current-version: 1.11
@@ -57,21 +57,22 @@ exports:
                        _CARenderContextGetCommitSeed, _CARenderContextGetId, _CARenderContextGetInputTime, 
                        _CARenderContextGetOptions, _CARenderContextGetProcessId, 
                        _CARenderContextGetServerPort, _CARenderContextHitTest, _CARenderContextHitTest_, 
-                       _CARenderContextInvalidateRect, _CARenderContextLock, _CARenderContextNew, 
-                       _CARenderContextUnlock, _CARenderGLESSetBounds, _CARenderGetGlobalFeatureFlags, 
-                       _CARenderImageBitsPerComponent, _CARenderImageBitsPerPixel, 
-                       _CARenderImageCGBitmapInfo, _CARenderImageCopyCGImage, _CARenderImageFormatName, 
-                       _CARenderImageGetHeight, _CARenderImageGetWidth, _CARenderImageHasAlpha, 
-                       _CARenderImageIsNative, _CARenderImageNew, _CARenderImageNewMipmapped, 
-                       _CARenderImageNewWithCGImage, _CARenderImageRowbytes, _CARenderImageSetShouldTile, 
-                       _CARenderLayerGetContextId, _CARenderMTLGetState, _CARenderMTLSetState, 
-                       _CARenderNotificationAddObserver, _CARenderNotificationPostNotification, 
-                       _CARenderNotificationRemoveEveryObserver, _CARenderNotificationRemoveObserver, 
-                       _CARenderOGLCollect, _CARenderOGLDestroy, _CARenderOGLFinish, 
-                       _CARenderOGLFlush, _CARenderOGLGetColorSpace, _CARenderOGLGetFeatureFlags, 
-                       _CARenderOGLGetFlags, _CARenderOGLGetGLContext, _CARenderOGLNew, 
-                       _CARenderOGLNew_, _CARenderOGLPrepareUpdateShape, _CARenderOGLPurge, 
-                       _CARenderOGLRender, _CARenderOGLSetColorSpace, _CARenderOGLSetDestinationIOSurface, 
+                       _CARenderContextInvalidateRect, _CARenderContextLock, _CARenderContextNeedsDeferUpdate, 
+                       _CARenderContextNew, _CARenderContextUnlock, _CARenderGLESSetBounds, 
+                       _CARenderGetGlobalFeatureFlags, _CARenderImageBitsPerComponent, 
+                       _CARenderImageBitsPerPixel, _CARenderImageCGBitmapInfo, _CARenderImageCopyCGImage, 
+                       _CARenderImageFormatName, _CARenderImageGetHeight, _CARenderImageGetWidth, 
+                       _CARenderImageHasAlpha, _CARenderImageIsNative, _CARenderImageNew, 
+                       _CARenderImageNewMipmapped, _CARenderImageNewWithCGImage, 
+                       _CARenderImageRowbytes, _CARenderImageSetShouldTile, _CARenderLayerGetContextId, 
+                       _CARenderMTLGetState, _CARenderMTLSetState, _CARenderNotificationAddObserver, 
+                       _CARenderNotificationPostNotification, _CARenderNotificationRemoveEveryObserver, 
+                       _CARenderNotificationRemoveObserver, _CARenderOGLCollect, 
+                       _CARenderOGLDestroy, _CARenderOGLFinish, _CARenderOGLFlush, 
+                       _CARenderOGLGetColorSpace, _CARenderOGLGetFeatureFlags, _CARenderOGLGetFlags, 
+                       _CARenderOGLGetGLContext, _CARenderOGLNew, _CARenderOGLNew_, 
+                       _CARenderOGLPrepareUpdateShape, _CARenderOGLPurge, _CARenderOGLRender, 
+                       _CARenderOGLSetColorSpace, _CARenderOGLSetDestinationIOSurface, 
                        _CARenderOGLSetDestinationOffset, _CARenderOGLSetDestinationTexture, 
                        _CARenderOGLSetFeatureFlags, _CARenderOGLSetGLContext, _CARenderOGLSetScale, 
                        _CARenderOGLSetUpdateRect, _CARenderRelease, _CARenderRetain, 

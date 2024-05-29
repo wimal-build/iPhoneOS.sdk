@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 97BC725F-B65F-3BDB-8290-FA6F4D61F7D6', 'armv7s: E0B51502-F059-3EB1-96BC-61DDFCA99C88', 
-                   'arm64: B1E30D93-B906-314B-B240-B49F294F2FD9' ]
+uuids:           [ 'armv7: 5B8494EB-ED03-32FF-835E-1CDAA8ADFB60', 'armv7s: ADDC0C72-8707-3F68-9D09-6D611E10682F', 
+                   'arm64: 60008257-75F3-3964-A564-C9FF1A06821E' ]
 platform:        ios
 install-name:    /usr/lib/libETLDIAGLoggingDynamic.dylib
 current-version: 0.0

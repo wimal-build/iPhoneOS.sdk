@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 357C2C44-7749-3873-8B17-334547FD9CA6', 'armv7s: 0C452CD4-9F58-37E8-88D9-EEBDDB836445', 
-                   'arm64: 40F57E2D-9E2D-30C2-9231-CEAD9FBA9A81' ]
+uuids:           [ 'armv7: 64BB2A6F-AFD4-3CA5-9F61-7FC446F47817', 'armv7s: FF9CCDA4-D28A-3CCC-B59B-4112136F71BD', 
+                   'arm64: 133A5334-8B2E-3A1B-B872-E9F13871A842' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GLKit.framework/GLKit
-current-version: 71.0
+current-version: 83.0
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

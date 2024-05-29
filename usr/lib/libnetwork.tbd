@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 04AEE5C4-416A-396A-8F93-859C8C942582', 'armv7s: 0B946851-3726-3251-B155-0A744335BBF5', 
-                   'arm64: 3357CA81-08A7-3179-BF37-6ACFFD953D64' ]
+uuids:           [ 'armv7: 4957C145-D561-3F53-A01C-263BFC000965', 'armv7s: 6F156335-86B6-33A3-9924-6AC01E1700D5', 
+                   'arm64: 5A78675C-CD2F-3B50-BA5A-E3E5EF088969' ]
 platform:        ios
 install-name:    /usr/lib/libnetwork.dylib
 objc-constraint: none
@@ -140,9 +140,10 @@ exports:
                        _nw_tls_set_npn_data, _nw_tls_set_npn_enabled, _nw_tls_set_peer_ec_public_key, 
                        _nw_tls_set_peer_hostname, _nw_tls_set_peer_rsa_public_key, 
                        _nw_tls_set_peer_trust, _nw_tls_set_psk_identity, _nw_tls_set_psk_identity_hint, 
-                       _nw_tls_set_psk_secret, _nw_tls_set_session_ticket_enabled, 
-                       _nw_udp_listener_cancel, _nw_udp_listener_create, _nw_udp_listener_dispose, 
-                       _nw_udp_listener_get_port, _nw_udp_listener_start, _nw_utilities_cidr_string_to_subnet_and_mask, 
+                       _nw_tls_set_psk_secret, _nw_tls_set_session_resumption_enabled, 
+                       _nw_tls_set_session_ticket_enabled, _nw_udp_listener_cancel, 
+                       _nw_udp_listener_create, _nw_udp_listener_dispose, _nw_udp_listener_get_port, 
+                       _nw_udp_listener_start, _nw_utilities_cidr_string_to_subnet_and_mask, 
                        _tcp_connection_accept, _tcp_connection_add_event_adaptive_read_timeout, 
                        _tcp_connection_add_event_adaptive_write_timeout, _tcp_connection_add_event_excessive_keepalives, 
                        _tcp_connection_allow_client_socket_access, _tcp_connection_are_proxies_supported, 
@@ -235,7 +236,7 @@ exports:
                        _NWConcrete_nw_endpoint_resolver.child_timer, _NWConcrete_nw_endpoint_resolver.connected_child, 
                        _NWConcrete_nw_endpoint_resolver.failed_child_endpoint_handlers, 
                        _NWConcrete_nw_endpoint_resolver.failed_to_start_next_child, 
-                       _NWConcrete_nw_endpoint_resolver.next_child_endpoint_index, 
+                       _NWConcrete_nw_endpoint_resolver.last_resolver_status, _NWConcrete_nw_endpoint_resolver.next_child_endpoint_index, 
                        _NWConcrete_nw_endpoint_resolver.ready_child_endpoint_handlers, 
                        _NWConcrete_nw_endpoint_resolver.resolver, _NWConcrete_nw_endpoint_resolver.trigger_agent_timer, 
                        _NWConcrete_nw_pac_resolver.endpointURL, _NWConcrete_nw_pac_resolver.pacScript, 

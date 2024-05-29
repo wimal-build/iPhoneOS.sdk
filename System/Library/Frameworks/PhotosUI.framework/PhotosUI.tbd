@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 4C4F2C87-D995-3CD8-A1FA-14F863527B13', 'armv7s: FEBA1F7B-DEA3-3420-BCCB-503A88C22244', 
-                   'arm64: 2BD0A505-A0E1-3592-8A00-736E8CC9DF59' ]
+uuids:           [ 'armv7: 065ACEF1-04D6-39A2-9DF6-4D2A45D87D02', 'armv7s: CFDC2983-051A-344E-A7A8-59CAB3A18A4E', 
+                   'arm64: 727E1E51-350E-3803-990F-0555D9BC6E6C' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PhotosUI.framework/PhotosUI
 objc-constraint: none

@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: C4FD1399-A424-31D8-B706-82DC34930369', 'armv7s: 7D5F2315-781A-3BE1-9A50-80DB506998E2', 
-                   'arm64: 1CE494FD-95FA-3073-8E09-0728AA58BEAF' ]
+uuids:           [ 'armv7: 3346CC31-E2BF-388B-A236-6DCC7F24FB2D', 'armv7s: D2716622-886D-3A09-A431-C2253DB33B27', 
+                   'arm64: 57EE991D-BAD6-343A-A5B1-DA537EF0C65F' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CloudKit.framework/CloudKit
-current-version: 639.2.1
+current-version: 643.5
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -30,11 +30,10 @@ exports:
                        _CKHexCharFromBytes, _CKInternalErrorDomain, _CKInternalUnderlyingHTTPStatusKey, 
                        _CKIsPCSError, _CKIsRunningInCloudD, _CKIsValidOperationForScope, 
                        _CKKeyboardServicesContainerIdentifier, _CKKeynoteShareURLSlug, 
-                       _CKLinkCheck0fd6bdf95f2efb6e65813fd4cd0f5d9af656d08a, _CKLogTrafficFile, 
-                       _CKMailDropContainerIdentifier, _CKModifyRecordAccessOperationAccessGrantedKey, 
-                       _CKModifyRecordAccessOperationAccessRevokedKey, _CKModifyRecordAccessOperationAccessTokenKey, 
-                       _CKModifyRecordAccessOperationActionKey, _CKModifyRecordAccessOperationReferenceIdentifierKey, 
-                       _CKNSIndexSet_enumerateInverseRangesInRange_options_usingBlock, 
+                       _CKLinkCheck0fd6bdf95f2efb6e65813fd4cd0f5d9af656d08a, _CKMailDropContainerIdentifier, 
+                       _CKModifyRecordAccessOperationAccessGrantedKey, _CKModifyRecordAccessOperationAccessRevokedKey, 
+                       _CKModifyRecordAccessOperationAccessTokenKey, _CKModifyRecordAccessOperationActionKey, 
+                       _CKModifyRecordAccessOperationReferenceIdentifierKey, _CKNSIndexSet_enumerateInverseRangesInRange_options_usingBlock, 
                        _CKNSIndexSet_indexSetWithInverseIndexSet, _CKNewsContainerIdentifierPrefix, 
                        _CKNotesContainerIdentifierPrefix, _CKNotesShareURLSlug, _CKNumbersShareURLSlug, 
                        _CKOperationLoggableProgressArguments, _CKOperationProgressCallbackClasses, 

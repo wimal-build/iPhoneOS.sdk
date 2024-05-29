@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 49B2FF8A-4566-3F19-AA8D-C01DD6389070', 'armv7s: 7F0FA292-F394-3CA6-89BA-E570BF5AD887', 
-                   'arm64: 4AB086E2-1CBA-3379-BAE0-53DB6671A1B1' ]
+uuids:           [ 'armv7: E2B75192-979D-3A6E-9632-7DFE866F3A11', 'armv7s: 05F3A3B8-FEC5-3B3F-BFAE-F596E5B4992C', 
+                   'arm64: D89DAB5F-F4BF-344F-BC95-31AB61E5B5A3' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SpriteKit.framework/SpriteKit
 current-version: 2.0
@@ -113,7 +113,7 @@ exports:
                        __Z20_perfEndClientUpdated, __Z20getHexIndexFromPointRDv2_fffRiS1_, 
                        __Z20sk_get_debug_optionsv, __Z20subtractAndNormalizeff, __Z21SKCBoundingBoxGetAABBRK15matrix_float4x4, 
                        __Z21SKCBoundingBoxIsEmptyRK15matrix_float4x4, __Z21_perfBeginConstraintsd, 
-                       __Z21_perfUpdateStatisticsP8SKCStatsS0_, __Z21sk_debug_get_optionalv, 
+                       __Z21_perfUpdateStatisticsP8SKCStatsS0_P6SKView, __Z21sk_debug_get_optionalv, 
                        __Z22SKCBoundingBoxGetVertsRK15matrix_float4x4, __Z22SKGetGlobalFlippedFlagv, 
                        __Z22SKGetGlobalMetalDevicev, __Z22SKGetShouldEnableMetalv, 
                        __Z22SKSetGlobalMetalDevicePU19objcproto9MTLDevice11objc_object, 
@@ -323,7 +323,7 @@ exports:
                        __ZN9SKC3DNode12getBatchInfoEP13SKCRenderInfo, __ZN9SKC3DNode14ensureRendererEP13SKCRenderInfo, 
                        __ZN9SKC3DNode14getBoundingBoxEv, __ZN9SKC3DNode14renderCallbackEP11jet_context15matrix_float4x4fDv2_f, 
                        __ZN9SKC3DNode17addRequistePassesEP13SKCRenderInfoPNSt3__14listINS2_10shared_ptrI13SKCRenderPassEENS2_9allocatorIS6_EEEE, 
-                       __ZN9SKC3DNode23getNeedsCustomRenderOpsEP13SKCRenderInfo, 
+                       __ZN9SKC3DNode22subclassRecomputeFlagsEv, __ZN9SKC3DNode23getNeedsCustomRenderOpsEP13SKCRenderInfo, 
                        __ZN9SKC3DNodeC1Ev, __ZN9SKC3DNodeC2Ev, __ZN9SKC3DNodeD0Ev, 
                        __ZN9SKC3DNodeD1Ev, __ZN9SKC3DNodeD2Ev, __ZNK12SKCSceneNode18getTransformMatrixEv, 
                        __ZNK12SKCSceneNode25getInverseTransformMatrixEv, __ZNK12SKCVideoNode9getPlayerEv, 
@@ -344,20 +344,20 @@ exports:
                        __ZNK7SKCNode11getRotationEv, __ZNK7SKCNode12getZRotationEv, 
                        __ZNK7SKCNode14getTranslationEv, __ZNK7SKCNode15getZTranslationEv, 
                        __ZNK7SKCNode18convertPointToNodeEDv4_fPKS_, __ZNK7SKCNode18getTransformMatrixEv, 
-                       __ZNK7SKCNode20convertPointFromNodeEDv4_fPKS_, __ZNK7SKCNode25getConversionMatrixToNodeEPKS_, 
-                       __ZNK7SKCNode25getInverseTransformMatrixEv, __ZNK7SKCNode26getConversionMatrixToWorldEv, 
-                       __ZNK7SKCNode27getConversionMatrixFromNodeEPKS_, __ZNK7SKCNode28getConversionMatrixFromWorldEv, 
-                       __ZNK7SKCNode8getScaleEv, __ZTI11SKCCropNode, __ZTI12SKCAudioNode, 
-                       __ZTI12SKCDataSlice, __ZTI12SKCLabelNode, __ZTI12SKCLightNode, 
-                       __ZTI12SKCSceneNode, __ZTI12SKCVideoNode, __ZTI13SKCEffectNode, 
-                       __ZTI13SKCSpriteNode, __ZTI17SKCParticleSystem, __ZTI17SKCTransitionNode, 
-                       __ZTI18SKCParticleManager, __ZTI7SKCNode, __ZTI8SKCStats, 
-                       __ZTI9SKC3DNode, __ZTS11SKCCropNode, __ZTS12SKCAudioNode, 
-                       __ZTS12SKCDataSlice, __ZTS12SKCLabelNode, __ZTS12SKCLightNode, 
-                       __ZTS12SKCSceneNode, __ZTS12SKCVideoNode, __ZTS13SKCEffectNode, 
-                       __ZTS13SKCSpriteNode, __ZTS17SKCParticleSystem, __ZTS17SKCTransitionNode, 
-                       __ZTS18SKCParticleManager, __ZTS7SKCNode, __ZTS8SKCStats, 
-                       __ZTS9SKC3DNode, __ZTV11SKCCropNode, __ZTV12SKCAudioNode, 
+                       __ZNK7SKCNode19getBasePhysicsScaleEv, __ZNK7SKCNode20convertPointFromNodeEDv4_fPKS_, 
+                       __ZNK7SKCNode25getConversionMatrixToNodeEPKS_, __ZNK7SKCNode25getInverseTransformMatrixEv, 
+                       __ZNK7SKCNode26getConversionMatrixToWorldEv, __ZNK7SKCNode27getConversionMatrixFromNodeEPKS_, 
+                       __ZNK7SKCNode28getConversionMatrixFromWorldEv, __ZNK7SKCNode8getScaleEv, 
+                       __ZTI11SKCCropNode, __ZTI12SKCAudioNode, __ZTI12SKCDataSlice, 
+                       __ZTI12SKCLabelNode, __ZTI12SKCLightNode, __ZTI12SKCSceneNode, 
+                       __ZTI12SKCVideoNode, __ZTI13SKCEffectNode, __ZTI13SKCSpriteNode, 
+                       __ZTI17SKCParticleSystem, __ZTI17SKCTransitionNode, __ZTI18SKCParticleManager, 
+                       __ZTI7SKCNode, __ZTI8SKCStats, __ZTI9SKC3DNode, __ZTS11SKCCropNode, 
+                       __ZTS12SKCAudioNode, __ZTS12SKCDataSlice, __ZTS12SKCLabelNode, 
+                       __ZTS12SKCLightNode, __ZTS12SKCSceneNode, __ZTS12SKCVideoNode, 
+                       __ZTS13SKCEffectNode, __ZTS13SKCSpriteNode, __ZTS17SKCParticleSystem, 
+                       __ZTS17SKCTransitionNode, __ZTS18SKCParticleManager, __ZTS7SKCNode, 
+                       __ZTS8SKCStats, __ZTS9SKC3DNode, __ZTV11SKCCropNode, __ZTV12SKCAudioNode, 
                        __ZTV12SKCDataSlice, __ZTV12SKCLabelNode, __ZTV12SKCLightNode, 
                        __ZTV12SKCSceneNode, __ZTV12SKCVideoNode, __ZTV13SKCEffectNode, 
                        __ZTV13SKCSpriteNode, __ZTV17SKCParticleSystem, __ZTV17SKCTransitionNode, 
@@ -403,7 +403,7 @@ exports:
                        _SKNode._info, _SKNode._keyedActions, _SKNode._keyedSubSprites, 
                        _SKNode._name, _SKNode._parent, _SKNode._skcNode, _SKNode._userData, 
                        _SKTextureCache._backingTexture, _SKTextureCache._textureFormat, 
-                       _SKTextureCache.filteringMode, _SKTextureCache.hasAlpha, _SKTextureCache.isLoaded, 
-                       _SKTextureCache.isPOT, _SKTextureCache.lock, _SKTextureCache.pixelData, 
-                       _SKTextureCache.pixelSize, _SKTextureCache.size, _SKTextureCache.state ]
+                       _SKTextureCache.filteringMode, _SKTextureCache.hasAlpha, _SKTextureCache.isPOT, 
+                       _SKTextureCache.lock, _SKTextureCache.pixelData, _SKTextureCache.pixelSize, 
+                       _SKTextureCache.size, _SKTextureCache.state ]
 ...

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 104AC0EC-8FF3-3BEB-9625-08001AA4C6CA', 'armv7s: F625E272-AD5F-36B3-BFE3-57F5184446B3', 
-                   'arm64: 39190DED-8B3D-3822-86A5-12DF1CFAC759' ]
+uuids:           [ 'armv7: 8CD8DF68-ABC3-3DCC-8526-0020DE5CCAB2', 'armv7s: 618C5A30-83E2-3523-A2C6-DAE9564B7B98', 
+                   'arm64: 39E4A110-CFB5-3E2F-83A3-F54255233A03' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/EventKit.framework/EventKit
 current-version: 100.0
@@ -70,15 +70,16 @@ exports:
                        _EKOrganizer, _EKParticipant, _EKParticipantForSorting, _EKPersistentAlarm, 
                        _EKPersistentAttachment, _EKPersistentAttendee, _EKPersistentCalendar, 
                        _EKPersistentEvent, _EKPersistentEventAction, _EKPersistentExceptionDate, 
-                       _EKPersistentLocation, _EKPersistentOrganizer, _EKPersistentParticipant, 
-                       _EKPersistentRecurrenceRule, _EKPersistentReminder, _EKPersistentSharee, 
-                       _EKPersistentSource, _EKPersistentSuggestedEventInfo, _EKPreferences, 
-                       _EKRecurrenceDayOfWeek, _EKRecurrenceEnd, _EKRecurrenceGenerator, 
-                       _EKRecurrenceRule, _EKReminder, _EKRequestAvailabilityOperation, 
-                       _EKSharee, _EKSource, _EKStructuredLocation, _EKStructuredLocationPrediction, 
-                       _EKSuggestedEventInfo, _EKSyntheticGEORouteHypothesis, _EKTimedEventStorePurger, 
-                       _EKTravelAdvisoryTimelinessAuthority, _EKTravelEngineHypothesis, 
-                       _EKTravelEngineUtilities, _EKTravelLookupManager, __EKNotificationMonitor ]
+                       _EKPersistentLocation, _EKPersistentObject, _EKPersistentOrganizer, 
+                       _EKPersistentParticipant, _EKPersistentRecurrenceRule, _EKPersistentReminder, 
+                       _EKPersistentSharee, _EKPersistentSource, _EKPersistentSuggestedEventInfo, 
+                       _EKPreferences, _EKRecurrenceDayOfWeek, _EKRecurrenceEnd, 
+                       _EKRecurrenceGenerator, _EKRecurrenceRule, _EKRelation, _EKReminder, 
+                       _EKRequestAvailabilityOperation, _EKSharee, _EKSource, _EKStructuredLocation, 
+                       _EKStructuredLocationPrediction, _EKSuggestedEventInfo, _EKSyntheticGEORouteHypothesis, 
+                       _EKTimedEventStorePurger, _EKTravelAdvisoryTimelinessAuthority, 
+                       _EKTravelEngineHypothesis, _EKTravelEngineUtilities, _EKTravelLookupManager, 
+                       __EKNotificationMonitor ]
     objc-ivars:      [ _EKCalendarInviteReplyNotification._status, _EKCalendarNotification._URI, 
                        _EKCalendarNotification._alerted, _EKCalendarNotification._dotColor, 
                        _EKCalendarNotification._emailAddress, _EKCalendarNotification._hiddenFromNotificationCenter, 

@@ -1,18 +1,19 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: AE954773-29EE-3A08-B373-BA9BFB737339', 'armv7s: DFDF0D92-2860-37D6-BA2B-D6E47F5FACEA', 
-                   'arm64: AFFAF7EA-FFA1-37BF-BCED-1D3113A7DEAC' ]
+uuids:           [ 'armv7: 55BFB5F8-6714-37E8-8ED9-84C462BCB77A', 'armv7s: 68D52851-9A00-3ED3-BA6F-7E394DFB194B', 
+                   'arm64: 3CA7E394-442C-3192-80E9-DF258AE752CB' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalKit.framework/MetalKit
-current-version: 68.0
+current-version: 71.0
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
-    symbols:         [ _MTKMetalVertexDescriptorFromModelIO, _MTKMetalVertexDescriptorFromModelIOWithError, 
-                       _MTKMetalVertexFormatFromModelIO, _MTKModelErrorDomain, _MTKModelErrorKey, 
-                       _MTKModelIOVertexDescriptorFromMetal, _MTKModelIOVertexDescriptorFromMetalWithError, 
-                       _MTKModelIOVertexFormatFromMetal, _MTKTextureLoaderCubeLayoutVertical, 
-                       _MTKTextureLoaderErrorDomain, _MTKTextureLoaderErrorKey, _MTKTextureLoaderOptionAllocateMipmaps, 
+    symbols:         [ _CUIGamutForNSDisplayGamut, _MTKMetalVertexDescriptorFromModelIO, 
+                       _MTKMetalVertexDescriptorFromModelIOWithError, _MTKMetalVertexFormatFromModelIO, 
+                       _MTKModelErrorDomain, _MTKModelErrorKey, _MTKModelIOVertexDescriptorFromMetal, 
+                       _MTKModelIOVertexDescriptorFromMetalWithError, _MTKModelIOVertexFormatFromMetal, 
+                       _MTKTextureLoaderCubeLayoutVertical, _MTKTextureLoaderErrorDomain, 
+                       _MTKTextureLoaderErrorKey, _MTKTextureLoaderOptionAllocateMipmaps, 
                        _MTKTextureLoaderOptionCubeFromVerticalTexture, _MTKTextureLoaderOptionCubeLayout, 
                        _MTKTextureLoaderOptionGenerateMipmaps, _MTKTextureLoaderOptionOrigin, 
                        _MTKTextureLoaderOptionSRGB, _MTKTextureLoaderOptionTextureCPUCacheMode, 

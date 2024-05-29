@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 2DF60ED4-7DC7-3BC6-A351-4CA511433285', 'armv7s: 03DB224B-F98D-3C1F-A5E5-47CF4DB146ED', 
-                   'arm64: 204B44F3-7148-39B3-997F-EBF0E9A22379' ]
+uuids:           [ 'armv7: 369CBBD2-2CB9-32E5-83E2-C231539AE9A1', 'armv7s: A544A043-65D7-31CB-A29D-D14BF0349B32', 
+                   'arm64: 68070646-2953-3D02-8063-9B570D79D179' ]
 platform:        ios
 install-name:    /usr/lib/libsandbox.1.dylib
 objc-constraint: none

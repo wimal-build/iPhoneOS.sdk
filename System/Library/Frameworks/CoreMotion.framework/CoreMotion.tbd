@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: D8DEF399-7409-33A2-8B1D-16229C43E79B', 'armv7s: ADE8A6B5-2C9F-3B39-9F9B-7E37994217B3', 
-                   'arm64: F87D9D1A-138D-3AA9-89C5-50DC9DC2C66D' ]
+uuids:           [ 'armv7: 777976E7-B09C-324F-8F3A-7D2961AB7EA4', 'armv7s: DB80B2A8-08E4-39F2-9D63-25AAEFF71880', 
+                   'arm64: 32E6ECFF-3944-3A16-87AD-3F188B97B09F' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreMotion.framework/CoreMotion
-current-version: 2100.0.14
+current-version: 2100.0.34
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -98,10 +98,11 @@ exports:
                        _CMMotionManager, _CMMotionTimeRange, _CMNatalieData, _CMNatalimeter, 
                        _CMOdometer, _CMOdometerData, _CMOnBodyStatus, _CMOnBodyStatusManager, 
                        _CMPedometer, _CMPedometerData, _CMPedometerEvent, _CMPocketStateManager, 
-                       _CMRecordedAccelerometerData, _CMSedentaryTimer, _CMSedentaryTimerData, 
-                       _CMSensorDataList, _CMSensorRecorder, _CMSignificantElevationSample, 
-                       _CMStepCounter, _CMSwimData, _CMSwimTracker, _CMSwimWorkout, 
-                       _CMVehicleConnection, _CMVehicleConnectionData, _CMVehicleState, 
-                       _CMVehicleStateData, _CMWakeGestureManager, _CMWorkout, _CMWorkoutManager ]
+                       _CMRecordedAccelerometerData, _CMRecordedGyroData, _CMSedentaryTimer, 
+                       _CMSedentaryTimerData, _CMSensorDataList, _CMSensorRecorder, 
+                       _CMSignificantElevationSample, _CMStepCounter, _CMSwimData, 
+                       _CMSwimTracker, _CMSwimWorkout, _CMVehicleConnection, _CMVehicleConnectionData, 
+                       _CMVehicleState, _CMVehicleStateData, _CMWakeGestureManager, 
+                       _CMWorkout, _CMWorkoutManager ]
     objc-ivars:      [ _CMActivityManager._internal, _CMGestureManager._internal ]
 ...

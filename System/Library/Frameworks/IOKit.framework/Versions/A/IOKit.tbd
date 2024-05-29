@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: E629D95E-0115-345D-B8CA-0CAAD011C7FE', 'armv7s: 187E713F-961A-3C0A-A2C9-68B8BA753E8D', 
-                   'arm64: 97DF8046-F49D-3A3C-9A28-AD1C89EC90A9' ]
+uuids:           [ 'armv7: EB7F9A68-F740-359D-8CC9-6EED7B1063F3', 'armv7s: B5EDD30A-CB2D-3BEE-92DB-D5C97C7A0498', 
+                   'arm64: E0A6F4F0-810B-3F75-813E-DA2AFEBD591C' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
 current-version: 275.0

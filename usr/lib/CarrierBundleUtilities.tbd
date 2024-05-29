@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: CBE1C414-5E34-3121-8038-545FC2232071', 'armv7s: F4BEBE1D-C92C-3D30-93AA-DE4362D41E87', 
-                   'arm64: 64B09456-CEFE-372C-8AF1-E053FDB9D6CC' ]
+uuids:           [ 'armv7: 67F0DBCE-7DFB-3EFE-8825-D34D58171B76', 'armv7s: B9129C5F-CB3B-3498-BD7C-1EBE03B8D4B8', 
+                   'arm64: AA82224E-180A-322F-9292-ADFAA9ACBAA4' ]
 platform:        ios
 install-name:    /usr/lib/CarrierBundleUtilities.dylib
 objc-constraint: none

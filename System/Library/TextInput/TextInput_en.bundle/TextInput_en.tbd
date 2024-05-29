@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: F7615CC3-FAA3-3DE1-89BF-CB71CB9E6676', 'armv7s: 2005F0E9-B07A-3268-A33A-09F7C2309C81', 
-                   'arm64: 34E5E522-FBF6-3DE2-B2BE-33903AAB2726' ]
+uuids:           [ 'armv7: 5E9D9A18-9870-3CE4-A875-3BF67F2BCB68', 'armv7s: 0A3865DC-B602-3718-8B8C-AC81F65A3C41', 
+                   'arm64: 22A37D0D-B611-3EE3-AAAF-E37F7B2E21A6' ]
 platform:        ios
 install-name:    /System/Library/TextInput/TextInput_en.bundle/TextInput_en
 objc-constraint: none

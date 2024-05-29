@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: D61109CA-0EFC-3801-8766-56DEF8B6056D', 'armv7s: 7CCECA4E-CC75-3F36-96A1-43725B82C8C3', 
-                   'arm64: BE851BD8-4525-3E43-A159-BE56D3F1C0BA' ]
+uuids:           [ 'armv7: 3918E473-1DF1-3644-B88D-540D24602F2C', 'armv7s: B9A21538-6BA0-3145-88B0-89F420619326', 
+                   'arm64: D1BF100B-7EDB-3941-BAFF-9FF447C147C1' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/WatchKit.framework/WatchKit
 objc-constraint: none

@@ -1,6 +1,6 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s ]
-uuids:           [ 'armv7: 4FDD20DD-FDAB-3FF2-A660-FDD6BFF3183F', 'armv7s: 60417AB1-C49C-3D6C-B661-BC2EE5F8A3E1' ]
+uuids:           [ 'armv7: B30DC0B2-BE22-3C5C-83F2-3F9E2961F90F', 'armv7s: 47E6DCD1-2333-305C-A8F6-D060836C6770' ]
 platform:        ios
 install-name:    /usr/lib/libgcc_s.1.dylib
 current-version: 8.0

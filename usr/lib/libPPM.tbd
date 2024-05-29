@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: F663C814-C7C0-323D-BA75-17C477886470', 'armv7s: A58B659C-3DBF-3BB9-8B92-C2A73820C569', 
-                   'arm64: 31B67D0E-1976-3C36-A382-E9F88CF6B39E' ]
+uuids:           [ 'armv7: C07DBB59-F42C-37A6-9B6A-FB31433766BA', 'armv7s: 766C77F7-795C-31C2-B3D6-E741B4354B10', 
+                   'arm64: 2F8618CF-F1B9-381A-9C79-A8ABA42575FC' ]
 platform:        ios
 install-name:    /usr/lib/libPPM.dylib
 objc-constraint: none

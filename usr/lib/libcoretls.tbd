@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 4314434B-28F8-34B6-BA8F-8787FDAB6542', 'armv7s: 60D8F988-CDC5-38C6-A45C-2788BA81CCF7', 
-                   'arm64: 3D058B4A-2072-3E86-92BE-ECBF41439B9B' ]
+uuids:           [ 'armv7: 120B9805-3519-3DE6-B6ED-905F3B4835E2', 'armv7s: F04C07A0-3DEA-3355-9F93-A585116A4612', 
+                   'arm64: 37983810-66CD-3288-B95A-25164D224A06' ]
 platform:        ios
 install-name:    /usr/lib/libcoretls.dylib
-current-version: 121.1.1
+current-version: 121.32.1
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

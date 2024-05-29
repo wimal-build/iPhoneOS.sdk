@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: AD2AB77F-9A69-3067-8138-963437C54632', 'armv7s: 158608E4-384E-3303-A907-865C2C1E5FE2', 
-                   'arm64: 218FE9FE-272C-312B-AE4B-F25250451A5F' ]
+uuids:           [ 'armv7: 22817019-BA44-3B24-9D8B-C3ADDE295ECC', 'armv7s: BD4B47DA-E964-3855-BBF6-588AB62FEFB4', 
+                   'arm64: 8F81EBEE-9A4C-3D42-903B-89E5E73A54A7' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore
-current-version: 602.2.14
+current-version: 602.3.12
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

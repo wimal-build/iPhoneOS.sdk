@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: E7467989-C835-33B0-B74F-16C0DE040E19', 'armv7s: DF2B6556-1B96-3212-B8AD-2503B0B29739', 
-                   'arm64: 71664FFB-BD71-3C43-BB9F-1AED5409C131' ]
+uuids:           [ 'armv7: 80C004B7-AFC7-3CCE-94EA-E2E246D7FEB7', 'armv7s: D3CA0CD7-9826-3A15-A5C6-43A19A0AF532', 
+                   'arm64: 251F089C-067B-30D4-922D-67DC463D2300' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/MetalPerformanceShaders
-current-version: 60.1
+current-version: 61.4
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: F7B388BB-8A00-3429-B75F-8E819A84D0B7', 'armv7s: 53ABFEB6-08BF-30EF-830A-F3866B5D5711', 
-                   'arm64: DD4A5431-9875-3454-B153-3D6130E05DCF' ]
+uuids:           [ 'armv7: 9ACC8655-477E-30FB-A2EA-B0C202DB05BE', 'armv7s: F1F1F784-4088-3A0C-8203-D67B65021707', 
+                   'arm64: 48221D66-B470-3D98-9E9B-E2A470E457C6' ]
 platform:        ios
 install-name:    /usr/lib/libomadm.dylib
 objc-constraint: none

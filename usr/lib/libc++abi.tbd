@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: E35E11A7-DE5A-38CF-BDF0-40B73E64A946', 'armv7s: 8E4ADBFA-46A5-3FEA-8D64-2C147A1EBBB2', 
-                   'arm64: 51493865-1AD4-3466-908D-2D993B588BEC' ]
+uuids:           [ 'armv7: C35C23C9-6B42-3181-86F0-80C05ECB7818', 'armv7s: 436BBEB5-49C1-3DF0-9015-0F135499F5CA', 
+                   'arm64: E3419BBA-FACE-31B5-970C-6C8D430BE26D' ]
 platform:        ios
 install-name:    '/usr/lib/libc++abi.dylib'
 current-version: 307.2

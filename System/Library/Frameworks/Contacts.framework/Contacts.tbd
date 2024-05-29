@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 0A915AD8-C990-3365-9BBF-D4EA75DA7256', 'armv7s: 79FDF889-43A3-35A3-A520-1B4AC83F812E', 
-                   'arm64: 20B347EA-CE3E-3F5F-AE5F-6B86D485CBDC' ]
+uuids:           [ 'armv7: F3834197-5247-3CB4-8C63-2DAA28289E26', 'armv7s: 78E84D66-22E9-3F6F-85BF-DF36369E5F52', 
+                   'arm64: 74D5212F-603F-3E9C-A952-2262AD9AEACF' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Contacts.framework/Contacts
 current-version: 0.0
@@ -56,11 +56,11 @@ exports:
                        _CNGroupModificationDateKey, _CNGroupNameKey, _CNHomeLabel, 
                        _CNHomePageLabel, _CNInstantMessageAddressBundleIdentifiersKey, 
                        _CNInstantMessageAddressServiceKey, _CNInstantMessageAddressTeamIdentifierKey, 
-                       _CNInstantMessageAddressUsernameKey, _CNInstantMessageServiceAIM, 
-                       _CNInstantMessageServiceFacebook, _CNInstantMessageServiceGaduGadu, 
-                       _CNInstantMessageServiceGoogleTalk, _CNInstantMessageServiceICQ, 
-                       _CNInstantMessageServiceJabber, _CNInstantMessageServiceMSN, 
-                       _CNInstantMessageServiceQQ, _CNInstantMessageServiceSkype, 
+                       _CNInstantMessageAddressUserIdentifierKey, _CNInstantMessageAddressUsernameKey, 
+                       _CNInstantMessageServiceAIM, _CNInstantMessageServiceFacebook, 
+                       _CNInstantMessageServiceGaduGadu, _CNInstantMessageServiceGoogleTalk, 
+                       _CNInstantMessageServiceICQ, _CNInstantMessageServiceJabber, 
+                       _CNInstantMessageServiceMSN, _CNInstantMessageServiceQQ, _CNInstantMessageServiceSkype, 
                        _CNInstantMessageServiceYahoo, _CNLabelContactRelationAssistant, 
                        _CNLabelContactRelationBrother, _CNLabelContactRelationChild, 
                        _CNLabelContactRelationFather, _CNLabelContactRelationFriend, 

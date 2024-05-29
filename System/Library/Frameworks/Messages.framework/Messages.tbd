@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 33798E79-107C-3D8F-8FEC-0B9841F99BCA', 'armv7s: AB644CCC-EB18-300A-9CE2-4E5CB2132A6C', 
-                   'arm64: E817E925-283C-3400-A774-F1E6A6B1340E' ]
+uuids:           [ 'armv7: 48E41CDA-D5D4-346B-9BF3-0BBA84EAD71F', 'armv7s: 73C85ACB-81CA-3922-BBF1-4468292C3E94', 
+                   'arm64: 865379BC-858E-39B8-9059-EBF3154F0A37' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Messages.framework/Messages
 objc-constraint: none
@@ -10,12 +10,12 @@ exports:
     symbols:         [ _MSCachedStickerThumbnailURLForStickerAtURL, _MSMessagesErrorDomain, 
                        _MSStickerBrowserStateRestorationInfo, _MSStickerBrowserStateRestorationInfoPath, 
                        _MSStickerImageSizeMaximum, _MSStickerImageSizeMinimum, _MSStickerLocalizedDecriptionsLengthMaximum, 
-                       _MSStickerPreviewCacheKeyForSticker, _MSStickerPreviewCachePreviewDidChange, 
-                       _MSStickersErrorDomain, _MSStickersErrorStickerInfoKey, _MessagesVersionNumber, 
-                       _MessagesVersionString, __MSFileTransferAttributionInfoAdamIDKey, 
-                       __MSFileTransferAttributionInfoAppNameKey, __MSFileTransferAttributionInfoIconKey, 
-                       __MSFileTransferAttributionInfoURLKey, __kMSStickerCollectionViewCellReuseIdentifier, 
-                       _ms_defaultLog, _ms_traceLog ]
+                       _MSStickerPreviewCachePreviewDidChange, _MSStickersErrorDomain, 
+                       _MSStickersErrorStickerInfoKey, _MessagesVersionNumber, _MessagesVersionString, 
+                       __MSFileTransferAttributionInfoAdamIDKey, __MSFileTransferAttributionInfoAppNameKey, 
+                       __MSFileTransferAttributionInfoIconKey, __MSFileTransferAttributionInfoURLKey, 
+                       __kMSStickerCollectionViewCellReuseIdentifier, _ms_defaultLog, 
+                       _ms_traceLog ]
     objc-classes:    [ _MSBalloonTemplateLayout, _MSConversation, _MSMessage, _MSMessageLayout, 
                        _MSMessagePayload, _MSMessageTemplateLayout, _MSMessagesAppViewController, 
                        _MSRichLink, _MSSession, _MSSticker, _MSStickerBrowserView, 

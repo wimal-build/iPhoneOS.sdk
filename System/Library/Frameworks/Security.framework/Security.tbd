@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: AD084FAC-6CBD-3DE3-8E1B-71C6DAF36EEA', 'armv7s: 8520F1CB-CDEC-3065-AF13-A1941165A42A', 
-                   'arm64: 0E0E9F42-CB41-335A-B94E-EE731C6A4DB8' ]
+uuids:           [ 'armv7: 4E9B0005-A200-3A1E-AE74-68B7025F2ACC', 'armv7s: 9B0B4C0E-32C6-3895-BFCF-E759553D6C65', 
+                   'arm64: 88E5D6EB-0DE1-3FF6-B790-4F1B0E43A88E' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Security.framework/Security
 current-version: 0.0
@@ -173,8 +173,8 @@ exports:
                        _SecCertificatePathGetCount, _SecCertificatePathGetIndexOfCertificate, 
                        _SecCertificatePathGetNextSourceIndex, _SecCertificatePathGetRoot, 
                        _SecCertificatePathGetUsageConstraintsAtIndex, _SecCertificatePathHasWeakHash, 
-                       _SecCertificatePathIsAnchored, _SecCertificatePathIsValid, 
-                       _SecCertificatePathScore, _SecCertificatePathSelfSignedIndex, 
+                       _SecCertificatePathHasWeakKeySize, _SecCertificatePathIsAnchored, 
+                       _SecCertificatePathIsValid, _SecCertificatePathScore, _SecCertificatePathSelfSignedIndex, 
                        _SecCertificatePathSetIsAnchored, _SecCertificatePathSetNextSourceIndex, 
                        _SecCertificatePathSetSelfIssued, _SecCertificatePathVerify, 
                        _SecCertificateSetKeychainItem, _SecCertificateVersion, _SecCertificateXPCArrayCopyArray, 
@@ -373,8 +373,9 @@ exports:
                        _kSOSViewPCSMailDrop, _kSOSViewPCSMasterKey, _kSOSViewPCSNotes, 
                        _kSOSViewPCSPhotos, _kSOSViewPCSSharing, _kSOSViewPCSiCloudBackup, 
                        _kSOSViewPCSiCloudDrive, _kSOSViewPCSiMessage, _kSOSViewSafariCreditCards, 
-                       _kSOSViewWiFi, _kSOSViewiCloudIdentity, _kSSLSessionConfig_ATSv1, 
-                       _kSSLSessionConfig_ATSv1_noPFS, _kSSLSessionConfig_RC4_fallback, 
+                       _kSOSViewWiFi, _kSOSViewiCloudIdentity, _kSSLSessionConfig_3DES_fallback, 
+                       _kSSLSessionConfig_ATSv1, _kSSLSessionConfig_ATSv1_noPFS, 
+                       _kSSLSessionConfig_RC4_fallback, _kSSLSessionConfig_TLSv1_3DES_fallback, 
                        _kSSLSessionConfig_TLSv1_RC4_fallback, _kSSLSessionConfig_TLSv1_fallback, 
                        _kSSLSessionConfig_anonymous, _kSSLSessionConfig_default, 
                        _kSSLSessionConfig_legacy, _kSSLSessionConfig_legacy_DHE, 

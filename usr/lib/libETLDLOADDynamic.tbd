@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 2DD12856-70C5-3EF0-BA7B-B3D45E39DD35', 'armv7s: 240F7992-7F61-3E4F-BE81-6D0558DD73BA', 
-                   'arm64: A13ECB56-73E7-33EE-9D50-364E5F64368F' ]
+uuids:           [ 'armv7: A0FB1AE5-6D63-3A16-84B6-A256E6922BE4', 'armv7s: C7938B89-BFF7-3FAB-8DC0-1B70F0E10415', 
+                   'arm64: 205BECEB-CB79-3341-BB1E-0C476A1AEB06' ]
 platform:        ios
 install-name:    /usr/lib/libETLDLOADDynamic.dylib
 current-version: 0.0

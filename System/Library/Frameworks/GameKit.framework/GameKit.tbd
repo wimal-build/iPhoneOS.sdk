@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 1189013A-8067-38C7-A940-0AB91A940DD0', 'armv7s: BE5E79F5-38B1-30D0-9415-BEB3188F9D29', 
-                   'arm64: B4F25C1D-E032-3BE5-BAE3-F26D96895F4B' ]
+uuids:           [ 'armv7: 23E9BA14-D276-3912-BB80-5F6371E6365D', 'armv7s: 7C437CE1-0472-31C6-9460-B31D489052C1', 
+                   'arm64: E1493A9A-5EE2-35F5-A886-F600A6866A55' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GameKit.framework/GameKit
-current-version: 471.0.2
+current-version: 471.0.105
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -351,12 +351,12 @@ exports:
                        _GKPeerPickerViewController._pendingPeer, _GKPeerPickerViewController._pendingState, 
                        _GKPeerPickerViewController._searchingForServicesString, _GKPeerPickerViewController._sessionMap, 
                        _GKPeerPickerViewController._state, _GKPeerPickerViewController._statusView, 
-                       _GKPeerPickerViewController._updating, _GKPlayerCredential._accountName, 
-                       _GKPlayerCredential._altDSID, _GKPlayerCredential._authenticationToken, 
-                       _GKPlayerCredential._environment, _GKPlayerCredential._playerInternal, 
-                       _GKPlayerCredential._rawPassword, _GKPlayerCredential._scope, 
-                       _GKPlayerCredential._scopeModificationDate, _GKPlayerInternal._flags, 
-                       _GKReachability.localWiFiRef, _GKReachability.reachabilityRef, 
+                       _GKPeerPickerViewController._updating, _GKPlayerCredential._DSID, 
+                       _GKPlayerCredential._accountName, _GKPlayerCredential._altDSID, 
+                       _GKPlayerCredential._authenticationToken, _GKPlayerCredential._environment, 
+                       _GKPlayerCredential._playerInternal, _GKPlayerCredential._rawPassword, 
+                       _GKPlayerCredential._scope, _GKPlayerCredential._scopeModificationDate, 
+                       _GKPlayerInternal._flags, _GKReachability.localWiFiRef, _GKReachability.reachabilityRef, 
                        _GKRecoveryAttempter._attemptRecovery, _GKRequestIdentifier._arguments, 
                        _GKRequestIdentifier._savedHash, _GKRequestIdentifier._selector, 
                        _GKUITheme._resourceCache, __GKStateMachine._currentState, 

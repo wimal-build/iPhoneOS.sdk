@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 4C06FDC4-1237-381F-9A1C-AF6B559D5A89', 'armv7s: 06C1253B-5A57-3DF2-B2DB-C07807D38FE2', 
-                   'arm64: 410BE9CC-C80A-3AE6-9696-7B53F08E285A' ]
+uuids:           [ 'armv7: 3187CD51-E07D-3C31-906F-771ACC563AAC', 'armv7s: F8777C97-1447-3096-BEAD-5E9A9CC74E93', 
+                   'arm64: 856D6838-B9E5-329D-9FD8-2E038B9719E8' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/StoreKit.framework/StoreKit
 objc-constraint: none

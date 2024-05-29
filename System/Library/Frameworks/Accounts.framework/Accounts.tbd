@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 736DFCA1-2400-3936-8265-52BF7F9EF298', 'armv7s: 074B7736-55A6-3082-80B3-0A6955B99712', 
-                   'arm64: 8048B745-0119-347D-8DA1-67B5C1335450' ]
+uuids:           [ 'armv7: 2110CEDA-983D-37DE-8D72-D02CE3505001', 'armv7s: 6B2EF0A1-63F8-3FCD-BF87-509C5A5DC3C2', 
+                   'arm64: BA89D108-CFEF-37AE-91B7-0116C6D7C66D' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Accounts.framework/Accounts
 current-version: 0.0
@@ -79,9 +79,10 @@ exports:
                        _ACTencentWeiboAppIdKey, _ACTencentWeiboClientConsumerKey, 
                        _ACTokenExpiryDateKey, _ACTokenKey, _ACYahooXYMPKICookieCrumbKey, 
                        _ACYahooXYMPKICookieTKey, _ACYahooXYMPKICookieYKey, _ACYahooXYMPKITokenKey, 
-                       __ACLogInternal, __ACLogInternalV, __ACLogSystem, _ac_dispatch_remote, 
-                       _createACAccountWithASAccountProperties, _createACAccountWithASAccountPropertiesAndACAccountType, 
-                       _kACAccountIdentifier, _kACAllowedSSLCertificatesKey, _kACDAllAccountsAccessEntitlement, 
+                       __ACLogInternal, __ACLogInternalV, __ACLogSystem, __ACSignpostCreate, 
+                       __ACSignpostLogSystem, _ac_dispatch_remote, _createACAccountWithASAccountProperties, 
+                       _createACAccountWithASAccountPropertiesAndACAccountType, _kACAccountIdentifier, 
+                       _kACAllowedSSLCertificatesKey, _kACDAllAccountsAccessEntitlement, 
                        _kACDAppleAccountsFullAccessEntitlement, _kACDAppleIDAuthenticationDefaultAccessEntitlement, 
                        _kACDApplicationIDFromPIDEntitlement, _kACDAuthenticationDialogHostEntitlement, 
                        _kACDBundleIDSpoofingEntitlement, _kACDConnectBeforeAccountMigrationDidFinishEntitlement, 

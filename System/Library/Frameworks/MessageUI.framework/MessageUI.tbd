@@ -1,13 +1,14 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 4B04A301-106D-31DD-A56B-E52009BE5E8B', 'armv7s: 388346EE-860B-3CF4-9AEA-DC5AD21A3579', 
-                   'arm64: D91A9692-9FE7-3A56-804C-D9BEC657926B' ]
+uuids:           [ 'armv7: 2060EAD4-D1C1-388E-98F9-A855551E5E2D', 'armv7s: 2D6FC076-7FAF-3345-98F7-01683E9ECFD5', 
+                   'arm64: DB6CDC70-4FCD-3627-97FA-7A59836FC841' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MessageUI.framework/MessageUI
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
-    symbols:         [ _MFABPropertyForRecentsKind, _MFAddressHasSafeDomain, _MFAtomViewIconImageForPresentationOption, 
+    symbols:         [ _MFABPropertyForRecentsKind, _MFAccessibilityLargeTextEnabled, 
+                       _MFAddressHasSafeDomain, _MFAtomViewIconImageForPresentationOption, 
                        _MFAttachmentAttributeActionKey, _MFAttachmentAttributeContentIDKey, 
                        _MFAttachmentAttributeContentTypeKey, _MFAttachmentAttributeProgressKey, 
                        _MFAttachmentAttributeSubtitleKey, _MFAttachmentAttributeTitleKey, 
@@ -50,7 +51,6 @@ exports:
                        _MFMessageComposeViewControllerTextMessageAvailabilityKey, 
                        _MFMessageLoadingContextErrorDomain, _MFMessageShareComposeViewDidShow, 
                        _MFMessageViewingContextAttachmentDownloadError, _MFMessageViewingContextDidLoadMessageNotification, 
-                       _MFMessageViewingContextDidSuccessfullyReloadMessageNotification, 
                        _MFModernUIApplicationPreferredContentSizeCode, _MFModernUIApplicationPreferredContentSizeIsLargerThanLarge, 
                        _MFModernUIContentSizeAwareImageNameWithPrefix, _MFModernUIContentSizeCategoryOrdering, 
                        _MFPasteboardTypeAttachmentsData, _MFPreferredAbbreviatedNameForAddressAndDisplayName, 

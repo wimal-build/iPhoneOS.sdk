@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 958FE80D-88EE-3018-86BB-287BE88F73AE', 'armv7s: B196A115-F1DB-3458-B375-205E3CD97E28', 
-                   'arm64: 99CD6C8E-779E-3566-84BF-63A26CDEC692' ]
+uuids:           [ 'armv7: 2359ACA3-B25E-3B25-8FD9-604E1D8ED50D', 'armv7s: A303D458-4DE4-3686-90E0-595F2C776AA3', 
+                   'arm64: C22E0114-5119-37FF-AE76-791CF6DF1686' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Photos.framework/Photos
 objc-constraint: none
@@ -11,20 +11,24 @@ exports:
                        _PHAssertPredicateContainsNoManagedObjects, _PHAssetAddressCityKey, 
                        _PHAssetAddressCountryCodeKey, _PHAssetAddressCountryKey, 
                        _PHAssetAddressFormattedAddressKey, _PHAssetAddressStateKey, 
-                       _PHAssetAddressStreetKey, _PHAssetAddressZipKey, _PHAssetAnalysisCountFailedNoResourceKey, 
-                       _PHAssetAnalysisCountProcessedKey, _PHAssetAnalysisCountTotalAllowedKey, 
-                       _PHAssetAnalysisCountUnavailableKey, _PHAssetAnalysisStatePropertyResultsKey, 
-                       _PHAssetCreationRequestAssetResourcesKey, _PHAssetCreationRequestDuplicateAssetIdentifierKey, 
-                       _PHAssetCreationRequestDuplicateLivePhotoAsStillKey, _PHAssetMediaSubtypesDescription, 
-                       _PHAssetMediaTypeDescription, _PHAssetPropertySetAnalysisState, 
-                       _PHAssetPropertySetComments, _PHAssetPropertySetCore, _PHAssetPropertySetDescription, 
-                       _PHAssetPropertySetFaceWorker, _PHAssetPropertySetIdentifier, 
-                       _PHAssetPropertySetImageManager, _PHAssetPropertySetMoment, 
-                       _PHAssetPropertySetOriginalMetadata, _PHAssetPropertySetPhotoIris, 
-                       _PHAssetPropertySetPlacesCore, _PHAssetPropertySetSceneAnalysis, 
-                       _PHAssetPropertySetUserActivity, _PHBatchFetchingArrayBatchSizeOptionKey, 
-                       _PHBatchFetchingArrayCacheSizeOptionKey, _PHBatchFetchingArrayPropertyHintOptionKey, 
-                       _PHChangeKey, _PHContentEditingInputCancelledKey, _PHContentEditingInputErrorKey, 
+                       _PHAssetAddressStreetKey, _PHAssetAddressZipKey, _PHAssetAnalysisAssetCountsKey, 
+                       _PHAssetAnalysisClustererEligibleFaceCountKey, _PHAssetAnalysisClustererIsClusteringKey, 
+                       _PHAssetAnalysisClustererPendingFaceCountKey, _PHAssetAnalysisClustererRebuildRequiredKey, 
+                       _PHAssetAnalysisClusteringStateKey, _PHAssetAnalysisCountFailedKey, 
+                       _PHAssetAnalysisCountFailedNoResourceKey, _PHAssetAnalysisCountProcessedKey, 
+                       _PHAssetAnalysisCountTotalAllowedKey, _PHAssetAnalysisCountUnavailableKey, 
+                       _PHAssetAnalysisStatePropertyResultsKey, _PHAssetCreationRequestAssetResourcesKey, 
+                       _PHAssetCreationRequestDuplicateAssetIdentifierKey, _PHAssetCreationRequestDuplicateLivePhotoAsStillKey, 
+                       _PHAssetMediaSubtypesDescription, _PHAssetMediaTypeDescription, 
+                       _PHAssetPropertySetAnalysisState, _PHAssetPropertySetComments, 
+                       _PHAssetPropertySetCore, _PHAssetPropertySetDescription, _PHAssetPropertySetFaceWorker, 
+                       _PHAssetPropertySetIdentifier, _PHAssetPropertySetImageManager, 
+                       _PHAssetPropertySetMoment, _PHAssetPropertySetOriginalMetadata, 
+                       _PHAssetPropertySetPhotoIris, _PHAssetPropertySetPlacesCore, 
+                       _PHAssetPropertySetSceneAnalysis, _PHAssetPropertySetUserActivity, 
+                       _PHBatchFetchingArrayBatchSizeOptionKey, _PHBatchFetchingArrayCacheSizeOptionKey, 
+                       _PHBatchFetchingArrayPropertyHintOptionKey, _PHChangeKey, 
+                       _PHContentEditingInputCancelledKey, _PHContentEditingInputErrorKey, 
                        _PHContentEditingInputResultIsInCloudKey, _PHCopyUniformTypeIdentifierFromFileURL, 
                        _PHCopyUniformTypeIdentifierFromFilename, _PHEnumerateAssetResourceTypes, 
                        _PHFacePropertySetClustering, _PHFacePropertySetCore, _PHFacePropertySetCropping, 

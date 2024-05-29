@@ -1167,6 +1167,20 @@
 					<key>Stereo</key>
 					<true/>
 				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
 			</dict>
 			<key>Level</key>
 			<integer>41</integer>
@@ -1224,6 +1238,20 @@
 					<false/>
 					<key>Stereo</key>
 					<true/>
+				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
 				</dict>
 			</dict>
 			<key>Codec</key>
@@ -1287,6 +1315,20 @@
 					<key>Stereo</key>
 					<true/>
 				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
 			</dict>
 			<key>Codec</key>
 			<string>avc1</string>
@@ -1348,6 +1390,20 @@
 					<false/>
 					<key>Stereo</key>
 					<true/>
+				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
 				</dict>
 			</dict>
 			<key>Codec</key>
@@ -1413,6 +1469,20 @@
 					<key>Stereo</key>
 					<true/>
 				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
 			</dict>
 			<key>Codec</key>
 			<string>avc1</string>
@@ -1477,6 +1547,20 @@
 					<key>Stereo</key>
 					<true/>
 				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
 			</dict>
 			<key>ComplexityLevel</key>
 			<integer>1</integer>
@@ -1534,6 +1618,20 @@
 					<false/>
 					<key>Stereo</key>
 					<true/>
+				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
 				</dict>
 			</dict>
 			<key>Codec</key>
@@ -1597,6 +1695,20 @@
 					<key>Stereo</key>
 					<true/>
 				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
 			</dict>
 			<key>Codec</key>
 			<string>avc1</string>
@@ -1658,6 +1770,20 @@
 					<false/>
 					<key>Stereo</key>
 					<true/>
+				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
 				</dict>
 			</dict>
 			<key>Codec</key>
@@ -1723,6 +1849,20 @@
 					<key>Stereo</key>
 					<true/>
 				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
 			</dict>
 			<key>Codec</key>
 			<string>avc1</string>
@@ -1787,6 +1927,20 @@
 					<key>Stereo</key>
 					<true/>
 				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
 			</dict>
 			<key>Level</key>
 			<integer>42</integer>
@@ -1844,6 +1998,20 @@
 					<false/>
 					<key>Stereo</key>
 					<true/>
+				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
 				</dict>
 			</dict>
 			<key>Level</key>
@@ -1905,6 +2073,20 @@
 					<key>Stereo</key>
 					<true/>
 				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
 			</dict>
 			<key>Level</key>
 			<integer>51</integer>
@@ -1959,6 +2141,20 @@
 					<false/>
 					<key>Stereo</key>
 					<true/>
+				</dict>
+				<key>AC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
+				</dict>
+				<key>EnhancedAC3</key>
+				<dict>
+					<key>AppleDRM</key>
+					<true/>
+					<key>MaximumSampleRate</key>
+					<integer>48000</integer>
 				</dict>
 			</dict>
 			<key>MaximumAverageBitRate</key>

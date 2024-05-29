@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: B44032FF-3B1D-383E-B0DD-5E6DE3287867', 'armv7s: ED46600B-B72B-3C6B-9D20-C3935422DE05', 
-                   'arm64: 4DFB778D-144F-3B6C-932D-5E8F5A93043F' ]
+uuids:           [ 'armv7: 37D588C0-23D9-390B-86B9-600059DBD90D', 'armv7s: EF7481EB-2BD1-358C-B0B3-50F436018224', 
+                   'arm64: 4A2F57E7-33FF-30EC-84DD-E66E791F3A3A' ]
 platform:        ios
 install-name:    /usr/lib/libipsec.A.dylib
 current-version: 300.0

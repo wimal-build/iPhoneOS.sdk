@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 14E7A3AC-EB5D-3FAD-9128-6D3C2A4DB65D', 'armv7s: 57408568-3DA5-32C0-8369-AF493706B8EE', 
-                   'arm64: 3DBA9ACF-3D8A-3C4B-A13C-247AF89C49D1' ]
+uuids:           [ 'armv7: 5EE9A03E-2537-328D-A2D7-22848A35466A', 'armv7s: 8821FF0F-A4C4-3068-894B-C9EED07DAFDF', 
+                   'arm64: 98232306-BEE6-3701-8C72-B59D44C31840' ]
 platform:        ios
 install-name:    /usr/lib/libARIServer.dylib
 objc-constraint: none

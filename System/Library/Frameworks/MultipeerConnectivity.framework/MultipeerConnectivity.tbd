@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
-uuids:           [ 'armv7: 93CBFA88-92CD-36F7-B4EB-D1C04B7BA8B6', 'armv7s: 65F0497A-E245-38BC-99CB-39A3538A1C85', 
-                   'arm64: 503800B9-3914-3404-9F0D-C3C1932932F8' ]
+uuids:           [ 'armv7: 4281BC5D-3B41-3949-9B78-3391E74DF853', 'armv7s: 5B805195-37D8-3157-9975-30CD46E02F81', 
+                   'arm64: 4A72F09A-1383-3CCA-B6E5-1A8826B47666' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MultipeerConnectivity.framework/MultipeerConnectivity
 current-version: 135.0

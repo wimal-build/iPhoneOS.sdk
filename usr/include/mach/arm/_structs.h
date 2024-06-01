@@ -92,8 +92,45 @@ _STRUCT_ARM_THREAD_STATE
 };
 #endif /* __DARWIN_UNIX03 */
 
+
+/*
+ * By default, the pointer fields in the arm_thread_state64_t structure are
+ * opaque on the arm64e architecture and require the use of accessor macros.
+ * This mode can also be enabled on the arm64 architecture by building with
+ * -D__DARWIN_OPAQUE_ARM_THREAD_STATE64=1.
+ */
+#if defined(__arm64__) && defined(__LP64__)
+
+#if __has_feature(ptrauth_calls)
+#define __DARWIN_OPAQUE_ARM_THREAD_STATE64 1
+#define __DARWIN_PTRAUTH_ARM_THREAD_STATE64 1
+#endif /* __has_feature(ptrauth_calls) */
+
+#ifndef __DARWIN_OPAQUE_ARM_THREAD_STATE64
+#define __DARWIN_OPAQUE_ARM_THREAD_STATE64 0
+#endif
+
+#else /* defined(__arm64__) && defined(__LP64__) */
+
+#undef __DARWIN_OPAQUE_ARM_THREAD_STATE64
+#define __DARWIN_OPAQUE_ARM_THREAD_STATE64 0
+
+#endif /* defined(__arm64__) && defined(__LP64__) */
+
 #if __DARWIN_UNIX03
 #define _STRUCT_ARM_THREAD_STATE64	struct __darwin_arm_thread_state64
+#if __DARWIN_OPAQUE_ARM_THREAD_STATE64
+_STRUCT_ARM_THREAD_STATE64
+{
+	__uint64_t    __x[29];	/* General purpose registers x0-x28 */
+	void*         __opaque_fp;	/* Frame pointer x29 */
+	void*         __opaque_lr;	/* Link register x30 */
+	void*         __opaque_sp;	/* Stack pointer x31 */
+	void*         __opaque_pc;	/* Program counter */
+	__uint32_t    __cpsr;	/* Current program status register */
+	__uint32_t    __opaque_flags;	/* Flags describing structure format */
+};
+#else /* __DARWIN_OPAQUE_ARM_THREAD_STATE64 */
 _STRUCT_ARM_THREAD_STATE64
 {
 	__uint64_t    __x[29];	/* General purpose registers x0-x28 */
@@ -104,19 +141,249 @@ _STRUCT_ARM_THREAD_STATE64
 	__uint32_t    __cpsr;	/* Current program status register */
 	__uint32_t    __pad;    /* Same size for 32-bit or 64-bit clients */
 };
+#endif /* __DARWIN_OPAQUE_ARM_THREAD_STATE64 */
 #else /* !__DARWIN_UNIX03 */
 #define _STRUCT_ARM_THREAD_STATE64	struct arm_thread_state64
+#if __DARWIN_OPAQUE_ARM_THREAD_STATE64
+_STRUCT_ARM_THREAD_STATE64
+{
+	__uint64_t    x[29];	/* General purpose registers x0-x28 */
+	void*         __opaque_fp;	/* Frame pointer x29 */
+	void*         __opaque_lr;	/* Link register x30 */
+	void*         __opaque_sp;	/* Stack pointer x31 */
+	void*         __opaque_pc;	/* Program counter */
+	__uint32_t    cpsr;		/* Current program status register */
+	__uint32_t    __opaque_flags;	/* Flags describing structure format */
+};
+#else /* __DARWIN_OPAQUE_ARM_THREAD_STATE64 */
 _STRUCT_ARM_THREAD_STATE64
 {
 	__uint64_t    x[29];	/* General purpose registers x0-x28 */
 	__uint64_t    fp;		/* Frame pointer x29 */
 	__uint64_t    lr;		/* Link register x30 */
 	__uint64_t    sp;		/* Stack pointer x31 */
-	__uint64_t    pc; 		/* Program counter */
+	__uint64_t    pc;		/* Program counter */
 	__uint32_t    cpsr;		/* Current program status register */
 	__uint32_t    __pad;    /* Same size for 32-bit or 64-bit clients */
 };
+#endif /* __DARWIN_OPAQUE_ARM_THREAD_STATE64 */
 #endif /* __DARWIN_UNIX03 */
+
+#if __DARWIN_C_LEVEL >= __DARWIN_C_FULL && defined(__arm64__)
+
+/* Accessor macros for arm_thread_state64_t pointer fields */
+
+#if __has_feature(ptrauth_calls) && defined(__LP64__)
+#include <ptrauth.h>
+
+#if !__DARWIN_OPAQUE_ARM_THREAD_STATE64 || !__DARWIN_PTRAUTH_ARM_THREAD_STATE64
+#error "Invalid configuration"
+#endif
+
+#define __DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH 0x1
+#define __DARWIN_ARM_THREAD_STATE64_FLAGS_IB_SIGNED_LR 0x2
+
+/* Return pc field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_pc(ts) \
+		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); (uintptr_t)\
+		(__tsp->__opaque_pc && !(__tsp->__opaque_flags & \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH) ? \
+		ptrauth_auth_data(__tsp->__opaque_pc, \
+		ptrauth_key_process_independent_code, \
+		ptrauth_string_discriminator("pc")) : __tsp->__opaque_pc); })
+/* Return pc field of arm_thread_state64_t as a function pointer */
+#define __darwin_arm_thread_state64_get_pc_fptr(ts) \
+		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); \
+		(__tsp->__opaque_pc && !(__tsp->__opaque_flags & \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH) ? \
+		ptrauth_auth_function(__tsp->__opaque_pc, \
+		ptrauth_key_process_independent_code, \
+		ptrauth_string_discriminator("pc")) : __tsp->__opaque_pc); })
+/* Set pc field of arm_thread_state64_t to a function pointer */
+#define __darwin_arm_thread_state64_set_pc_fptr(ts, fptr) \
+		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); \
+		__typeof__(fptr) __f = (fptr); __tsp->__opaque_pc = \
+		(__f ? (!(__tsp->__opaque_flags & \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH) ? \
+		ptrauth_auth_and_resign(__f, ptrauth_key_function_pointer, 0, \
+		ptrauth_key_process_independent_code, \
+		ptrauth_string_discriminator("pc")) : ptrauth_auth_data(__f, \
+		ptrauth_key_function_pointer, 0)) : __f); })
+/* Return lr field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_lr(ts) \
+		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); (uintptr_t)\
+		(__tsp->__opaque_lr && !(__tsp->__opaque_flags & ( \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH | \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_IB_SIGNED_LR)) ? \
+		ptrauth_auth_data(__tsp->__opaque_lr, \
+		ptrauth_key_process_independent_code, \
+		ptrauth_string_discriminator("lr")) : __tsp->__opaque_lr); })
+/* Return lr field of arm_thread_state64_t as a function pointer */
+#define __darwin_arm_thread_state64_get_lr_fptr(ts) \
+		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); \
+		(__tsp->__opaque_lr && !(__tsp->__opaque_flags & ( \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH | \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_IB_SIGNED_LR)) ? \
+		ptrauth_auth_function(__tsp->__opaque_lr, \
+		ptrauth_key_process_independent_code, \
+		ptrauth_string_discriminator("lr")) : __tsp->__opaque_lr); })
+/* Set lr field of arm_thread_state64_t to a function pointer */
+#define __darwin_arm_thread_state64_set_lr_fptr(ts, fptr) \
+		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); \
+		__typeof__(fptr) __f = (fptr); __tsp->__opaque_lr = \
+		(__f ? (!(__tsp->__opaque_flags & \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH) ? (__tsp->__opaque_flags \
+		&= ~__DARWIN_ARM_THREAD_STATE64_FLAGS_IB_SIGNED_LR , \
+		ptrauth_auth_and_resign(__f, ptrauth_key_function_pointer, 0, \
+		ptrauth_key_process_independent_code, \
+		ptrauth_string_discriminator("lr"))) : ptrauth_auth_data(__f, \
+		ptrauth_key_function_pointer, 0)) : __f); })
+/* Return sp field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_sp(ts) \
+		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); (uintptr_t)\
+		(__tsp->__opaque_sp && !(__tsp->__opaque_flags & \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH) ? \
+		ptrauth_auth_data(__tsp->__opaque_sp, \
+		ptrauth_key_process_independent_data, \
+		ptrauth_string_discriminator("sp")) : __tsp->__opaque_sp); })
+/* Set sp field of arm_thread_state64_t to a data pointer value */
+#define __darwin_arm_thread_state64_set_sp(ts, ptr) \
+		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); \
+		void *__p = (void*)(uintptr_t)(ptr); __tsp->__opaque_sp = \
+		(__p && !(__tsp->__opaque_flags & \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH) ? \
+		ptrauth_sign_unauthenticated(__p, \
+		ptrauth_key_process_independent_data, \
+		ptrauth_string_discriminator("sp")) : __p); })
+/* Return fp field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_fp(ts) \
+		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); (uintptr_t)\
+		(__tsp->__opaque_fp && !(__tsp->__opaque_flags & \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH) ? \
+		ptrauth_auth_data(__tsp->__opaque_fp, \
+		ptrauth_key_process_independent_data, \
+		ptrauth_string_discriminator("fp")) : __tsp->__opaque_fp); })
+/* Set fp field of arm_thread_state64_t to a data pointer value */
+#define __darwin_arm_thread_state64_set_fp(ts, ptr) \
+		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); \
+		void *__p = (void*)(uintptr_t)(ptr); __tsp->__opaque_fp = \
+		(__p && !(__tsp->__opaque_flags & \
+		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH) ? \
+		ptrauth_sign_unauthenticated(__p, \
+		ptrauth_key_process_independent_data, \
+		ptrauth_string_discriminator("fp")) : __p); })
+
+#else /* __has_feature(ptrauth_calls) && defined(__LP64__) */
+
+#if __DARWIN_OPAQUE_ARM_THREAD_STATE64
+
+#ifndef __LP64__
+#error "Invalid configuration"
+#endif
+
+/* Return pc field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_pc(ts) \
+		((uintptr_t)((ts).__opaque_pc))
+/* Return pc field of arm_thread_state64_t as a function pointer */
+#define __darwin_arm_thread_state64_get_pc_fptr(ts) \
+		((ts).__opaque_pc)
+/* Set pc field of arm_thread_state64_t to a function pointer */
+#define __darwin_arm_thread_state64_set_pc_fptr(ts, fptr) \
+		((ts).__opaque_pc = (fptr))
+/* Return lr field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_lr(ts) \
+		((uintptr_t)((ts).__opaque_lr))
+/* Return lr field of arm_thread_state64_t as a function pointer */
+#define __darwin_arm_thread_state64_get_lr_fptr(ts) \
+		((ts).__opaque_lr)
+/* Set lr field of arm_thread_state64_t to a function pointer */
+#define __darwin_arm_thread_state64_set_lr_fptr(ts, fptr) \
+		((ts).__opaque_lr = (fptr))
+/* Return sp field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_sp(ts) \
+		((uintptr_t)((ts).__opaque_sp))
+/* Set sp field of arm_thread_state64_t to a data pointer value */
+#define __darwin_arm_thread_state64_set_sp(ts, ptr) \
+		((ts).__opaque_sp = (void*)(uintptr_t)(ptr))
+/* Return fp field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_fp(ts) \
+		((uintptr_t)((ts).__opaque_fp))
+/* Set fp field of arm_thread_state64_t to a data pointer value */
+#define __darwin_arm_thread_state64_set_fp(ts, ptr) \
+		((ts).__opaque_fp = (void*)(uintptr_t)(ptr))
+
+#else /* __DARWIN_OPAQUE_ARM_THREAD_STATE64 */
+#if __DARWIN_UNIX03
+
+/* Return pc field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_pc(ts) \
+		((ts).__pc)
+/* Return pc field of arm_thread_state64_t as a function pointer */
+#define __darwin_arm_thread_state64_get_pc_fptr(ts) \
+		((void*)(uintptr_t)((ts).__pc))
+/* Set pc field of arm_thread_state64_t to a function pointer */
+#define __darwin_arm_thread_state64_set_pc_fptr(ts, fptr) \
+		((ts).__pc = (uintptr_t)(fptr))
+/* Return lr field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_lr(ts) \
+		((ts).__lr)
+/* Return lr field of arm_thread_state64_t as a function pointer */
+#define __darwin_arm_thread_state64_get_lr_fptr(ts) \
+		((void*)(uintptr_t)((ts).__lr))
+/* Set lr field of arm_thread_state64_t to a function pointer */
+#define __darwin_arm_thread_state64_set_lr_fptr(ts, fptr) \
+		((ts).__lr = (uintptr_t)(fptr))
+/* Return sp field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_sp(ts) \
+		((ts).__sp)
+/* Set sp field of arm_thread_state64_t to a data pointer value */
+#define __darwin_arm_thread_state64_set_sp(ts, ptr) \
+		((ts).__sp = (uintptr_t)(ptr))
+/* Return fp field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_fp(ts) \
+		((ts).__fp)
+/* Set fp field of arm_thread_state64_t to a data pointer value */
+#define __darwin_arm_thread_state64_set_fp(ts, ptr) \
+		((ts).__fp = (uintptr_t)(ptr))
+
+#else /* __DARWIN_UNIX03 */
+
+/* Return pc field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_pc(ts) \
+		((ts).pc)
+/* Return pc field of arm_thread_state64_t as a function pointer */
+#define __darwin_arm_thread_state64_get_pc_fptr(ts) \
+		((void*)(uintptr_t)((ts).pc))
+/* Set pc field of arm_thread_state64_t to a function pointer */
+#define __darwin_arm_thread_state64_set_pc_fptr(ts, fptr) \
+		((ts).pc = (uintptr_t)(fptr))
+/* Return lr field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_lr(ts) \
+		((ts).lr)
+/* Return lr field of arm_thread_state64_t as a function pointer */
+#define __darwin_arm_thread_state64_get_lr_fptr(ts) \
+		((void*)(uintptr_t)((ts).lr))
+/* Set lr field of arm_thread_state64_t to a function pointer */
+#define __darwin_arm_thread_state64_set_lr_fptr(ts, fptr) \
+		((ts).lr = (uintptr_t)(fptr))
+/* Return sp field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_sp(ts) \
+		((ts).sp)
+/* Set sp field of arm_thread_state64_t to a data pointer value */
+#define __darwin_arm_thread_state64_set_sp(ts, ptr) \
+		((ts).sp = (uintptr_t)(ptr))
+/* Return fp field of arm_thread_state64_t as a data pointer value */
+#define __darwin_arm_thread_state64_get_fp(ts) \
+		((ts).fp)
+/* Set fp field of arm_thread_state64_t to a data pointer value */
+#define __darwin_arm_thread_state64_set_fp(ts, ptr) \
+		((ts).fp = (uintptr_t)(ptr))
+
+#endif /* __DARWIN_UNIX03 */
+#endif /* __DARWIN_OPAQUE_ARM_THREAD_STATE64 */
+
+#endif /* __has_feature(ptrauth_calls) && defined(__LP64__) */
+#endif /* __DARWIN_C_LEVEL >= __DARWIN_C_FULL && defined(__arm64__) */
 
 #if __DARWIN_UNIX03
 #define _STRUCT_ARM_VFP_STATE		struct __darwin_arm_vfp_state

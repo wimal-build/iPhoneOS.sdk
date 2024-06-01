@@ -1,12 +1,14 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 2CE3FDA2-67A0-3264-941A-619EC2039CF3', 'armv7s: 7E092984-DABF-3722-80B7-EB4B0E908A00', 
-                   'arm64: 160A4F46-32C1-3DEA-BC09-34440F059724' ]
+                   'arm64: 1B0ACB0F-E060-3EE6-A20D-CEFB2A3C9A6C' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreMIDI.framework/CoreMIDI
 current-version: 69
 objc-constraint: none
 exports:         
+  - archs:           [ armv7, armv7s ]
+    symbols:         [ _MIDISetNotificationRunLoop ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _MIDIClientCreate, _MIDIClientCreateWithBlock, _MIDIClientDispose, 
                        _MIDIConfigCheckVirginState, _MIDIConfigDelete, _MIDIConfigDuplicate, 
@@ -33,14 +35,14 @@ exports:
                        _MIDIOutputPortCreate, _MIDIPacketListAdd, _MIDIPacketListInit, 
                        _MIDIPortConnectSource, _MIDIPortDisconnectSource, _MIDIPortDispose, 
                        _MIDIReceived, _MIDIRestart, _MIDISend, _MIDISendSysex, _MIDIServerRun, 
-                       _MIDISetNotificationRunLoop, _MIDISetupAddDevice, _MIDISetupAddExternalDevice, 
-                       _MIDISetupRemoveDevice, _MIDISetupRemoveExternalDevice, _MIDISourceCreate, 
-                       _MIDIThruConnectionCreate, _MIDIThruConnectionDispose, _MIDIThruConnectionFind, 
-                       _MIDIThruConnectionGetParams, _MIDIThruConnectionParamsInitialize, 
-                       _MIDIThruConnectionSetParams, _MIDITimerTaskCreate, _MIDITimerTaskDispose, 
-                       _MIDITimerTaskSetNextWakeTime, _kMIDIPropertyAdvanceScheduleTimeMuSec, 
-                       _kMIDIPropertyCanRoute, _kMIDIPropertyConnectionUniqueID, 
-                       _kMIDIPropertyDeviceID, _kMIDIPropertyDisplayName, _kMIDIPropertyDriverDeviceEditorApp, 
+                       _MIDISetupAddDevice, _MIDISetupAddExternalDevice, _MIDISetupRemoveDevice, 
+                       _MIDISetupRemoveExternalDevice, _MIDISourceCreate, _MIDIThruConnectionCreate, 
+                       _MIDIThruConnectionDispose, _MIDIThruConnectionFind, _MIDIThruConnectionGetParams, 
+                       _MIDIThruConnectionParamsInitialize, _MIDIThruConnectionSetParams, 
+                       _MIDITimerTaskCreate, _MIDITimerTaskDispose, _MIDITimerTaskSetNextWakeTime, 
+                       _kMIDIPropertyAdvanceScheduleTimeMuSec, _kMIDIPropertyCanRoute, 
+                       _kMIDIPropertyConnectionUniqueID, _kMIDIPropertyDeviceID, 
+                       _kMIDIPropertyDisplayName, _kMIDIPropertyDriverDeviceEditorApp, 
                        _kMIDIPropertyDriverOwner, _kMIDIPropertyDriverVersion, _kMIDIPropertyImage, 
                        _kMIDIPropertyIsBroadcast, _kMIDIPropertyIsDrumMachine, _kMIDIPropertyIsEffectUnit, 
                        _kMIDIPropertyIsEmbeddedEntity, _kMIDIPropertyIsMixer, _kMIDIPropertyIsSampler, 
@@ -57,5 +59,6 @@ exports:
                        _kMIDIPropertyTransmitsBankSelectMSB, _kMIDIPropertyTransmitsClock, 
                        _kMIDIPropertyTransmitsMTC, _kMIDIPropertyTransmitsNotes, 
                        _kMIDIPropertyTransmitsProgramChanges, _kMIDIPropertyUniqueID ]
-    objc-classes:    [ BLEMIDIAccessor, MIDINetworkConnection, MIDINetworkHost, MIDINetworkSession ]
+    objc-classes:    [ BLEMIDIAccessor, MIDICIProfile, MIDICIProfileState, MIDICISession, 
+                       MIDINetworkConnection, MIDINetworkHost, MIDINetworkSession ]
 ...

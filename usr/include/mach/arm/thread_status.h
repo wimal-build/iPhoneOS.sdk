@@ -89,6 +89,43 @@ typedef _STRUCT_ARM_THREAD_STATE		arm_thread_state_t;
 typedef _STRUCT_ARM_THREAD_STATE		arm_thread_state32_t;
 typedef _STRUCT_ARM_THREAD_STATE64		arm_thread_state64_t;
 
+#if __DARWIN_C_LEVEL >= __DARWIN_C_FULL && defined(__arm64__)
+
+/* Accessor macros for arm_thread_state64_t pointer fields */
+
+/* Return pc field of arm_thread_state64_t as a data pointer value */
+#define arm_thread_state64_get_pc(ts) \
+		__darwin_arm_thread_state64_get_pc(ts)
+/* Return pc field of arm_thread_state64_t as a function pointer */
+#define arm_thread_state64_get_pc_fptr(ts) \
+		__darwin_arm_thread_state64_get_pc_fptr(ts)
+/* Set pc field of arm_thread_state64_t to a function pointer */
+#define arm_thread_state64_set_pc_fptr(ts, fptr) \
+		__darwin_arm_thread_state64_set_pc_fptr(ts, fptr)
+/* Return lr field of arm_thread_state64_t as a data pointer value */
+#define arm_thread_state64_get_lr(ts) \
+		__darwin_arm_thread_state64_get_lr(ts)
+/* Return lr field of arm_thread_state64_t as a function pointer */
+#define arm_thread_state64_get_lr_fptr(ts) \
+		__darwin_arm_thread_state64_get_lr_fptr(ts)
+/* Set lr field of arm_thread_state64_t to a function pointer */
+#define arm_thread_state64_set_lr_fptr(ts, fptr) \
+		__darwin_arm_thread_state64_set_lr_fptr(ts, fptr)
+/* Return sp field of arm_thread_state64_t as a data pointer value */
+#define arm_thread_state64_get_sp(ts) \
+		__darwin_arm_thread_state64_get_sp(ts)
+/* Set sp field of arm_thread_state64_t to a data pointer value */
+#define arm_thread_state64_set_sp(ts, ptr) \
+		__darwin_arm_thread_state64_set_sp(ts, ptr)
+/* Return fp field of arm_thread_state64_t as a data pointer value */
+#define arm_thread_state64_get_fp(ts) \
+		__darwin_arm_thread_state64_get_fp(ts)
+/* Set fp field of arm_thread_state64_t to a data pointer value */
+#define arm_thread_state64_set_fp(ts, ptr) \
+		__darwin_arm_thread_state64_set_fp(ts, ptr)
+
+#endif /* __DARWIN_C_LEVEL >= __DARWIN_C_FULL && defined(__arm64__) */
+
 struct arm_unified_thread_state {
 	arm_state_hdr_t ash;
 	union {

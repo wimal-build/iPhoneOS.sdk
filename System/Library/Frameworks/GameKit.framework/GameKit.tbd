@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 3817F758-B554-346F-A951-1D020678C69F', 'armv7s: 2288339A-48B6-30FC-B586-BB87F12460EC', 
-                   'arm64: C4048FCC-F0C8-344E-9C17-FC25589A946C' ]
+                   'arm64: 321911C0-A755-340B-97EB-84D979406966' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GameKit.framework/GameKit
-current-version: 563.15
+current-version: 563.125
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -19,10 +19,10 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 13B46BF3-BBCA-3074-9CB3-1A1DC4D72EDA', 'armv7s: B2BD1C74-5CF1-3DE5-A6E7-0CC4028E12CA', 
-                   'arm64: F59DFFB8-1C82-3062-B298-B145145AAC5F' ]
+                   'arm64: 8364851C-F6C9-3084-8579-25833974610D' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenter.framework/GameCenter
-current-version: 563.15
+current-version: 563.125
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -34,7 +34,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 736319F2-63D9-309B-BB1F-BFBCA1C0EC4F', 'armv7s: 1C63987E-AE2A-3926-8E64-109F7D87D19C', 
-                   'arm64: C94A9F58-4930-3B51-A410-2A8397EA2545' ]
+                   'arm64: 34F134EC-A330-3040-B041-4DEF1A0F8734' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenterFoundation.framework/GameCenterFoundation
 objc-constraint: none
@@ -161,8 +161,11 @@ exports:
                        _GKReporterDomainChallengeDetailPlayGameInGame, _GKReporterDomainChallengeIssue, 
                        _GKReporterDomainDashboardAchievementDetail, _GKReporterDomainDashboardAchievementList, 
                        _GKReporterDomainDashboardChallengeDetail, _GKReporterDomainDashboardChallengeList, 
-                       _GKReporterDomainDashboardFriendScoreDetail, _GKReporterDomainDashboardLeaderboardList, 
-                       _GKReporterDomainDashboardMeScoreDetail, _GKReporterDomainDashboardOthersScoreDetail, 
+                       _GKReporterDomainDashboardFriendScoreDetail, _GKReporterDomainDashboardFriendsOnScoreList, 
+                       _GKReporterDomainDashboardLeaderboardList, _GKReporterDomainDashboardMeScoreDetail, 
+                       _GKReporterDomainDashboardOthersScoreDetail, _GKReporterDomainDashboardRankOnFriendScoreDetail, 
+                       _GKReporterDomainDashboardRankOnMeScoreDetail, _GKReporterDomainDashboardRankOnOthersScoreDetail, 
+                       _GKReporterDomainDashboardRankOnShareFriendScore, _GKReporterDomainDashboardRankOnShareMeScore, 
                        _GKReporterDomainDashboardScoreList, _GKReporterDomainDashboardShareAchievement, 
                        _GKReporterDomainDashboardShareFriendScore, _GKReporterDomainDashboardShareMeScore, 
                        _GKReporterDomainFriendRequestFriendRequests, _GKReporterDomainFriendRequestPlayerDetail, 
@@ -177,8 +180,11 @@ exports:
                        _GKReporterDomainInviteFlowConnectingCancel, _GKReporterDomainInviteFlowDetailAdd, 
                        _GKReporterDomainInviteFlowDetailCancel, _GKReporterDomainInviteFlowDetailContacts, 
                        _GKReporterDomainInviteFlowDetailSelection, _GKReporterDomainInviteFlowInitialCancel, 
-                       _GKReporterDomainInviteFlowInviteFriends, _GKReporterDomainInviteFlowNearByContacts, 
-                       _GKReporterDomainInviteFlowPlayNow, _GKReporterDomainInviteFlowRecentContacts, 
+                       _GKReporterDomainInviteFlowInviteFriends, _GKReporterDomainInviteFlowMessageBasedInvites, 
+                       _GKReporterDomainInviteFlowNearByContacts, _GKReporterDomainInviteFlowPlayNow, 
+                       _GKReporterDomainInviteFlowPushedBasedInvites, _GKReporterDomainInviteFlowRTAverageInvitees, 
+                       _GKReporterDomainInviteFlowRTGameFailed, _GKReporterDomainInviteFlowRTInviteeConnectionTime, 
+                       _GKReporterDomainInviteFlowRTNoOfInvitees, _GKReporterDomainInviteFlowRecentContacts, 
                        _GKReporterDomainInviteFlowSendMessage, _GKReporterDomainInviteFlowStart, 
                        _GKReporterDomainInviteFlowTypesInContacts, _GKReporterDomainInviteInitiate, 
                        _GKReporterDomainInviteInitiateNearby, _GKReporterDomainInviteUninvite, 
@@ -336,7 +342,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 0214FDB6-40C9-3072-B1E2-5F27BC4EB96C', 'armv7s: 1A8453C0-6089-3257-AC4A-5C55CF26C652', 
-                   'arm64: 4D4B66D4-C42D-37E6-9132-E0FA65E7233B' ]
+                   'arm64: 50029156-B9A4-3E30-B21E-66E0A0053C98' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenterUI.framework/GameCenterUI
 objc-constraint: none
@@ -412,7 +418,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 07C3539C-2DA0-3A73-8198-9AFC20E91843', 'armv7s: 335E90EB-3E4F-3CBF-8DA7-FB11612B55F4', 
-                   'arm64: 35D7FDA8-CBF8-3D2F-9560-163493A076C8' ]
+                   'arm64: 46AD5056-DA1A-3FE6-BE0E-79604CA85E4A' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/LegacyGameKit.framework/LegacyGameKit
 objc-constraint: none

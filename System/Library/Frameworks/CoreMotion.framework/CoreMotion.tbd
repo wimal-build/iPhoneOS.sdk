@@ -1,41 +1,45 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 1C5C5C58-BFCF-3C99-83ED-B4851E3A8BA4', 'armv7s: 3D439D0E-75CC-3DFF-9EAA-5891ED69A175', 
-                   'arm64: 4AB2249D-1D28-3E71-86D7-5014514CA6B8' ]
+                   'arm64: DF022C31-1D55-3504-AE86-CFB1628D2C40' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreMotion.framework/CoreMotion
-current-version: 2245.0.41
+current-version: 2245.4.104
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
-    symbols:         [ _CLSF_biermanUpdate_6x3, _CLSF_thorntonUpdate_6x6, _CMWorkoutKeyEventDate, 
-                       _CMWorkoutKeyLocation, _CMWorkoutKeyPoolLength, _CMWorkoutKeySessionId, 
-                       _CMWorkoutKeyType, __ZN2cl6chrono19CFAbsoluteTimeClock9to_time_tERKNSt3__16chrono10time_pointIS1_NS3_8durationIeNS2_5ratioILx1ELx1EEEEEEE ]
+    symbols:         [ _CLSF_biermanUpdate_6x3, _CLSF_thorntonUpdate_6x6, _CLStartStopAdvertisingBeacon, 
+                       _CMWorkoutKeyEventDate, _CMWorkoutKeyLocation, _CMWorkoutKeyPoolLength, 
+                       _CMWorkoutKeySessionId, _CMWorkoutKeyType, __ZN2cl6chrono19CFAbsoluteTimeClock9to_time_tERKNSt3__16chrono10time_pointIS1_NS3_8durationIeNS2_5ratioILx1ELx1EEEEEEE ]
     objc-classes:    [ CMLiftManager, CMLiftMotion ]
   - archs:           [ arm64 ]
-    symbols:         [ __ZN2cl6chrono19CFAbsoluteTimeClock9to_time_tERKNSt3__16chrono10time_pointIS1_NS3_8durationIeNS2_5ratioILl1ELl1EEEEEEE ]
+    symbols:         [ __ZN16CLMotionActivity25isVehicularHighConfidenceENS_19VehicularConfidenceE, 
+                       __ZN2cl6chrono19CFAbsoluteTimeClock9to_time_tERKNSt3__16chrono10time_pointIS1_NS3_8durationIeNS2_5ratioILl1ELl1EEEEEEE, 
+                       __ZNK16CLMotionActivity25isVehicularHighConfidenceEv ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _AKSC_Decomp8975, _AKSC_InitDecomp8975, _AKSC_SetHDOELevel, 
                        _AKSC_abs16, _AKSC_angRng, _AKSC_atan2, _AKSC_buffer, _AKSC_cholDc, 
                        _AKSC_cholSl, _AKSC_cos, _AKSC_div16, _AKSC_div16f, _AKSC_div32, 
                        _AKSC_fitOnPlane, _AKSC_getCoeff, _AKSC_invSqrt, _AKSC_norm16, 
                        _AKSC_norm32, _AKSC_sin, _AKSC_sqrt16, _AKSC_sqrt32, _AKSC_vectorCalc, 
-                       _CLMotionSyncStoreLastUpdate, _CLStartStopAdvertisingBeacon, 
-                       _CMActivityData, _CMAnomalyDetectorEnabled, _CMAnomalyDetectorEventAbsTimestamp, 
-                       _CMAnomalyDetectorEventAopTimestamp, _CMAnomalyEventType, 
-                       _CMAuthorized, _CMAvailable, _CMCameraVcmActuatorId, _CMCaptureModeData, 
+                       _CLGetAccessoryMotionSensorLogs, _CLGetMotionSensorLogs, _CLMotionSyncStoreLastUpdate, 
+                       _CMActivityData, _CMAnomalyDetectorEnabled, _CMAnomalyDetectorEvent, 
+                       _CMAnomalyEventType, _CMAnomalySensorTestModeEnabled, _CMAuthorized, 
+                       _CMAvailable, _CMCameraVcmActuatorId, _CMCaptureModeData, 
                        _CMCompassCalibrationData, _CMDatabaseType, _CMDeviceHasOriginalBackCamera, 
-                       _CMErrorDomain, _CMErrorMessage, _CMExerciseMinuteDataArray, 
-                       _CMExerciseMinuteRecordId, _CMExerciseMinuteSourceId, _CMExerciseMinuteStartDate, 
-                       _CMExtensions, _CMFallDataCollectionConfigurationKey, _CMFallLastAckedAopTimestamp, 
-                       _CMFallSetStatsEnabled, _CMFallSetStatsNameOfCurrentFile, 
+                       _CMDyskinesiaResultsKey, _CMErrorDomain, _CMErrorMessage, 
+                       _CMExerciseMinuteDataArray, _CMExerciseMinuteRecordId, _CMExerciseMinuteSourceId, 
+                       _CMExerciseMinuteStartDate, _CMExtensions, _CMFallDataCollectionConfigurationKey, 
+                       _CMFallLastReplyAopTimestamp, _CMFallSetStatsEnabled, _CMFallSetStatsNameOfCurrentFile, 
                        _CMFallSetStatsNumberOfAvailableFiles, _CMFallSetStatsSizeOfCurrentFile, 
                        _CMFallStatsMode, _CMFallStatsSensorRecordingActive, _CMFallStatsSimulateFall, 
                        _CMFallStatsUserStudyPressureDataCollection, _CMFileSize, 
                        _CMFilteredElevationKeySample, _CMFitnessMachineDataRecord, 
+                       _CMHealthAssessmentFromDateKey, _CMHealthAssessmentToDateKey, 
                        _CMMetMinutesArray, _CMMotionActivityData, _CMMotionActivityDataArray, 
                        _CMMotionActivityStartTime, _CMMotionActivityStopTime, _CMMotionAlarmKey, 
                        _CMMotionStateSim, _CMMotionStateSimResult, _CMMotionStateSimState, 
+                       _CMMovementDisorderLastProcessedKey, _CMMovementDisorderMonitorKinesiasExpirationKey, 
                        _CMNatalimeterSetUserAgeYr, _CMNatalimeterSetUserBiologicalSex, 
                        _CMNatalimeterSetUserCondition, _CMNatalimeterSetUserHeightMeter, 
                        _CMNatalimeterSetUserHrmin, _CMNatalimeterSetUserHrminReset, 
@@ -73,11 +77,11 @@ exports:
                        _CMSignificantElevationKeyQueryTimeRange, _CMSignificantElevationKeySample, 
                        _CMSkiKeyDataArray, _CMSkiKeyDataRecord, _CMSpringKeyDataArray, 
                        _CMSpringKeyDataRecord, _CMStateSidebandState, _CMSwimKeyDataArray, 
-                       _CMSwimKeyDataRecord, _CMTimeRangeKey, _CMVO2MaxInputsArray, 
-                       _CMVO2MaxInputsRecord, _CMVehicleConnectionEndTime, _CMVehicleConnectionStartTime, 
-                       _CMVehicleStateDeviceId, _CMVehicularHintsKey, _CMVehicularStateKey, 
-                       _CMWorkoutAttributes, _CMWorkoutEventDate, _CMWorkoutTimeout, 
-                       _I16V_INIT_VALUE, __ZN16CLMotionActivity12isTypeMovingENS_4TypeE, 
+                       _CMSwimKeyDataRecord, _CMTimeRangeKey, _CMTremorResultsKey, 
+                       _CMVO2MaxInputsArray, _CMVO2MaxInputsRecord, _CMVehicleConnectionEndTime, 
+                       _CMVehicleConnectionStartTime, _CMVehicleStateDeviceId, _CMVehicularHintsKey, 
+                       _CMVehicularStateKey, _CMWorkoutAttributes, _CMWorkoutEventDate, 
+                       _CMWorkoutTimeout, _I16V_INIT_VALUE, __ZN16CLMotionActivity12isTypeMovingENS_4TypeE, 
                        __ZN16CLMotionActivity12isTypeRowingENS_4TypeE, __ZN16CLMotionActivity12isTypeStaticENS_4TypeE, 
                        __ZN16CLMotionActivity13isTypeCyclingENS_4TypeE, __ZN16CLMotionActivity13isTypeDrivingENS_4TypeE, 
                        __ZN16CLMotionActivity13isTypeRunningENS_4TypeE, __ZN16CLMotionActivity13isTypeWalkingENS_4TypeE, 
@@ -104,26 +108,31 @@ exports:
                        _kCMVehicleDisconnectedNotification, _kCMVehicleExitNotification, 
                        _kCMVehicularStateChangedNotification, _zzAKSC_HDOEProcessS3, 
                        _zzAKSC_InitHDOEProcPrmsS3 ]
-    objc-classes:    [ CMAccelerometerData, CMActivity, CMActivityAlarm, CMActivityManager, 
+    objc-classes:    [ CLDeviceMotionProperties, CLHealthAssessmentRecordTypeForDuration, 
+                       CLSensorRecorderRecordSensorTypeFor, CLSensorRecorderSensorAvailable, 
+                       CLSensorRecorderSensorDataRequestById, CLSensorRecorderSensorMeta, 
+                       CLSensorRecorderSensorMetaRequestByDateRange, CLSensorRecorderSensorMetaRequestById, 
+                       CLSensorRecorderSensorSampleRate, CLSensorRecorderWriteSensorDataToFileForDateRange, 
+                       CMAccelerometerData, CMActivity, CMActivityAlarm, CMActivityManager, 
                        CMAltimeter, CMAltitudeData, CMAmbientPressureData, CMAnomalyEvent, 
                        CMAnomalyManager, CMAttitude, CMCallHandednessManager, CMCalorieUserInfo, 
-                       CMCatherineFeeder, CMDeviceMotion, CMDeviceMotionLite, CMDeviceOrientation, 
-                       CMDeviceOrientationManager, CMElevation, CMElevationData, 
-                       CMExerciseMinute, CMExerciseMinuteData, CMFall, CMFitnessMachine, 
-                       CMFitnessMachineData, CMFitnessMachineWorkout, CMGestureManager, 
-                       CMGyroData, CMHealthTracker, CMLogItem, CMMagnetometerData, 
-                       CMMetMinute, CMMotionActivity, CMMotionActivityManager, CMMotionAlarm, 
-                       CMMotionAlarmManager, CMMotionManager, CMMotionTimeRange, 
-                       CMNatalieData, CMNatalimeter, CMOdometer, CMOdometerData, 
+                       CMCatherineData, CMCatherineFeeder, CMDeviceMotion, CMDeviceMotionLite, 
+                       CMDeviceOrientation, CMDeviceOrientationManager, CMDyskineticSymptomResult, 
+                       CMElevation, CMElevationData, CMExerciseMinute, CMExerciseMinuteData, 
+                       CMFall, CMFitnessMachine, CMFitnessMachineData, CMFitnessMachineWorkout, 
+                       CMGestureManager, CMGyroData, CMHealthTracker, CMLogItem, 
+                       CMMagnetometerData, CMMetMinute, CMMotionActivity, CMMotionActivityManager, 
+                       CMMotionAlarm, CMMotionAlarmManager, CMMotionManager, CMMotionTimeRange, 
+                       CMMotionUtils, CMNatalieData, CMNatalimeter, CMOdometer, CMOdometerData, 
                        CMOnBodyStatus, CMOnBodyStatusManager, CMPedometer, CMPedometerBin, 
                        CMPedometerData, CMPedometerEvent, CMPickupManager, CMPocketStateManager, 
                        CMRecordedAccelerometerData, CMRecordedGyroData, CMSedentaryTimer, 
                        CMSedentaryTimerData, CMSensorDataList, CMSensorRecorder, 
                        CMSignificantElevationSample, CMSkiData, CMSkiTracker, CMSleepData, 
                        CMSleepTracker, CMStepCounter, CMSwimData, CMSwimTracker, 
-                       CMSwimWorkout, CMVO2MaxInputs, CMVehicleConnection, CMVehicleConnectionData, 
-                       CMVehicleState, CMVehicleStateData, CMWakeGestureManager, 
-                       CMWorkout, CMWorkoutManager ]
+                       CMSwimWorkout, CMTremorResult, CMVO2MaxInputs, CMVehicleConnection, 
+                       CMVehicleConnectionData, CMVehicleState, CMVehicleStateData, 
+                       CMWakeGestureManager, CMWorkout, CMWorkoutManager ]
     objc-ivars:      [ CMActivityManager._internal, CMAnomalyManager.fAppQueue, CMAnomalyManager.fPrivateQueue, 
                        CMGestureManager._internal ]
 ...

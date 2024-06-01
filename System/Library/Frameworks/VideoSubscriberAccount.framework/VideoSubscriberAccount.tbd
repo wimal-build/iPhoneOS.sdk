@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: EF039D34-68F0-34F8-918E-D1EE9A3300E5', 'armv7s: 7E17A1E2-DF00-346C-9700-36C35FB22283', 
-                   'arm64: 3DA190AE-B453-3133-8F46-F5CD1C3C55C9' ]
+                   'arm64: BC9A0D32-31DD-3AD9-B867-704138FA92EE' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/VideoSubscriberAccount.framework/VideoSubscriberAccount
-current-version: 260.2
+current-version: 270.2
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

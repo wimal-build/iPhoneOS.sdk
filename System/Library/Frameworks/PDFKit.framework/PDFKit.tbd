@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: D4B8C584-7C7A-31EB-AD5C-849567932FA4' ]
+                   'arm64: FFFA856F-107E-39BA-AD39-468091B181B1' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PDFKit.framework/PDFKit
 objc-constraint: none
@@ -73,6 +73,8 @@ exports:
                        _kPDFDocumentWriteOption_UseAppendMode ]
     objc-classes:    [ PDFAction, PDFActionGoTo, PDFActionNamed, PDFActionRemoteGoTo, 
                        PDFActionResetForm, PDFActionURL, PDFAnnotation, PDFAppearanceCharacteristics, 
-                       PDFBorder, PDFDestination, PDFDocument, PDFOutline, PDFPage, 
-                       PDFSelection, PDFThumbnailView, PDFView, PDFViewLayout ]
+                       PDFBorder, PDFDestination, PDFDocument, PDFExtensionContext, 
+                       PDFExtensionViewController, PDFHostExtensionContext, PDFHostViewController, 
+                       PDFOutline, PDFPage, PDFSelection, PDFThumbnailView, PDFView, 
+                       PDFViewLayout, XPCExtensionInterface ]
 ...

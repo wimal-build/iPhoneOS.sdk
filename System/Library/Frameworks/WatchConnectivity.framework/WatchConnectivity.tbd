@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 75570633-A6F1-34E8-8B2F-460AAA018007', 'armv7s: 85AFE37B-A011-31F7-8DED-28DE8D2BF3B2', 
-                   'arm64: 2DEB9F6E-7379-301A-AEF8-FFF627597AED' ]
+                   'arm64: 0F2044E9-ADA2-33E4-990D-3A9D4D56DD75' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/WatchConnectivity.framework/WatchConnectivity
-current-version: 161
+current-version: 175
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]

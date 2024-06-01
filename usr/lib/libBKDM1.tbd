@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 5B2E6BBE-CE5B-313F-BE13-1B9A7BADFFE4' ]
+                   'arm64: B1B30738-D023-34F0-8948-4610ECEA1297' ]
 platform:        ios
 install-name:    /usr/lib/libBKDM1.dylib
 objc-constraint: none
@@ -28,13 +28,14 @@ exports:
                        _diffTimeStamps, _getLocalEEPROMCalibrationData, _kBioLockoutRecordSecureDataKey, 
                        _kBioLockoutRecordVersionKey, _kBioOpParamEnrollOptions, _kBioOpParamEnrollType, 
                        _kBioOpParamEnrollUserID, _kBioOpParamFdetOptions, _kBioOpParamMatchFilter, 
-                       _kBioOpParamMatchOptions, _kBioOpParamMatchPreArm, _kBioOpParamsMatchFilterHB, 
-                       _kBioOpParamsMatchStopOnSuccess, _kBioOpParamsMatchUnlockUserID, 
-                       _kCatacombCurrentDateKey, _kCatacombEnrollmentCountKey, _kCatacombIdentityListKey, 
-                       _kCatacombSecureDataKey, _kCatacombTemplateListKey, _kCatacombUserIDKey, 
-                       _kCatacombUserKeybagUUIDKey, _kCatacombUserUUIDKey, _kCatacombVersionKey, 
-                       _kCoreauthdBundleIdentifier, _kPurpleBuddyBundleIdentifier, 
-                       _kSpringBoardBundleIdentifier, _logQueueLabel, _memdump, _mesaScanningStateNotificationCallback, 
+                       _kBioOpParamMatchOptions, _kBioOpParamMatchPreArm, _kBioOpParamsMatchExtendEnrollment, 
+                       _kBioOpParamsMatchFilterHB, _kBioOpParamsMatchStopOnSuccess, 
+                       _kBioOpParamsMatchUnlockUserID, _kCatacombCurrentDateKey, 
+                       _kCatacombEnrollmentCountKey, _kCatacombIdentityListKey, _kCatacombSecureDataKey, 
+                       _kCatacombTemplateListKey, _kCatacombUserIDKey, _kCatacombUserKeybagUUIDKey, 
+                       _kCatacombUserUUIDKey, _kCatacombVersionKey, _kCoreauthdBundleIdentifier, 
+                       _kPurpleBuddyBundleIdentifier, _kSpringBoardBundleIdentifier, 
+                       _logQueueLabel, _memdump, _mesaScanningStateNotificationCallback, 
                        _mobileKeyBagLockStatusNotificationCallback, _openConnection, 
                        _powerSourceInterestNotificationCallback, _readData, _serialize, 
                        _writeData ]

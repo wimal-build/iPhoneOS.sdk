@@ -1,18 +1,21 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 48A08B91-0708-3A8E-8343-BED960D7731D', 'armv7s: 1972EBF6-17F3-37AD-9067-8004D9FF136E', 
-                   'arm64: E98D05C6-7CA5-3DD8-BCA4-64AE4289F0AD' ]
+                   'arm64: B4620133-D085-3707-9BFD-F0B55D2F7A08' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
 current-version: 33
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
+    re-exports:      [ /System/Library/Frameworks/Contacts.framework/Contacts ]
     symbols:         [ _ABAccountIdentifierGlobal, _ABAccountIdentifierLocal, _ABAccountIdentifierSearchPrefix, 
                        _ABAccountPrimarySourceNameForPerson, _ABAccountSourceIsICloud, 
-                       _ABAddressGetStreetFormatForCountryCode, _ABCCopyFormattedStringForDate, 
-                       _ABCCopyLocalizedStringForPropertyWithFormatKey, _ABCopyAccountInformation, 
-                       _ABCreateStringForAddress, _ABDateByConvertingToCurrentTimeZone, 
+                       _ABAddressBookBundle, _ABAddressBookGetDefaultRotationContentSettings, 
+                       _ABAddressBookSetAutorotationEnabled, _ABAddressBookShouldAllowAutorotation, 
+                       _ABAddressBookUIBundle, _ABAddressGetStreetFormatForCountryCode, 
+                       _ABCCopyFormattedStringForDate, _ABCCopyLocalizedStringForPropertyWithFormatKey, 
+                       _ABCopyAccountInformation, _ABCreateStringForAddress, _ABDateByConvertingToCurrentTimeZone, 
                        _ABDateByNormalizingToGMT, _ABDateFieldDateDidBeginEditingNotification, 
                        _ABDateFieldDateDidEndEditingNotification, _ABDateIsNormalizedToGMT, 
                        _ABDefaultCountryCode, _ABGetFormattedAddressInfoForAddressInfo, 
@@ -21,6 +24,12 @@ exports:
                        _ABKeyboardAdjusterWillAdjustOnKeyboardWillHideNotification, 
                        _ABKeyboardAdjusterWillAdjustOnKeyboardWillShowNotification, 
                        _ABKeyboardIsActiveAndIntesectsScreen, _ABNavigationButtonsUpdatedNotificationName, 
+                       _ABPersonRingtoneProperty, _ABPersonTextToneProperty, _ABUIAppIsOldFMF, 
+                       _ABUIIsBlurSupported, _ABUIIsContacts, _ABUIIsDDActionsService, 
+                       _ABUIIsFaceTime, _ABUIIsFirstParty, _ABUIIsGameCenterFriendRequestExtension, 
+                       _ABUIIsMobilePhone, _ABUIOldAppsUseModernUI, _ABUIPixelAlignedPoint, 
+                       _ABUIPixelAlignedRect, _ABUIPixelAlignedSize, _ABUIRoundToViewScale, 
+                       _ABUISetUseSiriLocalization, _ABUIShouldUseLegacyUI, _ABUIShouldUseSiriLocalization, 
                        _BoldTextAttributesKey, _CNContactAlternateBirthdayProperty, 
                        _CNContactBirthdayProperty, _CNContactDatesProperty, _CNContactDepartmentNameProperty, 
                        _CNContactEmailAddressesProperty, _CNContactFamilyNameProperty, 
@@ -179,27 +188,16 @@ exports:
                        ABUITextView._lastContentHeight, ABUITextView._parent, ABUITextView._pinnedCursorPosition, 
                        ABUITextView._savedTextColor, ABUITextView._shadowColor, ABUITextView._shadowOffset ]
   - archs:           [ armv7, armv7s, arm64 ]
-    re-exports:      [ /System/Library/Frameworks/Contacts.framework/Contacts ]
-    symbols:         [ _ABAddressBookBundle, _ABAddressBookGetDefaultRotationContentSettings, 
-                       _ABAddressBookSetAutorotationEnabled, _ABAddressBookShouldAllowAutorotation, 
-                       _ABAddressBookUIBundle, _ABCreateStringWithAddressDictionary, 
-                       _ABPersonBirthdayProperty, _ABPersonDatesProperty, _ABPersonDepartmentNameProperty, 
-                       _ABPersonEmailAddressesProperty, _ABPersonFamilyNameProperty, 
-                       _ABPersonGivenNameProperty, _ABPersonInstantMessageAddressesProperty, 
+    symbols:         [ _ABCreateStringWithAddressDictionary, _ABPersonBirthdayProperty, 
+                       _ABPersonDatesProperty, _ABPersonDepartmentNameProperty, _ABPersonEmailAddressesProperty, 
+                       _ABPersonFamilyNameProperty, _ABPersonGivenNameProperty, _ABPersonInstantMessageAddressesProperty, 
                        _ABPersonJobTitleProperty, _ABPersonMiddleNameProperty, _ABPersonNamePrefixProperty, 
                        _ABPersonNameSuffixProperty, _ABPersonNicknameProperty, _ABPersonNoteProperty, 
                        _ABPersonOrganizationNameProperty, _ABPersonPhoneNumbersProperty, 
                        _ABPersonPhoneticFamilyNameProperty, _ABPersonPhoneticGivenNameProperty, 
                        _ABPersonPhoneticMiddleNameProperty, _ABPersonPostalAddressesProperty, 
                        _ABPersonPreviousFamilyNameProperty, _ABPersonRelatedNamesProperty, 
-                       _ABPersonRingtoneProperty, _ABPersonSocialProfilesProperty, 
-                       _ABPersonTextToneProperty, _ABPersonUrlAddressesProperty, 
-                       _ABUIAppIsOldFMF, _ABUIIsBlurSupported, _ABUIIsContacts, _ABUIIsDDActionsService, 
-                       _ABUIIsFaceTime, _ABUIIsFirstParty, _ABUIIsGameCenterFriendRequestExtension, 
-                       _ABUIIsMobilePhone, _ABUIOldAppsUseModernUI, _ABUIPixelAlignedPoint, 
-                       _ABUIPixelAlignedRect, _ABUIPixelAlignedSize, _ABUIRoundToViewScale, 
-                       _ABUISetUseSiriLocalization, _ABUIShouldUseLegacyUI, _ABUIShouldUseSiriLocalization, 
-                       _PostalAddressByAddingCountry, _StringByRemovingConsecutiveNewLines ]
+                       _ABPersonSocialProfilesProperty, _ABPersonUrlAddressesProperty ]
     objc-classes:    [ ABNewPersonViewController, ABPeoplePickerNavigationController, 
                        ABPersonViewController, ABUnknownPersonViewController ]
 ...

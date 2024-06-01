@@ -1,17 +1,20 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 820AEE23-2598-3655-B65B-180F0FC8CDEF' ]
+                   'arm64: 1D6C3415-1E0A-3C5F-96FA-2E030062741C' ]
 platform:        ios
 install-name:    /usr/lib/libParallelCompression.dylib
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
-    symbols:         [ _BXDiff5, _BXPatch5, _BXPatch5InPlace, _BXPatchFile, _DirectoryDiff, 
-                       _DirectoryPatch, _ISparseArchiveStreamCreate, _ISparseArchiveStreamDestroy, 
+    symbols:         [ _BXDiff5, _BXDiff5WithIndividualPatches, _BXPatch5, _BXPatch5InPlace, 
+                       _BXPatch5WithFlags, _BXPatchFile, _DirectoryDiff, _DirectoryPatch, 
+                       _ISparseArchiveStreamCreate, _ISparseArchiveStreamDestroy, 
                        _ISparseArchiveStreamRead, _PCompressFilter, _PackagePatch, 
-                       _ParallelArchiveCombine, _ParallelArchiveConvert, _ParallelArchiveExtract, 
-                       _ParallelArchiveExtractClones, _ParallelArchiveExtractSubtree, 
+                       _ParallelArchiveCheckAndFix, _ParallelArchiveCombine, _ParallelArchiveConvert, 
+                       _ParallelArchiveECCFixBuffer, _ParallelArchiveECCFixFileSegment, 
+                       _ParallelArchiveECCGenerateFromBuffer, _ParallelArchiveECCGenerateFromFileSegment, 
+                       _ParallelArchiveExtract, _ParallelArchiveExtractClones, _ParallelArchiveExtractSubtree, 
                        _ParallelArchiveFilesystemCreate, _ParallelArchiveFilesystemDestroy, 
                        _ParallelArchiveFilesystemEntryClose, _ParallelArchiveFilesystemEntryFirstChild, 
                        _ParallelArchiveFilesystemEntryLink, _ParallelArchiveFilesystemEntryName, 

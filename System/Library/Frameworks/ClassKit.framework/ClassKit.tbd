@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 0609212D-6904-3CFD-8F32-5C2CBB117E0B' ]
+                   'arm64: D4BBBB37-050E-32F2-BE32-F9BF1953E31A' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ClassKit.framework/ClassKit
-current-version: 115.7
+current-version: 141
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -29,16 +29,17 @@ exports:
                        _CLSInitLog, _CLSIsAppExtensionWithProperties, _CLSIsCurrentTaskAppExtension, 
                        _CLSLogApp, _CLSLogAuthorization, _CLSLogClasses, _CLSLogConnection, 
                        _CLSLogDatabase, _CLSLogDefault, _CLSLogFetch, _CLSLogHandout, 
-                       _CLSLogJSON, _CLSLogOperations, _CLSLogSync, _CLSLogUpload, 
-                       _CLSLogXPCDisabledApps, _CLSObjectsClasses, _CLSPermissionTypeFromString, 
-                       _CLSPredicateKeyPathBundleIdentifier, _CLSPredicateKeyPathContextIdentifier, 
-                       _CLSPredicateKeyPathCurrentActivityID, _CLSPredicateKeyPathCurrentPerson, 
-                       _CLSPredicateKeyPathDateCreated, _CLSPredicateKeyPathDateLastModified, 
-                       _CLSPredicateKeyPathDateOfPublication, _CLSPredicateKeyPathDueDateKey, 
-                       _CLSPredicateKeyPathIdentifier, _CLSPredicateKeyPathLength, 
-                       _CLSPredicateKeyPathObjectID, _CLSPredicateKeyPathParent, 
-                       _CLSPredicateKeyPathParentObjectID, _CLSPredicateKeyPathPathEnd, 
-                       _CLSPredicateKeyPathPersonID, _CLSPredicateKeyPathReviewed, 
+                       _CLSLogJSON, _CLSLogOperations, _CLSLogPDTool, _CLSLogSync, 
+                       _CLSLogUpload, _CLSLogXPCDisabledApps, _CLSObjectsClasses, 
+                       _CLSPermissionTypeFromString, _CLSPredicateKeyPathBundleIdentifier, 
+                       _CLSPredicateKeyPathContextIdentifier, _CLSPredicateKeyPathCurrentActivityID, 
+                       _CLSPredicateKeyPathCurrentPerson, _CLSPredicateKeyPathDateCreated, 
+                       _CLSPredicateKeyPathDateLastModified, _CLSPredicateKeyPathDateOfPublication, 
+                       _CLSPredicateKeyPathDueDateKey, _CLSPredicateKeyPathIdentifier, 
+                       _CLSPredicateKeyPathLength, _CLSPredicateKeyPathLocked, _CLSPredicateKeyPathObjectID, 
+                       _CLSPredicateKeyPathParent, _CLSPredicateKeyPathParentObjectID, 
+                       _CLSPredicateKeyPathPathEnd, _CLSPredicateKeyPathPersonID, 
+                       _CLSPredicateKeyPathPublishingState, _CLSPredicateKeyPathReviewed, 
                        _CLSPredicateKeyPathRoles, _CLSPredicateKeyPathScore, _CLSPredicateKeyPathStart, 
                        _CLSPredicateKeyPathStartTime, _CLSPredicateKeyPathState, 
                        _CLSPredicateKeyPathTitle, _CLSPredicateKeyPathTopic, _CLSPredicateKeyPathType, 
@@ -53,16 +54,15 @@ exports:
                        _NSStringFromFavoriteType, _NSStringFromHandoutAttachmentCompletionStatus, 
                        _NSStringFromHandoutAttachmentType, _NSStringFromHandoutPublishingState, 
                        _NSStringFromHandoutState, _NSStringFromPermissionType, _NSStringFromShareType, 
-                       _PDServerMachServiceName, _clsNotificationQueue, _clsRead, 
-                       _clsWrite, _clsWriteSync, _ic, _kUTTypeCLSContext ]
+                       _PDServerMachServiceName, _clsNotificationQueue, _ic, _kUTTypeCLSContext ]
     objc-classes:    [ CLSActivity, CLSActivityItem, CLSActivityReport, CLSActivityReportItem, 
-                       CLSAggregatedValue, CLSAsset, CLSAssetUploadObserver, CLSBinaryItem, 
-                       CLSBinaryReportItem, CLSClass, CLSClassMember, CLSContext, 
-                       CLSCurrentUser, CLSDataObserver, CLSDataStore, CLSEndpointConnection, 
-                       CLSEntitlements, CLSFavorite, CLSGraph, CLSHandout, CLSHandoutAttachment, 
-                       CLSHandoutRecipient, CLSHandoutReportItem, CLSObject, CLSPerson, 
-                       CLSQuantityItem, CLSQuantityReportItem, CLSQuery, CLSRange, 
-                       CLSReportItem, CLSSaveResponse, CLSScoreItem, CLSScoreReportItem, 
-                       CLSSettingsVisibilityController, CLSTimeInterval, CLSUtil, 
-                       CLSUtilityService ]
+                       CLSAggregatedValue, CLSAsset, CLSAssetUploadObserver, CLSAuthTree, 
+                       CLSBinaryItem, CLSBinaryReportItem, CLSClass, CLSClassMember, 
+                       CLSContext, CLSCurrentUser, CLSDataObserver, CLSDataStore, 
+                       CLSEndpointConnection, CLSEntitlements, CLSFavorite, CLSGraph, 
+                       CLSHandout, CLSHandoutAttachment, CLSHandoutRecipient, CLSHandoutReportItem, 
+                       CLSObject, CLSPerson, CLSQuantityItem, CLSQuantityReportItem, 
+                       CLSQuery, CLSRange, CLSReportItem, CLSSaveResponse, CLSScoreItem, 
+                       CLSScoreReportItem, CLSSettingsVisibilityController, CLSTimeInterval, 
+                       CLSUtil, CLSUtilityService ]
 ...

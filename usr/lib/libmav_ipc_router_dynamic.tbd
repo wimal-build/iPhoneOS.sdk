@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 208334D6-2F8B-3002-AEAC-D21C16C8D9D1', 'armv7s: A7658DAC-74C0-3E09-AE1D-3138DC2C6140', 
-                   'arm64: 8EDF1F2D-1A46-3D01-8680-543D5D3D4B8B' ]
+                   'arm64: 73DA5DC2-E769-3FFB-9C0D-0447C0D87514' ]
 platform:        ios
 install-name:    /usr/lib/libmav_ipc_router_dynamic.dylib
 objc-constraint: none

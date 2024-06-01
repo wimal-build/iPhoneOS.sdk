@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 4479A1DB-1663-35BA-B576-83B7ADB8DD51', 'armv7s: 25F60C7C-430A-38C5-8D24-62C745A4F3A2', 
-                   'arm64: 1302A67A-6DF1-3B98-952C-2993246CC668' ]
+                   'arm64: 6AC62A37-ED60-323B-82BF-A98D83AE4CE8' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SpriteKit.framework/SpriteKit
 current-version: 2
@@ -82,12 +82,12 @@ exports:
                         __ZTSNSt3__120__shared_ptr_pointerIP22jet_depth_stencil_modeNS_14default_deleteIS1_EENS_9allocatorIS1_EEEE, 
                         __ZTSNSt3__120__shared_ptr_pointerIPNS_6vectorIP17SKCRenderSortInfoNS_9allocatorIS3_EEEENS_14default_deleteIS6_EENS4_IS6_EEEE ]
   - archs:           [ arm64 ]
-    symbols:         [ __Z18SKCBoundingBoxMakeDv2_fS_13simd_float4x4, __Z19SKCBoundingBoxUnionRK13simd_float4x4S1_, 
-                       __Z20SKCBoundingBoxEqualsRK13simd_float4x4S1_, __Z21SKCBoundingBoxGetAABBRK13simd_float4x4, 
-                       __Z21SKCBoundingBoxIsEmptyRK13simd_float4x4, __Z22SKCBoundingBoxGetVertsRK13simd_float4x4, 
-                       __Z23sk_matrix_get_GLKMatrixRK13simd_float2x2, __Z23sk_matrix_get_GLKMatrixRK13simd_float3x3, 
-                       __Z23sk_matrix_get_GLKMatrixRK13simd_float4x4, __Z26SKCBoundingBoxIntersectionRK13simd_float4x4S1_, 
-                       __Z29SKCBoundingBoxIntersectsPointRK13simd_float4x4Dv2_f, 
+    symbols:         [ __Z16glsk_matrix_makeRK11_GLKMatrix4, __Z18SKCBoundingBoxMakeDv2_fS_13simd_float4x4, 
+                       __Z19SKCBoundingBoxUnionRK13simd_float4x4S1_, __Z20SKCBoundingBoxEqualsRK13simd_float4x4S1_, 
+                       __Z21SKCBoundingBoxGetAABBRK13simd_float4x4, __Z21SKCBoundingBoxIsEmptyRK13simd_float4x4, 
+                       __Z22SKCBoundingBoxGetVertsRK13simd_float4x4, __Z23sk_matrix_get_GLKMatrixRK13simd_float2x2, 
+                       __Z23sk_matrix_get_GLKMatrixRK13simd_float3x3, __Z23sk_matrix_get_GLKMatrixRK13simd_float4x4, 
+                       __Z26SKCBoundingBoxIntersectionRK13simd_float4x4S1_, __Z29SKCBoundingBoxIntersectsPointRK13simd_float4x4Dv2_f, 
                        __Z30SKCBoundingBoxIntersectsCircleRK13simd_float4x4Dv2_ff, 
                        __Z35SKCBoundingBoxIntersectsBoundingBoxRK13simd_float4x4S1_, 
                        __Z37setCorrectAdjacencyDataForTileSetTypeRmPPKlS2_13SKTileSetTypemm, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 84A43E70-CAF0-3A95-B288-CA15C6E9720D', 'armv7s: A1196871-29C0-30C5-A645-FC75FB74AB2F', 
-                   'arm64: CA6558A8-F693-319A-A694-65ACD9ABC6A8' ]
+                   'arm64: 81B2802D-F887-3327-AE44-A8815B759790' ]
 platform:        ios
 install-name:    /usr/lib/libTelephonyIOKitDynamic.dylib
 objc-constraint: none
@@ -28,7 +28,8 @@ exports:
                        __ZN3ctu5iokit29RegisterForPDPNotificationsV2ENSt3__110shared_ptrINS0_10controllerEEEU13block_pointerFvjPvEPKc, 
                        __ZN3ctu5iokit31CleanUpDisplayPortNotificationsENSt3__110shared_ptrINS0_10controllerEEE, 
                        __ZN3ctu5iokit35RegisterForAccessoryNotificationsV2ENSt3__110shared_ptrINS0_10controllerEEEU13block_pointerFvjPvE, 
-                       __ZN3ctu5iokit37RegisterForDisplayPortNotificationsV2ENSt3__110shared_ptrINS0_10controllerEEEU13block_pointerFvjPvE ]
+                       __ZN3ctu5iokit37RegisterForDisplayPortNotificationsV2ENSt3__110shared_ptrINS0_10controllerEEEU13block_pointerFvjPvE, 
+                       __ZN3ctu5power7manager14listenerHandleclERKjRKbRKN8dispatch5groupERb ]
     weak-def-symbols: [ __ZTINSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
                         __ZTINSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
                         __ZTSNSt3__114default_deleteIN3ctu5power7manager14listenerHandleEEE, 
@@ -63,8 +64,9 @@ exports:
                        __ZN3ctu5iokit15IOHIDControllerD2Ev, __ZN3ctu5iokit8asStringENS0_25TelephonyIOKitPowerSourceE, 
                        __ZN3ctu5iokit8asStringENS0_27TelephonyIOKitAccessoryTypeE, 
                        __ZN3ctu5iokit8asStringENS0_29TelephonyIOKitAccessoryStatusE, 
-                       __ZN3ctu5iokit8asStringEj, __ZTIN3ctu5iokit10ControllerE, 
-                       __ZTSN3ctu5iokit10ControllerE, __ZTVN3ctu5iokit10ControllerE ]
+                       __ZN3ctu5iokit8asStringEj, __ZN3ctu5power7manager14listenerHandleclERKjRKbRKN8dispatch5groupENSt3__110shared_ptrINSB_6atomicIbEEEE, 
+                       __ZTIN3ctu5iokit10ControllerE, __ZTSN3ctu5iokit10ControllerE, 
+                       __ZTVN3ctu5iokit10ControllerE ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _IOMikeyBusBulkPipeEnable, _IOMikeyBusBulkPipeReceiveData, 
                        _IOMikeyBusBulkPipeReceiveDataAsync, _IOMikeyBusBulkPipeReset, 
@@ -91,7 +93,6 @@ exports:
                        __ZN3ctu5power7manager14listenerHandleC1ERKNS1_10parametersERKN8dispatch5blockIU13block_pointerFvvEEE, 
                        __ZN3ctu5power7manager14listenerHandleC2ERKNS1_10parametersERKN8dispatch5blockIU13block_pointerFvvEEE, 
                        __ZN3ctu5power7manager14listenerHandleD1Ev, __ZN3ctu5power7manager14listenerHandleD2Ev, 
-                       __ZN3ctu5power7manager14listenerHandleclERKjRKbRKN8dispatch5groupERb, 
                        __ZN3ctu5power7manager16registerListenerENS1_10parametersE, 
                        __ZN3ctu5power7manager20simulateNotificationEjb, __ZN3ctu5power7manager22killRunLoopThread_syncEv, 
                        __ZN3ctu5power7manager23addPowerSourceToRunLoopEP11__CFRunLoop, 

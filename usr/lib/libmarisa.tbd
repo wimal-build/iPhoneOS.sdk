@@ -1,9 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: D8AB3C04-8C6E-3801-9595-4D0610FDA74E', 'armv7s: F0F91E1A-F089-39FC-B89C-8B3F82F332FD', 
-                   'arm64: 2908E85D-03D8-38F3-BC25-82598E449C02' ]
+                   'arm64: D70FAB38-D5FF-353D-A579-BAB80C7A0A32' ]
 platform:        ios
 install-name:    /usr/lib/libmarisa.dylib
+current-version: 9.15.2
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

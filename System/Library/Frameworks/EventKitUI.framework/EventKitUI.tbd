@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: AB80F09A-89D6-3F7E-BC4F-E826405454B1', 'armv7s: 5088F091-394D-3590-814E-259190FDBB51', 
-                   'arm64: 6414C279-4E57-33DA-B5E5-FAD43BB1B24F' ]
+                   'arm64: 8133D7AA-F846-3776-AC65-9515BB8556EA' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/EventKitUI.framework/EventKitUI
 objc-constraint: none
@@ -215,9 +215,10 @@ exports:
                        _CalendarInvitationWrapperController, _CalendarMessageUIProxy, 
                        _CalendarModel, _CalendarNotesCell, _CalendarOccurrencesCollection, 
                        _CalendarPreferences, _CalendarPreferencesTable, _CalendarPublishingActivityViewController, 
-                       _ColorBarView, _CrossFadeView, _EKAlarmsViewModel, _EKCalendarAbstractSwitchEditItem, 
-                       _EKCalendarAccountEditItem, _EKCalendarAccountTableViewController, 
-                       _EKCalendarChooser, _EKCalendarChooserCell, _EKCalendarChooserCellLayoutManager, 
+                       _ColorBarView, _CrossFadeView, _DraggingContext, _EKAlarmsViewModel, 
+                       _EKCalendarAbstractSwitchEditItem, _EKCalendarAccountEditItem, 
+                       _EKCalendarAccountTableViewController, _EKCalendarChooser, 
+                       _EKCalendarChooserCell, _EKCalendarChooserCellLayoutManager, 
                        _EKCalendarChooserHeaderView, _EKCalendarColorEditItem, _EKCalendarDeleteButtonEditItem, 
                        _EKCalendarEditor, _EKCalendarIgnoreAlertsEditItem, _EKCalendarIgnoreSharedCalendarResourceChangeNotificationsEditItem, 
                        _EKCalendarInfo, _EKCalendarItemEditorTableView, _EKCalendarItemRecurrenceEndCell, 

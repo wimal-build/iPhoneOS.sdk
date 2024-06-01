@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 1C5C5C58-BFCF-3C99-83ED-B4851E3A8BA4', 'armv7s: 3D439D0E-75CC-3DFF-9EAA-5891ED69A175', 
-                   'arm64: 28EEEEAC-0B4F-3BEB-8B95-9CCFE71A7575' ]
+                   'arm64: D4E50E15-FED8-3C6C-8910-B3F176FB9D75' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreMotion.framework/CoreMotion
-current-version: 2236.0.11
+current-version: 2237.0.22
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -27,12 +27,12 @@ exports:
                        _CMExerciseMinuteDataArray, _CMExerciseMinuteRecordId, _CMExerciseMinuteSourceId, 
                        _CMExerciseMinuteStartDate, _CMExtensions, _CMFallSetStatsEnabled, 
                        _CMFallSetStatsNameOfCurrentFile, _CMFallSetStatsNumberOfAvailableFiles, 
-                       _CMFallSetStatsSizeOfCurrentFile, _CMFallStatsMode, _CMFallStatsSensorRecording, 
-                       _CMFileSize, _CMFilteredElevationKeySample, _CMFitnessMachineDataRecord, 
-                       _CMMetMinutesArray, _CMMotionActivityData, _CMMotionActivityDataArray, 
-                       _CMMotionActivityStartTime, _CMMotionActivityStopTime, _CMMotionAlarmKey, 
-                       _CMMotionStateSim, _CMMotionStateSimResult, _CMMotionStateSimState, 
-                       _CMNatalimeterSetUserAgeYr, _CMNatalimeterSetUserBiologicalSex, 
+                       _CMFallSetStatsSizeOfCurrentFile, _CMFallStatsMode, _CMFallStatsSensorRecordingActive, 
+                       _CMFallStatsSimulateFall, _CMFileSize, _CMFilteredElevationKeySample, 
+                       _CMFitnessMachineDataRecord, _CMMetMinutesArray, _CMMotionActivityData, 
+                       _CMMotionActivityDataArray, _CMMotionActivityStartTime, _CMMotionActivityStopTime, 
+                       _CMMotionAlarmKey, _CMMotionStateSim, _CMMotionStateSimResult, 
+                       _CMMotionStateSimState, _CMNatalimeterSetUserAgeYr, _CMNatalimeterSetUserBiologicalSex, 
                        _CMNatalimeterSetUserCondition, _CMNatalimeterSetUserHeightMeter, 
                        _CMNatalimeterSetUserHrmin, _CMNatalimeterSetUserHrminReset, 
                        _CMNatalimeterSetUserHronset, _CMNatalimeterSetUserOnsetVo2max, 

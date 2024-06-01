@@ -1,16 +1,17 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: A3ED655B-727E-391A-A741-7B73B4939695', 'armv7s: E3657660-EFCF-3278-A7EF-6C52F5DF55C8', 
-                   'arm64: C18CE0CD-F988-328D-B9BB-97E6FA740AD5' ]
+                   'arm64: 968C8D86-50A6-345E-99C1-1A24D4908A14' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/MetalPerformanceShaders
-current-version: 88.2
+current-version: 90.3
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ _MPSExerciseDeviceKernelList_Private, _MPSGetDeviceInfo, _MPSGetDevicePixelInfo ]
   - archs:           [ arm64 ]
-    symbols:         [ __Z21MPSDecrementReadCountP17MPSTemporaryImage, __Z25MPSGetEffectiveClipRegion7MTLSize9MPSRegion, 
+    symbols:         [ __Z21MPSDecrementReadCountP17MPSTemporaryImage, __Z21MPSDecrementReadCountP18MPSTemporaryMatrix, 
+                       __Z21MPSDecrementReadCountP18MPSTemporaryVector, __Z25MPSGetEffectiveClipRegion7MTLSize9MPSRegion, 
                        __Z25MPSGetEffectiveClipRegion7MTLSize9MTLRegion, __Z27MPSState_DecrementReadCountP8MPSState, 
                        __ZN10MPSLibrary13ReleaseMPSKeyEP11MPSKey_data, __ZN10MPSLibrary15GetComputeStateEj30MPSThreadGroupSizeMultipleType, 
                        __ZN10MPSLibrary19CreateUberShaderKeyEP8NSStringyPFPU22objcproto11MTLFunction11objc_objectPU21objcproto10MTLLibrary11objc_objectPK13MPSKernelInfoEy30MPSThreadGroupSizeMultipleType, 
@@ -64,8 +65,10 @@ exports:
                        _MPSCNNKernel, _MPSCNNLocalContrastNormalization, _MPSCNNLocalContrastNormalizationNode, 
                        _MPSCNNLogSoftMax, _MPSCNNLogSoftMaxNode, _MPSCNNNeuron, _MPSCNNNeuronAbsolute, 
                        _MPSCNNNeuronAbsoluteNode, _MPSCNNNeuronELU, _MPSCNNNeuronELUNode, 
-                       _MPSCNNNeuronHardSigmoid, _MPSCNNNeuronHardSigmoidNode, _MPSCNNNeuronLinear, 
-                       _MPSCNNNeuronLinearNode, _MPSCNNNeuronPReLU, _MPSCNNNeuronPReLUNode, 
+                       _MPSCNNNeuronExponential, _MPSCNNNeuronExponentialNode, _MPSCNNNeuronHardSigmoid, 
+                       _MPSCNNNeuronHardSigmoidNode, _MPSCNNNeuronLinear, _MPSCNNNeuronLinearNode, 
+                       _MPSCNNNeuronLogarithm, _MPSCNNNeuronLogarithmNode, _MPSCNNNeuronPReLU, 
+                       _MPSCNNNeuronPReLUNode, _MPSCNNNeuronPower, _MPSCNNNeuronPowerNode, 
                        _MPSCNNNeuronReLU, _MPSCNNNeuronReLUN, _MPSCNNNeuronReLUNNode, 
                        _MPSCNNNeuronReLUNode, _MPSCNNNeuronSigmoid, _MPSCNNNeuronSigmoidNode, 
                        _MPSCNNNeuronSoftPlus, _MPSCNNNeuronSoftPlusNode, _MPSCNNNeuronSoftSign, 
@@ -93,16 +96,18 @@ exports:
                        _MPSImageThresholdTruncate, _MPSImageTranspose, _MPSKernel, 
                        _MPSLSTMDescriptor, _MPSMatrix, _MPSMatrixBinaryKernel, _MPSMatrixCopy, 
                        _MPSMatrixCopyDescriptor, _MPSMatrixDecompositionCholesky, 
-                       _MPSMatrixDecompositionLU, _MPSMatrixDescriptor, _MPSMatrixMultiplication, 
-                       _MPSMatrixSolveCholesky, _MPSMatrixSolveLU, _MPSMatrixSolveTriangular, 
+                       _MPSMatrixDecompositionLU, _MPSMatrixDescriptor, _MPSMatrixFindTopK, 
+                       _MPSMatrixFullyConnected, _MPSMatrixLogSoftMax, _MPSMatrixMultiplication, 
+                       _MPSMatrixNeuron, _MPSMatrixSoftMax, _MPSMatrixSolveCholesky, 
+                       _MPSMatrixSolveLU, _MPSMatrixSolveTriangular, _MPSMatrixSum, 
                        _MPSMatrixUnaryKernel, _MPSMatrixVectorMultiplication, _MPSNNAdditionNode, 
                        _MPSNNBilinearScaleNode, _MPSNNConcatenation, _MPSNNConcatenationNode, 
                        _MPSNNDefaultPadding, _MPSNNDivisionNode, _MPSNNGraph, _MPSNNImageNode, 
                        _MPSNNLanczosScaleNode, _MPSNNMultiplicationNode, _MPSNNSubtractionNode, 
                        _MPSRNNDescriptor, _MPSRNNImageInferenceLayer, _MPSRNNMatrixInferenceLayer, 
                        _MPSRNNRecurrentImageState, _MPSRNNRecurrentMatrixState, _MPSRNNSingleGateDescriptor, 
-                       _MPSState, _MPSTemporaryImage, _MPSTemporaryMatrix, _MPSUnaryImageKernel, 
-                       _MPSVector, _MPSVectorDescriptor, _MPSVirtualImage ]
+                       _MPSState, _MPSTemporaryImage, _MPSTemporaryMatrix, _MPSTemporaryVector, 
+                       _MPSUnaryImageKernel, _MPSVector, _MPSVectorDescriptor, _MPSVirtualImage ]
     objc-ivars:      [ _MPSBinaryImageKernel._encode, _MPSBinaryImageKernel._encodeData, 
                        _MPSImage._featureChannels, _MPSImage._featureChannelsLayout, 
                        _MPSImage._height, _MPSImage._numberOfImages, _MPSImage._pixelInfo, 
@@ -110,8 +115,9 @@ exports:
                        _MPSImageDescriptor._featureChannels, _MPSImageDescriptor._height, 
                        _MPSImageDescriptor._width, _MPSKernel._allowedOptions, _MPSKernel._device, 
                        _MPSKernel._fileVersion, _MPSKernel._label, _MPSKernel._library, 
-                       _MPSKernel._options, _MPSKernel._privateOptions, _MPSState._cache, 
-                       _MPSState._readCount, _MPSState._resource, _MPSTemporaryImage._readCount, 
-                       _MPSUnaryImageKernel._encode, _MPSUnaryImageKernel._encodeData, 
-                       _MPSUnaryImageKernel._getPreferredTileSize ]
+                       _MPSKernel._options, _MPSKernel._privateOptions, _MPSMatrix._buffer, 
+                       _MPSState._cache, _MPSState._readCount, _MPSState._resource, 
+                       _MPSTemporaryImage._readCount, _MPSUnaryImageKernel._encode, 
+                       _MPSUnaryImageKernel._encodeData, _MPSUnaryImageKernel._getPreferredTileSize, 
+                       _MPSVector._buffer ]
 ...

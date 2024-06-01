@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 3933EA26-39AF-3256-9E07-12CF2A043B06', 'armv7s: 61EA7F20-D298-37AF-A504-4BCA9C5A414C', 
-                   'arm64: 2B7B31A4-DACE-3B22-964B-B12596BDCB7D' ]
+                   'arm64: 7C8F54DC-A906-3E6A-A687-8CDD4D58D509' ]
 platform:        ios
 install-name:    /usr/lib/libAWDProtobufFacetime.dylib
 objc-constraint: none
@@ -11,6 +11,9 @@ exports:
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport16kISBDFieldNumberE, 
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport16kRSWPFieldNumberE, 
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport20kREDStateFieldNumberE, 
+                       __ZN3awd7metrics28FaceTimeCallAggregatedReport21kMediaTypeFieldNumberE, 
+                       __ZN3awd7metrics28FaceTimeCallAggregatedReport29kGeneratedFileSizeFieldNumberE, 
+                       __ZN3awd7metrics28FaceTimeCallAggregatedReport30kFileGenerateResultFieldNumberE, 
                        __ZN3awd7metrics28FaceTimeCallAggregatedReport33kAdaptiveLearningStateFieldNumberE, 
                        __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats23kREDMaxDelayFieldNumberE, 
                        __ZN3awd7metrics41FaceTimeCallAggregatedReport_SegmentStats27kSegmentREDStateFieldNumberE, 

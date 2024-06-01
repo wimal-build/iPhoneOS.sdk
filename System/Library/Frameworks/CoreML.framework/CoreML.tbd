@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: BB1B5481-170D-3381-9CC0-269BDC82E0D9' ]
+                   'arm64: B630BBA1-75AE-3C72-9369-18F0FE48FF2B' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreML.framework/CoreML
 objc-constraint: none
@@ -17,9 +17,9 @@ exports:
                        _svm_save_model, _svm_set_print_string_function, _svm_train ]
     objc-classes:    [ _CoreMLVersion, _MLArrayFeatureExtractor, _MLCategoricalMapping, 
                        _MLClassifier, _MLClassifierLabelWithProbability, _MLClassifierResult, 
-                       _MLCompiler, _MLCompilerOptions, _MLCompilerResult, _MLDictVectorizer, 
-                       _MLDictionaryConstraint, _MLDictionaryFeatureProvider, _MLFeatureArray, 
-                       _MLFeatureDescription, _MLFeatureFrame, _MLFeatureFrameUtils, 
+                       _MLCompiler, _MLCompilerOptions, _MLCompilerResult, _MLDefaultCustomLayerFactory, 
+                       _MLDictVectorizer, _MLDictionaryConstraint, _MLDictionaryFeatureProvider, 
+                       _MLFeatureArray, _MLFeatureDescription, _MLFeatureFrame, _MLFeatureFrameUtils, 
                        _MLFeatureTypeUtils, _MLFeatureValue, _MLFeatureVectorizer, 
                        _MLGKDecisionTree, _MLGLMClassification, _MLGLMRegression, 
                        _MLIdentity, _MLImageConstraint, _MLImputer, _MLInMemoryFeatureArray, 

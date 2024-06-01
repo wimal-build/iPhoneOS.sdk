@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: C2E2BCAA-5756-3D0A-A1FB-0E55F41A55D3', 'armv7s: 3E91F229-8ADB-3900-A08E-B8C915D47CC4', 
-                   'arm64: 5507B4DE-80C4-32BC-ADA3-C3AFFC83A176' ]
+                   'arm64: DC7EFE65-E982-3E15-B1A9-D1B51DD1C695' ]
 platform:        ios
 install-name:    /usr/lib/libedit.3.dylib
 current-version: 3

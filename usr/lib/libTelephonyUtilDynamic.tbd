@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 34426CC0-9903-3282-88B9-9EE5914E703D', 'armv7s: 6D5A78D0-6DEB-3887-BC8F-828B986F940B', 
-                   'arm64: E39A5390-0AE0-35A3-9003-7F61F79DFF47' ]
+                   'arm64: 0D366024-D6DA-340A-9397-9CCDEC97BE29' ]
 platform:        ios
 install-name:    /usr/lib/libTelephonyUtilDynamic.dylib
 objc-constraint: none

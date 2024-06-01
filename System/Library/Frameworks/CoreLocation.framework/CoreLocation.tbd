@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: D5FED001-75DC-39D7-881E-D31C0E1AFCB4', 'armv7s: 40B5865E-BD06-31A9-A1C7-4D2121ACB847', 
-                   'arm64: 5FB8D3A8-B06E-3C6D-9CF1-BE40F37DD6BC' ]
+                   'arm64: 4F98821D-01EE-39E3-B2CD-A430FB77FF49' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreLocation.framework/CoreLocation
-current-version: 2236.0.11
+current-version: 2237.0.22
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -69,8 +69,8 @@ exports:
                        _kCLLocationCoordinate2DInvalid, _kCLLocationIntegrityHigh, 
                        _kCLLocationIntegrityLow, _kCLLocationIntegrityMedium, _kCLLocationIntegrityNone ]
     objc-classes:    [ _CLAssertion, _CLBeacon, _CLBeaconRegion, _CLCircularRegion, 
-                       _CLEmergencyEnablementAssertion, _CLFloor, _CLGeocoder, _CLHeading, 
-                       _CLInUseAssertion, _CLLocation, _CLLocationIndependenceAssertion, 
+                       _CLEmergencyEnablementAssertion, _CLFloor, _CLGeocoder, _CLHarvester, 
+                       _CLHeading, _CLInUseAssertion, _CLLocation, _CLLocationIndependenceAssertion, 
                        _CLLocationManager, _CLLocationManagerRoutine, _CLLocationMatchInfo, 
                        _CLLocationSmoother, _CLPlacemark, _CLPredictedApplication, 
                        _CLRegion, _CLSimulationManager, _CLStateTracker, _CLTilesManagerClient, 

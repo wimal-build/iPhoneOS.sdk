@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 07B96996-3B26-366B-BDB2-A4A191FE8943', 'armv7s: 036CDB60-D4FB-398A-81C6-C47C7C2A49D0', 
-                   'arm64: 4D7E979A-45A0-318E-9F7F-CE79F19D184E' ]
+                   'arm64: D1287E3C-F5A9-3F5B-B2E6-BDB2B48DC8E0' ]
 platform:        ios
 install-name:    /usr/lib/libQLCharts.dylib
-current-version: 257
+current-version: 257.2
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

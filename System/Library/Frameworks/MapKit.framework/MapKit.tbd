@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 2BE283FD-53AB-3656-B35A-989EC24768A0', 'armv7s: 067DAA50-59E0-3021-9D7C-9B7E03540627', 
-                   'arm64: 138FD03B-F962-3A02-8579-FFB6B14B69B0' ]
+                   'arm64: B159FE59-2A27-3823-897C-1700C7A9A619' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MapKit.framework/MapKit
 current-version: 14
@@ -199,20 +199,20 @@ exports:
                        __MXExtensionRideSharingRide, __MXExtensionRideSharingSearchRequest, 
                        __MXExtensionRideSharingSearchResponse, __MXExtensionService, 
                        __MXExtensionVendorContext ]
-    objc-ivars:      [ _MKAnnotationView._annotation, _MKAnnotationView._collisionFrame, 
-                       _MKAnnotationView._customFeatureAnnotation, _MKAnnotationView._displayPriority, 
-                       _MKMapItemMetadataRequester._dataForTasks, _MKMapItemMetadataRequester._requestsForURLs, 
-                       _MKMapItemMetadataRequester._session, _MKMapItemMetadataRequester._tasksForURLs, 
-                       _MKMapView._annotationContainer, _MKMapView._annotationCoordinateTest, 
-                       _MKMapView._annotationManager, _MKMapView._annotationRectTest, 
-                       _MKMapView._annotationTrackingZoomStyle, _MKMapView._attributionBadgeView, 
-                       _MKMapView._attributionCorner, _MKMapView._attributionLabel, 
-                       _MKMapView._basicMapView, _MKMapView._bottomLayoutGuide, _MKMapView._camera, 
-                       _MKMapView._compassView, _MKMapView._compassVisible, _MKMapView._contentView, 
-                       _MKMapView._debugConsoleAdditionalInfoProvider, _MKMapView._debugCurrentEnvironmentLabel, 
-                       _MKMapView._debugLocationConsole, _MKMapView._edgeInsets, 
-                       _MKMapView._flags, _MKMapView._gestureController, _MKMapView._heading, 
-                       _MKMapView._internal, _MKMapView._locationConsoleGesture, 
+    objc-ivars:      [ _MKAnnotationView._annotation, _MKAnnotationView._clusteringIdentifier, 
+                       _MKAnnotationView._collisionFrame, _MKAnnotationView._customFeatureAnnotation, 
+                       _MKAnnotationView._displayPriority, _MKMapItemMetadataRequester._dataForTasks, 
+                       _MKMapItemMetadataRequester._requestsForURLs, _MKMapItemMetadataRequester._session, 
+                       _MKMapItemMetadataRequester._tasksForURLs, _MKMapView._annotationContainer, 
+                       _MKMapView._annotationCoordinateTest, _MKMapView._annotationManager, 
+                       _MKMapView._annotationRectTest, _MKMapView._annotationTrackingZoomStyle, 
+                       _MKMapView._attributionBadgeView, _MKMapView._attributionCorner, 
+                       _MKMapView._attributionLabel, _MKMapView._basicMapView, _MKMapView._bottomLayoutGuide, 
+                       _MKMapView._camera, _MKMapView._compassView, _MKMapView._compassVisible, 
+                       _MKMapView._contentView, _MKMapView._debugConsoleAdditionalInfoProvider, 
+                       _MKMapView._debugCurrentEnvironmentLabel, _MKMapView._debugLocationConsole, 
+                       _MKMapView._edgeInsets, _MKMapView._flags, _MKMapView._gestureController, 
+                       _MKMapView._heading, _MKMapView._internal, _MKMapView._locationConsoleGesture, 
                        _MKMapView._longPressGestureRecognizer, _MKMapView._mapType, 
                        _MKMapView._mapView, _MKMapView._navContext, _MKMapView._nonselectingTapGestureRecognizer, 
                        _MKMapView._overlayContainer, _MKMapView._pressedLabelMarker, 

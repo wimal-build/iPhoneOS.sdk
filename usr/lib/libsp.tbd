@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 178CBDBF-7D2D-3CE6-A02D-E41083BA9F28', 'armv7s: BD8160EF-7BDA-33A6-B96D-7856D9A6D54B', 
-                   'arm64: C3BCAC83-8809-3214-B14E-918EAD768B8B' ]
+                   'arm64: 2B8D9F4D-D8DB-3218-85C2-BE19D06449C0' ]
 platform:        ios
 install-name:    /usr/lib/libsp.dylib
 objc-constraint: none

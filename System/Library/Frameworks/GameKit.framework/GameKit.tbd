@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 3817F758-B554-346F-A951-1D020678C69F', 'armv7s: 2288339A-48B6-30FC-B586-BB87F12460EC', 
-                   'arm64: 252D19FE-4EB4-3EE4-BDEB-930C924DA2FD' ]
+                   'arm64: DBF12B5B-C3F9-3F28-851C-AC0C3D3EB442' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GameKit.framework/GameKit
-current-version: 555.1.1
+current-version: 559.3
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 3BF491F6-1898-3278-B8C4-C99A7B64D4A6', 'armv7s: 9E796156-BFBF-32B3-82A6-ED68C56B5B75', 
-                   'arm64: A83CCD1B-9E8C-3749-B8DE-65745384DA14' ]
+                   'arm64: F9278E55-EBDC-3452-8A01-F614A78DEF92' ]
 platform:        ios
 install-name:    /usr/lib/libAccessibility.dylib
 objc-constraint: none
@@ -238,7 +238,7 @@ exports:
                        _kAXSTripleHomeFiredNotification, _kAXSUseDarkerKeyboardEnabledNotification, 
                        _kAXSUseSingleSystemColorNotification, _kAXSVibrationDisabledPreferenceDidChangeNotification, 
                        _kAXSVisualAlertEnabledNotification, _kAXSVisualAlertEnabledPreference, 
-                       _kAXSVoiceOverTouchBrailleBluetoothDisplayChangedNotification, 
+                       _kAXSVoiceOverLaunchedNotification, _kAXSVoiceOverTouchBrailleBluetoothDisplayChangedNotification, 
                        _kAXSVoiceOverTouchBrailleBluetoothDisplayPreference, _kAXSVoiceOverTouchBrailleContractionModeChangedNotification, 
                        _kAXSVoiceOverTouchBrailleContractionModePreference, _kAXSVoiceOverTouchBrailleEightDotModeChangedNotification, 
                        _kAXSVoiceOverTouchBrailleEightDotModePreference, _kAXSVoiceOverTouchBrailleMasterStatusCellIndexChangedNotification, 

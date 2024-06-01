@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 98EDFA7C-D257-33DB-A86D-2BAE1A39BFED', 'armv7s: 8A63A2DB-8B00-3098-BBE8-9F1634410494', 
-                   'arm64: FFB22D01-419B-38C8-84B2-2CB97AF9ABE9' ]
+                   'arm64: 6CFBBABE-13D9-384C-B69F-2D9EB300E2BC' ]
 platform:        ios
 install-name:    /usr/lib/libBasebandManager.dylib
 objc-constraint: none
@@ -53,7 +53,8 @@ exports:
                        __ZN4diag7ServiceC2ENSt3__110shared_ptrIN3ctu9LogServerEEENS_6config4ModeENS2_INS_4InfoEEEN8dispatch8callbackIU13block_pointerFvNS0_5StateENS1_12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEEEE, 
                        __ZN7antenna7Service10ratChangedERKN3xpc4dictE, __ZN7antenna7Service25setFileTransferInProgressEN3xpc4dictE, 
                        __ZN7antenna7Service8Internal10getE75TypeEv, __ZN7antenna7Service8Internal10ratChangedERKN3xpc4dictE, 
-                       __ZN7antenna7Service8Internal11getE75StateEv, __ZN7antenna7Service8Internal13configTxPowerENS_14TxPowerSvcTypeE, 
+                       __ZN7antenna7Service8Internal11getE75StateEv, __ZN7antenna7Service8Internal12setupTxPowerEv, 
+                       __ZN7antenna7Service8Internal13configTxPowerENS_14TxPowerSvcTypeE, 
                        __ZN7antenna7Service8Internal14getHACTxOffsetENS_14TxPowerSvcTypeE, 
                        __ZN7antenna7Service8Internal16getE75TypeStringEj, __ZN7antenna7Service8Internal16lteCounterNotifyEv, 
                        __ZN7antenna7Service8Internal16mesaNotificationEjPv, __ZN7antenna7Service8Internal17getE75StateStringEb, 
@@ -215,15 +216,20 @@ exports:
                        __ZN7antenna10PPMManager5startEv, __ZN7antenna10PPMManager6createENSt3__110shared_ptrIN3ctu9LogServerEEE, 
                        __ZN7antenna10PPMManager8shutdownEv, __ZN7antenna10PPMManagerC1ENSt3__110shared_ptrIN3ctu9LogServerEEE, 
                        __ZN7antenna10PPMManagerC2ENSt3__110shared_ptrIN3ctu9LogServerEEE, 
-                       __ZN7antenna15CMOnBodyManager8shutdownEv, __ZN7antenna22CMHandDetectionManager11isSupportedEv, 
-                       __ZN7antenna22CMHandDetectionManager16registerCallbackEN8dispatch5blockIU13block_pointerFvNS0_21CMHandDetectionResultEEEE, 
+                       __ZN7antenna15CMOnBodyManager8shutdownEv, __ZN7antenna16HKWorkoutManager16registerCallbackEN8dispatch5blockIU13block_pointerFvNS_11WorkoutTypeENS_12WorkoutStateEEEE, 
+                       __ZN7antenna16HKWorkoutManager4stopEv, __ZN7antenna16HKWorkoutManager5startEv, 
+                       __ZN7antenna16HKWorkoutManager6createEv, __ZN7antenna16HKWorkoutManagerC1Ev, 
+                       __ZN7antenna16HKWorkoutManagerC2Ev, __ZN7antenna16HKWorkoutManagerD0Ev, 
+                       __ZN7antenna16HKWorkoutManagerD1Ev, __ZN7antenna16HKWorkoutManagerD2Ev, 
+                       __ZN7antenna22CMHandDetectionManager11isSupportedEv, __ZN7antenna22CMHandDetectionManager16registerCallbackEN8dispatch5blockIU13block_pointerFvNS0_21CMHandDetectionResultEEEE, 
                        __ZN7antenna22CMHandDetectionManager4stopEv, __ZN7antenna22CMHandDetectionManager5startEv, 
                        __ZN7antenna22CMHandDetectionManager6createEv, __ZN7antenna22CMHandDetectionManager8shutdownEv, 
                        __ZN7antenna22CMHandDetectionManagerC1Ev, __ZN7antenna22CMHandDetectionManagerC2Ev, 
                        __ZN7antenna22CMHandDetectionManagerD1Ev, __ZN7antenna22CMHandDetectionManagerD2Ev, 
                        __ZN7antenna7Service8Internal14enablePPM_syncEb, __ZN7antenna7Service8Internal17getAccessoryStateEv, 
-                       __ZN7antenna7Service8Internal18handDetectCallbackENS_22CMHandDetectionManager21CMHandDetectionResultE, 
-                       __ZN7antenna7Service8Internal20sendPowerSource_syncEv, __ZN7antenna7Service8Internal20transmitStateHandlerENS_15BBTransmitStateENS_17BBTransmitTriggerE, 
+                       __ZN7antenna7Service8Internal17setupTxPower_syncEv, __ZN7antenna7Service8Internal18handDetectCallbackENS_22CMHandDetectionManager21CMHandDetectionResultE, 
+                       __ZN7antenna7Service8Internal20sendPowerSource_syncEv, __ZN7antenna7Service8Internal20sendWorkoutInfo_syncEv, 
+                       __ZN7antenna7Service8Internal20transmitStateHandlerENS_15BBTransmitStateENS_17BBTransmitTriggerE, 
                        __ZN7antenna7Service8Internal21isAccessoryOverriddenEv, __ZN7antenna7Service8Internal21isHandednessConditionEv, 
                        __ZN7antenna7Service8Internal21mesaNotification_syncEN3ctu5iokit23TelephonyIOKitMesaEventE, 
                        __ZN7antenna7Service8Internal22stopHandDetection_syncEv, __ZN7antenna7Service8Internal22videoNotification_syncEN3ctu5iokit25TelephonyIOKitDisplayLinkE, 
@@ -256,10 +262,11 @@ exports:
                        __ZNK4coex6Module5State7getNameEv, __ZNK4coex6Module7getNameEv, 
                        __ZNK7antenna10PPMManager7getNameEv, __ZTI14ServiceManager, 
                        __ZTI17ABMServerInternal, __ZTI17ABMServiceManager, __ZTI7Service, 
-                       __ZTIN4coex6ModuleE, __ZTS14ServiceManager, __ZTS17ABMServerInternal, 
-                       __ZTS17ABMServiceManager, __ZTS7Service, __ZTSN4coex6ModuleE, 
-                       __ZTV14ServiceManager, __ZTV17ABMServerInternal, __ZTV17ABMServiceManager, 
-                       __ZTV7Service, __ZTVN4coex6Module5StateE, __ZTVN4coex6ModuleE, 
+                       __ZTIN4coex6ModuleE, __ZTIN7antenna16HKWorkoutManagerE, __ZTS14ServiceManager, 
+                       __ZTS17ABMServerInternal, __ZTS17ABMServiceManager, __ZTS7Service, 
+                       __ZTSN4coex6ModuleE, __ZTSN7antenna16HKWorkoutManagerE, __ZTV14ServiceManager, 
+                       __ZTV17ABMServerInternal, __ZTV17ABMServiceManager, __ZTV7Service, 
+                       __ZTVN4coex6Module5StateE, __ZTVN4coex6ModuleE, __ZTVN7antenna16HKWorkoutManagerE, 
                        __ZThn64_N17ABMServerInternalD0Ev, __ZThn64_N17ABMServerInternalD1Ev ]
     weak-def-symbols: [ __ZGVN3ctu9SingletonI9ABMServerS1_NS_23PthreadMutexGuardPolicyIS1_EEE9sInstanceE, 
                         __ZN3ctu9SingletonI9ABMServerS1_NS_23PthreadMutexGuardPolicyIS1_EEE9sInstanceE ]
@@ -369,9 +376,8 @@ exports:
                        __ZN7antenna7Service18antennaGetPropertyERKN3xpc4dictE, __ZN7antenna7Service18antennaSetPropertyERKN3xpc4dictE, 
                        __ZN7antenna7Service19setMotionThresholdsEN3xpc4dictE, __ZN7antenna7Service8Internal10callActiveEv, 
                        __ZN7antenna7Service8Internal11stopServiceEv, __ZN7antenna7Service8Internal12callInactiveEv, 
-                       __ZN7antenna7Service8Internal12exitLowPowerEv, __ZN7antenna7Service8Internal12setupTxPowerEv, 
-                       __ZN7antenna7Service8Internal12startServiceEv, __ZN7antenna7Service8Internal13enterLowPowerEv, 
-                       __ZN7antenna7Service8Internal13lqmState_syncENS0_11LinkQualityE, 
+                       __ZN7antenna7Service8Internal12exitLowPowerEv, __ZN7antenna7Service8Internal12startServiceEv, 
+                       __ZN7antenna7Service8Internal13enterLowPowerEv, __ZN7antenna7Service8Internal13lqmState_syncENS0_11LinkQualityE, 
                        __ZN7antenna7Service8Internal13setAudioStateEN3xpc4dictE, 
                        __ZN7antenna7Service8Internal15isMotionSupportEv, __ZN7antenna7Service8Internal16calculateTxValueEjj, 
                        __ZN7antenna7Service8Internal16sendAudioSpeakerEv, __ZN7antenna7Service8Internal16setMaxPower_syncERKN3xpc4dictE, 

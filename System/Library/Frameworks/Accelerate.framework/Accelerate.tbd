@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: B74878DA-C236-3353-A766-F28F1BC97FB1', 'armv7s: 455F53AD-7A7F-3A51-BD40-3C216A26FACC', 
-                   'arm64: 2DB9A65F-FD55-3581-85D0-DF079BAF981B' ]
+                   'arm64: 01D515C3-376C-3327-99F1-4694934ED70B' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Accelerate.framework/Accelerate
 current-version: 4

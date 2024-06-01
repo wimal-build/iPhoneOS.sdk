@@ -15,11 +15,11 @@ extern "C" {
 #endif
     
 #define AHTRESTORE_LIBNAME                  "libAHTRestore.dylib"
-#define AHTRESTORE_LIST_DEVICES_CALLNAME    "AHTRestoreListDevices"
+#define AHTRESTORE_LIST_DEVICES_CALLNAME    "AHTRestoreCreateDeviceList"
 #define AHTRESTORE_UPDATE_DEVICE_CALLNAME   "AHTRestoreUpdateDevice" // DEPRECATED
 #define AHTRESTORE_UPDATE_DEVICE_WITH_OVERRIDES_CALLNAME   "AHTRestoreUpdateDeviceWithOverrides"
 
-// AHTRestoreListDevices dictionaries keys
+// AHTRestoreCreateDeviceList dictionaries keys
 #define AHTRESTORE_DEVICE_NAME_KEY          "DeviceName"
 #define AHTRESTORE_IMAGE_TAG_KEY            "ImageTag"
 #define AHTRESTORE_NEEDS_UPDATE_KEY         "NeedsUpdate"
@@ -49,7 +49,10 @@ typedef enum AHTRestoreOption
 } AHTRestoreOption;
     
 // Returns an array of dictionaries describing the devices available in the system
-EXPORT CFArrayRef AHTRestoreListDevices(void);
+// Note that we are changing name from AHTRestoreListDevices to AHTRestoreCreateDeviceList
+// because the function name has to include keyword 'create' otherwise returning
+// a retained variable will throw a static analysis warning.
+EXPORT CFArrayRef AHTRestoreCreateDeviceList(void);
     
 EXPORT AHTRestoreReturn AHTRestoreUpdateDevice(const char *deviceName,
                                                CFDataRef image,
@@ -59,7 +62,7 @@ EXPORT AHTRestoreReturn AHTRestoreUpdateDeviceWithOverrides(const char *deviceNa
                                                             CFDataRef image,
                                                             CFDictionaryRef overrides);
 
-typedef __typeof(AHTRestoreListDevices) *AHTRestoreListDevicesFuncPtr;
+typedef __typeof(AHTRestoreCreateDeviceList) *AHTRestoreListDevicesFuncPtr;
 typedef __typeof(AHTRestoreUpdateDevice) *AHTRestoreUpdateDeviceFuncPtr;
 typedef __typeof(AHTRestoreUpdateDeviceWithOverrides) *AHTRestoreUpdateDeviceWithOverridesFuncPtr;
     

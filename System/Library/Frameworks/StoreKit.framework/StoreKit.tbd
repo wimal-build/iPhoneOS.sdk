@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 9FC5E0DF-8C91-3101-BA4E-767F492B42E7', 'armv7s: D2C6E744-B440-3E97-BFF7-DF391BE479E5', 
-                   'arm64: 74C48A9A-59A8-352B-B508-8A45CAF08E3C' ]
+                   'arm64: B4DAF422-0DAB-32ED-A95C-29BD12B8A37F' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/StoreKit.framework/StoreKit
 objc-constraint: none
@@ -28,7 +28,8 @@ exports:
                        _SKTerminateForInvalidReceipt, _SKUIServiceReviewSandboxMode, 
                        _SKXPCCreateCFObjectFromXPCObject, _SKXPCCreateXPCObjectFromCFObject, 
                        _SKXPCDictionaryCopyCFObject, _SKXPCDictionaryCopyCFObjectWithClass, 
-                       _SKXPCDictionarySetCFObject, __SKCloudServiceSetupOptionsAudioAccessoryUniqueDeviceIdentifierKey ]
+                       _SKXPCDictionarySetCFObject, __SKCloudServiceSetupOptionsAudioAccessorySerialNumberKey, 
+                       __SKCloudServiceSetupOptionsAudioAccessoryUniqueDeviceIdentifierKey ]
     objc-classes:    [ _SKAccountPageViewController, _SKAppInstallViewController, 
                        _SKCloudServiceController, _SKCloudServiceSetupConfiguration, 
                        _SKCloudServiceSetupExtension, _SKCloudServiceSetupReloadContext, 
@@ -38,8 +39,9 @@ exports:
                        _SKInternalProductStorePromotionController, _SKMutablePayment, 
                        _SKPayment, _SKPaymentInternal, _SKPaymentQueue, _SKPaymentQueueClient, 
                        _SKPaymentQueueInternal, _SKPaymentTransaction, _SKPaymentTransactionInternal, 
-                       _SKPrivacyController, _SKProduct, _SKProductInternal, _SKProductPageExtension, 
-                       _SKProductPageRemoteViewController, _SKProductStorePromotionController, 
+                       _SKPrivacyController, _SKProduct, _SKProductDiscount, _SKProductInternal, 
+                       _SKProductPageExtension, _SKProductPageRemoteViewController, 
+                       _SKProductStorePromotionController, _SKProductSubscriptionPeriod, 
                        _SKProductsRequest, _SKProductsRequestInternal, _SKProductsResponse, 
                        _SKProductsResponseInternal, _SKPromotedIAPGetInfoInternalRequest, 
                        _SKPromotedIAPGetOrderRequest, _SKPromotedIAPGetVisibilityRequest, 

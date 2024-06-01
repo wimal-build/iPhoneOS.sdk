@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: E909E831-5A6D-3CEC-A984-836BDD4596E0', 'armv7s: 9D38EBE0-5C0A-346B-BE06-E7B971E3B366', 
-                   'arm64: 4067EBAC-6139-3271-9A6D-6C057DC0069D' ]
+                   'arm64: 6847536E-A237-3C73-88FB-9081C9DBBADD' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Accounts.framework/Accounts
 objc-constraint: none
@@ -78,12 +78,13 @@ exports:
                        _ACMigrationDidFinishDarwinNotification, _ACOAuthTokenKey, 
                        _ACOAuthTokenNoSyncKey, _ACOAuthTokenNoSyncSeparator, _ACOAuthTokenSecretKey, 
                        _ACOldPasswordKey, _ACOutputLevelKey, _ACPasswordKey, _ACPasswordResetTokenBackupKey, 
-                       _ACPasswordResetTokenKey, _ACPropertyKeyEnabledDataclasses, 
-                       _ACPropertyKeyProvisionedDataclasses, _ACPurposeKey, _ACRawPasswordKey, 
-                       _ACRemoteDeviceCommandAddAccount, _ACRemoteDeviceCommandDeleteAccount, 
-                       _ACRemoteDeviceCommandDeleteAllAccounts, _ACRemoteDeviceCommandFetchAccounts, 
-                       _ACRemoteDeviceCommandInvalidateFetchedAccountsCache, _ACRemoteDeviceCommandShowCredentialPrompt, 
-                       _ACRemoteDeviceCommandUpdateAccount, _ACRemoteDeviceCommandUpdateAccountCredential, 
+                       _ACPasswordResetTokenKey, _ACPropertyKeyAuthenticated, _ACPropertyKeyCredential, 
+                       _ACPropertyKeyEnabledDataclasses, _ACPropertyKeyProvisionedDataclasses, 
+                       _ACPurposeKey, _ACRawPasswordKey, _ACRemoteDeviceCommandAddAccount, 
+                       _ACRemoteDeviceCommandDeleteAccount, _ACRemoteDeviceCommandDeleteAllAccounts, 
+                       _ACRemoteDeviceCommandFetchAccounts, _ACRemoteDeviceCommandInvalidateFetchedAccountsCache, 
+                       _ACRemoteDeviceCommandShowCredentialPrompt, _ACRemoteDeviceCommandUpdateAccount, 
+                       _ACRemoteDeviceCommandUpdateAccountCredential, _ACRemoteDeviceOptionAskForReply, 
                        _ACShouldSuppressPromptsKey, _ACTencentWeiboAppIdKey, _ACTencentWeiboAppIdKeyDeprecated, 
                        _ACTencentWeiboClientConsumerKey, _ACTokenExpiryDateKey, _ACTokenKey, 
                        _ACYahooXYMPKICookieCrumbKey, _ACYahooXYMPKICookieTKey, _ACYahooXYMPKICookieYKey, 
@@ -154,7 +155,7 @@ exports:
                        _kAccountDataclassKeychainSync, _kAccountDataclassMail, _kAccountDataclassMediaStream, 
                        _kAccountDataclassMessages, _kAccountDataclassNetworkVPN, 
                        _kAccountDataclassNews, _kAccountDataclassNotes, _kAccountDataclassNotifications, 
-                       _kAccountDataclassReminders, _kAccountDataclassServerDocuments, 
+                       _kAccountDataclassPhotos, _kAccountDataclassReminders, _kAccountDataclassServerDocuments, 
                        _kAccountDataclassShareLocation, _kAccountDataclassShareMenu, 
                        _kAccountDataclassSharedStreams, _kAccountDataclassShoebox, 
                        _kAccountDataclassSiri, _kAccountDataclassSmartDefaults, _kAccountDataclassUbiquity, 

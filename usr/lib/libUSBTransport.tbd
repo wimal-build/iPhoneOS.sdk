@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: A582B608-B0DF-3644-9C61-AFD6F0CBB3C8' ]
+                   'arm64: E5696F2C-4964-3FED-ABF4-EDAADFEE3270' ]
 platform:        ios
 install-name:    /usr/lib/libUSBTransport.dylib
 objc-constraint: none

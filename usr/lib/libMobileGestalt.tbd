@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: C52C1FE0-0EA7-389D-9DFE-34896FB707A5', 'armv7s: 8FD6C22D-D115-3D84-8CF4-8E483E065EA6', 
-                   'arm64: 4D020821-1320-3746-9C2D-DBE4037BB184' ]
+                   'arm64: 9C73D51E-F653-30E3-B29F-A4EC81169863' ]
 platform:        ios
 install-name:    /usr/lib/libMobileGestalt.dylib
 objc-constraint: none

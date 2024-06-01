@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 0118273E-27AA-3F2A-A41E-867CCF061507' ]
+                   'arm64: 3D794F8D-CC49-3D21-95D6-929F4D09B38D' ]
 platform:        ios
 install-name:    /usr/lib/libAudioStatistics.dylib
 objc-constraint: none

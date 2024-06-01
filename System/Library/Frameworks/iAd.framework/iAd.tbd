@@ -1,13 +1,13 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 3DC31F48-413E-34B1-A12F-D0EB1BCEB4C9', 'armv7s: 8DB7A18D-7D7E-341D-8A41-C3D7532BE433', 
-                   'arm64: 4DD477E1-DC48-3756-B25C-523F0710AF62' ]
+                   'arm64: F4180C8C-BABE-3CFD-BF22-0D43739C4AC9' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/iAd.framework/iAd
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
-    symbols:         [ _kADPolicyEngineHeartbeatTokenChangedNotification ]
+    symbols:         [ __UIApplicationHasNewsClientEntitlement, _kADPolicyEngineHeartbeatTokenChangedNotification ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _ADBannerContentSizeIdentifier320x50, _ADBannerContentSizeIdentifier480x32, 
                        _ADBannerContentSizeIdentifierLandscape, _ADBannerContentSizeIdentifierPortrait, 
@@ -24,8 +24,7 @@ exports:
                        _ADSanitizedErrorForError, _ADSubscriptionEventInfoAdamIDKey, 
                        _ADSubscriptionEventInfoCurrencyKey, _ADSubscriptionEventInfoPriceKey, 
                        _ADViewControllerForView, __ADInternalAdTypeForPublicAdType, 
-                       __ADPaddedImageFromImage, __UIApplicationHasNewsClientEntitlement, 
-                       _kADPolicyEngineTestStationDescriptionsComputedNotification, 
+                       __ADPaddedImageFromImage, _kADPolicyEngineTestStationDescriptionsComputedNotification, 
                        _kADViewDefaultHeight ]
     objc-classes:    [ _ADAdActionPublicAttributes, _ADAdImpressionPublicAttributes, 
                        _ADAdSpace, _ADAdSpaceConfiguration, _ADAdSpaceEventInfo, 

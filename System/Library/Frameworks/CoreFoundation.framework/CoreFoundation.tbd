@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 28BA75ED-9E90-3D1B-ADE1-BF6DFAE5CDF2', 'armv7s: 05F6A76A-ECF5-36A2-BF4E-F9CD365E1674', 
-                   'arm64: A595C2EE-553E-3A1F-A695-9947247B034E' ]
+                   'arm64: 733E7542-E92B-34BD-9403-762135AD5014' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
-current-version: 1445.32
+current-version: 1450.14
 compatibility-version: 150
 objc-constraint: none
 exports:         
@@ -626,26 +626,26 @@ exports:
                        __CFPrefsSetDirectModeEnabled, __CFPrefsSetEphemeralMultiUserEnabled, 
                        __CFPrefsSetSynchronizeIsSynchronous, __CFPrefsSynchronizeForProcessTermination, 
                        __CFPrefsTestingFlushClientSideCacheEveryRead, __CFPrefsTestingFlushClientSideCacheEveryWrite, 
-                       __CFPrefsTestingRandomlySynchronous, __CFPrefsTestingSimulateSlowFilesystem, 
-                       __CFPrefsUnregisterUserDefaultsInstance, __CFPrintForDebugger, 
-                       __CFProcessPath, __CFPropertyListCopyTopLevelKeys, __CFPropertyListCreateFiltered, 
-                       __CFPropertyListCreateFromXMLData, __CFPropertyListCreateFromXMLString, 
-                       __CFPropertyListCreateFromXMLStringError, __CFPropertyListCreateSingleValue, 
-                       __CFPropertyListCreateXMLData, __CFPropertyListCreateXMLDataWithExtras, 
-                       __CFPropertyListMissingSemicolon, __CFPropertyListMissingSemicolonOrValue, 
-                       __CFRLORightToLeftStringCreate, __CFReadStreamClearEvent, 
-                       __CFReadStreamCreateFromFileDescriptor, __CFReadStreamGetClient, 
-                       __CFReadStreamSignalEventDelayed, __CFRegisterThreadSanitizerTag, 
-                       __CFRunArrayCreateWithGuts, __CFRunLoop01, __CFRunLoopFinished, 
-                       __CFRunLoopGet0, __CFRunLoopGet0b, __CFRunLoopGet1, __CFRunLoopGet2, 
-                       __CFRunLoopGet2b, __CFRunLoopIsCurrent, __CFRunLoopModeContainsMode, 
-                       __CFRunLoopStopMode, __CFRuntimeBridgeClasses, __CFRuntimeCreateInstance, 
-                       __CFRuntimeGetClassWithTypeID, __CFRuntimeInitStaticInstance, 
-                       __CFRuntimeRegisterClass, __CFRuntimeSetCFMPresent, __CFRuntimeSetInstanceTypeID, 
-                       __CFRuntimeUnregisterClassWithTypeID, __CFSetFastEnumeration, 
-                       __CFSetGetKVOBit, __CFSetIsMutable, __CFSetOutOfMemoryErrorCallBack, 
-                       __CFSetProductName, __CFSetSetCapacity, __CFSetSetKVOBit, 
-                       __CFSetTSD, __CFSocketStreamGetAuthenticatesServerCertificateDefault, 
+                       __CFPrefsTestingInterruptObservationConnections, __CFPrefsTestingRandomlySynchronous, 
+                       __CFPrefsTestingSimulateSlowFilesystem, __CFPrefsUnregisterUserDefaultsInstance, 
+                       __CFPrintForDebugger, __CFProcessPath, __CFPropertyListCopyTopLevelKeys, 
+                       __CFPropertyListCreateFiltered, __CFPropertyListCreateFromXMLData, 
+                       __CFPropertyListCreateFromXMLString, __CFPropertyListCreateFromXMLStringError, 
+                       __CFPropertyListCreateSingleValue, __CFPropertyListCreateXMLData, 
+                       __CFPropertyListCreateXMLDataWithExtras, __CFPropertyListMissingSemicolon, 
+                       __CFPropertyListMissingSemicolonOrValue, __CFRLORightToLeftStringCreate, 
+                       __CFReadStreamClearEvent, __CFReadStreamCreateFromFileDescriptor, 
+                       __CFReadStreamGetClient, __CFReadStreamSignalEventDelayed, 
+                       __CFRegisterThreadSanitizerTag, __CFRunArrayCreateWithGuts, 
+                       __CFRunLoop01, __CFRunLoopFinished, __CFRunLoopGet0, __CFRunLoopGet0b, 
+                       __CFRunLoopGet1, __CFRunLoopGet2, __CFRunLoopGet2b, __CFRunLoopIsCurrent, 
+                       __CFRunLoopModeContainsMode, __CFRunLoopStopMode, __CFRuntimeBridgeClasses, 
+                       __CFRuntimeCreateInstance, __CFRuntimeGetClassWithTypeID, 
+                       __CFRuntimeInitStaticInstance, __CFRuntimeRegisterClass, __CFRuntimeSetCFMPresent, 
+                       __CFRuntimeSetInstanceTypeID, __CFRuntimeUnregisterClassWithTypeID, 
+                       __CFSetFastEnumeration, __CFSetGetKVOBit, __CFSetIsMutable, 
+                       __CFSetOutOfMemoryErrorCallBack, __CFSetProductName, __CFSetSetCapacity, 
+                       __CFSetSetKVOBit, __CFSetTSD, __CFSocketStreamGetAuthenticatesServerCertificateDefault, 
                        __CFSocketStreamPairSetAuthenticatesServerCertificate, __CFSocketStreamSetAuthenticatesServerCertificateDefault, 
                        __CFStorageFastEnumeration, __CFStreamGetInfoPointer, __CFStreamInstanceSize, 
                        __CFStringAppendFormatAndArgumentsAux, __CFStringAppendFormatAndArgumentsAux2, 
@@ -1077,9 +1077,9 @@ exports:
                        _kCFUserNotificationTextFieldValuesKey, _kCFUserNotificationTimeoutKey, 
                        _kCFUserNotificationTokenKey, _mdict_keysOfEntriesWithOptionsPassingTest, 
                        _os_log_callback ]
-    objc-classes:    [ _CFPrefsCloudSource, _CFPrefsConfigurationFileSource, _NSArray, 
-                       _NSBlock, _NSBlockInvocation, _NSCache, _NSCalendar, _NSData, 
-                       _NSDate, _NSDateComponents, _NSDictionary, _NSEnumerator, 
+    objc-classes:    [ _CFPrefsCloudSource, _CFPrefsConfigurationFileSource, _CFPrefsSuiteSearchListSource, 
+                       _NSArray, _NSBlock, _NSBlockInvocation, _NSCache, _NSCalendar, 
+                       _NSData, _NSDate, _NSDateComponents, _NSDictionary, _NSEnumerator, 
                        _NSException, _NSFileSecurity, _NSInputStream, _NSInvocation, 
                        _NSLocale, _NSMethodSignature, _NSMutableArray, _NSMutableData, 
                        _NSMutableDictionary, _NSMutableOrderedSet, _NSMutableSet, 

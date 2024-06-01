@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 9B9A2306-9EF9-3F2C-9CDF-EA07DDE69FEC', 'armv7s: EF8BC870-AC61-3CB7-99DF-62524ACE99F2', 
-                   'arm64: E8F4C426-7DBD-3C8A-BE3C-B1A09DA44498' ]
+                   'arm64: 75CB9B10-1C89-36D0-A49C-CF229B36BC00' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/NetworkExtension.framework/NetworkExtension
 objc-constraint: none
@@ -134,9 +134,10 @@ exports:
                        _NEVirtualInterfaceCopyRoutes, _NEVirtualInterfaceCopyStatistics, 
                        _NEVirtualInterfaceCopyVPNServerAddress, _NEVirtualInterfaceCreate, 
                        _NEVirtualInterfaceCreateChannel, _NEVirtualInterfaceCreateFromSocket, 
-                       _NEVirtualInterfaceDisableChannel, _NEVirtualInterfaceDupSocket, 
-                       _NEVirtualInterfaceEnableChannelAndGetNexusInstance, _NEVirtualInterfaceEnableFlowswitch, 
-                       _NEVirtualInterfaceEnableProcessUUID, _NEVirtualInterfaceGetDNSSupplementalMatchDomainsNoSearch, 
+                       _NEVirtualInterfaceCreateNexus, _NEVirtualInterfaceDisableChannel, 
+                       _NEVirtualInterfaceDupSocket, _NEVirtualInterfaceEnableChannelAndGetNexusInstance, 
+                       _NEVirtualInterfaceEnableFlowswitch, _NEVirtualInterfaceEnableProcessUUID, 
+                       _NEVirtualInterfaceGetDNSSupplementalMatchDomainsNoSearch, 
                        _NEVirtualInterfaceGetMaxPendingPackets, _NEVirtualInterfaceGetReadAutomatically, 
                        _NEVirtualInterfaceGetType, _NEVirtualInterfaceInvalidate, 
                        _NEVirtualInterfaceIsPrimary, _NEVirtualInterfaceReadyToRead, 

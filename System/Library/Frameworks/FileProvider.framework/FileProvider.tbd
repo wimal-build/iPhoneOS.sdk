@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 77592354-934F-3616-85C6-1C42A08C7DF2' ]
+                   'arm64: 29753C5B-5F3E-32B2-881F-8C44DDCF4CD9' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/FileProvider.framework/FileProvider
 objc-constraint: none
@@ -11,6 +11,9 @@ exports:
                        '$ld$hide$os10.1$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os10.1$_OBJC_METACLASS_$_NSFileProviderExtension', 
                        '$ld$hide$os10.2$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os10.2$_OBJC_METACLASS_$_NSFileProviderExtension', 
                        '$ld$hide$os10.3$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os10.3$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os6.1$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os6.1$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os7.0$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os7.0$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os7.1$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os7.1$_OBJC_METACLASS_$_NSFileProviderExtension', 
                        '$ld$hide$os8.0$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os8.0$_OBJC_METACLASS_$_NSFileProviderExtension', 
                        '$ld$hide$os8.1$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os8.1$_OBJC_METACLASS_$_NSFileProviderExtension', 
                        '$ld$hide$os8.2$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os8.2$_OBJC_METACLASS_$_NSFileProviderExtension', 

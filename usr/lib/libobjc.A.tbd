@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 1F3E1EF1-C6F3-360E-88E0-CC5C90C64846', 'armv7s: 7029839A-D1F0-33DC-84C2-8A77D951C9E8', 
-                   'arm64: 5F420CDC-6F59-3721-A9CF-0464BD87E1A2' ]
+                   'arm64: 3A9D4643-22EB-3285-BC88-FABF7CEC20ED' ]
 platform:        ios
 install-name:    /usr/lib/libobjc.A.dylib
 current-version: 228

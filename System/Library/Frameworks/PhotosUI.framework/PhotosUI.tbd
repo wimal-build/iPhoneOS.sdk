@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: C60100E9-78EE-392E-87D0-BF8FF98C9EB3', 'armv7s: 994C3982-C291-3030-A476-8571D786EA50', 
-                   'arm64: A6F9DF5C-43AB-36B6-9AAC-AB102032E400' ]
+                   'arm64: FC6F0493-A7A7-3784-A059-3E97683DD7E6' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PhotosUI.framework/PhotosUI
 objc-constraint: none
@@ -53,7 +53,7 @@ exports:
                        _PUFloatSin, _PUFloatSqrt, _PUFloorToPixel, _PUFullMomentsSectionHeaderKind, 
                        _PUImageContentModeForPhotoViewContentMode, _PUImageTileViewReuseIdentifier, 
                        _PUInsetsOfRectInRect, _PUInvisibleSubtitlePlaceholder, _PUIrisImageTileViewReuseIdentifier, 
-                       _PUKDebugIsEnabled, _PUKDebugTrace, _PULivePhotoTrimHorizontalInset, 
+                       _PUKDebugIsEnabled, _PUKDebugTrace, _PULivePhotoTrimScrubberHeight, 
                        _PULocalizedString, _PULocalizedStringFromInteger, _PUMainScreenScale, 
                        _PUMediaDestinationErrorDomain, _PUMediaProviderErrorDomain, 
                        _PUMediaProviderResultIsFullSizeFormat, _PUMediaProviderResultIsPlaceholder, 
@@ -128,15 +128,17 @@ exports:
                        _PUInterfaceManager, _PUIrisSettings, _PUJoiningAssetActionManager, 
                        _PUJoiningAssetsDataSource, _PUJoiningDataSourceManager, _PUJoiningMediaProvider, 
                        _PULayoutSampledSectioning, _PULayoutSectioning, _PULivePhotoKeyFrameSelectionViewController, 
-                       _PULocalization, _PUMaximumChangeRateValueFilter, _PUMediaDestination, 
-                       _PUMediaProvider, _PUModalTransition, _PUModelTileTransform, 
-                       _PUMomentsZoomLevelManager, _PUNavigationController, _PUNavigationTransition, 
-                       _PUOneUpAccessoryViewControllersManager, _PUOneUpAssetTransitionContext, 
-                       _PUOneUpAssetTransitionInfo, _PUOneUpAssetsDataSourceConverter, 
-                       _PUOneUpBarsController, _PUOneUpPhotosSharingTransition, _PUOneUpPresentationHelper, 
+                       _PULivePhotoTrimScrubber, _PULocalization, _PUMaximumChangeRateValueFilter, 
+                       _PUMediaDestination, _PUMediaProvider, _PUModalTransition, 
+                       _PUModelTileTransform, _PUMomentsZoomLevelManager, _PUNavigationController, 
+                       _PUNavigationTransition, _PUOneUpAccessoryViewControllersManager, 
+                       _PUOneUpAssetTransitionContext, _PUOneUpAssetTransitionInfo, 
+                       _PUOneUpAssetsDataSourceConverter, _PUOneUpBarsController, 
+                       _PUOneUpPhotosSharingTransition, _PUOneUpPresentationHelper, 
                        _PUOneUpSettings, _PUOneUpTilingLayout, _PUOneUpTilingLayoutInvalidationContext, 
                        _PUOneUpViewController, _PUOverOneUpPresentationSession, _PUParallaxComputer, 
                        _PUPerformanceDiagnosticsSettings, _PUPhotoDecoration, _PUPhotoEditProtoSettings, 
+                       _PUPhotoEditSnapStripView, _PUPhotoEditSnapStripViewIndicatorInfo, 
                        _PUPhotoKitAssetActionManager, _PUPhotoKitAssetsDataSource, 
                        _PUPhotoKitDataSourceManager, _PUPhotoKitMediaProvider, _PUPhotoPickerAppearance, 
                        _PUPhotoPickerRemoteViewControllerRequestOptions, _PUPhotoSelectionManager, 
@@ -167,10 +169,9 @@ exports:
                        _PUTileViewController, _PUTilingDataSource, _PUTilingDataSourceConverter, 
                        _PUTilingLayout, _PUTilingLayoutInvalidationContext, _PUTilingScrollInfo, 
                        _PUTilingView, _PUTilingViewSettings, _PUToolbarViewModel, 
-                       _PUToolbarViewModelChange, _PUTouchingGestureRecognizer, _PUTrimToolController, 
-                       _PUUISaveToCameraRollActivity, _PUUserTransformTileLayoutInfo, 
-                       _PUUserTransformTileViewController, _PUUserTransformView, 
-                       _PUValueFilter, _PUVelocityFilter, _PUVideoComplementItemSource, 
+                       _PUToolbarViewModelChange, _PUTouchingGestureRecognizer, _PUUISaveToCameraRollActivity, 
+                       _PUUserTransformTileLayoutInfo, _PUUserTransformTileViewController, 
+                       _PUUserTransformView, _PUValueFilter, _PUVelocityFilter, _PUVideoComplementItemSource, 
                        _PUVideoListViewController, _PUVideoPlayerView, _PUVideoTrimQueueController, 
                        _PUViewControllerSpec, _PUViewControllerSpecChange, _PUViewControllerTransition, 
                        _PUViewModel, _PUViewModelChange, _PUWelcomeViewController, 

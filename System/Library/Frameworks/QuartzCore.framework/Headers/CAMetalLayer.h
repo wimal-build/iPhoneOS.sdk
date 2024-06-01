@@ -77,10 +77,19 @@ CA_CLASS_AVAILABLE (10.11, 8.0, 9.0, 2.0)
 
 @property CGSize drawableSize;
 
-/* Returns a drawable. This will return nil if the layer has an invalid
- * combination of drawable properties. */
+/* Get the swap queue's next available drawable. Always blocks until a drawable is available.
+ * Can return nil under the following conditions:
+ *     1) The layer has an invalid combination of drawable properties.
+ *     2) All drawables in the swap queue are in-use and the 1 second timeout has elapsed.
+ *        (except when `allowsNextDrawableTimeout' is set to NO)
+ *     3) Process is out of memory. */
 
 - (nullable id <CAMetalDrawable>)nextDrawable;
+
+/* Controls the number maximum number of drawables in the swap queue. The default value is 3.
+ * Values set outside of range [2, 3] are ignored and an exception will be thrown. */
+
+@property NSUInteger maximumDrawableCount CA_AVAILABLE_STARTING (10.13.2, 11.2, 11.2, 4.2);
 
 /* When false (the default value) changes to the layer's render buffer
  * appear on-screen asynchronously to normal layer updates. When true,
@@ -91,9 +100,11 @@ CA_CLASS_AVAILABLE (10.11, 8.0, 9.0, 2.0)
 
 
 
-/* This property controls if nextDrawable is allowed to timeout and return nil if
- * the system does not have a free drawable available for longer than one second.
- * The default value is YES. */
+
+/* Controls if `-nextDrawable' is allowed to timeout after 1 second and return nil if
+ * the system does not have a free drawable available. The default value is YES.
+ * If set to NO, then `-nextDrawable' will block forever until a free drawable is available. */
+
 @property BOOL allowsNextDrawableTimeout CA_AVAILABLE_STARTING (10.13, 11.0, 11.0, 4.0);
 
 @end

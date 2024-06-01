@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 9D15126B-506D-3FC9-806E-9BB7EF98707C', 'armv7s: EB413B18-7CE5-3F9B-8718-9E4DEED02949', 
-                   'arm64: 8AE2C478-AB7D-333D-B6AD-F9F09369F7E3' ]
+                   'arm64: A67867D6-D7D0-3DB4-A35B-7A8F15E48A21' ]
 platform:        ios
 install-name:    /usr/lib/libform.5.4.dylib
 current-version: 5.4

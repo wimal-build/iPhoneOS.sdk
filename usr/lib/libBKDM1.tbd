@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: BB0B095F-A9E2-3AF6-A943-D10A6AF8C43C' ]
+                   'arm64: B6460364-76E5-307D-9A83-9624D3EE455A' ]
 platform:        ios
 install-name:    /usr/lib/libBKDM1.dylib
 objc-constraint: none
@@ -22,19 +22,19 @@ exports:
                        _SBTerminate, _SBTerminateBioLogInfo, _SBTimeZoneChangeEvent, 
                        _SBTimeZoneChangeEventBioLogInfo, _SaveDataToCatacomb, ___BuildFullPath, 
                        ___DeblockedFileIO, ___FileIsProtectionClassD, ___GetCatacombDirectoryPath, 
-                       ___GetUUIDFileName, ___osLog, ___osLogInternal, ___templatesExistAtBoot, 
+                       ___GetUUIDFileName, ___osLog, ___osLogTrace, ___templatesExistAtBoot, 
                        _check_finger_touch_structure, _check_memory_manager, _check_template_update_structure, 
                        _check_timestamp, _closeConnection, _crc32ansi, _deviceExists, 
                        _diffTimeStamps, _getLocalEEPROMCalibrationData, _kBioLockoutRecordSecureDataKey, 
                        _kBioLockoutRecordVersionKey, _kBioOpParamEnrollOptions, _kBioOpParamEnrollType, 
                        _kBioOpParamEnrollUserID, _kBioOpParamFdetOptions, _kBioOpParamMatchFilter, 
                        _kBioOpParamMatchOptions, _kBioOpParamMatchPreArm, _kBioOpParamsMatchFilterHB, 
-                       _kBioOpParamsMatchUnlockUserID, _kCatacombCurrentDateKey, 
-                       _kCatacombEnrollmentCountKey, _kCatacombIdentityListKey, _kCatacombSecureDataKey, 
-                       _kCatacombTemplateListKey, _kCatacombUserIDKey, _kCatacombUserKeybagUUIDKey, 
-                       _kCatacombUserUUIDKey, _kCatacombVersionKey, _kCoreauthdBundleIdentifier, 
-                       _kPurpleBuddyBundleIdentifier, _kSpringBoardBundleIdentifier, 
-                       _logQueueLabel, _memdump, _mesaScanningStateNotificationCallback, 
+                       _kBioOpParamsMatchStopOnSuccess, _kBioOpParamsMatchUnlockUserID, 
+                       _kCatacombCurrentDateKey, _kCatacombEnrollmentCountKey, _kCatacombIdentityListKey, 
+                       _kCatacombSecureDataKey, _kCatacombTemplateListKey, _kCatacombUserIDKey, 
+                       _kCatacombUserKeybagUUIDKey, _kCatacombUserUUIDKey, _kCatacombVersionKey, 
+                       _kCoreauthdBundleIdentifier, _kPurpleBuddyBundleIdentifier, 
+                       _kSpringBoardBundleIdentifier, _logQueueLabel, _memdump, _mesaScanningStateNotificationCallback, 
                        _mobileKeyBagLockStatusNotificationCallback, _openConnection, 
                        _powerSourceInterestNotification, _powerSourceInterestNotificationCallback, 
                        _readData, _sbQueueLabel, _serialize, _writeData ]

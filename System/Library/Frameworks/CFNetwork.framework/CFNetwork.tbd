@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: A4258C2D-78C3-30C4-825E-A7152E3402F0', 'armv7s: 9F6656E9-E258-3D5A-8884-80B53780B79C', 
-                   'arm64: D800884A-C364-3FD3-985B-4F9901874F31' ]
+                   'arm64: 8D01FC28-DB47-3E1C-A098-245BB236B220' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CFNetwork.framework/CFNetwork
-current-version: 887
+current-version: 889.9
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -682,12 +682,12 @@ exports:
                        __CFNetworkUnitTestPACURL, __CFNetworkUnitTestPACURLLargeFile, 
                        __CFNetworkUnitTestPACURLSessionFetch, __CFNetworkUnitTestPACURLTwoClientThreads, 
                        __CFNetworkUnitTestPAC_MultipleRemotePACQueries, __CFNetworkUnitTestPAC_MultipleRemotePACQueriesMultipleQueues, 
-                       __CFNetworkUnitTestPAC_MultipleRemotePACQueriesSameHost, __CFNetworkUnitTestPAC_RemotePACQuery, 
-                       __CFNetworkUnitTestPAC_RemotePACQueryError, __CFNetworkUnitTestParentDirAuthCheck, 
-                       __CFNetworkUnitTestPauseResumeData, __CFNetworkUnitTestPauseResumeDataDownload, 
-                       __CFNetworkUnitTestPerformanceTiming, __CFNetworkUnitTestPerformanceTimingDataOptions, 
-                       __CFNetworkUnitTestPropertyObserver, __CFNetworkUnitTestProxyAuthenticationBypass, 
-                       __CFNetworkUnitTestProxyCopySystemProxySettingsNetworkChange, 
+                       __CFNetworkUnitTestPAC_MultipleRemotePACQueriesSameHost, __CFNetworkUnitTestPAC_PACQueryXPCMessage, 
+                       __CFNetworkUnitTestPAC_RemotePACQuery, __CFNetworkUnitTestPAC_RemotePACQueryError, 
+                       __CFNetworkUnitTestParentDirAuthCheck, __CFNetworkUnitTestPauseResumeData, 
+                       __CFNetworkUnitTestPauseResumeDataDownload, __CFNetworkUnitTestPerformanceTiming, 
+                       __CFNetworkUnitTestPerformanceTimingDataOptions, __CFNetworkUnitTestPropertyObserver, 
+                       __CFNetworkUnitTestProxyAuthenticationBypass, __CFNetworkUnitTestProxyCopySystemProxySettingsNetworkChange, 
                        __CFNetworkUnitTestQueryStringPreventsAuth_24722429, __CFNetworkUnitTestQueryStringPreventsAuth_24725687, 
                        __CFNetworkUnitTestRangePauseResumeDataDownload, __CFNetworkUnitTestRequestDependencies, 
                        __CFNetworkUnitTestSHTTP2ConnectionEquality, __CFNetworkUnitTestSchemeUpgrade, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: BD23F5CF-3083-3A2E-B16C-64D805C9879A', 'armv7s: 130B8EED-1C40-3BCC-9E39-D150FF05728D', 
-                   'arm64: D8FC36D6-ED57-3990-908C-F638598AD2CB' ]
+                   'arm64: 56C80784-BB7D-336C-BA48-FC24FD8DB4AD' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
 current-version: 275
@@ -141,12 +141,12 @@ exports:
                        _IOAVVideoInterfaceSetScreenVirtualTemperature, _IOAVVideoInterfaceStartLink, 
                        _IOAVVideoInterfaceStartLinkWithModes, _IOAVVideoInterfaceStartLinkWithSource, 
                        _IOAVVideoInterfaceStopLink, _IOAVVideoInterfaceStopLinkWithSource, 
-                       _IOAVVideoLinkIsDolbyVision, _IOAVVideoLinkModeString, _IOAVVideoPixelEncodingString, 
-                       _IOAVVideoTimingCalculatedTypeString, _IOAVVideoTimingGetActivePixelClock, 
-                       _IOAVVideoTimingGetITSource, _IOAVVideoTimingGetPixelClock, 
-                       _IOAVVideoTimingGetSyncRateRounded, _IOAVVideoTimingIsVideoOptimized, 
-                       _IOAVVideoTimingTypeString, _IOAllowPowerChange, _IOBSDNameMatching, 
-                       _IOCFSerialize, _IOCFURLWriteDataAndPropertiesToResource, 
+                       _IOAVVideoLinkIsDolbyVision, _IOAVVideoLinkModeString, _IOAVVideoLinkRequiresHDMIScrambling, 
+                       _IOAVVideoPixelEncodingString, _IOAVVideoTimingCalculatedTypeString, 
+                       _IOAVVideoTimingGetActivePixelClock, _IOAVVideoTimingGetITSource, 
+                       _IOAVVideoTimingGetPixelClock, _IOAVVideoTimingGetSyncRateRounded, 
+                       _IOAVVideoTimingIsVideoOptimized, _IOAVVideoTimingTypeString, 
+                       _IOAllowPowerChange, _IOBSDNameMatching, _IOCFSerialize, _IOCFURLWriteDataAndPropertiesToResource, 
                        _IOCFUnserialize, _IOCFUnserializeBinary, _IOCFUnserializeWithSize, 
                        _IOCFUnserializeparse, _IOCancelPowerChange, _IOCatalogueGetData, 
                        _IOCatalogueModuleLoaded, _IOCatalogueReset, _IOCatalogueSendData, 

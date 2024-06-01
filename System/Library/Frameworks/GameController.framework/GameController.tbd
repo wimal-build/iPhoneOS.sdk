@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: A755BFBC-122A-385A-8D91-3512007D9429', 'armv7s: 1E8ED2B3-039C-3B2F-ACCF-437D9FD65379', 
-                   'arm64: 41A0A6F9-73EF-316D-8BE8-E3FEF8FED36C' ]
+                   'arm64: BB8B2D75-8E56-3AD8-9FF0-4001844D1008' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GameController.framework/GameController
 objc-constraint: none

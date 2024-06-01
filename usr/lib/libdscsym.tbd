@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: BF99A13A-2F3B-324C-AE50-A5D20716940F', 'armv7s: 7E47FA0F-1951-3646-81C8-56612A989CFF', 
-                   'arm64: C085002B-8448-3720-AD27-68687A6CD9B7' ]
+                   'arm64: AE19EDDD-4907-374C-8957-3B1D457F45FA' ]
 platform:        ios
 install-name:    /usr/lib/libdscsym.dylib
 current-version: 183

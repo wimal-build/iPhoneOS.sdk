@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: DDC85AD8-B9B9-34E5-ADE5-6B2ADF8134F0', 'armv7s: A4F93D2B-AF23-3786-8591-0EEDAEAC19A3', 
-                   'arm64: 55CFE092-0B1C-3986-9DB6-581E283F777F' ]
+                   'arm64: 2001F142-8C09-34D5-BD6D-6E71A38C583C' ]
 platform:        ios
 install-name:    /usr/lib/libauthinstall.dylib
 objc-constraint: none

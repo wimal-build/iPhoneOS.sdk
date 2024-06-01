@@ -1,23 +1,29 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 30007F5C-30E3-322B-B35C-D6CD6BDCCEE6' ]
+                   'arm64: 77592354-934F-3616-85C6-1C42A08C7DF2' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/FileProvider.framework/FileProvider
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
-    symbols:         [ '$ld$hide$os10.0$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os10.1$_OBJC_CLASS_$_NSFileProviderExtension', 
-                       '$ld$hide$os10.2$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os10.3$_OBJC_CLASS_$_NSFileProviderExtension', 
-                       '$ld$hide$os8.0$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os8.1$_OBJC_CLASS_$_NSFileProviderExtension', 
-                       '$ld$hide$os8.2$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os8.3$_OBJC_CLASS_$_NSFileProviderExtension', 
-                       '$ld$hide$os8.4$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os9.0$_OBJC_CLASS_$_NSFileProviderExtension', 
-                       '$ld$hide$os9.1$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os9.2$_OBJC_CLASS_$_NSFileProviderExtension', 
-                       '$ld$hide$os9.3$_OBJC_CLASS_$_NSFileProviderExtension', _FPAccessRead, 
-                       _FPAccessReadMetadata, _FPAccessWrite, _FPActionCopy, _FPActionDelete, 
-                       _FPActionDownload, _FPActionDuplicate, _FPActionEvict, _FPActionFavorite, 
-                       _FPActionImportHere, _FPActionRename, _FPActionReparent, _FPActionTag, 
-                       _FPActionTrash, _FPActionUntrash, _FPBookmarkableStringFromDocumentURL, 
+    symbols:         [ '$ld$hide$os10.0$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os10.0$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os10.1$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os10.1$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os10.2$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os10.2$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os10.3$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os10.3$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os8.0$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os8.0$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os8.1$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os8.1$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os8.2$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os8.2$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os8.3$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os8.3$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os8.4$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os8.4$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os9.0$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os9.0$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os9.1$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os9.1$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os9.2$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os9.2$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       '$ld$hide$os9.3$_OBJC_CLASS_$_NSFileProviderExtension', '$ld$hide$os9.3$_OBJC_METACLASS_$_NSFileProviderExtension', 
+                       _FPAccessRead, _FPAccessReadMetadata, _FPAccessWrite, _FPActionCopy, 
+                       _FPActionDelete, _FPActionDownload, _FPActionDuplicate, _FPActionEvict, 
+                       _FPActionFavorite, _FPActionImportHere, _FPActionRename, _FPActionReparent, 
+                       _FPActionTag, _FPActionTrash, _FPActionUntrash, _FPBookmarkableStringFromDocumentURL, 
                        _FPBookmarkableStringFromIdentifiers, _FPCFGetAttributeValuesForItem, 
                        _FPClientLacksEntitlement, _FPDXPCInterface, _FPDidUpdateAlternateContentsDocumentForDocumentAtURL, 
                        _FPDocumentURLFromBookmarkableString, _FPDocumentURLFromUniversalBookmarkableString, 

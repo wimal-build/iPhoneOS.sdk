@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: B49FA0E3-5125-3711-AC3E-D56C22B54098', 'armv7s: 29DDE5A3-A169-312B-A7EE-D37476E85418', 
-                   'arm64: 753582E8-C725-38EF-B286-0EA5C6928F5A' ]
+                   'arm64: 47CD3DFD-CD8B-38D5-B246-E4FA7A090476' ]
 platform:        ios
 install-name:    /usr/lib/libktrace.dylib
 objc-constraint: none
@@ -86,7 +86,8 @@ exports:
                        _ktrace_file_append_start, _ktrace_file_append_start_subchunk, 
                        _ktrace_file_append_subchunk, _ktrace_file_close, _ktrace_file_compress, 
                        _ktrace_file_create, _ktrace_file_create_fd, _ktrace_file_create_iterator, 
-                       _ktrace_file_create_memory, _ktrace_file_get_memory, _ktrace_file_header_append_chunk, 
+                       _ktrace_file_create_memory, _ktrace_file_earliest_timestamp, 
+                       _ktrace_file_get_memory, _ktrace_file_header_append_chunk, 
                        _ktrace_file_header_append_live_cpu_map, _ktrace_file_header_iterate, 
                        _ktrace_file_is_64_bit, _ktrace_file_iterate, _ktrace_file_ktrace_event_count, 
                        _ktrace_file_latest_timestamp, _ktrace_file_open, _ktrace_file_open_fd, 

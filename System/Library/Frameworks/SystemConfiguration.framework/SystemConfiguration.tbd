@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 1260046C-9A56-331C-A01D-765D19015DE1', 'armv7s: C67BB7EA-FF5E-343F-BEC9-FD055D488744', 
-                   'arm64: D31A0885-E9EB-33E8-87C1-8F38E9727486' ]
+                   'arm64: CCF7720A-A99F-3825-A81B-0A4ECD0BAB85' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
 current-version: 963

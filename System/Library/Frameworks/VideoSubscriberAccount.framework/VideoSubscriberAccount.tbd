@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: EF039D34-68F0-34F8-918E-D1EE9A3300E5', 'armv7s: 7E17A1E2-DF00-346C-9700-36C35FB22283', 
-                   'arm64: 4EE8BD74-FF94-34E8-9A6B-E618A2DAC957' ]
+                   'arm64: DECE6429-FF25-3D9C-A979-97CC25BFE9E4' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/VideoSubscriberAccount.framework/VideoSubscriberAccount
-current-version: 212.2
+current-version: 215.4
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -66,7 +66,8 @@ exports:
                        _VSAccountChannelsSaveOperation, _VSAccountManager, _VSAccountManagerResult, 
                        _VSAccountMetadata, _VSAccountMetadataRequest, _VSAccountProviderResponse, 
                        _VSAccountSaveOperation, _VSAccountSerializationCenter, _VSAccountStore, 
-                       _VSAppChannelsFilter, _VSAsyncOperation, _VSAuditToken, _VSBackgroundTask, 
+                       _VSAppChannelsFilter, _VSAppInstallationOperation, _VSAsyncOperation, 
+                       _VSAuditToken, _VSBackgroundTask, _VSBlockBasedValueTransformer, 
                        _VSCasePreservingString, _VSCompoundValueTransformer, _VSDelayOperation, 
                        _VSDeveloperAttribute, _VSDeveloperIdentityProviderChangeOperation, 
                        _VSDeveloperIdentityProviderFetchAllOperation, _VSDevice, 

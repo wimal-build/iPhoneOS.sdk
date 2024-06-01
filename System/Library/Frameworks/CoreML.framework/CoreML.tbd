@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 0283B75A-B7EC-352F-B45E-12CD8EEA7511' ]
+                   'arm64: BB1B5481-170D-3381-9CC0-269BDC82E0D9' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreML.framework/CoreML
 objc-constraint: none

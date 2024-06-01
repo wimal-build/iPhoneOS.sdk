@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: E2DB2337-223F-3F29-B788-9D60EB874DA6', 'armv7s: 011427F7-3032-38B1-8155-D24FD294F072', 
-                   'arm64: 20B022D5-89E8-32B0-ACC5-9247FE1D3E10' ]
+                   'arm64: 4FD0DF53-45F3-3875-9491-9441E761CD58' ]
 platform:        ios
 install-name:    /usr/lib/libAWDProtobufBluetooth.dylib
 objc-constraint: none

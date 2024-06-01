@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: CE6A5A81-FB51-3C86-A4B5-DFA07E739B0F', 'armv7s: 34656AC8-6A24-3A08-BB70-85C1B017DD68', 
-                   'arm64: C3C9283A-357E-3913-BF71-3D10A862640C' ]
+                   'arm64: 33E8445D-5859-3940-8EBD-3AD27C0A41A6' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ReplayKit.framework/ReplayKit
 objc-constraint: none
@@ -16,7 +16,8 @@ exports:
                        _RPVideoOverlayBackgroundMaskImageName, _RPVideoOverlayDefaultGlyphAlpha, 
                        _RPVideoOverlayFlatBackgroundAlpha, _RPVideoOverlayFlatBackgroundWhite, 
                        _RPVideoOverlayGlyphMaskImageName, _RPVideoOverlayHighlightedGlyphAlpha, 
-                       _ReplayKitVersionNumber, _ReplayKitVersionString, __broadcastURL ]
+                       _RPVideoSampleOrientationKey, _ReplayKitVersionNumber, _ReplayKitVersionString, 
+                       __broadcastURL ]
     objc-classes:    [ _RPBroadcastActivityExtensionHostContext, _RPBroadcastActivityHostViewController, 
                        _RPBroadcastActivityViewController, _RPBroadcastConfiguration, 
                        _RPBroadcastController, _RPBroadcastExtensionContext, _RPBroadcastExtensionHostContext, 

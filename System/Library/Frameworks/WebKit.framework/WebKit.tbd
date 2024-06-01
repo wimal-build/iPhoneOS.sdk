@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 810BDE41-A7AC-341F-B833-AD162BD6F54A', 'armv7s: 3D3DF682-A8AC-302E-B28C-A65D4A17F575', 
-                   'arm64: B8B05087-619A-35F4-B827-07D135D7736E' ]
+                   'arm64: 2224640F-7C73-3D3B-86B4-2F44D801D9B2' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/WebKit.framework/WebKit
-current-version: 604.1.38
+current-version: 604.3.5
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

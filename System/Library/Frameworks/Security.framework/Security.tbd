@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: D54C70C3-E405-307F-A3DF-F77BCAD86DAF', 'armv7s: 84D01D33-899F-3E07-B29D-09C33C084D9F', 
-                   'arm64: CE16B46D-2056-3137-B360-7153E60BC18C' ]
+                   'arm64: 04B8415D-6E3F-3C14-9FE9-C1831637964F' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Security.framework/Security
 current-version: 0

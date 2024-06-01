@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 4F4DD213-D764-3608-B154-30AB4D097883', 'armv7s: 132F1194-C3C8-3150-826A-0680C574FC35', 
-                   'arm64: 1B4623FC-F15D-3540-9744-99384D8D4E17' ]
+                   'arm64: C5FA3CF6-2BC0-36B2-B68E-233800ACEB52' ]
 platform:        ios
 install-name:    /usr/lib/libamsupport.dylib
 objc-constraint: none
@@ -35,15 +35,15 @@ exports:
                        _AMSupportEcDsaCreateSignatureSha384, _AMSupportEcDsaCreateSignatureSha512, 
                        _AMSupportEcDsaVerifySignature, _AMSupportFileURLExists, _AMSupportGetLibraryVersionString, 
                        _AMSupportGetUInt32, _AMSupportGetURLForTempDirectoryRoot, 
-                       _AMSupportGetValueForKeyPathInDict, _AMSupportHttpCopyProxySettings, 
-                       _AMSupportHttpCreateDataFromURL, _AMSupportHttpCreatePostBody, 
-                       _AMSupportHttpCreatePostRequest, _AMSupportHttpMessageSendSyncWithOptions, 
-                       _AMSupportHttpSendSync, _AMSupportHttpSetBase64EncodedValue, 
-                       _AMSupportHttpSetUriEscapedValue, _AMSupportHttpURLSessionCreateWithOptions, 
-                       _AMSupportHttpURLSessionSendSync, _AMSupportHttpUriEscapeString, 
-                       _AMSupportHttpUriUnescapeString, _AMSupportLogDumpMemory, 
-                       _AMSupportLogFormat, _AMSupportLogInternal, _AMSupportLogSetHandler, 
-                       _AMSupportMakeDirectory, _AMSupportPlatformCopyLocalIPAddressString, 
+                       _AMSupportGetValueForKeyPathInDict, _AMSupportHexAsciiToNumeric, 
+                       _AMSupportHttpCopyProxySettings, _AMSupportHttpCreateDataFromURL, 
+                       _AMSupportHttpCreatePostBody, _AMSupportHttpCreatePostRequest, 
+                       _AMSupportHttpMessageSendSyncWithOptions, _AMSupportHttpSendSync, 
+                       _AMSupportHttpSetBase64EncodedValue, _AMSupportHttpSetUriEscapedValue, 
+                       _AMSupportHttpURLSessionCreateWithOptions, _AMSupportHttpURLSessionSendSync, 
+                       _AMSupportHttpUriEscapeString, _AMSupportHttpUriUnescapeString, 
+                       _AMSupportLogDumpMemory, _AMSupportLogFormat, _AMSupportLogInternal, 
+                       _AMSupportLogSetHandler, _AMSupportMakeDirectory, _AMSupportPlatformCopyLocalIPAddressString, 
                        _AMSupportPlatformCopyURLToNewTempDirectory, _AMSupportPlatformCopyURLWithAppendedComponent, 
                        _AMSupportPlatformCopyURLWithAppendedExtension, _AMSupportPlatformCreateBufferFromNativeFilePath, 
                        _AMSupportPlatformCreateBufferFromUTF8FilePath, _AMSupportPlatformCreateDataFromFileURL, 

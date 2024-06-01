@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 33DED0E1-3CF5-30F5-93A7-6191E5DF4BCB' ]
+                   'arm64: E654FE55-AB1A-3C22-9AEC-449EA43C93D7' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PDFKit.framework/PDFKit
 objc-constraint: none

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 8C3765C7-CDC5-3E2D-BF88-FB262D4898B8', 'armv7s: A808CACB-C12E-3A1C-8FBC-4CFF510C979D', 
-                   'arm64: 5BCEEE5C-7A5B-3DEF-8C21-EF4756359B54' ]
+                   'arm64: F1818546-9EB4-3620-8933-FF693DBCBE51' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/NotificationCenter.framework/NotificationCenter
 objc-constraint: none

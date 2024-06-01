@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: C60100E9-78EE-392E-87D0-BF8FF98C9EB3', 'armv7s: 994C3982-C291-3030-A476-8571D786EA50', 
-                   'arm64: 390F5561-4181-3382-9D02-3C295C19AED0' ]
+                   'arm64: A6F9DF5C-43AB-36B6-9AAC-AB102032E400' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PhotosUI.framework/PhotosUI
 objc-constraint: none
@@ -24,11 +24,10 @@ exports:
                        _PLActivityTypePublishToYouTube, _PLActivityTypeUseAsWallpaper, 
                        _PUActivityErrorDomain, _PUActivityFileSizeLimitBytes, _PUActivityTypeAddToAlbum, 
                        _PUActivityTypeAddToiCloudDrive, _PUActivityTypeAirPlay, _PUActivityTypeCreateWatchFace, 
-                       _PUActivityTypeDuplicate, _PUActivityTypeGroup, _PUActivityTypeHide, 
-                       _PUActivityTypeInternalAutoLoopFeedback, _PUActivityTypeInternalGIFExport, 
-                       _PUActivityTypeInternalImageQualityFeedback, _PUActivityTypeNotThisPerson, 
-                       _PUActivityTypeSetKeyFace, _PUActivityTypeSlideShow, _PUActivityTypeStreamShare, 
-                       _PUActivityTypeUserDefaults, _PUAdjustPointsToBeWithinRect, 
+                       _PUActivityTypeDuplicate, _PUActivityTypeHide, _PUActivityTypeInternalAutoLoopFeedback, 
+                       _PUActivityTypeInternalGIFExport, _PUActivityTypeInternalImageQualityFeedback, 
+                       _PUActivityTypeNotThisPerson, _PUActivityTypeSetKeyFace, _PUActivityTypeSlideShow, 
+                       _PUActivityTypeStreamShare, _PUActivityTypeUserDefaults, _PUAdjustPointsToBeWithinRect, 
                        _PUAffineTransformIsApproximatelyEqualToTransform, _PUAffineTransformToMatchRect, 
                        _PUAffineTransformWithAnchorPointTranslationRotationScale, 
                        _PUAlbumListViewControllerAlbumCellIdentifier, _PUAlbumListViewControllerPlaceholderCellIdentifier, 
@@ -45,7 +44,8 @@ exports:
                        _PUDisplayVelocityZero, _PUDistanceBetweenPoints, _PUEdgeInsetsByLinearlyInterpolatingEdgeInsets, 
                        _PUEdgeInsetsInverse, _PUEdgeInsetsScale, _PUEdgeOppositeToEdge, 
                        _PUEditingFullSizeImagePayloadTypeIdentifer, _PUEditingInitialPayloadTypeIdentifier, 
-                       _PUExtendRectToPixel, _PUFloatAtan, _PUFloatAtan2, _PUFloatByLinearlyInterpolatingFloats, 
+                       _PUExtendRectToPixel, _PUFilteredMomentsSectionHeaderKind, 
+                       _PUFloatAtan, _PUFloatAtan2, _PUFloatByLinearlyInterpolatingFloats, 
                        _PUFloatCompare, _PUFloatCos, _PUFloatExp, _PUFloatHypot, 
                        _PUFloatInterpolateFloats, _PUFloatIsApproximatelyEqualToFloat, 
                        _PUFloatIsEqualToFloatWithTolerance, _PUFloatLog, _PUFloatMod, 

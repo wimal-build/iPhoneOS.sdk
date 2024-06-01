@@ -1,10 +1,10 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: DEA2F438-8531-392F-85B1-73240DD2A2EC', 'armv7s: A50A77BF-6473-3BBB-B0D1-92E3240D79DC', 
-                   'arm64: EF884462-CA23-3774-A8BD-EB9D443ACDA9' ]
+                   'arm64: 531F6C32-18E6-3E6E-8C67-2E6975DF5429' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Foundation.framework/Foundation
-current-version: 1444.12
+current-version: 1445.30
 compatibility-version: 300
 objc-constraint: none
 exports:         

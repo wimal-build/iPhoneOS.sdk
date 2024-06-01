@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 2BE283FD-53AB-3656-B35A-989EC24768A0', 'armv7s: 067DAA50-59E0-3021-9D7C-9B7E03540627', 
-                   'arm64: F8A763CF-4833-33D6-A59F-B0A46F0CC499' ]
+                   'arm64: 138FD03B-F962-3A02-8579-FFB6B14B69B0' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MapKit.framework/MapKit
 current-version: 14

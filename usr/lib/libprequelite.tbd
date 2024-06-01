@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: A4E1DA9B-AE97-3AF3-A348-68890C8CFD7D', 'armv7s: F74B398F-8998-37BC-ADA2-A3A9881449A2', 
-                   'arm64: 4DFBAE19-F98E-37A4-A63C-9855501E65CD' ]
+                   'arm64: 3B5D2894-A708-31C7-BBDD-0098F015592D' ]
 platform:        ios
 install-name:    /usr/lib/libprequelite.dylib
 current-version: 76

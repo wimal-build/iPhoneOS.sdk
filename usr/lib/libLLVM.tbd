@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 5616809F-A97F-3AA0-BF01-C8B373878C2F', 'armv7s: 15A51163-BDD6-30B1-96FF-F3EF99A3DABC', 
-                   'arm64: B2C6F17B-2F25-3B60-8622-D0A94D2CA8EB' ]
+                   'arm64: A406C6F4-A810-38C0-B26B-16BE9D1FB1B5' ]
 platform:        ios
 install-name:    /usr/lib/libLLVM.dylib
 current-version: 3802.0.37

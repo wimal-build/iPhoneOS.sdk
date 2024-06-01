@@ -1,7 +1,7 @@
 --- !tapi-tbd-v2
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: F64DB6FA-85D2-3A83-A876-41ECA002750E', 'armv7s: 2E877539-6D33-3F34-85C6-A5E807896919', 
-                   'arm64: 428F4D38-7FB1-31B7-AE24-63EA7BF8BB60' ]
+                   'arm64: BB31D2E6-39BA-3C3A-8BFD-A1D738D5A745' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreTelephony.framework/CoreTelephony
 current-version: 0

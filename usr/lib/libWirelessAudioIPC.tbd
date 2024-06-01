@@ -1,12 +1,12 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 95E51F3F-14EB-3CE3-AD0D-C04D03D40C06' ]
+                   'arm64: BC15544B-EEF9-3BD6-80C9-922ED85CD664', 'arm64e: FE831CB8-68E8-349E-82FA-403A6370B233' ]
 platform:        ios
 install-name:    /usr/lib/libWirelessAudioIPC.dylib
 objc-constraint: none
 exports:         
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __ZN5waipc4util15createStateDataEPKvPKcPP9__CFError, __ZN5waipc4util18TimestampConverter19defaultHostTickRateEv, 
                        __ZN5waipc5audio14SampleTimeline14updateTimesyncERKNS_8timesync15KalmanEstimatorEby, 
                        __ZN5waipc5audio14SampleTimelineC1ERKNS1_6configEyy, __ZN5waipc5audio14SampleTimelineC2ERKNS1_6configEyy, 

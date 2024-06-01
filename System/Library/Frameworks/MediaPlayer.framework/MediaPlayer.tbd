@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 7AEB1816-9E85-3E07-B17F-BBB1EACB8CBB', 'armv7s: 605EB1BC-73EF-3574-8A59-95A53659C9A0', 
-                   'arm64: FC40AB50-6BB8-34D8-994F-563FC661B919' ]
+                   'arm64: 98E685A3-120B-3252-8435-684A38F894A6', 'arm64e: A449A840-AA91-3EA0-B775-EE50E482D90A' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
 objc-constraint: none
@@ -72,7 +72,7 @@ exports:
                        UIMoviePlayerController._timeWhenResignedActive, UIMoviePlayerController._topViewController, 
                        UIMoviePlayerController._transitionCount, UIMoviePlayerController._unmodifiedDisplayableParts, 
                        UIMoviePlayerController._videoView, UIMoviePlayerController._youTubeVideoID ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _CGRectNormalizedRectFromSubRect, _CGRectSubRectWithNormalizedRect, 
                        _CopyProgressStringForSeconds, _HomeSharingML3DataProviderCredentialsDidChangeNotification, 
                        _MPAVControllerArtworkTimeMarkerParameter, _MPAVControllerAvailableRoutesChangedNotification, 

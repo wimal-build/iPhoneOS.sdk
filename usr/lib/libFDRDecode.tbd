@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D723A03B-6FD7-36F7-8414-2F3CF100277C', 'armv7s: 1A0C4042-52AB-3895-864F-5D70C949FC92', 
-                   'arm64: CD0E389A-82AF-3CA4-89B9-7924E785FF39' ]
+                   'arm64: 96DF834E-3D7E-3DB0-B2F4-F199C7721262', 'arm64e: FBC50F36-4559-3816-8357-F32F0BDE98F1' ]
 platform:        ios
 install-name:    /usr/lib/libFDRDecode.dylib
 objc-constraint: none
@@ -133,7 +133,7 @@ exports:
                        _oidSha256Rsa, _oidSha384, _oidSha384Ecdsa, _oidSha384Rsa, 
                        _oidSha512, _oidSha512Ecdsa, _oidSha512Rsa, _oidStateOrProvinceName, 
                        _oidSubjectAltName, _oidSubjectInfoAccess, _oidSubjectKeyIdentifier ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _AMFDRDecodeCertificate, _AMFDRDecodeCheckCertRevocation, 
                        _AMFDRDecodeCheckProducerIDRevocation, _AMFDRDecodeCombined, 
                        _AMFDRDecodeEvaluateTrust, _AMFDRDecodeEvaluateTrustCombined, 

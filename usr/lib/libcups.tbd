@@ -1,14 +1,14 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 6EEBE781-E8A5-3097-96A8-1605BBF84E76' ]
+                   'arm64: 60688595-B138-3B5F-9ECD-9D6705615BF9', 'arm64e: 61277F41-9C08-3D79-9615-76CD126374D5' ]
 platform:        ios
 install-name:    /usr/lib/libcups.dylib
 current-version: 0
 compatibility-version: 0
 objc-constraint: none
 exports:         
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ __cupsAppleCopyDefaultPaperID, __cupsAppleCopyDefaultPrinter, 
                        __cupsAppleGetUseLastPrinter, __cupsAppleLanguage, __cupsAppleLocale, 
                        __cupsAppleSetDefaultPaperID, __cupsAppleSetDefaultPrinter, 

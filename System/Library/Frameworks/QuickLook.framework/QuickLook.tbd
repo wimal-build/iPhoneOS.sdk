@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 8564F238-13B9-37DB-BEB8-34671AA4A004', 'armv7s: D20B3B6F-02F1-37DA-A96C-B02ECD2AFB0A', 
-                   'arm64: CB484766-6E6B-3D14-B092-3D21D48A4D36' ]
+                   'arm64: 57E79161-04E5-317D-AEDC-5414B9BC4C40', 'arm64e: C1AA3EFF-FF3E-3501-9650-777218AB419D' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/QuickLook.framework/QuickLook
 objc-constraint: none
@@ -13,7 +13,7 @@ exports:
     objc-classes:    [ QLPreviewCollectionHostContext, QLPreviewCollectionServiceContext, 
                        QLRemotePreviewHostContext, QLRemotePreviewServiceContext, 
                        QLServiceViewController ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _NSStringFromQLNetworkState, _QLAudioItemViewControllerQuickTimeImageViewAccessibilityIdentifier, 
                        _QLAudioScrubberViewContainerAccessibilityIdentifier, _QLCGSizeFromQLItemThumbnailSize, 
                        _QLCustomToolBarAccessibilityIdentifier, _QLCustomToolBarModalAccessibilityIdentifier, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 4479A1DB-1663-35BA-B576-83B7ADB8DD51', 'armv7s: 25F60C7C-430A-38C5-8D24-62C745A4F3A2', 
-                   'arm64: 6AC62A37-ED60-323B-82BF-A98D83AE4CE8' ]
+                   'arm64: 7C56241E-CC7B-3949-96E2-6A0AED683000', 'arm64e: B5163066-23AE-36FE-B238-07F3619DF1C8' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SpriteKit.framework/SpriteKit
 current-version: 2
@@ -81,7 +81,7 @@ exports:
                         __ZTSNSt3__120__shared_ptr_pointerIP20MaxRectTexturePackerNS_14default_deleteIS1_EENS_9allocatorIS1_EEEE, 
                         __ZTSNSt3__120__shared_ptr_pointerIP22jet_depth_stencil_modeNS_14default_deleteIS1_EENS_9allocatorIS1_EEEE, 
                         __ZTSNSt3__120__shared_ptr_pointerIPNS_6vectorIP17SKCRenderSortInfoNS_9allocatorIS3_EEEENS_14default_deleteIS6_EENS4_IS6_EEEE ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __Z16glsk_matrix_makeRK11_GLKMatrix4, __Z18SKCBoundingBoxMakeDv2_fS_13simd_float4x4, 
                        __Z19SKCBoundingBoxUnionRK13simd_float4x4S1_, __Z20SKCBoundingBoxEqualsRK13simd_float4x4S1_, 
                        __Z21SKCBoundingBoxGetAABBRK13simd_float4x4, __Z21SKCBoundingBoxIsEmptyRK13simd_float4x4, 
@@ -111,7 +111,7 @@ exports:
                        __ZNK17SKCParticleSystem8getSliceERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
                        __ZTI20SKCVideoBackdropNode, __ZTS20SKCVideoBackdropNode, 
                        __ZTV20SKCVideoBackdropNode ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _Color_fsh, _Color_vsh, _DiscardRect_fsh, _Discard_fsh, _Discard_vsh, 
                        _FastSingleRect_fsh, _FastSingleRect_vsh, _FastSingleWithVertexTransform_vsh, 
                        _FastSingle_fsh, _FastSingle_vsh, _Mask_Inverted_fsh, _Mask_fsh, 

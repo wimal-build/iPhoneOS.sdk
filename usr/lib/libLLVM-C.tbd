@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 0A941605-793F-3C00-BB04-7DFA92FC2F78', 'armv7s: B146BF89-D7BB-33EF-92B0-0D4B23C0A472', 
-                   'arm64: F8FAF1B6-EFE1-39B0-99DB-C273A22E7231' ]
+                   'arm64: 65822530-0100-3834-8167-D4CA4CDAE47B', 'arm64e: 0CA24215-8DB9-3392-9DBE-F75EA4533001' ]
 platform:        ios
 install-name:    /usr/lib/libLLVM-C.dylib
 current-version: 3902.18.4
@@ -14,7 +14,7 @@ exports:
                        _LLVMGetFunctionAttr, _LLVMGetTargetMachineData, _LLVMIsACatchEndPadInst, 
                        _LLVMIsATerminatePadInst, _LLVMLinkModules, _LLVMRemoveAttribute, 
                        _LLVMRemoveFunctionAttr, _LLVMRemoveInstrAttribute ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     re-exports:      [ /usr/lib/libLLVM.dylib ]
     symbols:         [ _LLVMABIAlignmentOfType, _LLVMABISizeOfType, _LLVMAGXRuntimeMajorVersion, 
                        _LLVMAGXRuntimeMinorVersion, _LLVMAddAggressiveDCEPass, _LLVMAddAlias, 

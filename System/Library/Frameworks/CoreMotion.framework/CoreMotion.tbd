@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 1C5C5C58-BFCF-3C99-83ED-B4851E3A8BA4', 'armv7s: 3D439D0E-75CC-3DFF-9EAA-5891ED69A175', 
-                   'arm64: DF022C31-1D55-3504-AE86-CFB1628D2C40' ]
+                   'arm64: B532EC6B-C7E3-38A0-A7B5-598362289A39', 'arm64e: 179A406B-A4B2-376F-B0CD-C8E322EAD21E' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreMotion.framework/CoreMotion
-current-version: 2245.4.104
+current-version: 2245.8.12
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -12,11 +12,11 @@ exports:
                        _CMWorkoutKeyEventDate, _CMWorkoutKeyLocation, _CMWorkoutKeyPoolLength, 
                        _CMWorkoutKeySessionId, _CMWorkoutKeyType, __ZN2cl6chrono19CFAbsoluteTimeClock9to_time_tERKNSt3__16chrono10time_pointIS1_NS3_8durationIeNS2_5ratioILx1ELx1EEEEEEE ]
     objc-classes:    [ CMLiftManager, CMLiftMotion ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __ZN16CLMotionActivity25isVehicularHighConfidenceENS_19VehicularConfidenceE, 
                        __ZN2cl6chrono19CFAbsoluteTimeClock9to_time_tERKNSt3__16chrono10time_pointIS1_NS3_8durationIeNS2_5ratioILl1ELl1EEEEEEE, 
                        __ZNK16CLMotionActivity25isVehicularHighConfidenceEv ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _AKSC_Decomp8975, _AKSC_InitDecomp8975, _AKSC_SetHDOELevel, 
                        _AKSC_abs16, _AKSC_angRng, _AKSC_atan2, _AKSC_buffer, _AKSC_cholDc, 
                        _AKSC_cholSl, _AKSC_cos, _AKSC_div16, _AKSC_div16f, _AKSC_div32, 

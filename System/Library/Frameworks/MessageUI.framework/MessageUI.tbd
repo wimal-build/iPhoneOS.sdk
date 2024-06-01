@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 06F00BAC-F47D-3979-92D9-60FC5EC0B7D5', 'armv7s: 9C688E17-C514-334E-83CD-00A8C215392E', 
-                   'arm64: 857EE8DD-C5D1-3297-9843-7A795F925ABC' ]
+                   'arm64: DE112F80-38A4-3E5E-9A3E-C699B210EB1C', 'arm64e: 324B9BF0-C960-3531-89F5-D305A88476D5' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MessageUI.framework/MessageUI
-current-version: 3445.100.35
+current-version: 3445.100.42
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -88,7 +88,7 @@ exports:
                        _MFSearchAddResultsOperation._type, _MFSearchProcessResultsOperation._completionBlock, 
                        _MFSearchProcessResultsOperation._consumer, _MFSearchProcessResultsOperation._type, 
                        _MFSecureMIMEPersonHeaderLabel._imageView, _MFSecureMIMEPersonHeaderLabel._label ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _MFAccessibilityLargeTextEnabled, _MFAddressHasSafeDomain, 
                        _MFAttachmentAttributeActionKey, _MFAttachmentAttributeContentIDKey, 
                        _MFAttachmentAttributeContentTypeKey, _MFAttachmentAttributeProgressKey, 
@@ -121,7 +121,9 @@ exports:
                        _MFMailComposeViewFirstDraw, _MFMailCompositionValuesAutosaveIdentifier, 
                        _MFMailCompositionValuesBccRecipients, _MFMailCompositionValuesBody, 
                        _MFMailCompositionValuesBodyIsHTML, _MFMailCompositionValuesCaretPosition, 
-                       _MFMailCompositionValuesCcRecipients, _MFMailCompositionValuesContentInitiallyVisible, 
+                       _MFMailCompositionValuesCcRecipients, _MFMailCompositionValuesCloudPhotoIDs, 
+                       _MFMailCompositionValuesContentInitiallyVisible, _MFMailCompositionValuesContentText, 
+                       _MFMailCompositionValuesContentURLs, _MFMailCompositionValuesPhotoIDs, 
                        _MFMailCompositionValuesPreferredSendingEmailAddress, _MFMailCompositionValuesShowKeyboardImmediately, 
                        _MFMailCompositionValuesSourceAccountManagement, _MFMailCompositionValuesSubject, 
                        _MFMailCompositionValuesToRecipients, _MFMailCompositionValuesURL, 

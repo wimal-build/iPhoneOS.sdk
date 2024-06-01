@@ -1,13 +1,13 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 6A9E825E-7C14-3248-B56E-4DCE085AD618', 'armv7s: 01264B5A-A9BB-3ECE-9D19-93867EB00111', 
-                   'arm64: 13FF44D0-D58B-3DDA-8A19-74868516B237' ]
+                   'arm64: 8571DDA2-84ED-33AD-9949-A129F9626EF6', 'arm64e: D8EE9468-51AA-3AD5-8E78-516072DED4DF' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GLKit.framework/GLKit
 current-version: 103.2
 objc-constraint: none
 exports:         
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _GLKMathProject, _GLKMathUnproject, _GLKMatrix3Identity, _GLKMatrix3Invert, 
                        _GLKMatrix3InvertAndTranspose, _GLKMatrix4Identity, _GLKMatrix4Invert, 
                        _GLKMatrix4InvertAndTranspose, _GLKMatrixStackCreate, _GLKMatrixStackGetMatrix2, 

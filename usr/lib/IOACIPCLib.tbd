@@ -1,12 +1,12 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: D4C0233E-44AB-33BF-806D-EEF34F3A4A15' ]
+                   'arm64: 99438C2C-03FC-30C5-8861-679664B0E2E4', 'arm64e: 819276C0-7C5C-3C83-B2D9-D3A5A67A5CD4' ]
 platform:        ios
 install-name:    /usr/lib/IOACIPCLib.dylib
 objc-constraint: none
 exports:         
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __ZN12IOACIPCClass10writeAsyncEPKvjPFvPviS2_ES2_, __ZN12IOACIPCClass12readRegisterEjPvPj, 
                        __ZN12IOACIPCClass14clearIteratorsEv, __ZN12IOACIPCClass14sendImageAsyncEPKvjPFvPviS2_S2_ES2_, 
                        __ZN12IOACIPCClass16interfaceMatchedEPvj, __ZN12IOACIPCClass17abortChannelAsyncE14acipcDirectionPFvPviES1_, 

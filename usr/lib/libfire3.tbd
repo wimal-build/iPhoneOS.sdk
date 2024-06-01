@@ -1,14 +1,14 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 0E5B2A2B-8119-3A91-8C82-20DF99CD12F6' ]
+                   'arm64: 1E13FF76-9B21-3194-9ACF-584A0DA881EE', 'arm64e: 366DF916-A28F-3AFF-B171-527DC6C368E6' ]
 platform:        ios
 install-name:    /usr/lib/libfire3.dylib
 current-version: 0
 compatibility-version: 0
 objc-constraint: none
 exports:         
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __Z12logFireOnMsgii, __Z15computeResidualN7BlueFin3XYZERKS0_PNS_9stRtdMeasEPS0_ad, 
                        __Z19compareArrayContentPKhPhm, __Z20FireLogLevelToStringN7BlueFin4ILog8LogLevelE, 
                        __Z21pollPowerStateTimeoutiN8gnssTest9PowerModeE, __Z24ComputeResidualForNelderPdRKN7BlueFin3XYZEPNS0_9stRtdMeasEPS1_ad, 
@@ -849,7 +849,7 @@ exports:
                        __ZN7BlueFin10GlDineCtrl19GetStateProviderIfcEv, __ZN7BlueFin10GlDineCtrl19SetCntInClockParamsEjtt, 
                        __ZN7BlueFin10GlDineCtrl19SetConfigParametersEPKc, __ZN7BlueFin10GlDineCtrl19SetGeofenceSettingsEjb, 
                        __ZN7BlueFin10GlDineCtrl21GetDspMeasListenerIfcEv, __ZN7BlueFin10GlDineCtrl21SetReceiverParametersERNS_25GlMeReceiverParametersIfcE, 
-                       __ZN7BlueFin10GlDineCtrl22SetMeasurementIntervalEbhh, __ZN7BlueFin10GlDineCtrl23ChipData_GRABSIQ_342355EPvs, 
+                       __ZN7BlueFin10GlDineCtrl22SetMeasurementIntervalEbhh, __ZN7BlueFin10GlDineCtrl23ChipData_GRABSIQ_349788EPvs, 
                        __ZN7BlueFin10GlDineCtrl23GetAcqWindowProviderIfcEv, __ZN7BlueFin10GlDineCtrl23SetHighPwrCwTestEnabledEb, 
                        __ZN7BlueFin10GlDineCtrl23ToggleHostWakeConfigureEb, __ZN7BlueFin10GlDineCtrl24GetReceiverParametersIfcEv, 
                        __ZN7BlueFin10GlDineCtrl24SetLowSignalStrengthModeEb, __ZN7BlueFin10GlDineCtrl26SetUartFlowControlSettingsENS_17etUartFlowControlEhh, 
@@ -1308,7 +1308,7 @@ exports:
                        __ZN7BlueFin11GlDbgEngine21SetCbOnGeofenceStatusEPFvPNS_8GlEngineENS_18GL_GEOFENCE_STATUSEPKNS_13GL_FIX_STATUSEE, 
                        __ZN7BlueFin11GlDbgEngine22DisarmWaitForUserTimerEb, __ZN7BlueFin11GlDbgEngine22SetCbOnPPSPlatformTimeEPFvPNS_8GlEngineEE, 
                        __ZN7BlueFin11GlDbgEngine22UpdateBreadcrumbOptionEPNS_9GlRequestEjj, 
-                       __ZN7BlueFin11GlDbgEngine23ChipData_GRABSIQ_342355EPvs, __ZN7BlueFin11GlDbgEngine23SetAsstGlnsAuxiliaryMsgEPNS_21GL_GLNS_AUXILIARY_MSGE, 
+                       __ZN7BlueFin11GlDbgEngine23ChipData_GRABSIQ_349788EPvs, __ZN7BlueFin11GlDbgEngine23SetAsstGlnsAuxiliaryMsgEPNS_21GL_GLNS_AUXILIARY_MSGE, 
                        __ZN7BlueFin11GlDbgEngine23SetCbOnSelfTestReadLineEPFPcPNS_8GlEngineEE, 
                        __ZN7BlueFin11GlDbgEngine24NotifyCurrentMachTimeSecEj, __ZN7BlueFin11GlDbgEngine24SetCbOnSelfTestWriteLineEPFiPNS_8GlEngineEPKcE, 
                        __ZN7BlueFin11GlDbgEngine25SetCbOnOscReadyForStorageEPFvPNS_8GlEngineEiiPNS_7GL_TIMEEE, 
@@ -2900,7 +2900,7 @@ exports:
                        __ZN7BlueFin15GlEngineImplStd21SetCbOnGeofenceStatusEPFvPNS_8GlEngineENS_18GL_GEOFENCE_STATUSEPKNS_13GL_FIX_STATUSEE, 
                        __ZN7BlueFin15GlEngineImplStd22DisarmWaitForUserTimerEb, __ZN7BlueFin15GlEngineImplStd22SetCbOnPPSPlatformTimeEPFvPNS_8GlEngineEE, 
                        __ZN7BlueFin15GlEngineImplStd22UpdateBreadcrumbOptionEPNS_9GlRequestEjj, 
-                       __ZN7BlueFin15GlEngineImplStd23ChipData_GRABSIQ_342355EPvs, 
+                       __ZN7BlueFin15GlEngineImplStd23ChipData_GRABSIQ_349788EPvs, 
                        __ZN7BlueFin15GlEngineImplStd23SetAsstGlnsAuxiliaryMsgEPNS_21GL_GLNS_AUXILIARY_MSGE, 
                        __ZN7BlueFin15GlEngineImplStd23SetCbOnSelfTestReadLineEPFPcPNS_8GlEngineEE, 
                        __ZN7BlueFin15GlEngineImplStd24NotifyCurrentMachTimeSecEj, 
@@ -2958,7 +2958,7 @@ exports:
                        __ZN7BlueFin15GlGpsdInterface20ProcessSuplNiMessageEPKvj, 
                        __ZN7BlueFin15GlGpsdInterface21HandleIncomingMessageERNS_18IpcIncomingMessageE, 
                        __ZN7BlueFin15GlGpsdInterface21SetOnGeofencingChangeEPNS_19IOnGeofencingChangeE, 
-                       __ZN7BlueFin15GlGpsdInterface23ChipData_GRABSIQ_342355EPvs, 
+                       __ZN7BlueFin15GlGpsdInterface23ChipData_GRABSIQ_349788EPvs, 
                        __ZN7BlueFin15GlGpsdInterface23SendGpsExtensionMessageEiPKvj, 
                        __ZN7BlueFin15GlGpsdInterface23SetOnBeforeRequestStartEPNS_21IOnBeforeRequestStartE, 
                        __ZN7BlueFin15GlGpsdInterface24SetOnGpsExtensionMessageEPNS_10IOnMessageE, 
@@ -4426,7 +4426,7 @@ exports:
                        __ZN7BlueFin18GlMeSrdUpstreamMgr16SetOscOffsAidingEjddb, __ZN7BlueFin18GlMeSrdUpstreamMgr16SetSimulatorModeEb, 
                        __ZN7BlueFin18GlMeSrdUpstreamMgr17SetRefClockParamsEjtt, __ZN7BlueFin18GlMeSrdUpstreamMgr19SetConfigParametersEPKc, 
                        __ZN7BlueFin18GlMeSrdUpstreamMgr21SetReceiverParametersERNS_25GlMeReceiverParametersIfcE, 
-                       __ZN7BlueFin18GlMeSrdUpstreamMgr23ChipData_GRABSIQ_342355EPvs, 
+                       __ZN7BlueFin18GlMeSrdUpstreamMgr23ChipData_GRABSIQ_349788EPvs, 
                        __ZN7BlueFin18GlMeSrdUpstreamMgr23GetSatStatusListenerIfcEv, 
                        __ZN7BlueFin18GlMeSrdUpstreamMgr24GetReceiverParametersIfcEv, 
                        __ZN7BlueFin18GlMeSrdUpstreamMgr24SetLowSignalStrengthModeEb, 
@@ -7349,6 +7349,7 @@ exports:
                        __ZN7BlueFin8GlPeHula15PosLocationData6UpdateERKNS_13GlExtSensDataENS0_5teSetE, 
                        __ZN7BlueFin8GlPeHula15PosLocationDataC1EPNS_11stSkfStatusE, 
                        __ZN7BlueFin8GlPeHula15PosLocationDataC2EPNS_11stSkfStatusE, 
+                       __ZN7BlueFin8GlPeHula15PosLocationDataaSERKS1_, __ZN7BlueFin8GlPeHula16GetE911ExtLocUncEv, 
                        __ZN7BlueFin8GlPeHula16TravelAssistData6UpdateERKNS_13GlExtSensDataE, 
                        __ZN7BlueFin8GlPeHula16TravelAssistDataC1EPNS_11stSkfStatusE, 
                        __ZN7BlueFin8GlPeHula16TravelAssistDataC2EPNS_11stSkfStatusE, 
@@ -7379,6 +7380,7 @@ exports:
                        __ZN7BlueFin8GlPeHula21UpdateAlongTrackSpeedERKNS_15GlExtSensDataIfE, 
                        __ZN7BlueFin8GlPeHula21invalidateHulaLocMeasEv, __ZN7BlueFin8GlPeHula22TurningStateSensorData6UpdateERKNS_13GlExtSensDataE, 
                        __ZN7BlueFin8GlPeHula22UpdateAlMeasFromExtLocENS0_8SettingsEdddNS_9stAltAsstERNS_9stSKFMeasERb, 
+                       __ZN7BlueFin8GlPeHula23GetDistanceToE911ExtLocENS_8LLA_TYPEE, 
                        __ZN7BlueFin8GlPeHula23PackBestHulaAltInAlMeasERNS_9stSKFMeasE, 
                        __ZN7BlueFin8GlPeHula26IsPosLocationHulaDataValidEv, __ZN7BlueFin8GlPeHula6UpdateERKNS_13GlExtSensDataE, 
                        __ZN7BlueFin8GlPeHula7AccData6UpdateERKNS_13GlExtSensDataENS0_5teSetE, 
@@ -7627,7 +7629,7 @@ exports:
                        __ZN7BlueFin9GlDbgMeIf21EnableMonitorBlankingEb, __ZN7BlueFin9GlDbgMeIf21SetEcpuRefClockParamsEj, 
                        __ZN7BlueFin9GlDbgMeIf21SetReceiverParametersERNS_25GlMeReceiverParametersIfcE, 
                        __ZN7BlueFin9GlDbgMeIf22EnableInternalBlankingEb, __ZN7BlueFin9GlDbgMeIf22SetMeasurementIntervalEbhh, 
-                       __ZN7BlueFin9GlDbgMeIf23ChipData_GRABSIQ_342355EPvs, __ZN7BlueFin9GlDbgMeIf23SetHighPwrCwTestEnabledEb, 
+                       __ZN7BlueFin9GlDbgMeIf23ChipData_GRABSIQ_349788EPvs, __ZN7BlueFin9GlDbgMeIf23SetHighPwrCwTestEnabledEb, 
                        __ZN7BlueFin9GlDbgMeIf23ToggleHostWakeConfigureEb, __ZN7BlueFin9GlDbgMeIf24SetLowSignalStrengthModeEb, 
                        __ZN7BlueFin9GlDbgMeIf26SetUartFlowControlSettingsENS_17etUartFlowControlEhh, 
                        __ZN7BlueFin9GlDbgMeIf28SetNotchFiltersConfigurationEPKNS_19NOTCH_FILTER_CONFIGE, 
@@ -9773,7 +9775,7 @@ exports:
                        __ZThn24_N7BlueFin35RildClientModuleControlPlaneOlympicD1Ev, 
                        __ZThn32_N18FireMessageHandler12GlReqOnCntinEPN7BlueFin19IGlRequestInterfaceENS0_15GL_CNTIN_STATUSEdd, 
                        __ZThn32_N18FireMessageHandlerD0Ev, __ZThn32_N18FireMessageHandlerD1Ev, 
-                       __ZThn32_N7BlueFin15GlGpsdInterface14ChipSensorDataEPvs, __ZThn32_N7BlueFin15GlGpsdInterface23ChipData_GRABSIQ_342355EPvs, 
+                       __ZThn32_N7BlueFin15GlGpsdInterface14ChipSensorDataEPvs, __ZThn32_N7BlueFin15GlGpsdInterface23ChipData_GRABSIQ_349788EPvs, 
                        __ZThn32_N7BlueFin15GlGpsdInterfaceD0Ev, __ZThn32_N7BlueFin15GlGpsdInterfaceD1Ev, 
                        __ZThn32_N7BlueFin17GlSuplHalPlatform24ProvideOtdoaCapabilitiesEPKNS_24GLLPP_OTDOA_CapabilitiesE, 
                        __ZThn32_N7BlueFin17GlSuplHalPlatform26RequestOtdoaAssistanceDataEt, 
@@ -9881,7 +9883,7 @@ exports:
                         __ZNSt3__114__thread_proxyINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEENS_9mem_fun_tIv13FireThreadMgrEEPS8_EEEEEPvSC_, 
                         __ZZN7BlueFin16GlSuplStatusImpl8InstanceEvE10s_instance, 
                         __ZZN7BlueFin21GetDefaultLogInstanceEvE20s_defaultLogInstance ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _ASN1T_RRLP_EnvironmentCharacter_ToEnum, _ASN1T_RRLP_EnvironmentCharacter_ToEnum2, 
                        _ASN1T_RRLP_EnvironmentCharacter_ToString, _ASN1T_RRLP_ErrorCodes_ToEnum, 
                        _ASN1T_RRLP_ErrorCodes_ToEnum2, _ASN1T_RRLP_ErrorCodes_ToString, 

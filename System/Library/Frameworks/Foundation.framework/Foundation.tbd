@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: DEA2F438-8531-392F-85B1-73240DD2A2EC', 'armv7s: A50A77BF-6473-3BBB-B0D1-92E3240D79DC', 
-                   'arm64: 5BFEC287-65CA-312A-A812-8CD72A9FDA1B' ]
+                   'arm64: 98308AA7-4F64-33F7-825A-B15C0AEE0B93', 'arm64e: BE0C2BC6-EDE5-327C-A7D7-DA35D9192457' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Foundation.framework/Foundation
-current-version: 1556
+current-version: 1560.10
 compatibility-version: 300
 objc-constraint: none
 exports:         
@@ -409,9 +409,9 @@ exports:
                        NSISLinearExpression.data, NSISLinearExpression.inline_capacity, 
                        NSISLinearExpression.var_count, NSISVariable._refCount, _NSConcreteDateInterval._duration, 
                        _NSConcreteDateInterval._startDate ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     objc-ivars:      [ NSPredicate.reserved ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     re-exports:      [ /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation, 
                        /usr/lib/libobjc.A.dylib ]
     symbols:         [ '$ld$hide$os10.0$_OBJC_CLASS_$_NSURLSessionStreamTask', '$ld$hide$os10.0$_OBJC_METACLASS_$_NSURLSessionStreamTask', 

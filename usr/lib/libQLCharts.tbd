@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 07B96996-3B26-366B-BDB2-A4A191FE8943', 'armv7s: 036CDB60-D4FB-398A-81C6-C47C7C2A49D0', 
-                   'arm64: 5F74682A-8A71-3A28-971C-E68A65EEB6D2' ]
+                   'arm64: 3D42FFCC-FF83-3B58-A6AF-D622D7BFC70B', 'arm64e: 2AACD814-8C2A-3BD6-9489-FC3AF23B8CB2' ]
 platform:        ios
 install-name:    /usr/lib/libQLCharts.dylib
 current-version: 257.7
@@ -9,7 +9,7 @@ objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ _OIGetDefaultFontWithSize, ___gesf2, ___lesf2, ___ltsf2, ___nesf2 ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _DummyValueCallbacks, _OIAXisGetDrawMajorGridlines, _OIAxisAreLabelsCentered, 
                        _OIAxisConvertValueToLocal, _OIAxisCreateWithLabelCount, _OIAxisCreateWithRange, 
                        _OIAxisDictionaryValueCallbacks, _OIAxisGetCustomNumberFormatter, 

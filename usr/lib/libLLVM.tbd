@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 5616809F-A97F-3AA0-BF01-C8B373878C2F', 'armv7s: 15A51163-BDD6-30B1-96FF-F3EF99A3DABC', 
-                   'arm64: 60A17184-12DE-3E50-B3F0-34EC8344BE84' ]
+                   'arm64: 00FB658A-7546-35D0-8990-F2910020EA35', 'arm64e: 31EFB378-DE9A-3DC6-B16F-23C66237FE09' ]
 platform:        ios
 install-name:    /usr/lib/libLLVM.dylib
 current-version: 3902.18.4
@@ -1758,7 +1758,7 @@ exports:
                         __ZTSNSt3__121__basic_string_commonILb1EEE, __ZTSPFN4llvm19TargetTransformInfoERNS_8FunctionEE, 
                         __ZTSPFPN4llvm10ModulePassEvE, __ZTSPFPN4llvm12FunctionPassEvE, 
                         __ZTSPFPN4llvm4PassEvE ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __Z12CreateFPIntrPN4llvm6ModuleERNS_9IRBuilderINS_14ConstantFolderENS_24IRBuilderDefaultInserterEEENS_9Intrinsic2IDEPNS_5ValueESA_, 
                        __Z13powrExpansionPN4llvm13IntrinsicInstE, __Z19LLVMAddLoopSinkPassP21LLVMOpaquePassManager, 
                        __Z20buildPowOptimizationPN4llvm6ModuleERNS_9IRBuilderINS_14ConstantFolderENS_24IRBuilderDefaultInserterEEEPNS_5ValueES8_, 
@@ -5188,7 +5188,7 @@ exports:
                         __ZNK4llvm25OuterAnalysisManagerProxyINS_15AnalysisManagerINS_8FunctionEJEEENS_4LoopEJRNS_27LoopStandardAnalysisResultsEEE6Result21getOuterInvalidationsEv, 
                         __ZNK4llvm8LoopBaseINS_10BasicBlockENS_4LoopEE11isLoopLatchEPKS1_, 
                         __ZNK4llvm8LoopBaseINS_10BasicBlockENS_4LoopEE5printERNS_11raw_ostreamEjb ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _EnableIPRA, _LLVMABIAlignmentOfType, _LLVMABISizeOfType, 
                        _LLVMAGXRuntimeMajorVersion, _LLVMAGXRuntimeMinorVersion, 
                        _LLVMAddAggressiveDCEPass, _LLVMAddAlias, _LLVMAddAlignmentFromAssumptionsPass, 

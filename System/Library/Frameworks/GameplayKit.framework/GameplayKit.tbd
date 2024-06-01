@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D9C0E2AA-A355-3469-84B3-F46A157AD4C8', 'armv7s: 364700DD-E95E-3DFE-9F78-7FDB52CDA315', 
-                   'arm64: DDE8B1AF-D77F-3D4B-9931-D63DA6E9F358' ]
+                   'arm64: 90CD9446-20C1-31A6-AFF9-9B9D84988A5C', 'arm64e: 2AF2CE49-6B0C-3784-98B6-0CAAEB181D55' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GameplayKit.framework/GameplayKit
 objc-constraint: none
@@ -28,12 +28,12 @@ exports:
                         __ZTSN9OpenSteer17SphericalObstacleE, __ZTSN9OpenSteer17SteerLibraryMixinINS_15LocalSpaceMixinINS_15AbstractVehicleEEEEE, 
                         __ZTSN9OpenSteer18AbstractLocalSpaceE, __ZTSN9OpenSteer7PathwayE, 
                         __ZTSN9OpenSteer8ObstacleE ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __Z14__voronoiNoiseDv3_fffb, __ZTv0_n24_N10ClipperLib7ClipperD0Ev, 
                        __ZTv0_n24_N10ClipperLib7ClipperD1Ev, __ZTv0_n24_N9OpenSteer15PolylinePathway14mapPointToPathERKNS_4Vec3ERS1_Rf, 
                        __ZTv0_n32_N9OpenSteer15PolylinePathway22mapPathDistanceToPointEf, 
                        __ZTv0_n40_N10ClipperLib7Clipper5ResetEv, __ZTv0_n40_N9OpenSteer15PolylinePathway22mapPointToPathDistanceERKNS_4Vec3E ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _GKClosestPointsBetweenLineSegments, _GKDoesCircleIntersectLine, 
                        _GKDoesCircleIntersectLineSegment, _GKDoesCircleIntersectPolygon, 
                        _GKGetCircleToLineIntersectionPoints, _GKGetCircleToLineSegmentIntersectionPoints, 

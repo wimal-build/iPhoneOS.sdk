@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 1260046C-9A56-331C-A01D-765D19015DE1', 'armv7s: C67BB7EA-FF5E-343F-BEC9-FD055D488744', 
-                   'arm64: 10F82AE9-A288-3C54-8AE4-356CC4771825' ]
+                   'arm64: E7C69C85-4127-349F-B9C5-1B35CFCD23ED', 'arm64e: 133239A8-D42B-3A11-8BBD-EDC9253B877D' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
 current-version: 963.200.27
@@ -18,7 +18,7 @@ exports:
                        ___SCNetworkConnectionIPv6AddressMatchesRoutes, ___SCNetworkConnectionMaskIPv6Address, 
                        ___SCNetworkConnectionUseNetworkExtension, ___SCNetworkConnectionUsingNetworkExtension, 
                        ___crashreporter_info__ ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _CNCopyCurrentNetworkInfo, _CNCopySupportedInterfaces, _CNMarkPortalOffline, 
                        _CNMarkPortalOnline, _CNSetSupportedSSIDs, _DHCPClientPreferencesCopyApplicationOptions, 
                        _DHCPClientPreferencesSetApplicationOptions, _DHCPInfoGetLeaseExpirationTime, 

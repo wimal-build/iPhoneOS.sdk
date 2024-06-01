@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D11FC713-CFF6-3100-8D1B-446C4511630C', 'armv7s: 10D93789-6D02-3ADA-847B-841000908211', 
-                   'arm64: C031D90A-BBCC-37B2-B645-3395674446DF' ]
+                   'arm64: 180D919C-C541-3931-AA6A-53EB3DE66435', 'arm64e: 8542EB6B-25CA-324A-B89E-ADC368AD3AE3' ]
 platform:        ios
 install-name:    /usr/lib/libARI.dylib
 objc-constraint: none
@@ -1776,7 +1776,7 @@ exports:
                         __ZTSNSt3__120__shared_ptr_pointerIP7AriHostNS_14default_deleteIS1_EENS_9allocatorIS1_EEEE, 
                         __ZTSNSt3__123enable_shared_from_thisIN3Ari12AriClientXpcEEE, 
                         __ZTSNSt3__123enable_shared_from_thisIN3Ari14ClientWorkItemEEE ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __Z19SdkGmidIsAwdRequestj, __Z20SdkGmidIsLowPriorityj, __Z22SdkMsgIsFilerInitiatorPKhjRj, 
                        __Z23SdkMsgIsFilerReadStreamPKhjRj, __Z27SdkGmidIsAllowedDuringStallj, 
                        __Z28SdkGmidIsFileWriteTerminatorj, __Z32SdkGmidIsAllowedForPublicLoggingj, 
@@ -3760,7 +3760,7 @@ exports:
                        __ZTVN6AriSdk46ARI_IBINetDcImsRegistrationStatusInfoRspCb_SDKE, 
                        __ZTVN6AriSdk47ARI_IBINetSetSystemSelectionPreferenceRspCb_SDKE, 
                        __ZTVN6AriSdk7MsgBaseE ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _ARIMSGDEF_GROUP01_bsp, _ARIMSGDEF_GROUP02_call_cs, _ARIMSGDEF_GROUP03_call_ps, 
                        _ARIMSGDEF_GROUP04_sms, _ARIMSGDEF_GROUP05_cbs, _ARIMSGDEF_GROUP06_ss, 
                        _ARIMSGDEF_GROUP07_net_plmn, _ARIMSGDEF_GROUP08_net_rat, _ARIMSGDEF_GROUP09_net_cell, 

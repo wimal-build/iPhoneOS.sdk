@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 70372A84-D1CA-38CF-BF15-BCB414C82854', 'armv7s: 3D191589-81F3-34EA-BC3D-96041048C17D', 
-                   'arm64: 1A785797-ABAD-3BC5-B47E-345056DFCC79' ]
+                   'arm64: D61633CA-0956-3AA1-887D-CC7CFD45D33F', 'arm64e: 0B68009A-3CBC-328F-8BDE-ECB5A3BC5E32' ]
 platform:        ios
 install-name:    /usr/lib/libAWDProtobufLocation.dylib
 objc-constraint: none
@@ -211,7 +211,7 @@ exports:
                        __ZNK3awd7metrics43LocationMicroLocationLocalizationStatistics24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE, 
                        __ZNK3awd7metrics44LocationMicroLocationEventSignificanceMetric24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE, 
                        __ZNK3awd7metrics46LocationMicroLocationEventClusteringStatistics24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __ZN3awd7metrics11MotionState21CheckTypeAndMergeFromERKN20wireless_diagnostics6google8protobuf11MessageLiteE, 
                        __ZN3awd7metrics11MotionState27MergePartialFromCodedStreamEPN20wireless_diagnostics6google8protobuf2io16CodedInputStreamE, 
                        __ZN3awd7metrics13MotionTrigger21CheckTypeAndMergeFromERKN20wireless_diagnostics6google8protobuf11MessageLiteE, 
@@ -1452,7 +1452,7 @@ exports:
                        __ZTVN3awd7metrics54LocationGnssSWRecoveryStatistics_LocationRecoveryPointE, 
                        __ZTVN3awd7metrics55LocationGnssSWRecoveryStatistics_LocationRecoveryStatusE, 
                        __ZTVN3awd7metrics57LocationGnssSWRecoveryStatistics_LocationGnssRecoveryInfoE ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ __ZN3awd7metrics11MotionState10SharedCtorEv, __ZN3awd7metrics11MotionState10SharedDtorEv, 
                        __ZN3awd7metrics11MotionState16default_instanceEv, __ZN3awd7metrics11MotionState17default_instance_E, 
                        __ZN3awd7metrics11MotionState19kEnabledFieldNumberE, __ZN3awd7metrics11MotionState20kBundleidFieldNumberE, 

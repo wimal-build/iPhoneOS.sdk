@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 5AF045C8-8DF7-3724-9447-B8C01BB052E6', 'armv7s: 2D6CEB26-E037-38C6-9294-014A120683DA', 
-                   'arm64: 62513B00-19C2-3BC0-9B9E-30D049CD8700' ]
+                   'arm64: 963B0EFB-C451-35EC-8220-97655E6690D4', 'arm64e: BFADF4AE-3264-38B7-964A-283E025366CF' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-current-version: 1245.8
+current-version: 1245.9.2
 compatibility-version: 64
 objc-constraint: none
 exports:         
@@ -50,7 +50,7 @@ exports:
                        _kCGColorSpaceUserGray, _kCGColorSpaceUserRGB, _kCGColorTransformDefaultCMYK, 
                        _kCGColorTransformDefaultGray, _kCGColorTransformDefaultRGB, 
                        _path_iterator_aaline_create ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ _CGRegionContainsPoint, _CGRegionContainsRect, _CGRegionContainsRegion, 
                        _CGRegionCreateCopy, _CGRegionCreateDifferenceWithRegion, 
                        _CGRegionCreateEmptyRegion, _CGRegionCreateIntersectionWithRect, 
@@ -59,7 +59,7 @@ exports:
                        _CGRegionCreateWithRect, _CGRegionCreateWithRects, _CGRegionEqualToRegion, 
                        _CGRegionGetBoundingBox, _CGRegionIntersectsRect, _CGRegionIntersectsRegion, 
                        _CGRegionIsEmpty, _CGRegionIsRect ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _CFTypeCreateWithCGPDFObject, _CGAccessSessionCreate, _CGAccessSessionGetBytePointer, 
                        _CGAccessSessionGetBytes, _CGAccessSessionGetChunks, _CGAccessSessionRelease, 
                        _CGAccessSessionRewind, _CGAccessSessionSkipForward, _CGAffineTransformConcat, 

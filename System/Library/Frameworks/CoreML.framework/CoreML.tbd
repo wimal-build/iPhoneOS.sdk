@@ -1,12 +1,12 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 55C2BE61-E445-36D1-9A85-5261A7CF7B70' ]
+                   'arm64: 06408B3A-59EA-3213-AFC9-93985FFD659F', 'arm64e: 32EE3933-85C7-3985-9F2E-E1F41D691D6A' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreML.framework/CoreML
 objc-constraint: none
 exports:         
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _MLModelAuthorKey, _MLModelCreatorDefinedKey, _MLModelDescriptionKey, 
                        _MLModelErrorDomain, _MLModelLicenseKey, _MLModelVersionStringKey, 
                        _MLNLPSentenceClassifierModelName, _MLNLPWordTaggingModelName, 

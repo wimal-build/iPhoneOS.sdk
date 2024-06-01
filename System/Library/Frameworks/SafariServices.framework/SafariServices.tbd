@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 3FD69674-F65E-3557-8FCA-EB2F4FFF814C', 'armv7s: 88F4F794-3190-39F9-9B76-79A2B13CA92F', 
-                   'arm64: 68B284FF-C742-371E-B445-8C8B76127384' ]
+                   'arm64: 2C68CC4C-E5D6-31EE-8205-41B3A91ECED8', 'arm64e: 04EB94D7-F64D-3EB9-B55A-ABE8BC2795C4' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SafariServices.framework/SafariServices
 objc-constraint: none
@@ -11,7 +11,7 @@ exports:
                        __SFDebugEnableQuerySuggestionsPreferenceKey, __SFDebugEnableSpotlightDonationPreferenceKey ]
     objc-classes:    [ _SFDownloadController, _SFEditableTableViewCellLayoutManager, 
                        _SFManagedActivityViewController ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _SFAdditionalArgumentsKey, _SFAggregateDAddedBookmarkInMemory, 
                        _SFAggregateDFindOnPageActivityKey, _SFAggregateDHistoryMigrationTimeKey, 
                        _SFAggregateDIconsInTabEnabledKey, _SFAggregateDSafeBrowsingDisabledKey, 
@@ -32,11 +32,11 @@ exports:
                        __SFBarItemEnumerateCases, __SFBarItemNull, __SFBookmarksUserActivityType, 
                        __SFCGPointsEqualWithEpsilon, __SFCGRectGrowToSize, __SFCeilingFloatToPixels, 
                        __SFClampPercent, __SFContentBlockerStoreURL, __SFCustomUserAgentStringIfNeeded, 
-                       __SFDataOwnerForWebViewInteraction, __SFDeviceSupportsHighQualityGraphics, 
-                       __SFDisableICECandidateFiltering, __SFDoNotTrackEnabledDefaultsKey, 
-                       __SFEnableEnumeratingAllNetworkInterfaces, __SFEnableMediaCapture, 
-                       __SFEnableMockCaptureDevices, __SFEnableWebRTCLegacyAPI, __SFEqualWithEpsilon, 
-                       __SFFloorFloatToPixels, __SFFormMetadataFocusingForStreamlinedLogin, 
+                       __SFDataOwnerForWebViewInteraction, __SFDeviceHasHomeButton, 
+                       __SFDeviceSupportsHighQualityGraphics, __SFDisableICECandidateFiltering, 
+                       __SFDoNotTrackEnabledDefaultsKey, __SFEnableEnumeratingAllNetworkInterfaces, 
+                       __SFEnableMediaCapture, __SFEnableMockCaptureDevices, __SFEnableWebRTCLegacyAPI, 
+                       __SFEqualWithEpsilon, __SFFloorFloatToPixels, __SFFormMetadataFocusingForStreamlinedLogin, 
                        __SFHasCompletedReadingListArchivePreferenceMigrationKey, 
                        __SFIconsInTabsEnabledKey, __SFImageForMediaCaptureDeviceIcon, 
                        __SFIncrementAggdKey, __SFInlineMediaPlaybackRequiresPlaysInlineAttributeKey, 

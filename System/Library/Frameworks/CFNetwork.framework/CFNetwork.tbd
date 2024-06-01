@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: A4258C2D-78C3-30C4-825E-A7152E3402F0', 'armv7s: 9F6656E9-E258-3D5A-8884-80B53780B79C', 
-                   'arm64: 0F16D72D-C5D4-3AF4-9F1C-C4CB53A7C608' ]
+                   'arm64: 9DED6780-5069-3C6E-9494-6CDF21DDC7C0', 'arm64e: E6CC536B-35B3-3914-9EC0-06D6977219BF' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CFNetwork.framework/CFNetwork
-current-version: 974.2.1
+current-version: 975.0.3
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -15,7 +15,7 @@ exports:
                        __CFNetworkUnitTestSchemeUpgradeLoadOtherURL, __CFNetworkUnitTestSchemeUpgradeRedirect, 
                        __CFNetworkUnitTestTunnelProxyBasicBadPassword, __CFNetworkUnitTestTunnelProxyNTLMBadPassword, 
                        _kCFNIE ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ '$ld$hide$os4.3$_NSHTTPCookieComment', '$ld$hide$os4.3$_NSHTTPCookieCommentURL', 
                        '$ld$hide$os4.3$_NSHTTPCookieDiscard', '$ld$hide$os4.3$_NSHTTPCookieDomain', 
                        '$ld$hide$os4.3$_NSHTTPCookieExpires', '$ld$hide$os4.3$_NSHTTPCookieLocationHeader', 
@@ -662,10 +662,10 @@ exports:
                        __CFNetworkUnitTestConditionalConnectionSIMScheduler, __CFNetworkUnitTestCookieDiskFuzzing, 
                        __CFNetworkUnitTestCookieFileChecking, __CFNetworkUnitTestCookieFuzzing, 
                        __CFNetworkUnitTestCookiePrefix, __CFNetworkUnitTestCookieSameSiteGetAsDOM, 
-                       __CFNetworkUnitTestCookieSameSiteSetAsDOM, __CFNetworkUnitTestDataBecomeDownload, 
-                       __CFNetworkUnitTestDigestAuthNonceCount, __CFNetworkUnitTestEndpointNTLM, 
-                       __CFNetworkUnitTestEndpointNTLMBadPassword, __CFNetworkUnitTestEndpointNTLMConnectionReuse, 
-                       __CFNetworkUnitTestEndpointNTLMPOSTBodyStreamWithClientDefinedContentLength, 
+                       __CFNetworkUnitTestCookieSameSiteSetAsDOM, __CFNetworkUnitTestCookieStorgeNotification, 
+                       __CFNetworkUnitTestDataBecomeDownload, __CFNetworkUnitTestDigestAuthNonceCount, 
+                       __CFNetworkUnitTestEndpointNTLM, __CFNetworkUnitTestEndpointNTLMBadPassword, 
+                       __CFNetworkUnitTestEndpointNTLMConnectionReuse, __CFNetworkUnitTestEndpointNTLMPOSTBodyStreamWithClientDefinedContentLength, 
                        __CFNetworkUnitTestHTTP2ConnectionCoalecsing, __CFNetworkUnitTestHTTP2ConnectionEquality, 
                        __CFNetworkUnitTestHTTP2ConnectionIdleTimer, __CFNetworkUnitTestHTTP2ServerPush, 
                        __CFNetworkUnitTestHTTP2ServerPushAcceptHeaderMatch, __CFNetworkUnitTestHTTPRedirectWithNonHTTPLocationHeader, 

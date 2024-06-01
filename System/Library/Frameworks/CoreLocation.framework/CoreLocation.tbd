@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D5FED001-75DC-39D7-881E-D31C0E1AFCB4', 'armv7s: 40B5865E-BD06-31A9-A1C7-4D2121ACB847', 
-                   'arm64: 9330BAF0-F633-3FB8-A41D-6B633BCC2E1D' ]
+                   'arm64: D671AB94-FC34-36C0-99B1-38DFF09788BC', 'arm64e: 6B5BD01A-2452-350C-9F82-B51E71A95DF7' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreLocation.framework/CoreLocation
-current-version: 2245.4.104
+current-version: 2245.8.12
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -19,7 +19,7 @@ exports:
                        _CLSimulationWifiAccessPointMacAddress, _CLSimulationWifiAccessPointMode, 
                        _CLSimulationWifiAccessPointRssi, __CLClientCreateWithBundleIdentifierAndPath, 
                        __CLClientSetCallbackObjc ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _CLAppResetChangedNotification, _CLAppStatusChangedNotification, 
                        _CLAuthorizationStatusChangedNotification, _CLBeaconRegionAnyIdentifier, 
                        _CLClientCreateIso6709Notation, _CLClientCreateWithBundleIdentifierAndPath, 

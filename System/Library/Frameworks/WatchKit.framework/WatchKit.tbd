@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 54177D03-8C9C-32F1-BF9F-44BE19894FC8', 'armv7s: 8C4BE24A-BC98-33DA-AF13-23804834544A', 
-                   'arm64: DD134397-8274-303E-90EE-AEF0678AE4A0' ]
+                   'arm64: 410394E3-1D0E-361E-A424-BA56BFC20C1F', 'arm64e: 35724D5B-91A4-325B-904F-31506D39E523' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/WatchKit.framework/WatchKit
 objc-constraint: none
@@ -26,7 +26,7 @@ exports:
     objc-classes:    [ SPInterfaceButton, SPInterfaceGroup, SPInterfaceImageView, 
                        SPInterfaceLabel, SPInterfaceList, SPInterfaceMapView, SPInterfaceObject, 
                        SPInterfaceSlider, SPInterfaceSwitch, SPLogs, SPUtils ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _AccessibilityHintPropertyKey, _AccessibilityIdentifierPropertyKey, 
                        _AccessibilityIsElementPropertyKey, _AccessibilityLabelPropertyKey, 
                        _AccessibilityRegionsPropertyKey, _AccessibilityTraitsPropertyKey, 

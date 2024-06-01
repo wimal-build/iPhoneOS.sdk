@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: EF039D34-68F0-34F8-918E-D1EE9A3300E5', 'armv7s: 7E17A1E2-DF00-346C-9700-36C35FB22283', 
-                   'arm64: BC9A0D32-31DD-3AD9-B867-704138FA92EE' ]
+                   'arm64: 43CBE042-27F1-321D-9572-C9453B1567C9', 'arm64e: A39F7EFF-0A2C-3C22-BA24-E2ADF1569EF5' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/VideoSubscriberAccount.framework/VideoSubscriberAccount
 current-version: 270.2
@@ -10,7 +10,7 @@ exports:
   - archs:           [ armv7, armv7s ]
     symbols:         [ _VSStoreProviderResponseKeyAppStoreIdentifier, _VSSubscriptionFetchOptionIncludeUninstalledApps ]
     objc-classes:    [ VSBundlePrivacyInfo, VSCookieServer, VSDemoProviderServer ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _VSAccountProviderAuthenticationSchemeSAML, _VSAccountStoreDidChangeNotification, 
                        _VSActiveSubscriptionsDidChangeNotification, _VSAllKnownTemplateElements, 
                        _VSBundleURLForProcessIdentifier, _VSCheckAccessOptionPrompt, 

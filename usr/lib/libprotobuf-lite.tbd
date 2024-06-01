@@ -1,12 +1,12 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 318F2352-9565-3A4D-B771-7B644644372B' ]
+                   'arm64: 07FDFEEA-D291-31CC-ABA4-80622E359706', 'arm64e: DB040B18-2EAF-3275-AD74-5D1E5E35DD7F' ]
 platform:        ios
 install-name:    /usr/lib/libprotobuf-lite.dylib
 objc-constraint: none
 exports:         
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __ZN20wireless_diagnostics6google8protobuf11LogSilencerC1Ev, 
                        __ZN20wireless_diagnostics6google8protobuf11LogSilencerC2Ev, 
                        __ZN20wireless_diagnostics6google8protobuf11LogSilencerD1Ev, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D45EB43B-09F4-3047-8468-9468893F113C', 'armv7s: E6832CC4-72B0-3820-82BC-4124496389E5', 
-                   'arm64: D7854A01-7D6A-3FE3-A6A7-DDD7DAF77FDD' ]
+                   'arm64: 487A7475-3E5E-3458-82B3-526EB5B0D664', 'arm64e: 0113C348-A039-3232-B983-62D293FF7F9D' ]
 platform:        ios
 install-name:    /usr/lib/libnetwork.dylib
 objc-constraint: none
@@ -154,7 +154,7 @@ exports:
                        NWConcrete_tcp_connection.tc_sent_connected, NWConcrete_tcp_connection.tc_state, 
                        NWConcrete_tcp_connection.tc_state_has_been_preparing, NWConcrete_tcp_connection.tc_tls_mode, 
                        NWConcrete_tcp_connection.tc_usage_model ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _NETCORE_XPC_TYPE_ANY, ___nw_create_backtrace_string, ___nw_should_simulate_crash, 
                        ___nwlog_create_hash_from_private_string, ___nwlog_err_set_disable_simulate_crash, 
                        ___nwlog_err_simulate_crash, ___nwlog_is_datapath_logging_enabled, 

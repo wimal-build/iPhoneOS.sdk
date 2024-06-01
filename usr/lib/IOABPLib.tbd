@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: B3E97D21-0435-32D1-B1E7-59DD2CAC0192', 'armv7s: AEB13D85-97A1-37D7-8E99-3C1661B09B0D', 
-                   'arm64: 9F6526AA-CBD1-3D74-918A-BC20E0DEEF8E' ]
+                   'arm64: 023FF5C9-0566-3447-A1C3-F1FD20D9400D', 'arm64e: D498D2DB-8B3C-35EE-88C9-82968B350E17' ]
 platform:        ios
 install-name:    /usr/lib/IOABPLib.dylib
 objc-constraint: none
@@ -19,7 +19,7 @@ exports:
                        __ZN17IOABPControlClass12setAsyncPortEv, __ZN17IOABPControlClass13readLogsAsyncEPvmbPFvS0_iS0_ES0_, 
                        __ZN17IOABPControlClass21getLastKnownBootStageEPm, __ZN17IOABPControlClass23generalInterestFunctionEjPv, 
                        __ZN17IOABPControlClass24getLogInternalBufferSizeEPm, __ZN17IOABPControlClass7open_nlEP11__CFRunLoop ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __ZN10IOABPClass10writeAsyncEPKvjPFvPviS2_ES2_, __ZN10IOABPClass12readRegisterEjPvPj, 
                        __ZN10IOABPClass13timeSyncAsyncEPvjPFvS0_iS0_ES0_, __ZN10IOABPClass14sendImageAsyncEPKvjPFvPviS2_S2_ES2_, 
                        __ZN10IOABPClass16interfaceMatchedEPvj, __ZN10IOABPClass4readEPvPj, 
@@ -32,7 +32,7 @@ exports:
                        __ZN17IOABPControlClass25registerEventNotificationEP16dispatch_queue_sU13block_pointerFv12abpErrorTypePvS3_E, 
                        __ZN17IOABPControlClass28registerEventNotification_nlEP11__CFRunLoopP16dispatch_queue_sU13block_pointerFv12abpErrorTypePvS5_E, 
                        __ZN17IOABPControlClass4openEP16dispatch_queue_s, __ZN17IOABPControlClass7open_nlEP11__CFRunLoopP16dispatch_queue_s ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ __Z21getABPDirectionString12abpDirection, __Z21getABPErrorTypeString12abpErrorType, 
                        __Z21getABPLinkStateString12abpLinkState, __Z24getABPAERErrorTypeString15abpAERErrorType, 
                        __Z24getABPBHIRegistersString15abpBHIRegisters, __Z24getABPBTIRegistersString15abpBTIRegisters, 

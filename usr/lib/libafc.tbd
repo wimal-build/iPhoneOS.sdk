@@ -1,12 +1,12 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 90E39957-E00C-3259-A5EA-C8FA19FC91C4', 'armv7s: 75C4F117-7E08-3F16-BF26-075BE52C5EE7', 
-                   'arm64: 9F59DF45-DC2C-3179-BAB6-6A0FC078A3F3' ]
+                   'arm64: 14F9888D-E834-3985-A4DB-4CA4D271C877', 'arm64e: 42A501F4-1A4C-303D-B838-6812DCE24831' ]
 platform:        ios
 install-name:    /usr/lib/libafc.dylib
 objc-constraint: none
 exports:         
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _AFCConnectionClose, _AFCConnectionCopyLastErrorInfo, _AFCConnectionCreate, 
                        _AFCConnectionGetContext, _AFCConnectionGetFSBlockSize, _AFCConnectionGetIOTimeout, 
                        _AFCConnectionGetSecureContext, _AFCConnectionGetSocketBlockSize, 

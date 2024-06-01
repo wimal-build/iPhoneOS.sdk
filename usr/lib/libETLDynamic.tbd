@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 8043D497-E277-3D2D-8A37-3D7A612E4160', 'armv7s: 80F6C1BF-337D-3B2B-9361-A055686104A4', 
-                   'arm64: 2B5113EA-61B3-3189-B4A9-9F9E1EDCB01E' ]
+                   'arm64: C05A7424-F8C5-3C05-88A1-C95438B0F0E9', 'arm64e: 04ECD29C-C40A-3E9D-B621-AA78D7D21044' ]
 platform:        ios
 install-name:    /usr/lib/libETLDynamic.dylib
 objc-constraint: none
@@ -23,10 +23,10 @@ exports:
                         __ZTSNSt3__120__shared_ptr_pointerIPN5eUICC16AuthPersoSession8ResponseENS_14default_deleteIS3_EENS_9allocatorIS3_EEEE, 
                         __ZTSNSt3__120__shared_ptr_pointerIPN5eUICC16InitPersoSession8ResponseENS_14default_deleteIS3_EENS_9allocatorIS3_EEEE, 
                         __ZTSNSt3__120__shared_ptr_pointerIPN5eUICC20FinalizePersoSession8ResponseENS_14default_deleteIS3_EENS_9allocatorIS3_EEEE ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __ZN5eUICC12GetVinylType7PerformERKNS0_7RequestE, _lz4_decode_fast, 
                        _lz4_decode_safe ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _APPLIB_API_MAV_DeAssertResetDetect, _APPLIB_API_MAV_ParseAPWakeResponse, 
                        _APPLIB_API_MAV_ParseFuseResponse, _APPLIB_API_MAV_PowerDown, 
                        _APPLIB_API_MAV_SendAPWakeCommand, _APPLIB_API_MAV_SendFuseCommand, 

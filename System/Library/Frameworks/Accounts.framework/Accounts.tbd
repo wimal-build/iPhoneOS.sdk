@@ -1,14 +1,14 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: E909E831-5A6D-3CEC-A984-836BDD4596E0', 'armv7s: 9D38EBE0-5C0A-346B-BE06-E7B971E3B366', 
-                   'arm64: 866DB4A9-23A3-39B6-8CA1-2B8E3E66BF3C' ]
+                   'arm64: 466DCB04-5D65-3A0C-AE8B-24650544ECE0', 'arm64e: B362E0CA-2283-3D96-8FED-98834ED0B59F' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Accounts.framework/Accounts
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ACLogInternal, __ACLogInternalV ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _ACAccountCredentialsDidChangeNotification, _ACAccountIdentifierKey, 
                        _ACAccountPropertyAllowsInsecureAuthentication, _ACAccountPropertyAllowsRecoverableTrustCertificate, 
                        _ACAccountPropertyAuthenticationScheme, _ACAccountPropertyAutodiscoverURL, 

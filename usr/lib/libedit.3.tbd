@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: C2E2BCAA-5756-3D0A-A1FB-0E55F41A55D3', 'armv7s: 3E91F229-8ADB-3900-A08E-B8C915D47CC4', 
-                   'arm64: 6F93A758-A251-3CD0-8C9D-84F87D92A224' ]
+                   'arm64: CE74D4C1-222A-3609-9A4A-88B367CAA877', 'arm64e: 46639615-E7B3-3A8B-8BAB-4A42142DEB0E' ]
 platform:        ios
 install-name:    /usr/lib/libedit.3.dylib
 current-version: 3
@@ -73,7 +73,7 @@ exports:
                        _vi_to_column, _vi_to_history_line, _vi_to_next_char, _vi_to_prev_char, 
                        _vi_undo, _vi_undo_line, _vi_yank, _vi_yank_end, _vi_zero, 
                        _wcsdup ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ __el_fn_complete, __el_fn_sh_complete, __rl_abort_internal, 
                        __rl_print_completions_horizontally, __rl_qsort_string_compare, 
                        _add_history, _clear_history, _completion_matches, _current_history, 

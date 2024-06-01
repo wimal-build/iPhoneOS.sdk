@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: AB80F09A-89D6-3F7E-BC4F-E826405454B1', 'armv7s: 5088F091-394D-3590-814E-259190FDBB51', 
-                   'arm64: D34B6BD9-9A46-35C8-9010-404E77C58B1E' ]
+                   'arm64: F93E65D2-548F-3A81-9B6B-34BA2E951471', 'arm64e: 1110BC96-06F7-3743-AA4E-3A911E21640E' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/EventKitUI.framework/EventKitUI
 objc-constraint: none
@@ -18,7 +18,7 @@ exports:
                        _TentativeImage, _kCalendarDetachAlertTag, _kCalendarDetachFutureAlertTag ]
     objc-classes:    [ EKDeclinedCalendarItemInfo, EKUILocationSearchABSearchMatchProcessor ]
     objc-ivars:      [ EKLegacyUIOccurrenceListItem._isFacebook ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _AdjustedColorForBackgroundColor, _AdjustedColorForColor, 
                        _AllDayBottomPadding, _BirthdayImage, _BirthdayMonthCalendarColor, 
                        _BirthdayPadDayViewImage, _BirthdayPadMonthViewImage, _BirthdayPadWeekViewImage, 

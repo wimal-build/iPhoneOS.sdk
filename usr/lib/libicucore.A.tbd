@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 0E3B42B2-8E49-3FCF-A2E2-039DB0CA3A3D', 'armv7s: E4169494-3FAB-3882-9092-A41CFA280C4C', 
-                   'arm64: 2FBC0CC8-7B05-38BD-8995-E041AA46B5CF' ]
+                   'arm64: D64040F5-77DF-3BDA-B0B7-C4A111731404', 'arm64e: 2312E3FC-A1A9-327F-9FCD-E18D5720DC4F' ]
 platform:        ios
 install-name:    /usr/lib/libicucore.A.dylib
 current-version: 62.1
@@ -174,7 +174,7 @@ exports:
                        __ZThn4_NK3icu10UnicodeSet9toPatternERNS_13UnicodeStringEa, 
                        _icudt57_dat, _ucase_getSingleton, _ures_getAllArrayItemsWithFallback, 
                        _ures_getAllTableItemsWithFallback, _utrace_level ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __ZN3icu10Appendable12appendStringEPKDsi, __ZN3icu10Appendable15getAppendBufferEiiPDsiPi, 
                        __ZN3icu10CharString14appendPathPartENS_11StringPieceER10UErrorCode, 
                        __ZN3icu10CharStringC1EOS0_, __ZN3icu10CharStringC2EOS0_, 
@@ -927,7 +927,7 @@ exports:
                        __ZThn8_NK3icu6number4impl22MutablePatternModifier17getCodePointCountER10UErrorCode, 
                        __ZThn8_NK3icu6number4impl22MutablePatternModifier5applyERNS1_19NumberStringBuilderEiiR10UErrorCode, 
                        __ZThn8_NK3icu6number4impl22MutablePatternModifier8isStrongEv ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _T_CString_int64ToString, _T_CString_integerToString, _T_CString_stringToInteger, 
                        _T_CString_toLowerCase, _T_CString_toUpperCase, _UCNV_FROM_U_CALLBACK_ESCAPE, 
                        _UCNV_FROM_U_CALLBACK_SKIP, _UCNV_FROM_U_CALLBACK_STOP, _UCNV_FROM_U_CALLBACK_SUBSTITUTE, 

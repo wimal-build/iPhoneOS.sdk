@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: C7E7DC6F-DAB5-3EE8-8DF5-2D696BF0BA1E', 'armv7s: 197910B6-3639-3F30-8A99-5ADD6ED35AFB', 
-                   'arm64: 7567DA03-26BC-327B-832B-78F5EE4CF6C2' ]
+                   'arm64: A87EA374-1E3B-318A-A50F-6DD39E5BA53A', 'arm64e: B3F0DD29-D8AB-3230-A35E-7B4E46C26760' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/HomeKit.framework/HomeKit
-current-version: 484.0.70
+current-version: 484.2.2
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -19,7 +19,7 @@ exports:
                        _milliseconds, _removeCacheDirectory ]
     objc-classes:    [ HMHAPMetadataUnit, HMThreadSafeMutableArrayCollection, HMXpcClient, 
                        HMXpcClientConnectionProxy ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _CODER_RemoteLoginMessage_Error, _CODER_RemoteLoginMessage_SessionID, 
                        _HMAccessControlUserCodingKey, _HMAccessoryAddControlTargetsMessageKey, 
                        _HMAccessoryAssociationOptionsCodingKey, _HMAccessoryCategoryTypeAirConditioner, 
@@ -74,6 +74,7 @@ exports:
                        _HMAccessorySupportsIdentifyCodingKey, _HMAccessorySupportsMediaAccessControlCodingKey, 
                        _HMAccessorySymptomsHandlerUpdatedMessage, _HMAccessoryTargetControlSupportCodingKey, 
                        _HMAccessoryTargetControlSupportMessageKey, _HMAccessoryTargetControlUpdatedMessage, 
+                       _HMAccessoryTargetControllerHardwareSupportCodingKey, _HMAccessoryTargetControllerHardwareSupportMessageKey, 
                        _HMAccessoryTargetControllerSupportCodingKey, _HMAccessoryTargetControllerSupportMessageKey, 
                        _HMAccessoryUpdateControlTargetsMessageKey, _HMAccessoryWiFiNetworkInfoCodingKey, 
                        _HMActionSetTypeHomeArrival, _HMActionSetTypeHomeDeparture, 

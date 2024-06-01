@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: A3ED655B-727E-391A-A741-7B73B4939695', 'armv7s: E3657660-EFCF-3278-A7EF-6C52F5DF55C8', 
-                   'arm64: 74E5B902-BE15-33D1-AA9E-072EBDD804B2' ]
+                   'arm64: 8A75041C-044C-36C5-9066-899111562598', 'arm64e: 53BCBD02-C96A-373D-B002-95E4ED265E74' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/MetalPerformanceShaders
-current-version: 121.0.2
+current-version: 121.1.1
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -28,7 +28,7 @@ exports:
                        MPSImageThresholdToZeroInverse, MPSImageThresholdTruncate, 
                        MPSImageTranspose, MPSKernel, MPSMatrix, MPSMatrixDescriptor, 
                        MPSMatrixMultiplication, MPSTemporaryImage, MPSUnaryImageKernel ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     re-exports:      [ /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSCore.framework/MPSCore, 
                        /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSImage.framework/MPSImage, 
                        /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSMatrix.framework/MPSMatrix, 
@@ -37,16 +37,16 @@ exports:
     symbols:         [ _MPSHintTemporaryMemoryHighWaterMark, _MPSSetHeapCacheDuration, 
                        _MPSSupportsMTLDevice ]
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 97C66E98-05D9-3D32-82DD-414390F5F121' ]
+                   'arm64: E3199C0C-89AE-3727-9F02-9CD9BEC49A46', 'arm64e: 44C4B70F-B86D-33F5-BF13-D6FD28B7A46E' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSCore.framework/MPSCore
-current-version: 121.0.2
+current-version: 121.1.1
 objc-constraint: none
 parent-umbrella: MetalPerformanceShaders
 exports:         
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __Z21MPSDecrementReadCountP17MPSTemporaryImage, __Z21MPSDecrementReadCountP7NSArrayIP8MPSImageE, 
                        __Z21MPSDecrementReadCountP7NSArrayIP8MPSStateE, __Z21MPSDecrementReadCountP8MPSImage, 
                        __Z21MPSDecrementReadCountP8MPSState, __Z25MPSGetEffectiveClipRegion7MTLSize9MPSRegion, 
@@ -87,7 +87,7 @@ exports:
                        __ZN9MPSDevice8GetQueueEv, __ZN9MPSDeviceC2EPU19objcproto9MTLDevice11objc_object, 
                        __ZN9MPSDeviceD0Ev, __ZN9MPSDeviceD1Ev, __ZN9MPSDeviceD2Ev, 
                        __ZNK13MPSAutoBuffer5PrintEv ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     allowable-clients: [ MetalPerformanceShaders ]
     symbols:         [ _MPSConvertFloatToHalf, _MPSConvertHalfToFloat, _MPSCopyToFromNetworkByteOrder16, 
                        _MPSCopyToFromNetworkByteOrder32, _MPSEncodeCopyTexture, _MPSGetEffectiveFeatureChannelsCount, 
@@ -112,16 +112,16 @@ exports:
                        MPSState._flags, MPSState._readCount, MPSState._resourceCount, 
                        MPSState._resources, MPSTemporaryImage._readCount ]
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 237D1F31-204D-35D3-8429-A25A167468B0' ]
+                   'arm64: 4561E035-E992-3B9B-9A77-0875C0C4FE51', 'arm64e: 50100518-5C7D-33D9-BAA8-B79775341850' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSImage.framework/MPSImage
-current-version: 121.0.2
+current-version: 121.1.1
 objc-constraint: none
 parent-umbrella: MetalPerformanceShaders
 exports:         
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     allowable-clients: [ MetalPerformanceShaders ]
     symbols:         [ _MPSSubTileEncode ]
     objc-classes:    [ MPSBinaryImageKernel, MPSImageAdd, MPSImageAreaMax, MPSImageAreaMin, 
@@ -146,18 +146,18 @@ exports:
                        MPSUnaryImageKernel._encode, MPSUnaryImageKernel._encodeData, 
                        MPSUnaryImageKernel._getPreferredTileSize ]
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: AA01AF22-AAD5-3F2B-83D1-1CA8167CB713' ]
+                   'arm64: E400885B-38DC-346F-A512-E77C34AE72A8', 'arm64e: E87A4513-7784-3B42-8BCA-8713ECEC8E42' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSMatrix.framework/MPSMatrix
-current-version: 121.0.2
+current-version: 121.1.1
 objc-constraint: none
 parent-umbrella: MetalPerformanceShaders
 exports:         
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __Z21MPSDecrementReadCountP18MPSTemporaryMatrix, __Z21MPSDecrementReadCountP18MPSTemporaryVector ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     allowable-clients: [ MetalPerformanceShaders ]
     objc-classes:    [ MPSMatrix, MPSMatrixBinaryKernel, MPSMatrixCopy, MPSMatrixCopyDescriptor, 
                        MPSMatrixDecompositionCholesky, MPSMatrixDecompositionLU, 
@@ -168,16 +168,16 @@ exports:
                        MPSTemporaryMatrix, MPSTemporaryVector, MPSVector, MPSVectorDescriptor ]
     objc-ivars:      [ MPSMatrix._buffer, MPSVector._buffer ]
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 982401ED-FE9B-3250-9F8E-19D726F91682' ]
+                   'arm64: AEBD8EDF-F76C-3233-83D4-A674776A78FF', 'arm64e: 34351F41-9F0C-3CF1-9E0C-C8ABB9982740' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSNeuralNetwork.framework/MPSNeuralNetwork
-current-version: 121.0.2
+current-version: 121.1.1
 objc-constraint: none
 parent-umbrella: MetalPerformanceShaders
 exports:         
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     allowable-clients: [ MetalPerformanceShaders ]
     symbols:         [ _DeadlockedBecauseTheCPUBasedWeightUpdateForThePreviousBatchOccursAtCompletionOfThisCmdBuf_TryGPUUpdateOrNewCmdBufInstead ]
     objc-classes:    [ MPSCNNAdd, MPSCNNAddGradient, MPSCNNArithmetic, MPSCNNArithmeticGradient, 
@@ -238,35 +238,46 @@ exports:
                        MPSMatrixBatchNormalizationGradient, MPSMatrixFullyConnected, 
                        MPSMatrixFullyConnectedGradient, MPSMatrixNeuron, MPSMatrixNeuronGradient, 
                        MPSMatrixSum, MPSNNAdditionGradientNode, MPSNNAdditionNode, 
-                       MPSNNBilinearScaleNode, MPSNNBinaryGradientStateNode, MPSNNConcatenation, 
-                       MPSNNConcatenationNode, MPSNNCropAndResizeBilinear, MPSNNDefaultPadding, 
-                       MPSNNDivisionNode, MPSNNFilterNode, MPSNNGradientFilterNode, 
-                       MPSNNGradientStateNode, MPSNNGraph, MPSNNImageNode, MPSNNLanczosScaleNode, 
-                       MPSNNMultiplicationGradientNode, MPSNNMultiplicationNode, 
-                       MPSNNNeuronDescriptor, MPSNNOptimizer, MPSNNOptimizerAdam, 
-                       MPSNNOptimizerDescriptor, MPSNNOptimizerRMSProp, MPSNNOptimizerStochasticGradientDescent, 
-                       MPSNNReduceColumnMax, MPSNNReduceColumnMean, MPSNNReduceColumnMin, 
-                       MPSNNReduceColumnSum, MPSNNReduceFeatureChannelsAndWeightsMean, 
-                       MPSNNReduceFeatureChannelsAndWeightsSum, MPSNNReduceFeatureChannelsArgumentMax, 
-                       MPSNNReduceFeatureChannelsArgumentMin, MPSNNReduceFeatureChannelsMax, 
-                       MPSNNReduceFeatureChannelsMean, MPSNNReduceFeatureChannelsMin, 
-                       MPSNNReduceFeatureChannelsSum, MPSNNReduceRowMax, MPSNNReduceRowMean, 
-                       MPSNNReduceRowMin, MPSNNReduceRowSum, MPSNNReshape, MPSNNResizeBilinear, 
+                       MPSNNBilinearScaleNode, MPSNNBinaryGradientStateNode, MPSNNCompare, 
+                       MPSNNComparisonNode, MPSNNConcatenation, MPSNNConcatenationNode, 
+                       MPSNNCropAndResizeBilinear, MPSNNDefaultPadding, MPSNNDivisionNode, 
+                       MPSNNFilterNode, MPSNNGradientFilterNode, MPSNNGradientStateNode, 
+                       MPSNNGraph, MPSNNImageNode, MPSNNLanczosScaleNode, MPSNNMultiplicationGradientNode, 
+                       MPSNNMultiplicationNode, MPSNNNeuronDescriptor, MPSNNOptimizer, 
+                       MPSNNOptimizerAdam, MPSNNOptimizerDescriptor, MPSNNOptimizerRMSProp, 
+                       MPSNNOptimizerStochasticGradientDescent, MPSNNPad, MPSNNPadGradient, 
+                       MPSNNPadGradientNode, MPSNNPadNode, MPSNNReduceColumnMax, 
+                       MPSNNReduceColumnMean, MPSNNReduceColumnMin, MPSNNReduceColumnSum, 
+                       MPSNNReduceFeatureChannelsAndWeightsMean, MPSNNReduceFeatureChannelsAndWeightsSum, 
+                       MPSNNReduceFeatureChannelsArgumentMax, MPSNNReduceFeatureChannelsArgumentMin, 
+                       MPSNNReduceFeatureChannelsMax, MPSNNReduceFeatureChannelsMean, 
+                       MPSNNReduceFeatureChannelsMin, MPSNNReduceFeatureChannelsSum, 
+                       MPSNNReduceRowMax, MPSNNReduceRowMean, MPSNNReduceRowMin, 
+                       MPSNNReduceRowSum, MPSNNReductionColumnMaxNode, MPSNNReductionColumnMeanNode, 
+                       MPSNNReductionColumnMinNode, MPSNNReductionColumnSumNode, 
+                       MPSNNReductionFeatureChannelsArgumentMaxNode, MPSNNReductionFeatureChannelsArgumentMinNode, 
+                       MPSNNReductionFeatureChannelsMaxNode, MPSNNReductionFeatureChannelsMeanNode, 
+                       MPSNNReductionFeatureChannelsMinNode, MPSNNReductionFeatureChannelsSumNode, 
+                       MPSNNReductionRowMaxNode, MPSNNReductionRowMeanNode, MPSNNReductionRowMinNode, 
+                       MPSNNReductionRowSumNode, MPSNNReductionSpatialMeanGradientNode, 
+                       MPSNNReductionSpatialMeanNode, MPSNNReshape, MPSNNReshapeGradient, 
+                       MPSNNReshapeGradientNode, MPSNNReshapeNode, MPSNNResizeBilinear, 
                        MPSNNScaleNode, MPSNNSlice, MPSNNSubtractionGradientNode, 
-                       MPSNNSubtractionNode, MPSRNNDescriptor, MPSRNNImageInferenceLayer, 
-                       MPSRNNMatrixInferenceLayer, MPSRNNMatrixTrainingLayer, MPSRNNMatrixTrainingState, 
-                       MPSRNNRecurrentImageState, MPSRNNRecurrentMatrixState, MPSRNNSingleGateDescriptor ]
+                       MPSNNSubtractionNode, MPSNNUnaryReductionNode, MPSRNNDescriptor, 
+                       MPSRNNImageInferenceLayer, MPSRNNMatrixInferenceLayer, MPSRNNMatrixTrainingLayer, 
+                       MPSRNNMatrixTrainingState, MPSRNNRecurrentImageState, MPSRNNRecurrentMatrixState, 
+                       MPSRNNSingleGateDescriptor ]
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 89F7BD5C-27C6-3C85-95E4-9BF21DA12D5C' ]
+                   'arm64: 45591BC2-9251-3BDE-9637-8423E15BE33D', 'arm64e: 0AAFECA5-86CE-3A32-AD3C-456AD68D2573' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSRayIntersector.framework/MPSRayIntersector
-current-version: 121.0.2
+current-version: 121.1.1
 objc-constraint: none
 parent-umbrella: MetalPerformanceShaders
 exports:         
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     allowable-clients: [ MetalPerformanceShaders ]
     symbols:         [ _MPSAccelerationStructureOptionBatchSize, _MPSAccelerationStructureOptionBinExponent, 
                        _MPSAccelerationStructureOptionComputeStatistics, _MPSAccelerationStructureOptionFragmentCost, 

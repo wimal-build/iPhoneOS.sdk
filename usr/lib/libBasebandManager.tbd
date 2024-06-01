@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 98EDFA7C-D257-33DB-A86D-2BAE1A39BFED', 'armv7s: 8A63A2DB-8B00-3098-BBE8-9F1634410494', 
-                   'arm64: C6E12271-F4F9-3EB9-8646-9040CA493E99' ]
+                   'arm64: 3A6291F9-707F-343C-814F-C54A0FF5B268', 'arm64e: 04EC0E87-6571-3234-8C4B-7D7F7F0640C3' ]
 platform:        ios
 install-name:    /usr/lib/libBasebandManager.dylib
 objc-constraint: none
@@ -171,7 +171,7 @@ exports:
                         __ZTSNSt3__123enable_shared_from_thisIN5radio13HealthService5StateEEE, 
                         __ZTSNSt3__123enable_shared_from_thisIN7antenna7Service8InternalEEE, 
                         __ZTSPFbPvE, __ZTSU13block_pointerFvPN7antenna15CMOnBodyManagerEE ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __Z8asString13ShutdownStage, __ZN14ServiceManager20createPowerAssertionENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
                        __ZN14ServiceManager21releasePowerAssertionENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE, 
                        __ZN14ServiceManager22shutdownGlobalServicesEv, __ZN14ServiceManager23registerEventDispatcherEN8dispatch5blockIU13block_pointerFvNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEN3ctu2cf11CFSharedRefIK14__CFDictionaryEENS1_IU13block_pointerFvvEEEEEE, 
@@ -325,7 +325,7 @@ exports:
                        __ZThn72_N17ABMServerInternalD1Ev ]
     weak-def-symbols: [ __ZGVN3ctu9SingletonI9ABMServerS1_NS_23PthreadMutexGuardPolicyIS1_EEE9sInstanceE, 
                         __ZN3ctu9SingletonI9ABMServerS1_NS_23PthreadMutexGuardPolicyIS1_EEE9sInstanceE ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _AppleBasebandManagerGetProfile, _AppleBasebandManagerInitServer, 
                        _AppleBasebandManagerShutdownServer, _AppleBasebandManagerStartServer, 
                        _AppleBasebandManagerStopServer, _ETLEFSDUmpCopyCrashLocationDetails, 

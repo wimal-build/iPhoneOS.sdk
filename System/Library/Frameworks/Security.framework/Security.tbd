@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D54C70C3-E405-307F-A3DF-F77BCAD86DAF', 'armv7s: 84D01D33-899F-3E07-B29D-09C33C084D9F', 
-                   'arm64: 7AC6108A-F415-33A4-96FE-813DA9DAB9F8' ]
+                   'arm64: 82C01F1E-9430-3824-847C-1F14A163B5BA', 'arm64e: EE096966-077B-372E-A421-81B9E00C48DF' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Security.framework/Security
-current-version: 58286.202.3
+current-version: 58286.222.2
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -62,7 +62,7 @@ exports:
                        _kSecXPCOTRReady, _kSecXPCOTRSession, _kSecXPCPublicPeerId, 
                        _logObjForScope, _readFileSizet, _sSecXPCErrorDomain, _sSecurityPropertiesKey, 
                        _writeFileSizet ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _AES_CTR_HighHalf_Transform, _AES_CTR_IV0_Transform, _CFArrayOfSOSPeerInfosSortByID, 
                        _CFDataCreateWithDER, _CFPropertyListCreateDERData, _CFPropertyListCreateWithDERData, 
                        _CFSetCreateMutableForSOSPeerInfosByID, _CFSetCreateMutableForSOSPeerInfosByIDWithArray, 
@@ -760,9 +760,10 @@ exports:
                        _kSecAttrAccessGroupToken, _kSecAttrAccessible, _kSecAttrAccessibleAfterFirstUnlock, 
                        _kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly, _kSecAttrAccessibleAlways, 
                        _kSecAttrAccessibleAlwaysPrivate, _kSecAttrAccessibleAlwaysThisDeviceOnly, 
-                       _kSecAttrAccessibleAlwaysThisDeviceOnlyPrivate, _kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly, 
-                       _kSecAttrAccessibleWhenUnlocked, _kSecAttrAccessibleWhenUnlockedThisDeviceOnly, 
-                       _kSecAttrAccount, _kSecAttrAddress, _kSecAttrAlias, _kSecAttrApplicationLabel, 
+                       _kSecAttrAccessibleAlwaysThisDeviceOnlyPrivate, _kSecAttrAccessibleUntilReboot, 
+                       _kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly, _kSecAttrAccessibleWhenUnlocked, 
+                       _kSecAttrAccessibleWhenUnlockedThisDeviceOnly, _kSecAttrAccount, 
+                       _kSecAttrAddress, _kSecAttrAlias, _kSecAttrApplicationLabel, 
                        _kSecAttrApplicationTag, _kSecAttrAuthenticationType, _kSecAttrAuthenticationTypeDPA, 
                        _kSecAttrAuthenticationTypeDefault, _kSecAttrAuthenticationTypeHTMLForm, 
                        _kSecAttrAuthenticationTypeHTTPBasic, _kSecAttrAuthenticationTypeHTTPDigest, 

@@ -191,14 +191,16 @@ _STRUCT_ARM_THREAD_STATE64
 		ptrauth_auth_data(__tsp->__opaque_pc, \
 		ptrauth_key_process_independent_code, \
 		ptrauth_string_discriminator("pc")) : __tsp->__opaque_pc); })
-/* Return pc field of arm_thread_state64_t as a function pointer */
+/* Return pc field of arm_thread_state64_t as a function pointer. May return
+ * NULL if a valid function pointer cannot be constructed, the caller should
+ * fall back to the __darwin_arm_thread_state64_get_pc() macro in that case. */
 #define __darwin_arm_thread_state64_get_pc_fptr(ts) \
 		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); \
 		(__tsp->__opaque_pc && !(__tsp->__opaque_flags & \
 		__DARWIN_ARM_THREAD_STATE64_FLAGS_NO_PTRAUTH) ? \
 		ptrauth_auth_function(__tsp->__opaque_pc, \
 		ptrauth_key_process_independent_code, \
-		ptrauth_string_discriminator("pc")) : __tsp->__opaque_pc); })
+		ptrauth_string_discriminator("pc")) : NULL); })
 /* Set pc field of arm_thread_state64_t to a function pointer */
 #define __darwin_arm_thread_state64_set_pc_fptr(ts, fptr) \
 		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); \
@@ -218,7 +220,9 @@ _STRUCT_ARM_THREAD_STATE64
 		ptrauth_auth_data(__tsp->__opaque_lr, \
 		ptrauth_key_process_independent_code, \
 		ptrauth_string_discriminator("lr")) : __tsp->__opaque_lr); })
-/* Return lr field of arm_thread_state64_t as a function pointer */
+/* Return lr field of arm_thread_state64_t as a function pointer. May return
+ * NULL if a valid function pointer cannot be constructed, the caller should
+ * fall back to the __darwin_arm_thread_state64_get_lr() macro in that case. */
 #define __darwin_arm_thread_state64_get_lr_fptr(ts) \
 		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); \
 		(__tsp->__opaque_lr && !(__tsp->__opaque_flags & ( \
@@ -226,7 +230,7 @@ _STRUCT_ARM_THREAD_STATE64
 		__DARWIN_ARM_THREAD_STATE64_FLAGS_IB_SIGNED_LR)) ? \
 		ptrauth_auth_function(__tsp->__opaque_lr, \
 		ptrauth_key_process_independent_code, \
-		ptrauth_string_discriminator("lr")) : __tsp->__opaque_lr); })
+		ptrauth_string_discriminator("lr")) : NULL); })
 /* Set lr field of arm_thread_state64_t to a function pointer */
 #define __darwin_arm_thread_state64_set_lr_fptr(ts, fptr) \
 		__extension__ ({ _STRUCT_ARM_THREAD_STATE64 *__tsp = &(ts); \

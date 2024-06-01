@@ -96,7 +96,9 @@ typedef _STRUCT_ARM_THREAD_STATE64		arm_thread_state64_t;
 /* Return pc field of arm_thread_state64_t as a data pointer value */
 #define arm_thread_state64_get_pc(ts) \
 		__darwin_arm_thread_state64_get_pc(ts)
-/* Return pc field of arm_thread_state64_t as a function pointer */
+/* Return pc field of arm_thread_state64_t as a function pointer. May return
+ * NULL if a valid function pointer cannot be constructed, the caller should
+ * fall back to the arm_thread_state64_get_pc() macro in that case. */
 #define arm_thread_state64_get_pc_fptr(ts) \
 		__darwin_arm_thread_state64_get_pc_fptr(ts)
 /* Set pc field of arm_thread_state64_t to a function pointer */
@@ -105,7 +107,9 @@ typedef _STRUCT_ARM_THREAD_STATE64		arm_thread_state64_t;
 /* Return lr field of arm_thread_state64_t as a data pointer value */
 #define arm_thread_state64_get_lr(ts) \
 		__darwin_arm_thread_state64_get_lr(ts)
-/* Return lr field of arm_thread_state64_t as a function pointer */
+/* Return lr field of arm_thread_state64_t as a function pointer. May return
+ * NULL if a valid function pointer cannot be constructed, the caller should
+ * fall back to the arm_thread_state64_get_lr() macro in that case. */
 #define arm_thread_state64_get_lr_fptr(ts) \
 		__darwin_arm_thread_state64_get_lr_fptr(ts)
 /* Set lr field of arm_thread_state64_t to a function pointer */

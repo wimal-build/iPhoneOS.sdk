@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: F2FF5092-78F3-39B3-A66A-B38482B7BDBF', 'armv7s: E5BA9754-B4B5-377F-8DEE-2BDAB7A9EBBF', 
-                   'arm64: 78927C88-792D-3AAE-9F31-B17CE0DC06FF' ]
+                   'arm64: 7CFCBF51-4CB7-3E23-B209-EF2FF35CBB2C', 'arm64e: AF7FCC58-D3E9-3836-8F00-0FE65B2FC574' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalKit.framework/MetalKit
 current-version: 113
@@ -21,7 +21,7 @@ exports:
                        MTKTextureLoaderImageIO, MTKTextureLoaderKTX, MTKTextureLoaderMDL, 
                        MTKTextureLoaderPVR, MTKTextureLoaderPVR3, MTKTextureUploader, 
                        MTKViewDisplayLinkTarget ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _MTKMetalVertexDescriptorFromModelIO, _MTKMetalVertexDescriptorFromModelIOWithError, 
                        _MTKMetalVertexFormatFromModelIO, _MTKModelErrorDomain, _MTKModelErrorKey, 
                        _MTKModelIOVertexDescriptorFromMetal, _MTKModelIOVertexDescriptorFromMetalWithError, 

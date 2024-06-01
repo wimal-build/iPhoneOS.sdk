@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: FAB8A13C-DE48-3FCE-8EB2-972FC114BDA0', 'armv7s: 95C18A38-45AF-3FD5-8D39-65BC4EB871B9', 
-                   'arm64: 4AC5F041-9FAC-38C3-935F-5865F465F1B8' ]
+                   'arm64: 7E568942-2FB6-3AD2-98E8-22D75D049DAA', 'arm64e: 019916E4-1CF5-3BEF-9CB6-9BDF67CAC179' ]
 platform:        ios
 install-name:    /usr/lib/libARIServer.dylib
 objc-constraint: none
@@ -130,7 +130,7 @@ exports:
                         __ZTSNSt3__123enable_shared_from_thisIN3Ari17AriClientGcdProxyEEE, 
                         __ZTSNSt3__123enable_shared_from_thisIN3Ari17AriClientXpcProxyEEE, 
                         __ZTSPFvijRNSt3__110shared_ptrIN3Ari14AriClientProxyEEEE ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __Z19SdkGmidIsAwdRequestj, __Z20SdkGmidIsLowPriorityj, __Z22SdkMsgIsFilerInitiatorPKhjRj, 
                        __Z23SdkMsgIsFilerReadStreamPKhjRj, __Z27SdkGmidIsAllowedDuringStallj, 
                        __Z28SdkGmidIsFileWriteTerminatorj, __Z32SdkGmidIsAllowedForPublicLoggingj, 
@@ -683,7 +683,7 @@ exports:
                        __ZTVN6AriSdk38ARI_IBIRfSetAntennaPortMappingResp_SDKE, __ZTVN6AriSdk39ARI_CsiBspGetCalibrationStatusRspCb_SDKE, 
                        __ZTVN6AriSdk39ARI_CsiIceBspSetApWakeIntervalRspCb_SDKE, __ZTVN6AriSdk39ARI_CsiIpcCtrlPathTestSendDataRspCb_SDKE, 
                        __ZTVN6AriSdk7MsgBaseE ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _ARIMSGDEF_GROUP01_bsp, _ARIMSGDEF_GROUPS, _ARIMSGDEF_GROUPS_SZ, 
                        _ARI_AriACK_Extract, _ARI_AriMsgAttribReq_BLK, _ARI_AriMsgAttribReq_ENC, 
                        _ARI_AriMsgAttribResp_Extract, _ARI_AriNACK_Extract, _ARI_AriUtaMsCpsSetSvnRspCb_Extract, 

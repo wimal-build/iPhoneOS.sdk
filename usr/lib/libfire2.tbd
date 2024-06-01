@@ -1,12 +1,12 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 7714136C-CDD4-3BFA-9071-EF650E6EBD4D' ]
+                   'arm64: 5B3B9899-1E53-3731-9C58-27CCA0250BCA', 'arm64e: 8B2B7290-BFB6-3830-A29C-690C933B8A23' ]
 platform:        ios
 install-name:    /usr/lib/libfire2.dylib
 objc-constraint: none
 exports:         
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __Z12logFireOnMsgii, __Z15computeResidualN7BlueFin3XYZERKS0_PNS_9stRtdMeasEPS0_ad, 
                        __Z19compareArrayContentPKhPhm, __Z20FireLogLevelToStringN7BlueFin4ILog8LogLevelE, 
                        __Z21pollPowerStateTimeoutiN8gnssTest9PowerModeE, __Z24ComputeResidualForNelderPdRKN7BlueFin3XYZEPNS0_9stRtdMeasEPS1_ad, 
@@ -9531,7 +9531,7 @@ exports:
                         __ZNSt3__114__thread_proxyINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEENS_9mem_fun_tIv13FireThreadMgrEEPS8_EEEEEPvSC_, 
                         __ZZN7BlueFin16GlSuplStatusImpl8InstanceEvE10s_instance, 
                         __ZZN7BlueFin21GetDefaultLogInstanceEvE20s_defaultLogInstance ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _ASN1T_RRLP_EnvironmentCharacter_ToEnum, _ASN1T_RRLP_EnvironmentCharacter_ToEnum2, 
                        _ASN1T_RRLP_EnvironmentCharacter_ToString, _ASN1T_RRLP_ErrorCodes_ToEnum, 
                        _ASN1T_RRLP_ErrorCodes_ToEnum2, _ASN1T_RRLP_ErrorCodes_ToString, 

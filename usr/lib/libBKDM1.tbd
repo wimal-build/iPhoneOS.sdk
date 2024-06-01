@@ -1,12 +1,12 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: B1B30738-D023-34F0-8948-4610ECEA1297' ]
+                   'arm64: A754E4F1-149B-3119-9FE9-836C30BFF2F4', 'arm64e: 8E8DDEFD-FC8F-3C5B-8D13-910DD820A7F6' ]
 platform:        ios
 install-name:    /usr/lib/libBKDM1.dylib
 objc-constraint: none
 exports:         
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _BKDMInitialize, _BKDMTerminate, _CatacombPathForFile, _ComponentSetInit, 
                        _ComponentSetRelease, _ComponentSetUpdate, _ConvertTransToNodeArea, 
                        _ConvertVectorForGUI, _FindRectangleForComponent, _GenerateMatchTemplateTopology, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: A47F1F84-FCB2-3C65-AF59-E46C10E58783', 'armv7s: FAAB38A9-55E5-3BC7-BDC6-24134B61AD77', 
-                   'arm64: 82008CA3-E7A7-3A41-8B37-8B35FA70BF1A' ]
+                   'arm64: F45B983A-FF5D-3B07-8365-F6AE61C58066', 'arm64e: 4DF190E9-A0F4-36F5-8243-5B45EA483163' ]
 platform:        ios
 install-name:    /usr/lib/libprotobuf.dylib
 objc-constraint: none
@@ -1387,7 +1387,7 @@ exports:
                         __ZTIN6google8protobuf17DescriptorBuilder17OptionInterpreter21AggregateOptionFinderE, 
                         __ZTSN6google8protobuf10TextFormat6Parser10ParserImpl20ParserErrorCollectorE, 
                         __ZTSN6google8protobuf17DescriptorBuilder17OptionInterpreter21AggregateOptionFinderE ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __ZN20wireless_diagnostics6google8protobuf10ReflectionD0Ev, 
                        __ZN20wireless_diagnostics6google8protobuf10ReflectionD1Ev, 
                        __ZN20wireless_diagnostics6google8protobuf10ReflectionD2Ev, 
@@ -2728,6 +2728,6 @@ exports:
                        __ZTVN20wireless_diagnostics6google8protobuf7MessageE, __ZTVN20wireless_diagnostics6google8protobuf8internal26GeneratedMessageReflectionE, 
                        __ZTVN20wireless_diagnostics6google8protobuf8internal27UnknownFieldSetFieldSkipperE, 
                        __ZTVN20wireless_diagnostics6google8protobuf8internal29DescriptorPoolExtensionFinderE ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     re-exports:      [ /usr/lib/libprotobuf-lite.dylib ]
 ...

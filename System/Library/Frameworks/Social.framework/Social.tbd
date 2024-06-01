@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 17877EB5-EE31-30DC-974F-1AF00306AD03', 'armv7s: 31937321-BEAF-30A2-BC6F-69AEEFD5D323', 
-                   'arm64: F6D9D03F-AE0C-3FC2-B2A2-0091F5EAD6EC' ]
+                   'arm64: 41E0EFFC-F0B8-3AA6-B421-17142F9D9582', 'arm64e: 7E2AB1C7-C63C-32C5-BC45-102D4AA3B7B9' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Social.framework/Social
 current-version: 87
@@ -9,7 +9,7 @@ objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
     objc-classes:    [ SLYahooClient, SLYahooOAuth2TokenRequest, SLYahooOAuth2TokenResponse ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _SLErrorDomain, _SLFacebookEnvironmentDidChangeNotification, 
                        _SLFacebookErrorDomain, _SLFacebookGraphAPIShouldUseBetaKey, 
                        _SLFacebookIgnoreAccessRequests, _SLFacebookLikeInfoFriendCountKey, 

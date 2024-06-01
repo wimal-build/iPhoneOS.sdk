@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: F5CBE04F-E589-3DA5-8B01-B881B69E6026', 'armv7s: BF8DCABD-C42E-3396-B79E-FCAD1EF22D74', 
-                   'arm64: A8B64882-8D3E-3804-B061-3337D76B745D' ]
+                   'arm64: 21E157CB-72C4-338C-B170-1CEEBB7EF007', 'arm64e: 9B06F536-49B8-3040-B379-2F73DBED0883' ]
 platform:        ios
 install-name:    /usr/lib/liblockdown.dylib
 objc-constraint: none
@@ -180,7 +180,7 @@ exports:
                        _lockdown_activate, _lockdown_copy_activityURL, _lockdown_copy_chaperoneIsChaperoned, 
                        _lockdown_copy_regulatoryimages, _lockdown_recert, _locklog, 
                        _post_notification, _sha1_string, _unlock_with_escrow ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _kLockdownActivationInfoKey, _kLockdownActivationStateKey, 
                        _kLockdownAmountDataAvailableKey, _kLockdownAmountDataReservedKey, 
                        _kLockdownAmountRestoreAvailableKey, _kLockdownBasebandVersionKey, 

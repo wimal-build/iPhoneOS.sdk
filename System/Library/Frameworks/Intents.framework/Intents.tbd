@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 4B837D79-AB45-3313-A2F9-6C2C9EAEFCF8', 'armv7s: FF5BC191-04EE-3ACB-A61E-011EAC73571F', 
-                   'arm64: 8396C0B6-76FF-3490-981C-4930ACA55414' ]
+                   'arm64: 8B379AB4-8CE6-3030-A834-2FE7CBD42B4F', 'arm64e: 37A675D4-D93C-3164-8AEA-8396AB7A8EF4' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Intents.framework/Intents
 objc-constraint: none
@@ -34,7 +34,7 @@ exports:
                        _INPBSetMessageAttributeIntentResponse._unknownFields, _INPBSetProfileInCarIntentResponse._unknownFields, 
                        _INPBSetRadioStationIntentResponse._unknownFields, _INPBSetSeatSettingsInCarIntentResponse._unknownFields, 
                        _INPBStartWorkoutIntentResponse._unknownFields ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _INAccountTypeGetBackingType, _INAccountTypeGetFacadeType, 
                        _INAccountTypeGetLocalizedName, _INAccountTypeGetName, _INAccountTypeHasBackingType, 
                        _INAccountTypeWithString, _INActivateCarSignalIntentResponseCodeGetName, 
@@ -208,6 +208,7 @@ exports:
                        _INIntentSlotValueRedactedValueFromLocationValue, _INIntentSlotValueRedactedValueFromStringValue, 
                        _INIntentSlotValueRedactedValueFromTemperatureValue, _INIntentSlotValueRedactedValueFromURLValue, 
                        _INIntentSlotValueRedactedValueFromUUIDValue, _INIntentSlotValueRedactedVoiceCommandDeviceInformationFromVoiceCommandDeviceInformation, 
+                       _INIntentSlotValueRedactedVoiceCommandStepInfoFromVoiceCommandStepInfo, 
                        _INIntentSlotValueTransformFromActivities, _INIntentSlotValueTransformFromActivity, 
                        _INIntentSlotValueTransformFromArchivedObject, _INIntentSlotValueTransformFromArchivedObjects, 
                        _INIntentSlotValueTransformFromBalanceAmountValue, _INIntentSlotValueTransformFromBillDetailsValue, 
@@ -277,6 +278,7 @@ exports:
                        _INIntentSlotValueTransformFromURLValues, _INIntentSlotValueTransformFromUUIDValue, 
                        _INIntentSlotValueTransformFromVoiceCommandDeviceInformation, 
                        _INIntentSlotValueTransformFromVoiceCommandDeviceInformations, 
+                       _INIntentSlotValueTransformFromVoiceCommandStepInfo, _INIntentSlotValueTransformFromVoiceCommandStepInfos, 
                        _INIntentSlotValueTransformToActivities, _INIntentSlotValueTransformToActivity, 
                        _INIntentSlotValueTransformToArchivedObject, _INIntentSlotValueTransformToArchivedObjects, 
                        _INIntentSlotValueTransformToBalanceAmountValue, _INIntentSlotValueTransformToBillDetailsValue, 
@@ -345,6 +347,7 @@ exports:
                        _INIntentSlotValueTransformToURLValues, _INIntentSlotValueTransformToUUIDValue, 
                        _INIntentSlotValueTransformToVoiceCommandDeviceInformation, 
                        _INIntentSlotValueTransformToVoiceCommandDeviceInformations, 
+                       _INIntentSlotValueTransformToVoiceCommandStepInfo, _INIntentSlotValueTransformToVoiceCommandStepInfos, 
                        _INIntentTypeGetCompatible, _INIntentWithTypedIntent, _INIntentsExtensionDiscoveryEntitlement, 
                        _INIntentsRestrictedWhileLocked, _INIntentsRestrictedWhileProtectedDataUnavailable, 
                        _INIntentsServiceExtensionPointName, _INIntentsUIServiceExtensionPointName, 
@@ -352,9 +355,10 @@ exports:
                        _INInteractionMediaPlaybackContentType, _INInteractionMessageContentType, 
                        _INInteractionSpotlightDomain, _INInteractionSpotlightIdentifierPrefix, 
                        _INInteractionVideoCallContentType, _INInteractionWithTypedInteraction, 
-                       _INIsDeviceLocked, _INItemIntentClassAttribute, _INItemIntentDataAttribute, 
-                       _INKeyImageUtilitiesDefaultCompareSubProducers, _INKeyImageUtilitiesKeyImageBySubProducerComparison, 
-                       _INKeyImageUtilitiesSortedSubProducersForSlotComposingProducer, 
+                       _INIsDeviceLocked, _INIssueSandboxExtensionsForFileURLEnumerable, 
+                       _INIssueSandboxExtensionsForFileURLEnumerableToProcess, _INItemIntentClassAttribute, 
+                       _INItemIntentDataAttribute, _INKeyImageUtilitiesDefaultCompareSubProducers, 
+                       _INKeyImageUtilitiesKeyImageBySubProducerComparison, _INKeyImageUtilitiesSortedSubProducersForSlotComposingProducer, 
                        _INListRideOptionsIntentIdentifier, _INListRideOptionsIntentResponseCodeGetName, 
                        _INLocalAppBundleIdentifierForIntentBundleIdentifier, _INLocalizedStringForLanguage, 
                        _INLocationSearchTypeGetBackingType, _INLocationSearchTypeGetFacadeType, 
@@ -725,9 +729,9 @@ exports:
                        __INPBUUIDValueReadFrom, __INPBUncompressFileIntentReadFrom, 
                        __INPBUncompressFileIntentResponseReadFrom, __INPBUserActivityReadFrom, 
                        __INPBValueMetadataReadFrom, __INPBVoiceCommandDeviceInformationReadFrom, 
-                       __INSiriDeveloperEntitlement, __INStringFromVocabularyStringType, 
-                       __INSyncSlotFromVocabularyStringType, __INVocabularyStringTypeFromSlotName, 
-                       _kINVocabularyUpdateServiceName ]
+                       __INPBVoiceCommandStepInfoReadFrom, __INSiriDeveloperEntitlement, 
+                       __INStringFromVocabularyStringType, __INSyncSlotFromVocabularyStringType, 
+                       __INVocabularyStringTypeFromSlotName, _kINVocabularyUpdateServiceName ]
     objc-classes:    [ INAccountTypeResolutionResult, INActivateCarSignalIntent, 
                        INActivateCarSignalIntentResponse, INActivity, INAddTasksIntent, 
                        INAddTasksIntentResponse, INAppInfo, INAppendToNoteIntent, 
@@ -799,10 +803,10 @@ exports:
                        INIntentTemporalEventTriggerSlotValueTransformer, INIntentTimerSlotValueTransformer, 
                        INIntentURLSlotValueTransformer, INIntentUUIDSlotValueTransformer, 
                        INIntentUtilsExportHelper, INIntentVocabularyKnowledge, INIntentVoiceCommandDeviceInformationSlotValueTransformer, 
-                       INInteraction, INKeyImageExtraction, INListRideOptionsIntent, 
-                       INListRideOptionsIntentResponse, INLocationRelevanceProvider, 
-                       INLocationSearchTypeResolutionResult, INMediaItem, INMessage, 
-                       INMessageAttachment, INMessageAttributeOptionsResolutionResult, 
+                       INIntentVoiceCommandStepInfoSlotValueTransformer, INInteraction, 
+                       INKeyImageExtraction, INListRideOptionsIntent, INListRideOptionsIntentResponse, 
+                       INLocationRelevanceProvider, INLocationSearchTypeResolutionResult, 
+                       INMediaItem, INMessage, INMessageAttachment, INMessageAttributeOptionsResolutionResult, 
                        INMessageAttributeResolutionResult, INMessageLinkMetadata, 
                        INNote, INNoteContent, INNoteContentResolutionResult, INNoteContentTypeResolutionResult, 
                        INNoteResolutionResult, INNotebookItemTypeResolutionResult, 
@@ -867,16 +871,16 @@ exports:
                        INTimer, INTimerResolutionResult, INTimerStateResolutionResult, 
                        INTransferMoneyIntent, INTransferMoneyIntentResponse, INUpcomingMediaManager, 
                        INVisualCodeTypeResolutionResult, INVocabulary, INVocabularyUpdater, 
-                       INVoiceCommandDeviceInformation, INVoiceShortcut, INVoiceShortcutAction, 
-                       INVoiceShortcutCenter, INWatchdogTimer, INWorkoutGoalUnitTypeResolutionResult, 
-                       INWorkoutLocationTypeResolutionResult, _INAggregator, _INExtension, 
-                       _INPBActivateCarSignalIntent, _INPBActivateCarSignalIntentResponse, 
-                       _INPBActivity, _INPBActivityList, _INPBAddTasksIntent, _INPBAddTasksIntentResponse, 
-                       _INPBAppBuild, _INPBAppBundleInfo, _INPBAppId, _INPBAppNames, 
-                       _INPBAppendToNoteIntent, _INPBAppendToNoteIntentResponse, 
-                       _INPBArchivedObject, _INPBBalanceAmountValue, _INPBBillDetailsValue, 
-                       _INPBBillPayeeValue, _INPBBool, _INPBBoolValue, _INPBBuildId, 
-                       _INPBCallMetrics, _INPBCallMetricsValue, _INPBCallRecordValue, 
+                       INVoiceCommandDeviceInformation, INVoiceCommandStepInfo, INVoiceShortcut, 
+                       INVoiceShortcutAction, INVoiceShortcutCenter, INWatchdogTimer, 
+                       INWorkoutGoalUnitTypeResolutionResult, INWorkoutLocationTypeResolutionResult, 
+                       _INAggregator, _INExtension, _INPBActivateCarSignalIntent, 
+                       _INPBActivateCarSignalIntentResponse, _INPBActivity, _INPBActivityList, 
+                       _INPBAddTasksIntent, _INPBAddTasksIntentResponse, _INPBAppBuild, 
+                       _INPBAppBundleInfo, _INPBAppId, _INPBAppNames, _INPBAppendToNoteIntent, 
+                       _INPBAppendToNoteIntentResponse, _INPBArchivedObject, _INPBBalanceAmountValue, 
+                       _INPBBillDetailsValue, _INPBBillPayeeValue, _INPBBool, _INPBBoolValue, 
+                       _INPBBuildId, _INPBCallMetrics, _INPBCallMetricsValue, _INPBCallRecordValue, 
                        _INPBCancelWorkoutIntent, _INPBCancelWorkoutIntentResponse, 
                        _INPBCompressFileIntent, _INPBCompressFileIntentResponse, 
                        _INPBCondition, _INPBConfigureHomeIntent, _INPBConfigureHomeIntentResponse, 
@@ -968,8 +972,8 @@ exports:
                        _INPBTimestamp, _INPBTransferMoneyIntent, _INPBTransferMoneyIntentResponse, 
                        _INPBURLValue, _INPBUUIDValue, _INPBUncompressFileIntent, 
                        _INPBUncompressFileIntentResponse, _INPBUserActivity, _INPBValueMetadata, 
-                       _INPBVoiceCommandDeviceInformation, _INSiriAuthorizationManager, 
-                       _INSyncTransaction, _INVocabulary, _INVocabularyConnection, 
-                       _INVocabularyGenerationDiff, _INVocabularyGenerationDocument, 
+                       _INPBVoiceCommandDeviceInformation, _INPBVoiceCommandStepInfo, 
+                       _INSiriAuthorizationManager, _INSyncTransaction, _INVocabulary, 
+                       _INVocabularyConnection, _INVocabularyGenerationDiff, _INVocabularyGenerationDocument, 
                        _INVocabularyItem, _INVocabularyStoreManager, _INVocabularyValidator ]
 ...

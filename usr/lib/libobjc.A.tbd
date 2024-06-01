@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64 ]
+archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 1F3E1EF1-C6F3-360E-88E0-CC5C90C64846', 'armv7s: 7029839A-D1F0-33DC-84C2-8A77D951C9E8', 
-                   'arm64: 55E000B7-6EC6-3C9E-8228-778494A89EA4' ]
+                   'arm64: 823EDFDC-3149-335C-86F8-50561FEC2C3C', 'arm64e: F724EC71-7830-3D64-85AB-0EAB95C40BDD' ]
 platform:        ios
 install-name:    /usr/lib/libobjc.A.dylib
 current-version: 228
@@ -32,10 +32,10 @@ exports:
                        _objc_msgSendSuper2_stret, _objc_msgSendSuper2_stret_debug, 
                        _objc_msgSendSuper_stret, _objc_msgSend_stret, _objc_msgSend_stret_debug, 
                        _objc_setMultithreaded, _object_getMethodImplementation_stret ]
-  - archs:           [ arm64 ]
+  - archs:           [ arm64, arm64e ]
     symbols:         [ __objc_getClassForTag, __objc_registerTaggedPointerClass, 
                        _objc_absolute_packed_isa_class_mask ]
-  - archs:           [ armv7, armv7s, arm64 ]
+  - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _NXCompareHashTables, _NXCompareMapTables, _NXCopyHashTable, 
                        _NXCountHashTable, _NXCountMapTable, _NXCreateHashTable, _NXCreateHashTableFromZone, 
                        _NXCreateMapTable, _NXCreateMapTableFromZone, _NXEmptyHashTable, 

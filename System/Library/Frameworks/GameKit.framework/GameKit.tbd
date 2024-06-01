@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 3817F758-B554-346F-A951-1D020678C69F', 'armv7s: 2288339A-48B6-30FC-B586-BB87F12460EC', 
-                   'arm64: E7A5CD82-8FA7-32AA-8275-A9B6566BB082', 'arm64e: B9FC9AA2-F48A-3B99-92B6-A4A2FE5CFB22' ]
+                   'arm64: 6E32E7D3-735A-3477-AFAE-987DD5F23381', 'arm64e: 432DA6BE-28CF-3D2B-B151-A5520C34AA7D' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GameKit.framework/GameKit
-current-version: 563.125
+current-version: 566.2
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]
@@ -19,10 +19,10 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 13B46BF3-BBCA-3074-9CB3-1A1DC4D72EDA', 'armv7s: B2BD1C74-5CF1-3DE5-A6E7-0CC4028E12CA', 
-                   'arm64: D0D21D7A-5FA2-3862-B2AC-24816A5D18BA', 'arm64e: DE6618DE-2D58-3C28-9297-B26F490D9E21' ]
+                   'arm64: FB3EBE60-4746-3922-9FED-8692B93AB52E', 'arm64e: C27EAADF-D932-3E32-84F3-760A801B5978' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenter.framework/GameCenter
-current-version: 563.125
+current-version: 566.2
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]
@@ -34,7 +34,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 736319F2-63D9-309B-BB1F-BFBCA1C0EC4F', 'armv7s: 1C63987E-AE2A-3926-8E64-109F7D87D19C', 
-                   'arm64: 66E2BA3F-B1FF-35C9-A0CF-89B1620A6EFC', 'arm64e: 643FA91D-1388-3097-A803-D3AFD6A4D541' ]
+                   'arm64: FCF99BD4-C070-3352-8CA2-31D226803500', 'arm64e: D96657AE-7CC2-3252-98D1-CBA0D08F3E75' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenterFoundation.framework/GameCenterFoundation
 objc-constraint: none
@@ -342,7 +342,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 0214FDB6-40C9-3072-B1E2-5F27BC4EB96C', 'armv7s: 1A8453C0-6089-3257-AC4A-5C55CF26C652', 
-                   'arm64: 48CF96E9-B8C6-3708-821C-543574FCFB98', 'arm64e: 71ACC174-C588-3CD0-B842-06B904C92231' ]
+                   'arm64: 7BCC1433-96F3-3B2F-BD2E-5391AE3DA304', 'arm64e: EE9CC196-014B-3F9D-8BE1-8D218EDA0013' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenterUI.framework/GameCenterUI
 objc-constraint: none
@@ -418,7 +418,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 07C3539C-2DA0-3A73-8198-9AFC20E91843', 'armv7s: 335E90EB-3E4F-3CBF-8DA7-FB11612B55F4', 
-                   'arm64: B48607E6-82F8-37AB-9493-B8691DFB8B18', 'arm64e: 2B9C885B-56D7-350B-A056-C185D2606C52' ]
+                   'arm64: CE3BA314-9938-3BAC-8880-1582C69BC79F', 'arm64e: 3933DE02-581C-36AD-BD0B-355D82E65FD0' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/LegacyGameKit.framework/LegacyGameKit
 objc-constraint: none

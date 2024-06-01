@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: C649DB42-6CD5-34F5-97EC-F665FB8C664C', 'armv7s: A88E8C87-0EA7-3AB3-8C1B-6110229754CF', 
-                   'arm64: 956EFBD5-F14C-3108-88EB-ACB05FA4859D', 'arm64e: 6EF95C9F-2A36-3D11-B352-346E0650A228' ]
+                   'arm64: F10DF325-363A-331A-961D-B8C13EC6D66D', 'arm64e: ABDAEFEB-582E-310F-98C0-C8DBE3184A75' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreSpotlight.framework/CoreSpotlight
 objc-constraint: none

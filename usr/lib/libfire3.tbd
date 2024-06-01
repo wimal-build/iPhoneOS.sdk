@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 1E13FF76-9B21-3194-9ACF-584A0DA881EE', 'arm64e: 366DF916-A28F-3AFF-B171-527DC6C368E6' ]
+                   'arm64: 9BB7FCA6-B4A3-3D0B-B9A3-181C663D9DDE', 'arm64e: 2113C59D-7155-39C5-B8DC-BF3D4E30211D' ]
 platform:        ios
 install-name:    /usr/lib/libfire3.dylib
 current-version: 0
@@ -118,7 +118,7 @@ exports:
                        __ZN18FireMessageHandler29sendAllowGnssDwellDutyCyclingEb, 
                        __ZN18FireMessageHandler30GlReqOnSyncinReportCurrentTimeEPN7BlueFin19IGlRequestInterfaceENS0_16GL_SYNCIN_STATUSEPKNS0_7GL_TIMEENS0_16GL_TIME_VALIDITYEdba, 
                        __ZN18FireMessageHandler30provideMeasurementInfoResponseERKN4NILR36MeasurePositionMeasurementsRspParamsE, 
-                       __ZN18FireMessageHandler31provideGnssLocationInfoResponseERKN4NILR36MeasurePositionLocationInfoRspParamsE, 
+                       __ZN18FireMessageHandler31provideGnssLocationInfoResponseERKN4NILR36MeasurePositionLocationInfoRspParamsEPKN7BlueFin13GL_FIX_STATUSE, 
                        __ZN18FireMessageHandler31requestAdditionalGnssAssistanceERKN4NILR41MeasurePositionAssistanceRequestRspParamsE, 
                        __ZN18FireMessageHandler31setNilrAssistanceRequestHandlerENSt3__18functionIFvPKN4NILR41MeasurePositionAssistanceRequestRspParamsEEEE, 
                        __ZN18FireMessageHandler31setSuplRequestLocationIdHandlerENSt3__18functionIFvvEEE, 
@@ -6824,7 +6824,7 @@ exports:
                        __ZN7BlueFin45translateMeasurePositionMeasurementsRspParamsERN4NILR36MeasurePositionMeasurementsRspParamsEPKNS_11GL_RES_MEASEPKNS_10GANSS_MEASE, 
                        __ZN7BlueFin46Copy_RRLP_GANSSAlmanacElement_to_GlGlnsAlmanacERK30ASN1T_RRLP_GANSSAlmanacElementRNS_13GlGlnsAlmanacE, 
                        __ZN7BlueFin46IOnRildClientModuleControlPlaneOlympicResponse30provideMeasurementInfoResponseERKN4NILR36MeasurePositionMeasurementsRspParamsE, 
-                       __ZN7BlueFin46IOnRildClientModuleControlPlaneOlympicResponse31provideGnssLocationInfoResponseERKN4NILR36MeasurePositionLocationInfoRspParamsE, 
+                       __ZN7BlueFin46IOnRildClientModuleControlPlaneOlympicResponse31provideGnssLocationInfoResponseERKN4NILR36MeasurePositionLocationInfoRspParamsEPKNS_13GL_FIX_STATUSE, 
                        __ZN7BlueFin46IOnRildClientModuleControlPlaneOlympicResponse31requestAdditionalGnssAssistanceERKN4NILR41MeasurePositionAssistanceRequestRspParamsE, 
                        __ZN7BlueFin46asn1PE_GLLPP_ECID_SignalMeasurementInformationEP6OSCTXTPKNS_39GLLPP_ECID_SignalMeasurementInformationE, 
                        __ZN7BlueFin46asn1PE_GLLPP_GNSS_GenericAssistanceDataSupportEP6OSCTXTPKNS_39GLLPP_GNSS_GenericAssistanceDataSupportE, 
@@ -9808,7 +9808,7 @@ exports:
                        __ZThn64_N18FireMessageHandler30GlReqOnSyncinReportCurrentTimeEPN7BlueFin19IGlRequestInterfaceENS0_16GL_SYNCIN_STATUSEPKNS0_7GL_TIMEENS0_16GL_TIME_VALIDITYEdba, 
                        __ZThn64_N18FireMessageHandlerD0Ev, __ZThn64_N18FireMessageHandlerD1Ev, 
                        __ZThn72_N18FireMessageHandler30provideMeasurementInfoResponseERKN4NILR36MeasurePositionMeasurementsRspParamsE, 
-                       __ZThn72_N18FireMessageHandler31provideGnssLocationInfoResponseERKN4NILR36MeasurePositionLocationInfoRspParamsE, 
+                       __ZThn72_N18FireMessageHandler31provideGnssLocationInfoResponseERKN4NILR36MeasurePositionLocationInfoRspParamsEPKN7BlueFin13GL_FIX_STATUSE, 
                        __ZThn72_N18FireMessageHandler31requestAdditionalGnssAssistanceERKN4NILR41MeasurePositionAssistanceRequestRspParamsE, 
                        __ZThn72_N18FireMessageHandlerD0Ev, __ZThn72_N18FireMessageHandlerD1Ev, 
                        __ZThn80_N18FireMessageHandler14GlEngineOnStopEN7BlueFin12GL_STOP_CODEE, 

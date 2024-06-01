@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D723A03B-6FD7-36F7-8414-2F3CF100277C', 'armv7s: 1A0C4042-52AB-3895-864F-5D70C949FC92', 
-                   'arm64: 96DF834E-3D7E-3DB0-B2F4-F199C7721262', 'arm64e: FBC50F36-4559-3816-8357-F32F0BDE98F1' ]
+                   'arm64: 22F3C846-7358-33E5-B175-8A36EA80BC00', 'arm64e: 54C60C63-4E69-3AE5-A2F4-C40CE4AA5FD6' ]
 platform:        ios
 install-name:    /usr/lib/libFDRDecode.dylib
 objc-constraint: none

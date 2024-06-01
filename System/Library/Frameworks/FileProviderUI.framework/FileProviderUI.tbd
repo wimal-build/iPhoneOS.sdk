@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 2A62F465-4BAC-3D72-BC2F-ADE4FD05C509', 'arm64e: A8868ADA-01DE-3140-A052-C16D2F5279A1' ]
+                   'arm64: D28A64A5-4D8E-3153-AC36-78CE9D6848AE', 'arm64e: EA1D94D5-C241-37C8-92D4-F7BEAACEB02D' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/FileProviderUI.framework/FileProviderUI
-current-version: 68.100.38
+current-version: 68.100.44
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]

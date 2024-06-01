@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: FAB8A13C-DE48-3FCE-8EB2-972FC114BDA0', 'armv7s: 95C18A38-45AF-3FD5-8D39-65BC4EB871B9', 
-                   'arm64: 7E568942-2FB6-3AD2-98E8-22D75D049DAA', 'arm64e: 019916E4-1CF5-3BEF-9CB6-9BDF67CAC179' ]
+                   'arm64: FA522C72-7ED1-330C-8A46-732DD95CA87D', 'arm64e: F8D7F493-4D71-31F8-9A00-2B48197FC240' ]
 platform:        ios
 install-name:    /usr/lib/libARIServer.dylib
 objc-constraint: none
@@ -132,12 +132,12 @@ exports:
                         __ZTSPFvijRNSt3__110shared_ptrIN3Ari14AriClientProxyEEEE ]
   - archs:           [ arm64, arm64e ]
     symbols:         [ __Z19SdkGmidIsAwdRequestj, __Z20SdkGmidIsLowPriorityj, __Z22SdkMsgIsFilerInitiatorPKhjRj, 
-                       __Z23SdkMsgIsFilerReadStreamPKhjRj, __Z27SdkGmidIsAllowedDuringStallj, 
-                       __Z28SdkGmidIsFileWriteTerminatorj, __Z32SdkGmidIsAllowedForPublicLoggingj, 
-                       __Z8asStringPv, __ZN11AriDispatch4Once6CreateEv, __ZN11AriDispatch4Once7runOnceEU13block_pointerFvvE, 
-                       __ZN11AriDispatch4OnceC1Ev, __ZN11AriDispatch4OnceC2Ev, __ZN11AriDispatch4OnceD1Ev, 
-                       __ZN11AriDispatch4OnceD2Ev, __ZN11AriDispatch5Group4waitEj, 
-                       __ZN11AriDispatch5Group5asyncEP16dispatch_queue_sU13block_pointerFvvE, 
+                       __Z23SdkGmidIsPrivateLoggingj, __Z23SdkMsgIsFilerReadStreamPKhjRj, 
+                       __Z27SdkGmidIsAllowedDuringStallj, __Z28SdkGmidIsFileWriteTerminatorj, 
+                       __Z32SdkGmidIsAllowedForPublicLoggingj, __Z8asStringPv, __ZN11AriDispatch4Once6CreateEv, 
+                       __ZN11AriDispatch4Once7runOnceEU13block_pointerFvvE, __ZN11AriDispatch4OnceC1Ev, 
+                       __ZN11AriDispatch4OnceC2Ev, __ZN11AriDispatch4OnceD1Ev, __ZN11AriDispatch4OnceD2Ev, 
+                       __ZN11AriDispatch5Group4waitEj, __ZN11AriDispatch5Group5asyncEP16dispatch_queue_sU13block_pointerFvvE, 
                        __ZN11AriDispatch5Group5enterEv, __ZN11AriDispatch5Group5leaveEv, 
                        __ZN11AriDispatch5Group6CreateEv, __ZN11AriDispatch5Group6notifyEP16dispatch_queue_sU13block_pointerFvvE, 
                        __ZN11AriDispatch5Group6notifyEP16dispatch_queue_sjU13block_pointerFvbE, 

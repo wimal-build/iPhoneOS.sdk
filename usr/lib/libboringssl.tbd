@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: C084A57F-9E6A-3800-BB47-8A4106A559D0', 'arm64e: 0BBB4296-7C26-3A59-A0C6-8C129B3EAF63' ]
+                   'arm64: ABD22F29-E3D2-3E0C-9562-DD3AD7F7B7B8', 'arm64e: 4E6E0765-0F26-32A7-92EE-A8CD8DDDE309' ]
 platform:        ios
 install-name:    /usr/lib/libboringssl.dylib
 current-version: 0
@@ -98,17 +98,17 @@ exports:
                        _SSL_CTX_set_cert_verify_callback, _SSL_CTX_set_cipher_list, 
                        _SSL_CTX_set_client_CA_list, _SSL_CTX_set_custom_verify, _SSL_CTX_set_early_data_enabled, 
                        _SSL_CTX_set_false_start_allowed_without_alpn, _SSL_CTX_set_false_start_allowed_without_pfs, 
-                       _SSL_CTX_set_info_callback, _SSL_CTX_set_max_proto_version, 
-                       _SSL_CTX_set_message_callback, _SSL_CTX_set_min_proto_version, 
-                       _SSL_CTX_set_mode, _SSL_CTX_set_next_proto_select_cb, _SSL_CTX_set_next_protos_advertised_cb, 
-                       _SSL_CTX_set_ocsp_response, _SSL_CTX_set_options, _SSL_CTX_set_psk_client_callback, 
-                       _SSL_CTX_set_psk_server_callback, _SSL_CTX_set_session_cache_mode, 
-                       _SSL_CTX_set_tls13_ciphersuite_aesgcm_enabled, _SSL_CTX_set_tls13_ciphersuite_chacha20poly1305_enabled, 
-                       _SSL_CTX_set_tls13_variant, _SSL_CTX_set_tmp_dh, _SSL_CTX_set_verify, 
-                       _SSL_CTX_use_certificate, _SSL_CTX_use_psk_identity_hint, 
-                       _SSL_SESSION_free, _SSL_SESSION_from_bytes, _SSL_SESSION_get0_cipher, 
-                       _SSL_SESSION_get0_peer_certificates, _SSL_SESSION_get_id, 
-                       _SSL_SESSION_get_max_early_data, _SSL_SESSION_get_ticket_lifetime_hint, 
+                       _SSL_CTX_set_ignore_tls13_downgrade, _SSL_CTX_set_info_callback, 
+                       _SSL_CTX_set_max_proto_version, _SSL_CTX_set_message_callback, 
+                       _SSL_CTX_set_min_proto_version, _SSL_CTX_set_mode, _SSL_CTX_set_next_proto_select_cb, 
+                       _SSL_CTX_set_next_protos_advertised_cb, _SSL_CTX_set_ocsp_response, 
+                       _SSL_CTX_set_options, _SSL_CTX_set_psk_client_callback, _SSL_CTX_set_psk_server_callback, 
+                       _SSL_CTX_set_session_cache_mode, _SSL_CTX_set_tls13_ciphersuite_aesgcm_enabled, 
+                       _SSL_CTX_set_tls13_ciphersuite_chacha20poly1305_enabled, _SSL_CTX_set_tls13_variant, 
+                       _SSL_CTX_set_tmp_dh, _SSL_CTX_set_verify, _SSL_CTX_use_certificate, 
+                       _SSL_CTX_use_psk_identity_hint, _SSL_SESSION_free, _SSL_SESSION_from_bytes, 
+                       _SSL_SESSION_get0_cipher, _SSL_SESSION_get0_peer_certificates, 
+                       _SSL_SESSION_get_id, _SSL_SESSION_get_max_early_data, _SSL_SESSION_get_ticket_lifetime_hint, 
                        _SSL_SESSION_has_ticket, _SSL_SESSION_new, _SSL_SESSION_to_bytes, 
                        _SSL_SESSION_to_bytes_for_ticket, _SSL_SESSION_up_ref, _SSL_SESSION_was_renewed, 
                        _SSL_accept, _SSL_alert_desc_string_long, _SSL_alert_type_string_long, 

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 1A5B184C-E441-3F49-BD5F-91ECEB01A39E', 'armv7s: 91F5277B-49B4-3D57-827B-3B4DBE495A7B', 
-                   'arm64: 7EFBFC26-AA37-3E86-AEA0-C711D170E169', 'arm64e: 52AEDA7C-CB47-3443-9FDE-6C25DC8023EA' ]
+                   'arm64: 155936D9-5D61-3205-94CB-BD20B375BD43', 'arm64e: 8AAD1A05-302C-3BFC-9DED-D69C223EFD1F' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/QuartzCore.framework/QuartzCore
 current-version: 1.11
@@ -40,8 +40,8 @@ exports:
                        _CAImageProviderSetImageSize, _CAImageProviderSetSubImage, 
                        _CAImageProviderSetSubImageWithSeed, _CAImageQueueCollect, 
                        _CAImageQueueConsumeUnconsumedInRange, _CAImageQueueCreate, 
-                       _CAImageQueueDeleteBuffer, _CAImageQueueFlush, _CAImageQueueGetCapacity, 
-                       _CAImageQueueGetDisplayMask, _CAImageQueueGetDisplayTime, 
+                       _CAImageQueueDeleteBuffer, _CAImageQueueFlush, _CAImageQueueFlushWithTransaction, 
+                       _CAImageQueueGetCapacity, _CAImageQueueGetDisplayMask, _CAImageQueueGetDisplayTime, 
                        _CAImageQueueGetDisplayedPixelCount, _CAImageQueueGetFlags, 
                        _CAImageQueueGetFramebufferID, _CAImageQueueGetGPURegistryID, 
                        _CAImageQueueGetHeight, _CAImageQueueGetLastUpdateHostTime, 
@@ -97,10 +97,10 @@ exports:
                        _CARenderServerGetClientPort, _CARenderServerGetClientProcessId, 
                        _CARenderServerGetDebugFlags, _CARenderServerGetDebugOption, 
                        _CARenderServerGetDebugValue, _CARenderServerGetDebugValueFloat, 
-                       _CARenderServerGetFrameCounter, _CARenderServerGetFrameCounterByIndex, 
-                       _CARenderServerGetInfo, _CARenderServerGetNeededAlignment, 
-                       _CARenderServerGetPerformanceInfo, _CARenderServerGetPort, 
-                       _CARenderServerGetServerPort, _CARenderServerGetStatistics, 
+                       _CARenderServerGetDisplayLogicalBounds, _CARenderServerGetFrameCounter, 
+                       _CARenderServerGetFrameCounterByIndex, _CARenderServerGetInfo, 
+                       _CARenderServerGetNeededAlignment, _CARenderServerGetPerformanceInfo, 
+                       _CARenderServerGetPort, _CARenderServerGetServerPort, _CARenderServerGetStatistics, 
                        _CARenderServerIsRunning, _CARenderServerPostPowerLog, _CARenderServerPurgeServer, 
                        _CARenderServerRegister, _CARenderServerRenderDisplay, _CARenderServerRenderDisplayClientList, 
                        _CARenderServerRenderDisplayClientListWithTransform, _CARenderServerRenderDisplayClientListWithTransformList, 

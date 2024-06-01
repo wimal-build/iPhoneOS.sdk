@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 59A53EBD-0945-32D3-A895-238A5143A57F', 'arm64e: 20BC009C-8AAC-339B-9B14-C9EB4F0CC58B' ]
+                   'arm64: 06687E5B-5BA5-3F92-806B-73C749D3DA34', 'arm64e: 6E7EA0EA-27D0-331B-AFAE-D8A65798D3AB' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/AuthenticationServices.framework/AuthenticationServices
 objc-constraint: none
@@ -12,7 +12,8 @@ exports:
     objc-classes:    [ ASCredentialIdentityStore, ASCredentialIdentityStoreState, 
                        ASCredentialProviderExtensionContext, ASCredentialProviderViewController, 
                        ASCredentialServiceIdentifier, ASPasswordCredential, ASPasswordCredentialIdentity, 
-                       ASWebAuthenticationSession, _ASCredentialProviderExtensionConfigurationViewController, 
-                       _ASCredentialProviderExtensionHostContext, _ASCredentialProviderExtensionViewController, 
+                       ASWebAuthenticationSession, _ASCredentialListViewController, 
+                       _ASCredentialProviderExtensionConfigurationViewController, 
+                       _ASCredentialProviderExtensionHostContext, _ASExtensionViewController, 
                        _ASPasswordCredentialAuthenticationViewController ]
 ...

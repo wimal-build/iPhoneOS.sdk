@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 2EB70818-E6AD-3FCA-8211-6679E4CBA441', 'arm64e: 96402FAD-0388-34A4-BABB-5F613BBFCD66' ]
+                   'arm64: 28947F8F-FC5C-36CD-A711-03A82F5FE519', 'arm64e: 343C2195-F564-3EA1-B712-7D1E7316A5B0' ]
 platform:        ios
 install-name:    /usr/lib/libnetworkextension.dylib
 objc-constraint: none

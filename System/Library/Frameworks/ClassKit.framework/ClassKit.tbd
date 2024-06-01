@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 82299445-9334-33BD-8267-C4DB1181BCBD', 'arm64e: A451B017-4475-3F63-BBAC-C9F31DEA30D9' ]
+                   'arm64: 86463630-3633-3F4F-A1DE-30D6E0B2F297', 'arm64e: 899D90D6-BECC-305A-814E-8BE8540A95E4' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ClassKit.framework/ClassKit
-current-version: 142.1
+current-version: 144.0.27
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]
@@ -47,22 +47,25 @@ exports:
                        _CLSProgressClasses, _CLSProgressdBundleIdentifier, _CLSQueryInterface, 
                        _CLSReportClasses, _CLSRosterClasses, _CLSSaveResponseInterface, 
                        _CLSSettingsVisibilityDidChangeNotification, _CLSShareTypeFromString, 
-                       _CLSSignificantBackingStoreChangeNotification, _CLSUbiquitousContainerID, 
-                       _CLSUserActivityActionType, _CLSUserActivityItemIdentifier, 
-                       _CLSXPCDictionaryUpdateWithDictionary, _NSStringFromAuthorizationStatus, 
-                       _NSStringFromBinaryValueType, _NSStringFromContextType, _NSStringFromDevMode, 
-                       _NSStringFromFavoriteType, _NSStringFromHandoutAttachmentCompletionStatus, 
-                       _NSStringFromHandoutAttachmentType, _NSStringFromHandoutPublishingState, 
-                       _NSStringFromHandoutState, _NSStringFromPermissionType, _NSStringFromShareType, 
-                       _PDServerMachServiceName, _clsNotificationQueue, _ic, _kUTTypeCLSContext ]
+                       _CLSSignificantBackingStoreChangeNotification, _CLSStudentClassMembershipChangedDarwinNotificationName, 
+                       _CLSUbiquitousContainerID, _CLSUserActivityActionType, _CLSUserActivityItemIdentifier, 
+                       _CLSUserDefaultPersistProgressData, _CLSXPCDictionaryUpdateWithDictionary, 
+                       _NSStringFromAuthorizationStatus, _NSStringFromBinaryValueType, 
+                       _NSStringFromContextType, _NSStringFromDevMode, _NSStringFromFavoriteType, 
+                       _NSStringFromHandoutAttachmentCompletionStatus, _NSStringFromHandoutAttachmentType, 
+                       _NSStringFromHandoutPublishingState, _NSStringFromHandoutState, 
+                       _NSStringFromPermissionType, _NSStringFromShareType, _PDServerMachServiceName, 
+                       _clsNotificationQueue, _ic, _kUTTypeCLSContext ]
     objc-classes:    [ CLSActivity, CLSActivityItem, CLSActivityReport, CLSActivityReportItem, 
                        CLSAggregatedValue, CLSAsset, CLSAssetUploadObserver, CLSAuthTree, 
                        CLSBinaryItem, CLSBinaryReportItem, CLSClass, CLSClassMember, 
-                       CLSContext, CLSCurrentUser, CLSDataObserver, CLSDataStore, 
-                       CLSEndpointConnection, CLSEntitlements, CLSFavorite, CLSGraph, 
-                       CLSHandout, CLSHandoutAttachment, CLSHandoutRecipient, CLSHandoutReportItem, 
-                       CLSObject, CLSPerson, CLSQuantityItem, CLSQuantityReportItem, 
-                       CLSQuery, CLSRange, CLSReportItem, CLSSaveResponse, CLSScoreItem, 
-                       CLSScoreReportItem, CLSSettingsVisibilityController, CLSTimeInterval, 
+                       CLSContext, CLSContextProviderExtensionContext, CLSContextProviderExtensionHostContext, 
+                       CLSContextProviderService, CLSContextProviderServiceFinder, 
+                       CLSCurrentUser, CLSDataObserver, CLSDataStore, CLSEndpointConnection, 
+                       CLSEntitlements, CLSFavorite, CLSGraph, CLSHandout, CLSHandoutAttachment, 
+                       CLSHandoutRecipient, CLSHandoutReportItem, CLSObject, CLSPerson, 
+                       CLSQuantityItem, CLSQuantityReportItem, CLSQuery, CLSRange, 
+                       CLSReportItem, CLSSaveResponse, CLSScoreItem, CLSScoreReportItem, 
+                       CLSSettingsVisibilityController, CLSTimeInterval, CLSUserDefaults, 
                        CLSUtil, CLSUtilityService ]
 ...

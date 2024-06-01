@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 1ABA0806-20F4-3D22-BF04-FCB9001DC9F3', 'armv7s: DFE649ED-4041-33A2-9F37-76690FCEAD9D', 
-                   'arm64: 3E8A09F2-3684-3A5E-A459-695B127A2B91', 'arm64e: 4E0A3A31-8DDE-3B67-A7BB-7B9C6C7EA3A7' ]
+                   'arm64: 68C0422F-0F13-3731-9270-DB721253894C', 'arm64e: 8DD68F9F-2634-3411-89F2-9FB892DE4633' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SceneKit.framework/SceneKit
-current-version: 470.2
+current-version: 470.10
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

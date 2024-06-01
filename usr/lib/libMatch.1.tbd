@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 941783B7-1006-32EF-BF5B-95AA4D57FCE1', 'armv7s: EE459418-3ABC-30EE-9305-32D61674E54F', 
-                   'arm64: 210A676C-9541-3B32-9C53-F90FDB6914EA', 'arm64e: CE0A91D1-188C-36E8-8C1A-6201251B1A3E' ]
+                   'arm64: F3B10292-DEF9-36E3-BC82-61B41C4321CD', 'arm64e: 0A4D8C79-29D6-3BED-A41E-4D9231D037CA' ]
 platform:        ios
 install-name:    /usr/lib/libMatch.1.dylib
 objc-constraint: none

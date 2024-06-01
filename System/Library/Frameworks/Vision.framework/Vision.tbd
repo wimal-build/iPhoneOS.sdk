@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 45469D6C-7D19-3E08-A53A-F798968285E0', 'arm64e: BFFFBDA1-A863-3630-9415-F5932E00D987' ]
+                   'arm64: 0FEFF448-44A4-3631-871D-F6CE1B82EA2A', 'arm64e: CA2E6ADF-B6EE-30E1-877A-7249C4308233' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Vision.framework/Vision
-current-version: 2.0.62
+current-version: 2.0.70
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]

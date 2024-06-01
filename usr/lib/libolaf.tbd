@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 5BCBEF6C-26BF-3FFB-9887-410069B93289', 'arm64e: F087F583-445E-3A67-887F-2397D6C9A749' ]
+                   'arm64: 4F0E008A-FA7B-3291-9D99-7C024D35F6C5', 'arm64e: 69D425EA-88E4-3B30-803C-BB95B7BFAD6B' ]
 platform:        ios
 install-name:    /usr/lib/libolaf.dylib
 current-version: 0

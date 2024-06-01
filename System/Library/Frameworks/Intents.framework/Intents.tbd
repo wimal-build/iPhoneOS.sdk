@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 4B837D79-AB45-3313-A2F9-6C2C9EAEFCF8', 'armv7s: FF5BC191-04EE-3ACB-A61E-011EAC73571F', 
-                   'arm64: 8B379AB4-8CE6-3030-A834-2FE7CBD42B4F', 'arm64e: 37A675D4-D93C-3164-8AEA-8396AB7A8EF4' ]
+                   'arm64: 11B121AB-6445-310D-8488-5AC7FA9C1E48', 'arm64e: 220BA2F1-FB51-328C-8892-CCD1FC147A42' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Intents.framework/Intents
 objc-constraint: none

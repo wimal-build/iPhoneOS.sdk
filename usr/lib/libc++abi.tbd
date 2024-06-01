@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: F5651A85-EC21-3698-AEF4-E081B4D51491', 'armv7s: 2F042367-7472-387D-A05F-4C9EBD7DA5BC', 
-                   'arm64: 311C3F6A-E6DE-347A-8F9D-9BE875F3C557', 'arm64e: D410CBB7-9719-3F00-804E-6B03AEB639B3' ]
+                   'arm64: 9EA63D18-04CE-3E28-B6C1-2CB873CCAD18', 'arm64e: 882A0025-7C25-3619-81C8-A1F3079FB961' ]
 platform:        ios
 install-name:    '/usr/lib/libc++abi.dylib'
 current-version: 400.17
@@ -10,7 +10,8 @@ exports:
   - archs:           [ armv7, armv7s ]
     symbols:         [ ___gxx_personality_sj0 ]
   - archs:           [ arm64, arm64e ]
-    symbols:         [ ___gxx_personality_v0 ]
+    symbols:         [ __ZTIDu, __ZTIPDu, __ZTIPKDu, __ZTSDu, __ZTSPDu, __ZTSPKDu, 
+                       ___gxx_personality_v0 ]
     weak-def-symbols: [ __ZdaPvSt11align_val_t, __ZdaPvSt11align_val_tRKSt9nothrow_t, 
                         __ZdaPvm, __ZdaPvmSt11align_val_t, __ZdlPvSt11align_val_t, 
                         __ZdlPvSt11align_val_tRKSt9nothrow_t, __ZdlPvm, __ZdlPvmSt11align_val_t, 

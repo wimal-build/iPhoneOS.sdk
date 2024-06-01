@@ -39,8 +39,8 @@
  *	@(#)types.h	8.3 (Berkeley) 1/5/94
  */
 
-#ifndef	_MACHTYPES_H_
-#define	_MACHTYPES_H_
+#ifndef _MACHTYPES_H_
+#define _MACHTYPES_H_
 
 #ifndef __ASSEMBLER__
 #include <arm/_types.h>
@@ -60,9 +60,9 @@
 #include <sys/_types/_u_int64_t.h>
 
 #if __LP64__
-typedef int64_t			register_t;
+typedef int64_t                 register_t;
 #else
-typedef int32_t			register_t;
+typedef int32_t                 register_t;
 #endif
 
 #include <sys/_types/_intptr_t.h>
@@ -71,24 +71,24 @@ typedef int32_t			register_t;
 #if !defined(_ANSI_SOURCE) && (!defined(_POSIX_C_SOURCE) || defined(_DARWIN_C_SOURCE))
 /* These types are used for reserving the largest possible size. */
 #ifdef __arm64__
-typedef u_int64_t		user_addr_t;	
-typedef u_int64_t		user_size_t;	
-typedef int64_t			user_ssize_t;
-typedef int64_t			user_long_t;
-typedef u_int64_t		user_ulong_t;
-typedef int64_t			user_time_t;
-typedef int64_t			user_off_t;
+typedef u_int64_t               user_addr_t;
+typedef u_int64_t               user_size_t;
+typedef int64_t                 user_ssize_t;
+typedef int64_t                 user_long_t;
+typedef u_int64_t               user_ulong_t;
+typedef int64_t                 user_time_t;
+typedef int64_t                 user_off_t;
 #else
-typedef u_int32_t		user_addr_t;	
-typedef u_int32_t		user_size_t;	
-typedef int32_t			user_ssize_t;
-typedef int32_t			user_long_t;
-typedef u_int32_t		user_ulong_t;
-typedef int32_t			user_time_t;
-typedef int64_t			user_off_t;
+typedef u_int32_t               user_addr_t;
+typedef u_int32_t               user_size_t;
+typedef int32_t                 user_ssize_t;
+typedef int32_t                 user_long_t;
+typedef u_int32_t               user_ulong_t;
+typedef int32_t                 user_time_t;
+typedef int64_t                 user_off_t;
 #endif
 
-#define USER_ADDR_NULL	((user_addr_t) 0)
+#define USER_ADDR_NULL  ((user_addr_t) 0)
 #define CAST_USER_ADDR_T(a_ptr)   ((user_addr_t)((uintptr_t)(a_ptr)))
 
 
@@ -96,12 +96,12 @@ typedef int64_t			user_off_t;
 
 /* This defines the size of syscall arguments after copying into the kernel: */
 #if defined(__arm__)
-typedef u_int32_t		syscall_arg_t;
+typedef u_int32_t               syscall_arg_t;
 #elif defined(__arm64__)
-typedef u_int64_t		syscall_arg_t;
+typedef u_int64_t               syscall_arg_t;
 #else
 #error Unknown architecture.
-#endif 
+#endif
 
 #endif /* __ASSEMBLER__ */
-#endif	/* _MACHTYPES_H_ */
+#endif  /* _MACHTYPES_H_ */

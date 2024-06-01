@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: C341E2AC-5852-3ED3-A360-25D1134C92F9', 'armv7s: 468257E5-1A73-3A8B-9492-B0BBB9E9826A', 
-                   'arm64: 53ACBAEE-37DE-36CF-8A29-6B048C25B6CE', 'arm64e: B8A32666-4573-3C06-A8C9-D0794B4BD19A' ]
+                   'arm64: 9BC631E8-88CF-3334-A545-730758ACD90A', 'arm64e: F9C8D2BA-4774-32B4-A51C-DB6A92FB499F' ]
 platform:        ios
 install-name:    /usr/lib/libcompression.dylib
 objc-constraint: none

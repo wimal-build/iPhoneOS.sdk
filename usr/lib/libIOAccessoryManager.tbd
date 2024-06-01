@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 4EE8EF01-51AA-3EFE-B4AA-69DD5E1CB97E', 'armv7s: F8DEFD1C-A4BD-3A5B-B325-1DAFB41728B6', 
-                   'arm64: C2C2DCCA-3ECF-389A-8DE3-4A9F13F1835A', 'arm64e: F12773ED-1BAE-37E3-AE3C-90507D4AB86F' ]
+                   'arm64: 11C840B1-7D3A-3FAD-B795-C9BF51B8769F', 'arm64e: 92509781-2F76-3A22-9C4A-9488273BE59C' ]
 platform:        ios
 install-name:    /usr/lib/libIOAccessoryManager.dylib
 objc-constraint: none
@@ -22,10 +22,11 @@ exports:
                        _IOAccessoryManagerCheckPinVoltage, _IOAccessoryManagerClearUSBCurrentLimitMaximum, 
                        _IOAccessoryManagerConfigureGoldbondMode, _IOAccessoryManagerConfigurePower, 
                        _IOAccessoryManagerConfigurePowerLowVoltageSelect, _IOAccessoryManagerConfigureUSBMode, 
-                       _IOAccessoryManagerCopyDeviceInfo, _IOAccessoryManagerEnableUSBHostMode, 
-                       _IOAccessoryManagerForceUSBConnectActive, _IOAccessoryManagerGetAccessoryID, 
-                       _IOAccessoryManagerGetActivePowerMode, _IOAccessoryManagerGetBatteryPackMode, 
-                       _IOAccessoryManagerGetDigitalID, _IOAccessoryManagerGetLdcmParams, 
+                       _IOAccessoryManagerCopyAccessoryDeviceUID, _IOAccessoryManagerCopyDeviceInfo, 
+                       _IOAccessoryManagerEnableUSBHostMode, _IOAccessoryManagerForceUSBConnectActive, 
+                       _IOAccessoryManagerGetAccessoryID, _IOAccessoryManagerGetActivePowerMode, 
+                       _IOAccessoryManagerGetBatteryPackMode, _IOAccessoryManagerGetDigitalID, 
+                       _IOAccessoryManagerGetFreePinMask, _IOAccessoryManagerGetLdcmParams, 
                        _IOAccessoryManagerGetPowerDuringSleep, _IOAccessoryManagerGetPowerMode, 
                        _IOAccessoryManagerGetPrimaryPort, _IOAccessoryManagerGetServiceWithPrimaryPort, 
                        _IOAccessoryManagerGetSleepPowerCurrentLimit, _IOAccessoryManagerGetType, 

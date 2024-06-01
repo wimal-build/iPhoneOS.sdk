@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D11FC713-CFF6-3100-8D1B-446C4511630C', 'armv7s: 10D93789-6D02-3ADA-847B-841000908211', 
-                   'arm64: 180D919C-C541-3931-AA6A-53EB3DE66435', 'arm64e: 8542EB6B-25CA-324A-B89E-ADC368AD3AE3' ]
+                   'arm64: DAF01796-E852-3230-BC32-0CE9F6892C6F', 'arm64e: C68A88FA-FDFE-3171-B046-2FF1402E119E' ]
 platform:        ios
 install-name:    /usr/lib/libARI.dylib
 objc-constraint: none
@@ -1778,14 +1778,15 @@ exports:
                         __ZTSNSt3__123enable_shared_from_thisIN3Ari14ClientWorkItemEEE ]
   - archs:           [ arm64, arm64e ]
     symbols:         [ __Z19SdkGmidIsAwdRequestj, __Z20SdkGmidIsLowPriorityj, __Z22SdkMsgIsFilerInitiatorPKhjRj, 
-                       __Z23SdkMsgIsFilerReadStreamPKhjRj, __Z27SdkGmidIsAllowedDuringStallj, 
-                       __Z28SdkGmidIsFileWriteTerminatorj, __Z32SdkGmidIsAllowedForPublicLoggingj, 
-                       __Z8asString10IBICbsType, __Z8asString10IBINetBand, __Z8asString10IBIXoState, 
-                       __Z8asString11IBICallType, __Z8asString11IBICbsCause, __Z8asString11IBICnDomain, 
-                       __Z8asString11IBINetError, __Z8asString11IBISipMsgId, __Z8asString11IBISmsTpFcs, 
-                       __Z8asString12IBICallCsCmd, __Z8asString12IBILpFixType, __Z8asString12IBILpGanssId, 
-                       __Z8asString12IBISimEfType, __Z8asString12IBISimPinKey, __Z8asString12IBISimTkTone, 
-                       __Z8asString12IBISmsStatus, __Z8asString13IBICallCsFeat, __Z8asString13IBICallCsLine, 
+                       __Z23SdkGmidIsPrivateLoggingj, __Z23SdkMsgIsFilerReadStreamPKhjRj, 
+                       __Z27SdkGmidIsAllowedDuringStallj, __Z28SdkGmidIsFileWriteTerminatorj, 
+                       __Z32SdkGmidIsAllowedForPublicLoggingj, __Z8asString10IBICbsType, 
+                       __Z8asString10IBINetBand, __Z8asString10IBIXoState, __Z8asString11IBICallType, 
+                       __Z8asString11IBICbsCause, __Z8asString11IBICnDomain, __Z8asString11IBINetError, 
+                       __Z8asString11IBISipMsgId, __Z8asString11IBISmsTpFcs, __Z8asString12IBICallCsCmd, 
+                       __Z8asString12IBILpFixType, __Z8asString12IBILpGanssId, __Z8asString12IBISimEfType, 
+                       __Z8asString12IBISimPinKey, __Z8asString12IBISimTkTone, __Z8asString12IBISmsStatus, 
+                       __Z8asString13IBICallCsFeat, __Z8asString13IBICallCsLine, 
                        __Z8asString13IBICallCsType, __Z8asString13IBILpGnssToId, 
                        __Z8asString13IBINetTimerId, __Z8asString13IBISimHwEvent, 
                        __Z8asString13IBISipEventId, __Z8asString13IBISsUssdType, 
@@ -7580,7 +7581,8 @@ exports:
                         _ARI_IBISimTkProactiveCmdSelectItem_V1_ENC_F, _ARI_IBISimTkProactiveCmdSendData_DEC_F, 
                         _ARI_IBISimTkProactiveCmdSendData_ENC_F, _ARI_IBISimTkProactiveCmdSendDtmf_DEC_F, 
                         _ARI_IBISimTkProactiveCmdSendDtmf_ENC_F, _ARI_IBISimTkProactiveCmdSendSms_DEC_F, 
-                        _ARI_IBISimTkProactiveCmdSendSms_ENC_F, _ARI_IBISimTkProactiveCmdSendSs_DEC_F, 
+                        _ARI_IBISimTkProactiveCmdSendSms_ENC_F, _ARI_IBISimTkProactiveCmdSendSms_V1_DEC_F, 
+                        _ARI_IBISimTkProactiveCmdSendSms_V1_ENC_F, _ARI_IBISimTkProactiveCmdSendSs_DEC_F, 
                         _ARI_IBISimTkProactiveCmdSendSs_ENC_F, _ARI_IBISimTkProactiveCmdSendUssd_DEC_F, 
                         _ARI_IBISimTkProactiveCmdSendUssd_ENC_F, _ARI_IBISimTkProactiveCmdSetupCall_DEC_F, 
                         _ARI_IBISimTkProactiveCmdSetupCall_ENC_F, _ARI_IBISimTkProactiveCmdSetupEventList_DEC_F, 

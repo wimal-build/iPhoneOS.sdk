@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: A8CD788C-C911-3887-AE25-4BD47D58C7C1', 'arm64e: DEC09F8A-54C8-3527-BF96-3E138BEB5D95' ]
+                   'arm64: CF9CB7F2-097E-3EA3-AE95-01C161AAAE6C', 'arm64e: FDF868DC-18B9-3F8C-B0E4-035E3E58D402' ]
 platform:        ios
 install-name:    /usr/lib/libobjc-trampolines.dylib
 current-version: 228

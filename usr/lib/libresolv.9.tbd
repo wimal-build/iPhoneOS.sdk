@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 8EB3567E-9C7D-3C5D-B7E5-D97A7487C6FC', 'armv7s: 6DBB8B5F-D0DF-3254-8BE2-E7C80010C57A', 
-                   'arm64: 77CBDA3C-3DA0-36CB-AA1C-B3FF54562002', 'arm64e: E93149DC-C7ED-30D2-8160-47C5071AB8BC' ]
+                   'arm64: 063CB098-AE1B-38B6-BD21-EDC72C82BB59', 'arm64e: 730188A1-020A-3BD3-AC5A-6A1DEF3ACDC2' ]
 platform:        ios
 install-name:    /usr/lib/libresolv.9.dylib
 objc-constraint: none

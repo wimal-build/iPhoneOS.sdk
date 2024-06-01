@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: F4AFDFD6-74E3-359A-8D1B-80C072A639A4', 'armv7s: 0905C2DC-68E6-3F7E-8F14-0A0788C3E302', 
-                   'arm64: BB815381-A046-3D97-8900-56A931F3A569', 'arm64e: 1899F88F-FC1D-3B5B-AE72-BDC46E050C10' ]
+                   'arm64: D5860954-2F8E-3905-B39A-0FE1B0DABA88', 'arm64e: 0D14514D-925B-3C48-B2C3-874C96665F32' ]
 platform:        ios
 install-name:    /usr/lib/libmecab_em.dylib
 current-version: 779.19.2

@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 35640E39-77A7-3716-81B7-DAFB5831F4D8', 'armv7s: 51D5EE04-E42B-3559-B3FC-C3A9CF5BF4B4', 
-                   'arm64: D03C6337-5865-3698-A54E-98F95348BC23', 'arm64e: FCCA0687-AF4B-31BD-B19B-8D7907B87C21' ]
+                   'arm64: CB69A738-A162-3A93-A5E2-00A031BE2EDF', 'arm64e: 2765A51A-CD53-322E-9A30-809A7D8784F0' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/LocalAuthentication.framework/LocalAuthentication
-current-version: 425.222.1
+current-version: 425.250.11
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: BD4E7BDC-9EF2-3503-8D06-A35E4266E70D', 'arm64e: C8497EF7-4836-3EEF-8E63-7F7082445FE0' ]
+                   'arm64: 4E03011E-4ED6-35CC-BEC8-1903970877A2', 'arm64e: E4F77F92-E1F8-3A27-902D-C20F436DAF64' ]
 platform:        ios
 install-name:    /usr/lib/libSMC.dylib
-current-version: 6.200.5
+current-version: 6.250.1
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]

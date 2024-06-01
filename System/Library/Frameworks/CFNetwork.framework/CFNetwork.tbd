@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: A4258C2D-78C3-30C4-825E-A7152E3402F0', 'armv7s: 9F6656E9-E258-3D5A-8884-80B53780B79C', 
-                   'arm64: 9DED6780-5069-3C6E-9494-6CDF21DDC7C0', 'arm64e: E6CC536B-35B3-3914-9EC0-06D6977219BF' ]
+                   'arm64: 2E500455-FC64-3D9E-B055-BDC3B1FEA492', 'arm64e: 10FDFD50-23BE-3BCD-A59F-6F2E677F2E8B' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CFNetwork.framework/CFNetwork
-current-version: 975.0.3
+current-version: 978.0.7
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -976,6 +976,6 @@ exports:
                        NSURLSessionStreamTask, NSURLSessionTask, NSURLSessionTaskDependency, 
                        NSURLSessionTaskDependencyDescription, NSURLSessionTaskDependencyTree, 
                        NSURLSessionTaskMetrics, NSURLSessionTaskTransactionMetrics, 
-                       NSURLSessionUploadTask, _NSCFServer, __NSCFURLSessionTaskInfo, 
-                       __NSCFURLSessionXPC, __NSURLSessionStatistics ]
+                       NSURLSessionUploadTask, _NSCFServer, __NSCFTaskPerformanceTiming, 
+                       __NSCFURLSessionTaskInfo, __NSCFURLSessionXPC, __NSURLSessionStatistics ]
 ...

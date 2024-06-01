@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: F3DFADF4-6102-3017-91DE-B00098B24B1E', 'armv7s: 4BA3CC04-F27B-3ECD-AC2C-DFEF76BC9909', 
-                   'arm64: 2BA69D0C-C3E4-3DBE-84BD-2F8630453B35', 'arm64e: 5A6521B9-7BEA-38D7-963B-4D03BCFB1947' ]
+                   'arm64: 8BEE484B-C768-385B-A4FF-0DD6B231ABFB', 'arm64e: 554ED0D0-BB67-35E4-9B87-7BD41286BADE' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Messages.framework/Messages
 objc-constraint: none

@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 5AF045C8-8DF7-3724-9447-B8C01BB052E6', 'armv7s: 2D6CEB26-E037-38C6-9294-014A120683DA', 
-                   'arm64: 963B0EFB-C451-35EC-8220-97655E6690D4', 'arm64e: BFADF4AE-3264-38B7-964A-283E025366CF' ]
+                   'arm64: 83AC7975-5701-3C36-8608-82AA450DC490', 'arm64e: 555F2990-B0DB-3B1F-8968-515A00B63BBC' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-current-version: 1245.9.2
+current-version: 1251.12
 compatibility-version: 64
 objc-constraint: none
 exports:         
@@ -702,7 +702,8 @@ exports:
                        _kCGColorBlack, _kCGColorClear, _kCGColorConversionBlackPointCompensation, 
                        _kCGColorConversionTRCSize, _kCGColorSpaceACESCGLinear, _kCGColorSpaceAdobeRGB1998, 
                        _kCGColorSpaceDCIP3, _kCGColorSpaceDisplayP3, _kCGColorSpaceExtendedGray, 
-                       _kCGColorSpaceExtendedLinearGray, _kCGColorSpaceExtendedLinearSRGB, 
+                       _kCGColorSpaceExtendedLinearDisplayP3, _kCGColorSpaceExtendedLinearGray, 
+                       _kCGColorSpaceExtendedLinearITUR_2020, _kCGColorSpaceExtendedLinearSRGB, 
                        _kCGColorSpaceExtendedSRGB, _kCGColorSpaceGenericCMYK, _kCGColorSpaceGenericGray, 
                        _kCGColorSpaceGenericGrayGamma2_2, _kCGColorSpaceGenericLab, 
                        _kCGColorSpaceGenericRGB, _kCGColorSpaceGenericRGBLinear, 

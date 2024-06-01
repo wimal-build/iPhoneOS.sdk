@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 1C5C5C58-BFCF-3C99-83ED-B4851E3A8BA4', 'armv7s: 3D439D0E-75CC-3DFF-9EAA-5891ED69A175', 
-                   'arm64: B532EC6B-C7E3-38A0-A7B5-598362289A39', 'arm64e: 179A406B-A4B2-376F-B0CD-C8E322EAD21E' ]
+                   'arm64: 60BC80F2-35F8-3C96-AD6D-399BBDB34467', 'arm64e: AB215AB9-8330-3ADD-BEE2-2086909C8E73' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreMotion.framework/CoreMotion
-current-version: 2245.8.12
+current-version: 2245.12.30
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -29,7 +29,10 @@ exports:
                        _CMCompassCalibrationData, _CMDatabaseType, _CMDeviceHasOriginalBackCamera, 
                        _CMDyskinesiaResultsKey, _CMErrorDomain, _CMErrorMessage, 
                        _CMExerciseMinuteDataArray, _CMExerciseMinuteRecordId, _CMExerciseMinuteSourceId, 
-                       _CMExerciseMinuteStartDate, _CMExtensions, _CMFallDataCollectionConfigurationKey, 
+                       _CMExerciseMinuteStartDate, _CMExtensions, _CMFallConfigUserAge, 
+                       _CMFallConfigUserMets, _CMFallDataCollectionConfigurationKey, 
+                       _CMFallImpactAlertThreshold, _CMFallImpactLoggingHeartRateThreshold, 
+                       _CMFallImpactLoggingHighResolutionSensorDataThreshold, _CMFallImpactLoggingStatsThreshold, 
                        _CMFallLastReplyAopTimestamp, _CMFallSetStatsEnabled, _CMFallSetStatsNameOfCurrentFile, 
                        _CMFallSetStatsNumberOfAvailableFiles, _CMFallSetStatsSizeOfCurrentFile, 
                        _CMFallStatsMode, _CMFallStatsSensorRecordingActive, _CMFallStatsSimulateFall, 

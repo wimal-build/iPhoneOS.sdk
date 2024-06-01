@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 34426CC0-9903-3282-88B9-9EE5914E703D', 'armv7s: 6D5A78D0-6DEB-3887-BC8F-828B986F940B', 
-                   'arm64: 0CE96BFD-AECD-346A-A2E6-8263C05E7CB2', 'arm64e: 36A9C059-F19A-3B17-9405-21AB3DA573C0' ]
+                   'arm64: 77F28899-2AEE-30B2-BC53-4A94894CA762', 'arm64e: D230A5B4-7D5A-30BB-9DB3-6B248A3C69AE' ]
 platform:        ios
 install-name:    /usr/lib/libTelephonyUtilDynamic.dylib
 objc-constraint: none
@@ -114,7 +114,8 @@ exports:
                        __ZN3ctu12TimerService23createPeriodicTimerImplENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEENS1_5tupleIJNS_8TimeTypeENS1_6chrono8durationIxNS1_5ratioILl1ELl1000000EEEEEEEE11qos_class_tNS1_8functionIFvvEEE, 
                        __ZN3ctu12TimerService23createPeriodicTimerImplENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEENS1_5tupleIJNS_8TimeTypeENS1_6chrono8durationIxNS1_5ratioILl1ELl1000000EEEEEEEE11qos_class_tU13block_pointerFvvE, 
                        __ZN3ctu12TimerService23createPeriodicTimerImplENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEENS1_5tupleIJNS_8TimeTypeENS1_6chrono8durationIxNS1_5ratioILl1ELl1000000EEEEEEEEN8dispatch5queueENSG_5blockIU13block_pointerFvvEEE, 
-                       __ZN3ctu12TimerService9init_syncEv, __ZN3ctu14asChronoStringENSt3__16chrono8durationIxNS0_5ratioILl1ELl1000000000EEEEE, 
+                       __ZN3ctu12TimerService9init_syncEv, __ZN3ctu13TextConverter25decodeCbsDataCodingSchemeEiRNS0_16DcsLanguageTypesE, 
+                       __ZN3ctu14asChronoStringENSt3__16chrono8durationIxNS0_5ratioILl1ELl1000000000EEEEE, 
                        __ZN3ctu14asChronoStringENSt3__16chrono8durationIxNS0_5ratioILl1ELl1EEEEE, 
                        __ZN3ctu15RestModuleState6createEONSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEON8dispatch5queueEONS9_8workloopE, 
                        __ZN3ctu15RestModuleStateC1EONSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEON8dispatch5queueEONS9_8workloopE, 
@@ -148,7 +149,8 @@ exports:
                        __ZN3ctu4rest27WatchableRestResourceHelper13removeWatcherERKNSt3__110shared_ptrINS_22RestResourceConnectionEEE, 
                        __ZN3ctu4rest27WatchableRestResourceHelper14cleanupExpiredEv, 
                        __ZN3ctu4rest27WatchableRestResourceHelper14removeWatchersEv, 
-                       __ZN3ctu9LogServer10setEnabledEb, __ZN3ctu9XpcClientC2ENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEERKN8dispatch5queueERKNS8_8workloopE, 
+                       __ZN3ctu8asStringENS_13TextConverter16DcsLanguageTypesE, __ZN3ctu9LogServer10setEnabledEb, 
+                       __ZN3ctu9XpcClientC2ENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEERKN8dispatch5queueERKNS8_8workloopE, 
                        __ZN3ctu9XpcClientC2ENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEERKN8dispatch8workloopE, 
                        __ZN3ctu9XpcServerC2ERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEN3xpc10connectionERKN8dispatch8workloopE, 
                        __ZNK3ctu10LoggerBaseINS_14DummyLogServerEE7enabledENS_8LogLevelE, 

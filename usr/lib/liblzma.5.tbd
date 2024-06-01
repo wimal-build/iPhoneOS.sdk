@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 2163CD8A-87D5-38C6-99A7-6674A75EAABC', 'armv7s: D9D29749-9FD0-38ED-A0A2-9D152FE74FD8', 
-                   'arm64: FF9695E8-F165-37DA-8934-C80F0E99FC6C', 'arm64e: 044D99A9-7D56-3C58-B062-8D959CD9086E' ]
+                   'arm64: 603B4695-6B81-37DE-9327-E47FFC81F9AC', 'arm64e: 0A1213F1-5E02-3FAF-B660-66E7589E6EE7' ]
 platform:        ios
 install-name:    /usr/lib/liblzma.5.dylib
 current-version: 6.3

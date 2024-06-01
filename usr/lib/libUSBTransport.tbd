@@ -1,10 +1,9 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 1F3F46E9-5FC4-3F87-BD9E-06EA80A859B6', 'arm64e: 630EB98F-B5D4-33E0-952B-5210FCE14AE2' ]
+                   'arm64: EB3DD291-1620-3666-AA07-E9F20D3AB907', 'arm64e: 035CE2EB-ECE6-3EF8-9EA0-9239B9D82628' ]
 platform:        ios
-install-name:    /usr/lib/libUSBTransport.dylib
-objc-constraint: none
+install-name:    '/usr/lib/libUSBTransport.dylib'
 exports:         
   - archs:           [ arm64, arm64e ]
     symbols:         [ __ZN3usb9transport10fileWriter13configureSizeEj, __ZN3usb9transport10fileWriter5closeEv, 
@@ -12,8 +11,8 @@ exports:
                        __ZN3usb9transport10fileWriter8snapshotERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE, 
                        __ZN3usb9transport10fileWriterC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEESA_j, 
                        __ZN3usb9transport10fileWriterC2ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEESA_j, 
-                       __ZN3usb9transport10fileWriterD1Ev, __ZN3usb9transport10fileWriterD2Ev, 
-                       __ZN3usb9transport14deviceRecovery10resetErrorEP16dispatch_group_s, 
+                       __ZN3usb9transport10fileWriterD0Ev, __ZN3usb9transport10fileWriterD1Ev, 
+                       __ZN3usb9transport10fileWriterD2Ev, __ZN3usb9transport14deviceRecovery10resetErrorEP16dispatch_group_s, 
                        __ZN3usb9transport14deviceRecovery12addLogWriterERKNSt3__110shared_ptrINS0_9logWriterEEE, 
                        __ZN3usb9transport14deviceRecovery15removeLogWriterERKNSt3__110shared_ptrINS0_9logWriterEEE, 
                        __ZN3usb9transport14deviceRecovery4stopEP16dispatch_group_s, 

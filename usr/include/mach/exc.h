@@ -140,7 +140,7 @@ __END_DECLS
 #define __Request__exc_subsystem__defined
 
 #ifdef  __MigPackStructs
-#pragma pack(4)
+#pragma pack(push, 4)
 #endif
 	typedef struct {
 		mach_msg_header_t Head;
@@ -155,11 +155,11 @@ __END_DECLS
 		integer_t code[2];
 	} __Request__exception_raise_t __attribute__((unused));
 #ifdef  __MigPackStructs
-#pragma pack()
+#pragma pack(pop)
 #endif
 
 #ifdef  __MigPackStructs
-#pragma pack(4)
+#pragma pack(push, 4)
 #endif
 	typedef struct {
 		mach_msg_header_t Head;
@@ -169,14 +169,14 @@ __END_DECLS
 		integer_t code[2];
 		int flavor;
 		mach_msg_type_number_t old_stateCnt;
-		natural_t old_state[144];
+		natural_t old_state[1296];
 	} __Request__exception_raise_state_t __attribute__((unused));
 #ifdef  __MigPackStructs
-#pragma pack()
+#pragma pack(pop)
 #endif
 
 #ifdef  __MigPackStructs
-#pragma pack(4)
+#pragma pack(push, 4)
 #endif
 	typedef struct {
 		mach_msg_header_t Head;
@@ -191,10 +191,10 @@ __END_DECLS
 		integer_t code[2];
 		int flavor;
 		mach_msg_type_number_t old_stateCnt;
-		natural_t old_state[144];
+		natural_t old_state[1296];
 	} __Request__exception_raise_state_identity_t __attribute__((unused));
 #ifdef  __MigPackStructs
-#pragma pack()
+#pragma pack(pop)
 #endif
 #endif /* !__Request__exc_subsystem__defined */
 
@@ -214,7 +214,7 @@ union __RequestUnion__exc_subsystem {
 #define __Reply__exc_subsystem__defined
 
 #ifdef  __MigPackStructs
-#pragma pack(4)
+#pragma pack(push, 4)
 #endif
 	typedef struct {
 		mach_msg_header_t Head;
@@ -222,11 +222,11 @@ union __RequestUnion__exc_subsystem {
 		kern_return_t RetCode;
 	} __Reply__exception_raise_t __attribute__((unused));
 #ifdef  __MigPackStructs
-#pragma pack()
+#pragma pack(pop)
 #endif
 
 #ifdef  __MigPackStructs
-#pragma pack(4)
+#pragma pack(push, 4)
 #endif
 	typedef struct {
 		mach_msg_header_t Head;
@@ -234,14 +234,14 @@ union __RequestUnion__exc_subsystem {
 		kern_return_t RetCode;
 		int flavor;
 		mach_msg_type_number_t new_stateCnt;
-		natural_t new_state[144];
+		natural_t new_state[1296];
 	} __Reply__exception_raise_state_t __attribute__((unused));
 #ifdef  __MigPackStructs
-#pragma pack()
+#pragma pack(pop)
 #endif
 
 #ifdef  __MigPackStructs
-#pragma pack(4)
+#pragma pack(push, 4)
 #endif
 	typedef struct {
 		mach_msg_header_t Head;
@@ -249,10 +249,10 @@ union __RequestUnion__exc_subsystem {
 		kern_return_t RetCode;
 		int flavor;
 		mach_msg_type_number_t new_stateCnt;
-		natural_t new_state[144];
+		natural_t new_state[1296];
 	} __Reply__exception_raise_state_identity_t __attribute__((unused));
 #ifdef  __MigPackStructs
-#pragma pack()
+#pragma pack(pop)
 #endif
 #endif /* !__Reply__exc_subsystem__defined */
 

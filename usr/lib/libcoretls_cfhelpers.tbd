@@ -1,11 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 0501AFBC-C7B8-351D-99F7-81FD28B353F9', 'armv7s: 1DEBB879-2DFB-36D4-9260-C7D7E1E1F4BD', 
-                   'arm64: 59609C55-2031-3C67-94B8-930D3E648ECC', 'arm64e: 662EF556-B2B6-3B0B-9AD6-2A070C97FE46' ]
+                   'arm64: 573C9FD9-8BAC-36E2-B9B1-FA9FE2C7D66E', 'arm64e: 3C476732-D0CD-3C83-8CFE-7350D78B8FFB' ]
 platform:        ios
-install-name:    /usr/lib/libcoretls_cfhelpers.dylib
-current-version: 155.220.1
-objc-constraint: none
+install-name:    '/usr/lib/libcoretls_cfhelpers.dylib'
+current-version: 167
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ _SSLAllocBuffer, _SSLAllocCopyBuffer, _SSLCopyBuffer, _SSLCopyBufferFromData, 

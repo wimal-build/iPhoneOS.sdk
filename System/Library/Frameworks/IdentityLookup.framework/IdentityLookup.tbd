@@ -1,10 +1,9 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 2753B627-6B00-38B4-86CA-B1D7A240A06D', 'arm64e: 72A9F5FF-26EA-3D69-BA0C-85DBF2837539' ]
+                   'arm64: CB22A916-8141-3560-91B3-7E0C3EA4E971', 'arm64e: 503181BE-3992-3A95-A7EB-27741F981286' ]
 platform:        ios
-install-name:    /System/Library/Frameworks/IdentityLookup.framework/IdentityLookup
-objc-constraint: none
+install-name:    '/System/Library/Frameworks/IdentityLookup.framework/IdentityLookup'
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _ILClassificationUIExtensionPointIdentifier, _ILDefaultLog, 

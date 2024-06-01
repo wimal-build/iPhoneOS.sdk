@@ -3,8 +3,7 @@ archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 061B16B7-F954-39BD-8255-4ECC458E50E0', 'armv7s: B81B76C8-EEA9-3F81-920F-596D0CC89EE0', 
                    'arm64: 9AB470C0-E2CE-3E67-A0B9-6CD3107963D0' ]
 platform:        ios
-install-name:    /System/Library/TextInput/libTextInputCore.dylib
-objc-constraint: none
+install-name:    '/System/Library/TextInput/libTextInputCore.dylib'
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN19TICandQualityFilter37set_word_medial_punctuation_predicateEU13block_pointerFbmE, 

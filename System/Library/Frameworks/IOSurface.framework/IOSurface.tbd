@@ -1,10 +1,9 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 672B5D96-E52C-326E-BD15-5171F636BB97', 'arm64e: B6E5148F-C1D5-3F0E-9EE7-3B5FF1FA9564' ]
+                   'arm64: 1D8F244F-267A-3D53-A10C-897830584DE6', 'arm64e: 8E5928DF-AF1F-3C99-9349-B7D86D38CDF9' ]
 platform:        ios
-install-name:    /System/Library/Frameworks/IOSurface.framework/IOSurface
-objc-constraint: none
+install-name:    '/System/Library/Frameworks/IOSurface.framework/IOSurface'
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ '$ld$install_name$os10.0$/System/Library/PrivateFrameworks/IOSurface.framework/IOSurface', 
@@ -96,12 +95,13 @@ exports:
                        _IOSurfacePropertyKeyPlaneHeight, _IOSurfacePropertyKeyPlaneInfo, 
                        _IOSurfacePropertyKeyPlaneOffset, _IOSurfacePropertyKeyPlaneSize, 
                        _IOSurfacePropertyKeyPlaneWidth, _IOSurfacePropertyKeyProtectionOptions, 
-                       _IOSurfacePropertyKeyWidth, _IOSurfaceRemoveAllValues, _IOSurfaceRemoveValue, 
-                       _IOSurfaceSetBulkAttachments, _IOSurfaceSetBulkAttachments2, 
+                       _IOSurfacePropertyKeyWidth, _IOSurfaceRemoteServerOptionDebugLogBlock, 
+                       _IOSurfaceRemoteServerOptionDebugLogQueue, _IOSurfaceRemoveAllValues, 
+                       _IOSurfaceRemoveValue, _IOSurfaceSetBulkAttachments, _IOSurfaceSetBulkAttachments2, 
                        _IOSurfaceSetCompressedTileDataRegionMemoryUsedOfPlane, _IOSurfaceSetDetachModeCode, 
-                       _IOSurfaceSetIndexedTimestamp, _IOSurfaceSetPurgeable, _IOSurfaceSetTiled, 
-                       _IOSurfaceSetTimestamp, _IOSurfaceSetValue, _IOSurfaceSetValues, 
-                       _IOSurfaceSetYCbCrMatrix, _IOSurfaceSharedEventAddEventListener, 
+                       _IOSurfaceSetIndexedTimestamp, _IOSurfaceSetOwnership, _IOSurfaceSetPurgeable, 
+                       _IOSurfaceSetTiled, _IOSurfaceSetTimestamp, _IOSurfaceSetValue, 
+                       _IOSurfaceSetValues, _IOSurfaceSetYCbCrMatrix, _IOSurfaceSharedEventAddEventListener, 
                        _IOSurfaceSharedEventAddListener, _IOSurfaceSharedEventNotifyEventListener, 
                        _IOSurfaceSharedEventNotifyListener, _IOSurfaceSharedEventRemoveEventListener, 
                        _IOSurfaceSharedEventRemoveListener, _IOSurfaceSignalEvent, 
@@ -168,19 +168,19 @@ exports:
                        _kIOSurfacePlaneVerticalPixelOffsetWithinCompressedTileArray, 
                        _kIOSurfacePlaneWidth, _kIOSurfacePlaneWidthInCompressedTiles, 
                        _kIOSurfacePreallocPages, _kIOSurfacePrefetchPages, _kIOSurfaceProtectionOptions, 
-                       _kIOSurfacePurgeWhenNotInUse, _kIOSurfaceScalerTimes, _kIOSurfaceSubsampling, 
-                       _kIOSurfaceSuperbuffer, _kIOSurfaceSysMemOnly, _kIOSurfaceTimingInfo, 
-                       _kIOSurfaceTouchEventTimes, _kIOSurfaceTransferFunction, _kIOSurfaceTransferFunction_ARIB_STD_B67_HLG, 
+                       _kIOSurfacePurgeWhenNotInUse, _kIOSurfaceRemoteServiceName, 
+                       _kIOSurfaceScalerTimes, _kIOSurfaceSubsampling, _kIOSurfaceSuperbuffer, 
+                       _kIOSurfaceSysMemOnly, _kIOSurfaceTimingInfo, _kIOSurfaceTouchEventTimes, 
+                       _kIOSurfaceTransferFunction, _kIOSurfaceTransferFunction_ARIB_STD_B67_HLG, 
                        _kIOSurfaceTransferFunction_ITU_R_2100_HLG, _kIOSurfaceTransferFunction_ITU_R_709_2, 
                        _kIOSurfaceTransferFunction_Linear, _kIOSurfaceTransferFunction_SMPTE_240M_1995, 
                        _kIOSurfaceTransferFunction_SMPTE_ST_2084_PQ, _kIOSurfaceTransferFunction_SMPTE_ST_428_1, 
                        _kIOSurfaceTransferFunction_UseGamma, _kIOSurfaceTransferFunction_aYCC, 
                        _kIOSurfaceTransferFunction_sRGB, _kIOSurfaceType, _kIOSurfaceUseReserve, 
-                       _kIOSurfaceWidth, _kIOSurfaceYCbCrMatrix, _kIOSurfaceYCbCrMatrix_DCI_P3_String, 
-                       _kIOSurfaceYCbCrMatrix_ITU_R_601_4_String, _kIOSurfaceYCbCrMatrix_ITU_R_709_2_String, 
-                       _kIOSurfaceYCbCrMatrix_P3_D65_String, _kIOSurfaceYCbCrMatrix_SMPTE_240M_1995_String ]
-    objc-classes:    [ IOSurface, IOSurfaceDebugDescription, IOSurfaceSharedEvent, 
-                       IOSurfaceSharedEventListener ]
+                       _kIOSurfaceWidth, _kIOSurfaceYCbCrMatrix, _kIOSurfaceYCbCrMatrix_ITU_R_601_4_String, 
+                       _kIOSurfaceYCbCrMatrix_ITU_R_709_2_String, _kIOSurfaceYCbCrMatrix_SMPTE_240M_1995_String ]
+    objc-classes:    [ IOSurface, IOSurfaceDebugDescription, IOSurfaceRemoteServer, 
+                       IOSurfaceSharedEvent, IOSurfaceSharedEventListener ]
     objc-ivars:      [ IOSurfaceSharedEvent._eventPort, IOSurfaceSharedEvent._globalTraceObjectID, 
                        IOSurfaceSharedEventListener._dispatchQueue, IOSurfaceSharedEventListener._notificationPort ]
 ...

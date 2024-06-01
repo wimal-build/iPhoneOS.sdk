@@ -1,10 +1,9 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 84A43E70-CAF0-3A95-B288-CA15C6E9720D', 'armv7s: A1196871-29C0-30C5-A645-FC75FB74AB2F', 
-                   'arm64: 6B3D7481-0CC8-3522-8D2E-C1704A2C5888', 'arm64e: F058D91E-CB60-377A-AC05-15B8DAC766D0' ]
+                   'arm64: EB3D5AD8-BC99-32E1-A67C-F1CC7A0D38A0', 'arm64e: 3B7C9EFA-3D57-3C16-87AD-FC68AA9B8A57' ]
 platform:        ios
-install-name:    /usr/lib/libTelephonyIOKitDynamic.dylib
-objc-constraint: none
+install-name:    '/usr/lib/libTelephonyIOKitDynamic.dylib'
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ __ZN3ctu5iokit10controller12release_syncEv, __ZN3ctu5iokit10controller14setMesaQualityENS0_31TelephonyIOKitMesaSignalQualityE, 
@@ -58,10 +57,11 @@ exports:
                        __ZN3ctu5iokit10ControllerD2Ev, __ZN3ctu5iokit15IOHIDController13isProxCoveredEj, 
                        __ZN3ctu5iokit15IOHIDController15isProxSupportedEv, __ZN3ctu5iokit15IOHIDController20registerProxCallbackEN8dispatch5blockIU13block_pointerFvjEEE, 
                        __ZN3ctu5iokit15IOHIDController4initEv, __ZN3ctu5iokit15IOHIDController4stopEv, 
-                       __ZN3ctu5iokit15IOHIDController5startEv, __ZN3ctu5iokit15IOHIDController6createEN8dispatch5queueE, 
-                       __ZN3ctu5iokit15IOHIDController9stop_syncEv, __ZN3ctu5iokit15IOHIDControllerC1EN8dispatch5queueE, 
-                       __ZN3ctu5iokit15IOHIDControllerC2EN8dispatch5queueE, __ZN3ctu5iokit15IOHIDControllerD1Ev, 
-                       __ZN3ctu5iokit15IOHIDControllerD2Ev, __ZN3ctu5iokit8asStringENS0_25TelephonyIOKitPowerSourceE, 
+                       __ZN3ctu5iokit15IOHIDController5startEv, __ZN3ctu5iokit15IOHIDController6createEN8dispatch5queueENS2_8workloopE, 
+                       __ZN3ctu5iokit15IOHIDController9stop_syncEv, __ZN3ctu5iokit15IOHIDControllerC1EN8dispatch5queueENS2_8workloopE, 
+                       __ZN3ctu5iokit15IOHIDControllerC2EN8dispatch5queueENS2_8workloopE, 
+                       __ZN3ctu5iokit15IOHIDControllerD1Ev, __ZN3ctu5iokit15IOHIDControllerD2Ev, 
+                       __ZN3ctu5iokit8asStringENS0_25TelephonyIOKitPowerSourceE, 
                        __ZN3ctu5iokit8asStringENS0_27TelephonyIOKitAccessoryTypeE, 
                        __ZN3ctu5iokit8asStringENS0_29TelephonyIOKitAccessoryStatusE, 
                        __ZN3ctu5iokit8asStringEj, __ZN3ctu5power7manager14listenerHandleclERKjRKbRKN8dispatch5groupENSt3__110shared_ptrINSB_6atomicIbEEEE, 

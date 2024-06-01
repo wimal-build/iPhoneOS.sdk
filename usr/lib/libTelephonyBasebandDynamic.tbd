@@ -1,10 +1,9 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 2AF0538E-8C2A-30EB-B07E-3A4AFAA58A4E', 'armv7s: 490421EA-3A5A-353E-A2FA-27EDDCA655AE', 
-                   'arm64: F252F7FD-4CD0-3BDB-AED2-F8A69A835FAD', 'arm64e: B6CC4B92-F113-33EA-B00E-D5EBCE7EC840' ]
+                   'arm64: 52DCEE47-1774-3795-B80B-DC4BF342333B', 'arm64e: 80D773FE-D1D1-3406-AFF2-AF432185221A' ]
 platform:        ios
-install-name:    /usr/lib/libTelephonyBasebandDynamic.dylib
-objc-constraint: none
+install-name:    '/usr/lib/libTelephonyBasebandDynamic.dylib'
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ _TelephonyBasebandCreateControllerWithParams, _TelephonyBasebandEnableModemSleepWithVoter, 

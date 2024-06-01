@@ -1,10 +1,9 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 3DC31F48-413E-34B1-A12F-D0EB1BCEB4C9', 'armv7s: 8DB7A18D-7D7E-341D-8A41-C3D7532BE433', 
-                   'arm64: 964551F2-7EA8-35F3-B8EC-72D97C709073', 'arm64e: C760B9F2-D406-3275-AD62-B95092B659E8' ]
+                   'arm64: AEF1A849-BA73-3837-A258-B65F928EDC92', 'arm64e: 8546DC4D-14EC-367D-954F-FC24A524D795' ]
 platform:        ios
-install-name:    /System/Library/Frameworks/iAd.framework/iAd
-objc-constraint: none
+install-name:    '/System/Library/Frameworks/iAd.framework/iAd'
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ _ADClassicMode, _ADClientSegmentDataErrorDomain, _ADCreateCGImageRefFromSurface, 
@@ -17,7 +16,7 @@ exports:
                        _kADViewDefaultHeight ]
     objc-classes:    [ ADAdActionPublicAttributes, ADAdImpressionPublicAttributes, 
                        ADAdSpaceConfiguration, ADAdSpaceEventInfo, ADCircularCountdownView, 
-                       ADMRAIDAction, ADPrivacyButton, ADPrivacyRemoteViewController, 
+                       ADMRAIDAction, ADOptInManager, ADPrivacyButton, ADPrivacyRemoteViewController, 
                        ADPrivacyViewController, ADRemoteActionViewController, ADTVInterstitialMediaViewController, 
                        ADTVMediaButton, ADTVMediaControlsView, ADTVMediaControlsViewController, 
                        ADTVMediaCountdownView, ADTVMediaSkipView, ADTVPrerollController, 
@@ -39,18 +38,16 @@ exports:
                        ADCountdownButton, ADCreativeController, ADDateStringNormalizer, 
                        ADDimmerView, ADEventEditViewController, ADExpandActionViewController, 
                        ADHomeButtonHandler, ADInterstitialAd, ADInterstitialAdPresentationViewController, 
-                       ADInterstitialView, ADJSDateParser, ADLayoutOptions, ADLockScreenManager, 
-                       ADMediaAnalyticsEventInfo, ADMediaAnalyticsProgressEventInfo, 
+                       ADInterstitialView, ADJSDateParser, ADLayoutOptions, ADLocationManager, 
+                       ADLockScreenManager, ADMediaAnalyticsEventInfo, ADMediaAnalyticsProgressEventInfo, 
                        ADNSURLSessionDemultiplexer, ADNSURLSessionDemultiplexerManager, 
-                       ADNSURLSessionTaskInfo, ADOptInManager, ADPlayer, ADPolicyEngine, 
-                       ADPrerollBottomBar, ADPrerollButton, ADPrerollController, 
-                       ADPrerollSlider, ADPrerollTopBar, ADPrerollView, ADPrivacyDetailsAttributes, 
-                       ADPrivacyMarker, ADProgressView, ADRemoteSigningService, ADSession, 
-                       ADSoftLinking, ADSubscriptionEvent, ADTapGestureRecognizer, 
+                       ADNSURLSessionTaskInfo, ADPlayer, ADPolicyEngine, ADPrerollBottomBar, 
+                       ADPrerollButton, ADPrerollController, ADPrerollSlider, ADPrerollTopBar, 
+                       ADPrerollView, ADPrivacyMarker, ADProgressView, ADRemoteSigningService, 
+                       ADSession, ADSoftLinking, ADSubscriptionEvent, ADTapGestureRecognizer, 
                        ADUserDeviceUtilities, ADVideoAssetURLProtocol, ADVolumeSlider, 
                        ADW3CDateParser, ADWebView, ADWebViewActionViewController, 
                        ADWebViewGestureRecognizer, ADWebViewManager, ADWebViewURLProxyProtocol, 
                        ADiTunesActionViewController, AdQueue, _ADPolicyEngineEvent, 
                        _ADUIViewControllerAdController ]
-    objc-ivars:      [ ADAdSpace._recipient ]
 ...

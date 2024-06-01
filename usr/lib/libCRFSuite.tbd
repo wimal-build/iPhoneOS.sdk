@@ -1,10 +1,9 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 93A7E7AA-BADF-31AE-9A2C-09BCC1091ADE', 'armv7s: CEC06EE0-0EE1-3999-844E-3C9416A66404', 
-                   'arm64: E0B9971A-4A58-372C-917E-172262A230DA', 'arm64e: 3722583E-A271-37F7-BB2C-8921DB2F1BD3' ]
+                   'arm64: 307B50BC-7FF9-32DD-B262-F6F7C7DCC44F', 'arm64e: 0D0DF988-1670-3624-BFC1-7B570DCAA44C' ]
 platform:        ios
-install-name:    /usr/lib/libCRFSuite.dylib
-objc-constraint: none
+install-name:    '/usr/lib/libCRFSuite.dylib'
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ _crfsuite_dictionary_create_instance ]

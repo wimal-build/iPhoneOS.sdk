@@ -1,10 +1,9 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: DE01EFC5-D3D4-3414-8604-414028AFF3E1', 'armv7s: F6E41AE2-4DCE-331B-93B0-12CD4BA27F20', 
-                   'arm64: A001FF65-9687-3832-A6E8-DBD55CBD855A', 'arm64e: D53F7BA3-D9AE-3AD9-B8D7-FFA550886BA3' ]
+                   'arm64: 423FCDDC-65D9-3F28-96FE-401DB4F58A1B', 'arm64e: F42F3C78-805D-3A49-A422-7546ED593E07' ]
 platform:        ios
-install-name:    /usr/lib/libheimdal-asn1.dylib
-objc-constraint: none
+install-name:    '/usr/lib/libheimdal-asn1.dylib'
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ ___crashreporter_info__, __asn1_bmember_isset_bit, __asn1_bmember_put_bit, 

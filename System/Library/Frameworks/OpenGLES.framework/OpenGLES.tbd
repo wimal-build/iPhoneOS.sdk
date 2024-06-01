@@ -1,10 +1,9 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 85E826D0-82D1-33AD-B0A8-2F0EC9752F7D', 'armv7s: 8D4F85EC-84B9-3A14-9071-37E5BC3D2614', 
-                   'arm64: 9F8ABEF1-A049-321F-9D57-CA5CDA4A2F00', 'arm64e: 258FBE63-EB6C-34DD-8A38-B4F4E8DE0F76' ]
+                   'arm64: 6ACDBED9-E333-3071-8B38-BF141B50A5B8', 'arm64e: 7AFDCE53-12E6-3291-8902-CC29CFDE8E51' ]
 platform:        ios
-install-name:    /System/Library/Frameworks/OpenGLES.framework/OpenGLES
-objc-constraint: none
+install-name:    '/System/Library/Frameworks/OpenGLES.framework/OpenGLES'
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _EAGLGetCurrentMacroContextPrivate, _EAGLGetVersion, _EAGLMemoryNotificationRecycling, 

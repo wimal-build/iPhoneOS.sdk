@@ -1,29 +1,28 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 4F4DD213-D764-3608-B154-30AB4D097883', 'armv7s: 132F1194-C3C8-3150-826A-0680C574FC35', 
-                   'arm64: 4F0FE9BA-7CA2-3150-8BB3-3887E9FE4DE0', 'arm64e: C2AF8CAE-AE86-313A-8B21-63E78342FC70' ]
+                   'arm64: 1ED3E658-F109-38AD-9C53-F897A754954F', 'arm64e: C8736FE0-81E0-3632-902A-59E10922C61C' ]
 platform:        ios
-install-name:    /usr/lib/libamsupport.dylib
-objc-constraint: none
+install-name:    '/usr/lib/libamsupport.dylib'
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ ___gesf2, ___lesf2, ___ltsf2, ___nesf2 ]
   - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _AMSupportApplyBlockToDictionary, _AMSupportApplyDictionaryOverrides, 
                        _AMSupportBase64Decode, _AMSupportBase64Encode, _AMSupportCFArrayCreateWithObjects, 
-                       _AMSupportCFDictionarySetBoolean, _AMSupportCFDictionarySetInteger32, 
-                       _AMSupportCFDictionarySetInteger64, _AMSupportCFStringToUInt32, 
-                       _AMSupportCommonCopyHexStringFromData, _AMSupportCommonCopyHexStringFromUInt32, 
-                       _AMSupportCommonCopyHexStringFromUInt64, _AMSupportCopyBytesFromAsciiEncodedHex, 
-                       _AMSupportCopyDataFromAsciiEncodedHex, _AMSupportCopyDataFromHexString, 
-                       _AMSupportCopyFile, _AMSupportCopyHexStringFromData, _AMSupportCopyHexStringFromUInt32, 
-                       _AMSupportCopyHexStringFromUInt64, _AMSupportCopyPreserveFileURL, 
-                       _AMSupportCopySetValueForKeyPathInDict, _AMSupportCopyStringReplacingLastComponent, 
-                       _AMSupportCopyURLToNewTempDirectory, _AMSupportCopyURLWithAppendedComponent, 
-                       _AMSupportCopyURLWithAppendedExtension, _AMSupportCreateArrayFromFileURL, 
-                       _AMSupportCreateCStringFromCFString, _AMSupportCreateDataFromFileURL, 
-                       _AMSupportCreateDictionaryFromFileURL, _AMSupportCreateDigest, 
-                       _AMSupportCreateErrorInternal, _AMSupportCreateMergedDictionary, 
+                       _AMSupportCFDictionaryGetBoolean, _AMSupportCFDictionarySetBoolean, 
+                       _AMSupportCFDictionarySetInteger32, _AMSupportCFDictionarySetInteger64, 
+                       _AMSupportCFStringToUInt32, _AMSupportCommonCopyHexStringFromData, 
+                       _AMSupportCommonCopyHexStringFromUInt32, _AMSupportCommonCopyHexStringFromUInt64, 
+                       _AMSupportCopyBytesFromAsciiEncodedHex, _AMSupportCopyDataFromAsciiEncodedHex, 
+                       _AMSupportCopyDataFromHexString, _AMSupportCopyFile, _AMSupportCopyHexStringFromData, 
+                       _AMSupportCopyHexStringFromUInt32, _AMSupportCopyHexStringFromUInt64, 
+                       _AMSupportCopyPreserveFileURL, _AMSupportCopySetValueForKeyPathInDict, 
+                       _AMSupportCopyStringReplacingLastComponent, _AMSupportCopyURLToNewTempDirectory, 
+                       _AMSupportCopyURLWithAppendedComponent, _AMSupportCopyURLWithAppendedExtension, 
+                       _AMSupportCreateArrayFromFileURL, _AMSupportCreateCStringFromCFString, 
+                       _AMSupportCreateDataFromFileURL, _AMSupportCreateDictionaryFromFileURL, 
+                       _AMSupportCreateDigest, _AMSupportCreateErrorInternal, _AMSupportCreateMergedDictionary, 
                        _AMSupportCreateRandomNumber, _AMSupportCreateSetFromCFIndexArray, 
                        _AMSupportCreateURLFromString, _AMSupportDebugWriteObject, 
                        _AMSupportDigestCompute, _AMSupportDigestFinal, _AMSupportDigestInitContext, 

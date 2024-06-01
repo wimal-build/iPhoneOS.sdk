@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: B49FA0E3-5125-3711-AC3E-D56C22B54098', 'armv7s: 29DDE5A3-A169-312B-A7EE-D37476E85418', 
-                   'arm64: 3FEDA261-30AD-38ED-B1DE-A95B885A6D9B' ]
+                   'arm64: C86E57D9-91C7-3B33-9359-62999365A8AC' ]
 platform:        ios
 install-name:    /usr/lib/libktrace.dylib
 objc-constraint: none
@@ -96,7 +96,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: CB5AAF64-C90B-3E95-9695-259E65BB2183' ]
+                   'arm64: 3BE04369-57C3-38D4-B34B-783458A08C02' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/ktrace.framework/ktrace
 current-version: 218.50.34

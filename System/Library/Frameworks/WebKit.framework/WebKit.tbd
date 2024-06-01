@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 810BDE41-A7AC-341F-B833-AD162BD6F54A', 'armv7s: 3D3DF682-A8AC-302E-B28C-A65D4A17F575', 
-                   'arm64: 2D2DB729-6DAF-3CDE-8517-38572903EB19' ]
+                   'arm64: BFD8F7E4-B5FE-380D-A7F9-21983777305D' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/WebKit.framework/WebKit
-current-version: 605.1.33
+current-version: 605.2.8
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -270,18 +270,18 @@ exports:
                        _WKDictionarySetItem, _WKDoubleCreate, _WKDoubleGetTypeID, 
                        _WKDoubleGetValue, _WKDownloadCancel, _WKDownloadCopyRedirectChain, 
                        _WKDownloadCopyRequest, _WKDownloadGetID, _WKDownloadGetOriginatingPage, 
-                       _WKDownloadGetResumeData, _WKDownloadGetTypeID, _WKDownloadGetWasUserInitiated, 
-                       _WKErrorCopyCFError, _WKErrorCopyDomain, _WKErrorCopyFailingURL, 
-                       _WKErrorCopyLocalizedDescription, _WKErrorCopyWKErrorDomain, 
-                       _WKErrorCreateWithCFError, _WKErrorDomain, _WKErrorGetErrorCode, 
-                       _WKErrorGetTypeID, _WKFormSubmissionListenerContinue, _WKFormSubmissionListenerGetTypeID, 
-                       _WKFrameCanProvideSource, _WKFrameCanShowMIMEType, _WKFrameCopyMIMEType, 
-                       _WKFrameCopyProvisionalURL, _WKFrameCopyTitle, _WKFrameCopyURL, 
-                       _WKFrameCopyUnreachableURL, _WKFrameCreateFrameHandle, _WKFrameCreateFrameInfo, 
-                       _WKFrameGetCertificateInfo, _WKFrameGetFrameLoadState, _WKFrameGetMainResourceData, 
-                       _WKFrameGetPage, _WKFrameGetResourceData, _WKFrameGetTypeID, 
-                       _WKFrameGetWebArchive, _WKFrameHandleGetFrameID, _WKFrameHandleGetTypeID, 
-                       _WKFrameInfoGetFrameHandleRef, _WKFrameInfoGetTypeID, _WKFrameIsDisplayingMarkupDocument, 
+                       _WKDownloadGetResumeData, _WKDownloadGetTypeID, _WKErrorCopyCFError, 
+                       _WKErrorCopyDomain, _WKErrorCopyFailingURL, _WKErrorCopyLocalizedDescription, 
+                       _WKErrorCopyWKErrorDomain, _WKErrorCreateWithCFError, _WKErrorDomain, 
+                       _WKErrorGetErrorCode, _WKErrorGetTypeID, _WKFormSubmissionListenerContinue, 
+                       _WKFormSubmissionListenerGetTypeID, _WKFrameCanProvideSource, 
+                       _WKFrameCanShowMIMEType, _WKFrameCopyMIMEType, _WKFrameCopyProvisionalURL, 
+                       _WKFrameCopyTitle, _WKFrameCopyURL, _WKFrameCopyUnreachableURL, 
+                       _WKFrameCreateFrameHandle, _WKFrameCreateFrameInfo, _WKFrameGetCertificateInfo, 
+                       _WKFrameGetFrameLoadState, _WKFrameGetMainResourceData, _WKFrameGetPage, 
+                       _WKFrameGetResourceData, _WKFrameGetTypeID, _WKFrameGetWebArchive, 
+                       _WKFrameHandleGetFrameID, _WKFrameHandleGetTypeID, _WKFrameInfoGetFrameHandleRef, 
+                       _WKFrameInfoGetTypeID, _WKFrameIsDisplayingMarkupDocument, 
                        _WKFrameIsDisplayingStandaloneImageDocument, _WKFrameIsFrameSet, 
                        _WKFrameIsMainFrame, _WKFramePolicyListenerDownload, _WKFramePolicyListenerGetTypeID, 
                        _WKFramePolicyListenerIgnore, _WKFramePolicyListenerUse, _WKFramePolicyListenerUseWithPolicies, 
@@ -782,10 +782,10 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 9583CA71-D7D0-3BF5-A5E8-E548433F329C', 'armv7s: 2FB9C45C-1669-357A-994C-3D75607E49EF', 
-                   'arm64: DBF85CCF-5434-35C9-BA82-2B08EE7CB314' ]
+                   'arm64: E8EB9D28-E997-3B13-AA15-798FD4EC9C13' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/WebKitLegacy.framework/WebKitLegacy
-current-version: 605.1.33
+current-version: 605.2.8
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

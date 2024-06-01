@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 307697F0-EB61-3D84-A53E-9FD79725C054', 'armv7s: 81D87FF2-B0C5-34CF-B61E-441C5417391A', 
-                   'arm64: 6EA4D3E7-617B-392F-BF16-B4A4BA99AC72' ]
+                   'arm64: 3BBEF1C4-7FCC-39B7-A134-A1789ADE250E' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/EventKit.framework/EventKit
 current-version: 100

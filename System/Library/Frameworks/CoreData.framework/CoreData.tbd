@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 79D08EA5-1764-3842-97CD-A04CF39A040D', 'armv7s: 3EA7684B-9CE1-3F42-9D60-3DF6BC7EC9CB', 
-                   'arm64: C76C9FAA-57D0-32DC-A0AD-C9C7B82D2791' ]
+                   'arm64: 30F1740D-9C5B-3CEB-BF4B-45A483BD7F49' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreData.framework/CoreData
 current-version: 851

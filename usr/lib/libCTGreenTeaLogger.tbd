@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 63DE7396-E573-3EF8-A070-7E336EA72FD7' ]
+                   'arm64: DBE8881C-668B-34DB-9789-B5F4E926114A' ]
 platform:        ios
 install-name:    /usr/lib/libCTGreenTeaLogger.dylib
 current-version: 0

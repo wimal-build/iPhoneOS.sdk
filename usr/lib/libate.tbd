@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 51273DDB-012A-3566-9D5C-A967C8A09E2E', 'armv7s: AFBC60D2-E181-31BE-BEC9-B066286698EC', 
-                   'arm64: 9B79BE10-C087-36B3-97EF-06920B5D9A22' ]
+                   'arm64: 1D30C1D3-CA91-3F2D-A380-D67C5CACD696' ]
 platform:        ios
 install-name:    /usr/lib/libate.dylib
 current-version: 1.13.1

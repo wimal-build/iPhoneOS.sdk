@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 9B9A2306-9EF9-3F2C-9CDF-EA07DDE69FEC', 'armv7s: EF8BC870-AC61-3CB7-99DF-62524ACE99F2', 
-                   'arm64: E84F0392-00DF-36DE-BB7C-B251F82A69B9' ]
+                   'arm64: 18A11163-9FA3-3B23-A49C-80DC44DC02B9' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/NetworkExtension.framework/NetworkExtension
 objc-constraint: none
@@ -614,7 +614,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 34EA5360-AD9A-3FC1-ACE8-2086D7A0538A', 'armv7s: 7727B187-B2B6-37E9-B0B4-F7EFB1573F66', 
-                   'arm64: AD0700A8-317D-378C-92C0-B3D6B8BD3BD4' ]
+                   'arm64: 2796E57A-19D6-3343-84A7-32BEFCBF223D' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/Network.framework/Network
 objc-constraint: none

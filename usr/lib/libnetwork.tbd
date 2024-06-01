@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: D45EB43B-09F4-3047-8468-9468893F113C', 'armv7s: E6832CC4-72B0-3820-82BC-4124496389E5', 
-                   'arm64: F087D7EE-39B5-3E7C-83A4-C1ECB36A3477' ]
+                   'arm64: F569233E-2F22-34F5-8ECB-96B0E73BE240' ]
 platform:        ios
 install-name:    /usr/lib/libnetwork.dylib
 objc-constraint: none
@@ -164,6 +164,7 @@ exports:
                        _nw_pac_resolver_start, _nw_protocol_coretls_dispose, _nw_protocol_coretls_identifier, 
                        _nw_protocol_http2_transport_identifier, _nw_protocol_http2_transport_parameters_set_connection_receive_window_size, 
                        _nw_protocol_http2_transport_parameters_set_stream_receive_window_size, 
+                       _nw_protocol_http2_transport_parameters_set_tunnel_teardown_delay, 
                        _nw_protocol_ipv4_identifier, _nw_protocol_ipv6_identifier, 
                        _nw_protocol_rawip_dispose, _nw_protocol_rawip_identifier, 
                        _nw_protocol_recorder_identifier, _nw_protocol_shoes_identifier, 

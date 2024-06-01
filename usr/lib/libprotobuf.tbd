@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: A47F1F84-FCB2-3C65-AF59-E46C10E58783', 'armv7s: FAAB38A9-55E5-3BC7-BDC6-24134B61AD77', 
-                   'arm64: 0F2B421F-EC77-3E7A-8C4D-C240454FD2BD' ]
+                   'arm64: 962E40DA-3934-3110-8723-FDD15CF6274E' ]
 platform:        ios
 install-name:    /usr/lib/libprotobuf.dylib
 objc-constraint: none

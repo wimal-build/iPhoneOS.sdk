@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 26593C2C-7727-34BF-A43C-EDBBD4E96943', 'armv7s: 56A075C8-96E2-3F05-B9F1-209DCED21C6A', 
-                   'arm64: 750810CF-779D-3946-964A-A5EE4A44F063' ]
+                   'arm64: 96BAB7B4-C090-392A-B59B-B2C97749C4C5' ]
 platform:        ios
 install-name:    /usr/lib/libmis.dylib
 objc-constraint: none

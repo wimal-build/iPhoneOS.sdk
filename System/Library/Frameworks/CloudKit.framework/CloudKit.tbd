@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: FFF97FBD-E0F9-33FF-BCD6-D893A968F77F', 'armv7s: 2BDDF427-B957-31D0-A2D5-5AC238068657', 
-                   'arm64: E857B65D-67D3-3F92-A409-BA1F743A399E' ]
+                   'arm64: 55336B14-82BA-3E86-A94D-608DDF070EA4' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CloudKit.framework/CloudKit
 current-version: 736.16

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: A3ED655B-727E-391A-A741-7B73B4939695', 'armv7s: E3657660-EFCF-3278-A7EF-6C52F5DF55C8', 
-                   'arm64: 19616D78-64ED-39BD-92FA-2F834BEA5E92' ]
+                   'arm64: F100D433-4516-35F4-8E74-32AB523ABE31' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/MetalPerformanceShaders
 current-version: 100.6
@@ -37,7 +37,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: FDF474D3-25FB-35DB-B581-C292A55C2A69' ]
+                   'arm64: 2D9261AA-A965-3984-B3AF-E2E2EB5E21A7' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSCore.framework/MPSCore
 current-version: 100.6
@@ -109,7 +109,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: BB4EEAE3-C182-348E-AC0C-7AFC6CB28EBF' ]
+                   'arm64: 5753222B-2A7C-33B9-9E18-5C0946D866D6' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSImage.framework/MPSImage
 current-version: 100.6
@@ -141,7 +141,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 51EED27D-C958-3311-8549-8C57D285488C' ]
+                   'arm64: C8B4E738-801E-3F2B-BF22-F7A3D785182A' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSMatrix.framework/MPSMatrix
 current-version: 100.6
@@ -163,7 +163,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 88BCEA2C-366B-31A6-8C58-DF71A7F334EF' ]
+                   'arm64: 37158311-C1D6-3FCF-BDA0-05A3E98E3BEE' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSNeuralNetwork.framework/MPSNeuralNetwork
 current-version: 100.6

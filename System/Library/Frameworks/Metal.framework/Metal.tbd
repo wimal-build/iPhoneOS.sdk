@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 4605D843-6010-3F9D-A4AE-45C4DCBBB05E', 'armv7s: 20051C55-19EE-3ACE-A75F-4CA7F07F4D7B', 
-                   'arm64: 46FC1E5F-11C5-3169-91CB-5D7A0AA46523' ]
+                   'arm64: 75AC7E6C-CF3F-3D34-8083-4BB05D135AE3' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Metal.framework/Metal
 objc-constraint: none

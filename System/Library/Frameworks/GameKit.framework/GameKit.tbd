@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 3817F758-B554-346F-A951-1D020678C69F', 'armv7s: 2288339A-48B6-30FC-B586-BB87F12460EC', 
-                   'arm64: DEB888DB-3DBF-3945-B17E-93DD7E24C09F' ]
+                   'arm64: C4048FCC-F0C8-344E-9C17-FC25589A946C' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GameKit.framework/GameKit
 current-version: 563.15
@@ -19,7 +19,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 13B46BF3-BBCA-3074-9CB3-1A1DC4D72EDA', 'armv7s: B2BD1C74-5CF1-3DE5-A6E7-0CC4028E12CA', 
-                   'arm64: F7D158A4-596A-3653-83A9-D32BE294D8BB' ]
+                   'arm64: F59DFFB8-1C82-3062-B298-B145145AAC5F' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenter.framework/GameCenter
 current-version: 563.15
@@ -34,7 +34,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 736319F2-63D9-309B-BB1F-BFBCA1C0EC4F', 'armv7s: 1C63987E-AE2A-3926-8E64-109F7D87D19C', 
-                   'arm64: 46FB95BD-164A-39FD-AD1B-4D13BE6D04DB' ]
+                   'arm64: C94A9F58-4930-3B51-A410-2A8397EA2545' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenterFoundation.framework/GameCenterFoundation
 objc-constraint: none
@@ -336,7 +336,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 0214FDB6-40C9-3072-B1E2-5F27BC4EB96C', 'armv7s: 1A8453C0-6089-3257-AC4A-5C55CF26C652', 
-                   'arm64: 26A2E8D2-2D09-308B-9E6C-8FC401C1B62A' ]
+                   'arm64: 4D4B66D4-C42D-37E6-9132-E0FA65E7233B' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenterUI.framework/GameCenterUI
 objc-constraint: none
@@ -412,7 +412,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 07C3539C-2DA0-3A73-8198-9AFC20E91843', 'armv7s: 335E90EB-3E4F-3CBF-8DA7-FB11612B55F4', 
-                   'arm64: 5D62A1DA-135A-31D0-8DA7-8DF9BD0BE6BD' ]
+                   'arm64: 35D7FDA8-CBF8-3D2F-9560-163493A076C8' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/LegacyGameKit.framework/LegacyGameKit
 objc-constraint: none

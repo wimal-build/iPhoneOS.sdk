@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: A4258C2D-78C3-30C4-825E-A7152E3402F0', 'armv7s: 9F6656E9-E258-3D5A-8884-80B53780B79C', 
-                   'arm64: 4F38683F-5045-3EAA-9A09-EB6222EAE139' ]
+                   'arm64: 5DD14D4B-D267-3FAF-9677-1B930286EF44' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CFNetwork.framework/CFNetwork
-current-version: 897.15
+current-version: 901.1
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

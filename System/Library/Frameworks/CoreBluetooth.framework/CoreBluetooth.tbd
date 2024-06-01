@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: C37DD09C-2E1A-3314-ACCC-42B23F221718', 'armv7s: 6C74925D-2B4F-3045-8482-C9283BABAEF6', 
-                   'arm64: C1761F13-E5ED-392F-96F6-49C2FA103C36' ]
+                   'arm64: EB6A66C1-7D3E-333B-9494-A437CC274207' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreBluetooth.framework/CoreBluetooth
 objc-constraint: none

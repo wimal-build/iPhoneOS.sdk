@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: EC69459D-6717-38E7-B787-0DBFEAC922AB' ]
+                   'arm64: 6A57AD29-0DEF-3783-80F2-5E59006F6786' ]
 platform:        ios
 install-name:    /usr/lib/libcups.dylib
 current-version: 0

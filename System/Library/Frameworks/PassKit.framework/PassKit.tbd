@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 8C17EC58-2BD7-38F0-9D8C-4168F09E021D', 'armv7s: BB12F56E-B9B6-3F46-95F0-2EAC0D5A89BA', 
-                   'arm64: 7489560E-25AB-377B-9EFE-551D71DD041F' ]
+                   'arm64: F52C15C3-26C1-3EA2-BA78-ADDD5A6AB7FD' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PassKit.framework/PassKit
 objc-constraint: none
@@ -22,7 +22,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 51A0748F-EF70-30DC-B682-D0F3109DDDC3', 'armv7s: DD24AA78-0130-3A05-B0D7-E5FCC44E721F', 
-                   'arm64: F3FE4ABF-1C1E-3FC3-8D47-34C49E754CDF' ]
+                   'arm64: 734BFCDB-4CAD-343F-BDE6-5661EF65222E' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/PassKitCore.framework/PassKitCore
 objc-constraint: none
@@ -189,9 +189,12 @@ exports:
                        _PKAggDKeyPaymentProvisioningWebServicesErrorExpiredVerificationCode, 
                        _PKAggDKeyPaymentProvisioningWebServicesErrorHsa2Required, 
                        _PKAggDKeyPaymentProvisioningWebServicesErrorIneligibleAccount, 
+                       _PKAggDKeyPaymentProvisioningWebServicesErrorInsufficientBalance, 
                        _PKAggDKeyPaymentProvisioningWebServicesErrorInvalidCSC, _PKAggDKeyPaymentProvisioningWebServicesErrorInvalidExpiration, 
                        _PKAggDKeyPaymentProvisioningWebServicesErrorInvalidName, 
                        _PKAggDKeyPaymentProvisioningWebServicesErrorInvalidPAN, _PKAggDKeyPaymentProvisioningWebServicesErrorInvalidVerificationCode, 
+                       _PKAggDKeyPaymentProvisioningWebServicesErrorPINIncorrect, 
+                       _PKAggDKeyPaymentProvisioningWebServicesErrorPINLockout, _PKAggDKeyPaymentProvisioningWebServicesErrorPINRequired, 
                        _PKAggDKeyPaymentProvisioningWebServicesErrorProvisioningCountExceeded, 
                        _PKAggDKeyPaymentProvisioningWebServicesErrorRedFlow, _PKAggDKeyPaymentProvisioningWebServicesErrorVerificationAttemptLimitReached, 
                        _PKAggDKeyPaymentProvisioningWebServicesErrorVerificationPeriodEnded, 
@@ -283,8 +286,8 @@ exports:
                        _PKAggDKeyWebServicesErrorUnnecessaryPush, _PKAggDKeyWebServicesErrorUnregisteredPass, 
                        _PKAggDKeyWebServicesErrorUpdateDespiteMisuse, _PKAggDKeyWebServicesErrorWarningInvalidPass, 
                        _PKAllowHTTP, _PKAllowHTTPKey, _PKAppIconVisibilityPreference, 
-                       _PKApplyFormatToString, _PKAssertionErrorDomain, _PKAssertionMachServiceName, 
-                       _PKAssignedDeviceName, _PKAttributedStringByParsingLinksInString, 
+                       _PKApplicationIsInBackground, _PKApplyFormatToString, _PKAssertionErrorDomain, 
+                       _PKAssertionMachServiceName, _PKAssignedDeviceName, _PKAttributedStringByParsingLinksInString, 
                        _PKAutomaticLoggingEnabledKey, _PKAutomaticLoginEnabled, _PKAutomaticPeerPaymentRegistrationDisabled, 
                        _PKAutomaticPeerPaymentRegistrationDisabledKey, _PKBackgroundTaskInvalid, 
                        _PKBackgroundWebServiceContextPath, _PKBarcodeFilterNameForFormat, 
@@ -1176,7 +1179,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 23CE55ED-10F3-3212-A524-CE4D991B9531', 'armv7s: A51D32A5-7ACB-3592-B9DC-F40AAD4D0B82', 
-                   'arm64: 7FFCA4D3-A2A7-3BE5-8916-7F1F471B902B' ]
+                   'arm64: 5B8BF4B1-AC38-3017-A789-27EE04909ADF' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/PassKitUI.framework/PassKitUI
 objc-constraint: none

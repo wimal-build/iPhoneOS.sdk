@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: A2B8BA85-49F3-3AD7-831C-4F760C09B640', 'armv7s: E4C1F381-03F6-34D8-989E-5DBE423BD091', 
-                   'arm64: 812ADA0E-4C33-35FF-B8EB-E8E82F63285B' ]
+                   'arm64: 0503650E-1588-3078-A8F9-8819355D1894' ]
 platform:        ios
 install-name:    /usr/lib/libnfshared.dylib
 objc-constraint: none

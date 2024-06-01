@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 17877EB5-EE31-30DC-974F-1AF00306AD03', 'armv7s: 31937321-BEAF-30A2-BC6F-69AEEFD5D323', 
-                   'arm64: 7F23E436-7844-33E8-9E2E-EEB3E9F77BBA' ]
+                   'arm64: 6377150E-08EB-31F2-AC90-A948C9DEF108' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Social.framework/Social
 current-version: 87

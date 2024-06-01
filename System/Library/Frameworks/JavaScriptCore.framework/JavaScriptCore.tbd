@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 106A107E-8662-3CF1-85DF-F1A4FD0225FD', 'armv7s: 3421B127-2686-3D81-B222-582ED8AFA09C', 
-                   'arm64: 7F797346-C56B-3134-8709-DE5DD36360DC', 'arm64e: 186C9C7B-EF61-332E-9771-8C1C1AAE448F' ]
+                   'arm64: FF705460-36C5-3D9A-872E-85627C2DD077', 'arm64e: 8F2AE7AA-CD12-3601-8362-DF5AE43E0D5E' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore
-current-version: 607.1.40
+current-version: 607.3.9
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -963,7 +963,7 @@ exports:
                        __ZN3JSC8JSObject9classNameEPKS0_RNS_2VME, __ZN3JSC8Subspace33parallelNotEmptyMarkedBlockSourceEv, 
                        __ZN3JSC8SubspaceC2EN3WTF7CStringERNS_4HeapE, __ZN3JSC9ExecState18callerSourceOriginEv, 
                        __ZN3JSC9JSPromise7resolveERNS_14JSGlobalObjectENS_7JSValueE, 
-                       __ZN3JSC9Structure25nonPropertyTransitionSlowERNS_2VMEPS0_NS_21NonPropertyTransitionE, 
+                       __ZN3JSC9Structure16isValidPrototypeENS_7JSValueE, __ZN3JSC9Structure25nonPropertyTransitionSlowERNS_2VMEPS0_NS_21NonPropertyTransitionE, 
                        __ZN3JSC9constructEPNS_9ExecStateENS_7JSValueERKNS_7ArgListEPKc, 
                        __ZN3JSC9parseDateEPNS_9ExecStateERNS_2VMERKN3WTF6StringE, 
                        __ZN3WTF10ParkingLot11forEachImplERKNS_12ScopedLambdaIFvRNS_6ThreadEPKvEEE, 
@@ -1833,11 +1833,12 @@ exports:
                        __ZNK3JSC2B37EffectsneERKS1_, __ZNK3JSC2B38ValueRep4dumpERN3WTF11PrintStreamE, 
                        __ZNK3JSC2B39Procedure15entrypointLabelEj, __ZNK3JSC2B39Procedure30calleeSaveRegisterAtOffsetListEv, 
                        __ZNK3JSC2B39Procedure4dumpERN3WTF11PrintStreamE, __ZNK3JSC2B39Procedure9frameSizeEv, 
-                       __ZNK3JSC2VM19vmEntryGlobalObjectEPKNS_9ExecStateE, __ZNK3JSC9ClassInfo4dumpERN3WTF11PrintStreamE, 
-                       __ZNK3JSC9ExecState11callerFrameERPNS_10EntryFrameE, __ZNK3JSC9JSPromise6resultERNS_2VME, 
-                       __ZNK3JSC9JSPromise6statusERNS_2VME, __ZNK3JSC9JSPromise9isHandledERNS_2VME, 
-                       __ZNK3WTF10StackTrace4dumpERNS_11PrintStreamEPKc, __ZNK3WTF10StringImpl10startsWithEPKcj, 
-                       __ZNK3WTF10StringImpl10tryGetUtf8ENS_14ConversionModeE, __ZNK3WTF10StringImpl18tryGetUtf8ForRangeEjjNS_14ConversionModeE, 
+                       __ZNK3JSC2VM19vmEntryGlobalObjectEPKNS_9ExecStateE, __ZNK3JSC8JSObject43anyObjectInChainMayInterceptIndexedAccessesERNS_2VME, 
+                       __ZNK3JSC9ClassInfo4dumpERN3WTF11PrintStreamE, __ZNK3JSC9ExecState11callerFrameERPNS_10EntryFrameE, 
+                       __ZNK3JSC9JSPromise6resultERNS_2VME, __ZNK3JSC9JSPromise6statusERNS_2VME, 
+                       __ZNK3JSC9JSPromise9isHandledERNS_2VME, __ZNK3WTF10StackTrace4dumpERNS_11PrintStreamEPKc, 
+                       __ZNK3WTF10StringImpl10startsWithEPKcj, __ZNK3WTF10StringImpl10tryGetUtf8ENS_14ConversionModeE, 
+                       __ZNK3WTF10StringImpl18tryGetUtf8ForRangeEjjNS_14ConversionModeE, 
                        __ZNK3WTF10StringImpl8endsWithEPKcj, __ZNK3WTF10StringView10tryGetUtf8ENS_14ConversionModeE, 
                        __ZNK3WTF10StringView14createCFStringEv, __ZNK3WTF10StringView23convertToASCIILowercaseEv, 
                        __ZNK3WTF10StringView23convertToASCIIUppercaseEv, __ZNK3WTF11Persistence7Decoder28bufferIsLargeEnoughToContainEm, 

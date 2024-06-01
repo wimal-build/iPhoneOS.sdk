@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 902B7CB6-A2DF-3912-8913-00EEA5ECE1E3', 'armv7s: 18DFB31A-5446-37B2-81EA-6C1A8E70E222', 
-                   'arm64: 0A11C758-9381-30F8-9EA9-BB9655DBAA51', 'arm64e: 1F842AEC-4BFC-36D0-8AFC-3DD7FB4B7448' ]
+                   'arm64: 031F7540-AB65-345E-AC3A-4FC660CE8094', 'arm64e: BD1FC483-2F5A-3007-97CC-CDB6FDD7C107' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MediaToolbox.framework/MediaToolbox
 objc-constraint: none
@@ -227,7 +227,7 @@ exports:
                        _FPSupport_CopyMainDisplayCAName, _FPSupport_CreateAllVideoRangesSupportedByDisplays, 
                        _FPSupport_CreateDestinationPixelBufferAttributes, _FPSupport_DeleteCASlot, 
                        _FPSupport_DeleteCASlotsInArray, _FPSupport_EnsureCAImageQueue, 
-                       _FPSupport_GetCurrentDisplayModeVideoRangeAndSizeAndFrameRate, 
+                       _FPSupport_GetClosestCommonRefreshIntervalForRate, _FPSupport_GetCurrentDisplayModeVideoRangeAndSizeAndFrameRate, 
                        _FPSupport_GetDefaultTrackIDForMediaType, _FPSupport_GetDisplayInfoForCADisplay, 
                        _FPSupport_GetDisplayRefreshInformation, _FPSupport_GetDisplayVideoRangeNotificationSingleton, 
                        _FPSupport_GetFirstEnabledTrackIDForMediaType, _FPSupport_GetMainDisplayVideoRangeAndSizeAndFrameRate, 
@@ -918,8 +918,10 @@ exports:
                        _kFigActivitySchedulerProperty_ClientPID, _kFigActivitySchedulerProperty_MachTimeSharePolicy, 
                        _kFigActivitySchedulerProperty_ThreadPriority, _kFigActivitySchedulerProperty_ThrottleForBackground, 
                        _kFigAirPlaySecureStopPlayloadKey_Record, _kFigAssertionProperty_HolderName, 
+                       _kFigAssetAlternativeConfigurationKey_ContentProvider, _kFigAssetAlternativeConfigurationKey_MediaIdentifier, 
                        _kFigAssetAlternativeConfigurationKey_RTCReportingHierarchyToken, 
                        _kFigAssetAlternativeConfigurationKey_ServiceIdentifier, _kFigAssetAlternativeConfigurationKey_StorefrontID, 
+                       _kFigAssetAlternativeConfigurationKey_iTunesServiceMonitoringKey, 
                        _kFigAssetAnalysisKey_AnalysisType, _kFigAssetAnalysisTextParsingMessageKey_DiagnosticInformation, 
                        _kFigAssetAnalysisTextParsingMessageKey_LineNumber, _kFigAssetAnalysisTextParsingMessageKey_MessageType, 
                        _kFigAssetAnalysisTextParsingMessageKey_ReferencedText, _kFigAssetAnalysisTextParsingMessageKey_TextRange, 
@@ -2516,12 +2518,13 @@ exports:
                        _kFigReportingEventKey_CacheMemUnused, _kFigReportingEventKey_CacheMemVolatile, 
                        _kFigReportingEventKey_CachedBytes, _kFigReportingEventKey_CellBytes, 
                        _kFigReportingEventKey_CodecString, _kFigReportingEventKey_ConnectionsCulledCount, 
-                       _kFigReportingEventKey_CoreMediaSessionID, _kFigReportingEventKey_CountOfDroppedVideoFrames, 
-                       _kFigReportingEventKey_CountOfStalls, _kFigReportingEventKey_CurrentVariantBitrateRank, 
-                       _kFigReportingEventKey_CurrentVariantHDCPLevel, _kFigReportingEventKey_CurrentVariantRank, 
-                       _kFigReportingEventKey_DeviceHDCPLevel, _kFigReportingEventKey_DidSwitchFail, 
-                       _kFigReportingEventKey_DiskBacked, _kFigReportingEventKey_DiskCacheAllotted, 
-                       _kFigReportingEventKey_DisplayVideoRange, _kFigReportingEventKey_DownloadPerformanceAudioSegmentStartTimeDeltas, 
+                       _kFigReportingEventKey_ContentHostname, _kFigReportingEventKey_CoreMediaSessionID, 
+                       _kFigReportingEventKey_CountOfDroppedVideoFrames, _kFigReportingEventKey_CountOfStalls, 
+                       _kFigReportingEventKey_CurrentVariantBitrateRank, _kFigReportingEventKey_CurrentVariantHDCPLevel, 
+                       _kFigReportingEventKey_CurrentVariantRank, _kFigReportingEventKey_DeviceHDCPLevel, 
+                       _kFigReportingEventKey_DidSwitchFail, _kFigReportingEventKey_DiskBacked, 
+                       _kFigReportingEventKey_DiskCacheAllotted, _kFigReportingEventKey_DisplayVideoRange, 
+                       _kFigReportingEventKey_DownloadPerformanceAudioSegmentStartTimeDeltas, 
                        _kFigReportingEventKey_DownloadPerformanceBaseTimestamp, _kFigReportingEventKey_DownloadPerformanceMainSubstreamSegmentStartTimeDeltas, 
                        _kFigReportingEventKey_EventCounter, _kFigReportingEventKey_FailedSwitchCount, 
                        _kFigReportingEventKey_FileDurationMilliseconds, _kFigReportingEventKey_FileSize, 
@@ -2646,9 +2649,9 @@ exports:
                        _kFigReportingEventKey_TCPINFO_TotalReorderedPackets, _kFigReportingEventKey_TargetDuration, 
                        _kFigReportingEventKey_TimeItemCreationAndLikelyToKeepUpMilliseconds, 
                        _kFigReportingEventKey_TimeLikelyToKeepUpAndPlayStartMilliseconds, 
-                       _kFigReportingEventKey_TimeSinceLastResume, _kFigReportingEventKey_TimeSinceLastStall, 
-                       _kFigReportingEventKey_TimeSinceLastSwitch, _kFigReportingEventKey_TimeToReachResolution, 
-                       _kFigReportingEventKey_TimeWeightedFirehoseObserverdBitrate, 
+                       _kFigReportingEventKey_TimeSinceLastPause, _kFigReportingEventKey_TimeSinceLastResume, 
+                       _kFigReportingEventKey_TimeSinceLastStall, _kFigReportingEventKey_TimeSinceLastSwitch, 
+                       _kFigReportingEventKey_TimeToReachResolution, _kFigReportingEventKey_TimeWeightedFirehoseObserverdBitrate, 
                        _kFigReportingEventKey_TimeWeightedImmediateObserverdBitrate, 
                        _kFigReportingEventKey_TimeWeightedIndicatedAverageBitrate, 
                        _kFigReportingEventKey_TimeWeightedIndicatedAverageBits, _kFigReportingEventKey_TimeWeightedIndicatedBitrate, 

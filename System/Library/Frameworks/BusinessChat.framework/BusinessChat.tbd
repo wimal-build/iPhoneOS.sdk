@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 2DB79E4F-ED65-3CB3-A95C-29C1588A8782', 'arm64e: 11D7382C-D3C7-3DC5-A234-1E54015738FA' ]
+                   'arm64: 493171BC-71E0-3A22-B02E-F32C72B05FE8', 'arm64e: 0D9ABA42-1CD7-3244-809E-5FD8B84E5230' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/BusinessChat.framework/BusinessChat
 objc-constraint: none

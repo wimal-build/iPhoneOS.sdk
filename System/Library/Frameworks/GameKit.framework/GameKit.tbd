@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 3817F758-B554-346F-A951-1D020678C69F', 'armv7s: 2288339A-48B6-30FC-B586-BB87F12460EC', 
-                   'arm64: 6E32E7D3-735A-3477-AFAE-987DD5F23381', 'arm64e: 432DA6BE-28CF-3D2B-B151-A5520C34AA7D' ]
+                   'arm64: 4D47F66D-EC73-3475-A6F9-C0873C5FBCB0', 'arm64e: 82EA5624-515C-3683-B3B8-3B6D322189E7' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/GameKit.framework/GameKit
-current-version: 566.2
+current-version: 577.8
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]
@@ -19,10 +19,10 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 13B46BF3-BBCA-3074-9CB3-1A1DC4D72EDA', 'armv7s: B2BD1C74-5CF1-3DE5-A6E7-0CC4028E12CA', 
-                   'arm64: FB3EBE60-4746-3922-9FED-8692B93AB52E', 'arm64e: C27EAADF-D932-3E32-84F3-760A801B5978' ]
+                   'arm64: 4A1ABBBE-47C6-3740-9AE1-649839B0BB39', 'arm64e: 39EC28D8-E978-35AC-A0E5-3E939ACC4685' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenter.framework/GameCenter
-current-version: 566.2
+current-version: 577.8
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]
@@ -34,7 +34,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 736319F2-63D9-309B-BB1F-BFBCA1C0EC4F', 'armv7s: 1C63987E-AE2A-3926-8E64-109F7D87D19C', 
-                   'arm64: FCF99BD4-C070-3352-8CA2-31D226803500', 'arm64e: D96657AE-7CC2-3252-98D1-CBA0D08F3E75' ]
+                   'arm64: C30AF5A6-ECD1-303A-9661-EB046FFF5C40', 'arm64e: 9E324219-0C62-3964-8E79-8567189A9570' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenterFoundation.framework/GameCenterFoundation
 objc-constraint: none
@@ -248,14 +248,15 @@ exports:
                        _GKURLComponentHostTD4Internal, _GKURLComponentITMSGCSScheme, 
                        _GKURLComponentITMSGCScheme, _GKURLComponentMe, _GKURLComponentPlayer, 
                        _GKURLComponentRecommendations, _GKURLComponentRequests, _GKURLComponentStore, 
-                       _GKUnderageKey, _GKUnknownPlayerID, _GKVerifiedKey, _GKVoiceChatServiceErrorDomain, 
-                       _NSRangeInRange, __gkBeautifyVariableName, __gkTabStringForTabLevel, 
-                       __gkUnicodifyDescription, __hash, _gGKSessionTrace, _gGKVoiceTrace, 
-                       _gkEscapedQueryString, _headerChecksum, _kGKArgumentIndexesCopied, 
-                       _os_log_GKLogCache, _os_log_GKLogDaemon, _os_log_GKLogDeveloper, 
-                       _os_log_GKLogDispatch, _os_log_GKLogError, _os_log_GKLogGeneral, 
-                       _os_log_GKLogHTTP, _os_log_GKLogHosted, _os_log_GKLogMatch, 
-                       _os_log_GKLogPerf, _os_log_GKLogTrace, _packetTypeFromMode ]
+                       _GKUnavailablePlayerID, _GKUnderageKey, _GKUnknownPlayerID, 
+                       _GKVerifiedKey, _GKVoiceChatServiceErrorDomain, _NSRangeInRange, 
+                       __gkBeautifyVariableName, __gkTabStringForTabLevel, __gkUnicodifyDescription, 
+                       __hash, _gGKSessionTrace, _gGKVoiceTrace, _gkEscapedQueryString, 
+                       _headerChecksum, _kGKArgumentIndexesCopied, _os_log_GKLogCache, 
+                       _os_log_GKLogDaemon, _os_log_GKLogDeveloper, _os_log_GKLogDispatch, 
+                       _os_log_GKLogError, _os_log_GKLogGeneral, _os_log_GKLogHTTP, 
+                       _os_log_GKLogHosted, _os_log_GKLogMatch, _os_log_GKLogPerf, 
+                       _os_log_GKLogTrace, _packetTypeFromMode ]
     objc-classes:    [ GKAccountServiceInterface, GKAccountServicePrivateInterface, 
                        GKAchievement, GKAchievementChallenge, GKAchievementChallengeInternal, 
                        GKAchievementDescription, GKAchievementDescriptionInternal, 
@@ -342,7 +343,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 0214FDB6-40C9-3072-B1E2-5F27BC4EB96C', 'armv7s: 1A8453C0-6089-3257-AC4A-5C55CF26C652', 
-                   'arm64: 7BCC1433-96F3-3B2F-BD2E-5391AE3DA304', 'arm64e: EE9CC196-014B-3F9D-8BE1-8D218EDA0013' ]
+                   'arm64: 7CBE4AC2-A308-3894-B521-39CA254BBA01', 'arm64e: 3BBD7B83-1524-39F2-84C2-6953B06238E5' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/GameCenterUI.framework/GameCenterUI
 objc-constraint: none
@@ -418,7 +419,7 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 07C3539C-2DA0-3A73-8198-9AFC20E91843', 'armv7s: 335E90EB-3E4F-3CBF-8DA7-FB11612B55F4', 
-                   'arm64: CE3BA314-9938-3BAC-8880-1582C69BC79F', 'arm64e: 3933DE02-581C-36AD-BD0B-355D82E65FD0' ]
+                   'arm64: EF479AB2-F16C-3D24-91EC-9CC2107DA501', 'arm64e: C2A3C09A-FEA6-3826-A349-39E2D8671130' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/LegacyGameKit.framework/LegacyGameKit
 objc-constraint: none

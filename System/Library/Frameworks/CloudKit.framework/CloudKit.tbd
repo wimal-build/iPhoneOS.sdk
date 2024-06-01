@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: FFF97FBD-E0F9-33FF-BCD6-D893A968F77F', 'armv7s: 2BDDF427-B957-31D0-A2D5-5AC238068657', 
-                   'arm64: 1C18CF5B-A003-34CC-B769-F10930C5083F', 'arm64e: 41E7D5BE-0D33-3D92-8570-41C203ED4A99' ]
+                   'arm64: A3E0D956-52EA-39DA-A6B5-EF1BBF15288D', 'arm64e: 959FD74A-FE25-3416-8C19-CAC4D535574D' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CloudKit.framework/CloudKit
-current-version: 736.216
+current-version: 736.235
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

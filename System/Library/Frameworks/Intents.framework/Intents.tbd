@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 4B837D79-AB45-3313-A2F9-6C2C9EAEFCF8', 'armv7s: FF5BC191-04EE-3ACB-A61E-011EAC73571F', 
-                   'arm64: 11B121AB-6445-310D-8488-5AC7FA9C1E48', 'arm64e: 220BA2F1-FB51-328C-8892-CCD1FC147A42' ]
+                   'arm64: 6AE5175F-C6B0-3E91-9433-A966C42C85AD', 'arm64e: 1908332E-8961-3D0E-83E0-A351507268DA' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Intents.framework/Intents
 objc-constraint: none
@@ -352,10 +352,10 @@ exports:
                        _INIntentsRestrictedWhileLocked, _INIntentsRestrictedWhileProtectedDataUnavailable, 
                        _INIntentsServiceExtensionPointName, _INIntentsUIServiceExtensionPointName, 
                        _INInteractionAudioCallContentType, _INInteractionContentType, 
-                       _INInteractionMediaPlaybackContentType, _INInteractionMessageContentType, 
-                       _INInteractionSpotlightDomain, _INInteractionSpotlightIdentifierPrefix, 
-                       _INInteractionVideoCallContentType, _INInteractionWithTypedInteraction, 
-                       _INIsDeviceLocked, _INIssueSandboxExtensionsForFileURLEnumerable, 
+                       _INInteractionMediaAirPlayContentType, _INInteractionMediaPlaybackContentType, 
+                       _INInteractionMessageContentType, _INInteractionSpotlightDomain, 
+                       _INInteractionSpotlightIdentifierPrefix, _INInteractionVideoCallContentType, 
+                       _INInteractionWithTypedInteraction, _INIsDeviceLocked, _INIssueSandboxExtensionsForFileURLEnumerable, 
                        _INIssueSandboxExtensionsForFileURLEnumerableToProcess, _INItemIntentClassAttribute, 
                        _INItemIntentDataAttribute, _INKeyImageUtilitiesDefaultCompareSubProducers, 
                        _INKeyImageUtilitiesKeyImageBySubProducerComparison, _INKeyImageUtilitiesSortedSubProducersForSlotComposingProducer, 

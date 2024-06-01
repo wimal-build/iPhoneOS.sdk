@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 1260046C-9A56-331C-A01D-765D19015DE1', 'armv7s: C67BB7EA-FF5E-343F-BEC9-FD055D488744', 
-                   'arm64: 1165E502-D530-350B-8689-DA62CCC0A7A3', 'arm64e: FE4E0D61-9C78-393B-9B1D-A3A4FA85B056' ]
+                   'arm64: 36620766-EB0A-380D-B577-B99E430E7D81', 'arm64e: ACEE4279-B4CB-3B0E-833E-2679B9146F9C' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
-current-version: 963.250.1
+current-version: 963.255.3
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

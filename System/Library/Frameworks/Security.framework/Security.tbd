@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D54C70C3-E405-307F-A3DF-F77BCAD86DAF', 'armv7s: 84D01D33-899F-3E07-B29D-09C33C084D9F', 
-                   'arm64: CDFBAFB4-15A9-3E04-A1D0-30BFC14B6220', 'arm64e: 9769EDF7-82E1-3C92-8FFB-E8641F476E01' ]
+                   'arm64: 549552BF-5B7E-3961-918D-D9A2B2F84B54', 'arm64e: 0F262A3D-95D4-36EC-88C0-330791CDF46E' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Security.framework/Security
-current-version: 58286.252.1
+current-version: 58286.255.3
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -418,9 +418,10 @@ exports:
                        _SecCertificateCreateWithPEM, _SecCertificateCreateWithXPCArrayAtIndex, 
                        _SecCertificateGetAuthorityKeyID, _SecCertificateGetBasicConstraints, 
                        _SecCertificateGetBytePtr, _SecCertificateGetCAIssuers, _SecCertificateGetCRLDistributionPoints, 
-                       _SecCertificateGetCertificatePolicies, _SecCertificateGetExcludedSubtrees, 
-                       _SecCertificateGetExtensionValue, _SecCertificateGetInhibitAnyPolicySkipCerts, 
-                       _SecCertificateGetKeyUsage, _SecCertificateGetLength, _SecCertificateGetNormalizedIssuerContent, 
+                       _SecCertificateGetCertificatePolicies, _SecCertificateGetDeveloperIDDate, 
+                       _SecCertificateGetExcludedSubtrees, _SecCertificateGetExtensionValue, 
+                       _SecCertificateGetInhibitAnyPolicySkipCerts, _SecCertificateGetKeyUsage, 
+                       _SecCertificateGetLength, _SecCertificateGetNormalizedIssuerContent, 
                        _SecCertificateGetNormalizedSubjectContent, _SecCertificateGetOCSPResponders, 
                        _SecCertificateGetPermittedSubtrees, _SecCertificateGetPolicyConstraints, 
                        _SecCertificateGetPolicyMappings, _SecCertificateGetPublicKeyAlgorithm, 

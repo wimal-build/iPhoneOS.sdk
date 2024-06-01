@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 1C5C5C58-BFCF-3C99-83ED-B4851E3A8BA4', 'armv7s: 3D439D0E-75CC-3DFF-9EAA-5891ED69A175', 
-                   'arm64: 60BC80F2-35F8-3C96-AD6D-399BBDB34467', 'arm64e: AB215AB9-8330-3ADD-BEE2-2086909C8E73' ]
+                   'arm64: 00CA957A-89E1-36E8-83EB-FB7A213A84F2', 'arm64e: 457D5481-3E29-3412-939C-0799AB6E0658' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreMotion.framework/CoreMotion
-current-version: 2245.12.30
+current-version: 2245.16.14
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

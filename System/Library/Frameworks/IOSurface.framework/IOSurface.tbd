@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 4B78555F-5BB2-3226-B6FD-50F4481A40D1', 'arm64e: 0A44BAF9-C6EC-3FE0-AF4C-4A3D387308C4' ]
+                   'arm64: 672B5D96-E52C-326E-BD15-5171F636BB97', 'arm64e: B6E5148F-C1D5-3F0E-9EE7-3B5FF1FA9564' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/IOSurface.framework/IOSurface
 objc-constraint: none

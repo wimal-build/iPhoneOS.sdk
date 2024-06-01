@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 9A77BD72-58E7-3463-9D1B-6A8CCA77215D', 'armv7s: 5D95DC7F-0B21-3129-BC8D-4EACB5910469', 
-                   'arm64: 1D25E77A-9A28-359B-A0BF-1DFC795EDA91', 'arm64e: 205B1036-2F18-3DCA-96EE-5B5313A0526C' ]
+                   'arm64: 79A0CE85-8128-3B61-9226-E5E088522DCF', 'arm64e: E2B5182A-2E10-34BD-86EF-10C5C8A86EFB' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ImageIO.framework/ImageIO
 current-version: 0

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 35139531-E09F-3E8E-BAF4-BDD10B2CF7FB', 'arm64e: C93E5A7B-1296-350A-9047-6AF30DD1AC13' ]
+                   'arm64: 0B91D514-8413-3827-AA74-EFBB4F4C48F1', 'arm64e: F1805F58-B179-3947-A0F9-BA55E85FC092' ]
 platform:        ios
 install-name:    /usr/lib/libMaxEnt.dylib
 objc-constraint: none

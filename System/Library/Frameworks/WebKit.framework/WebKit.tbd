@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 810BDE41-A7AC-341F-B833-AD162BD6F54A', 'armv7s: 3D3DF682-A8AC-302E-B28C-A65D4A17F575', 
-                   'arm64: 6060D017-27FF-351D-A66E-51FB8445A3A5', 'arm64e: E52CDC2E-15C1-3A1E-B741-D83E4811BD1F' ]
+                   'arm64: 2CB812DF-0ACF-393D-9322-BFAF629D44A6', 'arm64e: D85F6643-797E-3E45-BBBE-B941D4504CBD' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/WebKit.framework/WebKit
-current-version: 607.1.40
+current-version: 607.3.9
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -841,10 +841,10 @@ exports:
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 9583CA71-D7D0-3BF5-A5E8-E548433F329C', 'armv7s: 2FB9C45C-1669-357A-994C-3D75607E49EF', 
-                   'arm64: 19A3B354-295E-3364-AE24-3D1E56A5E323', 'arm64e: CDBA2C58-9BB0-3826-95FA-9091FF80FB3E' ]
+                   'arm64: FAF611B3-1924-3F4F-B0DA-0D86D333ABE7', 'arm64e: E4495F41-783D-3D31-97CF-4954BC3875BC' ]
 platform:        ios
 install-name:    /System/Library/PrivateFrameworks/WebKitLegacy.framework/WebKitLegacy
-current-version: 607.1.40
+current-version: 607.3.9
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]

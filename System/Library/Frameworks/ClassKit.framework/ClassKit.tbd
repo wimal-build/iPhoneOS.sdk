@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 86463630-3633-3F4F-A1DE-30D6E0B2F297', 'arm64e: 899D90D6-BECC-305A-814E-8BE8540A95E4' ]
+                   'arm64: 930F7312-2045-3656-8C04-8C8A30BAAD6A', 'arm64e: 6BC5B979-4475-3C60-81D3-EB0554B7D6D7' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ClassKit.framework/ClassKit
 current-version: 144.0.27

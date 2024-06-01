@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 8564F238-13B9-37DB-BEB8-34671AA4A004', 'armv7s: D20B3B6F-02F1-37DA-A96C-B02ECD2AFB0A', 
-                   'arm64: 9AB9FAD9-E988-3F7A-8565-43A29E090327', 'arm64e: 5306B67F-72CF-33A2-A13F-79C9C77314A6' ]
+                   'arm64: BC7052B0-8413-3953-BFE4-AAD5D37964E4', 'arm64e: DCF51B6B-9BC7-3E1F-82B2-DAEB0CE3A4B3' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/QuickLook.framework/QuickLook
 objc-constraint: none

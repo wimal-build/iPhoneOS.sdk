@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D667D54F-3911-373D-A73E-3E128FE64292', 'armv7s: E8CF9CB4-3214-336B-8006-D3FB73AFC0F8', 
-                   'arm64: 530FFC15-00DA-3FB9-B70E-9924D2F43A82', 'arm64e: 8D2693AD-4289-39E4-91FA-6AAB760A1EEE' ]
+                   'arm64: 10B2D935-12A0-3FEB-9942-383F60F3AD01', 'arm64e: 8C1075D1-B109-3A42-9F3D-B980F3398FA2' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ExternalAccessory.framework/ExternalAccessory
 objc-constraint: none

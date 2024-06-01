@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: ACA609E2-D417-30ED-9DFD-9200D6945BFB', 'arm64e: 1992F812-06FE-3032-ADD1-444C97077409' ]
+                   'arm64: 2EDD5F48-8FB1-3F84-AC31-DF1CF0B3A467', 'arm64e: 85820B46-E2D9-3B24-A1C1-7580A8CF1FC0' ]
 platform:        ios
 install-name:    /usr/lib/libParallelCompression.dylib
 objc-constraint: none

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 029DD464-41D2-38C1-9866-130EEB00C33B', 'arm64e: 39DB78B0-C0BA-3B4F-AAF3-D845AC6B6233' ]
+                   'arm64: D0CEE960-F1F5-33E0-8C85-38829F43C62E', 'arm64e: 870C83F1-3CA0-33F4-989A-0FB626937590' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/ARKit.framework/ARKit
 objc-constraint: none

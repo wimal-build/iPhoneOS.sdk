@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 79375DEC-D58C-3B27-9A4A-DED2B782EF91', 'armv7s: 83DE9B0F-8497-3E7A-B271-861DE2581C92', 
-                   'arm64: C25C139E-7A13-305B-A4B4-CE16CC91F24A', 'arm64e: 914C6DAC-935E-3A72-8C35-30BC7CF5745F' ]
+                   'arm64: 9C474EAE-9058-383F-AFEA-48939BA47275', 'arm64e: 625A28C3-0E6E-3A92-8878-D1D079A327CA' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/NewsstandKit.framework/NewsstandKit
 objc-constraint: none

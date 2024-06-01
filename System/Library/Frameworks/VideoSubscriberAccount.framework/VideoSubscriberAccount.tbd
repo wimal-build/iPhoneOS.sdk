@@ -1,21 +1,24 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: EF039D34-68F0-34F8-918E-D1EE9A3300E5', 'armv7s: 7E17A1E2-DF00-346C-9700-36C35FB22283', 
-                   'arm64: D7382502-FB5B-3822-B709-E20E3043939F', 'arm64e: 7AC2CE97-8150-3458-9B76-CC16A449447A' ]
+                   'arm64: A4712DD4-AB3A-391F-BF25-B6EF272A5F7C', 'arm64e: 39C31BAC-002B-36B6-86E2-E6A6F174EB39' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/VideoSubscriberAccount.framework/VideoSubscriberAccount
-current-version: 270.2
+current-version: 291.60.3
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ _VSStoreProviderResponseKeyAppStoreIdentifier, _VSSubscriptionFetchOptionIncludeUninstalledApps ]
-    objc-classes:    [ VSBundlePrivacyInfo, VSCookieServer, VSDemoProviderServer ]
+    objc-classes:    [ VSBundlePrivacyInfo, VSCookieServer, VSDemoProviderServer, 
+                       VSDeveloperAttribute ]
   - archs:           [ armv7, armv7s, arm64, arm64e ]
     symbols:         [ _VSAccountProviderAuthenticationSchemeSAML, _VSAccountStoreDidChangeNotification, 
                        _VSActiveSubscriptionsDidChangeNotification, _VSAllKnownTemplateElements, 
                        _VSBundleURLForProcessIdentifier, _VSCheckAccessOptionPrompt, 
                        _VSCheckEntitlementForTask, _VSDataCompressionValueTransformerName, 
-                       _VSDefaultLogObject, _VSDidRegisterSubscriptionNotification, 
+                       _VSDefaultLogObject, _VSDeveloperServiceDidChangeNotification, 
+                       _VSDeveloperServiceInterface, _VSDeveloperServiceProvidersDidChangeNotification, 
+                       _VSDeveloperServiceSettingsDidChangeNotification, _VSDidRegisterSubscriptionNotification, 
                        _VSDisplayNameForBundleWithIdentifier, _VSElementKeyAuthenticationTemplate, 
                        _VSElementKeyAutoAuthenticationTemplate, _VSElementKeyOnscreenCodeAuthenticationTemplate, 
                        _VSElementKeyWebAuthenticationTemplate, _VSEnqueueCompletionOperation, 
@@ -40,15 +43,18 @@ exports:
                        _VSPrivateError, _VSPrivateViewServiceCrashedErrorWithRecoveryHandler, 
                        _VSPublicError, _VSPublicErrorWithDetailedErrors, _VSPublicProviderRejectedError, 
                        _VSPublicServiceTemporarilyUnavailableError, _VSPublicUnsupportedProviderError, 
-                       _VSRequireKeyedCoder, _VSRequireMainThread, _VSRequiredDispatchQueueBindingOption, 
-                       _VSRequiredOperationQueueBindingOption, _VSRequiredThreadBindingOption, 
-                       _VSSharedSAMLParserController, _VSStoreProviderResponseKeyAppStoreIdentifiers, 
+                       _VSRequireKeyedCoder, _VSRequireMainThread, _VSRequireUsageInfoPlistKey, 
+                       _VSRequiredDispatchQueueBindingOption, _VSRequiredOperationQueueBindingOption, 
+                       _VSRequiredThreadBindingOption, _VSSharedSAMLParserController, 
+                       _VSStoreProviderResponseKeyAppPlacementPosition, _VSStoreProviderResponseKeyAppStoreIdentifiers, 
                        _VSStoreProviderResponseKeyAppStoreURL, _VSStoreProviderResponseKeyAuthProtocols, 
                        _VSStoreProviderResponseKeyAuthTemplates, _VSStoreProviderResponseKeyAuthURL, 
-                       _VSStoreProviderResponseKeyFeaturedProviderIdentifiers, _VSStoreProviderResponseKeyIsSingleSignOnSupported, 
-                       _VSStoreProviderResponseKeyName, _VSStoreProviderResponseKeyPrimaryIdentifier, 
-                       _VSStoreProviderResponseKeyRoot, _VSStoreProviderResponseKeyVendorIdentifier, 
-                       _VSStoreURLBagKeyAllIdentityProviderApps, _VSStoreURLBagKeyIdentityProviderApps, 
+                       _VSStoreProviderResponseKeyFeaturedProviderIdentifiers, _VSStoreProviderResponseKeyIsSetTopBoxSupported, 
+                       _VSStoreProviderResponseKeyIsSingleSignOnSupported, _VSStoreProviderResponseKeyName, 
+                       _VSStoreProviderResponseKeyPrimaryIdentifier, _VSStoreProviderResponseKeyProviderAppArtwork, 
+                       _VSStoreProviderResponseKeyProviderArtwork, _VSStoreProviderResponseKeyRoot, 
+                       _VSStoreProviderResponseKeyVendorIdentifier, _VSStoreURLBagKeyAllIdentityProviderApps, 
+                       _VSStoreURLBagKeyCountryCode, _VSStoreURLBagKeyIdentityProviderApps, 
                        _VSStoreURLBagKeyIdentityProviders, _VSStoreURLBagKeyMaxFeaturedProviders, 
                        _VSStoreURLBagKeySoleProviderFeatureEnabled, _VSStoreURLBagKeyVerificationStateReset, 
                        _VSSubscriptionFetchOptionCreationDateInterval, _VSSubscriptionFetchOptionEarliestExpirationDate, 
@@ -66,21 +72,24 @@ exports:
                        VSAccountManager, VSAccountManagerResult, VSAccountMetadata, 
                        VSAccountMetadataRequest, VSAccountProviderResponse, VSAccountSaveOperation, 
                        VSAccountSerializationCenter, VSAccountStore, VSAppChannelsFilter, 
-                       VSAppInstallationOperation, VSAsyncOperation, VSAuditToken, 
-                       VSBackgroundTask, VSBlockBasedValueTransformer, VSCasePreservingString, 
-                       VSCompoundValueTransformer, VSDelayOperation, VSDeveloperAttribute, 
+                       VSAppInstallationInfoCenter, VSAppInstallationOperation, VSAsyncOperation, 
+                       VSAuditToken, VSBackgroundTask, VSBlockBasedValueTransformer, 
+                       VSCasePreservingString, VSCompoundValueTransformer, VSDelayOperation, 
                        VSDeveloperIdentityProviderChangeOperation, VSDeveloperIdentityProviderFetchAllOperation, 
+                       VSDeveloperSettings, VSDeveloperSettingsFetchOperation, VSDeveloperSettingsUpdateOperation, 
                        VSDevice, VSErrorRecoveryAttempterDelegate, VSErrorRecoveryOption, 
                        VSExpressionEvaluator, VSFailable, VSFailableValueTransformer, 
                        VSFileWriteOperation, VSIdentityProvider, VSIdentityProviderAvailabilityInfoCenter, 
                        VSIdentityProviderFetchAllAppsOperation, VSIdentityProviderFetchAppsOperation, 
+                       VSIdentityProviderInfoCenter, VSIdentityProviderInfoQueryResult, 
                        VSKeyPathBasedTreeNode, VSOpaqueAuthenticationToken, VSOptional, 
                        VSPersistentStorage, VSPreferences, VSPrivacyConsentVoucher, 
                        VSPrivacyFacade, VSRemoteNotifier, VSRestrictionsCenter, VSReverseValueTransformer, 
-                       VSSAMLAuthenticationToken, VSSecurityTask, VSSemaphore, VSStateMachine, 
-                       VSStoreAuthenticationNotificationOperation, VSStoreRequest, 
-                       VSStoreRequestOperation, VSStoreURLBag, VSSubscription, VSSubscriptionRegistrationCenter, 
-                       VSSubscriptionSource, VSTimeoutOperation, VSTreeNode, VSValueType, 
-                       VSValueTypeProperty, VSVerificationDataOperation, VSVerificationStateResetOperation, 
+                       VSSAMLAuthenticationToken, VSSecurityTask, VSSemaphore, VSSetTopBoxProfile, 
+                       VSStateMachine, VSStoreAuthenticationNotificationOperation, 
+                       VSStoreRequest, VSStoreRequestOperation, VSStoreURLBag, VSStoreURLBagLoadOperation, 
+                       VSSubscription, VSSubscriptionRegistrationCenter, VSSubscriptionSource, 
+                       VSTimeoutOperation, VSTreeNode, VSValueType, VSValueTypeProperty, 
+                       VSVerificationDataOperation, VSVerificationStateResetOperation, 
                        VSViewServiceResponse, VSViewServiceXPCInterface, VSWeakForwardingTarget ]
 ...

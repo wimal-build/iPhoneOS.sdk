@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: E909E831-5A6D-3CEC-A984-836BDD4596E0', 'armv7s: 9D38EBE0-5C0A-346B-BE06-E7B971E3B366', 
-                   'arm64: C9000B0C-8F50-3941-BE80-EFBFEF0CEA44', 'arm64e: 74BFAC4D-45FD-302A-927F-4C99FE518A6B' ]
+                   'arm64: C3EAE3E9-2F9E-3D0B-B756-6DB5965BB8EB', 'arm64e: 0B3736B0-7966-3044-B21F-3CEB65FE0013' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Accounts.framework/Accounts
 objc-constraint: none

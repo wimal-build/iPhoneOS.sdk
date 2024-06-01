@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 9B1DD8D6-5CEE-3D08-A70F-66029726591A', 'arm64e: 4A517B9C-8F0B-3C3D-8F63-ABF675B56016' ]
+                   'arm64: 6423940F-8D02-3C9C-ABFF-C444E9973EAB', 'arm64e: 5A6ED142-C3CE-3820-80A2-9CB6C1BAD50F' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/FileProvider.framework/FileProvider
 objc-constraint: none

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 9FC5E0DF-8C91-3101-BA4E-767F492B42E7', 'armv7s: D2C6E744-B440-3E97-BFF7-DF391BE479E5', 
-                   'arm64: 6A9E29A4-D002-3002-BBCF-B94DB4E44183', 'arm64e: 9B29E1DE-D312-3331-9736-81505F832924' ]
+                   'arm64: 953AF19A-DDBC-3586-B8C3-2C2E4A2A75EE', 'arm64e: CCC96456-3AFF-3BF9-9493-A8BAC937DDB1' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/StoreKit.framework/StoreKit
 objc-constraint: none
@@ -59,6 +59,6 @@ exports:
                        SKStorePageRequest, SKStorePageViewController, SKStoreProductActivityViewController, 
                        SKStoreProductViewController, SKStoreRemoteViewController, 
                        SKStoreReviewController, SKStoreReviewPresentationWindow, 
-                       SKStoreReviewViewController, SKTermsPageViewController, SKWeakContainer, 
-                       _SKStoreProductActivityAnimationController ]
+                       SKStoreReviewViewController, SKTermsPageViewController, SKURLParserBagContract, 
+                       SKWeakContainer, _SKStoreProductActivityAnimationController ]
 ...

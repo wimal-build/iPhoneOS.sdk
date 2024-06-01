@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 09C0DAEE-88E7-3774-A435-B5D21B185A91', 'arm64e: 29856077-972C-3B9E-B2BF-9392FCC9ACB7' ]
+                   'arm64: EB665D01-F28A-3200-B154-11E1163038EF', 'arm64e: C32849A1-610C-3A17-BF1A-4198360DB4FB' ]
 platform:        ios
 install-name:    /usr/lib/libfire2.dylib
 objc-constraint: none

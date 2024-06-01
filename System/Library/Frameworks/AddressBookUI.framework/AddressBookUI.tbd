@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 48A08B91-0708-3A8E-8343-BED960D7731D', 'armv7s: 1972EBF6-17F3-37AD-9067-8004D9FF136E', 
-                   'arm64: 175F06A0-E024-3F75-8FD8-5C1AA7F626CB', 'arm64e: 6A5AD923-2FCB-3266-808B-6949608F230F' ]
+                   'arm64: 091C37F1-476D-318A-BA1B-88BF282EB914', 'arm64e: 583C1968-5EF2-3161-B290-EECCA77A19DA' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
 current-version: 33

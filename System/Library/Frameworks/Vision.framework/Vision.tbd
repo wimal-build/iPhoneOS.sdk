@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 0FEFF448-44A4-3631-871D-F6CE1B82EA2A', 'arm64e: CA2E6ADF-B6EE-30E1-877A-7249C4308233' ]
+                   'arm64: 38B4A517-3B57-371B-BDFB-7F3FDCD6509A', 'arm64e: 12A83BD3-1D60-391D-B446-EF5F779E36DC' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Vision.framework/Vision
 current-version: 2.0.70

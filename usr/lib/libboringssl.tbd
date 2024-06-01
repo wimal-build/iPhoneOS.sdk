@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: ABD22F29-E3D2-3E0C-9562-DD3AD7F7B7B8', 'arm64e: 4E6E0765-0F26-32A7-92EE-A8CD8DDDE309' ]
+                   'arm64: 380ED839-1101-3BA8-B0F3-7E5308129655', 'arm64e: A0B3725E-28C2-3AF6-B329-C49342D21DFC' ]
 platform:        ios
 install-name:    /usr/lib/libboringssl.dylib
 current-version: 0

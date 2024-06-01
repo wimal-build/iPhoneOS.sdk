@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 0382E9E7-DD46-347D-B74D-635F646D0F44', 'armv7s: 709D285A-20E5-3163-9C4A-3608DF975C1F', 
-                   'arm64: 9B603E83-690F-3A6D-9F30-DF51090D6BE1', 'arm64e: E757B2D8-76F7-37C2-B444-4FE1863591F4' ]
+                   'arm64: 677ECE4D-7249-397B-BE7D-2FD5C3247DEB', 'arm64e: FEB5FA93-2D27-3665-A974-E219CA6F6DC1' ]
 platform:        ios
 install-name:    /usr/lib/libsystemstats.dylib
-current-version: 403.250.3
+current-version: 403.255.1
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64, arm64e ]

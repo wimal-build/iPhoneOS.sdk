@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 3FD69674-F65E-3557-8FCA-EB2F4FFF814C', 'armv7s: 88F4F794-3190-39F9-9B76-79A2B13CA92F', 
-                   'arm64: 523AA01D-CB2C-32AE-9EE8-D5CDCAC0DBDC', 'arm64e: 856290F1-4F6B-3D5C-852C-FAB6D75E6775' ]
+                   'arm64: FE054C32-A1FE-3034-83C3-5B3F8286559B', 'arm64e: 10919C44-9625-3DF2-8C88-E0D960AD1226' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/SafariServices.framework/SafariServices
 objc-constraint: none

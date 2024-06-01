@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 17877EB5-EE31-30DC-974F-1AF00306AD03', 'armv7s: 31937321-BEAF-30A2-BC6F-69AEEFD5D323', 
-                   'arm64: 92828D8D-1226-3069-B753-8D8FB9FD1B1E', 'arm64e: EC071C20-9277-3D55-8FA3-F5F47427A867' ]
+                   'arm64: AC10A1CA-A120-32BF-B977-264CB6E93183', 'arm64e: AE0F57D6-0BB6-32C7-9DDC-A66EA0CD6E10' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/Social.framework/Social
 current-version: 87
@@ -72,18 +72,18 @@ exports:
                        SLGoogleOAuth2TokenResponse, SLGoogleUserInfoResponse, SLGoogleWebAuthController, 
                        SLGoogleWebAuthRequest, SLGoogleWebClient, SLGuaranteedRemoteCall, 
                        SLImageAttachment, SLImageDownsampling, SLInternalTencentWeiboRequest, 
-                       SLManagedObject, SLMicroBlogAccountsTableViewController, SLMicroBlogComposeViewController, 
-                       SLMicroBlogMentionsViewController, SLMicroBlogStatus, SLMicroBlogUserRecord, 
-                       SLNetworkReachabilityWarning, SLPlace, SLRemoteService, SLRemoteSession, 
-                       SLRemoteSessionProxy, SLRequest, SLRequestBodyInputStream, 
-                       SLRequestMultiPart, SLRequestMultiPartInputStream, SLSafeLocationManagerDelegate, 
-                       SLService, SLServiceListener, SLSheetAction, SLSheetContentView, 
-                       SLSheetImagePreviewView, SLSheetNavigationController, SLSheetPhotoAlbumImageView, 
-                       SLSheetPlaceSearchController, SLSheetPlaceViewController, 
-                       SLSheetPreviewImageSource, SLSheetTextComposeView, SLSystemConfigManager, 
-                       SLTencentWeiboServerInterface, SLTencentWeiboSession, SLTencentWeiboUserRecord, 
-                       SLTwitterRequest, SLTwitterReverseAuthRequest, SLTwitterSession, 
-                       SLTwitterUserRecord, SLURLAttachment, SLURLPreviewGenerator, 
+                       SLLegacyGooglePlusUserInfoResponse, SLManagedObject, SLMicroBlogAccountsTableViewController, 
+                       SLMicroBlogComposeViewController, SLMicroBlogMentionsViewController, 
+                       SLMicroBlogStatus, SLMicroBlogUserRecord, SLNetworkReachabilityWarning, 
+                       SLPlace, SLRemoteService, SLRemoteSession, SLRemoteSessionProxy, 
+                       SLRequest, SLRequestBodyInputStream, SLRequestMultiPart, SLRequestMultiPartInputStream, 
+                       SLSafeLocationManagerDelegate, SLService, SLServiceListener, 
+                       SLSheetAction, SLSheetContentView, SLSheetImagePreviewView, 
+                       SLSheetNavigationController, SLSheetPhotoAlbumImageView, SLSheetPlaceSearchController, 
+                       SLSheetPlaceViewController, SLSheetPreviewImageSource, SLSheetTextComposeView, 
+                       SLSystemConfigManager, SLTencentWeiboServerInterface, SLTencentWeiboSession, 
+                       SLTencentWeiboUserRecord, SLTwitterRequest, SLTwitterReverseAuthRequest, 
+                       SLTwitterSession, SLTwitterUserRecord, SLURLAttachment, SLURLPreviewGenerator, 
                        SLVideoAttachment, SLWebAuthController, SLWebAuthFlowController, 
                        SLWebAuthIdentity, SLWebUserInfoResponse, SLWeiboServerInterface, 
                        SLWeiboSession, SLWeiboUserRecord, SLYahooLoginTokenRequest, 

@@ -1,10 +1,10 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 35640E39-77A7-3716-81B7-DAFB5831F4D8', 'armv7s: 51D5EE04-E42B-3559-B3FC-C3A9CF5BF4B4', 
-                   'arm64: 35045763-0F01-3272-9A02-A1AD396D68E0' ]
+                   'arm64: 9FEEBAA2-DE76-30BA-8F24-8806E30CCDAE' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/LocalAuthentication.framework/LocalAuthentication
-current-version: 425.30.30
+current-version: 425.50.68
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -21,5 +21,5 @@ exports:
                        _cStringFromCFString, _coreauthd_create_message, _coreauthd_message_no_error, 
                        _coreauthd_message_with_reply_sync, _coreauthd_send_sync_and_do, 
                        _kLACurrentContextKey, _makeCFError, _makeCFErrorWithUserInfo ]
-    objc-classes:    [ _LAClient, _LAContext ]
+    objc-classes:    [ LAClient, LAContext ]
 ...

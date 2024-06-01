@@ -1,10 +1,10 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 7CD5D7F2-B852-3DF7-A521-C7442B08E7AC', 'armv7s: 832370D7-3C9A-341C-A99A-A5D8ED408443', 
-                   'arm64: EB195735-5122-3A9E-B2DB-775EBE2A85B6' ]
+                   'arm64: 192CE3A8-55FA-30F4-9818-999AC17D7CE4' ]
 platform:        ios
 install-name:    /usr/lib/libtailspin.dylib
-current-version: 50
+current-version: 53
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -43,13 +43,13 @@ exports:
                        __Z31order_binary_by_freq_of_offsetsRK6binaryS1_, __Z47tailspin_symbol_factory_copy_offsets_for_binaryP23tailspin_symbol_factoryP6binaryPmPPy, 
                        _add_binary_info_to_binary_dictionary, _do_symbolicate_server, 
                        _get_tailspin_ondisk_config, _get_tailspin_profile_config, 
-                       _get_tailspin_tasking_config, _libtailspinVersionNumber, _libtailspinVersionString, 
-                       _print_config, _set_config_field_modifier, _tailspin_buffer_size_get, 
-                       _tailspin_buffer_size_get_default, _tailspin_buffer_size_is_default, 
-                       _tailspin_buffer_size_reset, _tailspin_buffer_size_set, _tailspin_config_apply, 
-                       _tailspin_config_apply_sync, _tailspin_config_create_new, 
-                       _tailspin_config_create_with_config, _tailspin_config_create_with_current_state, 
-                       _tailspin_config_create_with_default_config, _tailspin_config_enforced_by_defaults_get_default, 
+                       _get_tailspin_tasking_config, _is_apple_internal_setting, 
+                       _libtailspinVersionNumber, _libtailspinVersionString, _print_config, 
+                       _set_config_field_modifier, _tailspin_buffer_size_get, _tailspin_buffer_size_get_default, 
+                       _tailspin_buffer_size_is_default, _tailspin_buffer_size_reset, 
+                       _tailspin_buffer_size_set, _tailspin_config_apply, _tailspin_config_apply_sync, 
+                       _tailspin_config_create_new, _tailspin_config_create_with_config, 
+                       _tailspin_config_create_with_current_state, _tailspin_config_create_with_default_config, 
                        _tailspin_config_free, _tailspin_dump_output, _tailspin_dump_output_sync, 
                        _tailspin_dump_output_with_options, _tailspin_dump_output_with_options_sync, 
                        _tailspin_enabled_get, _tailspin_enabled_get_default, _tailspin_enabled_is_default, 

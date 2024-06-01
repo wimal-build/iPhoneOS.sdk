@@ -1,10 +1,10 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 75570633-A6F1-34E8-8B2F-460AAA018007', 'armv7s: 85AFE37B-A011-31F7-8DED-28DE8D2BF3B2', 
-                   'arm64: 69566404-C835-3249-B967-B5FB5A3359A6' ]
+                   'arm64: E717B54C-AC62-3A30-ACC9-3F75E44B6C39' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/WatchConnectivity.framework/WatchConnectivity
-current-version: 159
+current-version: 161
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
@@ -47,11 +47,10 @@ exports:
                        _WCWakeDaemonNotification, _WCWatchDirectoryLocationInContainer, 
                        _WatchConnectivityVersionNumber, _WatchConnectivityVersionString, 
                        _isAllowedFileForProcess, _wc_log, _wc_pushkit_log ]
-    objc-classes:    [ _WCActiveDeviceSwitchTask, _WCComplicationManager, _WCContentIndex, 
-                       _WCDProtoUserInfoTransfer, _WCDataMessageRecord, _WCDictionaryMessageRecord, 
-                       _WCFileStorage, _WCMessage, _WCMessageRecord, _WCMessageRequest, 
-                       _WCMessageResponse, _WCPrivateXPCManager, _WCQueueManager, 
-                       _WCQueuedMessage, _WCSession, _WCSessionFile, _WCSessionFileTransfer, 
-                       _WCSessionState, _WCSessionUserInfoTransfer, _WCUserInfo, 
-                       _WCXPCManager ]
+    objc-classes:    [ WCActiveDeviceSwitchTask, WCComplicationManager, WCContentIndex, 
+                       WCDProtoUserInfoTransfer, WCDataMessageRecord, WCDictionaryMessageRecord, 
+                       WCFileStorage, WCMessage, WCMessageRecord, WCMessageRequest, 
+                       WCMessageResponse, WCPrivateXPCManager, WCQueueManager, WCQueuedMessage, 
+                       WCSession, WCSessionFile, WCSessionFileTransfer, WCSessionState, 
+                       WCSessionUserInfoTransfer, WCUserInfo, WCXPCManager ]
 ...

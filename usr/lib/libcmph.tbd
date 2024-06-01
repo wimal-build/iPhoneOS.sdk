@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: D5DC6E1C-A1D3-3532-9BB6-166691CF79C0', 'armv7s: 3B416DFC-5A88-333E-B7F4-271ACC895740', 
-                   'arm64: 8B492AA7-9DC5-3184-8175-2D5CBA68E84B' ]
+                   'arm64: BE5F1569-AB5A-3B86-B461-E82105C560AA' ]
 platform:        ios
 install-name:    /usr/lib/libcmph.dylib
 objc-constraint: none

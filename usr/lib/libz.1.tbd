@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: EA3C807D-AA56-33F5-9C2E-ECEA5006CFF5', 'armv7s: 30980F04-FB7B-3835-ACB6-943F24FBC931', 
-                   'arm64: C402FF63-470B-34DF-8634-F2078CD151E1' ]
+                   'arm64: 39DCD029-7EE1-30C8-9193-7F50CE23C2DF' ]
 platform:        ios
 install-name:    /usr/lib/libz.1.dylib
 current-version: 1.2.11

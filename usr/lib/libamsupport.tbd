@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 4F4DD213-D764-3608-B154-30AB4D097883', 'armv7s: 132F1194-C3C8-3150-826A-0680C574FC35', 
-                   'arm64: AEFCD7EC-80CF-32FF-B612-B2D508EC4434' ]
+                   'arm64: 6C1D6570-4DFC-3B9B-8798-0CD65560188E' ]
 platform:        ios
 install-name:    /usr/lib/libamsupport.dylib
 objc-constraint: none
@@ -131,10 +131,10 @@ exports:
                        _oidSubjectAltName, _oidSubjectInfoAccess, _oidSubjectKeyIdentifier, 
                        _sha1_digest_info, _sha256_digest_info, _sha384_digest_info, 
                        _sha512_digest_info ]
-    objc-classes:    [ _AMSupportURLConnectionDelegate, _AMSupportURLSession ]
-    objc-ivars:      [ _AMSupportURLConnectionDelegate._data, _AMSupportURLConnectionDelegate._error, 
-                       _AMSupportURLConnectionDelegate.options, _AMSupportURLConnectionDelegate.requestComplete, 
-                       _AMSupportURLConnectionDelegate.response, _AMSupportURLSession._options, 
-                       _AMSupportURLSession._queue, _AMSupportURLSession._session, 
-                       _AMSupportURLSession._sslEvalFailed, _AMSupportURLSession._timeout ]
+    objc-classes:    [ AMSupportURLConnectionDelegate, AMSupportURLSession ]
+    objc-ivars:      [ AMSupportURLConnectionDelegate._data, AMSupportURLConnectionDelegate._error, 
+                       AMSupportURLConnectionDelegate.options, AMSupportURLConnectionDelegate.requestComplete, 
+                       AMSupportURLConnectionDelegate.response, AMSupportURLSession._options, 
+                       AMSupportURLSession._queue, AMSupportURLSession._session, 
+                       AMSupportURLSession._sslEvalFailed, AMSupportURLSession._timeout ]
 ...

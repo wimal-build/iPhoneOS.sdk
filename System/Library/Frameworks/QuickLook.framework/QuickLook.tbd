@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 8564F238-13B9-37DB-BEB8-34671AA4A004', 'armv7s: D20B3B6F-02F1-37DA-A96C-B02ECD2AFB0A', 
-                   'arm64: 8A2AA1B0-3F45-351D-ADA7-03317081E12B' ]
+                   'arm64: 0408FF2C-747E-3D7E-BF04-481044A49E5A' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/QuickLook.framework/QuickLook
 objc-constraint: none
@@ -29,12 +29,12 @@ exports:
                        _kQLPreviewPropertyHeightKey, _kQLPreviewPropertyMIMETypeKey, 
                        _kQLPreviewPropertyTextEncodingNameKey, _kQLPreviewPropertyWidthKey, 
                        _kQLTestingNotificationTimestampKey ]
-    objc-classes:    [ _QLDismissAction, _QLEditedItem, _QLExtensionManager, _QLFileThumbnailRequest, 
-                       _QLItem, _QLItemThumbnailGenerator, _QLItemViewController, 
-                       _QLNotificationCenter, _QLPreviewCollectionHostContext, _QLPreviewCollectionServiceContext, 
-                       _QLPreviewController, _QLPreviewConverter, _QLRemotePreviewHostContext, 
-                       _QLRemotePreviewServiceContext, _QLServiceViewController, 
-                       _QLThumbnail, _QLThumbnailCreationOperation, _QLThumbnailDescriptor, 
-                       _QLThumbnailHostContext, _QLThumbnailProvider, _QLThumbnailReply, 
-                       _QLThumbnailServiceContext, _QLZipArchive, _QLZipArchiveEntry ]
+    objc-classes:    [ QLDismissAction, QLEditedItem, QLExtensionManager, QLFileThumbnailRequest, 
+                       QLItem, QLItemThumbnailGenerator, QLItemViewController, QLNotificationCenter, 
+                       QLPreviewCollectionHostContext, QLPreviewCollectionServiceContext, 
+                       QLPreviewController, QLPreviewConverter, QLRemotePreviewHostContext, 
+                       QLRemotePreviewServiceContext, QLServiceViewController, QLThumbnail, 
+                       QLThumbnailCreationOperation, QLThumbnailDescriptor, QLThumbnailHostContext, 
+                       QLThumbnailProvider, QLThumbnailReply, QLThumbnailServiceContext, 
+                       QLZipArchive, QLZipArchiveEntry ]
 ...

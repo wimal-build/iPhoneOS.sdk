@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: C37DD09C-2E1A-3314-ACCC-42B23F221718', 'armv7s: 6C74925D-2B4F-3045-8482-C9283BABAEF6', 
-                   'arm64: C70A25DE-2EE5-3F36-BBD7-192CC8F878EF' ]
+                   'arm64: C1761F13-E5ED-392F-96F6-49C2FA103C36' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/CoreBluetooth.framework/CoreBluetooth
 objc-constraint: none
@@ -70,10 +70,9 @@ exports:
                        _CBUUIDReportReferenceDescriptorString, _CBUUIDSerialNumberStringCharacteristicString, 
                        _CBUUIDServerCharacteristicConfigurationString, _CBUUIDServiceChangedString, 
                        _CBUUIDSoftwareRevisionStringCharacteristicString, _CBUUIDSystemIDCharacteristicString ]
-    objc-classes:    [ _BTDevicePicker, _CBATTRequest, _CBAttribute, _CBCentral, 
-                       _CBCentralManager, _CBCharacteristic, _CBDescriptor, _CBL2CAPChannel, 
-                       _CBManager, _CBMutableCharacteristic, _CBMutableDescriptor, 
-                       _CBMutableService, _CBPairingAgent, _CBPeer, _CBPeripheral, 
-                       _CBPeripheralManager, _CBScalablePipe, _CBScalablePipeManager, 
-                       _CBService, _CBUUID ]
+    objc-classes:    [ BTDevicePicker, CBATTRequest, CBAttribute, CBCentral, CBCentralManager, 
+                       CBCharacteristic, CBDescriptor, CBL2CAPChannel, CBManager, 
+                       CBMutableCharacteristic, CBMutableDescriptor, CBMutableService, 
+                       CBPairingAgent, CBPeer, CBPeripheral, CBPeripheralManager, 
+                       CBScalablePipe, CBScalablePipeManager, CBService, CBUUID ]
 ...

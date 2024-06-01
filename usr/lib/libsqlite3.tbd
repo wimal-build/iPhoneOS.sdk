@@ -1,10 +1,10 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: C2DC3FAB-8AE4-3C0C-AC50-D9C9A3F5D042', 'armv7s: 741AA09D-2104-30D0-8998-D6390FC52D94', 
-                   'arm64: EAC933B0-33D4-3444-AE18-2E2D7DE6137F' ]
+                   'arm64: CAACDB19-3A86-339D-B794-3325571A25AF' ]
 platform:        ios
 install-name:    /usr/lib/libsqlite3.dylib
-current-version: 274.6
+current-version: 274.8.1
 compatibility-version: 9
 objc-constraint: none
 exports:         

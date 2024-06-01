@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: C05FB620-2BFE-3A14-91DF-3AFD383E55BC' ]
+                   'arm64: ABCE7D3D-7317-315C-AE68-B10621C5C6D1' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/PDFKit.framework/PDFKit
 objc-constraint: none
@@ -14,12 +14,12 @@ exports:
                        _PDFAnnotationKeyBorder, _PDFAnnotationKeyBorderStyle, _PDFAnnotationKeyColor, 
                        _PDFAnnotationKeyContents, _PDFAnnotationKeyDate, _PDFAnnotationKeyDefaultAppearance, 
                        _PDFAnnotationKeyDestination, _PDFAnnotationKeyFlags, _PDFAnnotationKeyHighlightingMode, 
-                       _PDFAnnotationKeyIconName, _PDFAnnotationKeyInklist, _PDFAnnotationKeyInteriorColor, 
-                       _PDFAnnotationKeyLineEndingStyles, _PDFAnnotationKeyLinePoints, 
-                       _PDFAnnotationKeyName, _PDFAnnotationKeyOpen, _PDFAnnotationKeyPage, 
-                       _PDFAnnotationKeyParent, _PDFAnnotationKeyPopup, _PDFAnnotationKeyQuadPoints, 
-                       _PDFAnnotationKeyQuadding, _PDFAnnotationKeyRect, _PDFAnnotationKeySubtype, 
-                       _PDFAnnotationKeyTextLabel, _PDFAnnotationKeyWidgetAppearanceDictionary, 
+                       _PDFAnnotationKeyIconName, _PDFAnnotationKeyInklist, _PDFAnnotationKeyIntentType, 
+                       _PDFAnnotationKeyInteriorColor, _PDFAnnotationKeyLineEndingStyles, 
+                       _PDFAnnotationKeyLinePoints, _PDFAnnotationKeyName, _PDFAnnotationKeyOpen, 
+                       _PDFAnnotationKeyPage, _PDFAnnotationKeyParent, _PDFAnnotationKeyPopup, 
+                       _PDFAnnotationKeyQuadPoints, _PDFAnnotationKeyQuadding, _PDFAnnotationKeyRect, 
+                       _PDFAnnotationKeySubtype, _PDFAnnotationKeyTextLabel, _PDFAnnotationKeyWidgetAppearanceDictionary, 
                        _PDFAnnotationKeyWidgetBackgroundColor, _PDFAnnotationKeyWidgetBorderColor, 
                        _PDFAnnotationKeyWidgetCaption, _PDFAnnotationKeyWidgetDefaultValue, 
                        _PDFAnnotationKeyWidgetDownCaption, _PDFAnnotationKeyWidgetFieldFlags, 
@@ -71,8 +71,8 @@ exports:
                        _PDFViewWillBeginChangingSelectionNotification, _kPDFDestinationUnspecifiedValue, 
                        _kPDFDocumentWriteOption_SaveWithCorePDFLayout, _kPDFDocumentWriteOption_SaveWithTaggedLayout, 
                        _kPDFDocumentWriteOption_UseAppendMode ]
-    objc-classes:    [ _PDFAction, _PDFActionGoTo, _PDFActionNamed, _PDFActionRemoteGoTo, 
-                       _PDFActionResetForm, _PDFActionURL, _PDFAnnotation, _PDFAppearanceCharacteristics, 
-                       _PDFBorder, _PDFDestination, _PDFDocument, _PDFOutline, _PDFPage, 
-                       _PDFSelection, _PDFThumbnailView, _PDFView, _PDFViewLayout ]
+    objc-classes:    [ PDFAction, PDFActionGoTo, PDFActionNamed, PDFActionRemoteGoTo, 
+                       PDFActionResetForm, PDFActionURL, PDFAnnotation, PDFAppearanceCharacteristics, 
+                       PDFBorder, PDFDestination, PDFDocument, PDFOutline, PDFPage, 
+                       PDFSelection, PDFThumbnailView, PDFView, PDFViewLayout ]
 ...

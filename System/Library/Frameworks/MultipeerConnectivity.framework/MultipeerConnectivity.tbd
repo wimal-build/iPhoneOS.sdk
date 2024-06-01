@@ -1,10 +1,10 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: B1D6DC57-7B16-338F-82E9-42FC04E8ABA2', 'armv7s: 19B9AF27-E186-38DA-BE31-8D03C232993C', 
-                   'arm64: E760BD26-B008-3393-A297-F155E7FDA434' ]
+                   'arm64: 56D3126D-4A10-3AAB-B318-7BD18EF50CE2' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/MultipeerConnectivity.framework/MultipeerConnectivity
-current-version: 150
+current-version: 150.1
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s ]
@@ -49,23 +49,22 @@ exports:
                        _mcadvertiser_log, _mcadvertiser_ui_log, _mcbrowser_log, _mcbrowser_ui_log, 
                        _mcdp_log, _mcdpc_log, _mcpid_log, _mcs_log, _ospfParseOption, 
                        _ospfVerifyOptions, _ospf_log ]
-    objc-classes:    [ _AWDMultipeerSessionMaxPeersInfo, _AWDMultipeerSessionPeerConnectivityInfo, 
-                       _MCAdvertiserAssistant, _MCAlertController, _MCBrowserViewController, 
-                       _MCNearbyDiscoveryPeer, _MCNearbyDiscoveryPeerConnection, 
-                       _MCNearbyPeerTableViewCell, _MCNearbyPeerTableViewHeader, 
-                       _MCNearbyServiceAdvertiser, _MCNearbyServiceBrowser, _MCNearbyServiceUtils, 
-                       _MCPeerID, _MCPeerIDInternal, _MCResourceDownloader, _MCResourceProgressObserver, 
-                       _MCSession, _MCSessionPeerConnectionData, _MCSessionPeerState, 
-                       _MCSessionStream ]
-    objc-ivars:      [ _AWDMultipeerSessionMaxPeersInfo._bundleID, _AWDMultipeerSessionMaxPeersInfo._has, 
-                       _AWDMultipeerSessionMaxPeersInfo._maxPeersCount, _AWDMultipeerSessionMaxPeersInfo._sessionID, 
-                       _AWDMultipeerSessionMaxPeersInfo._timestamp, _AWDMultipeerSessionPeerConnectivityInfo._authentication, 
-                       _AWDMultipeerSessionPeerConnectivityInfo._channelPriority, 
-                       _AWDMultipeerSessionPeerConnectivityInfo._encryption, _AWDMultipeerSessionPeerConnectivityInfo._has, 
-                       _AWDMultipeerSessionPeerConnectivityInfo._interfaceType, _AWDMultipeerSessionPeerConnectivityInfo._remoteAuthentication, 
-                       _AWDMultipeerSessionPeerConnectivityInfo._sessionID, _AWDMultipeerSessionPeerConnectivityInfo._timeAll, 
-                       _AWDMultipeerSessionPeerConnectivityInfo._timeDTLS, _AWDMultipeerSessionPeerConnectivityInfo._timeICE, 
-                       _AWDMultipeerSessionPeerConnectivityInfo._timeOSPF, _AWDMultipeerSessionPeerConnectivityInfo._timestamp, 
-                       _MCNearbyPeerTableViewHeader._spinner, _MCNearbyPeerTableViewHeader._text, 
-                       _MCSessionStream._source ]
+    objc-classes:    [ AWDMultipeerSessionMaxPeersInfo, AWDMultipeerSessionPeerConnectivityInfo, 
+                       MCAdvertiserAssistant, MCAlertController, MCBrowserViewController, 
+                       MCNearbyDiscoveryPeer, MCNearbyDiscoveryPeerConnection, MCNearbyPeerTableViewCell, 
+                       MCNearbyPeerTableViewHeader, MCNearbyServiceAdvertiser, MCNearbyServiceBrowser, 
+                       MCNearbyServiceUtils, MCPeerID, MCPeerIDInternal, MCResourceDownloader, 
+                       MCResourceProgressObserver, MCSession, MCSessionPeerConnectionData, 
+                       MCSessionPeerState, MCSessionStream ]
+    objc-ivars:      [ AWDMultipeerSessionMaxPeersInfo._bundleID, AWDMultipeerSessionMaxPeersInfo._has, 
+                       AWDMultipeerSessionMaxPeersInfo._maxPeersCount, AWDMultipeerSessionMaxPeersInfo._sessionID, 
+                       AWDMultipeerSessionMaxPeersInfo._timestamp, AWDMultipeerSessionPeerConnectivityInfo._authentication, 
+                       AWDMultipeerSessionPeerConnectivityInfo._channelPriority, 
+                       AWDMultipeerSessionPeerConnectivityInfo._encryption, AWDMultipeerSessionPeerConnectivityInfo._has, 
+                       AWDMultipeerSessionPeerConnectivityInfo._interfaceType, AWDMultipeerSessionPeerConnectivityInfo._remoteAuthentication, 
+                       AWDMultipeerSessionPeerConnectivityInfo._sessionID, AWDMultipeerSessionPeerConnectivityInfo._timeAll, 
+                       AWDMultipeerSessionPeerConnectivityInfo._timeDTLS, AWDMultipeerSessionPeerConnectivityInfo._timeICE, 
+                       AWDMultipeerSessionPeerConnectivityInfo._timeOSPF, AWDMultipeerSessionPeerConnectivityInfo._timestamp, 
+                       MCNearbyPeerTableViewHeader._spinner, MCNearbyPeerTableViewHeader._text, 
+                       MCSessionStream._source ]
 ...

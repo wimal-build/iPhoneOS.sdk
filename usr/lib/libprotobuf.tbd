@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: A47F1F84-FCB2-3C65-AF59-E46C10E58783', 'armv7s: FAAB38A9-55E5-3BC7-BDC6-24134B61AD77', 
-                   'arm64: 0A967243-387E-32AE-B31A-8B5CEEAC3718' ]
+                   'arm64: 0F2B421F-EC77-3E7A-8C4D-C240454FD2BD' ]
 platform:        ios
 install-name:    /usr/lib/libprotobuf.dylib
 objc-constraint: none
@@ -370,9 +370,8 @@ exports:
                         __ZTIN6google8protobuf17DescriptorBuilder17OptionInterpreter21AggregateOptionFinderE, 
                         __ZTSN6google8protobuf10TextFormat6Parser10ParserImpl20ParserErrorCollectorE, 
                         __ZTSN6google8protobuf17DescriptorBuilder17OptionInterpreter21AggregateOptionFinderE ]
-  - archs:           [ arm64 ]
-    re-exports:      [ /usr/lib/libprotobuf-lite.dylib ]
   - archs:           [ armv7, armv7s, arm64 ]
+    re-exports:      [ /usr/lib/libprotobuf-lite.dylib ]
     symbols:         [ __ZN6google8protobuf10ReflectionD0Ev, __ZN6google8protobuf10ReflectionD1Ev, 
                        __ZN6google8protobuf10ReflectionD2Ev, __ZN6google8protobuf10SimpleDtoaEd, 
                        __ZN6google8protobuf10SimpleFtoaEf, __ZN6google8protobuf10SimpleItoaEi, 

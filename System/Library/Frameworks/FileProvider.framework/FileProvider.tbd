@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 29753C5B-5F3E-32B2-881F-8C44DDCF4CD9' ]
+                   'arm64: 23494A23-C54D-3372-B651-E89A5EAB8C49' ]
 platform:        ios
 install-name:    /System/Library/Frameworks/FileProvider.framework/FileProvider
 objc-constraint: none
@@ -65,20 +65,20 @@ exports:
                        _kACLWriteEntitlement, _kAlternateContentsEntitlement, _kDebugEntitlement, 
                        _kEnumerateEntitlement, _kFetchURLEntitlement, _kTestingHarnessEntitlement, 
                        _kiWorkCollaborationMessagingEntitlement ]
-    objc-classes:    [ _FPActionOperation, _FPCTLTermDumper, _FPCopyOperation, _FPCreateFolderOperation, 
-                       _FPDaemonConnection, _FPDeleteOperation, _FPDownloadOperation, 
-                       _FPError, _FPEvictOperation, _FPExtensionProvider, _FPFetchThumbnailsOperation, 
-                       _FPFileProviderService, _FPFrameworkOverridesIterator, _FPGracePeriodTimer, 
-                       _FPItem, _FPItemCollection, _FPItemID, _FPItemManager, _FPLocalization, 
-                       _FPModifyFavoritesOperation, _FPMoveOperation, _FPOperation, 
-                       _FPPacer, _FPProvider, _FPProviderMonitor, _FPRenameOperation, 
-                       _FPSandboxingURLWrapper, _FPSetLastOpenDateOperation, _FPSetTagsOperation, 
-                       _FPSpotlightCollection, _FPTag, _FPTransferOperation, _FPTrashOperation, 
-                       _FPUntrashOperation, _NSFileProviderDomain, _NSFileProviderEnumerationProperties, 
-                       _NSFileProviderExtension, _NSFileProviderManager ]
-    objc-ivars:      [ _FPDaemonConnection._connectionQueue, _FPDaemonConnection._connectionQueueConnection, 
-                       _FPDaemonConnection._getAttributeConnections, _FPDaemonConnection._getAttributeConnectionsIdleCleanupTimer, 
-                       _FPDaemonConnection._user, _FPFrameworkOverridesIterator._currentIndex, 
-                       _FPFrameworkOverridesIterator._invocation, _FPFrameworkOverridesIterator._noSuitableModuleFoundHandler, 
-                       _FPFrameworkOverridesIterator._overrides ]
+    objc-classes:    [ FPActionOperation, FPCTLTermDumper, FPCopyOperation, FPCreateFolderOperation, 
+                       FPDaemonConnection, FPDeleteOperation, FPDownloadOperation, 
+                       FPError, FPEvictOperation, FPExtensionProvider, FPFetchThumbnailsOperation, 
+                       FPFileProviderService, FPFrameworkOverridesIterator, FPGracePeriodTimer, 
+                       FPItem, FPItemCollection, FPItemID, FPItemManager, FPLocalization, 
+                       FPModifyFavoritesOperation, FPMoveOperation, FPOperation, 
+                       FPPacer, FPProvider, FPProviderMonitor, FPRenameOperation, 
+                       FPSandboxingURLWrapper, FPSetLastOpenDateOperation, FPSetTagsOperation, 
+                       FPSpotlightCollection, FPTag, FPTransferOperation, FPTrashOperation, 
+                       FPUntrashOperation, NSFileProviderDomain, NSFileProviderEnumerationProperties, 
+                       NSFileProviderExtension, NSFileProviderManager ]
+    objc-ivars:      [ FPDaemonConnection._connectionQueue, FPDaemonConnection._connectionQueueConnection, 
+                       FPDaemonConnection._getAttributeConnections, FPDaemonConnection._getAttributeConnectionsIdleCleanupTimer, 
+                       FPDaemonConnection._user, FPFrameworkOverridesIterator._currentIndex, 
+                       FPFrameworkOverridesIterator._invocation, FPFrameworkOverridesIterator._noSuitableModuleFoundHandler, 
+                       FPFrameworkOverridesIterator._overrides ]
 ...

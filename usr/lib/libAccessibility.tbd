@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 3BF491F6-1898-3278-B8C4-C99A7B64D4A6', 'armv7s: 9E796156-BFBF-32B3-82A6-ED68C56B5B75', 
-                   'arm64: F9278E55-EBDC-3452-8A01-F614A78DEF92' ]
+                   'arm64: C2AE8D98-D410-345A-97AD-D95C19A1D6D7' ]
 platform:        ios
 install-name:    /usr/lib/libAccessibility.dylib
 objc-constraint: none
@@ -51,11 +51,11 @@ exports:
                        _kAXSVoiceOverTouchIncludeUnlabeledImagesNotification, _kAXSVoiceOverTouchScreenCurtainPreference, 
                        _kAXSVoiceOverTouchTypingModePreference, _kAXSVoiceOverTouchUIEnabledPreference, 
                        _kAXSWordFeedbackEnabledPreference, _kAXSZoomTouchSmoothScalingPreference ]
-    objc-classes:    [ _AXDefaultsObserverExecuteBlockNotificationAction, _AXDefaultsObserverPostDarwinNotificationAction, 
-                       _AXSupportDefaultsObserver ]
-    objc-ivars:      [ _AXSupportDefaultsObserver._actionLastNotifications, _AXSupportDefaultsObserver._actions, 
-                       _AXSupportDefaultsObserver._axDomain, _AXSupportDefaultsObserver._lastNotificationsQueue, 
-                       _AXSupportDefaultsObserver._observedPrefs ]
+    objc-classes:    [ AXDefaultsObserverExecuteBlockNotificationAction, AXDefaultsObserverPostDarwinNotificationAction, 
+                       AXSupportDefaultsObserver ]
+    objc-ivars:      [ AXSupportDefaultsObserver._actionLastNotifications, AXSupportDefaultsObserver._actions, 
+                       AXSupportDefaultsObserver._axDomain, AXSupportDefaultsObserver._lastNotificationsQueue, 
+                       AXSupportDefaultsObserver._observedPrefs ]
   - archs:           [ armv7, armv7s, arm64 ]
     symbols:         [ _AXBeginListeningToUserDefaultsChanges, _AXCPCopySharedResourcesPreferencesDomainForDomain, 
                        _AXCPSharedResourcesDirectory, _AXLocalizedStringForLocale, 
@@ -74,9 +74,10 @@ exports:
                        __AXSAssistiveTouchUIEnabled, __AXSAttentionAwarenessFeaturesEnabled, 
                        __AXSAuditInspectionModeEnabled, __AXSAutoBrightnessEnabled, 
                        __AXSAutomationEnabled, __AXSAutomationFauxCollectionViewCellsEnabled, 
-                       __AXSAutomationHitpointWarpingEnabled, __AXSAutomationLocalizedStringLookupInfoEnabled, 
-                       __AXSAutomationLocalizedStringLookupInfoSetEnabled, __AXSAutomationPreferredLocalization, 
-                       __AXSAutomationSetFauxCollectionViewCellsEnabled, __AXSAutomationSetHitpointWarpingEnabled, 
+                       __AXSAutomationFauxTableViewCellsEnabled, __AXSAutomationHitpointWarpingEnabled, 
+                       __AXSAutomationLocalizedStringLookupInfoEnabled, __AXSAutomationLocalizedStringLookupInfoSetEnabled, 
+                       __AXSAutomationPreferredLocalization, __AXSAutomationSetFauxCollectionViewCellsEnabled, 
+                       __AXSAutomationSetFauxTableViewCellsEnabled, __AXSAutomationSetHitpointWarpingEnabled, 
                        __AXSBlueYellowFilterEnabled, __AXSBlueYellowFilterSetEnabled, 
                        __AXSButtonShapesEnabled, __AXSCachedValueForBrightnessFilter, 
                        __AXSCanDisableApplicationAccessibility, __AXSCharacterVoiceDefaultSupportedLanguages, 
@@ -144,8 +145,9 @@ exports:
                        __AXSSetSideButtonClickSpeed, __AXSSetSiriSemanticContextEnabled, 
                        __AXSSetSlowKeysAcceptanceDelay, __AXSSetSlowKeysEnabled, 
                        __AXSSetSpeakThisEnabled, __AXSSetTripleClickOptions, __AXSSetUseDarkerKeyboard, 
-                       __AXSSetUseSingleSystemColor, __AXSSetVibrationDisabled, __AXSSetWordFeedbackEnabled, 
-                       __AXSSetWriteableClient, __AXSShakeToUndoDisabled, __AXSShouldUseSpringBoardForHomeButtonDetection, 
+                       __AXSSetUseSingleSystemColor, __AXSSetUserEnabledPasscodeForPurchases, 
+                       __AXSSetVibrationDisabled, __AXSSetWordFeedbackEnabled, __AXSSetWriteableClient, 
+                       __AXSShakeToUndoDisabled, __AXSShouldUseSpringBoardForHomeButtonDetection, 
                        __AXSSideButtonClickSpeed, __AXSSideButtonClickSpeedEnabled, 
                        __AXSSingleSystemColorValues, __AXSSiriSemanticContextEnabled, 
                        __AXSSlowKeysAcceptanceDelay, __AXSSlowKeysEnabled, __AXSSoftwareTTYEnabled, 
@@ -154,21 +156,23 @@ exports:
                        __AXSSwitchControlExtendedKeyboardPredictionsSetEnabled, __AXSTripleClickAddOption, 
                        __AXSTripleClickContainsOption, __AXSTripleClickCopyOptions, 
                        __AXSTripleClickRemoveOption, __AXSUseDarkerKeyboard, __AXSUseSingleSystemColor, 
-                       __AXSVibrationDisabled, __AXSVisualAlertEnabled, __AXSVisualAlertSetEnabled, 
-                       __AXSVoiceOverTouchBrailleContractionMode, __AXSVoiceOverTouchBrailleEightDotMode, 
+                       __AXSUserEnabledPasscodeForPurchases, __AXSVibrationDisabled, 
+                       __AXSVisualAlertEnabled, __AXSVisualAlertSetEnabled, __AXSVoiceOverTouchBrailleContractionMode, 
+                       __AXSVoiceOverTouchBrailleDisplayDisconnectOnSleep, __AXSVoiceOverTouchBrailleEightDotMode, 
                        __AXSVoiceOverTouchBrailleMasterStatusCellIndex, __AXSVoiceOverTouchBrailleVirtualStatusAlignment, 
                        __AXSVoiceOverTouchCopyBrailleBluetoothDisplay, __AXSVoiceOverTouchCopyBrailleTableIdentifier, 
                        __AXSVoiceOverTouchCopyLanguageRotorItems, __AXSVoiceOverTouchEnabled, 
                        __AXSVoiceOverTouchEnabledThroughAccessory, __AXSVoiceOverTouchScreenCurtainEnabled, 
                        __AXSVoiceOverTouchSetBrailleBluetoothDisplay, __AXSVoiceOverTouchSetBrailleContractionMode, 
-                       __AXSVoiceOverTouchSetBrailleEightDotMode, __AXSVoiceOverTouchSetBrailleMasterStatusCellIndex, 
-                       __AXSVoiceOverTouchSetBrailleTableIdentifier, __AXSVoiceOverTouchSetBrailleVirtualStatusAlignment, 
-                       __AXSVoiceOverTouchSetEnabled, __AXSVoiceOverTouchSetEnabledAndAutoConfirmUsage, 
-                       __AXSVoiceOverTouchSetEnabledThroughAccessory, __AXSVoiceOverTouchSetLanguageRotorItems, 
-                       __AXSVoiceOverTouchSetScreenCurtainEnabled, __AXSVoiceOverTouchSetShouldRouteToSpeakerWithProximity, 
-                       __AXSVoiceOverTouchSetSpeakTimeOnWake, __AXSVoiceOverTouchSetSpeakingRate, 
-                       __AXSVoiceOverTouchSetTypingMode, __AXSVoiceOverTouchSetUIEnabled, 
-                       __AXSVoiceOverTouchSetUsageConfirmed, __AXSVoiceOverTouchSetUserHasReadNoHomeButtonGestureDescription, 
+                       __AXSVoiceOverTouchSetBrailleDisplayDisconnectOnSleep, __AXSVoiceOverTouchSetBrailleEightDotMode, 
+                       __AXSVoiceOverTouchSetBrailleMasterStatusCellIndex, __AXSVoiceOverTouchSetBrailleTableIdentifier, 
+                       __AXSVoiceOverTouchSetBrailleVirtualStatusAlignment, __AXSVoiceOverTouchSetEnabled, 
+                       __AXSVoiceOverTouchSetEnabledAndAutoConfirmUsage, __AXSVoiceOverTouchSetEnabledThroughAccessory, 
+                       __AXSVoiceOverTouchSetLanguageRotorItems, __AXSVoiceOverTouchSetScreenCurtainEnabled, 
+                       __AXSVoiceOverTouchSetShouldRouteToSpeakerWithProximity, __AXSVoiceOverTouchSetSpeakTimeOnWake, 
+                       __AXSVoiceOverTouchSetSpeakingRate, __AXSVoiceOverTouchSetTypingMode, 
+                       __AXSVoiceOverTouchSetUIEnabled, __AXSVoiceOverTouchSetUsageConfirmed, 
+                       __AXSVoiceOverTouchSetUserHasReadNoHomeButtonGestureDescription, 
                        __AXSVoiceOverTouchSetVolume, __AXSVoiceOverTouchShouldRouteToSpeakerWithProximity, 
                        __AXSVoiceOverTouchSpeakTimeOnWake, __AXSVoiceOverTouchSpeakingRate, 
                        __AXSVoiceOverTouchTypingMode, __AXSVoiceOverTouchUIEnabled, 

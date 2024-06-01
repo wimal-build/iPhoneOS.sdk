@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: B9324E4F-1770-3C15-BD4D-554726D367D2', 'armv7s: 2589FB0B-A6CA-3247-A2F5-931EFD9120F1', 
-                   'arm64: F8DAE748-D732-37B9-85DD-34F9EF9F953F' ]
+                   'arm64: CB3E6B9E-B9E1-32D6-8A4F-F455AB5EB4F7' ]
 platform:        ios
 install-name:    /usr/lib/libtidy.A.dylib
 objc-constraint: none

@@ -1,16 +1,24 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 149835B5-FCFD-39E9-9947-7F481BAA4AA4' ]
+                   'arm64: C6E19860-2186-300B-9C92-3C1B97C0B227' ]
 platform:        ios
 install-name:    /usr/lib/libParallelCompression.dylib
 objc-constraint: none
 exports:         
   - archs:           [ armv7, armv7s, arm64 ]
-    symbols:         [ _BXDiff5, _BXPatch5, _BXPatch5InPlace, _BXPatchFile, _CachePatch, 
-                       _DirectoryDiff, _DirectoryPatch, _ISparseArchiveStreamCreate, 
-                       _ISparseArchiveStreamDestroy, _ISparseArchiveStreamRead, _PCompressFilter, 
-                       _PackagePatch, _ParallelArchiveExtract, _ParallelArchiveGenerateBOM, 
+    symbols:         [ _BXDiff5, _BXPatch5, _BXPatch5InPlace, _BXPatchFile, _DirectoryDiff, 
+                       _DirectoryPatch, _ISparseArchiveStreamCreate, _ISparseArchiveStreamDestroy, 
+                       _ISparseArchiveStreamRead, _PCompressFilter, _PackagePatch, 
+                       _ParallelArchiveCombine, _ParallelArchiveConvert, _ParallelArchiveExtract, 
+                       _ParallelArchiveExtractClones, _ParallelArchiveExtractSubtree, 
+                       _ParallelArchiveFilesystemCreate, _ParallelArchiveFilesystemDestroy, 
+                       _ParallelArchiveFilesystemEntryClose, _ParallelArchiveFilesystemEntryFirstChild, 
+                       _ParallelArchiveFilesystemEntryLink, _ParallelArchiveFilesystemEntryName, 
+                       _ParallelArchiveFilesystemEntryNextSibling, _ParallelArchiveFilesystemEntryOpen, 
+                       _ParallelArchiveFilesystemEntryPRead, _ParallelArchiveFilesystemEntryParent, 
+                       _ParallelArchiveFilesystemEntryPath, _ParallelArchiveFilesystemEntryStat, 
+                       _ParallelArchiveFilesystemEntryType, _ParallelArchiveGenerateBOM, 
                        _ParallelArchiveGenerateMSUBOM, _ParallelArchiveGetPayloadSize, 
                        _ParallelArchiveOLDWriterAddEntry, _ParallelArchiveOLDWriterCreate, 
                        _ParallelArchiveOLDWriterDestroy, _ParallelArchiveRead, _ParallelArchiveReadMetadata, 

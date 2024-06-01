@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: AD11A528-9271-34E3-A70E-13D4C2E38FF7' ]
+                   'arm64: 77B72D70-4385-39B8-8601-738E6FE9587F' ]
 platform:        ios
 install-name:    /usr/lib/libeasyperf.dylib
 objc-constraint: none

@@ -1,7 +1,7 @@
---- !tapi-tbd-v2
+--- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64 ]
 uuids:           [ 'armv7: F5CBE04F-E589-3DA5-8B01-B881B69E6026', 'armv7s: BF8DCABD-C42E-3396-B79E-FCAD1EF22D74', 
-                   'arm64: 3F0340A8-4DC5-3378-9F81-EE18818C6564' ]
+                   'arm64: 6CA17EA3-6C9B-3D8A-80B1-B4D147BA35F9' ]
 platform:        ios
 install-name:    /usr/lib/liblockdown.dylib
 objc-constraint: none

@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D54C70C3-E405-307F-A3DF-F77BCAD86DAF', 'armv7s: 84D01D33-899F-3E07-B29D-09C33C084D9F', 
-                   'arm64: D5A88C36-CB09-32A6-9060-55BBC4B6817D', 'arm64e: 9586A2F2-62AD-35F1-8E17-C109A5A6912B' ]
+                   'arm64: A9BFE02F-306B-3EE7-A403-22CFB1BB9AAA', 'arm64e: ED903826-11DD-3863-8DAF-1222ACBF7EAD' ]
 platform:        ios
 install-name:    '/System/Library/Frameworks/Security.framework/Security'
-current-version: 59306.102.1
+current-version: 59306.120.7
 exports:         
   - archs:           [ armv7, armv7s ]
     symbols:         [ _DERDecodeItem, _DEROidCompare, _SOSAccountPeerGotInSync, 

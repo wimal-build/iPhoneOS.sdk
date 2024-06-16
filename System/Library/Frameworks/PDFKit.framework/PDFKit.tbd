@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: D8C1FEE5-D776-35D8-95BB-D3B646F269FC', 'arm64e: 6180F7F1-CF4C-3130-BC7C-DF0C96F32500' ]
+                   'arm64: EC475D01-E546-353C-9E47-40F408D524D6', 'arm64e: 14A68B9C-F740-3636-85C0-4F4A02B66B5F' ]
 platform:        ios
 install-name:    '/System/Library/Frameworks/PDFKit.framework/PDFKit'
 exports:         

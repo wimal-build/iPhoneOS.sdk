@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 698B1F43-3565-30D3-8E68-664F73D4F694', 'arm64e: 3652361F-29A7-3130-AB4A-72A5F7BB506B' ]
+                   'arm64: E8F80970-8076-3D66-A480-E03D5BF95B61', 'arm64e: 380E3D23-3029-32DE-84EB-F99566883BF6' ]
 platform:        ios
 install-name:    '/System/Library/Frameworks/SwiftUI.framework/SwiftUI'
 exports:         

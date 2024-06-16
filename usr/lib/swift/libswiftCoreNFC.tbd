@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: A8347CA2-C052-3645-9478-8AD694F4FA56', 'arm64e: A9E1A890-FE03-3AD1-878A-459AC82A4121' ]
+                   'arm64: 65E9C3D0-EC6F-3D1D-896D-5C347D580C52', 'arm64e: 272A6DA4-A30B-3FA2-8AAA-A2CFE8BD4876' ]
 platform:        ios
 install-name:    '/usr/lib/swift/libswiftCoreNFC.dylib'
 current-version: 0

@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 51BA155D-DF9A-3CEE-97E5-066E19AB293E', 'armv7s: 3F61DB66-E608-3632-A59F-E683BAA068AE', 
-                   'arm64: DCBC2D49-9C31-3DBE-BCF3-B0F5205F87FE', 'arm64e: 4FCCC10A-F94B-3D9A-A701-F22C7199B6DB' ]
+                   'arm64: 01A8EE3D-C8DC-396B-89AD-A5F64DF13F80', 'arm64e: DFF781B2-A7E7-3050-AC01-8D682E7E2D75' ]
 platform:        ios
 install-name:    '/usr/lib/swift/libswiftCore.dylib'
 current-version: 1103.2.25

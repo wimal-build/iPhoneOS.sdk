@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: 6EC79D83-6130-3095-8AD9-98079213A794', 'arm64e: 38AE25E2-5BFF-3BB6-9DA8-F684A715B6CA' ]
+                   'arm64: 98863875-4FC0-3D22-BCB6-20DA972EC871', 'arm64e: F97C26F9-8CAC-3993-9CB0-1C2D23B08388' ]
 platform:        ios
 install-name:    '/usr/lib/swift/libswiftMetricKit.dylib'
 current-version: 0

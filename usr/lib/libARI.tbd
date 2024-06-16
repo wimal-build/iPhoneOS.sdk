@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: D11FC713-CFF6-3100-8D1B-446C4511630C', 'armv7s: 10D93789-6D02-3ADA-847B-841000908211', 
-                   'arm64: 19EC2B47-495F-397B-A9C1-E98DA9FC9D98', 'arm64e: 305E2820-7455-3436-8B8E-7FE541ED39CC' ]
+                   'arm64: FE184AB9-5117-364B-82FF-A7B1E99D6D33', 'arm64e: B965D407-0E63-31F9-BD7A-B3B33B81C1D6' ]
 platform:        ios
 install-name:    '/usr/lib/libARI.dylib'
 exports:         

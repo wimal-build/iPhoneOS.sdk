@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: EB9C786A-B738-3E45-950E-7362AE8294C0', 'arm64e: C993A399-6249-3EF8-AA8F-8ECB0034F0E9' ]
+                   'arm64: D4C48678-79E9-3AEA-9E31-A3665D170139', 'arm64e: FDAC489C-6F51-3822-B0D4-6F6BB286A86C' ]
 platform:        ios
 install-name:    '/System/Library/Frameworks/CryptoKit.framework/CryptoKit'
 exports:         

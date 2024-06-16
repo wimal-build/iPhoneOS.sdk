@@ -1,7 +1,7 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, armv7s, arm64, arm64e ]
 uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: F5B3E833-9677-39C0-9B94-5E32EDA28C08', 'arm64e: F563EDBF-228E-3136-A08D-EE7E445CB5C5' ]
+                   'arm64: A2D5B242-9B3F-35F6-8E88-6307FC1F4655', 'arm64e: 24F3962C-1067-35DC-908D-7259CFA38CD8' ]
 platform:        ios
 install-name:    '/usr/lib/swift/libswiftPencilKit.dylib'
 current-version: 0
